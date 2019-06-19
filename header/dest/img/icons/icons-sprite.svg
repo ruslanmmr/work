@@ -1,0 +1,8 @@
+<svg width="0" height="0" class="hidden">
+  <symbol viewBox="0 0 15 15" stroke="none" xmlns="http://www.w3.org/2000/svg" id="icon-close">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.115 1.49L12.689.118 7.193 5.819 1.491.323.117 1.748 5.82 7.244.323 12.947l1.426 1.373 5.496-5.702 5.702 5.496 1.374-1.425-5.702-5.496 5.496-5.702z"></path>
+  </symbol>
+  <symbol viewBox="0 0 83 63" stroke="none" xmlns="http://www.w3.org/2000/svg" id="icon-check">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.41 49.836L6.601 30.09 0 36.672 26.41 63 83 6.582 76.398 0 26.409 49.836z"></path>
+  </symbol>
+</svg>
