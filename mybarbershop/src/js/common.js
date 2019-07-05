@@ -11,39 +11,20 @@ document.body.onload = function() {
   }, 1500)
 }
 
-$(window).on('scroll',function(){
-  parallaxScroll();
-});
-
-$(window).resize(function () {
-  innerWidth = $('body').innerWidth();
-});
-
 //global variables
-var innerWidth = $('body').innerWidth(),
-    $slider = $('.slider'),
-    //scroll-styling
-    cursorcolorVar = "#fff",
+var cursorcolorVar = "#fff",
     cursorwidthVar = "7px",
     cursorborderVar = "0",
     cursorborderradiusVar = "0",
     zindexVar = [100],
     bouncescrollVar = false;
-  //
-
-function lazy() {
-  $(".lazy").Lazy({
-    visibleOnly: true,
-    threshold: '1000',
-    effect: 'fadeIn',
-    effectTime: '300',
-    defaultImage: false
-  });
-}
 
 //scroll
 function scrollInit() {
   if ($('html').hasClass('desktop')) {
+    $(window).on('scroll',function(){
+      parallaxScroll();
+    });
     $('body').niceScroll({
       cursorcolor: cursorcolorVar,
       cursorwidth: cursorwidthVar,
