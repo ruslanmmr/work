@@ -18,6 +18,7 @@
   &__logo {
     width: 130px;
     flex-shrink: 0;
+    order: 1;
     a {
       display: block;
       width: 100%;
@@ -29,7 +30,7 @@
   }
   a {
     transition: 0.1s;
-    text-decoration: none;
+    text-decoration: none !important;
   }
   &__container {
     margin: 0 auto;
@@ -67,7 +68,8 @@
     align-items: center;
     justify-content: space-between;
     width: calc(50% - 65px);
-    padding-right: 80px;
+    padding-left: 80px;
+    order: 2;
   }
   &__button {
     a {
@@ -101,9 +103,9 @@
       }
     }
     a {
-      color: #202020;
+      color: #202020 !important;
       &:hover {
-        color: #008dd2;
+        color: #008dd2 !important;
       }
     }
   }
@@ -159,10 +161,14 @@
         margin-bottom: 3px;
       }
     }
+    a {
+      color: inherit !important;
+    }
   }
   &__warranty {
     width: calc(25%);
     padding-left: 80px;
+    order: 3;
     ul {
       list-style: none;
       margin: 0;
@@ -191,6 +197,7 @@
   .cart {
     width: calc(25% - 65px);
     justify-content: flex-end;
+    order: 4;
   }
   &__bottom-nav {
     display: flex;
@@ -368,7 +375,7 @@
   }
   &__input {
     color: #0084cf;
-    padding: 0 60px 0 15px;
+    padding: 0 60px 0 15px !important;
     width: 100%;
     &::placeholder {
       color: #0084cf;
@@ -509,6 +516,7 @@
   }
   .header .cart {
     width: auto;
+    order: 2;
   }
   .header {
     display: flex;

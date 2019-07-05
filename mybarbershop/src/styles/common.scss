@@ -1,0 +1,127 @@
+@import "./partials/fonts";
+
+body {
+  text-rendering: optimizeSpeed;
+  font: 16px "DINPro", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  min-width: 320px;
+  line-height: 1.35;
+  background-color: #0b1014;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+.wrapper {
+  overflow: hidden;
+  max-width: 2400px;
+  margin: 0 auto;
+}
+.banner {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  .scene {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+    }
+    &:after {
+      background: linear-gradient(to right, rgba(11,16,20,1) 0%,rgba(11,16,20,0.75) 3%,rgba(11,16,20,0.5) 6%,rgba(11,16,20,0.25) 9%,rgba(11,16,20,0.1) 12%,rgba(11,16,20,0) 15%,rgba(11,16,20,0) 85%,rgba(11,16,20,0.1) 88%,rgba(11,16,20,0.25) 91%,rgba(11,16,20,0.5) 94%,rgba(11,16,20,0.75) 97%,rgba(11,16,20,1) 100%);
+    }
+    &:before {
+      background: linear-gradient(to bottom, rgba(11,16,20,1) 0%,rgba(11,16,20,0.75) 3%,rgba(11,16,20,0.5) 6%,rgba(11,16,20,0.25) 9%,rgba(11,16,20,0.1) 12%,rgba(11,16,20,0) 15%,rgba(11,16,20,0) 85%,rgba(11,16,20,0.1) 88%,rgba(11,16,20,0.25) 91%,rgba(11,16,20,0.5) 94%,rgba(11,16,20,0.75) 97%,rgba(11,16,20,1) 100%);
+    }
+  }
+  #scene {
+    position: absolute;
+    width: calc(100% + 80px);
+    height: calc(100% + 80px);
+    left: -40px;
+    top: -40px;
+    transition: 0.5s;
+    transform: scale(0.95);
+    &.loaded {
+      transform: scale(1);
+    }
+  }
+  .scene-layer {
+    width: 100%;
+    height: 100%;
+    background: url('../img/backgrounds/main-banner.jpg') no-repeat center center;
+    background-size: cover;
+  }
+}
+.content {
+  height: 1000px;
+  background: url('../img/backgrounds/main-bg.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    }
+    &:before {
+      background: linear-gradient(to right, rgba(11,16,20,1) 0%,rgba(11,16,20,0.75) 3%,rgba(11,16,20,0.5) 6%,rgba(11,16,20,0.25) 9%,rgba(11,16,20,0.1) 12%,rgba(11,16,20,0) 15%,rgba(11,16,20,0) 85%,rgba(11,16,20,0.1) 88%,rgba(11,16,20,0.25) 91%,rgba(11,16,20,0.5) 94%,rgba(11,16,20,0.75) 97%,rgba(11,16,20,1) 100%);
+    }
+}
+
+@media all and(min-width: 1921px) {
+  .banner {
+    max-height: 1400px;
+    min-height: 900px;
+  }
+}
+@media all and(max-width: 1920px) {
+  .banner {
+    max-height: 1080px;
+    min-height: 700px;
+  }
+}
+@media all and(max-width: 1600px) {
+  .banner {
+    max-height: 800px;
+    min-height: 550px;
+  }
+}
+@media all and(max-width: 992px) {
+  .banner {
+    max-height: 550px;
+    min-height: 550px;
+  }
+}
+@media all and(max-width: 576px) {
+  .banner {
+    max-height: 400px;
+    min-height: 300px;
+  }
+}
+@media all and(max-width: 440px) {
+  .banner {
+    max-height: 300px;
+    min-height: 300px;
+  }
+}
