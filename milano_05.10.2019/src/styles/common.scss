@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+
+html {
+  position: relative;
+}
+body {
+  text-rendering: optimizeSpeed;
+  font: 16px 'Roboto', Arial, sans-serif;
+  min-width: 320px;
+  color: #000;
+  background-color: #fff;
+  position: relative;
+  line-height: 1.35;
+}
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+.main {
+  position: relative;
+  z-index: 1;
+}
+.section {
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  padding: 50px 0;
+  &__head {
+    margin-bottom: 40px;
+    &_decorated {
+      padding-top: 40px;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 1px;
+        width: 50%;
+        right: 25%;
+        top: 0;
+        background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(132,132,132,1) 25%,rgba(0,0,0,1) 51%,rgba(135,135,135,1) 79%,rgba(255,255,255,1) 100%);
+      }
+    }
+  }
+  &__title {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+  }
+  &__sub-title {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+
+@media all and(max-width: 576px) {
+  .section {
+    &__title {
+      font-size: 24px;
+    }
+    &__head {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@import "./partials/ui";
+@import "./partials/promo";
+@import "./partials/promo-description";
+@import "./partials/delivery";
+@import "./partials/header";
+@import "./partials/home";
+@import "./partials/catalogue";
+@import "./partials/certificate";
+@import "./partials/product";
+@import "./partials/reviews";
+@import "./partials/description";
+@import "./partials/contacts";
+@import "./partials/credit";

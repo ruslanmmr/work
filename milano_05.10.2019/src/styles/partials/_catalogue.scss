@@ -1,0 +1,234 @@
+.catalogue {
+  overflow: hidden;
+  background-color: #f0f0f0;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px -30px -10px;
+  }
+}
+.catalogue-block {
+  width: 50%;
+  padding: 0 10px 30px 10px;
+  &__gallery {
+    width: 100%;
+    overflow: hidden;
+  }
+  &__slider {
+    position: relative;
+    .slick-dots {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: absolute;
+      visibility: hidden;
+      top: 0;
+    }
+    .slick-arrow {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      margin-top: -25px;
+      font-size: 0;
+      border: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      outline: none;
+      transition: opacity 0.3s;
+      cursor: pointer;
+      background: #fff url('../img/icons/arrow.svg') no-repeat center center;
+      background-size: 20px 20px;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .slick-prev {
+      left: 15px;
+      transform: rotate(180deg);
+    }
+    .slick-next {
+      right: 15px;
+    }
+    .catalogue-block__slide {
+      position: relative;
+      overflow: hidden;
+      &:before {
+        content: '';
+        display: block;
+        padding-top: 120%;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+    img {
+      display: block;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  &__nav-slider {
+    margin: 0 -5px;
+    padding: 10px 0 0 0;
+    display: flex;
+    .catalogue-block__slide {
+      padding: 0 5px;
+      width: 20%;
+      &-container {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: opacity 0.3s;
+        &:before {
+          content: '';
+          display: block;
+          padding-top: 100%;
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: 2;
+          border: 2px solid transparent;
+          left: 0;
+          top: 0;
+          box-sizing: border-box;
+          transition: 0.3s;
+        }
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    img {
+      display: block;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  &__slide_active {
+    .catalogue-block__slide-container {
+      &:after {
+        border-color: #222;
+      }
+    }
+  }
+  &__info {
+    width: 100%;
+    padding: 15px 0 0 0;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+  &__price-container {
+    font-weight: bold;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__price {
+    margin-right: 10px;
+    white-space: nowrap;
+    span {
+      color: rgb(214, 17, 17);
+      font-size: 26px;
+    }
+  }
+  &__old-price {
+    color: #bdbdbd;
+    position: relative;
+    font-size: 26px;
+    white-space: nowrap;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #bdbdbd;;
+    }
+  }
+  &__discount {
+    display: block;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.8;
+      text-decoration: none;
+    }
+  }
+  &__stock {
+    display: block;
+    margin: 10px 0;
+  }
+  &__list {
+    margin: 0 0 10px 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__discount-button {
+    margin-top: 20px;
+  }
+}
+.catalogue-block-more {
+  &__btn {
+    display: inline-block;
+    outline: none;
+    border: 0;
+    background-color: transparent;
+    padding: 4px 0;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      border-top: 1px dashed #000;
+    }
+    &:hover {
+      color: #2c2c2c;
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &__dropdown {
+    display: none;
+  }
+  &__content {
+    padding: 10px 0 0 0;
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin: 0 0 1em 0;
+      }
+    }
+  }
+}
+@media all and(max-width: 576px) {
+  .catalogue-block {
+    width: 100%;
+    &__title {
+      font-size: 22px;
+    }
+  }
+}
