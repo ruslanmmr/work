@@ -150,7 +150,7 @@ function modalMagnificBasket() {
     callbacks: {
       open: function() {
         let windowW = $('.mfp-container').width() + 30,
-            x = window.innerWidth-windowW;
+        x = window.innerWidth-windowW;
         $('.mfp-close').css('right', x)
       }
     }
