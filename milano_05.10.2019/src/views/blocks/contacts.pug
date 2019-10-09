@@ -1,8 +1,8 @@
-mixin contacts()
+mixin contacts(title)
   section.section.contacts(id='contacts')
     .container
       .section__head.section__head_decorated
-        h5.section__title Магазин в городе Москва:
+        h5.section__title=title
       .contacts__container
         .contacts-block
           span.contacts-block__title Контакты:

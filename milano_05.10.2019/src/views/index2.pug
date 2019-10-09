@@ -25,7 +25,7 @@ html(lang="ru")
       include blocks/videos
       include blocks/delivery
       include blocks/contacts
-      +contacts()
+      +contacts('Магазин в городе Санкт-Петербург:')
         ul.contacts-block__list
           li.contacts-block__item
             strong Телефон: 
@@ -33,7 +33,7 @@ html(lang="ru")
             | - бесплатный звонок по всей России
           li.contacts-block__item
             strong Адрес магазина: 
-            span  г. Санкт - Петербург, улица Куйбышева, дом 28А, метро Горьковская
+            span  г. Санкт-Петербург, улица Куйбышева, дом 28А, метро Горьковская
           li.contacts-block__item Режим работы: 11:00-21:00
       include blocks/popup
     script(src="js/jquery/jquery.min.js")
