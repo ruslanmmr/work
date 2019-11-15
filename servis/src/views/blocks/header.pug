@@ -1,0 +1,75 @@
+header.header
+  .container
+    .header__container
+      .logo 
+        a(href="#").logo__link
+          img(src="img/logo.png", alt="logo").logo__image
+      .header__info
+        .header__content
+          span Установка и обсулживания систем безопасности
+          .header__items
+            a(href="maito:itehservice01@gmail.com").contact-item
+              svg.icon
+                use(xlink:href="img/icons/icons-sprite.svg#email")
+              | itehservice01@gmail.com
+            a(href="tel:84993405052").contact-item
+              svg.icon
+                use(xlink:href="img/icons/icons-sprite.svg#phone-call")
+              strong 8 (499) 340-50-52
+        form(action="").search
+          .search__input
+            svg.icon
+              use(xlink:href="img/icons/icons-sprite.svg#magnifying-glass")
+            input(type="text" placeholder="Поиск по сайту").input.input_style1
+          button.button.button_style1 Найти
+      .overlay
+      a(href="javascript:void(0)").nav-open-btn
+        span
+        span
+        span
+
+nav.nav
+  .container
+    .nav__container
+      a(href="javascript:void(0)").nav-close-btn
+        span
+        span
+      ul.nav__list
+        li.nav__item 
+          a(href="#").nav__link.button.button_style1.big Главная
+        li.nav__item.dropdown
+          a(href="#").nav__link.button.button_style1.big.dropdown__toggle Виды услуг
+          .dropdown__content
+            ul.dropdown__list
+              li.dropdown__item
+                a(href="#").dropdown__link Утсановка видеонаблюдения
+              li.dropdown__item
+                a(href="#").dropdown__link Ремонт вилеокамер
+              li.dropdown__item
+                a(href="#").dropdown__link Диагностика оборудования
+              li.dropdown__item
+                a(href="#").dropdown__link Настройка пожарной автоматики
+        li.nav__item 
+          a(href="#").nav__link.button.button_style1.big О компании
+        li.nav__item 
+          a(href="#").nav__link.button.button_style1.big Фото работ
+        li.nav__item 
+          a(href="#").nav__link.button.button_style1.big Контакты
+      .nav__button
+        a(href="#").button.button_style1.big
+          svg.icon
+            use(xlink:href="img/icons/icons-sprite.svg#calculator")
+          | Заказать расчет
+      ul.nav__contacts
+        li.nav__item 
+          a(href="maito:itehservice01@gmail.com").nav__link.button.button_style1.big 
+            svg.icon
+              use(xlink:href="img/icons/icons-sprite.svg#email")
+            | itehservice01@gmail.com
+        li.nav__item
+          a(href="tel:84993405052").nav__link.button.button_style1.big 
+            svg.icon
+              use(xlink:href="img/icons/icons-sprite.svg#phone-call")
+            strong 8 (499) 340-50-52
+
+

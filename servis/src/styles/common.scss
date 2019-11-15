@@ -1,0 +1,81 @@
+@import "./partials/normalize";
+
+$line-height-main: 1.5;
+
+$main-color1: #1a65b8;
+$main-color2: #1858a0;
+$main-color3: #134c8b;
+
+$color1: #cecece;
+$color2: #707070;
+$color3: #474747;
+$shadow: 0 0 15px 0 rgba(0,0,0,0.05);
+$shadow2: 5px 5px 15px 0px rgba(0,0,0,0.2);
+
+
+
+
+body {
+  text-rendering: optimizeSpeed;
+  font: 14px "Circe", sans-serif;
+  color: #000;
+  min-width: 320px;
+  position: relative;
+  line-height: $line-height-main;
+  background-color: #f3f3f3;
+  position: relative;
+}
+.wrapper {
+  overflow: hidden;
+  min-height: 100vh;
+}
+.bg-block-section {
+  background-color: #fff;
+  padding: 45px 0;
+  margin-bottom: 45px;
+  .section {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
+.section {
+  &:not(:last-child) {
+    margin-bottom: 45px;
+  }
+  &__head {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.main {
+  padding: 30px 0 100px 0;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  .container {
+    padding: 0;
+  }
+  &_w2 {
+    max-width: 768px;
+  }
+}
+
+@media all and(max-width: 576px) {
+  .main {
+    padding: 25px 0 80px 0;
+  }
+}
+
+@import "./partials/items";
+@import "./partials/text";
+@import "./partials/header";
+@import "./partials/footer";
+@import "./partials/slider";
+@import "./partials/fonts";
+
