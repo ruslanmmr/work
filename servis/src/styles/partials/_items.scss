@@ -55,6 +55,8 @@ a {
   overflow: hidden;
   padding: 0 10px;
   width: auto;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
   .icon {
     width: 25px;
     height: 25px;
@@ -100,6 +102,7 @@ a {
     transition: 0.2s;
     box-shadow: $shadow;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
     &:hover {
       box-shadow: $shadow2;
     }
