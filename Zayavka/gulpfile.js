@@ -107,6 +107,11 @@ gulp.task("destVideos", function () {
     .pipe(gulp.dest("./dest/videos/"))
     .on("end", browsersync.reload);
 });
+gulp.task("destAudio", function () {
+  return gulp.src("./src/audios/**/*")
+    .pipe(gulp.dest("./dest/audios/"))
+    .on("end", browsersync.reload);
+});
 
 gulp.task("destFonts", function () {
   return gulp.src("./src/fonts/**/*")

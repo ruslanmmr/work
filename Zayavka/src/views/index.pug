@@ -9,7 +9,17 @@ html(lang="ru")
   body
     .background.lazy(data-src='images/background.jpg')
     .wrapper
+      .popup
+        .popup__container
+          span.popup__bg
+          .popup__content
+            span Ваша заявка отправлена!<br> Мы свяжемся с вами в ближайшее время!
+            a(href="#").popup-close 
       main.main
+        section.section
+          .container
+            .top-banner
+              img(data-src="images/top-banner.png", alt="top").lazy
         section.section.home
           .section__head
             .decorated
@@ -21,7 +31,33 @@ html(lang="ru")
             p.t-color-1.t-align-center Больше никаких СМС! Уже 2020 год, а ты все еще используешь технологию пейджеров из 90х годов. Эволюционируй! Хватит использовать пережитки!
             .home__banner
               img(data-src="images/main-banner.png", alt="Katya").lazy
-            p.t-align-justify Наш робот ассистент может заменить полностью администратора и стать полноценным ассистентом-партнером в вашем барбершопе. Ассистент – это робот, которого мы усовершенствуем каждый день, а еще вы можете собрать его или ее самостоятельно. Все что вам нужно – выбрать далее по списку, каким вы видите вашего ассистента!
+            .video-block.mb-30
+              iframe.lazy(data-src="https://www.youtube.com/embed/sI8re1g0cwA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+            .row
+              .col-xl-12
+                p.t-align-center Вы можете ознакомиться с нашими виртуальными  барберами, нашими услугами и их стоимостью. 
+              .col-xl-12
+                .online-order.row.row_center
+                  .col-xl-auto
+                    span.f-w-n Онлайн запись:
+                  .col-xl-auto
+                    a(href="https://n265645.yclients.com/company:258676").button.button_style2 https://n265645.yclients.com/company:258676
+              .col-xl-12 
+                p.t-color-1.f-w-n.t-align-center Для демонстрации мы настроили виртуальный барбершоп.
+              .col-xl-12
+                p.t-align-justify После того, как вы записались, Катя сразу перезвонит и задаст несколько вопросов по оказанным услугам, сотрудникам и барбершопе. Всю полученную  информацию от вас, она сгенерирует в отзыв и опкбликует его в отзывах у барбера, к которому вы записывались.
+              .col-xl-12
+                .audio
+                  span.audio__title.t-align-center.f-w-n Вот как работает Катя:
+                  audio(controls)
+                    source(src="audios/test.mp3")
+                    source(src="audios/test.ogg")
+                    source(src="audios/test.wav")
+              .col-xl-12
+                p.t-align-center Хочешь испытать работу демо версии Кати - позвони ей сам.<br> 
+                  strong.t-color-1 +7 495 023 24 24
+              .col-xl-12
+                p.t-align-justify Наш робот ассистент может заменить полностью администратора и стать полноценным ассистентом-партнером в вашем барбершопе. Ассистент – это робот, которого мы усовершенствуем каждый день, а еще вы можете собрать его или ее самостоятельно. Все что вам нужно – выбрать далее по списку, каким вы видите вашего ассистента!
         section.section.home
           .section__head
             .decorated
@@ -29,7 +65,7 @@ html(lang="ru")
               h5.section__head-title.t-size-2 контактные данные
               span.decoration
           .container
-            form(action="").form
+            form(action="").form.mb-50
               .form__section
                 .row
                   .form__item.col-xl-6.col-12
@@ -48,7 +84,7 @@ html(lang="ru")
                 .form-checkbox
                   span.line
                   label.checkbox.checkbox-styled
-                    input(type="checkbox" val='1' hidden)
+                    input(type="checkbox" data-price='1000' hidden)
                     svg.icon
                       use(xlink:href="images/sprite.svg#ico6")
                     span.check
@@ -59,7 +95,7 @@ html(lang="ru")
                 .form-checkbox
                   span.line
                   label.checkbox.checkbox-styled.styled
-                    input(type="checkbox" val='1' hidden)
+                    input(type="checkbox" data-price='2500' hidden)
                     svg.icon.styled
                       use(xlink:href="images/sprite.svg#ico3")
                     span.check
@@ -70,7 +106,7 @@ html(lang="ru")
                 .form-checkbox
                   span.line
                   label.checkbox.checkbox-styled
-                    input(type="checkbox" val='1' hidden)
+                    input(type="checkbox" data-price='4500' hidden)
                     svg.icon
                       use(xlink:href="images/sprite.svg#ico2")
                     span.check
@@ -81,7 +117,7 @@ html(lang="ru")
                 .form-checkbox
                   span.line
                   label.checkbox.checkbox-styled
-                    input(type="checkbox" val='1' hidden)
+                    input(type="checkbox" data-price='1200' hidden)
                     svg.icon
                       use(xlink:href="images/sprite.svg#ico1")
                     span.check
@@ -92,7 +128,7 @@ html(lang="ru")
                 .form-checkbox
                   span.line
                   label.checkbox.checkbox-styled
-                    input(type="checkbox" val='1' hidden)
+                    input(type="checkbox" data-price='2500' hidden)
                     svg.icon
                       use(xlink:href="images/sprite.svg#ico7")
                     span.check
@@ -103,7 +139,7 @@ html(lang="ru")
                 .form-checkbox
                   span.line
                   label.checkbox.checkbox-styled
-                    input(type="checkbox" val='1' hidden)
+                    input(type="checkbox" data-price='5000' hidden)
                     svg.icon
                       use(xlink:href="images/sprite.svg#ico8")
                     span.check
@@ -114,7 +150,7 @@ html(lang="ru")
                 .form-checkbox
                   span.line
                   label.checkbox.checkbox-styled
-                    input(type="checkbox" val='1' hidden)
+                    input(type="checkbox" data-price='300' hidden)
                     svg.icon
                       use(xlink:href="images/sprite.svg#ico4")
                     span.check
@@ -125,7 +161,7 @@ html(lang="ru")
                 .form-checkbox
                   span.line
                   label.checkbox.checkbox-styled
-                    input(type="checkbox" val='1' hidden)
+                    input(type="checkbox" data-price='1500' hidden)
                     svg.icon
                       use(xlink:href="images/sprite.svg#ico5")
                     span.check
@@ -133,11 +169,27 @@ html(lang="ru")
                     p Позвонит вашему клиенту, подтвердит его запись, оставленную не через ассистента, предложит доп. услуги и всячески будет склонять клиента заказать их.
                     span.checkbox-styled__price 1500 р.
                   span.line
+                //last
+                .form-checkbox
+                  span.line
+                  label.checkbox.checkbox-styled
+                    input(type="checkbox" data-price='0' hidden)
+                    svg.icon
+                      use(xlink:href="images/sprite.svg#ico9")
+                    span.check
+                    h6.checkbox-styled__title Аналитические отчеты.
+                    p Катя умеет группировать, выделять, создавать, рекомендовать, подчеркивать... говоря проще любой отчет, который нужен именно вам - она сделает и отправит его на почту или в мессенджер.
+                    span.checkbox-styled__price Стоимость определить невозможно, индивидуальный подход.
+                  span.line
               .form__section
+                input(type="text" hidden).total-price
                 .row.row_space-between
                   .form__total-price.t-color-1.col-xl-auto Итого: ............. 
-                    span 8300 р.
+                    span 0 р.
                   .form__item.col-xl-3.col-sm-6.col-12
                     button.button.button_style1 Оставить заявку
+            p.t-align-center Ознакомиться с работой Кати можно по телефону - 
+              a.num.t-color-1(href="tel:84950232424") 
+                strong 8 495 023 24 24
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     script(src="js/common.min.js")

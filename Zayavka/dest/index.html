@@ -10,7 +10,17 @@
   <body>
     <div class="background lazy" data-src="images/background.jpg"></div>
     <div class="wrapper">
+      <div class="popup">
+        <div class="popup__container"><span class="popup__bg"></span>
+          <div class="popup__content"><span>Ваша заявка отправлена!<br> Мы свяжемся с вами в ближайшее время!</span><a class="popup-close" href="#"> </a></div>
+        </div>
+      </div>
       <main class="main">
+        <section class="section">
+          <div class="container">
+            <div class="top-banner"><img class="lazy" data-src="images/top-banner.png" alt="top"></div>
+          </div>
+        </section>
         <section class="section home">
           <div class="section__head">
             <div class="decorated"><span class="decoration"></span>
@@ -21,7 +31,41 @@
           <div class="container">
             <p class="t-color-1 t-align-center">Больше никаких СМС! Уже 2020 год, а ты все еще используешь технологию пейджеров из 90х годов. Эволюционируй! Хватит использовать пережитки!</p>
             <div class="home__banner"><img class="lazy" data-src="images/main-banner.png" alt="Katya"></div>
-            <p class="t-align-justify">Наш робот ассистент может заменить полностью администратора и стать полноценным ассистентом-партнером в вашем барбершопе. Ассистент – это робот, которого мы усовершенствуем каждый день, а еще вы можете собрать его или ее самостоятельно. Все что вам нужно – выбрать далее по списку, каким вы видите вашего ассистента!</p>
+            <div class="video-block mb-30">
+              <iframe class="lazy" data-src="https://www.youtube.com/embed/sI8re1g0cwA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="row">
+              <div class="col-xl-12">
+                <p class="t-align-center">Вы можете ознакомиться с нашими виртуальными  барберами, нашими услугами и их стоимостью. </p>
+              </div>
+              <div class="col-xl-12">
+                <div class="online-order row row_center">
+                  <div class="col-xl-auto"><span class="f-w-n">Онлайн запись:</span></div>
+                  <div class="col-xl-auto"><a class="button button_style2" href="https://n265645.yclients.com/company:258676">https://n265645.yclients.com/company:258676</a></div>
+                </div>
+              </div>
+              <div class="col-xl-12"> 
+                <p class="t-color-1 f-w-n t-align-center">Для демонстрации мы настроили виртуальный барбершоп.</p>
+              </div>
+              <div class="col-xl-12">
+                <p class="t-align-justify">После того, как вы записались, Катя сразу перезвонит и задаст несколько вопросов по оказанным услугам, сотрудникам и барбершопе. Всю полученную  информацию от вас, она сгенерирует в отзыв и опкбликует его в отзывах у барбера, к которому вы записывались.</p>
+              </div>
+              <div class="col-xl-12">
+                <div class="audio"><span class="audio__title t-align-center f-w-n">Вот как работает Катя:</span>
+                  <audio controls>
+                    <source src="audios/test.mp3">
+                    <source src="audios/test.ogg">
+                    <source src="audios/test.wav">
+                  </audio>
+                </div>
+              </div>
+              <div class="col-xl-12">
+                <p class="t-align-center">Хочешь испытать работу демо версии Кати - позвони ей сам.<br> <strong class="t-color-1">+7 495 023 24 24</strong></p>
+              </div>
+              <div class="col-xl-12">
+                <p class="t-align-justify">Наш робот ассистент может заменить полностью администратора и стать полноценным ассистентом-партнером в вашем барбершопе. Ассистент – это робот, которого мы усовершенствуем каждый день, а еще вы можете собрать его или ее самостоятельно. Все что вам нужно – выбрать далее по списку, каким вы видите вашего ассистента!</p>
+              </div>
+            </div>
           </div>
         </section>
         <section class="section home">
@@ -31,7 +75,7 @@
             </div>
           </div>
           <div class="container">
-            <form class="form" action="">
+            <form class="form mb-50" action="">
               <div class="form__section">
                 <div class="row">
                   <div class="form__item col-xl-6 col-12">
@@ -57,7 +101,7 @@
               <div class="form__section">
                 <div class="form-checkbox"><span class="line"></span>
                   <label class="checkbox checkbox-styled">
-                    <input type="checkbox" val="1" hidden>
+                    <input type="checkbox" data-price="1000" hidden>
                     <svg class="icon">
                       <use xlink:href="images/sprite.svg#ico6"></use>
                     </svg><span class="check"></span>
@@ -67,7 +111,7 @@
                 </div>
                 <div class="form-checkbox"><span class="line"></span>
                   <label class="checkbox checkbox-styled styled">
-                    <input type="checkbox" val="1" hidden>
+                    <input type="checkbox" data-price="2500" hidden>
                     <svg class="icon styled">
                       <use xlink:href="images/sprite.svg#ico3"></use>
                     </svg><span class="check"></span>
@@ -77,7 +121,7 @@
                 </div>
                 <div class="form-checkbox"><span class="line"></span>
                   <label class="checkbox checkbox-styled">
-                    <input type="checkbox" val="1" hidden>
+                    <input type="checkbox" data-price="4500" hidden>
                     <svg class="icon">
                       <use xlink:href="images/sprite.svg#ico2"></use>
                     </svg><span class="check"></span>
@@ -87,7 +131,7 @@
                 </div>
                 <div class="form-checkbox"><span class="line"></span>
                   <label class="checkbox checkbox-styled">
-                    <input type="checkbox" val="1" hidden>
+                    <input type="checkbox" data-price="1200" hidden>
                     <svg class="icon">
                       <use xlink:href="images/sprite.svg#ico1"></use>
                     </svg><span class="check"></span>
@@ -97,7 +141,7 @@
                 </div>
                 <div class="form-checkbox"><span class="line"></span>
                   <label class="checkbox checkbox-styled">
-                    <input type="checkbox" val="1" hidden>
+                    <input type="checkbox" data-price="2500" hidden>
                     <svg class="icon">
                       <use xlink:href="images/sprite.svg#ico7"></use>
                     </svg><span class="check"></span>
@@ -107,7 +151,7 @@
                 </div>
                 <div class="form-checkbox"><span class="line"></span>
                   <label class="checkbox checkbox-styled">
-                    <input type="checkbox" val="1" hidden>
+                    <input type="checkbox" data-price="5000" hidden>
                     <svg class="icon">
                       <use xlink:href="images/sprite.svg#ico8"></use>
                     </svg><span class="check"></span>
@@ -117,7 +161,7 @@
                 </div>
                 <div class="form-checkbox"><span class="line"></span>
                   <label class="checkbox checkbox-styled">
-                    <input type="checkbox" val="1" hidden>
+                    <input type="checkbox" data-price="300" hidden>
                     <svg class="icon">
                       <use xlink:href="images/sprite.svg#ico4"></use>
                     </svg><span class="check"></span>
@@ -127,7 +171,7 @@
                 </div>
                 <div class="form-checkbox"><span class="line"></span>
                   <label class="checkbox checkbox-styled">
-                    <input type="checkbox" val="1" hidden>
+                    <input type="checkbox" data-price="1500" hidden>
                     <svg class="icon">
                       <use xlink:href="images/sprite.svg#ico5"></use>
                     </svg><span class="check"></span>
@@ -135,16 +179,29 @@
                     <p>Позвонит вашему клиенту, подтвердит его запись, оставленную не через ассистента, предложит доп. услуги и всячески будет склонять клиента заказать их.</p><span class="checkbox-styled__price">1500 р.</span>
                   </label><span class="line"></span>
                 </div>
+                <!--last-->
+                <div class="form-checkbox"><span class="line"></span>
+                  <label class="checkbox checkbox-styled">
+                    <input type="checkbox" data-price="0" hidden>
+                    <svg class="icon">
+                      <use xlink:href="images/sprite.svg#ico9"></use>
+                    </svg><span class="check"></span>
+                    <h6 class="checkbox-styled__title">Аналитические отчеты.</h6>
+                    <p>Катя умеет группировать, выделять, создавать, рекомендовать, подчеркивать... говоря проще любой отчет, который нужен именно вам - она сделает и отправит его на почту или в мессенджер.</p><span class="checkbox-styled__price">Стоимость определить невозможно, индивидуальный подход.</span>
+                  </label><span class="line"></span>
+                </div>
               </div>
               <div class="form__section">
+                <input class="total-price" type="text" hidden>
                 <div class="row row_space-between">
-                  <div class="form__total-price t-color-1 col-xl-auto">Итого: ............. <span>8300 р.</span></div>
+                  <div class="form__total-price t-color-1 col-xl-auto">Итого: ............. <span>0 р.</span></div>
                   <div class="form__item col-xl-3 col-sm-6 col-12">
                     <button class="button button_style1">Оставить заявку</button>
                   </div>
                 </div>
               </div>
             </form>
+            <p class="t-align-center">Ознакомиться с работой Кати можно по телефону - <a class="num t-color-1" href="tel:84950232424"> <strong>8 495 023 24 24</strong></a></p>
           </div>
         </section>
       </main>

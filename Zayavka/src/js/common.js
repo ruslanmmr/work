@@ -15,6 +15,90 @@
   }
 }(function ($) {
 
+/*!
+ * jQuery & Zepto Lazy - iFrame Plugin - v1.5
+ * http://jquery.eisbehr.de/lazy/
+ *
+ * Copyright 2012 - 2018, Daniel 'Eisbehr' Kern
+ *
+ * Dual licensed under the MIT and GPL-2.0 licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ */
+;(function($) {
+  // load iframe content, like:
+  // <iframe data-src="iframe.html"></iframe>
+  //
+  // enable content error check with:
+  // <iframe data-src="iframe.html" data-error-detect="true"></iframe>
+  $.lazy(['frame', 'iframe'], 'iframe', function(element, response) {
+      var instance = this;
+
+      if (element[0].tagName.toLowerCase() === 'iframe') {
+          var srcAttr = 'data-src',
+              errorDetectAttr = 'data-error-detect',
+              errorDetect = element.attr(errorDetectAttr);
+
+          // default way, just replace the 'src' attribute
+          if (errorDetect !== 'true' && errorDetect !== '1') {
+              // set iframe source
+              element.attr('src', element.attr(srcAttr));
+
+              // remove attributes
+              if (instance.config('removeAttribute')) {
+                  element.removeAttr(srcAttr + ' ' + errorDetectAttr);
+              }
+          }
+
+          // extended way, even check if the document is available
+          else {
+              $.ajax({
+                  url: element.attr(srcAttr),
+                  dataType: 'html',
+                  crossDomain: true,
+                  xhrFields: {withCredentials: true},
+
+                  /**
+                   * success callback
+                   * @access private
+                   * @param {*} content
+                   * @return {void}
+                   */
+                  success: function(content) {
+                      // set responded data to element's inner html
+                      element.html(content)
+
+                      // change iframe src
+                      .attr('src', element.attr(srcAttr));
+
+                      // remove attributes
+                      if (instance.config('removeAttribute')) {
+                          element.removeAttr(srcAttr + ' ' + errorDetectAttr);
+                      }
+                  },
+
+                  /**
+                   * error callback
+                   * @access private
+                   * @return {void}
+                   */
+                  error: function() {
+                      // pass error state to lazy
+                      // use response function for Zepto
+                      response(false);
+                  }
+              });
+          }
+      }
+
+      else {
+          // pass error state to lazy
+          // use response function for Zepto
+          response(false);
+      }
+  });
+})(window.jQuery || window.Zepto);
+
 var ua = navigator.userAgent,
 iPhone = /iphone/i.test(ua),
 chrome = /chrome/i.test(ua),
@@ -457,10 +541,13 @@ $(document).ready(function () {
   lazy();
   checkbox();
   mask();
+  popup();
 });
 
-let $checkbox = $('.checkbox');
+let $checkbox = $('.checkbox input');
+let $popup = $('.popup');
 
+let  $close = $('.popup-close, .popup__bg');
 
 
 function mask() {
@@ -483,7 +570,6 @@ function mask() {
    });
 }
 
-
 function lazy() {
   $(".lazy").Lazy({
     effectTime: 0,
@@ -497,17 +583,47 @@ function lazy() {
 }
 
 function checkbox() {
-  $checkbox.on('click', function() {
+  $checkbox.on('change', function(e) {
     checkboxCheck();
   })
 }
 
 function checkboxCheck() {
   $checkbox.each(function() {
-    if($(this).find('input').prop('checked')) {
-      $(this).addClass('checked');
+    if($(this).prop('checked')) {
+      $(this).parent().addClass('checked');
     } else {
-      $(this).removeClass('checked');
+      $(this).parent().removeClass('checked');
     }
   })
+  totalPrice();
+}
+
+function totalPrice() {
+  let totalVal = 0,
+      $totalVal = $('.form__total-price span');
+
+  $checkbox.each(function() {
+    if($(this).prop('checked')) {
+      totalVal = totalVal+(+$(this).data('price'));
+    }
+  })
+
+  $totalVal.text(totalVal + ' р.');
+  $('.total-price').val(totalVal + ' р.');
+}
+
+function popup() {
+
+  $close.on('click', function(e) {
+    e.preventDefault();
+    $popup.fadeOut(300);
+  })
+}
+
+function popupOpen() {
+  $popup.fadeIn(300);
+  setTimeout(function() {
+    $popup.fadeOut(300);
+  }, 2000)
 }
