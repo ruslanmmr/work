@@ -238,6 +238,42 @@ body {
 }
 
 
+.banner-item {
+  .cover-box {
+    border-radius: 4px;
+    &:before {
+      content: '';
+      display: block;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transition: $trs2;
+      position: relative;
+      z-index: 100;
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+  &.size1 {
+    .cover-box {
+      &:before {
+        padding-top: calc(50% - 15px);
+      }
+    }
+  }
+  &.size2 {
+    .cover-box {
+      &:before {
+        padding-top: 100%;
+      }
+    }
+  }
+}
+
+
 @media all and(max-width: 768px) {
   .aside {
     order: 1000;
@@ -258,6 +294,11 @@ body {
       .button {
         margin: 15px 0 0 0;
       }
+    }
+  }
+  .banner {
+    &:first-child {
+      margin-top: -30px;
     }
   }
 }
