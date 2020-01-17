@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2017 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100px" height="100px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 100 100"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:black;stroke-width:5;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_882160464">
+   <path class="fil0 str0" d="M20.1 49.61l59.8 0c9.68,0 17.6,7.92 17.6,17.6l0 0c0,9.69 -7.92,17.61 -17.6,17.61l-59.8 0c-9.68,0 -17.6,-7.92 -17.6,-17.61l0 0c0,-9.68 7.92,-17.6 17.6,-17.6z"/>
+   <ellipse class="fil0 str0" cx="49.41" cy="52.22" rx="37.71" ry="1.86"/>
+   <path class="fil0 str0" d="M83.7 86.09c1.4,5.49 2.1,8.24 2.1,8.24"/>
+   <path class="fil0 str0" d="M19.6 86.41c-1.4,5.5 -2.1,8.24 -2.1,8.24"/>
+   <g>
+    <path class="fil0 str0" d="M12.34 12.84c0.19,-9.88 14.75,-9.8 15.74,-0.89"/>
+    <path class="fil0 str0" d="M24.43 15.85c0.52,-5.91 3.53,-7.36 9.03,-4.33 -2.73,1.24 -5.74,2.69 -9.03,4.33z"/>
+    <line class="fil0 str0" x1="12.34" y1="12.67" x2="12.51" y2= "51.97" />
+   </g>
+  </g>
+ </g>
+</svg>
