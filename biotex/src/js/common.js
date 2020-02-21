@@ -2,13 +2,42 @@ window.$ = window.jQuery = require('jquery');
 
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 window.Lazy = require('jquery-lazy');
+import device from 'current-device';
 import "inputmask/lib/extensions/inputmask.numeric.extensions";
 import Inputmask from "inputmask/lib/extensions/inputmask.date.extensions";
 
 document.addEventListener('DOMContentLoaded', function(){
-  //$images.init();
+  $images.init();
+  $nav.init();
+  touchHoverEvents()
+  
 });
 
+function desktop() {
+  if($('html').hasClass('desktop')) {
+    return true;
+  }
+}
+//window width
+function width() {
+  return Math.min(window.innerWidth, document.documentElement.clientWidth);
+}
+function touchHoverEvents() {
+  $(document).on('mouseenter mouseleave touchstart touchend mousedown mouseup', 'a,button,.js-touch-hover', function(event) {
+    let $target = $(this);
+    if(event.type=='touchstart' && !desktop()) {
+      $target.addClass('touch');
+    } else if(event.type=='mouseenter' && desktop()) {
+      $target.addClass('hover');
+    } else if(event.type=='mousedown' && desktop()) {
+      $target.addClass('focus');
+    } else {
+      $target.removeClass('touch');
+      $target.removeClass('hover');
+      $target.removeClass('focus');
+    }
+  })
+}
 
 let $images = {
   init: function() {
@@ -60,36 +89,33 @@ let $images = {
 let $nav = {
   trigger: $('.nav-toggle'),
   el: $('.nav'),
-  overlay: $('.overlay'),
   state: false,
   flag: true,
   open: function() {
     $nav.state = true;
     $nav.trigger.addClass('active');
+    $nav.el.addClass('active')
     disablePageScroll();
   },
   close: function() {
     $nav.state = false;
     $nav.trigger.removeClass('active');
-    enablePageScroll(); 
+    $nav.el.removeClass('active');
+    enablePageScroll();
   },
   init: function() {
-    $(document).on('click touchstart mousedown', function(event){
-      let btn = $(event.target).closest($nav.trigger),
-          nav = $(event.target).closest($nav.el);
+    $nav.trigger.on('click', function(event){
+      event.preventDefault();
 
-      if(btn.length>0 && $nav.state==false && event.type=='click') {
+      if($nav.state==false) {
         $nav.open();
-      } else if(btn.length>0 && $nav.state==true && event.type=='click') {
-        $nav.close();
-      } else if(nav.length==0 && (event.type=='touchstart' || event.type=='mousedown')) {
+      } else {
         $nav.close();
       }
-
     })
     
     $(window).resize(function () {
-      if(width()>1200 && $nav.state==true) {
+      if(width()>1024 && $nav.state==true) {
         $nav.close();
       } 
     })

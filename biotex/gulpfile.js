@@ -20,6 +20,7 @@ var gulp = require("gulp"),
 
 let $images = ["./src/img/**/*.{jpg,jpeg,png,gif}", "!./src/img/favicons/*.{jpg,jpeg,png,gif}"],
     $pug = ["./src/views/**/*.pug", "!./src/views/blocks/*.pug", "!./src/views/layout/*.pug"],
+    $pug_all = "./src/views/**/*.pug",
     $scripts = "./src/js/common.js",
     $styles = "./src/styles/**/*.scss",
     $favicons = "./src/img/favicons/*.{jpg,jpeg,png,gif}",
@@ -186,7 +187,7 @@ gulp.task("serve", function () {
 
 gulp.task("watch", function () {
   return new Promise((res, rej) => {
-    watch($pug, gulp.series("pug"));
+    watch($pug_all, gulp.series("pug"));
     watch($styles, gulp.series("styles"));
     watch($scripts, gulp.series("scripts"));
     watch($images, gulp.series("images"));

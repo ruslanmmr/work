@@ -8,13 +8,21 @@
 //colors
 $colorA: #6dbf00;
 $colorA2:#5da300;
-$colorB: #0073c4;
-$colorB2: #008ddd;
+$colorB: #008ddd;
+$colorB2: #0073c4;
 $colorC: #353535;
 $colorD: #0c0c0c;
 $colorE: #898d9b;
 $colorF: #626262;
 $colorG: #4f4f4f;
+$colorH: #838383;
+
+.colorA {
+  color: $colorA;
+}
+.colorH {
+  color: $colorH;
+}
   
 //transitions
 $trs1: .15s ease-out;
@@ -44,6 +52,7 @@ body {
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
+  position: relative;
 }
 
 .wrapper {
@@ -85,6 +94,7 @@ body {
 @import "./partials/text";
 @import "./partials/ui";
 @import "./partials/header";
+@import "./partials/nav";
 @import "./partials/footer";
 
 
