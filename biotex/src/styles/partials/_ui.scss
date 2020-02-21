@@ -1,0 +1,92 @@
+.icon {
+  display: block;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  transition: inherit;
+}
+
+.button,
+.input {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+  appearance: none;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: $trs1;
+}
+
+.button {
+  cursor: pointer;
+  text-align: center;
+  * {
+    pointer-events: none;
+  }
+}
+
+.input {
+  width: 100%;
+  line-height: 40px;
+  padding: 0 20px;
+  &::placeholder {
+    transition: inherit;
+    color: $colorE;
+  }
+  &:focus {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+//lazy
+.lazy {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity $trs3;
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.cover-box {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  background: rgba(0,0,0,.3);
+  .lazy {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .wh {
+    height:100%!important;
+  }
+  .ww {
+    width:100%!important;
+  }
+  &_contain {
+    background-color: transparent;
+    .wh {
+      width:100%!important;
+      height: auto!important;
+    }
+    .ww {
+      height:100%!important;
+      width: auto!important;
+    }
+  }
+}
+
+@media all and(max-width: 1200px) {
+  
+}
