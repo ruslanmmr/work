@@ -3,4 +3,89 @@ block title
   title biotex
   
 block content
-  
+  aside.aside.col-xl-3.col-md-12.mb-50
+    .aside__container
+      .mb-50
+        .row.row-center.mb--35
+          .m-banner.col-xl-12.col-md-4.col-sm-6.col-12.mb-35
+            a(href="#").m-banner__container.js-touch-hover
+              img.lazy(data-src='img/747171381.png' alt="banner")
+              span.m-banner__title Юнилос
+          .m-banner.col-xl-12.col-md-4.col-sm-6.col-12.mb-35
+            a(href="#").m-banner__container.js-touch-hover
+              img.lazy(data-src='img/51998771.png' alt="banner")
+              span.m-banner__title Топас
+      .row.row-center.mb-40
+        .col-xl-12.col-md-6.col-12
+          a(href="#").button.button_style1
+            svg.icon
+              use(xlink:href='img/icons/icons.svg#maths')
+            span Рассчитать септик
+      .news-widget
+        .news-widget__container
+          .news-widget__section
+            h6.news-widget__title Полезные статьи
+          //news block 
+          .news-widget-item.news-widget__section
+            span.news-widget-item__date - 20.02.2020
+            .news-widget-item__title 
+              a(href="#") Выбор септика для канализации - виды и сравнение
+            p.news-widget-item__text Привычным способом утилизации отходов во все времена считалась постройка выгребной ямы, ...
+          //news block 
+          .news-widget-item.news-widget__section
+            span.news-widget-item__date - 01.02.2020
+            .news-widget-item__title 
+              a(href="#") Септики с установкой под ключ: сравнение автономной кана...
+            p.news-widget-item__text В загородном доме или на даче септик с установкой под ключ позволяет избежать проблем...
+          .news-widget__section.row
+            .col-xl-12.col-md-4.col-sm-6.col-12
+              a(href="#").button.button_style2 Смотреть все статьи 
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#next')
+  main.main.col-xl-9.col-md-12.order-md-first.mb-50
+    section.section.about-banner.mb-40
+      .about-banner__container
+        .about-banner__image.cover-box
+          img(data-src="img/cropped-unilos-1.jpg" alt="banner").lazy
+          .about-banner__label
+            svg.icon
+              use(xlink:href='img/icons/icons.svg#like')
+            | Септики лучшего качества! 
+        .about-banner__text
+          h5.t-size-20.mb-20 О компании
+          p Системы глубокой биологической очистки ЮНИЛОС® серии «АСТРА» являются альтернативой центральной канализации и наиболее эффективными автономными системами очистки бытовых стоков на сегодняшний день.
+    section.section.services.mb-40
+      h5.t-size-18.mb-20.colorG Наши услуги
+      .row.mb--20
+        .service-block.col-xl-6.col-12.mb-20
+          a(href="#").service-block__container
+            | Выполнение строительно-монтажных работ "под ключ";
+            svg.icon
+              use(xlink:href='img/icons/icons.svg#next')
+        .service-block.col-xl-6.col-12.mb-20
+          a(href="#").service-block__container
+            | Бесплатный выезд специалиста<br> на объект
+            svg.icon
+              use(xlink:href='img/icons/icons.svg#next')
+        .service-block.col-xl-6.col-12.mb-20
+          a(href="#").service-block__container
+            | Гарантийное и сервисное<br> обслуживание
+            svg.icon
+              use(xlink:href='img/icons/icons.svg#next')
+        .service-block.col-xl-6.col-12.mb-20
+          a(href="#").service-block__container
+            | Шефмонтаж. Запуск оборудования<br> в эксплуатацию
+            svg.icon
+              use(xlink:href='img/icons/icons.svg#next')
+    section.section.c-form
+      .c-form__container
+        h5.c-form__title Нужна консультация? Есть вопросы?
+        p.c-form__text Звоните по телефону 8 (985) 284-12-42 или оставьте заявку на обратный звонок
+        .row.mb--20
+          .col-xl-4.col-12.mb-20
+            input(type="text" placeholder="Имя*").input
+          .col-xl-4.col-12.mb-20 
+            input(type="text" placeholder="+7 ( ___ ) ___ - __ - __").input.phone
+          .col-xl-4.col-12.mb-20
+            button.button.button_style1.button_small 
+              span Заказать звонок

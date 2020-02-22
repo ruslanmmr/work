@@ -24,7 +24,7 @@ let $images = ["./src/img/**/*.{jpg,jpeg,png,gif}", "!./src/img/favicons/*.{jpg,
     $scripts = "./src/js/common.js",
     $styles = "./src/styles/**/*.scss",
     $favicons = "./src/img/favicons/*.{jpg,jpeg,png,gif}",
-    $other = ["./src/**/*", "!./src/img/**/*", "!./src/js/**/*", "!./src/styles/**/*", "!./src/views/**/*"];
+    $other = ["./src/**/*", "!./src/img/**/*.{jpg,jpeg,png,gif}", "!./src/js/**/*", "!./src/styles/**/*", "!./src/views/**/*"];
 
 gulp.task("pug", function () {
   return gulp.src($pug)

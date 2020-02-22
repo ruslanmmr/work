@@ -9,6 +9,7 @@ import Inputmask from "inputmask/lib/extensions/inputmask.date.extensions";
 document.addEventListener('DOMContentLoaded', function(){
   $images.init();
   $nav.init();
+  $mask.init();
   touchHoverEvents()
   
 });
@@ -22,6 +23,7 @@ function desktop() {
 function width() {
   return Math.min(window.innerWidth, document.documentElement.clientWidth);
 }
+
 function touchHoverEvents() {
   $(document).on('mouseenter mouseleave touchstart touchend mousedown mouseup', 'a,button,.js-touch-hover', function(event) {
     let $target = $(this);
@@ -120,5 +122,16 @@ let $nav = {
       } 
     })
 
+  }
+}
+let $mask = {
+  el: document.querySelectorAll('.phone'),
+  init: function() {
+    if($mask.el!==null) {
+      Inputmask({
+        mask: "+7 ( 999 ) 999 - 99 - 99",
+        clearIncomplete: true
+      }).mask($mask.el);
+    }
   }
 }
