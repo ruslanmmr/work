@@ -74,6 +74,7 @@ button,
       top: 0;
       transition: $trs1;
       border-radius: 50px;
+      will-change: opacity;
     }
     &:after {
       background: linear-gradient(135deg, $colorB 0%,$colorB2 100%);
