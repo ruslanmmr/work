@@ -78,8 +78,10 @@ gulp.task("scripts", function () {
     .pipe(debug({"title": "scripts"}))
     .on("end", browsersync.reload);
 });
+
 gulp.task("scripts-production", function () {
   return gulp.src($scripts)
+    .pipe(sourcemaps.init())
     .pipe(webpackStream({
       mode: 'production',
       output: {
@@ -102,6 +104,7 @@ gulp.task("scripts-production", function () {
     .pipe(rename({
       suffix: ".min"
     }))
+    .pipe(sourcemaps.write("./maps/"))
     .pipe(gulp.dest("./public/js/"))
     .pipe(debug({"title": "scripts"}))
     .on("end", browsersync.reload);
@@ -122,6 +125,8 @@ gulp.task("styles", function () {
       suffix: ".min"
     }))
     .pipe(replace("../../public/", "../"))
+    .pipe(plumber.stop())
+    .pipe(sourcemaps.write("./maps/"))
     .pipe(gulp.dest("./public/styles/"))
     .on("end", browsersync.reload);
 });
