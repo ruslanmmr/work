@@ -116,7 +116,7 @@ gulp.task("styles", function () {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer({
-      overrideBrowserslist: ["last 1 version","> 1%"]
+      overrideBrowserslist: ["last 10 version","> 1%"]
     }))
     .pipe(mincss({
       level: 1
