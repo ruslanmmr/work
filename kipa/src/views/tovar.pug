@@ -1,0 +1,164 @@
+mixin block()
+  .item-info-block.col-xl-4.col-md-6.col-12
+    a(href="#").item-info-block__container
+      .cover-box
+        img(, alt="image").lazy&attributes(attributes)
+      .item-info-block__text
+        h5.item-info-block__title=title
+        p Краткое поиснение что значит парковки
+      span.item-info-block__label ПОДРОБНЕЕ
+
+mixin link(text)
+  li.aside-block__item
+    a(href="#").button.button_style4.aside-block__link=text
+      svg.icon
+        use(xlink:href='img/icons/icons.svg#play-button')
+        
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .wrapper
+      include blocks/header
+      .page
+        .container
+          .row
+            aside.aside.col-xl-3.col-md-4.col-sm-12
+              .row.row_bottom-20
+                .aside-block.col-xl-12.col-sm-6.col-12
+                  .aside-block__container
+                    .aside-block__head
+                      .cover-box.cover-box_contain
+                        img(data-src="img/logo-madas.png", alt="logo").lazy
+                    ul.aside-block__list
+                      +link('Клапаны')
+                      +link('Регуляторы давления')
+                      +link('Клапаны - ПСК')
+                      +link('Клапаны - ПЗК')
+                      +link('Автоматика')
+                      +link('Регуляторы соотношения')
+                      +link('Фильтры')
+                      +link('Компенсаторы')
+                      +link('Заслонки дроссельные')
+                .aside-block.col-xl-12.col-sm-6.col-12
+                  .aside-block__container
+                    .aside-block__head
+                      .cover-box.cover-box_contain
+                        img(data-src="img/logo-seitron.png", alt="logo").lazy
+                    ul.aside-block__list
+                      +link('Одноканальные сигнализаторы')
+                      +link('Многоканальные сигнализаторы')
+                      +link('Термостаты')
+                      +link('Бытовые сигнализаторы')
+                      +link('Газоанализаторы CHEMIST')
+                      +link('Портативные приборы')
+                      +link('Аксессуары Seitron')
+                      +link('Чувствительные элементы')
+                .aside-block.col-xl-12.col-sm-6.col-12
+                  .aside-block__container
+                    .aside-block__head
+                      .cover-box.cover-box_contain
+                        img(data-src="img/logo_kipa_aqua.png", alt="logo").lazy
+                    ul.aside-block__list
+                      +link('Реле давления')
+            main.main.col-xl-9.col-md-8.col-sm-12
+              .pagination
+                ul.pagination__list
+                  li.pagination__item
+                    a(href="#").pagination__link Главная 
+                  li.pagination__item
+                    a(href="#").pagination__link Каталог
+                  li.pagination__item
+                    a(href="#").pagination__link Регуляторы давления
+                  li.pagination__item Kipa-35-d
+              section.section.t-block
+                .t-block-top
+                  .row
+                    .t-block-top__image.col-xl-4.col-12
+                      .cover-box.cover-box_size-auto
+                        img.lazy(data-src='img/rele-d.jpg' alt="image")
+                    .t-block-top__description.col-xl-8.col-12
+                      h2.t-block-top__title KIPA-35-D
+                      span.t-block-top__code Код товара: 12684649В4
+                      span.t-block-top__price от 2 200 Р
+                      p Реле давления типа KIPA-35-D предназначено для регулирования, текущего контроля и аварийной сигнализации в промышленности. Устанавливается в системах с жидкими и газообразными средами.
+                      .share-block 
+                        .share-block__title Поделиться - 
+                        .socials
+                          ul.socials__list
+                            li.socials__item
+                              a(href="#").socials__link
+                                svg.icon
+                                  use(xlink:href='img/icons/socials.svg#instagram')
+                            li.socials__item
+                              a(href="#").socials__link
+                                svg.icon
+                                  use(xlink:href='img/icons/socials.svg#facebook')
+                            li.socials__item
+                              a(href="#").socials__link
+                                svg.icon
+                                  use(xlink:href='img/icons/socials.svg#youtube')
+                            li.socials__item
+                              a(href="#").socials__link
+                                svg.icon
+                                  use(xlink:href='img/icons/socials.svg#vk')
+                            li.socials__item
+                              a(href="#").socials__link
+                                svg.icon
+                                  use(xlink:href='img/icons/socials.svg#twitter')
+                            li.socials__item
+                              a(href="#").socials__link
+                                svg.icon
+                                  use(xlink:href='img/icons/socials.svg#odnoklassniki')
+                .t-block-bottom
+                  mixin block2()
+                    tr.t-block-table-item
+                      td.t-block-table-item__block
+                        h2.t-block-table-item__title KIPA-35-D2
+                      td.t-block-table-item__block
+                        a(href="#" download style='background-image:url("img/icons/pdf.png")').t-block-table-item__download
+                      td.t-block-table-item__block
+                        span.t-block-table-item__label Среда
+                        span вода, воздух
+                      td.t-block-table-item__block
+                        span.t-block-table-item__label Соединение
+                        span резьба
+                      td.t-block-table-item__block
+                        span.t-block-table-item__label Раб. диапазон
+                        span -0.5 - 3.0
+                      td.t-block-table-item__block
+                        span.t-block-table-item__label Цена
+                        span.t-block-table-item__price 2200 руб
+                      td.t-block-table-item__block
+                        button.button.t-block-table-item__cart
+                          svg.icon
+                            use(xlink:href='img/icons/icons.svg#shopping-cart-black-shape')
+                          | В корзину
+
+                  table.t-block-table
+                    tr.t-block-table__head
+                      td Название
+                      td 
+                      td Среда
+                      td Соединение
+                      td Раб. диапазон
+                      td Цена
+                      td
+                    +block2()
+                    +block2()
+            
+
+
+              section.section
+                .section__head
+                  h5.section__title.t-size-22 Проектные решения
+                .section__content.row.row_bottom-20
+                  +block('Котельные')(data-src="img/image.png")
+                  +block('Парковки')(data-src="img/image2.png")
+                  +block('Частные дома')(data-src="img/image3.png")
+      //footer
+      include blocks/footer
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

@@ -1,0 +1,232 @@
+.icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  fill: #000;
+  stroke: #000;
+  transition: inherit;
+}
+.dropdown {
+  position: relative;
+}
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.button {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+  appearance: none;
+  padding: 0;
+  transition: $trs1;
+  position: relative;
+  user-select: none;
+  flex-shrink: 0;
+  font-size: 12px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  &_style1 {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+    .icon {
+      width: 22px;
+      height: 22px;
+      position: relative;
+      z-index: 2;
+      fill: $main-color2;
+    }
+    &:hover {
+      background-color: #f5f7fa;
+      box-shadow: $shadow;
+    }
+  }
+  &_style2 {
+    line-height: 30px;
+    border-radius: 32px;
+    border: 1px solid #96a8c0;
+    color: #7c92b0;
+    padding: 0 55px 0 15px;
+    .icon {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      fill: #96a8c0;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:hover {
+      background-color: #dce5f1;
+    }
+  }
+  &_style3 {
+    height: 42px;
+    border: 1px solid $main-color1;
+    border-radius: 4px;
+    line-height: 40px;
+    padding: 0 10px;
+    color: $main-color1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      width: 20px;
+      height: 20px;
+      fill: $main-color1;
+    }
+    &:hover {
+      background-color: $main-color1;
+      color: #fff;
+      .icon {
+        fill: #fff;;
+      }
+    }
+  }
+  &_style4 {
+    line-height: 18px;
+    padding: 10px 30px 10px 15px;
+    border-radius: 4px;
+    color: #000;
+    width: 100%;
+    .icon {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      fill: #96a8c0;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+    &:hover {
+      background-color: #f5f7fa;
+      .icon {
+        opacity: 1;
+      }
+    }
+  }
+}
+.input {
+  display: inline-block;
+  outline: none;
+  border: 0;
+  appearance: none;
+  border-radius: 4px;
+  box-shadow: 0;
+  transition: $trs1;
+  background-color: transparent;
+  text-decoration: none;
+  width: 100%;
+  font-size: 12px;
+  &::placeholder {
+    transition: $trs1;
+  }
+  &:focus {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+.socials {
+  &__list {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  &__link {
+    display: block;
+    width: 20px;
+    height: 20px;
+    transition: $trs1;
+    .icon {
+      width: 100%;
+      height: 100%;
+      fill: #9eb6cf;
+    }
+    &:hover {
+      .icon {
+        fill: $main-color2;
+      }
+    }
+  }
+}
+.lazy {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.cover-box {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  background: rgba(0,0,0,.5);
+  .lazy {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .wh {
+    height:100%!important;
+  }
+  .ww {
+    width:100%!important;
+  }
+  &_contain {
+    background-color: transparent;
+    .wh {
+      width:100%!important;
+      height: auto!important;
+    }
+    .ww {
+      height:100%!important;
+      width: auto!important;
+    }
+  }
+  &_size-auto {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    .lazy {
+      position: static;
+      left: 0;
+      top: 0;
+      width:100%!important;
+      height: auto!important;
+      transform: translate(0);
+    }
+  }
+}
+
+
+@media all and(max-width: 576px) {
+  .button_style1 {
+    width: 30px;
+    height: 30px;
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

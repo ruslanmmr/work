@@ -1,0 +1,48 @@
+header.header
+  .container
+    .header__container
+      .header__left
+        .overlay
+        .logo
+          a(href="#").logo__link
+            img(src="img/logos/logo.svg", alt="logo")
+        nav.nav
+          .nav__head
+            a(href="javascript:void(0)").button.button_style1.nav-close-button
+              svg.icon
+                use(xlink:href='img/icons/icons.svg#close')
+          ul.nav__list
+            li.nav__item
+              a(href="#").nav__link Каталог
+            li.nav__item
+              a(href="#").nav__link Услуги
+            li.nav__item
+              a(href="#").nav__link О компании
+            li.nav__item.dropdown
+              a(href="#").nav__link.dropdown-button Контакты
+              .dropdown-content
+                ul
+                  li
+                    a(href="tel:") Москва: 
+                      span +7 (495) 795 27-95
+                  li
+                    a(href="tel:") Казань: 
+                      span +7 (495) 795 27-95
+                  li
+                    a(href="tel:") Екатеринбург: 
+                      span +7 (495) 795 27-95      
+      .header__right
+        .search
+          form(action="#").search__container
+            input(type="text" placeholder="Поиск по товарам").input
+            button.button
+              svg.icon
+                use(xlink:href='img/icons/icons.svg#magnifying-glass')
+        .cart-button
+          span
+          a(href="#").button.button_style1
+            svg.icon
+              use(xlink:href='img/icons/icons.svg#shopping-cart-black-shape')
+        a(href="javascript:void(0)").button.button_style1.nav-open-button
+          svg.icon
+            use(xlink:href='img/icons/icons.svg#burger')
