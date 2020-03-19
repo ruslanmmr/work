@@ -1,0 +1,48 @@
+.button {
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  outline: none;
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+  appearance: none;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: $trs1;
+  &_style-1 {
+    line-height: 33px;
+    background-color: $colorJ;
+    color: $colorB;
+    border: 1px solid $colorJ;
+    border-radius: 35px;
+    padding: 0 20px 0 40px;
+    will-change: transform;
+    font-size: 0.75rem;
+    .icon {
+      fill: #cacaca;
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      top: 11px;
+      left: 17px;
+      transition: inherit;
+    }
+    &.touch,
+    &.hover {
+      border-color: $colorK;
+      .icon {
+        fill: $colorK;
+      }
+    }
+    &.mousedown {
+      transform: scale(0.95);
+    }
+  }
+}
+.button {
+  cursor: pointer;
+}

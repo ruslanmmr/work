@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title template
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+    //styles
+    link(rel="stylesheet" href="styles/common.min.css")
+  body
+    .wrapper
+      include ../blocks/header
+      .content
+        block content
+      include ../blocks/footer
+
+    //jquery
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    //scripts
+    script(src="js/common.min.js")

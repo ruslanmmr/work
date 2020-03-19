@@ -1,0 +1,28 @@
+.breadcrumbs {
+  margin-bottom: 30px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    &:not(:last-child) {
+      &:after {
+        content: '>';
+        display: inline-block;
+        margin: 0 10px;
+      }
+    }
+  }
+  &__link {
+    transition: $trs1;
+    text-decoration: none;
+    color: $colorH;
+    &.touch,
+    &.hover {
+      color: $colorB;
+    }
+  }
+}

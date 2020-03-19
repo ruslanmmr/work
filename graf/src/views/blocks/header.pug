@@ -1,0 +1,35 @@
+.overlay
+header.header
+  .header__top
+    .container
+      .logo.header__logo
+        a(href="/").logo__link
+          img(src="img/logos/logo.png", alt="logo").logo__image
+      span.header__label Официальный представитель<br> Graf-Syteco в России
+      .adress-item
+        svg.icon
+          use(xlink:href='img/icons/icons.svg#pin')
+        | Москва, Лубянский проезд, 9 ст1, офис 3<br>
+        a(href="info@grafsyteco.ru") info@grafsyteco.ru
+      .phone-item
+        a(href="tel:").phone-item__link 8 800 343-53-33
+        span.phone-item__text Звонок бесплатный
+      a(href="javascript:void(0);").nav-toggle
+        span
+  nav.nav
+    .container
+      ul.nav__list
+        li.nav__item
+          a(href="#").nav__link О Компании
+        li.nav__item
+          a(href="#").nav__link Продукция
+        li.nav__item
+          a(href="#").nav__link Услуги
+        li.nav__item
+          a(href="#").nav__link Отрасли
+        li.nav__item
+          a(href="#").nav__link Контакты
+      a(href="#").button.button_style-1
+        svg.icon
+          use(xlink:href='img/icons/icons.svg#phone')
+        | Заказать звонок
