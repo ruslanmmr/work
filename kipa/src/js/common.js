@@ -1,6 +1,8 @@
 $(document).ready(function () {
   images.init();
-  nav.init()
+  nav.init();
+  calc.init();
+  $checkbox.init();
 });
 
 $(window).resize(function () {
@@ -75,5 +77,86 @@ let nav = {
         nav.overlay.fadeOut(300);
       }
     });
+  }
+}
+
+
+//num
+$(document).on('change input', 'input', function(event) {
+  let $target = $(this);
+  if($target.hasClass('number-only')) {
+    $target.val( $target.val().replace(/\D/, '') )
+  }
+})
+
+//calc
+let calc = {
+  element: $('.calc-count-block'),
+  init: function() {
+    this.element.each(function() {
+      let $this = $(this),
+          $plus = $this.find('.js-plus'),
+          $minus = $this.find('.js-minus'),
+          $input = $this.find('input'),
+          val = +$input.val();
+      
+      check();
+      $plus.on('click', function() {
+        val++;
+        check();
+      })
+      $minus.on('click', function() {
+        val--;
+        check();
+      })
+      $input.on('change input', function() {
+        setTimeout(function() {
+          val = +$input.val();
+          check();
+        },100)
+      })
+
+      function check() {
+        console.log(val)
+        if(val<1 || val==1) {
+          val=1;
+          $minus.addClass('disabled');
+        } else {
+          $minus.removeClass('disabled');
+        }
+        $input.val(val);
+      }
+    })
+  }
+}
+
+//checkboxes
+window.$checkbox = {
+  init: function() {
+    $checkbox.check();
+
+    $(document).on('click', '.checkbox', function() {
+      $checkbox.check();
+    })
+    
+    $(document).on('click', '.radio', function() {
+      $checkbox.check();
+    })
+
+  },
+  check: function() {
+    $('.checkbox, .radio').each(function() {
+      let input = $(this).find('input');
+      if(input.prop('disabled')) {
+        $(this).addClass('disabled');
+      } else {
+        $(this).removeClass('disabled');
+      }
+      if(input.prop('checked')) {
+        $(this).addClass('checked');
+      } else {
+        $(this).removeClass('checked');
+      }
+    })
   }
 }

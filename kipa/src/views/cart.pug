@@ -1,0 +1,110 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .wrapper
+      include blocks/header
+      .page
+        .container
+          main.main
+            .pagination
+              ul.pagination__list
+                li.pagination__item
+                  a(href="#").pagination__link Главная 
+                li.pagination__item Корзина
+            section.section.b-cart
+              .section__head
+                h5.section__title.t-size-22 Корзина
+                a(href="#").b-cart__reset
+                  svg.icon
+                    use(xlink:href='img/icons/icons.svg#close-small')
+                  | Очистить корзину
+              table.b-cart__items
+                //cart item
+                tr.b-cart-item
+                  td.b-cart-item__image.b-cart-item__section
+                    .cover-box.cover-box_contain
+                      img.lazy(data-src='img/rele-d.jpg' alt="image")
+                  td.b-cart-item__text.b-cart-item__section
+                    h4.b-cart-item__title Встраиваемый KIPA-35-D
+                    span.b-cart-item__code Код товара: 12684649В4
+                  td.b-cart-item__price.b-cart-item__section
+                    span 6 500 Р/шт
+                    span 5 000 Р/шт
+                  td.b-cart-item__count.b-cart-item__section
+                    .calc-count-block
+                      a(href="javascript:void(0)").calc-count-block__btn.js-minus –
+                      input.input.number-only(type="text" value='1')
+                      a(href="javascript:void(0)").calc-count-block__btn.js-plus +
+                  td.b-cart-item__total.b-cart-item__section
+                    span 250 000 Р
+                    span Скидка 23 000 Р
+                  //del
+                  td.b-cart-item__section
+                    .button.b-cart-item__delete
+                      svg.icon
+                        use(xlink:href='img/icons/icons.svg#close-small')
+                //cart item
+                tr.b-cart-item
+                  td.b-cart-item__image.b-cart-item__section
+                    .cover-box.cover-box_contain
+                      img.lazy(data-src='img/an03008.jpg' alt="image")
+                  td.b-cart-item__text.b-cart-item__section
+                    h4.b-cart-item__title Модификация FRG/2MB версия Компакт "Чукотка"
+                    span.b-cart-item__code Код товара: 12684649В4
+                  td.b-cart-item__price.b-cart-item__section
+                    span 5 500 Р/шт
+                  td.b-cart-item__count.b-cart-item__section
+                    .calc-count-block
+                      a(href="javascript:void(0)").calc-count-block__btn.js-minus –
+                      input.input.number-only(type="text" value='1')
+                      a(href="javascript:void(0)").calc-count-block__btn.js-plus +
+                  td.b-cart-item__total.b-cart-item__section
+                    span 5 000 Р
+                  //del
+                  td.b-cart-item__section
+                    .button.b-cart-item__delete
+                      svg.icon
+                        use(xlink:href='img/icons/icons.svg#close-small')
+                //cart item
+                tr.b-cart-item
+                  td.b-cart-item__image.b-cart-item__section
+                    .cover-box.cover-box_contain
+                      img.lazy(data-src='img/co_metan_seitron.jpg' alt="image")
+                  td.b-cart-item__text.b-cart-item__section
+                    h4.b-cart-item__title Модификация FBC04Z -CHR 130
+                    span.b-cart-item__code Код товара: 12684649В4
+                  td.b-cart-item__price.b-cart-item__section
+                    span 5 000 Р/шт
+                  td.b-cart-item__count.b-cart-item__section
+                    .calc-count-block
+                      a(href="javascript:void(0)").calc-count-block__btn.js-minus –
+                      input.input.number-only(type="text" value='1')
+                      a(href="javascript:void(0)").calc-count-block__btn.js-plus +
+                  td.b-cart-item__total.b-cart-item__section
+                    span 50 000 Р
+                  //del
+                  td.b-cart-item__section
+                    .button.b-cart-item__delete
+                      svg.icon
+                        use(xlink:href='img/icons/icons.svg#close-small')
+
+              .b-total-line
+                .b-total-price
+                  .b-total-price__discount
+                    span Скидка: 
+                    span - 23 000 Р
+                  .b-total-price__total
+                    span Итого: 
+                    span 275 656 Р
+                a(href="order.html").button.button_style4 Перейти к оформлению
+            
+
+
+          
+    //footer
+    include blocks/footer
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

@@ -1,0 +1,83 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .wrapper
+      include blocks/header
+      .page
+        .container
+          main.main
+            .pagination
+              ul.pagination__list
+                li.pagination__item
+                  a(href="#").pagination__link Главная 
+                li.pagination__item Оформление заказа
+            section.section.b-checkout
+              .b-message-info
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#sms')
+                span Cчет выставляется в рублях по курсу ЦБ РФ на день оформления заказа. Срок действия счета: <strong>4 рабочих дня</strong>. 
+                span Курc валют на 29.03.2020 по ЦБ РФ: <strong>1 € = 85.73 RUB</strong>
+              //section
+              .b-checkout-section
+                h4.b-checkout-section__title Способ доставки
+                .b-checkout-section__group
+                  span.b-checkout-section__label Выберите способ доставки *
+                  .row
+                    .b-checkout-section__item.col-xl-4.col-md-6.col-12
+                      label.radio.b-checkout-radio
+                        input(type="radio" name='1' checked)
+                        | Самовывоз со склада
+                    .b-checkout-section__item.col-xl-4.col-md-6.col-12
+                      label.radio.b-checkout-radio
+                        input(type="radio" name='1')
+                        | Доставка по адресу (PonyExpress)
+                    .b-checkout-section__item.col-xl-4.col-md-6.col-12
+                      label.radio.b-checkout-radio
+                        input(type="radio" name='1')
+                        | Доставка до терминала ТК (Деловые линии)
+                .b-checkout-section__group
+                  .b-checkout-section__item
+                    span.b-checkout-section__label Введите адрес доставки *
+                    input.input.input_style1(type="text" placeholder="Город, Улица, Дом, Квартира" required)
+                    span.b-checkout-section__text *Доставка товара оплачивается покупателем.
+              //section
+              .b-checkout-section
+                h4.b-checkout-section__title Данные клиента
+                .row
+                  .b-checkout-section__group.col-xl-6.col-12
+                    .b-checkout-section__item
+                      span.b-checkout-section__label ФИО *
+                      input.input.input_style1(type="text" placeholder="Фамилия Имя Отчество" required)
+                    .b-checkout-section__item
+                      span.b-checkout-section__label Номер телефона для связи*
+                      input.input.input_style1(type="text" placeholder="+7 ( ___ )  ___  -  __  -  __" required)
+                    .b-checkout-section__item
+                      span.b-checkout-section__label Введите E-mail *
+                      input.input.input_style1(type="email" placeholder="Адрес электронной почты" required)
+                    .b-checkout-section__item
+                      span.b-checkout-section__label ИНН *
+                      input.input.input_style1(type="text" placeholder="Введите ИНН" required)
+                  .b-checkout-section__group.col-xl-6.col-12
+                    .b-checkout-section__item
+                      span.b-checkout-section__label Комментарий (если есть пожелания)
+                      textarea.input.input_style1(type="text" placeholder="Введите текст" required)
+              .b-total-line
+                .b-total-price
+                  .b-total-price__discount
+                    span Скидка: 
+                    span - 23 000 Р
+                  .b-total-price__total
+                    span Итого: 
+                    span 275 656 Р
+                button.button.button_style4 Оформить заказ
+
+
+
+          
+    //footer
+    include blocks/footer
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

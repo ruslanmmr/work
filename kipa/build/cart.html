@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>kipa</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="styles/libs.min.css">
+    <link rel="stylesheet" href="styles/common.min.css">
+    <link rel="stylesheet" href="styles/new.min.css">
+    <link rel="stylesheet" href="styles/cart.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__container">
+            <div class="header__left">
+              <div class="overlay"></div>
+              <div class="logo"><a class="logo__link" href="#"><img src="img/logos/logo.svg" alt="logo"></a></div>
+              <nav class="nav">
+                <div class="nav__head"><a class="button button_style1 nav-close-button" href="javascript:void(0)">
+                    <svg class="icon">
+                      <use xlink:href="img/icons/icons.svg#close"></use>
+                    </svg></a></div>
+                <ul class="nav__list">
+                  <li class="nav__item"><a class="nav__link" href="#">Каталог</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#">Услуги</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#">О компании</a></li>
+                  <li class="nav__item dropdown"><a class="nav__link dropdown-button" href="#">Контакты</a>
+                    <div class="dropdown-content">
+                      <ul>
+                        <li><a href="tel:">Москва: <span>+7 (495) 795 27-95</span></a></li>
+                        <li><a href="tel:">Казань: <span>+7 (495) 795 27-95</span></a></li>
+                        <li><a href="tel:">Екатеринбург: <span>+7 (495) 795 27-95      </span></a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__right">
+              <div class="search">
+                <form class="search__container" action="#">
+                  <input class="input" type="text" placeholder="Поиск по товарам">
+                  <button class="button">
+                    <svg class="icon">
+                      <use xlink:href="img/icons/icons.svg#magnifying-glass"></use>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div class="cart-button"><span></span><a class="button button_style1" href="#">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/icons.svg#shopping-cart-black-shape"></use>
+                  </svg></a></div><a class="button button_style1 nav-open-button" href="javascript:void(0)">
+                <svg class="icon">
+                  <use xlink:href="img/icons/icons.svg#burger"></use>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="page">
+        <div class="container">
+          <main class="main">
+            <div class="pagination">
+              <ul class="pagination__list">
+                <li class="pagination__item"><a class="pagination__link" href="#">Главная </a></li>
+                <li class="pagination__item">Корзина</li>
+              </ul>
+            </div>
+            <section class="section b-cart">
+              <div class="section__head">
+                <h5 class="section__title t-size-22">Корзина</h5><a class="b-cart__reset" href="#">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/icons.svg#close-small"></use>
+                  </svg>Очистить корзину</a>
+              </div>
+              <table class="b-cart__items">
+                <!--cart item-->
+                <tr class="b-cart-item">
+                  <td class="b-cart-item__image b-cart-item__section">
+                    <div class="cover-box cover-box_contain"><img class="lazy" data-src="img/rele-d.jpg" alt="image"></div>
+                  </td>
+                  <td class="b-cart-item__text b-cart-item__section">
+                    <h4 class="b-cart-item__title">Встраиваемый KIPA-35-D</h4><span class="b-cart-item__code">Код товара: 12684649В4</span>
+                  </td>
+                  <td class="b-cart-item__price b-cart-item__section"><span>6 500 Р/шт</span><span>5 000 Р/шт</span></td>
+                  <td class="b-cart-item__count b-cart-item__section">
+                    <div class="calc-count-block"><a class="calc-count-block__btn js-minus" href="javascript:void(0)">–</a>
+                      <input class="input number-only" type="text" value="1"><a class="calc-count-block__btn js-plus" href="javascript:void(0)">+</a>
+                    </div>
+                  </td>
+                  <td class="b-cart-item__total b-cart-item__section"><span>250 000 Р</span><span>Скидка 23 000 Р</span></td>
+                  <!--del-->
+                  <td class="b-cart-item__section">
+                    <div class="button b-cart-item__delete">
+                      <svg class="icon">
+                        <use xlink:href="img/icons/icons.svg#close-small"></use>
+                      </svg>
+                    </div>
+                  </td>
+                </tr>
+                <!--cart item-->
+                <tr class="b-cart-item">
+                  <td class="b-cart-item__image b-cart-item__section">
+                    <div class="cover-box cover-box_contain"><img class="lazy" data-src="img/an03008.jpg" alt="image"></div>
+                  </td>
+                  <td class="b-cart-item__text b-cart-item__section">
+                    <h4 class="b-cart-item__title">Модификация FRG/2MB версия Компакт "Чукотка"</h4><span class="b-cart-item__code">Код товара: 12684649В4</span>
+                  </td>
+                  <td class="b-cart-item__price b-cart-item__section"><span>5 500 Р/шт</span></td>
+                  <td class="b-cart-item__count b-cart-item__section">
+                    <div class="calc-count-block"><a class="calc-count-block__btn js-minus" href="javascript:void(0)">–</a>
+                      <input class="input number-only" type="text" value="1"><a class="calc-count-block__btn js-plus" href="javascript:void(0)">+</a>
+                    </div>
+                  </td>
+                  <td class="b-cart-item__total b-cart-item__section"><span>5 000 Р</span></td>
+                  <!--del-->
+                  <td class="b-cart-item__section">
+                    <div class="button b-cart-item__delete">
+                      <svg class="icon">
+                        <use xlink:href="img/icons/icons.svg#close-small"></use>
+                      </svg>
+                    </div>
+                  </td>
+                </tr>
+                <!--cart item-->
+                <tr class="b-cart-item">
+                  <td class="b-cart-item__image b-cart-item__section">
+                    <div class="cover-box cover-box_contain"><img class="lazy" data-src="img/co_metan_seitron.jpg" alt="image"></div>
+                  </td>
+                  <td class="b-cart-item__text b-cart-item__section">
+                    <h4 class="b-cart-item__title">Модификация FBC04Z -CHR 130</h4><span class="b-cart-item__code">Код товара: 12684649В4</span>
+                  </td>
+                  <td class="b-cart-item__price b-cart-item__section"><span>5 000 Р/шт</span></td>
+                  <td class="b-cart-item__count b-cart-item__section">
+                    <div class="calc-count-block"><a class="calc-count-block__btn js-minus" href="javascript:void(0)">–</a>
+                      <input class="input number-only" type="text" value="1"><a class="calc-count-block__btn js-plus" href="javascript:void(0)">+</a>
+                    </div>
+                  </td>
+                  <td class="b-cart-item__total b-cart-item__section"><span>50 000 Р</span></td>
+                  <!--del-->
+                  <td class="b-cart-item__section">
+                    <div class="button b-cart-item__delete">
+                      <svg class="icon">
+                        <use xlink:href="img/icons/icons.svg#close-small"></use>
+                      </svg>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <div class="b-total-line">
+                <div class="b-total-price">
+                  <div class="b-total-price__discount"><span>Скидка: </span><span>- 23 000 Р</span></div>
+                  <div class="b-total-price__total"><span>Итого: </span><span>275 656 Р</span></div>
+                </div><a class="button button_style4" href="order.html">Перейти к оформлению</a>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+    <!--footer-->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <div class="footer__left">
+            <div class="logo"><a class="logo__link" href="#"><img src="img/logos/logo.svg" alt="logo"></a></div>
+            <nav class="nav">
+              <div class="nav__head"><a class="button button_style1 nav-close-button" href="javascript:void(0)">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/icons.svg#close"></use>
+                  </svg></a></div>
+              <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#">Каталог</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Услуги</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">О компании</a></li>
+                <li class="nav__item dropdown"><a class="nav__link dropdown-button" href="#">Контакты</a>
+                  <div class="dropdown-content">
+                    <ul>
+                      <li><a href="tel:">Москва: <span>+7 (495) 795 27-95</span></a></li>
+                      <li><a href="tel:">Казань: <span>+7 (495) 795 27-95</span></a></li>
+                      <li><a href="tel:">Екатеринбург: <span>+7 (495) 795 27-95  </span></a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div><a class="footer__num" href="tel:">+7 (495) 795 27-95</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="copy">&copy 2019 Сайт создан компанией КИПА. Все права защищены.</div>
+          <div class="socials">
+            <ul class="socials__list">
+              <li class="socials__item"><a class="socials__link" href="#">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/socials.svg#instagram"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="#">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/socials.svg#facebook"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="#">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/socials.svg#youtube"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="#">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/socials.svg#vk"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="#">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/socials.svg#twitter"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="#">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/socials.svg#odnoklassniki"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/libs.min.js">                 </script>
+    <script src="js/common.min.js"></script>
+  </body>
+</html>
