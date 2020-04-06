@@ -103,7 +103,7 @@ function navToggle() {
         event.preventDefault();
         $(this).toggleClass('active');
         $(this).siblings('.nav__sub-list').toggleClass('active');
-      } else if(event.type=='click' && !device.desktop() && $(window).width()<=768) {
+      } else if(event.type=='click' && $(window).width()<=768) {
         event.preventDefault();
         $(this).toggleClass('active');
         $(this).siblings('.nav__sub-list').toggleClass('active');
