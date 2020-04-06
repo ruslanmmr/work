@@ -1,0 +1,94 @@
+/* ========== normalize ========== */
+@import "../../node_modules/normalize.css/normalize.css";
+/* ========== fonts ========== */
+@import "./components/fonts";
+
+
+$trs1: .25s ease-out;
+$trs2: .5s ease-out;
+$trs3: 1s ease-in-out;
+
+$colorA: #154869;
+
+/*========== Basic ==========*/
+html {
+  font-size: 16px;
+}
+body {
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  min-width: 320px;
+  font-size: 0.875rem;
+  background-color: #e6e6ed;
+  padding: 15px;
+  color: #353535;
+}
+* {
+  box-sizing: border-box;
+  &:before,&:after {
+    box-sizing: border-box;
+  }
+}
+a, button, label, input, textarea {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+  display: block;
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+  appearance: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+a, button, label {
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: pointer;
+}
+
+@media screen and(max-width:576px) {
+  body {
+    padding: 0;
+  }
+}
+
+/*========== Grid ==========*/
+@import "./components/grid";
+
+/*========== Layout ==========*/
+@import "./components/layout";
+
+/*========== Typography ==========*/
+@import "./components/typography";
+
+/*========== Helpers ==========*/
+@import 'components/helpers';
+
+/*========== Buttons ==========*/
+@import 'components/buttons';
+
+/*========== Form ==========*/
+@import 'components/form';
+
+/*========== Header ==========*/
+@import 'components/header';
+
+/*========== Footer ==========*/
+@import 'components/footer';
+
+/*========== Navigation ==========*/
+@import 'components/nav';
+
+/*========== Banner ==========*/
+@import '../../node_modules//slick-carousel/slick/slick.scss';
+@import 'components/banner';
+
+/*========== Blocks ==========*/
+@import 'components/blocks';
+
+
+
+
+//17

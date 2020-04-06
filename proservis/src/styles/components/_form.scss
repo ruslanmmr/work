@@ -1,0 +1,44 @@
+
+.input {
+  color: #fff;
+  &::placeholder {
+    transition: inherit;
+    font-style: italic;
+    color: #5b7e95;
+    transition: $trs1;
+  }
+  &:focus {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+.search {
+  display: flex;
+  .input {
+    background-color: #113b56;
+    line-height: 50px;
+    padding: 0 25px;
+    flex: 1 1 100%;
+    width: 0px;
+  }
+  .button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $trs1;
+    flex-shrink: 0;
+    .icon {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+    &.touch,
+    &.hover {
+      background-color: #4d7793;
+    }
+  }
+}

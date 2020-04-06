@@ -1,0 +1,46 @@
+nav.nav
+  .nav__content
+    form(action="#").search
+      input(type="text" placeholder="Поиск по сайту").input
+      button.button
+        svg.icon
+          use(xlink:href='img/icons/sprite.svg#search')
+    a(href="javascript:void(0);").nav-toggle
+      span
+  .nav__block
+    ul.nav__list
+      li.nav__item
+        a(href="#").nav__link
+          span О компании
+      li.nav__item
+        a(href="#").nav__link
+          span Новости
+      li.nav__item
+        a(href="#").nav__link 
+          span Продукция 
+            svg.icon
+              use(xlink:href='img/icons/sprite.svg#play')
+        ul.nav__sub-list
+          li.nav__sub-item
+            a(href="#").nav__sub-link Приводная электроника
+          li.nav__sub-item
+            a(href="#").nav__sub-link Электродвигатели
+          li.nav__sub-item
+            a(href="#").nav__sub-link Cредства автоматизации
+          li.nav__sub-item
+            a(href="#").nav__sub-link Программное обеспечение
+      li.nav__item
+        a(href="#").nav__link
+          span Услуги
+      li.nav__item
+        a(href="#").nav__link
+          span Решения
+      li.nav__item
+        a(href="#").nav__link
+          span Статьи
+      li.nav__item
+        a(href="#").nav__link
+          span Контакты
+      li.nav__item
+        a(href="#").nav__link
+         span Вакансии
