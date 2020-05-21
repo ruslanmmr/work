@@ -9,6 +9,7 @@ $(document).ready(function(){
   hoverTouchEvents();
   slider();
   nav();
+  navToggle();
   setTimeout(()=>{
     lazySizes.init();
   },500)
@@ -86,4 +87,51 @@ function nav() {
       close();
     }
   })
+}
+function navToggle() {
+  let $navlink = $('.nav__link'),
+      $subnav = $('.nav__sub-list');
+
+  $navlink.on('click mouseenter mouseleave', function(event) {
+    if($(this).siblings('.nav__sub-list').length>0) {
+
+      if(event.type=='mouseenter' && device.desktop() && $(window).width()>768) {
+        $(this).addClass('active');
+        $(this).siblings('.nav__sub-list').addClass('active');
+      } else if(event.type=='mouseleave' && device.desktop() && $(window).width()>768) {
+        $(this).removeClass('active');
+        $(this).siblings('.nav__sub-list').removeClass('active');
+      } else if(event.type=='click' && !device.desktop() && $(window).width()>768) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $(this).siblings('.nav__sub-list').toggleClass('active');
+      } else if(event.type=='click' && $(window).width()<=768) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $(this).siblings('.nav__sub-list').toggleClass('active');
+        $(this).siblings('.nav__sub-list').stop().slideToggle(250);
+      }
+
+    }
+  })
+  $subnav.on('mouseenter mouseleave', function(event) {
+    if(event.type=='mouseenter' && device.desktop() && $(window).width()>768) {
+      $(this).addClass('active');
+      $(this).siblings('.nav__link').addClass('active');
+    } else if(event.type=='mouseleave' && device.desktop() && $(window).width()>768) {
+      $(this).removeClass('active');
+      $(this).siblings('.nav__link').removeClass('active');
+    }
+  })
+  $(document).on('touchstart', function(event) {
+    if($(event.target).closest($subnav).length==0 
+    && $(event.target).closest($navlink).length==0
+    && !$(event.target).is($navlink)
+    && !$(event.target).is($subnav)
+    && $(window).width()>768) {
+      $navlink.removeClass('active');
+      $subnav.removeClass('active');
+    }
+  })
+
 }

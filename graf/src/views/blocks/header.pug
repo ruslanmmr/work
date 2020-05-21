@@ -20,15 +20,42 @@ header.header
     .container
       ul.nav__list
         li.nav__item
-          a(href="#").nav__link О Компании
+          a(href="#").nav__link 
+            span О компании
+              svg.icon
+                use(xlink:href='img/icons/icons.svg#next')
+          ul.nav__sub-list
+            li.nav__sub-item
+              a(href="#").nav__sub-link пункт меню 1.
+            li.nav__sub-item
+              a(href="#").nav__sub-link пункт меню 2.
+            li.nav__sub-item
+              a(href="#").nav__sub-link пункт меню 3.
+            li.nav__sub-item
+              a(href="#").nav__sub-link пункт меню 4.
         li.nav__item
-          a(href="#").nav__link Продукция
+          a(href="#").nav__link 
+            span Продукция
         li.nav__item
-          a(href="#").nav__link Услуги
+          a(href="#").nav__link
+            span Услуги
+              svg.icon
+                use(xlink:href='img/icons/icons.svg#next')
+          ul.nav__sub-list
+            li.nav__sub-item
+              a(href="#").nav__sub-link пункт меню 1.
+            li.nav__sub-item
+              a(href="#").nav__sub-link пункт меню 2.
+            li.nav__sub-item
+              a(href="#").nav__sub-link пункт меню 4.
+            li.nav__sub-item
+              a(href="#").nav__sub-link пункт меню 3.
         li.nav__item
-          a(href="#").nav__link Отрасли
+          a(href="#").nav__link 
+            span Отрасли
         li.nav__item
-          a(href="#").nav__link Контакты
+          a(href="#").nav__link 
+            span Контакты
       a(href="#").button.button_style-1
         svg.icon
           use(xlink:href='img/icons/icons.svg#phone')
