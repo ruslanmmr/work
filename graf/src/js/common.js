@@ -91,6 +91,14 @@ function nav() {
 function navToggle() {
   let $navlink = $('.nav__link'),
       $subnav = $('.nav__sub-list');
+  //fix
+  $navlink.each(function() {
+
+    if($(this).siblings('.nav__sub-list').length>0) {
+      let path = $(this).attr('data-icon');
+      $(this).find('span').append(`<svg class="icon"><use xlink:href=${path}></use></svg>`)
+    }
+  })
 
   $navlink.on('click mouseenter mouseleave', function(event) {
     if($(this).siblings('.nav__sub-list').length>0) {
