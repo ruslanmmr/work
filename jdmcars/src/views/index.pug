@@ -18,42 +18,51 @@ block content
           use(xlink:href="img/vector/sprite.svg#triangle")
       .questions-block__answer
         p 車両によりますが、事前にいただいた情報をもとに査定を行うためスムーズに買取代金をお支払いいたします。
-
+  mixin slide1(href)
+    //slide
+    .home-slider-main__slide.cover
+      img(data-src=href, src='#', alt="image").lazyload
+      h2.home-slider-main__slide-title 買い取り<br> 可能<br> アイテム
+  mixin slide2(href)
+    //slide
+    a(href="javascript:void(0);").home-slider-nav__slide.cover
+      img(data-src=href, src='#', alt="image").lazyload
+      h3.home-slider-nav__slide-title ローラー
   section.section.home-slider
     .home-slider-main
-      //slide
-      .home-slider-main__slide.cover
-        img(data-src="img/251.png", src='#', alt="image").lazyload
-        h2.home-slider-main__slide-title 買い取り<br> 可能<br> アイテム
-      //slide
-      .home-slider-main__slide.cover
-        img(data-src="img/251.png", src='#', alt="image").lazyload
-        h2.home-slider-main__slide-title 買い取り<br> 可能<br> アイテム
-      //slide
-      .home-slider-main__slide.cover
-        img(data-src="img/251.png", src='#', alt="image").lazyload
-        h2.home-slider-main__slide-title 買い取り<br> 可能<br> アイテム
-      //slide
-      .home-slider-main__slide.cover
-        img(data-src="img/251.png", src='#', alt="image").lazyload
-        h2.home-slider-main__slide-title 買い取り<br> 可能<br> アイテム
+      +slide1('../img/content/1-min.jpg')
+      +slide1('../img/content/2-min.jpg')
+      +slide1('../img/content/3-min.jpg')
+      +slide1('../img/content/4-min.jpg')
+      +slide1('../img/content/5-min.jpg')
+      +slide1('../img/content/6-min.jpg')
+      +slide1('../img/content/7-min.jpg')
+      +slide1('../img/content/8-min.jpg')
+      +slide1('../img/content/9-min.jpg')
+      +slide1('../img/content/10-min.jpg')
+      +slide1('../img/content/11-min.jpg')
+      +slide1('../img/content/12-min.jpg')
+      +slide1('../img/content/13-min.jpg')
+      +slide1('../img/content/14-min.jpg')
+      +slide1('../img/content/15-min.jpg')
+      +slide1('../img/content/16-min.jpg')
     .home-slider-nav
-      //slide
-      a(href="javascript:void(0);").home-slider-nav__slide.cover
-        img(data-src="img/251.png", src='#', alt="image").lazyload
-        h3.home-slider-nav__slide-title ローラー
-      //slide
-      a(href="javascript:void(0);").home-slider-nav__slide.cover
-        img(data-src="img/sssf.jpg", src='#', alt="image").lazyload
-        h3.home-slider-nav__slide-title ローラー
-      //slide
-      a(href="javascript:void(0);").home-slider-nav__slide.cover
-        img(data-src="img/91.jpg", src='#', alt="image").lazyload
-        h3.home-slider-nav__slide-title ローラー
-      //slide
-      a(href="javascript:void(0);").home-slider-nav__slide.cover
-        img(data-src="img/251.png", src='#', alt="image").lazyload
-        h3.home-slider-nav__slide-title ローラー
+      +slide2('../img/content/1-min.jpg')
+      +slide2('../img/content/2-min.jpg')
+      +slide2('../img/content/3-min.jpg')
+      +slide2('../img/content/4-min.jpg')
+      +slide2('../img/content/5-min.jpg')
+      +slide2('../img/content/6-min.jpg')
+      +slide2('../img/content/7-min.jpg')
+      +slide2('../img/content/8-min.jpg')
+      +slide2('../img/content/9-min.jpg')
+      +slide2('../img/content/10-min.jpg')
+      +slide2('../img/content/11-min.jpg')
+      +slide2('../img/content/12-min.jpg')
+      +slide2('../img/content/13-min.jpg')
+      +slide2('../img/content/14-min.jpg')
+      +slide2('../img/content/15-min.jpg')
+      +slide2('../img/content/16-min.jpg')
   section.section.advantages
     .container
       h4.section__title.advantages__title 当社の仕事流れ/得意　ポイント: 
@@ -130,15 +139,15 @@ block content
         .catalogue-blocks
           .catalogue-blocks__container
             //block
-            +block('img/111.jpg')
-            +block('img/16.png')
-            +block('img/kle.cpf.jpg')
-            +block('img/111.jpg')
-            +block('img/16.png')
-            +block('img/kle.cpf.jpg')
-            +block('img/111.jpg')
-            +block('img/16.png')
-            +block('img/kle.cpf.jpg')
+            +block('../img/content/1-min.jpg')
+            +block('../img/content/2-min.jpg')
+            +block('../img/content/3-min.jpg')
+            +block('../img/content/4-min.jpg')
+            +block('../img/content/5-min.jpg')
+            +block('../img/content/6-min.jpg')
+            +block('../img/content/7-min.jpg')
+            +block('../img/content/8-min.jpg')
+            +block('../img/content/9-min.jpg')
           .catalogue-blocks__more
             a(href="javascript:void(0);") すべべて表示する
               svg.icon
