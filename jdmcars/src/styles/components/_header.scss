@@ -1,0 +1,136 @@
+/* ===== Header ===== */
+.header {
+  flex: 0 0 auto;
+  .logo {
+    flex-shrink: 0;
+    img {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+  &__text {
+    padding: 0 20px;
+  }
+  &__container {
+    padding: 25px 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__contact {
+    text-align: right;
+    &-title {
+      margin-bottom: 10px;
+    }
+    &-mail {
+      margin-bottom: 5px;
+      display: inline-block;
+      color: #464646;
+      text-decoration: none;
+    }
+    &-buttons {
+      display: flex;
+      justify-content: flex-end;
+      .button {
+        max-width: 170px;
+        &:not(:last-child) {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  width: 105px;
+  height: auto;
+}
+
+.nav {
+  background-color: $colorA;
+  &__list {
+    padding: 18px 0 8px 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -20px 0 -20px;
+  }
+  &__item {
+    padding: 0 20px 10px 20px;
+  }
+  &__link {
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    transition: color $trs1;
+    &:hover {
+      color: $colorB;
+    }
+  }
+}
+
+@media all and(max-width: 991px) {
+  .header {
+    &__container {
+      padding: 20px 0;
+    }
+    &__text {
+      display: none;
+    }
+    &__contact {
+      padding-left: 20px;
+    }
+  }
+}
+
+@media all and(max-width: 575px) {
+  .logo {
+    width: 80px;
+  }
+  .header {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 0;
+    }
+    &__contact {
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      &-title {
+        display: none;
+      }
+      &-mail {
+        margin: 0;
+      }
+      &-buttons {
+        margin: 10px -7.5px 0 -7.5px;
+        justify-content: center;
+        .button {
+          margin: 0 7.5px;
+        }
+      }
+    }
+    .logo {
+      margin-bottom: 15px;
+      img {
+        &:first-child {
+          display: none;
+        }
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+  }
+  .nav {
+    &__list {
+      padding: 15px -15px 10px -15px;
+    }
+    &__item {
+      padding: 0 15px 10px 15px;
+    }
+  }
+}

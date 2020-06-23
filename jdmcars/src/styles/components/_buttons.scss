@@ -1,0 +1,32 @@
+/* ===== Buttons ===== */
+.button {
+  transition: $trs1;
+  &_style-1 {
+    position: relative;
+    background-size: 100% 100%;
+    width: 100%;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 26.5625%;
+      pointer-events: none;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &_style-2 {
+    background-color: $colorA;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+    color: #fff;
+    transition: background-color $trs1;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 100%;
+    &:hover {
+      background-color: $colorB;
+    }
+  }
+}
