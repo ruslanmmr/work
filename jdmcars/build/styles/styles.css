@@ -57,7 +57,8 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.5;
-  color: #464646; }
+  color: #464646;
+  touch-action: pan-y; }
 
 a, button, label, input, textarea {
   outline: none;
