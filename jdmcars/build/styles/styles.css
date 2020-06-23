@@ -310,7 +310,7 @@ p {
     .button_style-1::before {
       content: '';
       display: block;
-      padding-top: 26.5625%;
+      padding-top: 25%;
       pointer-events: none; }
     .button_style-1:hover {
       opacity: 0.8; }
