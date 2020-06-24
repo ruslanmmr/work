@@ -1,14 +1,6 @@
 /* ===== Header ===== */
 .header {
   flex: 0 0 auto;
-  .logo {
-    flex-shrink: 0;
-    img {
-      &:last-child {
-        display: none;
-      }
-    }
-  }
   &__text {
     padding: 0 20px;
   }
@@ -115,14 +107,6 @@
     }
     .logo {
       margin-bottom: 15px;
-      img {
-        &:first-child {
-          display: none;
-        }
-        &:last-child {
-          display: block;
-        }
-      }
     }
   }
   .nav {

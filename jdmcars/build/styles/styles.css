@@ -423,10 +423,6 @@ p {
 /* ===== Header ===== */
 .header {
   flex: 0 0 auto; }
-  .header .logo {
-    flex-shrink: 0; }
-    .header .logo img:last-child {
-      display: none; }
   .header__text {
     padding: 0 20px; }
   .header__container {
@@ -504,10 +500,6 @@ p {
         margin: 0 7.5px; }
   .header .logo {
     margin-bottom: 15px; }
-    .header .logo img:first-child {
-      display: none; }
-    .header .logo img:last-child {
-      display: block; }
   .nav__list {
     padding: 15px -15px 10px -15px; }
   .nav__item {
