@@ -1,9 +1,6 @@
 /* ===== Header ===== */
 .header {
   flex: 0 0 auto;
-  .logo {
-    width: 130px;
-  }
   &__text {
     padding: 0 20px;
   }
@@ -38,7 +35,7 @@
 }
 
 .logo {
-  width: 105px;
+  width: 130px;
   height: auto;
 }
 
@@ -109,9 +106,11 @@
       }
     }
     .logo {
-      width: 100px;
       margin-bottom: 15px;
     }
+  }
+  .logo {
+    width: 100px;
   }
   .nav {
     &__list {

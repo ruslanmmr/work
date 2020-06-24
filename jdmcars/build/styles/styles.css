@@ -423,8 +423,6 @@ p {
 /* ===== Header ===== */
 .header {
   flex: 0 0 auto; }
-  .header .logo {
-    width: 130px; }
   .header__text {
     padding: 0 20px; }
   .header__container {
@@ -450,7 +448,7 @@ p {
           margin-right: 6px; }
 
 .logo {
-  width: 105px;
+  width: 130px;
   height: auto; }
 
 .nav {
@@ -501,8 +499,9 @@ p {
       .header__contact-buttons .button {
         margin: 0 7.5px; }
   .header .logo {
-    width: 100px;
     margin-bottom: 15px; }
+  .logo {
+    width: 100px; }
   .nav__list {
     padding: 15px -15px 10px -15px; }
   .nav__item {
