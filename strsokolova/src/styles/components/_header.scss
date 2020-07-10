@@ -1,0 +1,11 @@
+.header {
+  flex: 0 0 auto;
+  &__top {
+    background-color: $color-header-top;
+    padding: 19px 0;
+  }
+  &__bottom {
+    background-color: $color-header-bottom;
+    padding: 16px 0;
+  }
+}
