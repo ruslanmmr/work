@@ -10,8 +10,8 @@
 	}
 }
 
-@include font-face("Golos", "fonts/Golos/Golos Text_Regular", 400);
-@include font-face("Golos", "fonts/Golos/Golos Text_Medium", 500);
-@include font-face("Golos", "fonts/Golos/Golos Text_DemiBold", 600);
-@include font-face("Golos", "fonts/Golos/Golos Text_Bold", 700);
-@include font-face("Golos", "fonts/Golos/Golos Text_Black", 800);
+@include font-face("Golos", "../fonts/Golos/Golos Text_Regular", 400);
+@include font-face("Golos", "../fonts/Golos/Golos Text_Medium", 500);
+@include font-face("Golos", "../fonts/Golos/Golos Text_DemiBold", 600);
+@include font-face("Golos", "../fonts/Golos/Golos Text_Bold", 700);
+@include font-face("Golos", "../fonts/Golos/Golos Text_Black", 800);
