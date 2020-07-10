@@ -68,6 +68,10 @@
   }
 }
 
+.icon {
+  width: 15px;
+  height: 15px;
+}
 
 .logo {
   &__link {
@@ -77,6 +81,28 @@
   &__icon {
     display: block;
     width: 100%;
-    fill: $color-logo;
+    fill: var(--color-logo, #000);
   }
 }
+
+@include media-breakpoint-down(sm) {
+  .logo {
+    &__link {
+      display: block;
+      width: 160px;
+    }
+  }
+  .header {
+    &__nav-group {
+      flex: 0 0 auto;
+    }
+  }
+} 
+
+@include media-breakpoint-down(xs) {
+  .logo {
+    &__link {
+      width: 117px;
+    }
+  }
+} 

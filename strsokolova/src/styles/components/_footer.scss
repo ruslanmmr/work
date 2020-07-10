@@ -1,6 +1,6 @@
 .footer {
   flex-shrink: 0;
   padding: 30px 0;
-  background-color: $color-footer-background;
-  color: $color-footer-text;
+  background-color: var(--color-footer-background, #333333);
+  color: var(--color-footer-text, #fff);
 }

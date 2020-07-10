@@ -12,7 +12,7 @@
   }
   &__item {
     text-transform: uppercase;
-    color: $color-breadcrumbs-item;
+    color: var(--color-breadcrumbs-item, #BDBDBD);
     &:not(:last-child) {
       &:after {
         margin: 0 20px 0 15px;
@@ -31,6 +31,27 @@
     display: inline-block;
     text-decoration: none;
     text-transform: inherit;
-    color: $color-breadcrumbs-link;
+    color: var(--color-breadcrumbs-link, #2363D1);
+    transition: color $trs1;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-breadcrumbs-link_hover, #1C52AC);
+      opacity: 0;
+      transition: opacity $trs1;
+    }
+    &.touch,
+    &.hover {
+      color: var(--color-breadcrumbs-link_hover, #1C52AC);
+      &:after {
+        opacity: 0.5;
+      }
+    }
   }
 }

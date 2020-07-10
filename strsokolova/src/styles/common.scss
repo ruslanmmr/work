@@ -4,8 +4,6 @@
 @import "./components/bootstrap-4.0.0/bootstrap-grid";
 //fonts
 @import "./components/fonts";
-//color theme
-@import "./components/color-theme";
 
 //variables
 $trs1: .25s ease-out;
@@ -19,7 +17,7 @@ html {
 body {
   font-family: 'Golos', sans-serif;
   text-rendering: optimizeSpeed;
-  color: $color-text;
+  color: var(--color-text, #333333);
   font-size: 0.875rem;
   line-height: 1.43;
   min-width: 320px;
