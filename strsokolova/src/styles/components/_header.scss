@@ -230,14 +230,6 @@
 } 
 
 @include media-breakpoint-down(sm) {
-  .header {
-    &__contact-group {
-      display: none;
-    }
-  }
-} 
-
-@include media-breakpoint-down(xs) {
   .header-search {
     background-color: var(--color-header-search-bg-mobile, #333333);
     &__input {
@@ -246,6 +238,9 @@
     }
   }
   .header {
+    &__contact-group {
+      display: none;
+    }
     &__top {
       padding: 16px 5px;
     }
