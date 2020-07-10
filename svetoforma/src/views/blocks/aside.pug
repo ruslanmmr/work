@@ -1,0 +1,47 @@
+aside.aside.col-lg-3
+  .catalogue-nav
+    .catalogue-nav__head.js-touch-hover
+      img(src="img/icons/menu.png", alt="icon").icon
+      span Каталог
+      i.fas.fa-chevron-down
+    .catalogue-nav__content
+      mixin section(title)
+        .catalogue-nav__section.toggle-section
+          .catalogue-nav__section-head.toggle-section__head.js-touch-hover
+            span=title
+            i.fas.fa-chevron-right
+          .catalogue-nav__section-content.toggle-section__content
+            ul.catalogue-nav__list
+              mixin item(title)
+                li.catalogue-nav__item
+                  a(href="#").catalogue-nav__link=title
+              +item('Светодиодные лампы с цоколем E14')
+              +item('Светодиодные лампы с цоколем E-27')
+              +item('Светодиодные лампы цоколь E-40')
+              +item('Лампы светодиодные цоколь G4')
+              +item('Светодиодные лампы на 220 вольт патрон G5.3')
+              +item('Лампы светодиодные цоколь G9')
+              +item('Лампы светодиодные цоколь GX70')
+              +item('Рефлекторные светодиодные лампы R39,R50,R63,R80')
+              +item('Светодиодные лампы для прожекторов R7S')
+              +item('Светодиодные лампы на 12 вольт цоколь G5.3')
+              +item('Светодиодные лампы на 220 вольт цоколь MR-11')
+              +item('Светодиодные лампы цоколь G13')
+              +item('Светодиодные лампы цоколь GU10')
+              +item('Светодиодные лампы цоколь GX53')
+              +item('Цветные светодиодные лампы')
+
+      +section('Бактерицидные настольные лампы')
+      +section('cветодиодные лампы')
+      +section('Садово-парковые светильники')
+      +section('Светодиодная лента и комплектующие')
+      +section('Интерьерные светильники')
+      +section('Светодиодные прожекторы')
+      +section('Светодиодные свечи')
+      +section('Новогодняя продукция')
+      +section('Встраиваемые светильники')
+      +section('Аккумуляторные светильники и светодиодные фонари')
+      +section('Электротовары и комплектующие')
+      +section('Лампы')
+  a(href="#").aside-banner.image
+    img(data-src="img/banner.jpg", alt="image").lazyload

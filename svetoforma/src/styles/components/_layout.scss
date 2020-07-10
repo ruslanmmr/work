@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 1 100%;
+}
+.main {
+  padding-top: 30px;
+}
+.aside-area {
+  margin-bottom: 60px;
+}
+.section {
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .logo {
+    width: 200px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .main {
+    padding-top: 40px;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .section {
+    &__title {
+      margin: 0 0 30px 0;
+    }
+  }
+}

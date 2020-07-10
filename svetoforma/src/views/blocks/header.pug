@@ -1,0 +1,98 @@
+header.header
+  .header__top
+    .container
+      ul.header__top-nav
+        mixin navitem(title)
+          li.header__top-nav-item
+            a(href="#").header__top-nav-link
+              span=title
+              block
+        +navitem('Оплата')
+        +navitem('Доставка')
+        +navitem('О компании')
+        +navitem('Юридическим лицам')
+        +navitem('Новости')
+        +navitem('Акции')
+          i.fas.fa-bolt
+        +navitem('Контакты')
+      ul.header__top-socials
+        mixin social(title)
+          li.header__top-socials-item
+            a(href="#").header__top-socials-link
+              block
+        +social()
+          <i class="fab fa-facebook-f"></i>
+        +social()
+          <i class="fab fa-vk"></i>
+        +social()
+          <i class="fab fa-instagram"></i>
+        +social()
+          <i class="fab fa-odnoklassniki"></i>
+  .header__content
+    .container
+      .row.align-items-lg-start.align-items-center
+        .logo.col-lg-3.col-auto
+          a(href="#").logo__link
+            img(src="img/logos/logo.png", alt="logo").logo__image
+        .header__content-right.col-lg-9.col
+          .header__content-top
+            .header__contact-item
+              svg.icon
+                use(xlink:href="img/icons/icons.svg#phone")
+              table.header__contact-item-text
+                tr
+                  td
+                    a(href="tel:8 (800) 788-35-48").header__contact-item-phone 8 (800) 788-35-48 
+                  td
+                    span бесплатный звонок
+                    
+                tr
+                  td
+                    a(href="tel:8 (495) 943-07-95").header__contact-item-phone 8 (495) 943-07-95 
+                  td
+                    span многоканальный
+            .header__contact-item
+              svg.icon
+                use(xlink:href="img/icons/icons.svg#point")
+              .header__contact-item-text г. Москва,<br> ул.Красноармейская д. 9
+            .header__contact-item
+              svg.icon
+                use(xlink:href="img/icons/icons.svg#time")
+              .header__contact-item-text
+                span Режим работы<br> 
+                | Пн-Пт: 10:00-19:00
+            .header__contact-item
+              svg.icon
+                use(xlink:href="img/icons/icons.svg#mail")
+              .header__contact-item-text
+                span Напишите нам<br> 
+                a(href="mailto:info@svetoforma.ru").header__contact-item-mail info@svetoforma.ru
+
+
+          .header__content-bottom.row
+            .header__search.col-xl-8.col-md.col
+              form(action="#").header__search-form
+                input(type="text" placeholder="Что ищем?").header__search-input
+                button(type='submit').header__search-submit
+                  svg.icon
+                    use(xlink:href="img/icons/icons.svg#search")
+              a(href="javascript:void(0);").header__search-close
+                span 
+                span
+            .header__buttons.col-xl-4.col-md-auto.col
+              a(href="javascript:void(0);").header__button.header__button-search
+                svg.icon
+                  use(xlink:href="img/icons/icons.svg#search")
+              a(href="#").header__button.header__button-auth
+                svg.icon
+                  use(xlink:href="img/icons/icons.svg#user")
+                span.header__button-text Вход<br> Регистрация
+              a(href="#").header__button.header__button-cart
+                svg.icon
+                  use(xlink:href="img/icons/icons.svg#supermarket")
+                span.count 22
+                span.header__button-text Ваша<br> корзина
+              a(href="javascript:void(0);").nav-open
+                span
+                span
+                span

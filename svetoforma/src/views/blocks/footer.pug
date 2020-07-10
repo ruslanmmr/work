@@ -1,0 +1,57 @@
+footer.footer
+  .footer__top
+    .container
+      .row.justify-content-md-between
+        .footer-section.col-md-auto.col-sm-6.order-3.order-md-1
+          h6.footer-section__title Контакты
+          .contact-area
+            .contact-area__section.contact-area__phones
+                a(href="tel:8 (800) 788-35-48") 8 (800) 788-35-48<br>  
+                a(href="tel:8 (495) 943-07-95") 8 (495) 943-07-95
+            .contact-area__section.contact-area__adress г. Москва,<br> ул.Красноармейская д. 9
+            .contact-area__section.contact-area__time 
+              span Режим работы
+              | Пн-Пт: 10:00-19:00
+            .contact-area__section.contact-area__mail
+              span Напишите нам
+              a(href="mailto:info@svetoforma.ru") info@svetoforma.ru
+        .footer-section.col-md-auto.col-6.order-sm-1
+          h6.footer-section__title О компании
+          ul.footer-section__list
+            li.footer-section__item
+              a(href="#").footer-section__link О нас
+            li.footer-section__item
+              a(href="#").footer-section__link Новости
+            li.footer-section__item
+              a(href="#").footer-section__link Юридическим лицам
+        .footer-section.col-md-auto.col-6.order-sm-2
+          h6.footer-section__title Покупателям
+          ul.footer-section__list
+            li.footer-section__item
+              a(href="#").footer-section__link Оплата
+            li.footer-section__item
+              a(href="#").footer-section__link Доставка
+            li.footer-section__item
+              a(href="#").footer-section__link Акции
+        .footer-section.col-md-auto.col-sm-6.order-4
+          .footer__payment
+            span Мы принимаем к оплате:
+            img(src="img/Layer 63.png", alt="payment")
+          .footer__socials
+            span Следите за нами:
+            ul
+              mixin social(title)
+                li
+                  a(href="#")
+                    block
+              +social()
+                <i class="fab fa-facebook-f"></i>
+              +social()
+                <i class="fab fa-vk"></i>
+              +social()
+                <i class="fab fa-instagram"></i>
+              +social()
+                <i class="fab fa-odnoklassniki"></i>
+  .footer__bottom
+    .container  
+      | &copy; Светоформа" 2020. Все права защищены "

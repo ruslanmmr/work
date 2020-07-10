@@ -1,0 +1,105 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "./components/bootstrap-4.0.0/bootstrap-grid";
+@import "../fonts/fontawesome/scss/fontawesome.scss";
+
+@mixin font-face($font-family, $file-path, $weight:400, $style:normal, $asset-pipeline: false ) {
+	@font-face {
+		font-display: swap;
+		font-family: $font-family;
+		font-weight: $weight;
+		font-style: $style;
+		src: url('#{$file-path}.woff2') format('woff2'),
+				url('#{$file-path}.woff') format("woff");
+		
+	}
+}
+@include font-face("Intro", "../fonts/Intro/Intro-Bold", 700);
+
+$fa-font-path: '../fonts/fontawesome/webfonts/';
+@import "../fonts/fontawesome/scss/brands.scss";
+@import "../fonts/fontawesome/scss/regular.scss";
+@import "../fonts/fontawesome/scss/solid.scss";
+
+
+//variables
+$trs1: .25s ease-out;
+$trs2: .5s ease-out;
+$trs3: 1s ease-out;
+
+$colorA: #fbba00;
+
+/*========== Basic ==========*/
+html {
+  font-size: 12px;
+}
+body {
+  line-height: 1.66;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  min-width: 320px;
+  color: #393f42;
+}
+* {
+  box-sizing: border-box;
+  min-height: 0;
+  min-width: 0;
+  &:before,&:after {
+    box-sizing: border-box;
+  }
+}
+a, button, label, input, textarea, .js-touch-hover {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+button, input, textarea {
+  outline: none;
+  display: block;
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+  appearance: none;
+  padding: 0;
+  border-radius: 0;
+}
+a, button, label {
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: #076f9f;
+  transition: color $trs1;
+  &.touch,
+  &.hover {
+    text-decoration: underline;
+    color: #065174;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  
+}
+
+/*========== Layout ==========*/
+@import "./components/layout";
+
+/*========== Typography ==========*/
+@import "./components/typography";
+
+/*========== Helpers ==========*/
+@import 'components/helpers';
+
+/*========== Buttons ==========*/
+@import 'components/buttons';
+
+/*========== Blocks ==========*/
+@import 'components/blocks';
+
+/*========== Header ==========*/
+@import 'components/header';
+
+/*========== Footer ==========*/
+@import 'components/footer';
+
+/*========== Aside ==========*/
+@import 'components/aside';
