@@ -252,9 +252,7 @@
         display: none;
       }
       &_comparison {
-        span {
-          color: var(--color-header-button-icon-mobile, #333333);
-        }
+        color: var(--color-header-button-icon-mobile, #333333);
       }
       .icon {
         fill: var(--color-header-button-icon-mobile, #333333);

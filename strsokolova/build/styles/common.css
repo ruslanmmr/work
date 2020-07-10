@@ -1547,7 +1547,7 @@ p {
     font-size: 0.5rem; }
   .header__small-button_auth {
     display: none; }
-  .header__small-button_comparison span {
+  .header__small-button_comparison {
     color: var(--color-header-button-icon-mobile, #333333); }
   .header__small-button .icon {
     fill: var(--color-header-button-icon-mobile, #333333); }
