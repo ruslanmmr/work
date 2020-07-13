@@ -7,6 +7,7 @@ $(document).ready(function(){
   popup();
   addGradient();
   $header.init();
+  nav.init();
 })
 
 const brakepoints = {
@@ -112,7 +113,9 @@ let $header = {
     this.checkFixed();
 
     $(window).scroll(function(){
-      $header.checkVisible();
+      if(!nav.state) {
+        $header.checkVisible();
+      }
     });
   },
   checkFixed: function() {
@@ -155,4 +158,53 @@ function addGradient() {
     })
     
   })
+}
+
+let nav = {
+  init: function() {
+    this.$nav = $('.mobile-nav');
+    this.$toggle = $('.nav-toggle');
+
+    this.$toggle.on('click', (event)=>{
+      event.preventDefault();
+      if(this.flag) {
+        this.close();
+      } else {
+        this.open();
+      }
+    })
+    
+    $(document).on('click touchstart', (event)=>{
+      if($(event.target).closest('.mobile-nav__container').length==0 
+      && $(event.target).closest('.header').length==0
+      && $(event.target).closest(this.$toggle).length==0) {
+        console.log(this.flag)
+        if(this.flag==true) {
+          this.close();
+        }
+      }
+    })
+
+  }, 
+
+  open: function() {
+    this.flag = true;
+    if(this.timout!==undefined) clearTimeout(this.timout)
+    scrollLock.disablePageScroll();
+    this.state = true;
+    $('header').addClass('header_nav-active')
+    this.$nav.addClass('active');
+    this.$toggle.addClass('active');
+  },
+
+  close: function() {
+    this.flag = false;
+    scrollLock.enablePageScroll();
+    $('header').removeClass('header_nav-active')
+    this.$nav.removeClass('active');
+    this.$toggle.removeClass('active');
+    this.timout = setTimeout(()=>{
+      this.state = false;
+    }, 250)
+  }
 }

@@ -10,9 +10,6 @@
   padding-bottom: 50px;
 }
 
-.padding-header {
-  padding-top: 90px;
-}
 
 .section {
   position: relative;
@@ -24,6 +21,21 @@
     margin: 0 0 30px 0;
     span {
       border-bottom: 4px solid $color-accent;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .main {
+    padding-top: 95px;
+    padding-bottom: 40px;
+  }
+  .section {
+    &__title {
+      margin: 0 0 20px 0;
+      span {
+        border-bottom: 2px solid $color-accent;
+      }
     }
   }
 }

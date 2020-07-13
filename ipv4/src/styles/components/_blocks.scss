@@ -123,6 +123,7 @@
 }
 
 .block-list {
+  margin-bottom: 30px;
   &__container {
     background-color: #fff;
   }
@@ -135,7 +136,6 @@
     width: 100%;
   }
   &__title {
-    font-size: 1.5rem;
     text-align: center;
     margin: 0 0 40px 0;
     span {
@@ -193,10 +193,12 @@
 .bonuses {
   .container {
     position: relative;
+    display: flex;
   }
   .row {
     position: relative;
     z-index: 2;
+    margin-bottom: -30px;
   }
   .background {
     background-size: contain;
@@ -230,18 +232,18 @@
   }
   &__images {
     flex: 1 1 62%;
-    transform: translateY(30px);
     padding-left: 30px;
   }
   &__image {
     flex: 1 1 50%;
     position: relative;
+    padding-top: 40px;
     .icon {
       position: absolute;
       z-index: 1;
-      height: 100%;
+      height: auto;
       width: 100%;
-      top: -40px;
+      top: 0;
       right: 0;
     }
     &-item {
@@ -258,9 +260,7 @@
   &__title {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    span {
-      border-bottom: 5px solid $color-accent;
-    }
+    text-align: left;
   }
   &__text {
     display: block;
@@ -297,8 +297,8 @@
   }
   &__title {
     color: $color-accent;
-    font-size: 1.875rem;
     margin-bottom: 27px;
+    text-align: left;
   }
   &__form {
     &-item {
@@ -325,6 +325,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0 -10px;
   }
   &__image {
     height: 50px;
@@ -335,6 +336,7 @@
       max-width: 180px;
       left: 50%;
       transform: translateX(-50%);
+      padding: 0 10px;
     }
   }
 }
@@ -606,6 +608,194 @@
 }
 
 
-@include media-breakpoint-down(xxl) {
+@include media-breakpoint-down(xl) {
+  .block-list {
+    &__content {
+      padding: 30px 20px 50px 20px;
+    }
+  }
+  .form-section {
+    &__background {
+      left: 70%;
+    }
+  }
+  .section-images {
+    &__image {
+      flex: 1 1 20%;
+    }
+  }
+}
+@include media-breakpoint-down(lg) {
+  .bonuses .background, 
+  .price .background {
+    display: none;
+  }
+  .whywe {
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    &__container {
+      flex-direction: column;
+    }
+    &__content {
+      margin-bottom: 30px;
+    }
+    &__images {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  .form-section {
+    &__background {
+      display: none;
+    }
+    &__container {
+      max-width: 100%;
+    }
+  }
+  .section-images {
+    &__image {
+      flex: 1 1 25%;
+      max-width: 25%;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .block-list {
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__item {
+      padding-left: 60px;
+      min-height: 40px;
+    }
+    &__item-title {
+      font-size: 0.875rem;
+    }
+    &__item-price {
+      font-size: 1rem;
+    }
+    &__item-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 1.125rem;
+      line-height: 40px;
+      &_smaller {
+        font-size: 0.75rem;
+      }
+    }
+  }
+  .whywe {
+    &__images {
+      flex-wrap: wrap;
+    }
+    &__image {
+      flex: 1 1 100%;
+      &:not(:last-child) {
+        margin-bottom: 35px;
+      }
+    }
+  }
+  .section-images {
+    &__image {
+      flex: 1 1 33.33%;
+      max-width: 33.33%;
+    }
+  }
+  .clients {
+    .section-images {
+      &__image {
+        flex: 1 1 50%;
+        max-width: 50%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .home {
+    margin-top: -15px;
+    height: calc(100vh - 80px);
+    max-height: 560px;
+    min-height: 400px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    &__text {
+      font-size: 0.875rem;
+    }
+    &__button {
+      margin-top: 17px;
+      line-height: 42px;
+      font-size: 0.875rem;
+      width: 206px;
+      min-width: 0;
+    }
+  }
+  .price:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .bonuses:not(:last-child) {
+    margin-bottom: 60px;
+  }
+  .form-section:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .section-images:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .whywe {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    &__title {
+      margin-bottom: 24px;
+      font-size: 1.125rem;
+    }
+    &__image {
+      padding-top: 30px;
+      &-title {
+        font-size: 0.875rem;
+      }
+    }
+    &__text {
+      font-size: 0.875rem;
+    }
+  }
+  .form-section {
+    &__container {
+      padding: 30px 0;
+    }
+    &__button {
+      line-height: 50px;
+    }
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+  .section-images {
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__image {
+      height: 40px;
+      margin-bottom: 25px;
+      img {
+        max-width: 100px;
+      }
+    }
+  }
+  .clients {
+    .section-images {
+      &__image {
+        height: 40px;
+        img {
+          max-width: 110px;
+        }
+      }
+    }
+  }
   
 }

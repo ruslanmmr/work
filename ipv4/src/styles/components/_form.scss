@@ -2,9 +2,10 @@
   border-radius: 9px;
   padding: 16px;
   border: 1px solid #D8D8D8;
-  display: inline-flex;
+  display: block;
   width: 100%;
   font-size: 1.125rem;
+  background-color: #fff;
   &::placeholder {
     transition: opacity $trs1;
   }

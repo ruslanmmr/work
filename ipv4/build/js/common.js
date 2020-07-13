@@ -8,6 +8,7 @@ $(document).ready(function () {
   popup();
   addGradient();
   $header.init();
+  nav.init();
 });
 var brakepoints = {
   sm: 576,
@@ -103,7 +104,9 @@ var $header = {
     this.scroll_last = this.scroll;
     this.checkFixed();
     $(window).scroll(function () {
-      $header.checkVisible();
+      if (!nav.state) {
+        $header.checkVisible();
+      }
     });
   },
   checkFixed: function checkFixed() {
@@ -146,3 +149,51 @@ function addGradient() {
     });
   });
 }
+
+var nav = {
+  init: function init() {
+    var _this = this;
+
+    this.$nav = $('.mobile-nav');
+    this.$toggle = $('.nav-toggle');
+    this.$toggle.on('click', function (event) {
+      event.preventDefault();
+
+      if (_this.flag) {
+        _this.close();
+      } else {
+        _this.open();
+      }
+    });
+    $(document).on('click touchstart', function (event) {
+      if ($(event.target).closest('.mobile-nav__container').length == 0 && $(event.target).closest('.header').length == 0 && $(event.target).closest(_this.$toggle).length == 0) {
+        console.log(_this.flag);
+
+        if (_this.flag == true) {
+          _this.close();
+        }
+      }
+    });
+  },
+  open: function open() {
+    this.flag = true;
+    if (this.timout !== undefined) clearTimeout(this.timout);
+    scrollLock.disablePageScroll();
+    this.state = true;
+    $('header').addClass('header_nav-active');
+    this.$nav.addClass('active');
+    this.$toggle.addClass('active');
+  },
+  close: function close() {
+    var _this2 = this;
+
+    this.flag = false;
+    scrollLock.enablePageScroll();
+    $('header').removeClass('header_nav-active');
+    this.$nav.removeClass('active');
+    this.$toggle.removeClass('active');
+    this.timout = setTimeout(function () {
+      _this2.state = false;
+    }, 250);
+  }
+};
