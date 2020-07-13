@@ -70,38 +70,67 @@ function popup() {
   $button.each(function() {
 
     let $window = $(this).siblings('.js-popup-item'),
+        $this = $(this),
         timeout;
 
-    $(this).add($window).on('mouseenter', function(event) {
-      if(device.desktop()) {
+    $(this).add($window).on('mouseenter click', function(event) {
+      if(device.desktop() && event.type=='mouseenter') {
         if(timeout) {
           clearTimeout(timeout);
         }
-        if($(event.target).closest($button).length)  {
-          $button.addClass('popupVisible');
+        if($(event.target).closest($this).length)  {
+          $this.addClass('popupVisible');
           $window.addClass('visible');
         }
+      } else {
+        $this.addClass('popupVisible');
+        $window.addClass('visible');
       }
     })
 
     $(this).add($window).on('mouseleave', function() {
       if(device.desktop()) {
-        if($(event.target).closest($button).length)  {
+        if($(event.target).closest($this).length)  {
           timeout = setTimeout(()=>{
-            $button.removeClass('popupVisible');
+            $this.removeClass('popupVisible');
             $window.removeClass('visible');
           }, 500)
         } else {
-          $button.removeClass('popupVisible');
+          $this.removeClass('popupVisible');
           $window.removeClass('visible');
         }
+      }
+    })
+
+    $(document).on('touchstart', function(event) {
+      if($(event.target).closest($window).length==0 && $(event.target).closest($this).length==0) {
+        $this.removeClass('popupVisible');
+        $window.removeClass('visible');
       }
     })
 
   })
 }
 
-/* HEADER */
+
+function addGradient() {
+  let $block = $('.block-list');
+
+  $block.each(function(){
+    let $this = $(this),
+        $items = $this.find('.block-list__item-icon'),
+        value = 0.5 / ($items.length-1),
+        itemValue = 0.5;
+    
+    $items.each(function() {
+      $(this).css('opacity', itemValue)
+      itemValue+=value;
+    })
+    
+  })
+}
+
+
 let $header = {
   init: function() {
     this.el = $('.header');
@@ -142,24 +171,6 @@ let $header = {
     this.scroll_last = this.scroll;
   }
 }
-
-function addGradient() {
-  let $block = $('.block-list');
-
-  $block.each(function(){
-    let $this = $(this),
-        $items = $this.find('.block-list__item-icon'),
-        value = 0.5 / ($items.length-1),
-        itemValue = 0.5;
-    
-    $items.each(function() {
-      $(this).css('opacity', itemValue)
-      itemValue+=value;
-    })
-    
-  })
-}
-
 let nav = {
   init: function() {
     this.$nav = $('.mobile-nav');
@@ -178,7 +189,6 @@ let nav = {
       if($(event.target).closest('.mobile-nav__container').length==0 
       && $(event.target).closest('.header').length==0
       && $(event.target).closest(this.$toggle).length==0) {
-        console.log(this.flag)
         if(this.flag==true) {
           this.close();
         }

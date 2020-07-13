@@ -355,8 +355,14 @@
   background-color: #fff;
   font-size: 1.125rem;
   width: 100%;
+  .checkbox__item {
+    margin: 0 auto;
+  }
+  table {
+    border-collapse: collapse;
+  }
   th {
-    padding: 12px 0;
+    padding: 12px 14px;
     color: #999999;
     font-weight: 600;
     border-bottom: 1px solid #EEEEEE;
@@ -442,7 +448,6 @@
   }
   &__container {
     position: relative;
-    margin-bottom: -50px;
     display: flex;
   }
   &__decoration {
@@ -624,6 +629,45 @@
       flex: 1 1 20%;
     }
   }
+  .contacts {
+    &__decoration {
+      &:nth-child(1) {
+        left: -20px;
+        top: 20%;
+        transform: translateX(-100%);
+      }
+      &:nth-child(2) {
+        left: -20px;
+        top: 60%;
+        transform: translateX(-100%);
+      }
+      &:nth-child(3) {
+        right: -20px;
+        transform: translateX(100%);
+        bottom: 20%;
+      }
+      &:nth-child(4) {
+        right: -20px;
+        transform: translateX(100%);
+        bottom: 50%;
+      }
+    }
+  }
+  .contacts-block {
+    &__title {
+      font-size: 1rem;
+    }
+    &__icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 15px;
+    }
+    &:nth-child(4) {
+      .contacts-block__bg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
 }
 @include media-breakpoint-down(lg) {
   .bonuses .background, 
@@ -658,6 +702,45 @@
     &__image {
       flex: 1 1 25%;
       max-width: 25%;
+    }
+  }
+  .request-section {
+    &__text {
+      font-size: 1.125rem;
+      margin-bottom: 60px;
+    }
+  }
+  .fast-order {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+  .order-table {
+    &_type-2 {
+      padding: 14px;
+      td {
+        &:first-child {
+          padding-right: 14px;
+        }
+        &:nth-child(2) {
+          width: 50%;
+          padding-right: 14px;
+        }
+        &:last-child {
+          min-width: 80px;
+        }
+      }
+    }
+    th {
+      &:first-child {
+        text-align: left;
+      }
+    }
+    td {
+      &:nth-child(1) {
+        width: 50%;
+        text-align: left;
+      }
     }
   }
 }
@@ -709,6 +792,21 @@
       &__image {
         flex: 1 1 50%;
         max-width: 50%;
+      }
+    }
+  }
+  .order-table {
+    th {
+      font-size: 1rem;
+    }
+    td {
+      font-size: 1rem;
+    }
+  }
+  .contacts {
+    &__decoration {
+      &:nth-child(2) {
+        transform: translateX(-50%);
       }
     }
   }
@@ -797,5 +895,105 @@
       }
     }
   }
-  
+  .request-section {
+    &__text {
+      font-size: 0.875rem;
+      margin-bottom: 45px;
+    }
+  }
+  .fast-order {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    &__button {
+      margin-top: 20px;
+      .button {
+        line-height: 40px;
+        font-size: 0.875rem;
+      }
+    }
+  }
+  .order-table {
+    th {
+      font-size: 0.75rem;
+      padding: 14px 10px;
+    }
+    td {
+      font-size: 0.625rem;
+    }
+    &_type-1 {
+      td {
+        padding: 10px 10px 0 10px;
+      }
+      tr {
+        &:nth-child(2) {
+          td {
+            padding-top: 15px;
+          }
+        }
+      }
+    }
+    &_type-2 {
+      padding: 15px 10px;
+      tr:not(:last-child) td {
+        padding-bottom: 15px;
+      }
+      tr:not(:first-child) td {
+        padding-top: 15px;
+      }
+      td {
+        &:not(:last-child) {
+          padding-right: 10px;
+        }
+      }
+      td:last-child {
+        min-width: 57px;
+      }
+    }
+    .button {
+      font-size: 0.625rem;
+      line-height: 30px;
+      width: 57px;
+    }
+  }
+  .contacts {
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+  .contacts {
+    &__decoration {
+      &:nth-child(1) {
+        left: 0;
+        top: 30%;
+        transform: translateX(0);
+      }
+      &:nth-child(2) {
+        left: 0;
+        top: 17%;
+        transform: translateX(0);
+      }
+      &:nth-child(3) {
+        right: 0;
+        transform: translateX(0);
+        bottom: 35%;
+      }
+      &:nth-child(4) {
+        right: 0;
+        transform: translateX(0);
+        bottom: 47%;
+      }
+    }
+  }
+  .contacts-block {
+    margin-bottom: 10px;
+    &__icon {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 23px;
+    }
+    &__title {
+      font-size: 1.125rem;
+    }
+  }
 }

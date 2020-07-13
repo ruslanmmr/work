@@ -4,66 +4,56 @@ block title
 block content
   section.section.request-section
     .container
-      h1.section__title Реализация 
-        span IPv4
-      p.request-section__text Наша компания IPv4-broker предоставляет услуги покупки IPv4 блоков, поиск покупателя, сдачи в аренду ваших блоки IPv4. Вы можете использовать наши PA адреса в качестве PI. Таким образом, вы сможете использовать любого оператора связи и выстраивать свою политику взаимодействия с ним.
-      table.order-table
-        tr
-          th Наименование
-          th Взнос
-          th Покупка
-        tr
-          td 256 IP Адресов
-          td 7 000 ₽
-          td 
-            button.button.button_small Купить
-        tr
-          td 512 IP Адресов
-          td 14 000 ₽
-          td 
-            button.button.button_small Купить
-        tr
-          td 1024 IP Адресов
-          td 28 000 ₽
-          td 
-            button.button.button_small Купить
-        tr
-          td 2048 IP Адресов
-          td 42 000 ₽
-          td 
-            button.button.button_small Купить
+      h1.section__title Получение статуса 
+        span LIR
+      p.request-section__text LIR отвечает за распределение и регистрацию Интернет-ресурсов нумерациина местном уровне. Статус LIR получают Интернет-провайдеры, телекоммуникационные компании, крупные предприятия и академические институты. LIR получают блоки адресов от RIPE NCC и присваивают IP-адреса своим клиентам. В связи с текущей политикой RIPE NCC новый LIR может получить не более /24 (256) IPv4 адресов, блок /29 IPv6 адресов.
+      .order-table.order-table_type-1
+        table
+          tr
+            th Наименование
+            th Взнос
+            th Покупка
+          tr
+            td Консультационные услуги по регистрации LIR
+            td 23 600 ₽
+            td 
+              button.button.button_small Купить
+          tr
+            td Ежегодный платеж в RIPE NCC
+            td 110 000 ₽
+            td 
+              button.button.button_small Купить
+          tr
+            td Регистрационный платеж в RIPE NCC
+            td 158 000 ₽
+            td 
+              button.button.button_small Купить
   section.section.fast-order
     .container
       h2.section__title Быстрый заказ 
-      table.order-table.order-table_type-2
-        tr
-          td 256 IP Адресов
-          td 7 000 ₽
-          td 
-            .checkbox
-              input(type="checkbox" id='checkbox1').checkbox__input
-              label(for='checkbox1').checkbox__item
-        tr
-          td 512 IP Адресов
-          td 14 000 ₽
-          td 
-            .checkbox
-              input(type="checkbox" id='checkbox2').checkbox__input
-              label(for='checkbox2').checkbox__item
-        tr
-          td 1024 IP Адресов
-          td 28 000 ₽
-          td 
-            .checkbox
-              input(type="checkbox" id='checkbox3').checkbox__input
-              label(for='checkbox3').checkbox__item
-        tr
-          td 2048 IP Адресов
-          td 42 000 ₽
-          td 
-            .checkbox
-              input(type="checkbox" id='checkbox3').checkbox__input
-              label(for='checkbox3').checkbox__item
+      .order-table.order-table_type-2
+        table
+          tr
+            td Консультационные услуги по регистрации LIR
+            td 23 600 ₽
+            td 
+              .checkbox
+                input(type="checkbox" id='checkbox1').checkbox__input
+                label(for='checkbox1').checkbox__item
+          tr
+            td Ежегодный платеж в RIPE NCC
+            td 110 000 ₽
+            td 
+              .checkbox
+                input(type="checkbox" id='checkbox2').checkbox__input
+                label(for='checkbox2').checkbox__item
+          tr
+            td Регистрационный платеж в RIPE NCC
+            td 158 000 ₽
+            td 
+              .checkbox
+                input(type="checkbox" id='checkbox3').checkbox__input
+                label(for='checkbox3').checkbox__item
       .fast-order__button
         button.button Отправить заявку
   include blocks/whywe

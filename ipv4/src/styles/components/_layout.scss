@@ -31,6 +31,9 @@
     padding-bottom: 40px;
   }
   .section {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
     &__title {
       margin: 0 0 20px 0;
       span {

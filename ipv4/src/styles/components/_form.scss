@@ -52,3 +52,18 @@
     }
   }
 }
+
+@include media-breakpoint-down(sm) {
+  .checkbox {
+    &__item {
+      width: 15px;
+      height: 15px;
+      &:after {
+        width: 9px;
+        height: 9px;
+        left: 3px;
+        top: 3px;
+      }
+    }
+  }
+}
