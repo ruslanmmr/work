@@ -3835,7 +3835,10 @@ h1 {
     color: #0057FF;
     text-decoration: none;
     font-size: 1.5rem;
-    font-weight: normal; }
+    font-weight: normal;
+    transition: color 0.25s ease-out; }
+    .footer__contact-item-link.touch, .footer__contact-item-link.hover {
+      color: #0145ce; }
   .footer__images {
     display: flex;
     align-items: center;
