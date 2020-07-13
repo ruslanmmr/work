@@ -1,0 +1,47 @@
+.button {
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-flex;
+  line-height: 56px;
+  padding: 0 26px;
+  background-color: $color-accent;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.125rem;
+  justify-content: center;
+  align-items: center;
+  transition: background-color $trs1, box-shadow $trs1;
+  &.touch,
+  &.hover {
+    background-color: $color-accent-hover;
+  }
+  .icon {
+    fill: #fff;
+    width: 23px;
+    height: 10px;
+    margin-left: 10px;
+  }
+  &_radius {
+    border-radius: 9px;
+  }
+  &_large {
+    line-height: 59px;
+    font-size: 1.25rem;
+  }
+  &_small {
+    line-height: 40px;
+    padding: 0 12px;
+    font-size: 0.875rem;
+  }
+  &_shadow {
+    box-shadow: 0px 0px 10px rgba(0, 87, 255, 0.8);
+    &.touch,
+    &.hover {
+      box-shadow: none;
+    }
+  }
+}

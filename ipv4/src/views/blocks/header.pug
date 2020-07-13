@@ -1,0 +1,53 @@
+header.header
+  .container
+    .header__container
+      .header__nav-group
+        .logo
+          a(href="#").logo__link
+            span ipv4
+            | -broker
+        .header-nav
+          ul.header-nav__list
+            li.header-nav__item 
+              a(href="#").header-nav__link.active Главная
+            li.header-nav__item 
+              a(href="#").header-nav__link Получить IPv4 адреса
+            li.header-nav__item 
+              a(href="#").header-nav__link.js-popup Другие услуги
+                svg.icon
+                  use(xlink:href='img/icons/icons-sprite.svg#arrow-down')
+              ul.header-nav__dropdown.js-popup-item
+                li.header-nav__dropdown-item
+                  a(href="#").header-nav__dropdown-link Реализация IPv4 адресов
+                li.header-nav__dropdown-item
+                  a(href="#").header-nav__dropdown-link Получение статуса LIR
+                li.header-nav__dropdown-item
+                  a(href="#").header-nav__dropdown-link Получение лицензий связи
+                li.header-nav__dropdown-item
+                  a(href="#").header-nav__dropdown-link Консультации по развертыванию сети
+                li.header-nav__dropdown-item
+                  a(href="#").header-nav__dropdown-link Проектирование сетей
+                li.header-nav__dropdown-item
+                  a(href="#").header-nav__dropdown-link Поддержка RIPE PI ресурсов
+            li.header-nav__item 
+              a(href="#").header-nav__link Контакты
+      .header__contact-group
+        ul.lang-toggle
+          li.lang-toggle__item
+            a(href="#").lang-toggle__link.active
+              svg.icon
+                use(xlink:href='img/icons/flags-sprite.svg#ru')
+              span ru
+          li.lang-toggle__item
+            a(href="#").lang-toggle__link
+              svg.icon
+                use(xlink:href='img/icons/flags-sprite.svg#ru')
+              span en
+        ul.header-contacts
+          li.header-contacts__item
+            a(href="tel:89219224120").header-contacts__link.header-contacts__phone +8 (921) 922 41 20
+          li.header-contacts__item
+            a(href="mailto:info@email.com").header-contacts__link.header-contacts__mail info@email.com
+      a(href="javascript:void(0);").nav-toggle.active
+        span
+        span

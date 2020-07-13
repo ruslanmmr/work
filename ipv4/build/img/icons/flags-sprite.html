@@ -1,0 +1,51 @@
+
+  <!doctype>
+  <html lang="en">
+  <head>
+    <title>SVG Sprite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <style>
+      html { box-sizing: border-box }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto",
+          "Oxygen","Ubuntu","Cantarell","Fira Sans",
+          "Droid Sans","Helvetical Neue",sans-serif;
+        font-size: 1.125rem;
+        text-align: center
+      }
+      h1{
+        font-weight: 100;
+        margin-bottom: 1em
+      }
+      small { font-size: .34em }
+      .icon { 
+  width: 50px; 
+  height: 50px;
+  margin: .5em;
+}
+    </style>
+  </head>
+    
+  <body>
+    <!-- SVG Sprite -->
+    <svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 15.5" id="ru">
+    <path d="M0 0h21v15.5H0V0z" fill-rule="evenodd" clip-rule="evenodd" fill="#fff"></path>
+    <path d="M0 5.2h21v10.3H0V5.2z" fill-rule="evenodd" clip-rule="evenodd" fill="#0039a6"></path>
+    <path d="M0 10.3h21v5.2H0v-5.2z" fill-rule="evenodd" clip-rule="evenodd" fill="#d52b1e"></path>
+  </symbol>
+</svg>
+    <h1>
+      SVG Sprite Demo
+      <br/>
+      <small>
+        created with <a href="https://svgsprit.es/">svgsprit.es</a>
+      </small>
+    </h1>
+    <svg class="icon">
+  <use xlink:href="#ru"></use>
+</svg>
+  </body>
