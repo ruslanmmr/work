@@ -1,15 +1,16 @@
 .header {
   background-color: $color-accent-1;
-  max-width: 480px;
-  padding: 19px 0;
-  position: fixed;
+  max-width: $max-width;
+  padding: 1.25rem 0;
   top: 0;
   width: 100%;
   border-radius: 0 0 40px 40px;
   color: $color-text-light;
   overflow: hidden;
-  &_absolute {
-    position: absolute;
+  margin-bottom: 1.75rem;
+  position: relative;
+  a {
+    color: inherit;
   }
   &:after {
     position: absolute;
@@ -38,11 +39,6 @@
     right: 0;
     top: 8px;
   }
-}
-
-.header-inner {
-  height: 166px;
-  margin-bottom: 1.75rem;
 }
 
 .header-phone {

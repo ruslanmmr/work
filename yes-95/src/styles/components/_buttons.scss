@@ -24,6 +24,14 @@
     }
   }
   &_style-2 {
-    
+    border: 1px solid $color-accent-1;
+    color: $color-accent-1;
+    transition: background-color $trs1, border-color $trs1, color $trs1;
+    &.touch,
+    &.hover {
+      background-color: $color-accent-1-hover;
+      border-color: $color-accent-1-hover;
+      color: #fff;
+    }
   }
 }

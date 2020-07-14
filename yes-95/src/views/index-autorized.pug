@@ -1,0 +1,65 @@
+extends layout/layout
+block title
+  title Главная - авторизирован
+block content
+  main.main.main_has-nav
+    include blocks/header
+
+    section.section.m-bottom-8
+      .container
+        //item
+        h1.m-bottom-4 Здравствуйте, (имя пользователя)!
+        //item
+        span.display-block.m-bottom-4 Доступно топлива по вашей карте:
+        //item
+        span.display-block.color-accent-1.m-bottom-5.f-w-500 ххх литров
+         //item
+        .fuel-type-item.m-bottom-8
+          span.fuel-type-item__title Тип топлива:
+          .fuel-type-item__label АИ-95
+        .fuel-items
+          .fuel-items__container
+            .fuel-item
+              .fuel-item__container
+                .fuel-item__label 20 л
+                .fuel-item__price 157 тг
+                .fuel-item__unit литр
+                .fuel-item__total 3 140 тг
+                a(href="#").button.button_style-2.fuel-item__button Оплатить
+            .fuel-item
+              .fuel-item__container
+                .fuel-item__label 50 л
+                .fuel-item__price 155 тг
+                .fuel-item__unit литр
+                .fuel-item__total 7 750 тг
+                a(href="#").button.button_style-2.fuel-item__button Оплатить
+            .fuel-item
+              .fuel-item__container
+                .fuel-item__label 100 л
+                .fuel-item__price 153 тг
+                .fuel-item__unit литр
+                .fuel-item__total 15 300 тг
+                a(href="#").button.button_style-2.fuel-item__button Оплатить
+            .fuel-item
+              .fuel-item__container
+                .fuel-item__label 500 л
+                .fuel-item__price 150 тг
+                .fuel-item__unit литр
+                .fuel-item__total 75 000 тг
+                a(href="#").button.button_style-2.fuel-item__button Оплатить
+            .fuel-item
+              .fuel-item__container
+                .fuel-item__label 1000 л
+                .fuel-item__price 148 тг
+                .fuel-item__unit литр
+                .fuel-item__total 148 000 тг
+                a(href="#").button.button_style-2.fuel-item__button Оплатить
+    section.section
+      .container
+        h4.m-bottom-8.text-align-center Вы получите выбранное количество топлива на счет карты и сможете заправлять свое авто в АЗС «Да-95!» 
+        a(href="reg.html").button.button_style-1.m-bottom-1 Зарегистрироваться в АЗС 
+          span «Да-95!»
+        span.display-block.text-align-center и получить топливную карту 
+  
+  -var index = 1
+  include blocks/nav

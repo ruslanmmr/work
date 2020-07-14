@@ -23,7 +23,7 @@ $wrapper.style.minHeight = `${document.documentElement.clientHeight}px`;
 /*==== Start =====*/
 document.addEventListener("DOMContentLoaded", ()=>{
   touchHoverEvents();
-  headerOverscroll();
+  popups();
 });
 
 function touchHoverEvents() {
@@ -89,17 +89,45 @@ function touchHoverEvents() {
 
 }
 
-function headerOverscroll() {
-  let $header = document.querySelector('.header');
+//modals/popups
+function popups() {
+  let $trigger = document.querySelectorAll('[data-popup]');
 
-  window.addEventListener('scroll', checkState);
+  $trigger.forEach(($this)=>{
+    $this.addEventListener('click', (event)=>{
+      event.preventDefault();
+  
+      let id = $this.getAttribute('href'),
+          $popup = document.querySelector(`${id}`);
+      
+      if($popup) {
+        $popup.classList.add('active');
+        disablePageScroll();
+        let $close = $popup.querySelectorAll('[data-close]');
+        $close.forEach(($this)=>{
+          $this.addEventListener('click', ()=>{
+            $popup.classList.remove('active');
+            enablePageScroll();
+          })
+        })
+      }
+      
+    })
+  })
 
-  checkState();
-  function checkState() {
-    if(window.pageYOffset>0) {
-      $header.classList.add('header_absolute');
-    } else {
-      $header.classList.remove('header_absolute');
+
+  /* $trigger.on('click', function(event) {
+    event.preventDefault();
+    $popup = $($(this).attr('href'));
+    if($popup.length) {
+      $popup.addClass('active');
     }
-  }
+  })
+
+  $popup.on('click', function(event) {
+    if(!$(event.target).closest('.popup-block__container').length) {
+      $(this).removeClass('active');
+    }
+  }) */
+
 }

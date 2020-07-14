@@ -1,0 +1,46 @@
+extends layout/layout
+block title
+  title Главная - Где находится АЗС
+block content
+  main.main.main_has-nav
+    include blocks/header
+
+    section.section
+      .container
+        h1.m-bottom-10 Где находится АЗС 
+          span.color-accent-1 «Да-95!» 
+        .map-block
+          .map-block__map
+            <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A242bee8b075eaa8495ee1a99c0708d791b3fce01d3ee7c82b4c5a24f8f2b3e72&amp;source=constructor"></iframe>
+          .socials.map-block__socials
+            h2.m-bottom-10.text-align-center Есть вопросы?
+            ul.socials__list
+              li.socials__item
+                a(href="#").socials__link
+                  svg.icon
+                    use(xlink:href='img/icons/socials-sprite.svg#phone')
+              li.socials__item
+                a(href="#").socials__link
+                  svg.icon
+                    use(xlink:href='img/icons/socials-sprite.svg#instagram')
+              li.socials__item
+                a(href="#").socials__link
+                  svg.icon
+                    use(xlink:href='img/icons/socials-sprite.svg#whatsapp')
+              li.socials__item
+                a(href="#").socials__link
+                  svg.icon
+                    use(xlink:href='img/icons/socials-sprite.svg#telegram')
+              li.socials__item
+                a(href="#").socials__link
+                  svg.icon
+                    use(xlink:href='img/icons/socials-sprite.svg#viber')
+              li.socials__item
+                a(href="#").socials__link
+                  svg.icon
+                    use(xlink:href='img/icons/socials-sprite.svg#mail')
+
+
+
+  -var index = 4
+  include blocks/nav

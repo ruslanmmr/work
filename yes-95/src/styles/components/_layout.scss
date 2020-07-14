@@ -5,12 +5,15 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 480px;
+  max-width: $max-width;
   margin: 0 auto;
   min-height: 100vh;
 }
 .main {
   flex: 1 1 100%;
+  &_has-nav {
+    padding-bottom: 80px;
+  }
 }
 .section {
   margin-bottom: 2.25rem;

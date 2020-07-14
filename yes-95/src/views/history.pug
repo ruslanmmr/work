@@ -1,0 +1,49 @@
+extends layout/layout
+block title
+  title Главная - история заправок
+block content
+  main.main.main_has-nav
+    include blocks/header
+
+    section.section.history
+      .container
+        .history__head.m-bottom-10
+          h1.m-bottom-0 История заправок
+          a(href="javascript:void(0)").nav-btn 
+            span
+            span
+            span
+        .history__container
+          //block
+          .history-item
+            .history-item__date 10 июля 2020
+            .history-item__value
+              |-
+              .history-item__label.history-item__label_dark 80 л
+          //block
+          .history-item
+            .history-item__date 2 июля 2020 
+            .history-item__value
+              |-
+              .history-item__label.history-item__label_dark 60 л
+          //block
+          .history-item
+            .history-item__date 15 июня 2020 
+            .history-item__value
+              |-
+              .history-item__label.history-item__label_dark 80 л
+          //block
+          .history-item
+            .history-item__date 15 июня 2020 
+            .history-item__value
+              |+
+              .history-item__label 500 л
+          //block
+          .history-item
+            .history-item__date 2 июля 2020 
+            .history-item__value
+              |-
+              .history-item__label.history-item__label_dark 60 л
+
+  -var index = 2
+  include blocks/nav

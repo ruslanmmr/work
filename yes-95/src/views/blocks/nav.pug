@@ -1,3 +1,24 @@
 nav.nav
   .container
-    .nav__container 
+    ul.nav__list
+      li.nav__item
+        a(href="index-autorized.html" class=index==1?'active':'').nav__link 
+          svg.icon
+            use(xlink:href='img/icons/nav-sprite.svg#pay')
+          span Пополнение<br> карты
+      li.nav__item
+        a(href="history.html" class=index==2?'active':'').nav__link 
+          svg.icon
+            use(xlink:href='img/icons/nav-sprite.svg#history')
+          span История<br> заправок
+      li.nav__item
+        a(href="information.html" class=index==3?'active':'').nav__link 
+          svg.icon
+            use(xlink:href='img/icons/nav-sprite.svg#man')
+          span Информация о<br> пользователе
+      li.nav__item
+        a(href="place.html" class=index==4?'active':'').nav__link 
+          svg.icon
+            use(xlink:href='img/icons/nav-sprite.svg#map')
+          span Где находится<br> АЗС «Да-95!» 
+
