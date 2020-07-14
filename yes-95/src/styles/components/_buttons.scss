@@ -4,4 +4,23 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 500;
+  display: block;
+  border-radius: 10px;
+  &_style-1 {
+    border: 1px solid $color-accent-1;
+    background-color: $color-accent-1;
+    color: #fff;
+    transition: background-color $trs1, border-color $trs1;
+    span {
+      color: $color-accent-2;
+    }
+    &.touch,
+    &.hover {
+      background-color: $color-accent-1-hover;
+      border-color: $color-accent-1-hover;
+    }
+  }
 }

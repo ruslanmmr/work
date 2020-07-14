@@ -1,3 +1,22 @@
 header.header 
   .container
     .header__container
+      //item
+      .logo.mg-bottom-3
+        a(href="/").logo__item
+          img(src="img/logos/logo.svg", alt="logo").logo__icon
+          span.logo__text Да-95!
+      //item
+      span.m-bottom-4.f-w-500.color-accent-2 АЗС самообслуживания
+      //item
+      a(href="#").m-bottom-4.font-size-4.link.link_underline Установить иконку на телефон
+      //item
+      a(href="tel:+77017777777").header-phone
+        svg.icon.header-phone__icon
+          use(xlink:href='img/icons/socials-sprite.svg#whatsapp')
+        | +7 (701) 777-77-77
+      if headerState==1
+        a(href="auth.html").link.header__auth Войти
+      else
+        a(href="auth.html").link.header__auth Выйти
+

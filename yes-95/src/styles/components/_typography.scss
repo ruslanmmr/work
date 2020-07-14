@@ -1,39 +1,24 @@
 h1,h2,h3,h4,h5,h6 {
-  margin: 2.5rem 0 1rem 0;
-  line-height: 1.25;
-  &:first-child {
-    margin-top: 0;
-  }
-  & + h1,
-  & + h2,
-  & + h3,
-  & + h4,
-  & + h5,
-  & + h6 {
-    margin-top: 0;
-  }
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.01em;
+  color: $color-text-accent;
+  font-weight: 500;
 }
-h1, h2 {
-  font-size: 3rem;
-}
-h3 {
-  font-size: 2rem;
-}
-h4 {
-  font-size: 1.5rem;
-}
-h5 {
+h1, h2, h3 {
   font-size: 1.25rem;
 }
-h6 {
+h4, h5, h6 {
   font-size: 1.125rem;
 }
 p {
   margin: 0 0 1rem 0;
+  letter-spacing: 0.01em;
+  color: $color-text-accent-2;
   &:last-child {
     margin: 0;
   }
 }
 b,strong {
   font-weight: 700;
+  color: $color-text-accent;
 }

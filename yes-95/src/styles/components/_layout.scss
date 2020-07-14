@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 .wrapper {
   display: flex;
@@ -10,4 +10,7 @@
 }
 .main {
   flex: 1 1 100%;
+}
+.section {
+  margin-bottom: 2.25rem;
 }

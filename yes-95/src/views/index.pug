@@ -3,4 +3,111 @@ block title
   title Главная - войти
 block content
   main.main
+    -var headerState = 1
     include blocks/header
+
+    section.section.m-bottom-1
+      .container
+        h2.m-bottom-6 Подключитесь к нашей системе самообслуживания и 
+          span.color-accent-1 заправляйте авто 95-м бензином по цене 92-го 
+          | в г. Павлодар
+        span.display-block.m-bottom-6 Актуальные цены на 10.06.2020:
+        .fuel-items.m-bottom-1
+          .fuel-item
+            .fuel-item__container
+              .fuel-item__label 20 л
+              .fuel-item__price 157 тг
+              .fuel-item__unit литр
+          .fuel-item
+            .fuel-item__container
+              .fuel-item__label 50 л
+              .fuel-item__price 155 тг
+              .fuel-item__unit литр
+          .fuel-item
+            .fuel-item__container
+              .fuel-item__label 500 л
+              .fuel-item__price 150 тг
+              .fuel-item__unit литр
+          .fuel-item
+            .fuel-item__container
+              .fuel-item__label 1000 л
+              .fuel-item__price 148 тг
+              .fuel-item__unit литр
+
+    section.section
+      .container
+        h4.m-bottom-8.text-align-center
+          span.color-accent-1 Зарегистрируйтесь 
+          | и 
+          span.color-accent-1 получите 20 литров АИ-95 
+          | на счет вашей топливной карты!
+        a(href="reg.html").button.button_style-1.m-bottom-1 Зарегистрироваться в АЗС 
+          span «Да-95!»
+        span.display-block.text-align-center и получить топливную карту 
+        
+    section.section
+      .container
+        h2.m-bottom-9.text-align-center Как это работает?
+        .about-item
+          h4.about-item__title
+            span 01
+            | Регистрация
+          p Вы регистрируетесь и становитесь членом кооператива владельцев авто
+        .about-item
+          h4.about-item__title
+            span 02
+            | Разовый взнос 
+          p Членский взнос составляет 3000 тенге и оплачивается 1 раз, при регистрации. Взамен членского взноса вы получаете 20 литров топлива АИ-95 на счет
+        .about-item
+          h4.about-item__title
+            span 03
+            | Получение топливной карты
+          p Вы нажимаете кнопку «Получить карту» в личном кабинете нашего веб-приложения, после чего приезжаете забрать карту на нашу АЗС по указанному адресу
+        .about-item
+          h4.about-item__title
+            span 04
+            | Пополнение карты
+          p Теперь вы сможете пополнять счет топливной карты через личный кабинет на этом сайте, а в случае любых вопросов обращаться к нашему консультанту
+        .about-item
+          h4.about-item__title
+            span 05
+            | Заправляйтесь с экономией!
+          p Теперь вы сможете заправлять свое авто в АЗС «Да-95!» 95-м бензином по цене 92-го. Бензин АИ-95 улучшит динамику авто, снизит расход и увеличит ресурс двигателя
+        .about-item
+          h4.about-item__title
+            span 06
+            | Полный контроль расходов  
+          p С помощью нашего сайта вы сможете отслеживать остаток на топливной карте, историю заправок и количество потраченных на покупку топлива средств
+
+    section.section
+      .container
+        h2.m-bottom-13.text-align-center За счёт чего у нас такая низкая цена на бензин АИ-95?
+        .section__items.m-bottom-13
+          .description-item
+            .description-item__icon
+              img(src="img/icons/factory.svg", alt="icon")
+            p Мы поставляем топливо напрямую с завода, без посредников
+          .description-item
+            .description-item__icon
+              img(src="img/icons/volunteer.svg", alt="icon")
+            p В АЗС самообслуживания отсутствуют расходы на персонал 
+          .description-item 
+            .description-item__icon
+              img(src="img/icons/pig.svg", alt="icon")
+            p Мы снизили расходы на учёт и отпуск топлива за счёт автоматизации
+          .description-item
+            .description-item__icon
+              img(src="img/icons/hands.svg", alt="icon")
+            p Мы являемся кооперативом, поэтому экономим за счёт налогов
+        a(href="reg.html").button.button_style-1.m-bottom-1 Зарегистрироваться в АЗС 
+          span «Да-95!»
+        span.display-block.text-align-center и получить топливную карту 
+
+    section.section
+      .container
+        h2.m-bottom-7.text-align-center АЗС самообслуживания 
+          span.color-accent-1 «Да-95!» 
+          | находится по адресу:
+        span.text-align-center.display-block.color-text-accent
+          strong Адрес: 
+          | ул. Астана, 55, оф. №206
