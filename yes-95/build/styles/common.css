@@ -50,7 +50,8 @@ a, button, label {
   display: flex;
   flex-direction: column;
   max-width: 480px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  min-height: 100vh; }
 
 .main {
   flex: 1 1 100%; }
@@ -307,13 +308,14 @@ b, strong {
   background-color: #0074EB;
   max-width: 480px;
   padding: 19px 0;
-  position: relative;
+  position: fixed;
   top: 0;
   width: 100%;
   border-radius: 0 0 40px 40px;
   color: #EBF5FF;
-  overflow: hidden;
-  margin-bottom: 1.75rem; }
+  overflow: hidden; }
+  .header_absolute {
+    position: absolute; }
   .header:after {
     position: absolute;
     z-index: 1;
@@ -338,6 +340,10 @@ b, strong {
     position: absolute;
     right: 0;
     top: 8px; }
+
+.header-inner {
+  height: 166px;
+  margin-bottom: 1.75rem; }
 
 .header-phone {
   color: #EBF5FF;

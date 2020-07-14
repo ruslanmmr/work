@@ -15,17 +15,15 @@ document.addEventListener('lazybeforeunveil', function(e){
   }
 });
 
-
 const $wrapper = document.querySelector('.wrapper');
-
 //set min-height
 $wrapper.style.minHeight = `${document.documentElement.clientHeight}px`;
-
 
 
 /*==== Start =====*/
 document.addEventListener("DOMContentLoaded", ()=>{
   touchHoverEvents();
+  headerOverscroll();
 });
 
 function touchHoverEvents() {
@@ -89,4 +87,19 @@ function touchHoverEvents() {
     }
   }
 
+}
+
+function headerOverscroll() {
+  let $header = document.querySelector('.header');
+
+  window.addEventListener('scroll', checkState);
+
+  checkState();
+  function checkState() {
+    if(window.pageYOffset>0) {
+      $header.classList.add('header_absolute');
+    } else {
+      $header.classList.remove('header_absolute');
+    }
+  }
 }
