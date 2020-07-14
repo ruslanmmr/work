@@ -43,8 +43,6 @@ a, button, label {
   cursor: pointer;
 }
 
-/*========== Grid ==========*/
-@import "./components/grid";
 
 /*========== Layout ==========*/
 @import "./components/layout";
@@ -60,3 +58,6 @@ a, button, label {
 
 /*========== Blocks ==========*/
 @import 'components/blocks';
+
+/*========== Header ==========*/
+@import 'components/header';

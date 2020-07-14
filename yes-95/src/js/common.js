@@ -16,10 +16,14 @@ document.addEventListener('lazybeforeunveil', function(e){
 });
 
 
+const $wrapper = document.querySelector('.wrapper');
+
+//set min-height
+$wrapper.style.minHeight = `${document.documentElement.clientHeight}px`;
+
+
+
 /*==== Start =====*/
 document.addEventListener("DOMContentLoaded", ()=>{
 
 });
-
-
-document.querySelector('.wrapper').insertAdjacentText('afterbegin', document.documentElement.clientHeight);
