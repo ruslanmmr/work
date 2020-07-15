@@ -1,0 +1,12 @@
+extends layout/layout
+block title
+  title Главная - история заправок
+block content
+  main.main.autorization
+    .autorization__top
+      img(src="img/QR.svg", alt="icon").autorization__qr-icon
+    .autorization__container
+      .container
+        h1.m-bottom-0.text-align-center.m-bottom-9 Сканирование QR-кода
+        span.text-align-center.display-block.m-bottom-11 Наведите камеру на QR-код, который вы получили в конверте, чтобы привязать карту к вашему аккаунту
+        a(href="registration.html").button.button_style-3 Назад

@@ -410,6 +410,11 @@
       }
     }
   }
+  &__qr-icon {
+    display: block;
+    width: 175px;
+    height: 175px;
+  }
   &__top {
     flex: 1 1 100%;
     position: relative;
