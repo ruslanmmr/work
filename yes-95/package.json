@@ -34,7 +34,7 @@
 	},
 	"dependencies": {
 		"current-device": "^0.10.1",
-		"lazysizes": "^5.2.2",
+		"inputmask": "^5.0.3",
 		"normalize.css": "^8.0.1",
 		"scroll-lock": "^2.1.4"
 	}

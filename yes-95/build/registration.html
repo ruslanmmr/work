@@ -27,91 +27,64 @@
   </head>
   <body>
     <div class="wrapper">
-      <main class="main main_has-nav">
-        <header class="header"> 
-          <div class="container">
-            <div class="header__container">
-              <!--item-->
-              <div class="logo mg-bottom-3 header__logo"><a class="logo__item" href="/">
-                  <svg class="icon logo__icon">
-                    <use xlink:href="img/logos/logo-sprite.svg#logo"></use>
-                  </svg><span class="logo__text">Да-95!</span></a></div>
-              <!--item--><span class="m-bottom-4 f-w-500 color-accent-2">АЗС самообслуживания</span>
-              <!--item--><a class="m-bottom-4 font-size-4 link link_underline" href="#">Получение и привязка карты</a>
-              <!--item--><a class="header-phone" href="tel:+77017777777">
-                <svg class="icon header-phone__icon">
-                  <use xlink:href="img/icons/socials-sprite.svg#whatsapp"></use>
-                </svg>+7 (701) 777-77-77</a><a class="link header__auth" href="auth.html">Выйти</a>
-            </div>
-          </div>
-        </header>
-        <section class="section history">
-          <div class="container">
-            <div class="history__head m-bottom-10">
-              <h1 class="m-bottom-0">История заправок</h1><a class="nav-btn" href="javascript:void(0)"> <span></span><span></span><span></span></a>
-            </div>
-            <div class="history__container">
-              <!--block-->
-              <div class="history-item">
-                <div class="history-item__date">10 июля 2020</div>
-                <div class="history-item__value">-
-                  <div class="history-item__label history-item__label_dark">80 л</div>
-                </div>
-              </div>
-              <!--block-->
-              <div class="history-item">
-                <div class="history-item__date">2 июля 2020 </div>
-                <div class="history-item__value">-
-                  <div class="history-item__label history-item__label_dark">60 л</div>
-                </div>
-              </div>
-              <!--block-->
-              <div class="history-item">
-                <div class="history-item__date">15 июня 2020 </div>
-                <div class="history-item__value">-
-                  <div class="history-item__label history-item__label_dark">80 л</div>
-                </div>
-              </div>
-              <!--block-->
-              <div class="history-item">
-                <div class="history-item__date">15 июня 2020 </div>
-                <div class="history-item__value">+
-                  <div class="history-item__label">500 л</div>
-                </div>
-              </div>
-              <!--block-->
-              <div class="history-item">
-                <div class="history-item__date">2 июля 2020 </div>
-                <div class="history-item__value">-
-                  <div class="history-item__label history-item__label_dark">60 л</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <nav class="nav">
-        <div class="container">
-          <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link" href="index-autorized.html"> 
-                <svg class="icon">
-                  <use xlink:href="img/icons/nav-sprite.svg#pay"></use>
-                </svg><span>Пополнение<br> карты</span></a></li>
-            <li class="nav__item"><a class="active nav__link" href="history.html"> 
-                <svg class="icon">
-                  <use xlink:href="img/icons/nav-sprite.svg#history"></use>
-                </svg><span>История<br> заправок</span></a></li>
-            <li class="nav__item"><a class="nav__link" href="information.html"> 
-                <svg class="icon">
-                  <use xlink:href="img/icons/nav-sprite.svg#man"></use>
-                </svg><span>Информация о<br> пользователе</span></a></li>
-            <li class="nav__item"><a class="nav__link" href="place.html"> 
-                <svg class="icon">
-                  <use xlink:href="img/icons/nav-sprite.svg#map"></use>
-                </svg><span>Где находится<br> АЗС «Да-95!» </span></a></li>
-          </ul>
+      <main class="main autorization">
+        <div class="autorization__top">
+          <div class="logo logo_dark logo_large"><a class="logo__item" href="/">
+              <svg class="icon logo__icon">
+                <use xlink:href="img/logos/logo-sprite.svg#logo"></use>
+              </svg><span class="logo__text">Да-95!</span></a></div>
         </div>
-      </nav>
+        <div class="autorization__container">
+          <div class="container">
+            <h1 class="m-bottom-0 text-align-center m-bottom-05">Добро пожаловать</h1><span class="display-block text-align-center m-bottom-9">Зарегистрируйтесь, пожалуйста</span>
+            <form class="form" action="#">
+              <div class="form__content m-bottom-9">
+                <div class="form__group m-bottom-6">
+                  <div class="input">
+                    <input type="text" placeholder="Фамилия">
+                  </div>
+                </div>
+                <div class="form__group m-bottom-6">
+                  <div class="input">
+                    <input type="text" placeholder="Имя">
+                  </div>
+                </div>
+                <div class="form__group m-bottom-6">
+                  <div class="input">
+                    <input type="text" placeholder="Отчество">
+                  </div>
+                </div>
+                <div class="form__group m-bottom-6">
+                  <div class="input">
+                    <input type="text" name="phone" placeholder="+7 ">
+                  </div>
+                </div>
+                <div class="form__group m-bottom-6">
+                  <div class="input">
+                    <input type="text" placeholder="Марка автомобиля">
+                  </div>
+                </div>
+                <div class="form__group m-bottom-6">
+                  <div class="input">
+                    <input type="text" placeholder="Гос номер">
+                  </div>
+                </div>
+                <div class="form__group">
+                  <div class="input">
+                    <input type="password" placeholder="Пароль">
+                  </div>
+                </div>
+              </div>
+              <div class="form__next"> 
+                <ul class="form__pagination">
+                  <li class="form__pagination-item active"></li>
+                  <li class="form__pagination-item"></li>
+                </ul><a class="button button_style-1" href="registration-final.html">Далее</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
       <div class="popup" id="dogovor" data-scroll-lock-scrollable>
         <div class="popup-block container">
           <div class="popup-block__head">

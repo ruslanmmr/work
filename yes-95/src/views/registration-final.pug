@@ -1,0 +1,24 @@
+extends layout/layout
+block title
+  title Главная - история заправок
+block content
+  main.main.autorization
+    .autorization__top.autorization__top_gradient
+      a(href="registration.html").autorization__back
+        svg.icon
+          use(xlink:href='img/icons/icons-sprite.svg#arrow-back')
+      .logo.logo_dark.logo_large.logo_column
+        a(href="/").logo__item
+          svg.icon.logo__icon
+            use(xlink:href='img/logos/logo-sprite.svg#logo')
+          span.logo__text Да-95!
+    .autorization__container
+      .container
+        h1.m-bottom-0.text-align-center.m-bottom-9 Завершите регистрацию
+        a(href="#dogovor" data-popup).display-block.link.link_underline.m-bottom-8 Ознакомиться с договором участия в кооперативе
+        .checkbox.m-bottom-12
+          input(type="checkbox" id='checkbox').checkbox__input
+          label(for='checkbox').checkbox__label Я согласен (на) с условиями пользовательского соглашения
+        a(href="reg.html").button.button_style-1.m-bottom-1 Зарегистрироваться в АЗС 
+          span «Да-95!»
+        span.display-block.text-align-center и получить топливную карту 
