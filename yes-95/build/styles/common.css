@@ -96,6 +96,9 @@ b, strong {
 .text-align-center {
   text-align: center; }
 
+.text-align-right {
+  text-align: right; }
+
 .text-transform-uppercase {
   text-transform: uppercase; }
 
@@ -107,6 +110,9 @@ b, strong {
 
 .color-text-accent {
   color: #010B17; }
+
+.color-text-muted {
+  color: #AAAEB2; }
 
 .f-w-500 {
   font-weight: 500; }
@@ -234,11 +240,17 @@ b, strong {
   background: #FFFFFF;
   box-shadow: 0px 30px 35px rgba(0, 60, 122, 0.05);
   border-radius: 10px;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   .input input {
+    position: relative;
+    z-index: 1;
     width: 100%;
     line-height: 22px;
     padding: 15px 1rem; }
+    .input input:-webkit-autofill {
+      box-shadow: 0 0 0 100px #FFFFFF inset;
+      -webkit-text-fill-color: #010B17 !important; }
     .input input::-moz-placeholder {
       color: #AAAEB2;
       -moz-transition: opacity 0.25s ease-out;
@@ -262,6 +274,29 @@ b, strong {
       opacity: 0; }
     .input input:focus::placeholder {
       opacity: 0; }
+  .input_has-icon .icon {
+    z-index: 2;
+    fill: #AAAEB2;
+    transition: fill 0.25s ease-out; }
+    .input_has-icon .icon:first-child {
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      left: 1.125rem;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none; }
+  .input_has-icon .js-pass-toggle {
+    width: 3.25rem;
+    height: 3.25rem;
+    padding: 1.0625rem;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    .input_has-icon .js-pass-toggle.active {
+      fill: #0074EB; }
+  .input_has-icon input {
+    padding-left: 2.875rem; }
 
 .checkbox {
   position: relative;
@@ -315,13 +350,17 @@ b, strong {
   fill: #000; }
 
 .link {
-  text-decoration: none; }
+  text-decoration: none;
+  transition: color 0.25s ease-out; }
   .link.touch, .link.hover {
     text-decoration: underline; }
   .link_underline {
     text-decoration: underline; }
     .link_underline.touch, .link_underline.hover {
       text-decoration: none; }
+  .link_hover-1.touch, .link_hover-1.hover {
+    text-decoration: underline;
+    color: #0074EB; }
 
 .logo__item {
   text-decoration: none;

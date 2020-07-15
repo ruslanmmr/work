@@ -24,6 +24,7 @@ window.mask = Inputmask({
 document.addEventListener("DOMContentLoaded", ()=>{
   touchHoverEvents();
   popups();
+  password();
 });
 
 
@@ -132,4 +133,22 @@ function popups() {
     }
   }) */
 
+}
+
+//password
+function password() {
+  let $trigger = document.querySelectorAll('.js-pass-toggle');
+  $trigger.forEach(($this)=>{
+    $this.addEventListener('click', ()=>{
+      let $input = $this.parentNode.querySelector('input'),
+        type = $input.getAttribute('type') == "text" ? "password" : 'text';
+
+      $input.setAttribute('type', type);
+      if($this.classList.contains('active')) {
+        $this.classList.remove('active');
+      } else {
+        $this.classList.add('active');
+      }
+    })
+  })
 }

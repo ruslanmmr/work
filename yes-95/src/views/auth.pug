@@ -1,0 +1,32 @@
+extends layout/layout
+block title
+  title Главная - история заправок
+block content
+  main.main.autorization
+    .autorization__top.autorization__top_gradient
+      .logo.logo_dark.logo_large.logo_column
+        a(href="/").logo__item
+          svg.icon.logo__icon
+            use(xlink:href='img/logos/logo-sprite.svg#logo')
+          span.logo__text Да-95!
+    .autorization__container
+      .container
+        h1.m-bottom-0.text-align-center.m-bottom-9 Добро пожаловать
+        form(action="#").form
+          .form__content.m-bottom-8.text-align-right
+            .input.input_has-icon.m-bottom-6
+              svg.icon
+                use(xlink:href='img/icons/icons-sprite.svg#phone')
+              input(type="text" name='phone' placeholder="+7")
+            .input.input_has-icon.m-bottom-1
+              svg.icon
+                use(xlink:href='img/icons/icons-sprite.svg#lock')
+              input(type="password" name='pass' placeholder="Пароль")
+              svg.icon.js-pass-toggle
+                use(xlink:href='img/icons/icons-sprite.svg#eye')
+            a(href="#").link.link_hover-1.font-size-4.color-text-muted Забыли пароль?
+          a(href="reg.html").button.button_style-1.m-bottom-1 Войти в АЗС 
+            span «Да-95!»
+          span.display-block.text-align-center У вас нет аккаунта? 
+            a(href="registration.html").link.color-accent-1 Зарегистрироваться 
+            

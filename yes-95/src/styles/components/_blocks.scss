@@ -6,17 +6,23 @@
 
 .link {
   text-decoration: none;
+  transition: color $trs1;
   &.touch,
   &.hover {
     text-decoration: underline;
   }
-
-
   &_underline {
     text-decoration: underline;
     &.touch,
     &.hover {
       text-decoration: none;
+    }
+  }
+  &_hover-1 {
+    &.touch,
+    &.hover {
+      text-decoration: underline;
+      color: $color-accent-1;
     }
   }
 }
