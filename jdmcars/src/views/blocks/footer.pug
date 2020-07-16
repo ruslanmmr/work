@@ -1,20 +1,29 @@
 footer.footer
   .container
     .footer__container
-      .logo
-        a(href="#").logo__link
-          img(src="img/Logo_Xcavator_edition-01.png", alt="logo")
-      nav.footer-nav
-        ul.footer-nav__list
-          li.footer-nav__item
-            a(href="#").footer-nav__link 会社概要
-          li.footer-nav__item
-            a(href="#").footer-nav__link 買取契約
-          li.footer-nav__item
-            a(href="#").footer-nav__link サイトマップ
-          li.footer-nav__item
-            a(href="#").footer-nav__link プライバシーポリシー
-      .footer__buttons
-        a(href="#" style='background-image:url("img/button1.png");').button.button_style-1
-        a(href="#" style='background-image:url("img/button2.png");').button.button_style-1
+      .footer__logo-section
+        .logo.footer__logo
+          a(href="#").logo__link
+            img(src="img/Logo_Xcavator_edition-01.png", alt="logo")
+        .footer__text
+          p.footer__text-item ジェイ　ディ　エム　株式会社（JDM Co.,Ltd.）
+          p.footer__text-item 〒930-0801富山県富山市中島一丁目3番43号
+          a(href="mailto:Kenkikaitori@gmail.com").mail-link.footer__mail-link
+            svg.icon
+              use(xlink:href="img/vector/sprite.svg#mail")
+            | Kenkikaitori@gmail.com  
+      .footer__nav-section   
+        nav.footer-nav
+          ul.footer-nav__list
+            li.footer-nav__item
+              a(href="#").footer-nav__link 会社概要
+            li.footer-nav__item
+              a(href="#").footer-nav__link 買取契約
+            li.footer-nav__item
+              a(href="#").footer-nav__link サイトマップ
+            li.footer-nav__item
+              a(href="#").footer-nav__link プライバシーポリシー
+        .footer__buttons
+          a(href="#" style='background-image:url("img/button1.png");').button.button_style-1
+          a(href="#" style='background-image:url("img/button2.png");').button.button_style-1
         

@@ -110,26 +110,34 @@
   display: flex;
   justify-content: center;
   font-size: 0;
-  margin: 20px 0 0 0;
-  padding: 0;
+  margin: 21px -13px 0 -13px;
+  padding: 0 20px;
   list-style: none;
   li {
-    &:not(:last-child) {
-      margin-right: 6px;
-    }
+    flex: 1 1 100%;
+    padding: 0 13px;
+    max-width: 132px;
   }
   button {
     cursor: default;
     display: block;
-    width: 8px;
-    height: 8px;
-    background-color: #C4C4C4;
+    width: 100%;
+    height: 6px;
+    background-color: #86C6D1;
     transition: background-color $trs1;
-    border-radius: 100%;
   }
   li.slick-active {
     button {
-      background-color: $colorA;
+      background-color: #128093;
     }
+  }
+}
+
+@media all and(max-width: 767px) {
+  .slick-dots {
+    margin: 21px -5px 0 -5px;
+  }
+  .slick-dots li {
+    padding: 0 5px;
   }
 }

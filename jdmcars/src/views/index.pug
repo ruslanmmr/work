@@ -2,15 +2,6 @@ extends layout/layout
 block title
   title Main page
 block content
-  mixin block(href)
-    .catalogue-block
-      .catalogue-block__container
-        .catalogue-block__image.cover
-          img(data-src=href, src='#', alt="image").lazyload
-        .catalogue-block__info
-          h5.catalogue-block__title デンヨー  DCA-110SPN
-          .catalogue-block__price ¥110,000
-        a(href="javascript:void(0);").button.button_style-2 買取を申し込む
   mixin block2(title)
     .questions-block
       h6.questions-block__title=title
@@ -18,54 +9,39 @@ block content
           use(xlink:href="img/vector/sprite.svg#triangle")
       .questions-block__answer
         p 車両によりますが、事前にいただいた情報をもとに査定を行うためスムーズに買取代金をお支払いいたします。
-  mixin slide1(href)
-    //slide
-    .home-slider-main__slide.cover
-      img(data-src=href, src='#', alt="image").lazyload
-      h2.home-slider-main__slide-title 買い取り<br> 可能<br> アイテム
-  mixin slide2(href)
-    //slide
-    a(href="javascript:void(0);").home-slider-nav__slide.cover
-      img(data-src=href, src='#', alt="image").lazyload
-      h3.home-slider-nav__slide-title ローラー
+
+  //slider      
   section.section.home-slider
-    .home-slider-main
-      +slide1('img/content/1-min.jpg')
-      +slide1('img/content/2-min.jpg')
-      +slide1('img/content/3-min.jpg')
-      +slide1('img/content/4-min.jpg')
-      +slide1('img/content/5-min.jpg')
-      +slide1('img/content/6-min.jpg')
-      +slide1('img/content/7-min.jpg')
-      +slide1('img/content/8-min.jpg')
-      +slide1('img/content/9-min.jpg')
-      +slide1('img/content/10-min.jpg')
-      +slide1('img/content/11-min.jpg')
-      +slide1('img/content/12-min.jpg')
-      +slide1('img/content/13-min.jpg')
-      +slide1('img/content/14-min.jpg')
-      +slide1('img/content/15-min.jpg')
-      +slide1('img/content/16-min.jpg')
-    .home-slider-nav
-      +slide2('img/content/1-min.jpg')
-      +slide2('img/content/2-min.jpg')
-      +slide2('img/content/3-min.jpg')
-      +slide2('img/content/4-min.jpg')
-      +slide2('img/content/5-min.jpg')
-      +slide2('img/content/6-min.jpg')
-      +slide2('img/content/7-min.jpg')
-      +slide2('img/content/8-min.jpg')
-      +slide2('img/content/9-min.jpg')
-      +slide2('img/content/10-min.jpg')
-      +slide2('img/content/11-min.jpg')
-      +slide2('img/content/12-min.jpg')
-      +slide2('img/content/13-min.jpg')
-      +slide2('img/content/14-min.jpg')
-      +slide2('img/content/15-min.jpg')
-      +slide2('img/content/16-min.jpg')
+    .container
+      .section__head.home-slider__head
+        h4.section__title.home-slider__title 買い取り　可能　アイテム
+    .home-slider__container 
+      mixin slide(href)
+        //slide
+        a(href="javascript:void(0);").home-slider__slide.cover
+          img(data-src=href, src='#', alt="image").lazyload
+          h4.home-slider__slide-title ローラー
+      +slide('img/content/1-min.jpg')
+      +slide('img/content/2-min.jpg')
+      +slide('img/content/3-min.jpg')
+      +slide('img/content/4-min.jpg')
+      +slide('img/content/5-min.jpg')
+      +slide('img/content/6-min.jpg')
+      +slide('img/content/7-min.jpg')
+      +slide('img/content/8-min.jpg')
+      +slide('img/content/9-min.jpg')
+      +slide('img/content/10-min.jpg')
+      +slide('img/content/11-min.jpg')
+      +slide('img/content/12-min.jpg')
+      +slide('img/content/13-min.jpg')
+      +slide('img/content/14-min.jpg')
+      +slide('img/content/15-min.jpg')
+      +slide('img/content/16-min.jpg')
+
   section.section.advantages
     .container
-      h4.section__title.advantages__title 当社の仕事流れ/得意　ポイント: 
+      .section__head.advantages__head
+        h4.section__title.advantages__title 当社の仕事流れ/得意　ポイント: 
       .advantages__container
         //block
         .advantages-block
@@ -97,9 +73,11 @@ block content
           svg.advantages-block__icon
             use(xlink:href="img/vector/sprite.svg#ico6")
           h5.advantages-block__title 6. 業界第一番 高額買取り
+  
   section.section.catalogue
-    h4.section__title.catalogue__title カタログ
     .container
+      .section__head.catalogue__head
+        h4.section__title.catalogue__title 最近買い取りした建機
       .catalogue__container
         .catalogue-nav
           h5.catalogue-nav__head 買取対応車種
@@ -138,6 +116,15 @@ block content
                   use(xlink:href="img/vector/sprite.svg#arrow")
         .catalogue-blocks
           .catalogue-blocks__container
+            mixin block(href)
+              .catalogue-block
+                .catalogue-block__container
+                  a(href="#").catalogue-block__image.cover
+                    img(data-src=href, src='#', alt="image").lazyload
+                  .catalogue-block__info
+                    h5.catalogue-block__title デンヨー  DCA-110SPN
+                    //.catalogue-block__price ¥110,000
+                  //a(href="javascript:void(0);").button.button_style-2 買取を申し込む
             //block
             +block('img/content/1-min.jpg')
             +block('img/content/2-min.jpg')
@@ -152,9 +139,11 @@ block content
             a(href="javascript:void(0);") すべべて表示する
               svg.icon
                 use(xlink:href="img/vector/sprite.svg#arrow")
+  
   section.section.questions
     .container  
-      h4.section__title.questions__title よくあるご質問
+      .section__head.questions__head
+        h4.section__title.questions__title よくあるご質問
       .questions__blocks
         +block2('まずは見積もりだけ取って相場を知りたいです。')
         +block2('建機・重機の査定に必ず必要な情報は何ですか？')
@@ -162,10 +151,4 @@ block content
         +block2('買取時に用意しておく書類などはありますか？')
         +block2('建機や重機の出張査定当日はどのくらいの時間がかかりますか？')
         +block2('査定時にやることはありますか？')
-  .contact
-    .container  
-      p.contact__text
-        strong ジェイ　ディ　エム　株式会社（JDM Co.,Ltd.）
-      p.contact__text 
-        strong 〒930-0801富山県富山市中島一丁目3番43号
-      a(href="mailto:JDMCARS@yahoo.co.jp").contact__mail JDMCARS@yahoo.co.jp
+        

@@ -1,6 +1,6 @@
 /* ===== Catalogue ===== */
 .catalogue {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   &__container {
     display: flex;
     flex-wrap: wrap;
@@ -9,26 +9,28 @@
     width: 75%;
     padding-left: 20px;
     &__container {
-      margin: 0 -10px -50px -10px;
+      margin: 0 -10px -60px -10px;
       display: flex;
       flex-wrap: wrap;
     }
     &__more {
       display: flex;
       justify-content: center;
-      margin-top: 30px;
+      margin-top: 37px;
       a {
         display: flex;
         flex-direction: column;
         font-size: 14px;
         text-decoration: none;
         transition: color $trs1;
-        color: inherit;
+        color: #1AA8C0;
         .icon {
+          transition: fill $trs1;
           width: 14px;
           height: 7px;
           margin: 9px auto 0 auto;
           transition: color $trs1;
+          fill: #1AA8C0;
         }
         &:hover {
           color: $colorB;
@@ -39,7 +41,7 @@
       }
     }
   }
-  &__title {
+  &__head {
     margin-bottom: 80px;
   }
   &-nav {
@@ -91,7 +93,7 @@
     flex: 1 1 33.33%;
     max-width: 33.33%;
     padding: 0 10px;
-    margin: 0 0 50px 0;
+    margin: 0 0 60px 0;
     &__container {
       display: flex;
       flex-direction: column;
@@ -104,9 +106,16 @@
       padding-top: 100%;
       display: block;
       margin-bottom: 6px;
+      transition: opacity $trs1;
+      &:hover {
+        opacity: 0.8;
+      }
     }
     &__title {
-      margin-bottom: 4px;
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
     }
     &__price {
       display: block;
@@ -120,8 +129,7 @@
 
 @media all and(max-width: 991px) {
   .catalogue {
-    margin-bottom: 70px;
-    &__title {
+    &__head {
       margin-bottom: 60px;
     }
   }
@@ -140,8 +148,8 @@
 }
 @media all and(max-width: 575px) {
   .catalogue {
-    &__title {
-      margin-bottom: 30px;
+    &__head {
+      margin-bottom: 40px;
     }
     &-nav {
       &__link {

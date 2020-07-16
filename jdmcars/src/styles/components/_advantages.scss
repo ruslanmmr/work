@@ -1,13 +1,15 @@
 /* ===== Advantages ===== */
 .advantages {
-  margin-bottom: 110px;
+  margin-bottom: 75px;
+  padding: 34px 0 0 0;
+  border-top: 16px solid #EFCFCA;
   &__container {
     margin: 0 -10px -120px -10px;
     display: flex;
     flex-wrap: wrap;
   }
-  &__title {
-    margin-bottom: 118px;
+  &__head {
+    margin-bottom: 94px;
   }
 }
 .advantages-block {
@@ -20,6 +22,7 @@
     font-weight: 400;
     line-height: 1.5;
     margin: 0;
+    font-weight: 700;
   }
   &__icon {
     width: 120px;
@@ -33,7 +36,7 @@
 @media all and(max-width: 991px) {
   .advantages {
     margin-bottom: 70px;
-    &__title {
+    &__head {
       margin-bottom: 60px;
     }
     &__container {
@@ -54,8 +57,8 @@
 
 @media all and(max-width: 575px) {
   .advantages {
-    &__title {
-      margin-bottom: 30px;
+    &__head {
+      margin-bottom: 40px;
     }
   }
   .advantages-block {
