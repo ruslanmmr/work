@@ -10,7 +10,8 @@ body {
   font-size: 1rem;
   line-height: 1.35;
   min-width: 320px;
-  letter-spacing: 0.01em; }
+  letter-spacing: 0.01em;
+  text-rendering: geometricPrecision; }
 
 * {
   box-sizing: border-box;
@@ -216,13 +217,11 @@ b, strong {
   .button_style-2 {
     border: 1px solid #0074EB;
     color: #0074EB;
-    box-shadow: 0px 30px 35px rgba(0, 60, 122, 0.1);
-    transition: background-color 0.25s ease-out, border-color 0.25s ease-out, color 0.25s ease-out, box-shadow 0.25s ease-out; }
+    transition: background-color 0.25s ease-out, border-color 0.25s ease-out, color 0.25s ease-out; }
     .button_style-2.touch, .button_style-2.hover {
       background-color: #0068cf;
       border-color: #0068cf;
-      color: #fff;
-      box-shadow: 0; }
+      color: #fff; }
   .button_style-3 {
     border: 1px solid #fff;
     background-color: #fff;
@@ -407,6 +406,7 @@ b, strong {
   .fuel-item__container {
     background: #FFFFFF;
     box-shadow: 0px 20px 20px rgba(0, 60, 122, 0.05);
+    box-shadow: 0px 30px 35px rgba(0, 60, 122, 0.03);
     border-radius: 18px;
     padding: 21px 14px;
     display: flex;

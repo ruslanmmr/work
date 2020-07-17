@@ -28,14 +28,12 @@
   &_style-2 {
     border: 1px solid $color-accent-1;
     color: $color-accent-1;
-    box-shadow: 0px 30px 35px rgba(0, 60, 122, 0.1);
-    transition: background-color $trs1, border-color $trs1, color $trs1, box-shadow $trs1;
+    transition: background-color $trs1, border-color $trs1, color $trs1;
     &.touch,
     &.hover {
       background-color: $color-accent-1-hover;
       border-color: $color-accent-1-hover;
       color: #fff;
-      box-shadow: 0;
     }
   }
   &_style-3 {
