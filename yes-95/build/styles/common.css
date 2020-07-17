@@ -759,6 +759,7 @@ b, strong {
     flex-direction: column; }
     .popup-block__head {
       display: flex;
+      justify-content: space-between;
       align-items: center;
       margin-bottom: 1.125rem;
       flex: 0 0 auto; }
