@@ -6433,8 +6433,6 @@ p {
     text-overflow: ellipsis;
     line-height: 20px; }
   .mobile-catalogue-section__container {
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
     flex: 1 1 100%; }
   .mobile-catalogue-section__content {
     margin: 0;

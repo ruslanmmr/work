@@ -542,8 +542,8 @@
       line-height: 20px;
     }
     &__container {
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
+      //overflow-y: scroll;
+      //-webkit-overflow-scrolling: touch;
       flex: 1 1 100%;
     }
     &__content {
