@@ -1,23 +1,25 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .content {
   flex: 1 1 100%;
+  //padding-top: 196px;
 }
 .main {
   padding-top: 30px;
 }
-.aside-area {
-  margin-bottom: 60px;
-}
-.section {
+.aside-group {
   &:not(:last-child) {
     margin-bottom: 60px;
   }
+}
+.section {
+  margin-bottom: 50px;
   &__title {
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     display: block;
     text-align: center;
     margin-bottom: 40px;

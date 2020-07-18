@@ -1,0 +1,17 @@
+section.section.blog
+  .container
+      h2.section__title БЛОГ / НОВОСТИ
+      .blog__container.row
+        mixin post(title, text, path)
+          .blog-post.col-md-6
+            .blog-post__container
+              a(href="#").blog-post__image.image.image_cover
+                img(data-src=path).lazyload
+              .blog-post__content
+                span.blog-post__date 29 июня 2020
+                a(href="#").blog-post__title=title 
+                p.blog-post__text=text
+        //post
+        +post('Новинка! Садово-парковые уличные светильники Feron серия "Марсель" PL6001 PL6002', 'Светильники уличные декоративные серии «Марсель» TM Feron предназначены для общего и...', 'img/Layer 79.png')
+        //post
+        +post('Новинка! Тестер-пробник STEKKER TST500-3', 'Тестер-пробник ТМ «STEKKER» серии TST предназначен для тестирования путем световой индикации...', 'img/Layer 82.png')

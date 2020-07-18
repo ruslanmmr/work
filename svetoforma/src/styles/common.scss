@@ -20,22 +20,16 @@ $fa-font-path: '../fonts/fontawesome/webfonts/';
 @import "../fonts/fontawesome/scss/regular.scss";
 @import "../fonts/fontawesome/scss/solid.scss";
 
-
-//variables
-$trs1: .25s ease-out;
-$trs2: .5s ease-out;
-$trs3: 1s ease-out;
-
-$colorA: #fbba00;
+@import "./components/variables";
 
 /*========== Basic ==========*/
 html {
-  font-size: 12px;
+  font-size: 16px;
 }
 body {
   line-height: 1.66;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
+  font-size: 0.75rem;
   min-width: 320px;
   color: #393f42;
 }

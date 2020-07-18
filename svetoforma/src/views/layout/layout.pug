@@ -13,9 +13,11 @@ html
     .wrapper
       include ../blocks/header
       include ../blocks/mobile-nav
-      main.main
+      .content
         block content
       include ../blocks/footer
+      a(href="javascript:void(0);").js-up
+        <i class="fas fa-chevron-up"></i>
 
     //jquery
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
