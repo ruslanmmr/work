@@ -506,6 +506,8 @@
     visibility: hidden;
     transform: translateX(-100%);
     transition: opacity $trs1, visibility $trs1, transform $trs1;
+    display: flex;
+    flex-direction: column;
     &.active {
       opacity: 1;
       visibility: visible;
@@ -514,10 +516,6 @@
     &__head {
       background-color: #393f42;
       width: 100%;
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      left: 0;
       color: #fff !important;
       height: 70px;
       padding: 0 15px 0 40px;
@@ -527,6 +525,7 @@
       cursor: pointer;
       transition: color $trs1;
       font-size: 1rem;
+      flex: 0 0 auto;
       i {
         position: absolute;
         left: 17px;
@@ -543,12 +542,9 @@
       line-height: 20px;
     }
     &__container {
-      height: 100%;
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
-      padding-top: 70px;
-      position: static;
-      z-index: 1;
+      flex: 1 1 100%;
     }
     &__content {
       margin: 0;

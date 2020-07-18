@@ -6400,7 +6400,9 @@ p {
   opacity: 0;
   visibility: hidden;
   transform: translateX(-100%);
-  transition: opacity 0.25s ease-out, visibility 0.25s ease-out, transform 0.25s ease-out; }
+  transition: opacity 0.25s ease-out, visibility 0.25s ease-out, transform 0.25s ease-out;
+  display: flex;
+  flex-direction: column; }
   .mobile-catalogue-section.active {
     opacity: 1;
     visibility: visible;
@@ -6408,10 +6410,6 @@ p {
   .mobile-catalogue-section__head {
     background-color: #393f42;
     width: 100%;
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
     color: #fff !important;
     height: 70px;
     padding: 0 15px 0 40px;
@@ -6420,7 +6418,8 @@ p {
     text-decoration: none !important;
     cursor: pointer;
     transition: color 0.25s ease-out;
-    font-size: 1rem; }
+    font-size: 1rem;
+    flex: 0 0 auto; }
     .mobile-catalogue-section__head i {
       position: absolute;
       left: 17px;
@@ -6434,12 +6433,9 @@ p {
     text-overflow: ellipsis;
     line-height: 20px; }
   .mobile-catalogue-section__container {
-    height: 100%;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    padding-top: 70px;
-    position: static;
-    z-index: 1; }
+    flex: 1 1 100%; }
   .mobile-catalogue-section__content {
     margin: 0;
     padding: 0;
