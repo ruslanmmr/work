@@ -495,7 +495,7 @@
 
 .mobile-catalogue {
   &-section {
-    position: absolute;
+    position: fixed;
     z-index: 10;
     top: 0;
     left: 0;
@@ -542,8 +542,8 @@
       line-height: 20px;
     }
     &__container {
-      //overflow-y: scroll;
-      //-webkit-overflow-scrolling: touch;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
       flex: 1 1 100%;
     }
     &__content {
