@@ -6390,7 +6390,7 @@ p {
     justify-content: space-between; }
 
 .mobile-catalogue-section {
-  position: fixed;
+  position: absolute;
   z-index: 10;
   top: 0;
   left: 0;
@@ -6433,13 +6433,14 @@ p {
     text-overflow: ellipsis;
     line-height: 20px; }
   .mobile-catalogue-section__container {
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
     flex: 1 1 100%; }
-  .mobile-catalogue-section__content {
+  .mobile-catalogue-section__links {
     margin: 0;
     padding: 0;
-    list-style: none; }
+    list-style: none;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    height: 100%; }
   .mobile-catalogue-section__item {
     border-bottom: 1px solid #e5e5e5; }
   .mobile-catalogue-section__link {

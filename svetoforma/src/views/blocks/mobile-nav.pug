@@ -53,55 +53,70 @@ nav.mobile-nav
           .contact-area__section.contact-area__mail
             span Напишите нам
             a(href="mailto:info@svetoforma.ru") info@svetoforma.ru
+
     //mobile catalogue
     .mobile-catalogue.mobile-catalogue-section
       a(href="javascript:void(0);").mobile-catalogue-section__head
         i.fas.fa-chevron-left
         h6.mobile-catalogue-section__title Каталог
-      .mobile-catalogue-section__container(data-scroll-lock-scrollable)
-        ul.mobile-catalogue-section__content
-          mixin section(title)
+      .mobile-catalogue-section__container
+        //пункты меню
+        ul.mobile-catalogue-section__links(data-scroll-lock-scrollable)
+          mixin link1(title)
             li.mobile-catalogue-section__item
               a(href="javascript:void(0);").mobile-catalogue-section__link
                 span=title
                 i.fas.fa-chevron-right
+          +link1('Бактерицидные настольные лампы')
+          +link1('Cветодиодные лампы')
+          +link1('Садово-парковые светильники')
+          +link1('Светодиодная лента и комплектующие')
+          +link1('Интерьерные светильники')
+          +link1('Светодиодные прожекторы')
+          +link1('Светодиодные свечи')
+          +link1('Новогодняя продукция')
+          +link1('Встраиваемые светильники')
+          +link1('Аккумуляторные светильники и светодиодные фонари')
+          +link1('Электротовары и комплектующие')
+          +link1('Лампы')
+        //соответствуюшие подпункты
+        .mobile-catalogue-section__content
+          mixin block(title)
+            .mobile-catalogue-section
+              a(href="javascript:void(0);").mobile-catalogue-section__head
+                i.fas.fa-chevron-left
+                h6.mobile-catalogue-section__title=title
+              .mobile-catalogue-section__container
+                ul.mobile-catalogue-section__links(data-scroll-lock-scrollable)
+                  mixin item(title)
+                    li.mobile-catalogue-section__item
+                      a(href="#").mobile-catalogue-section__link
+                        span=title
+                  +item('Светодиодные лампы с цоколем E14')
+                  +item('Светодиодные лампы с цоколем E-27')
+                  +item('Светодиодные лампы цоколь E-40')
+                  +item('Лампы светодиодные цоколь G4')
+                  +item('Светодиодные лампы на 220 вольт патрон G5.3')
+                  +item('Лампы светодиодные цоколь G9')
+                  +item('Лампы светодиодные цоколь GX70')
+                  +item('Рефлекторные светодиодные лампы R39,R50,R63,R80')
+                  +item('Светодиодные лампы для прожекторов R7S')
+                  +item('Светодиодные лампы на 12 вольт цоколь G5.3')
+                  +item('Светодиодные лампы на 220 вольт цоколь MR-11')
+                  +item('Светодиодные лампы цоколь G13')
+                  +item('Светодиодные лампы цоколь GU10')
+                  +item('Светодиодные лампы цоколь GX53')
+                  +item('Цветные светодиодные лампы')
 
-              .mobile-catalogue-section
-                a(href="javascript:void(0);").mobile-catalogue-section__head
-                  i.fas.fa-chevron-left
-                  h6.mobile-catalogue-section__title=title
-
-                .mobile-catalogue-section__container(data-scroll-lock-scrollable)
-                  ul.mobile-catalogue-section__content
-                    mixin item(title)
-                      li.mobile-catalogue-section__item
-                        a(href="#").mobile-catalogue-section__link
-                          span=title
-                    +item('Светодиодные лампы с цоколем E14')
-                    +item('Светодиодные лампы с цоколем E-27')
-                    +item('Светодиодные лампы цоколь E-40')
-                    +item('Лампы светодиодные цоколь G4')
-                    +item('Светодиодные лампы на 220 вольт патрон G5.3')
-                    +item('Лампы светодиодные цоколь G9')
-                    +item('Лампы светодиодные цоколь GX70')
-                    +item('Рефлекторные светодиодные лампы R39,R50,R63,R80')
-                    +item('Светодиодные лампы для прожекторов R7S')
-                    +item('Светодиодные лампы на 12 вольт цоколь G5.3')
-                    +item('Светодиодные лампы на 220 вольт цоколь MR-11')
-                    +item('Светодиодные лампы цоколь G13')
-                    +item('Светодиодные лампы цоколь GU10')
-                    +item('Светодиодные лампы цоколь GX53')
-                    +item('Цветные светодиодные лампы')
-
-          +section('Бактерицидные настольные лампы')
-          +section('Cветодиодные лампы')
-          +section('Садово-парковые светильники')
-          +section('Светодиодная лента и комплектующие')
-          +section('Интерьерные светильники')
-          +section('Светодиодные прожекторы')
-          +section('Светодиодные свечи')
-          +section('Новогодняя продукция')
-          +section('Встраиваемые светильники')
-          +section('Аккумуляторные светильники и светодиодные фонари')
-          +section('Электротовары и комплектующие')
-          +section('Лампы')
+          +block('Бактерицидные настольные лампы')
+          +block('Cветодиодные лампы')
+          +block('Садово-парковые светильники')
+          +block('Светодиодная лента и комплектующие')
+          +block('Интерьерные светильники')
+          +block('Светодиодные прожекторы')
+          +block('Светодиодные свечи')
+          +block('Новогодняя продукция')
+          +block('Встраиваемые светильники')
+          +block('Аккумуляторные светильники и светодиодные фонари')
+          +block('Электротовары и комплектующие')
+          +block('Лампы')

@@ -153,7 +153,8 @@ function mobileCatalogue() {
     $parent.removeClass('active');
   });
   $sectionOpen.on('click', function (event) {
-    var $target = $(this).siblings('.mobile-catalogue-section');
+    var index = $(this).parent().index();
+    var $target = $(this).parents('.mobile-catalogue-section').find('.mobile-catalogue-section').eq(index);
 
     if ($target.length) {
       event.preventDefault();

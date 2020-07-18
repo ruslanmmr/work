@@ -161,7 +161,8 @@ function mobileCatalogue() {
   })
 
   $sectionOpen.on('click', function(event) {
-    let $target = $(this).siblings('.mobile-catalogue-section');
+    let index = $(this).parent().index();
+    let $target = $(this).parents('.mobile-catalogue-section').find('.mobile-catalogue-section').eq(index);
     if($target.length) {
       event.preventDefault();
       $target.addClass('active');
