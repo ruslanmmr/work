@@ -6410,7 +6410,6 @@ p {
     background-color: #393f42;
     width: 100%;
     position: absolute;
-    z-index: 2;
     top: 0;
     left: 0;
     color: #fff !important;
