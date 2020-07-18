@@ -6409,6 +6409,7 @@ p {
     background-color: #393f42;
     width: 100%;
     position: absolute;
+    z-index: 2;
     top: 0;
     left: 0;
     color: #fff !important;
@@ -6433,10 +6434,12 @@ p {
     text-overflow: ellipsis;
     line-height: 20px; }
   .mobile-catalogue-section__container {
-    height: calc(100% - 70px);
+    height: 100%;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    margin-top: 70px; }
+    padding-top: 70px;
+    position: static;
+    z-index: 1; }
   .mobile-catalogue-section__content {
     margin: 0;
     padding: 0;
