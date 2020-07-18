@@ -501,7 +501,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding-top: 70px;
     background-color: #fff;
     opacity: 0;
     visibility: hidden;
@@ -543,9 +542,10 @@
       line-height: 20px;
     }
     &__container {
-      height: 100%;
+      height: calc(100% - 70px);
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
+      margin-top: 70px;
     }
     &__content {
       margin: 0;
