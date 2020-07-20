@@ -16,27 +16,27 @@ block content
       .section__head.home-slider__head
         h4.section__title.home-slider__title 買い取り　可能　アイテム
     .home-slider__container 
-      mixin slide(href)
+      mixin slide(href, title)
         //slide
         a(href="javascript:void(0);").home-slider__slide.cover
           img(data-src=href, src='#', alt="image").lazyload
-          h4.home-slider__slide-title ローラー
-      +slide('img/content/1-min.jpg')
-      +slide('img/content/2-min.jpg')
-      +slide('img/content/3-min.jpg')
-      +slide('img/content/4-min.jpg')
-      +slide('img/content/5-min.jpg')
+          h4.home-slider__slide-title=title
+      +slide('img/content/1-min.jpg', 'ミニユンボ')
+      +slide('img/content/3-min.jpg', '特殊車両')
+      +slide('img/content/8-min.jpg', 'トラクター')
+      +slide('img/content/11-min.jpg', '道路ローラ')
+      +slide('img/content/16-min.jpg', '発電機')
+      +slide('img/content/5-min.jpg', 'トラック')
+      +slide('img/content/4-min.jpg', '自動車')
+      +slide('img/content/2-min.jpg', '')
       +slide('img/content/6-min.jpg')
       +slide('img/content/7-min.jpg')
-      +slide('img/content/8-min.jpg')
       +slide('img/content/9-min.jpg')
       +slide('img/content/10-min.jpg')
-      +slide('img/content/11-min.jpg')
       +slide('img/content/12-min.jpg')
       +slide('img/content/13-min.jpg')
       +slide('img/content/14-min.jpg')
       +slide('img/content/15-min.jpg')
-      +slide('img/content/16-min.jpg')
 
   section.section.advantages
     .container

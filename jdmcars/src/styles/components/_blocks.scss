@@ -86,6 +86,15 @@
     height: 20px;
     margin-right: 14px;
   }
+  span {
+    border-bottom: 2px solid transparent;
+    transition: border-color $trs1;
+  }
+  &:hover {
+    span {
+      border-color: #128093;
+    }
+  }
 }
 
 

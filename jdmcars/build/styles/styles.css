@@ -457,6 +457,11 @@ p {
     width: 30px;
     height: 20px;
     margin-right: 14px; }
+  .mail-link span {
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.25s ease-out; }
+  .mail-link:hover span {
+    border-color: #128093; }
 
 @media all and (max-width: 991px) {
   .mail-link {
