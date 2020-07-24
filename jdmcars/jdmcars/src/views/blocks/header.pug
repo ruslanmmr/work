@@ -1,0 +1,32 @@
+header.header
+  .header__container
+    .background.header__background.lazyload(data-src='img/header.png')
+    .container
+      .logo.header__logo
+        a(href="#").logo__link
+          img(src="img/Logo_Xcavator_edition-01.png", alt="logo")
+      .header__center
+        .header__buttons
+          a(href="#" style='background-image:url("img/button1.png");').button.button_style-1
+          a(href="#" style='background-image:url("img/button2.png");').button.button_style-1
+        .header__text
+          span 全国 
+          span 全メーカ 
+          span 全機種
+          <br>
+          span 高く買い取ります！！！ 
+      a(href="mailto:Kenkikaitori@gmail.com").mail-link.header__mail-link
+        svg.icon
+          use(xlink:href="img/vector/sprite.svg#mail")
+        span Kenkikaitori@gmail.com  
+  nav.nav
+    .container
+      ul.nav__list
+        li.nav__item
+          a(href="#").nav__link トップ
+        li.nav__item
+          a(href="#").nav__link 買い取りの流れ
+        li.nav__item
+          a(href="#").nav__link 会社概要
+        li.nav__item
+          a(href="#").nav__link よくある質問

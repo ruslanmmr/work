@@ -1,0 +1,248 @@
+/* ===== Header ===== */
+.header {
+  flex: 0 0 auto;
+  position: relative;
+  &__background {
+    z-index: 1;
+  }
+  &__container {
+    padding: 20px 0;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: linear-gradient(89.63deg, #DDFAFF 53.9%, rgba(221, 250, 255, 0) 64.36%);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+      z-index: 3;
+    }
+  }
+  &__center {
+    flex: 1 1 100%;
+    margin-top: 10px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    .button {
+      max-width: 260px;
+      &:not(:last-child) {
+        margin-right: 6px;
+      }
+    }
+  }
+  &__mail-link {
+    margin-left: 70px;
+    margin-top: 33px;
+  }
+  &__logo {
+    flex: 0 0 160px;
+    margin-right: 96px;
+  }
+  &__text {
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-left: 50px;
+    span {
+      display: inline-block;
+      margin: 0;
+      margin-left: 70px;
+      margin-top: 5px;
+    }
+  }
+}
+
+.logo {
+  width: 130px;
+  height: auto;
+}
+
+.nav {
+  background-color: $colorA;
+  &__list {
+    padding: 18px 0 8px 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -20px 0 -20px;
+  }
+  &__item {
+    padding: 0 20px 10px 20px;
+    flex: 1 1 25%;
+    position: relative;
+    text-align: center;
+    &:first-child {
+      text-align: left;
+      flex: 1 1 15%;
+    }
+    &:last-child {
+      text-align: right;
+      flex: 1 1 15%;
+    }
+    &:not(:last-child) {
+      &::after {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: #DDFAFF;
+        border-radius: 8px;
+        position: absolute;
+        right: -4px;
+        top: 10px;
+      }
+    }
+  }
+  &__link {
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    transition: color $trs1;
+    font-size: 1.125rem;
+    white-space: nowrap;
+    &:hover {
+      color: $colorB;
+    }
+  }
+}
+
+@media all and(max-width: 1199px) {
+  .header {
+    &__logo {
+      flex: 0 0 140px;
+      margin-right: 40px;
+    }
+    &__text {
+      margin-left: 0;
+      margin-left: -50px;
+      span {
+        margin-left: 50px;
+      }
+    }
+    &__mail-link {
+      margin-left: 40px;
+      margin-top: 25px;
+    }
+    &__buttons {
+      justify-content: center;
+      .button {
+        max-width: 190px;
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 991px) {
+  .header {
+    &__container {
+      padding: 20px 0;
+      .container {
+        flex-wrap: wrap;
+      }
+    }
+    &__mail-link {
+      margin: 15px 0 0 0; 
+    }
+    &__center {
+      flex: 1 1 calc(100% - 120px);
+      padding-left: 30px;
+    }
+    &__logo {
+      flex: 0 0 120px;
+      margin: 0;
+    }
+    &__text {
+      font-size: 1.25rem;
+    }
+  }
+  .nav {
+    &__link {
+      font-size: 1rem;
+    }
+    &__item {
+      &:last-child,
+      &:first-child {
+        flex: 1 1 20%;
+      }
+    }
+  }
+}
+
+@media all and(max-width: 767px) {
+  .nav {
+    &__list {
+      padding: 15px -15px 10px -15px;
+      justify-content: space-around;
+    }
+    &__item {
+      padding: 0 15px 10px 15px;
+      flex: 0 0 auto !important;
+      &:after {
+        display: none !important;
+      }
+    }
+  }
+}
+
+@media all and(max-width: 575px) {
+  .header {
+    &__logo {
+      width: 100px;
+      flex: 0 0 auto;
+      margin-bottom: 15px;
+    }
+    &__text {
+      display: none;
+    }
+    &__container {
+      padding: 15px 0;
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      &:after {
+        background: linear-gradient(90deg, rgb(221, 250, 255) 0%, rgba(221, 250, 255,0) 100%);
+      }
+    }
+    &__center {
+      padding: 0;
+      width: 100%;
+      flex: 0 0 auto;
+      margin: 0;
+    }
+    &__buttons {
+      margin: 0;
+    }
+  }
+
+  
+  .nav {
+    &__list {
+      padding: 15px -15px 10px -15px;
+    }
+    &__item {
+      padding: 0 15px 10px 15px;
+      flex: 0 0 auto;
+      &:after {
+        content: '';
+      }
+    }
+  }
+}

@@ -15,6 +15,10 @@
   text-transform: uppercase;
 }
 
+
+.color-text {
+  color: $color-text;
+}
 .color-accent-1 {
   color: $color-accent-1;
 }
@@ -23,9 +27,6 @@
 }
 .color-text-accent {
   color: $color-text-accent;
-}
-.color-text-muted {
-  color: $color-text-muted;
 }
 
 

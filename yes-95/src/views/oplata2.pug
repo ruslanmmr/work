@@ -1,0 +1,43 @@
+extends layout/layout
+block title
+  title Пополнение карты
+block content
+  main.main.main_has-nav
+    include blocks/header
+
+    section.section
+      .container
+        //item
+        h4.m-bottom-7 Оплатите, пожалуйста, членский взнос
+        form(action="#").form-replenishment.m-bottom-12
+          .form-replenishment__head
+            span.form-replenishment__head-label Единоразовый платёж/ За месяц членства
+            span.form-replenishment__head-value 3990 тг
+          .form-replenishment__input.m-bottom-6
+            .input.input_has-icon.input_credit-card
+              svg.icon
+                use(xlink:href='img/icons/icons-sprite.svg#creditcard')
+              input(type="text" placeholder="Номер карты")
+          .form-replenishment__input.form-replenishment__input-w50.m-bottom-6
+            .input.input_date
+              input(type="text" placeholder="ММ/ГГ")
+          .form-replenishment__input.form-replenishment__input-w50.m-bottom-6
+            .input.input_cvc
+              input(type="text" placeholder="CVC")
+          .form-replenishment__submit
+            .checkbox.m-bottom-10
+              input(type="checkbox" id='checkbox').checkbox__input
+              label(for='checkbox').checkbox__label Получить квитанцию
+            button(type='submit').button.button_style-1.m-bottom-3.form-replenishment__submit-button Оплатить
+            span.display-block.text-align-center.font-size-4 Нажимая на кнопку, вы соглашаетесь<br>
+              a(href="#info" data-popup).link.link_underline.color-text с условиями использования сервиса
+
+    
+        a(href="index-autorized.html").button-back
+          svg.icon
+            use(xlink:href='img/icons/icons-sprite.svg#arrow-left')
+          span Вернуться<br> назад
+
+
+  -var index = 1
+  include blocks/nav

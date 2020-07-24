@@ -1,24 +1,26 @@
 .input {
-  background: #FFFFFF;
-  box-shadow: 0px 30px 35px rgba(0, 60, 122, 0.05);
-  border-radius: 10px;
   width: 100%;
   position: relative;
   input {
+    background: #FFFFFF;
+    box-shadow: $shadow1;
+    border-radius: 10px;
     position: relative;
     z-index: 1;
     width: 100%;
     line-height: 22px;
     padding: 15px 1rem;
+    transition: box-shadow $trs1;
     &:-webkit-autofill {
       box-shadow: 0 0 0 100px #FFFFFF inset;
       -webkit-text-fill-color: $color-text-accent !important;
     }
     &::placeholder {
-      color: $color-text-muted;
+      color: $color-text;
       transition: opacity $trs1;
     }
     &:focus {
+      box-shadow: $shadow2;
       &::placeholder {
         opacity: 0;
       }
@@ -27,7 +29,7 @@
   &_has-icon {
     .icon {
       z-index: 2;
-      fill: $color-text-muted;
+      fill: $color-text;
       transition: fill $trs1;
       &:first-child {
         width: 1rem;
@@ -52,6 +54,17 @@
     }
     input {
       padding-left: 2.875rem;
+    }
+  }
+  &_credit-card {
+    .icon {
+      &:first-child {
+        width: 1.5rem;
+        height: 1rem;
+      }
+    }
+    input {
+      padding-left: 53px;
     }
   }
 }
@@ -79,7 +92,7 @@
       display: block;
       width: 16px;
       height: 16px;
-      border: 1px solid $color-text-muted;
+      border: 1px solid $color-text;
       border-radius: 4px;
       position: absolute;
       left: 0;

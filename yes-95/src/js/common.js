@@ -8,12 +8,28 @@ $wrapper.style.minHeight = `${document.documentElement.clientHeight}px`;
 window.addEventListener('resize', ()=>{
   $wrapper.style.minHeight = `${document.documentElement.clientHeight}px`;
 })
+
 //inputmask
-window.mask = Inputmask({
+window.phoneMask = Inputmask({
   mask: "+7 999 999-9999",
   showMaskOnHover: false,
   clearIncomplete: false
 }).mask('[name="phone"]');
+window.cardMask = Inputmask({
+  mask: "9999-9999-9999-9999",
+  showMaskOnHover: false,
+  clearIncomplete: false
+}).mask('.input_credit-card input');
+window.dateMask = Inputmask({
+  mask: "99/99",
+  showMaskOnHover: false,
+  clearIncomplete: false
+}).mask('.input_date input');
+window.cvcMask = Inputmask({
+  mask: "999",
+  showMaskOnHover: false,
+  clearIncomplete: false
+}).mask('.input_cvc input');
 
 
 
