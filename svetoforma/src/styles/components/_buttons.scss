@@ -4,4 +4,66 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0 10px;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none !important;
+  &_style-1 {
+    background-color: $colorA;
+    line-height: 42px;
+    border-radius: 2px;
+    text-align: center;
+    color: #fff !important;
+    transition: background-color $trs1;
+    &.touch,
+    &.hover {
+      background-color: $colorA-hover;
+    }
+  }
+  &_style-2 {
+    background-color: #9ea1a2;
+    line-height: 42px;
+    border-radius: 2px;
+    text-align: center;
+    color: #fff !important;
+    transition: background-color $trs1;
+    &.touch,
+    &.hover {
+      background-color: #888b8b;
+    }
+  }
+}
+
+.breadcrumbs {
+  margin: 0 0 25px 0;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    color: #787f82;
+    &:not(:last-child) {
+      &:after {
+        margin: 0 5px;
+        content: "/";
+      }
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    color: #393f42;
+    &.hover,
+    &.touch {
+      color: $colorA;
+    }
+  }
 }

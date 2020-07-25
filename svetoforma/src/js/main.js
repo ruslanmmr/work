@@ -3,14 +3,26 @@ lazySizes.cfg.init = false;
 $(document).ready(function(){
   hoverTouchEvents();
   toggle();
-  lazy();
   nav();
   searchToggle();
   mobileCatalogue();
   desktopCatalogue();
   header();
   up();
+  inputs.init();
+  cardSlider();
+  //обработать изображения после инициализации слайдеров
+  setTimeout(()=>{
+    lazy();
+  },500)
 })
+
+const brakepoints = {
+  xs: 576,
+  sm: 768,
+  md: 992,
+  lg: 1200
+}
 
 
 //hover/touch custom events
@@ -287,4 +299,51 @@ function up() {
     event.preventDefault();
     $("html, body").animate({scrollTop:0}, 300);
   })
+}
+
+let inputs = {
+  init: function() {
+
+    $(document).on('change input', 'input', function(event) {
+      let $target = $(this);
+      if($target.hasClass('num-only')) {
+        $target.val( $target.val().replace(/\D/, '') )
+      }
+    })
+    
+  }
+}
+
+function cardSlider() {
+  let $slider = $('.item-card-slider'),
+      $navslider = $('.item-card-nav-slider');
+      
+  if($slider.length) {
+
+    $slider.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: $navslider
+    });
+    $navslider.slick({
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      asNavFor: $slider,
+      focusOnSelect: true,
+      arrows: true,
+      nextArrow: '<button type="button" class="slider__arrow slider__next"><i class="fas fa-angle-right"></i></button>',
+      prevArrow: '<button type="button" class="slider__arrow slider__prev"><i class="fas fa-angle-left"></i></button>',
+      responsive: [
+        {
+          breakpoint: brakepoints.xs,
+          settings: {
+            slidesToShow: 3
+          }
+        }
+      ]
+    });
+
+  }
 }

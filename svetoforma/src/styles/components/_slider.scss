@@ -1,0 +1,90 @@
+/* Slider */
+
+.slick-slider {
+  position: relative;
+  display: block;
+  user-select: none;
+  touch-action: pan-y;
+  outline: none;
+  * {
+    outline: none;
+  }
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.slick-slide {
+  min-height: 1px;
+  &.dragging img {
+    pointer-events: none;
+  }
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $trs1, visibility $trs1;
+  &.slick-initialized {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    .slick-slide {
+      flex: 0 0 auto;
+    }
+  }
+  &__next,
+  &__prev {
+    display: block;
+    position: absolute;
+    width: 30px;
+    min-width: 30px;
+    line-height: 30px;
+    text-align: center;
+    z-index: 2;
+    transition: color $trs1;
+    color: #cdcecf;
+    font-size: 1.875rem;
+    top: 50%;
+    transform: translateY(-50%);
+    &.touch,
+    &.hover {
+      color: #393f42;
+    }
+  }
+  &__next {
+    right: 8px;
+  }
+  &__prev {
+    left: 8px;
+  }
+}
+
