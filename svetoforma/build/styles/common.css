@@ -5676,29 +5676,6 @@ table:not([class]) {
     .button_style-2.touch, .button_style-2.hover {
       background-color: #888b8b; }
 
-.breadcrumbs {
-  margin: 0 0 25px 0; }
-  .breadcrumbs__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap; }
-  .breadcrumbs__item {
-    color: #787f82; }
-    .breadcrumbs__item:not(:last-child):after {
-      margin: 0 5px;
-      content: "/"; }
-  .breadcrumbs__link {
-    text-decoration: none;
-    color: inherit;
-    line-height: 1;
-    display: inline-block;
-    text-decoration: none;
-    color: #393f42; }
-    .breadcrumbs__link.hover, .breadcrumbs__link.touch {
-      color: #fbba00; }
-
 /*========== Blocks ==========*/
 .background {
   position: absolute;
@@ -6086,6 +6063,29 @@ table:not([class]) {
   .contact-area__mail a.touch, .contact-area__mail a.hover {
     color: #fbba00; }
 
+.breadcrumbs {
+  margin: 0 0 25px 0; }
+  .breadcrumbs__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; }
+  .breadcrumbs__item {
+    color: #787f82; }
+    .breadcrumbs__item:not(:last-child):after {
+      margin: 0 5px;
+      content: "/"; }
+  .breadcrumbs__link {
+    text-decoration: none;
+    color: inherit;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    color: #393f42; }
+    .breadcrumbs__link.hover, .breadcrumbs__link.touch {
+      color: #fbba00; }
+
 @media (max-width: 1199.98px) {
   .blog-post__image {
     flex: 1 1 45%;
@@ -6137,6 +6137,8 @@ table:not([class]) {
     max-width: calc(33.33% + 1px); } }
 
 @media (max-width: 575.98px) {
+  .breadcrumbs {
+    margin: 0 0 20px 0; }
   .home-banner {
     margin-bottom: 20px; }
     .home-banner__container {
