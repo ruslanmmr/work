@@ -193,7 +193,9 @@ b, strong {
 /*========== Flatpickr ==========*/
 .flatpickr-calendar {
   background: transparent;
+  opacity: 0;
   text-align: center;
+  visibility: hidden;
   padding: 0;
   -webkit-animation: none;
           animation: none;
@@ -471,6 +473,20 @@ span.flatpickr-weekday {
   height: 0px;
   padding: 0;
   margin-bottom: 0; }
+
+@media screen and (max-width: 374px) {
+  .flatpickr-calendar {
+    width: 288px; }
+  .flatpickr-current-month .flatpickr-monthDropdown-months,
+  .flatpickr-current-month input.cur-year {
+    font-size: 1.125rem; }
+  .flatpickr-day {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 1rem; }
+    .flatpickr-day.today {
+      line-height: 30px; } }
 
 /*========== Buttons ==========*/
 .button {
@@ -924,7 +940,7 @@ span.flatpickr-weekday {
   width: 23px;
   height: 23px;
   position: relative; }
-  .js-calendar input {
+  .js-calendar__input {
     display: block;
     position: absolute;
     top: 0;
@@ -933,7 +949,7 @@ span.flatpickr-weekday {
     height: 100%;
     opacity: 0;
     z-index: 2; }
-    .js-calendar input.focus ~ .icon {
+    .js-calendar__input.focus ~ .icon {
       fill: #F9474E; }
   .js-calendar .icon {
     display: block;

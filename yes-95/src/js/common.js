@@ -174,7 +174,7 @@ function password() {
 
 function calendar() {
   //calendar
-  flatpickr('.js-calendar input', {
+  flatpickr('.js-calendar__input', {
     "locale": Russian,
     disableMobile: "true",
     dateFormat: "d.m.Y",

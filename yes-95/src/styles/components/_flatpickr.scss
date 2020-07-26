@@ -1,8 +1,8 @@
 .flatpickr-calendar {
   background: transparent;
-  //opacity: 0;
+  opacity: 0;
   text-align: center;
-  //visibility: hidden;
+  visibility: hidden;
   padding: 0;
   animation: none;
   direction: ltr;
@@ -282,4 +282,24 @@ span.flatpickr-weekday {
   height: 0px;
   padding: 0;
   margin-bottom: 0;
+}
+
+
+@media screen and (max-width:374px) {
+  .flatpickr-calendar {
+    width: 288px;
+  }
+  .flatpickr-current-month .flatpickr-monthDropdown-months,
+  .flatpickr-current-month input.cur-year {
+    font-size: 1.125rem;
+  }
+  .flatpickr-day {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 1rem;
+    &.today {
+      line-height: 30px;
+    }
+  }
 }
