@@ -11,6 +11,7 @@ $(document).ready(function () {
   header();
   up();
   inputs.init();
+  select.init();
   cardSlider(); //обработать изображения после инициализации слайдеров
 
   setTimeout(function () {
@@ -25,7 +26,8 @@ var brakepoints = {
 }; //hover/touch custom events
 
 function hoverTouchEvents() {
-  $(document).on('mouseenter mouseleave touchstart touchend mousedown mouseup', 'a,button,label,input,textarea,.js-touch-hover', function (event) {
+  var targets = 'a, button, label, input, textarea, .selectric, .selectric-items li, .js-touch-hover';
+  $(document).on('mouseenter mouseleave touchstart touchend mousedown mouseup', targets, function (event) {
     var $target = $(this); //mobile events
 
     if (!device.desktop()) {
@@ -182,18 +184,29 @@ function desktopCatalogue() {
       state = false;
   $lists.each(function (index) {
     var $list = $(this),
-        height = $list.height(),
-        linksHeight = 0,
-        $links = $(this).find('.desktop-catalogue__sub-link');
-    $links.each(function () {
-      var width = $(this).width();
-      linksHeight += $(this).outerHeight();
+        $links = $(this).find('.desktop-catalogue__sub-link'),
+        w = 210;
 
-      if (linksHeight > height) {
-        $list.width($list.outerWidth() + width + 15);
-        linksHeight = $(this).outerHeight();
-        console.log('ss');
-      }
+    function resize() {
+      $list.width(210);
+      var height = $list.height(),
+          linksHeight = 0,
+          rows = 1;
+      $links.each(function () {
+        linksHeight += $(this).outerHeight();
+
+        if (linksHeight > height) {
+          console.log(height);
+          rows++;
+          $list.width(w * rows);
+          linksHeight = $(this).outerHeight();
+        }
+      });
+    }
+
+    resize();
+    $(window).on('resize', function () {
+      resize();
     });
   });
   $toggle.add($nav).on('mouseenter mouseleave', function (event) {
@@ -323,4 +336,19 @@ function cardSlider() {
       }]
     });
   }
-}
+} //select
+
+
+var select = {
+  init: function init() {
+    this.items = $('.select');
+
+    if (this.items.length) {
+      this.items.selectric({
+        disableOnMobile: false,
+        nativeOnMobile: false,
+        arrowButtonMarkup: '<span class="icon"></span>'
+      });
+    }
+  }
+};

@@ -6,3 +6,152 @@
   background-color: #fff;
   color: #000000;
 }
+
+/*======================================
+  Selectric v1.13.0
+======================================*/
+.selectric {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  transition: border-color $trs1;
+  background-color: #fff;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  min-width: 190px;
+  &.touch,
+  &.hover {
+    border-color: $colorA;
+  }
+  .label {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+    cursor: pointer;
+    padding: 10px 32px 10px 10px;
+    margin: 0;
+    height: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #000;
+  }
+  .icon {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    display: block;
+    transition: transform $trs1;
+    pointer-events: none;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      border-width: 0 2px 2px 0;
+      width: 9px;
+      height: 9px;
+      border-style: solid;
+      border-color: $colorA;
+      transform: translate(12%, -5%) rotate(45deg);
+      transition: border-color $trs1;
+    }
+  }
+  &-wrapper {
+    position: relative;
+    height: 100%;
+  }
+  &-responsive {
+    width: 100%;
+  }
+  &-disabled {
+    color: #787f82;
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
+  }
+  &-hide-select {
+    position: relative;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    select {
+      position: absolute;
+      left: -100%;
+    }
+  }
+  &-input {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  &-temp-show {
+    position: absolute !important;
+    visibility: hidden !important;
+    display: block !important;
+  }
+  &-scroll {
+    height: 100%;
+    overflow: auto;
+    outline: none;
+  }
+  &-items {
+    position: absolute;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility $trs1, opacity $trs1;
+    background: #FFFFFF;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.07);
+    border: 1px solid $colorA;
+    border-top: none;
+    overflow: hidden;
+    outline: none; 
+    ul {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      outline: none;
+      li {
+        padding: 10px;
+        transition: color $trs1, background-color $trs1;
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        &:before {
+          display: none;
+        }
+        &.disabled {
+          opacity: 0.5;
+          pointer-events: none;
+        }
+        &.touch,
+        &.hover {
+          color: $colorA;
+        }
+        &.selected {
+          pointer-events: none;
+          cursor: default;
+          background-color: $colorA;
+          color: #fff;
+        }
+      }
+    }
+  }
+  &-open {
+    z-index: 9999;
+    .selectric-items {
+      opacity: 1;
+      visibility: visible;
+    }
+    .selectric {
+      border-color: $colorA;
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

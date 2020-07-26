@@ -10,6 +10,7 @@ $(document).ready(function(){
   header();
   up();
   inputs.init();
+  select.init();
   cardSlider();
   //обработать изображения после инициализации слайдеров
   setTimeout(()=>{
@@ -27,7 +28,8 @@ const brakepoints = {
 
 //hover/touch custom events
 function hoverTouchEvents() {
-  $(document).on('mouseenter mouseleave touchstart touchend mousedown mouseup', 'a,button,label,input,textarea,.js-touch-hover', function(event) {
+  let targets = 'a, button, label, input, textarea, .selectric, .selectric-items li, .js-touch-hover'
+  $(document).on('mouseenter mouseleave touchstart touchend mousedown mouseup', targets, function(event) {
     let $target = $(this);
 
     //mobile events
@@ -190,22 +192,31 @@ function desktopCatalogue() {
       $lists = $('.desktop-catalogue__sub-list'),
       state = false;
 
-
   $lists.each(function(index) {
     let $list = $(this),
-        height = $list.height(),
-        linksHeight = 0,
-        $links = $(this).find('.desktop-catalogue__sub-link');
+        $links = $(this).find('.desktop-catalogue__sub-link'),
+        w = 210;
 
+    function resize() {
+      $list.width(210);
+      let height = $list.height(),
+          linksHeight = 0,
+          rows = 1;
       $links.each(function() {
-        let width = $(this).width();
         linksHeight+=$(this).outerHeight();
         if(linksHeight>height) {
-          $list.width($list.outerWidth()+width+15);
+          console.log(height)
+          rows++;
+          $list.width(w*rows);
           linksHeight = $(this).outerHeight();
-          console.log('ss')
         }
       })
+    }
+
+    resize();
+    $(window).on('resize', function() {
+      resize();
+    })
   })
 
   $toggle.add($nav).on('mouseenter mouseleave', function(event) {
@@ -345,5 +356,19 @@ function cardSlider() {
       ]
     });
 
+  }
+}
+
+//select
+let select = {
+  init: function() {
+    this.items = $('.select');
+    if(this.items.length) {
+      this.items.selectric({
+        disableOnMobile: false,
+        nativeOnMobile: false,
+        arrowButtonMarkup: '<span class="icon"></span>'
+      });
+    }
   }
 }
