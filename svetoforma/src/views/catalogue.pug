@@ -2,11 +2,43 @@ extends layout/layout
 block content
   .aside-group.container
     .row
+      include blocks/filter
       main.main.col-lg-9
         include blocks/breadcrumbs
         section.section.catalogue 
-          h1.section__title Интерьерные светильники
-          
+          h1.section__title.catalogue__title Интерьерные светильники
+          .catalogue-categories
+            ul.catalogue-categories__list
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Бра    
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Декор интерьера 
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Люстры 
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Накладные светильники 
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Настольные лампы 
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Подвесные светильники 
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Подсветка для зеркал и витрин 
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Подсветка для картин 
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Светильники для детей
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Светильники на штанге    
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Специальные светильники для ванной
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Споты
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Торшеры
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Лампы Эдисона
+              li.catalogue-categories__item
+                a(href="#").catalogue-categories__link Подвесы
 
   //blog
   include blocks/blog

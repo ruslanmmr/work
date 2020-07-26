@@ -5572,7 +5572,7 @@ a {
   flex: 1 1 100%; }
 
 .main {
-  padding-top: 30px; }
+  padding-top: 35px; }
 
 .aside-group:not(:last-child) {
   margin-bottom: 60px; }
@@ -5582,12 +5582,15 @@ a {
   .section__title {
     font-weight: 600;
     display: block;
-    text-align: center;
     margin-bottom: 25px; }
 
 @media (max-width: 1199.98px) {
   .logo {
     width: 200px; } }
+
+@media (max-width: 767.98px) {
+  .main {
+    padding-top: 30px; } }
 
 /*========== Typography ==========*/
 h1, h2, h3, h4, h5, h6 {

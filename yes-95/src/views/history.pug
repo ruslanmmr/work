@@ -9,10 +9,11 @@ block content
       .container
         .history__head.m-bottom-10
           h1.m-bottom-0 История
-          a(href="javascript:void(0)").nav-btn 
-            span
-            span
-            span
+          label.js-calendar
+            input(type="text")
+            svg.icon
+              use(xlink:href='img/icons/icons-sprite.svg#calendar')
+
         .history__container
           //block
           .history-item

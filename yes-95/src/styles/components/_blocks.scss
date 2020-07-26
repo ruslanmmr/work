@@ -359,23 +359,36 @@
   }
 }
 
-.nav-btn {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  span {
-    width: 4px;
-    height: 4px;
-    border-radius: 4px;
-    background-color: $color-text;
-    transition: background-color $trs1;
+.js-calendar {
+  width: 23px;
+  height: 23px;
+  position: relative;
+  input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+    &.focus ~ .icon {
+      fill: $color-accent-1;
+    }
+  }
+  .icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: $color-text;
+    transition: fill $trs1;
+    position: relative;
+    zoom: 1;
   }
   &.touch,
   &.hover {
-    span {
-      background-color: $color-accent-1;
+    .icon {
+      fill: $color-accent-1;
     }
   }
 }
@@ -385,6 +398,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
 }
 
