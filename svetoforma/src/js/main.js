@@ -9,6 +9,9 @@ $(document).ready(function(){
   desktopCatalogue();
   header();
   up();
+  jsRange();
+  customScroll();
+  mobileFilter();
   inputs.init();
   select.init();
   cardSlider();
@@ -77,26 +80,21 @@ function lazy() {
 
 function toggle() {
   let $section = $('.toggle-section'),
-      $toggle = $('.toggle-section__head'),
-      flag;
+      $toggle = $('.toggle-section__head');
   
   $toggle.on('click', function() {
-    $(this).closest($section).toggleClass('active');
+    $(this).parent($section).toggleClass('active');
     check();
   })   
 
   function check() {
     $section.each(function(){
       if($(this).hasClass('active')) {
-        if(!flag) {
-          $(this).find('.toggle-section__content').show();
-        }
-        $(this).find('.toggle-section__content').slideDown(250);
+        $(this).children('.toggle-section__content').show();
       } else {
-        $(this).find('.toggle-section__content').slideUp(250);
+        $(this).children('.toggle-section__content').hide();
       }
     })
-    flag = true;
   }
   check();
 }
@@ -264,12 +262,12 @@ function header() {
       height,
       scroll;
 
-  check();
   padding();
+  check();
+
   $(window).scroll(function() {
     check();
   });
-
   $(window).resize(function() {
     padding();
   });
@@ -291,8 +289,6 @@ function header() {
   }
   
 }
-
-
 
 function up() {
   let $btn = $('.js-up');
@@ -370,5 +366,147 @@ let select = {
         arrowButtonMarkup: '<span class="icon"></span>'
       });
     }
+  }
+}
+
+function customScroll() {
+  let $containers = document.querySelectorAll('.scrollbar');
+  if(device.desktop()) {
+    $containers.forEach(($target)=>{
+      let $parent = $($target),
+          $content = $parent.find('.scrollbar__content'),
+          simpleBar = new SimpleBar($target);
+      
+      simpleBar.getScrollElement().addEventListener('scroll', function() {
+        gradientCheck();
+      });
+      gradientCheck();
+    
+      function gradientCheck() {
+        let scrollHeight = $content.outerHeight() - $parent.outerHeight(),
+            scroll = $parent.offset().top - $content.offset().top;
+
+        if(scroll > 0) {
+          $parent.removeClass('scrollbar_start')
+        } else {
+          $parent.addClass('scrollbar_start')
+        }
+        if(scroll < scrollHeight) {
+          $parent.removeClass('scrollbar_end')
+        } else {
+          $parent.addClass('scrollbar_end')
+        }
+      }
+
+    })
+  } else {
+    $containers.forEach(($this)=>{
+      $this.classList.add('scrollbar_mobile');
+    })
+  }
+}
+
+function jsRange() {
+  let $range = $('.filter-range');
+
+  $range.each(function() {
+    let $this = $(this),  
+        $rangeItem = $this.find('.js-range'),
+        $inputFrom = $this.find(".filter-range__input-from"),
+        $inputTo = $this.find(".filter-range__input-to"),
+        instance,
+        min = +$rangeItem.attr('data-min'),
+        max = +$rangeItem.attr('data-max'),
+        from, to;
+
+    $rangeItem.ionRangeSlider({
+      skin: "round",
+      type: "double",
+      min: min,
+      max: max,
+      from: min,
+      to: max,
+      onStart: updateInputs,
+      onChange: updateInputs,
+      onFinish: updateInputs
+    });
+    instance = $rangeItem.data("ionRangeSlider");
+    
+    function updateInputs (data) {
+        from = data.from;
+        to = data.to;
+    
+        $inputFrom.prop("value", from);
+        $inputTo.prop("value", to);
+    }
+    
+    $inputFrom.on("change", function () {
+        var val = $(this).prop("value");
+    
+        // validate
+        if (val < min) {
+            val = min;
+        } else if (val > to) {
+            val = to;
+        }
+    
+        instance.update({
+            from: val
+        });
+    
+        $(this).prop("value", val);
+    
+    });
+    
+    $inputTo.on("change", function () {
+        var val = $(this).prop("value");
+        //console.log(val, max)
+    
+        // validate
+        if (val < from) {
+          val = from;
+        } else if (val > max) {
+          val = max;
+        }
+    
+        instance.update({
+            to: val
+        });
+        $(this).prop("value", val);
+    });
+
+  })
+}
+
+function mobileFilter() {
+  let $open = $('.catalogue-filter-toggle'),
+      $close = $('.filter__close'),
+      $filter = $('.filter'),
+      state;
+
+  $open.on('click', function(event) {
+    event.preventDefault();
+    open();
+  })
+  $close.on('click', function(event) {
+    event.preventDefault();
+    close();
+  })
+  $(document).on('click touchstart', function(event) {
+    let $target = $(event.target);
+    if($target.closest($filter).length && !$target.closest('.filter__wrap').length && state) {
+      close();
+    }
+  })
+
+  function open() {
+    state=true;
+    scrollLock.disablePageScroll();
+    $filter.addClass('active');
+  }
+  function close() {
+    state=false;
+    scrollLock.enablePageScroll();
+    $filter.removeClass('active')
   }
 }

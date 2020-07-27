@@ -333,6 +333,12 @@
   }
 }
 
+.toggle-section {
+  & > .toggle-section__content {
+    display: none;
+  }
+}
+
 .same-items-section {
   &__title {
     text-align: left;

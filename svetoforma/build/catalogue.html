@@ -613,7 +613,490 @@
         <div class="aside-group container">
           <div class="row">
             <aside class="aside col-lg-3">
-              <div class="filter"></div>
+              <div class="filter">
+                <div class="filter__wrap">
+                  <div class="filter__head">
+                    <h6 class="filter__title">Фильтр</h6><a class="filter__close" href="javascript:void(0)"><span></span><span></span></a>
+                  </div>
+                  <div class="filter__container" data-scroll-lock-scrollable>
+                    <!--section-->
+                    <div class="filter-section">
+                      <div class="filter-section__head">
+                        <h6 class="filter-section__title">Тип товара</h6>
+                      </div>
+                      <div class="filter-section__content">
+                        <div class="filter-section__items">
+                          <select class="select">
+                            <option value="1">Товар</option>
+                            <option value="2">Товар</option>
+                            <option value="3" disabled>Товар</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <!--section-->
+                    <div class="filter-section">
+                      <div class="filter-section__head">
+                        <h6 class="filter-section__title">Вид товара</h6>
+                      </div>
+                      <div class="filter-section__content">
+                        <div class="filter-section__items">
+                          <select class="select">
+                            <option value="1">Подвесные</option>
+                            <option value="2">Товар</option>
+                            <option value="3" disabled>Товар</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <!--section-->
+                    <div class="filter-section">
+                      <div class="filter-section__head">
+                        <h6 class="filter-section__title">Цена</h6>
+                      </div>
+                      <div class="filter-section__content">
+                        <div class="filter-section__items">
+                          <div class="filter-range">
+                            <div class="filter-range__item">
+                              <input class="js-range" type="text" name="range-1" data-min="0" data-max="1000">
+                            </div>
+                            <div class="filter-range__inputs">
+                              <input class="input filter-range__input filter-range__input-from" type="number"><span></span>
+                              <input class="input filter-range__input filter-range__input-to" type="number">
+                            </div>
+                          </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="0">
+                                        <label class="checkbox__label" for="0"><span>Новинка</span><span class="checkbox__icon checkbox__icon_style-1"> <span>new</span></span>
+                                        </label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="1">
+                                        <label class="checkbox__label" for="1"><span>Эксклюзив</span><span class="checkbox__icon checkbox__icon_style-2"><i class="fas fa-crown"></i> </span>
+                                        </label>
+                                      </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--section-->
+                    <div class="filter-section toggle-section active"><a class="filter-section__head toggle-section__head" href="javascript:void(0);">
+                        <h6 class="filter-section__title">Размеры</h6><i class="fas fa-chevron-down"></i></a>
+                      <div class="filter-section__content toggle-section__content">
+                        <!--subsection-->
+                        <div class="filter-subsection toggle-section active"><a class="filter-subsection__head toggle-section__head" href="javascript:void(0);">
+                            <h6 class="filter-subsection__title">Высота, мм</h6><i class="fas fa-chevron-down"></i></a>
+                          <div class="filter-subsection__content toggle-section__content">
+                            <div class="filter-range">
+                              <div class="filter-range__item">
+                                <input class="js-range" type="text" name="range-1" data-min="0" data-max="1000">
+                              </div>
+                              <div class="filter-range__inputs">
+                                <input class="input filter-range__input filter-range__input-from" type="number"><span></span>
+                                <input class="input filter-range__input filter-range__input-to" type="number">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--subsection-->
+                        <div class="filter-subsection toggle-section"><a class="filter-subsection__head toggle-section__head" href="javascript:void(0);">
+                            <h6 class="filter-subsection__title">Диаметр, мм</h6><i class="fas fa-chevron-down"></i></a>
+                          <div class="filter-subsection__content toggle-section__content">
+                            <div class="filter-range">
+                              <div class="filter-range__item">
+                                <input class="js-range" type="text" name="range-1" data-min="0" data-max="1000">
+                              </div>
+                              <div class="filter-range__inputs">
+                                <input class="input filter-range__input filter-range__input-from" type="number"><span></span>
+                                <input class="input filter-range__input filter-range__input-to" type="number">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--subsection-->
+                        <div class="filter-subsection toggle-section"><a class="filter-subsection__head toggle-section__head" href="javascript:void(0);">
+                            <h6 class="filter-subsection__title">Длина, мм</h6><i class="fas fa-chevron-down"></i></a>
+                          <div class="filter-subsection__content toggle-section__content">
+                            <div class="filter-range">
+                              <div class="filter-range__item">
+                                <input class="js-range" type="text" name="range-1" data-min="0" data-max="1000">
+                              </div>
+                              <div class="filter-range__inputs">
+                                <input class="input filter-range__input filter-range__input-from" type="number"><span></span>
+                                <input class="input filter-range__input filter-range__input-to" type="number">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--subsection-->
+                        <div class="filter-subsection toggle-section"><a class="filter-subsection__head toggle-section__head" href="javascript:void(0);">
+                            <h6 class="filter-subsection__title">Длина цепи, мм</h6><i class="fas fa-chevron-down"></i></a>
+                          <div class="filter-subsection__content toggle-section__content">
+                            <div class="filter-range">
+                              <div class="filter-range__item">
+                                <input class="js-range" type="text" name="range-1" data-min="0" data-max="1000">
+                              </div>
+                              <div class="filter-range__inputs">
+                                <input class="input filter-range__input filter-range__input-from" type="number"><span></span>
+                                <input class="input filter-range__input filter-range__input-to" type="number">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--subsection-->
+                        <div class="filter-subsection toggle-section"><a class="filter-subsection__head toggle-section__head" href="javascript:void(0);">
+                            <h6 class="filter-subsection__title">Ширина, мм</h6><i class="fas fa-chevron-down"></i></a>
+                          <div class="filter-subsection__content toggle-section__content">
+                            <div class="filter-range">
+                              <div class="filter-range__item">
+                                <input class="js-range" type="text" name="range-1" data-min="0" data-max="1000">
+                              </div>
+                              <div class="filter-range__inputs">
+                                <input class="input filter-range__input filter-range__input-from" type="number"><span></span>
+                                <input class="input filter-range__input filter-range__input-to" type="number">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--section-->
+                    <div class="filter-section toggle-section active"><a class="filter-section__head toggle-section__head" href="javascript:void(0);">
+                        <h6 class="filter-section__title">Бренд </h6><i class="fas fa-chevron-down"></i></a>
+                      <div class="filter-section__content toggle-section__content scrollbar">
+                        <div class="filter-section__items scrollbar__content">
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="2">
+                                        <label class="checkbox__label" for="2">Mantra (Испания)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="3">
+                                        <label class="checkbox__label" for="3">MW-Light (Германия)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="4">
+                                        <label class="checkbox__label" for="4">Chiaro (Германия)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="5">
+                                        <label class="checkbox__label" for="5">ST-Luce (Китай)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="6">
+                                        <label class="checkbox__label" for="6">IDLamp (Италия)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="7">
+                                        <label class="checkbox__label" for="7">Citilux (Дания)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="8">
+                                        <label class="checkbox__label" for="8">Globo (Австрия)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="9">
+                                        <label class="checkbox__label" for="9">Odeon Light (Италия)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="10">
+                                        <label class="checkbox__label" for="10">Lightstar (Италия)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="11">
+                                        <label class="checkbox__label" for="11">Mantra (Испания)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="12">
+                                        <label class="checkbox__label" for="12">MW-Light (Германия)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="13">
+                                        <label class="checkbox__label" for="13">Chiaro (Германия)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="14">
+                                        <label class="checkbox__label" for="14">ST-Luce (Китай)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="15">
+                                        <label class="checkbox__label" for="15">IDLamp (Италия)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="16">
+                                        <label class="checkbox__label" for="16">Citilux (Дания)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="17">
+                                        <label class="checkbox__label" for="17">Globo (Австрия)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="18">
+                                        <label class="checkbox__label" for="18">Odeon Light (Италия)</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="19">
+                                        <label class="checkbox__label" for="19">Lightstar (Италия)</label>
+                                      </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--section-->
+                    <div class="filter-section toggle-section active"><a class="filter-section__head toggle-section__head" href="javascript:void(0);">
+                        <h6 class="filter-section__title">Страна производителя </h6><i class="fas fa-chevron-down"></i></a>
+                      <div class="filter-section__content toggle-section__content scrollbar">
+                        <div class="filter-section__items scrollbar__content">
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="20">
+                                        <label class="checkbox__label" for="20">Испания</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="21">
+                                        <label class="checkbox__label" for="21">Германия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="22">
+                                        <label class="checkbox__label" for="22">Китай</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="23">
+                                        <label class="checkbox__label" for="23">Италия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="24">
+                                        <label class="checkbox__label" for="24">Дания</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="25">
+                                        <label class="checkbox__label" for="25">Австрия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="26">
+                                        <label class="checkbox__label" for="26">Франция</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="27">
+                                        <label class="checkbox__label" for="27">Россия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="28">
+                                        <label class="checkbox__label" for="28">Венгрия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="29">
+                                        <label class="checkbox__label" for="29">Италия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="30">
+                                        <label class="checkbox__label" for="30">Дания</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="31">
+                                        <label class="checkbox__label" for="31">Австрия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="32">
+                                        <label class="checkbox__label" for="32">Франция</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="33">
+                                        <label class="checkbox__label" for="33">Россия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="34">
+                                        <label class="checkbox__label" for="34">Венгрия</label>
+                                      </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--section-->
+                    <div class="filter-section toggle-section active"><a class="filter-section__head toggle-section__head" href="javascript:void(0);">
+                        <h6 class="filter-section__title">Цвет плафонов </h6><i class="fas fa-chevron-down"></i></a>
+                      <div class="filter-section__content toggle-section__content scrollbar">
+                        <div class="filter-section__items scrollbar__content">
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="35">
+                                        <label class="checkbox__label" for="35"><span class="checkbox__color" style="background-color:#fff;"></span><span>Белый</span></label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="36">
+                                        <label class="checkbox__label" for="36"><span class="checkbox__color" style="background-image:url(&quot;img/sssss.png&quot;);"></span><span>Прозрачный</span></label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="37">
+                                        <label class="checkbox__label" for="37"><span class="checkbox__color" style="background-image:url(&quot;img/Shape.png&quot;);"></span><span>Неокрашенный</span></label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="38">
+                                        <label class="checkbox__label" for="38"><span class="checkbox__color" style="background-color:#cc7722;border-color:#cc7722;"></span><span>Хром</span></label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="39">
+                                        <label class="checkbox__label" for="39"><span class="checkbox__color" style="background-color:#ffd700;border-color:#ffd700;"></span><span>Золото</span></label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="40">
+                                        <label class="checkbox__label" for="40"><span class="checkbox__color" style="background-color:#cd7f32;border-color:#cd7f32;"></span><span>Бронза</span></label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="41">
+                                        <label class="checkbox__label" for="41"><span class="checkbox__color" style="background-color:#000000;border-color:#000000;"></span><span>Черный</span></label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="42">
+                                        <label class="checkbox__label" for="42"><span class="checkbox__color" style="background-color:#c0c0c0;border-color:#c0c0c0;"></span><span>Серебро</span></label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="43">
+                                        <label class="checkbox__label" for="43"><span class="checkbox__color" style="background-color:#a45620;border-color:#a45620;"></span><span>Коричневый</span></label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="44">
+                                        <label class="checkbox__label" for="44"><span class="checkbox__color" style="background-color:#cc7722;border-color:#cc7722;"></span><span>Хром</span></label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="45">
+                                        <label class="checkbox__label" for="45"><span class="checkbox__color" style="background-color:#ffd700;border-color:#ffd700;"></span><span>Золото</span></label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="46">
+                                        <label class="checkbox__label" for="46"><span class="checkbox__color" style="background-color:#cd7f32;border-color:#cd7f32;"></span><span>Бронза</span></label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="47">
+                                        <label class="checkbox__label" for="47"><span class="checkbox__color" style="background-color:#000000;border-color:#000000;"></span><span>Черный</span></label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="48">
+                                        <label class="checkbox__label" for="48"><span class="checkbox__color" style="background-color:#c0c0c0;border-color:#c0c0c0;"></span><span>Серебро</span></label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="49">
+                                        <label class="checkbox__label" for="49"><span class="checkbox__color" style="background-color:#a45620;border-color:#a45620;"></span><span>Коричневый</span></label>
+                                      </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--section-->
+                    <div class="filter-section toggle-section"><a class="filter-section__head toggle-section__head" href="javascript:void(0);">
+                        <h6 class="filter-section__title">Цвет арматуры </h6><i class="fas fa-chevron-down"></i></a>
+                      <div class="filter-section__content toggle-section__content scrollbar">
+                        <div class="filter-section__items scrollbar__content">
+                          <div class="radio filter-section__checkbox">
+                            <input class="radio__input" type="radio" id="ddfgdgd" name="dddd">
+                            <label class="radio__label" for="ddfgdgd">Значение</label>
+                          </div>
+                          <div class="radio filter-section__checkbox">
+                            <input class="radio__input" type="radio" id="dsdsfff" name="dddd">
+                            <label class="radio__label" for="dsdsfff">Значение</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--section-->
+                    <div class="filter-section toggle-section active"><a class="filter-section__head toggle-section__head" href="javascript:void(0);">
+                        <h6 class="filter-section__title">Тип цоколя лампы</h6><i class="fas fa-chevron-down"></i></a>
+                      <div class="filter-section__content toggle-section__content scrollbar">
+                        <div class="filter-section__items scrollbar__content">
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="50">
+                                        <label class="checkbox__label" for="50">E14</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="51">
+                                        <label class="checkbox__label" for="51">E27</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="52">
+                                        <label class="checkbox__label" for="52">G9</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="53">
+                                        <label class="checkbox__label" for="53">GU10</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="54">
+                                        <label class="checkbox__label" for="54">GY6</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="55">
+                                        <label class="checkbox__label" for="55">E14</label>
+                                      </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--section-->
+                    <div class="filter-section toggle-section"><a class="filter-section__head toggle-section__head" href="javascript:void(0);">
+                        <h6 class="filter-section__title">Наименование производителя</h6><i class="fas fa-chevron-down"></i></a>
+                      <div class="filter-section__content toggle-section__content scrollbar">
+                        <div class="filter-section__items scrollbar__content">
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="56">
+                                        <label class="checkbox__label" for="56">Испания</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="57">
+                                        <label class="checkbox__label" for="57">Германия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="58">
+                                        <label class="checkbox__label" for="58">Китай</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="59">
+                                        <label class="checkbox__label" for="59">Италия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="60">
+                                        <label class="checkbox__label" for="60">Дания</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="61">
+                                        <label class="checkbox__label" for="61">Австрия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="62">
+                                        <label class="checkbox__label" for="62">Франция</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="63">
+                                        <label class="checkbox__label" for="63">Россия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="64">
+                                        <label class="checkbox__label" for="64">Венгрия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="65">
+                                        <label class="checkbox__label" for="65">Италия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="66">
+                                        <label class="checkbox__label" for="66">Дания</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="67">
+                                        <label class="checkbox__label" for="67">Австрия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="68">
+                                        <label class="checkbox__label" for="68">Франция</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="69">
+                                        <label class="checkbox__label" for="69">Россия</label>
+                                      </div>
+                                      <div class="checkbox filter-section__checkbox">
+                                        <input class="checkbox__input" type="checkbox" id="70">
+                                        <label class="checkbox__label" for="70">Венгрия</label>
+                                      </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__bottom">
+                    <button class="button button_style-1 filter__button">Подобрать</button>
+                  </div>
+                </div>
+              </div>
             </aside>
             <main class="main col-lg-9">
               <div class="breadcrumbs">
@@ -908,8 +1391,12 @@
     <script src="js/libs/scroll-lock.min.js"></script>
     <!--slick-->
     <script src="js/libs/slick.min.js"></script>
-    <!--slick-->
+    <!--select-->
     <script src="js/libs/jquery.selectric.min.js"></script>
+    <!--scrollbar-->
+    <script src="js/libs/simplebar.min.js"></script>
+    <!--range-->
+    <script src="js/libs/ion.rangeSlider.min.js"></script>
     <!--main-->
     <script src="js/main.min.js"></script>
   </body>

@@ -89,8 +89,14 @@ a {
 /*========== Blocks ==========*/
 @import 'components/blocks';
 
+/*========== Range ==========*/
+@import 'components/range';
+
 /*========== Header ==========*/
 @import 'components/header';
+
+/*========== Footer ==========*/
+@import 'components/scrollbar';
 
 /*========== Footer ==========*/
 @import 'components/footer';
@@ -106,6 +112,9 @@ a {
 
 /*========== Aside ==========*/
 @import 'components/aside';
+
+/*========== Filter ==========*/
+@import 'components/filter';
 
 /*========== Catalogue ==========*/
 @import 'components/catalogue';
