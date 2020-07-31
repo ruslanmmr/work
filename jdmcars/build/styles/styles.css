@@ -482,7 +482,7 @@ textarea.input {
         .selectric-items ul li.disabled {
           opacity: 0.5;
           pointer-events: none; }
-        .selectric-items ul li.touch, .selectric-items ul li.hover {
+        .selectric-items ul li:hover {
           color: #1AA8C0; }
         .selectric-items ul li.selected {
           pointer-events: none;
