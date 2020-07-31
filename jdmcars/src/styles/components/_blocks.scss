@@ -110,7 +110,6 @@
   }
   &__container {
     position: relative;
-    padding: 54px 0 78px 0;
   }
   &__scene {
     position: absolute;
@@ -204,23 +203,14 @@
     }
   }
   &__title {
-    margin: auto;
-    color: #fff;
-    position: relative;
-    z-index: 2;
-    &_style-1 {
-      height: 198px;
-      width: 198px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background-color: #FF103E;
-      border-radius: 100%;
-    }
-    &_style-2 {
-
-    }
+    height: 198px;
+    width: 198px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #FF103E;
+    border-radius: 100%;
   }
 }
 
@@ -347,10 +337,8 @@
 @media all and(max-width: 575px) {
   .about {
     &__title {
-      &_style-1 {
-        width: 140px;
-        height: 140px;
-      }
+      width: 140px;
+      height: 140px;
     }
     &__scene {
       .icon:first-child {
