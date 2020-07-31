@@ -14,12 +14,22 @@
   margin-right: auto;
   margin-left: auto;
   position: relative;
+  z-index: 2;
 }
 .section {
   &__head {
     display: flex;
     justify-content: center;
     margin: 0 0 40px 0;
+  }
+  &__head-block {
+    height: 340px;
+    border-bottom: 16px solid #efcfca;
+    position: relative;
+    &-container {
+      height: 100%;
+      display: flex;
+    }
   }
   &__title {
     text-align: center;

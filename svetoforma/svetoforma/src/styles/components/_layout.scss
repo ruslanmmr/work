@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.content {
+  flex: 1 1 100%;
+  //padding-top: 196px;
+}
+.main {
+  padding-top: 35px;
+}
+.aside-group {
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+.section {
+  margin-bottom: 50px;
+  &__title {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 25px;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .logo {
+    width: 200px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .main {
+    padding-top: 30px;
+  }
+}

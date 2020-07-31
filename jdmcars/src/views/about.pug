@@ -1,0 +1,46 @@
+extends layout/layout
+block title
+  title About 1
+block content
+  section.section.about
+    .section__head-block
+      .about__scene
+        .container
+          .about__scene-container
+            svg.icon
+              use(xlink:href="img/vector/about-page-sprite.svg#Frame")
+            svg.icon
+              use(xlink:href="img/vector/about-page-sprite.svg#Frame (1)")
+            svg.icon
+              use(xlink:href="img/vector/about-page-sprite.svg#Frame (2)")
+            svg.icon
+              use(xlink:href="img/vector/about-page-sprite.svg#Frame (5)")
+            svg.icon
+              use(xlink:href="img/vector/about-page-sprite.svg#Frame (4)")
+            svg.icon
+              use(xlink:href="img/vector/about-page-sprite.svg#Frame (6)")
+            svg.icon
+              use(xlink:href="img/vector/about-page-sprite.svg#Frame (7)")
+            svg.icon.cloud
+              use(xlink:href="img/vector/about-page-sprite.svg#Frame (3)")
+            svg.icon.cloud
+              use(xlink:href="img/vector/about-page-sprite.svg#Frame (3)")
+            svg.icon.cloud
+              use(xlink:href="img/vector/about-page-sprite.svg#Frame (3)")
+            svg.icon.cloud
+              use(xlink:href="img/vector/about-page-sprite.svg#Frame (3)")
+      .container.section__head-block-container   
+        h1.about__title.about__title_style-1 会社情報
+    .section__container.about__container
+      img(src="img/bg.svg", alt="bg").about__bg
+      .container
+        -var style = 1
+        include blocks/about-list
+        +item('会社名', 'ジェイ　ディ　エム　株式会社')
+        +item('代表者', 'アリジャノフ　アミル')
+        +item('所在地', '〒930-0801、富山県富山市中島一丁目3番43号')
+        +item('FAX', '076-456-2333')
+        +item('メール アドレス', 'kenkikaitori@gmail.com')
+        +item('資本金', '5 000 000 円')
+        +item('取引先銀行', '三井住友銀行')
+        +item('古物取引許可番号', '富山県公安委員会　第')
