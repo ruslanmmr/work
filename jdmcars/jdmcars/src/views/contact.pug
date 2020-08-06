@@ -1,0 +1,99 @@
+extends layout/layout
+block title
+  title Contact us
+block content
+  section.section.contact
+    //head
+    .section-head.cover
+      img(data-src='img/9cee3fc8666317ff8c428e4e9aacdac9.jpeg', src='#', alt="image").lazyload
+      .section-head__container.container
+        h1.section-head__title 会社情報
+    //content
+    .section__container
+      .container
+        form(action="#").contact-form
+          .contact-form__section
+            //item
+            .contact-form__group
+              h6.contact-form__group-title お名前
+                span 【必須】
+              input(type="text" placeholder="晏伍 山本").input
+            //item
+            .contact-form__group
+              h6.contact-form__group-title ご連絡先電話番号
+                span 【必須】
+              input(type="text" placeholder="000-000-0000").input
+            //item
+            .contact-form__group
+              h6.contact-form__group-title メールアドレス
+              input(type="email" placeholder="example@example.com").input
+              span.contact-form__group-post-text ※メールアドレスのご入力が無い場合は、受付完了のご連絡が送付されません。
+            //item
+            .contact-form__group
+              h6.contact-form__group-title 都道府県
+                span 【必須】
+              select.select
+                option(value="1") value 1
+                option(value="2") value 2
+                option(value="3") value 3
+            //item
+            .contact-form__group
+              h6.contact-form__group-title メーカー
+                span 【必須】
+              input(type="text" placeholder="Lorem Ipsum").input
+            //item
+            .contact-form__group
+              h6.contact-form__group-title 型式
+                span 【必須】
+              input(type="text" placeholder="Lorem Ipsum").input
+            //item
+            .contact-form__group
+              h6.contact-form__group-title 車体番号 
+                span ※推奨
+              input(type="text" placeholder="Lorem Ipsum").input
+
+          
+          
+          
+          .contact-form__section
+            //item
+            .contact-form__group
+              h6.contact-form__group-title 稼働時間(メーター) 
+                span ※推奨
+              input(type="text" placeholder="Lorem Ipsum").input
+            //item
+            .contact-form__group
+              h6.contact-form__group-title 商品の状態 
+                span ※推奨
+              input(type="text" placeholder="Lorem Ipsum").input
+            //item
+            .contact-form__group
+              h6.contact-form__group-title 写真添付
+              .contact-form__group-items
+                .upload-item.contact-form__upload-item
+                  label.button.button_style-3.upload-item__button Attach File...
+                    input(type="file")
+                  span.upload-item__text No file selected.
+                .upload-item.contact-form__upload-item
+                  label.button.button_style-3.upload-item__button Attach File...
+                    input(type="file")
+                  span.upload-item__text No file selected.
+                .upload-item.contact-form__upload-item
+                  label.button.button_style-3.upload-item__button Attach File...
+                    input(type="file")
+                  span.upload-item__text No file selected.
+                .upload-item.contact-form__upload-item
+                  label.button.button_style-3.upload-item__button Attach File...
+                    input(type="file")
+                  span.upload-item__text No file selected.
+                .upload-item.contact-form__upload-item
+                  label.button.button_style-3.upload-item__button Attach File...
+                    input(type="file")
+                  span.upload-item__text No file selected.
+              span.contact-form__group-post-text ※対応形式：JPG/PDF/GIF/PNG、対応サイズ：10MBまで
+            //item
+            .contact-form__group
+              h6.contact-form__group-title その他詳細、<br> お問合わせ内容
+              textarea(type="text" placeholder="Lorem Ipsum").input.contact-form__textarea
+          .contact-form__button-section
+            button(type='submit').button.button_style-3.contact-form__button 古物取引許可番号 

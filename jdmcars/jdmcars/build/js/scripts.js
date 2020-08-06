@@ -14,6 +14,7 @@ document.addEventListener('lazybeforeunveil', function (e) {
 $(document).ready(function () {
   mainSlider();
   infoTabs();
+  select.init();
 }); //slider
 
 function mainSlider() {
@@ -56,4 +57,19 @@ function infoTabs() {
       $answer.stop().slideToggle(250);
     });
   });
-}
+} //select
+
+
+var select = {
+  init: function init() {
+    this.items = $('.select');
+
+    if (this.items.length) {
+      this.items.selectric({
+        disableOnMobile: false,
+        nativeOnMobile: false,
+        arrowButtonMarkup: '<svg class="icon" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 0L3.97 6L0 0H8Z"/></svg>'
+      });
+    }
+  }
+};
