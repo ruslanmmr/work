@@ -265,8 +265,7 @@ $trs2: .3s ease-out;
     bottom: 0;
     z-index: 2000;
     &__content {
-      height: auto;
-      flex: 1 1 100%;
+      height: calc(100% - 76px);
     }
     &__head {
       border-radius: 0;

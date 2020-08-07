@@ -241,8 +241,7 @@
       bottom: 0;
       z-index: 2000; }
       .chat-block__content {
-        height: auto;
-        flex: 1 1 100%; }
+        height: calc(100% - 76px); }
       .chat-block__head {
         border-radius: 0;
         padding-left: 60px; }
