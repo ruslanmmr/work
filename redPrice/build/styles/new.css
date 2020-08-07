@@ -179,9 +179,18 @@
       font-size: 12px;
       line-height: 15px;
       font-weight: normal;
-      color: #828282; }
+      color: #828282;
+      padding-left: 30px;
+      position: relative;
+      min-height: 20px;
+      display: flex;
+      align-items: center; }
       .chat-block__info-form .custom_checkbox span {
-        padding: 0px !important; }
+        padding: 0px !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0; }
   .chat-block__send-input, .chat-block__send-button {
     outline: none;
     display: block;

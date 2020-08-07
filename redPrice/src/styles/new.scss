@@ -206,8 +206,17 @@ $trs2: .3s ease-out;
       line-height: 15px;
       font-weight: normal;
       color: #828282;
+      padding-left: 30px;
+      position: relative;
+      min-height: 20px;
+      display: flex;
+      align-items: center;
       span {
         padding: 0px!important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
       }
     }
   }
