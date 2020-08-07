@@ -6,7 +6,7 @@ $trs1: .2s ease-out;
   left: 0;
   top: 50%;
   transform: translate(-100%, -50%);
-  z-index: 1000;
+  z-index: 3000;
   transition: transform $trs1;
   &__trigger {
     display: block;
