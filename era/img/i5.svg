@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="24px" height="27px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 24 26.612"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:black;stroke-width:2.80374;stroke-linecap:round}
+    .fil0 {fill:none;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_295220040">
+   <g>
+    <line id="_464098256" class="fil0 str0" x1="12" y1="1.40187" x2="12" y2= "13.306" />
+    <polyline id="_464098040" class="fil0 str0" points="8.55813,3.05579 12,6.76738 15.4421,3.05579 "/>
+   </g>
+   <g>
+    <line id="_464097680" class="fil0 str0" x1="22.3093" y1="7.35393" x2="12" y2= "13.306" />
+    <polyline id="_464117648" class="fil0 str0" points="19.156,5.20009 17.6624,10.0368 22.5981,11.162 "/>
+   </g>
+   <g>
+    <line id="_464110712" class="fil0 str0" x1="22.3093" y1="19.258" x2="12" y2= "13.306" />
+    <polyline id="_464111072" class="fil0 str0" points="22.5979,15.4503 17.6624,16.5751 19.1557,21.4121 "/>
+   </g>
+   <g>
+    <line id="_464110568" class="fil0 str0" x1="12" y1="25.2101" x2="12" y2= "13.306" />
+    <polyline id="_464110592" class="fil0 str0" points="15.4419,23.5562 12,19.8446 8.55785,23.5562 "/>
+   </g>
+   <g>
+    <line id="_464110664" class="fil0 str0" x1="1.69065" y1="7.35393" x2="12" y2= "13.306" />
+    <polyline id="_464111336" class="fil0 str0" points="4.84402,5.20009 6.33757,10.0368 1.40187,11.162 "/>
+   </g>
+   <g>
+    <line id="_464111360" class="fil0 str0" x1="1.69065" y1="19.258" x2="12" y2= "13.306" />
+    <polyline id="_464111432" class="fil0 str0" points="1.40215,15.4503 6.33757,16.5751 4.8443,21.4121 "/>
+   </g>
+  </g>
+ </g>
+</svg>
