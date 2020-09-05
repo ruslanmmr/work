@@ -1,0 +1,78 @@
+//normalize.css
+@import "../../node_modules/normalize.css/normalize.css";
+
+//bootsrtap (grid only)
+$container-max-widths: (      sm:540px, md:720px, lg:960px, xl:1180px, xxl:1320px);
+$grid-breakpoints:     (xs:0, sm:576px, md:768px, lg:992px, xl:1200px, xxl:1400px);
+$grid-gutter-width: 20px;
+$container-padding-x: 16px;
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+
+//variables
+@import "./components/variables";
+
+/*========== Basic ==========*/
+html {
+  font-size: 16px;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-rendering: optimizeSpeed;
+  color: $color-text;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  min-width: 320px;
+}
+* {
+  box-sizing: border-box;
+  min-height: 0;
+  min-width: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+  &:before,&:after {
+    box-sizing: border-box;
+  }
+}
+button, input, textarea {
+  outline: none;
+  display: block;
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+  appearance: none;
+  padding: 0;
+  border-radius: 0;
+}
+a, button, label {
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: pointer;
+}
+
+
+/*========== Layout ==========*/
+@import "./components/layout";
+
+/*========== Components ==========*/
+@import "./components/components";
+
+/*========== Typography ==========*/
+@import "./components/typography";
+
+/*========== Helpers ==========*/
+@import 'components/helpers';
+
+/*========== Buttons ==========*/
+@import 'components/buttons';
+
+/*========== Form ==========*/
+@import "./components/form";
+
+/*========== Blocks ==========*/
+@import 'components/blocks';
+
+/*========== Header ==========*/
+@import 'components/header';
+
+/*========== Footer ==========*/
+@import 'components/footer';

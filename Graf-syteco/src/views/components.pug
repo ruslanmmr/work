@@ -1,0 +1,100 @@
+extends layout/layout
+block title
+  title Text
+block content
+  section.section
+    .container
+      .row
+        .col-xxl-9.col-xl-10
+          h1 Фанера ФК 18х1525х1525 мм
+          h2 Основные характеристики на данный товар могут меняться в зависимости от партии товара
+          p Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве, для изготовления тары и упаковки, а также в мебельном производстве.
+          p В зависимости от внешнего вида <a href="#kddll">наружных слоев</a> на сорта: Е (элита), I, II, III, IV
+          h3 Заголовок группы
+          p Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.
+          figure
+            img(src="img/image.jpg", alt="image")
+            figcaption Подпись фотографии
+          p В зависимости от внешнего вида наружных слоев на сорта: 
+          ul  
+            li Сорт Е (элита)
+            li Сорт I, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.
+            li Сорт III
+          blockquote Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве. 
+          p В зависимости от внешнего вида наружных слоев на сорта: 
+          ol
+            li Сорт Е (элита)
+            li Сорт I, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.
+            li Сорт III
+            li Сорт IV
+          h3 Таблица №1. Технические характеристики
+          .table
+            table
+              tr
+                th Номер заказа
+                th Получение
+                th Сумма
+                th Оплачено
+              tr
+                td 28.03.2019
+                td Самовывоз
+                td 3&nbsp;256,00&nbsp;₽
+                td Да
+              tr
+                td 28.03.2019
+                td Самовывоз
+                td 50 136,00&nbsp;₽
+                td Нет
+              tr
+                td 28.03.2019
+                td Доставка
+                td 36,00&nbsp;₽
+                td Да
+              tr
+                td 28.03.2019
+                td Самовывоз
+                td 50&nbsp;136,00&nbsp;₽
+                td Нет
+              tr
+                td 28.03.2019
+                td Доставка
+                td 36,00&nbsp;₽
+                td Да
+          h3 Форма
+          .row
+            .col-lg-4.col-md-6.mb-md-2
+              .input.mb-3
+                input(type="text" name='name' placeholder="Имя*").input__element
+              .input.mb-3
+                input(type="text" name='phone' placeholder="Телефон*").input__element
+              .mb-3
+                select.select.select_style-1
+                  option(value="1") Цена (по возрастанию)
+                  option(value="2") Цена (по убыванию)
+                  option(value="3" selected) Наличие
+                  option(value="4" disabled) Популярность
+            .col-lg-8.col-md-6.mb-2.mb-md-0
+              .input.mb-3
+                textarea(name='message' placeholder="Комментарий").input__element.input__element_textarea
+            .col-xl-12
+              .row
+                .col-md-auto
+                  .checkbox.mb-3
+                    input(type="checkbox" id='1').checkbox__input
+                    label(for='1').checkbox__label Я согласен с чем-нибудь 
+                      a(href="#daa") хорошим
+                      |.
+                .col-md-auto
+                  .radio.mb-3
+                    input(type="radio" id='ddfgdgd' name='dddd').radio__input
+                    label(for='ddfgdgd').radio__label Значение 1
+                .col-md-auto
+                  .radio.mb-3
+                    input(type="radio" id='dsdsds' name='dddd').radio__input
+                    label(for='dsdsds').radio__label Значение 2
+          h3 Кнопки
+          .row
+            .col-sm-auto.mb-3.mb-sm-0
+              a(href="#").button.button_style-2 Перейти
+            .col-md-4.col-sm-6
+              button.button.button_style-1 Отправить
