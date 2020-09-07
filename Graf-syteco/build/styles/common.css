@@ -4119,7 +4119,7 @@ a:not([class]):hover {
   left: 0;
   top: 0;
   z-index: 110;
-  transition: box-shadow 0.15s ease-out, transform 0.3s ease-out, background-color 0.15s ease-out;
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
   border-bottom: 1px solid rgba(255, 255, 255, 0.125); }
   .header_fixed, .header_nav-active {
     top: 0;
