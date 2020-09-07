@@ -1,12 +1,14 @@
-$trs1: .25s ease-out;
-$trs2: .5s ease-out;
+$trs1: .15s ease-out;
+$trs2: .3s ease-out;
 $trs3: 1s ease-out;
 
-$shadow: 0px 2px 25px rgba(118, 118, 118, 0.15);
+$shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 
 $color-accent: #db211b;
 $color-accent-hover: #c11812;
 $color-accent-focus: #9c0f0a;
+
+$color-accent-2: #2e2e38;
 
 $color-link: $color-accent;
 $color-link-hover: $color-accent-hover;
@@ -14,7 +16,7 @@ $color-link-visited: #B46CB8;
 
 $color-text: #333333;
 $color-text-muted: #767676;
-$color-text-light: #BDBDBD;
+$color-text-light: #b6b6b6;
 
 $color-blockquote: #E5E5E5;
 $color-table-hover: #F5F5F5;

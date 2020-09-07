@@ -3,16 +3,27 @@ lazySizes.cfg.init = false;
 $(document).ready(function(){
   touchHoverEvents();
   lazy();
+  toggle();
   select.init();
+  header.init();
+  nav.init();
+  slider.init();
+
+  window.mask = Inputmask({
+    mask: "+7 999 999-9999",
+    showMaskOnHover: false,
+    clearIncomplete: false
+  }).mask('.input__phone');
 })
 
+window.isTouch = false;
 const brakepoints = {
-  sm: 576,
-  md: 768,
-  lg: 992,
-  xl: 1200,
-  xxl: 1400
+  xs: 576,
+  sm: 768,
+  md: 992,
+  lg: 1200
 }
+
 
 //hover/touch custom events
 function touchHoverEvents() {
@@ -24,9 +35,8 @@ function touchHoverEvents() {
   document.addEventListener('mouseup', event);
   document.addEventListener('contextmenu', event)
 
-  let targets = 'a[class], button, label, tr, .js-3d-object, .selectric-items li, .selectric .label',
-      touchEndDelay = 500, //ms    
-      touch, 
+  let targets = 'a[class], button, label, tr, .js-touch-hover, .selectric-items li, .selectric .label, .toggle-section__content',
+      touchEndDelay = 100, //ms 
       timeout;
 
   function event(event) {
@@ -47,70 +57,49 @@ function touchHoverEvents() {
       }
     }
 
-    if($targets[0]) {
-
-      //touchstart
-      if(event.type=='touchstart') {
-        touch = true;
-        for(let $target of document.querySelectorAll(targets)) {
-          $target.classList.remove('touch');
-        }
-        for(let $target of $targets) {
-          $target.classList.add('touch');
-          $target.dispatchEvent(new CustomEvent("customTouchstart",{
-            detail: { 
-              x: event.touches[0].clientX,
-              y: event.touches[0].clientY
-            }
-          }));
-        }
-      } 
-
-      //touchend
-      else if(event.type=='touchend') {
+    //touchstart
+    if(event.type=='touchstart') {
+      isTouch = true;
+      if(timeout) clearTimeout(timeout);
+      if($targets[0]) {
+        for(let $target of document.querySelectorAll(targets)) $target.classList.remove('touch');
+        for(let $target of $targets) $target.classList.add('touch');
+      }
+    } 
+    //touchend
+    else if(event.type=='touchend') {
+      timeout = setTimeout(() => {isTouch = false}, 500);
+      if($targets[0]) {
         setTimeout(()=>{
-          touch = false;
-          for(let $target of $targets) {
-            $target.classList.remove('touch');
-            $target.dispatchEvent(new CustomEvent("customTouchend"));
-          }
+          for(let $target of $targets) $target.classList.remove('touch');
         }, touchEndDelay)
-      } 
-
-      //context menu
-      else if(event.type=='contextmenu') {
+      }
+    } 
+    //context menu
+    else if(event.type=='contextmenu') {
+      isTouch = false;
+      if($targets[0]) {
         for(let $target of $targets) {
           $target.classList.remove('touch');
-          $target.dispatchEvent(new CustomEvent("customTouchend"));
         }
-        touch = false;
       }
-
-      //mouseenter
-      if(event.type=='mouseenter' && !touch && $targets[0]==event.target) {
-        $targets[0].classList.add('hover');
-        $targets[0].dispatchEvent(new CustomEvent("customMouseenter",{
-          detail: { 
-            x: event.clientX,
-            y: event.clientY
-          }
-        }));
-      }
-
-      //mouseleave
-      else if(event.type=='mouseleave' && !touch && $targets[0]==event.target) {
-        $targets[0].classList.remove('hover');
-        $targets[0].classList.remove('focus');
-        $targets[0].dispatchEvent(new CustomEvent("customMouseleave"));
-      }
-
-      //mousedown
-      if(event.type=='mousedown') {
-        $targets[0].classList.add('focus');
-      } else if(event.type=='mouseup') {
-        $targets[0].classList.remove('focus');
-      }
-
+    } 
+    //mouseenter
+    if(event.type=='mouseenter' && !isTouch && $targets[0] && $targets[0]==event.target) {
+      $targets[0].classList.add('hover');
+    }
+    //mouseleave
+    else if(event.type=='mouseleave' && !isTouch && $targets[0] && $targets[0]==event.target) {
+      $targets[0].classList.remove('hover');
+      $targets[0].classList.remove('focus');
+    }
+    //mousedown
+    if(event.type=='mousedown' && !isTouch && $targets[0]) {
+      $targets[0].classList.add('focus');
+    } 
+    //mouseup
+    else if(event.type=='mouseup' && !isTouch  && $targets[0]) {
+      $targets[0].classList.remove('focus');
     }
   }
 
@@ -144,3 +133,273 @@ let select = {
   }
 }
 
+
+let header = {
+  init: function() {
+    this.el = $('.header');
+    this.isVisible = true;
+    this.isFixed = false;
+    this.scroll = $(window).scrollTop();
+    this.scroll_last = this.scroll;
+
+    this.checkFixed();
+
+    $(window).scroll(function(){
+      //if(!nav.state) {
+        header.checkVisible();
+      //}
+    });
+  },
+  checkFixed: function() {
+    let h = $('.header').height();
+    //fix header
+    if (this.scroll>0 && !this.isFixed){
+      this.isFixed = true;
+      this.el.addClass('header_fixed');
+    } else if(this.scroll<=0 && this.isFixed) {
+      this.isFixed = false;
+      this.el.removeClass('header_fixed');
+    }
+  },
+  checkVisible: function() {
+    this.scroll = $(window).scrollTop();
+    this.checkFixed();
+    if (this.scroll>this.scroll_last && this.scroll>$(window).height()/2 && this.isVisible){
+      this.isVisible=false;
+      this.el.addClass('header_hidden');
+    } else if(this.scroll<this.scroll_last && !this.isVisible) {
+      this.isVisible=true;
+      this.el.removeClass('header_hidden');
+    }
+    this.scroll_last = this.scroll;
+  }
+}
+
+let nav = {
+  init: function() {
+    this.$nav = $('.mobile-nav');
+    this.$toggle = $('.nav-toggle');
+
+    this.$toggle.on('click', (event)=>{
+      event.preventDefault();
+      if(this.flag) {
+        this.close();
+      } else {
+        this.open();
+      }
+    })
+    
+    $(document).on('click touchstart', (event)=>{
+      if( $(event.target).closest('.mobile-nav__container').length==0 
+          && $(event.target).closest('.header').length==0
+          && $(event.target).closest(this.$toggle).length==0
+          && this.flag==true) {
+            this.close(); 
+      }
+    })
+
+  }, 
+
+  open: function() {
+    this.flag = true;
+    if(this.timout!==undefined) clearTimeout(this.timout)
+    scrollLock.disablePageScroll();
+    this.state = true;
+    $('header').addClass('header_nav-active')
+    this.$nav.addClass('active');
+    this.$toggle.addClass('active');
+  },
+
+  close: function() {
+    this.flag = false;
+    scrollLock.enablePageScroll();
+    $('header').removeClass('header_nav-active')
+    this.$nav.removeClass('active');
+    this.$toggle.removeClass('active');
+    this.timout = setTimeout(()=>{
+      this.state = false;
+    }, 250)
+  }
+}
+
+let slider = {
+  el: $('.slider'),
+  arrowPrev: '<svg class="icon" viewBox="0 0 10.5 18.1"><path stroke="none" d="M9,0l1.4,1.4L2.8,9l7.6,7.6L9,18.1L0,9C0,9,9.1,0,9,0z"></path></svg>',
+  arrowNext: '<svg class="icon" viewBox="0 0 10.5 18.1"><path stroke="none" d="M1.4,18.1L0,16.7l7.6-7.6L0,1.5L1.4,0l9,9.1C10.4,9.1,1.3,18.1,1.4,18.1z"></path></svg>',
+  init: function() {
+    slider.el.each(function () {
+      let slideCount = 1,
+          slideCountLg = 1,
+          slideCountMd = 1,
+          slideCountSm = 1,
+          slideCountXs = 1,
+          arrows = false,
+          dots = false,
+          centerMode = false,
+          autoplay = false,
+          nextArrow = `<button type="button" class="button button_style-1 slider__next">${slider.arrowNext}</button>`,
+          prevArrow = `<button type="button" class="button button_style-1 slider__prev">${slider.arrowPrev}</button>`;
+      
+      if($(this).is('.slider_dots')) {
+        dots=true;
+      } 
+      
+      if($(this).is('.slider_arrows')) {
+        arrows=true;
+      }
+
+      if($(this).is('.slider_grid')) {
+        arrows=true;
+        dots=true;
+      } 
+      
+      if($(this).is('.home-banner')) {
+        //autoplay = true;
+        nextArrow = `<button class="home-banner__arrow home-banner__next" aria-label="Next" type="button">${slider.arrowNext}</button>`;
+        prevArrow = `<button class="home-banner__arrow home-banner__prev" aria-label="Previous" type="button">${slider.arrowPrev}</button>`;
+        initSlider($(this));
+      }  
+      
+      else if($(this).is('.photo-slider')) {
+        initSlider($(this));
+      }
+      
+      else if($(this).is('.slider_3n')) {
+        slideCount = 3;
+        slideCountLg = 2;
+        slideCountMd = 2;
+        slideCountSm = 2;
+        slideCountXs = 1;
+        initSlider($(this));
+      } 
+
+      function initSlider($target) {
+        $target.slick({
+          rows: 0,
+          infinite: true,
+          dots: dots,
+          arrows: arrows,
+          nextArrow: nextArrow,
+          prevArrow: prevArrow,
+          speed: 500,
+          centerMode: centerMode,
+          slidesToShow: slideCount,
+          slidesToScroll: slideCount,
+          autoplay: autoplay,
+          autoplaySpeed: 5000,
+          responsive: [{
+              breakpoint: brakepoints.lg,
+              settings: {
+                slidesToShow: slideCountLg,
+                slidesToScroll: slideCountLg
+              }
+            },
+            {
+              breakpoint: brakepoints.md,
+              settings: {
+                slidesToShow: slideCountMd,
+                slidesToScroll: slideCountMd
+              }
+            },
+            {
+              breakpoint: brakepoints.sm,
+              settings: {
+                slidesToShow: slideCountSm,
+                slidesToScroll: slideCountSm
+              }
+            },
+            {
+              breakpoint: brakepoints.xs,
+              settings: {
+                slidesToShow: slideCountXs,
+                slidesToScroll: slideCountXs
+              }
+            }
+          ]
+        });
+      }
+    
+    });
+
+  }
+}
+
+
+function toggle() {
+  let $section = $('.toggle-section'),
+      speed = 250;
+
+  $section.each(function() {
+    let $this = $(this),
+        $toggle = $this.children('.toggle-section__trigger'),
+        $content = $this.children('.toggle-section__content'),
+        state = $this.hasClass('active') ? true : false,
+        initialized;
+
+    $toggle.on('click', function() {
+      state = !state ? true : false;
+      check();
+    })
+    
+    if($this.is('[data-hover]')) {
+      let timeout;
+      
+      $toggle.add($content).on('mouseenter', function(event){
+        if(!isTouch) {
+          if(timeout) clearTimeout(timeout);
+          state=true;
+          check();
+        }
+      })
+
+      $toggle.add($content).on('mouseleave', function(event){
+        if(!isTouch) {
+          let delay;
+          if($(this).is($toggle)) {
+            delay=500;
+          } else {
+            delay=100;
+          }
+          timeout = setTimeout(()=>{
+            state=false;
+            check();
+          }, delay)
+        }
+      })
+
+    }
+
+    if($this.is('[data-out-hide]') || $this.is('[data-hover]')) {
+      $(document).on('click touchstart', function(event) {
+        let $target = $(event.target);
+        if(!$target.closest($content).length && !$target.closest($toggle).length && state) {
+          state=false;
+          check();
+        }
+      })
+    } 
+
+    function check() {
+      if(state) {
+        $this.add($content).add($toggle).addClass('active');
+        if($this.is('[data-slide]')) {
+          $content.slideDown(speed);
+        }
+      } 
+      else {
+        $this.add($toggle).add($content).removeClass('active');
+        if($this.is('[data-slide]')) {
+          if(initialized) {
+            $content.stop().slideUp(speed);
+          } else {
+            $content.hide(0);
+          }
+        }
+      }
+    }
+
+    check();
+
+    initialized=true;
+  })
+}

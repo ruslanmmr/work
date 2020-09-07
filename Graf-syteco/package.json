@@ -31,7 +31,7 @@
 		"gulp-watch": "^5.0.1"
 	},
 	"dependencies": {
-		"bootstrap": "^5.0.0-alpha1",
+		"bootstrap": "^4.5.2",
 		"normalize.css": "^8.0.1"
 	}
 }

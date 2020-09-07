@@ -1,0 +1,152 @@
+/* Slider */
+
+.slick-slider {
+  position: relative;
+  display: block;
+  user-select: none;
+  touch-action: pan-y;
+  outline: none;
+  * {
+    outline: none;
+  }
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.slick-slide {
+  min-height: 1px;
+  &.dragging img {
+    pointer-events: none;
+  }
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+.slick-dots {
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  display: flex;
+  list-style: none;
+  li {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+  button {
+    width: 11px;
+    height: 11px;
+    border-radius: 11px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-accent;
+    display: block;
+    transition: border-color $trs1, background-color $trs1;
+  }
+  .slick-active {
+    button {
+      background-color: $color-accent;
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $trs1, visibility $trs1;
+  &.slick-initialized {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    .slick-slide {
+      flex: 0 0 auto;
+      margin-bottom: 0 !important;
+    }
+  }
+  &__next,
+  &__prev {
+    position: absolute;
+    width: 40px;
+    min-width: 40px;
+    padding: 0;
+    display: flex;
+    border-radius: 40px;
+    z-index: 2;
+    transition: opacity $trs1, border-color $trs1, background-color $trs1, color $trs1;
+    .icon {
+      margin: auto;
+      width: 14px;
+      height: 14px;
+    }
+  }
+  &_grid {
+    .slick-dots {
+      display: none !important;
+    }
+    .slider {
+      &__next,
+      &__prev {
+        top: -62px;
+      }
+      &__next {
+        right: 10px;
+      }
+      &__prev {
+        right: 60px;
+      }
+    }
+  }
+}
+
+
+
+@include media-breakpoint-down(xs) {
+  .slider {
+    &_grid {
+      margin: 0 -20px;
+      padding-bottom: 30px;
+      .slick-list {
+        padding: 0 10px;
+      }
+      .slick-dots {
+        display: flex !important;
+        bottom: 0;
+      }
+      .slider {
+        &__next,
+        &__prev {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

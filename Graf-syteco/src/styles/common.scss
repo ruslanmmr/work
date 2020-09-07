@@ -2,8 +2,8 @@
 @import "../../node_modules/normalize.css/normalize.css";
 
 //bootsrtap (grid only)
-$container-max-widths: (      sm:540px, md:720px, lg:960px, xl:1180px, xxl:1320px);
-$grid-breakpoints:     (xs:0, sm:576px, md:768px, lg:992px, xl:1200px, xxl:1400px);
+$container-max-widths: (      sm:540px, md:720px, lg:960px, xl:1180px);
+$grid-breakpoints:     (xs:0, sm:576px, md:768px, lg:992px, xl:1200px);
 $grid-gutter-width: 20px;
 $container-padding-x: 16px;
 @import "../../node_modules/bootstrap/scss/bootstrap-grid";
@@ -65,6 +65,9 @@ a, button, label {
 /*========== Buttons ==========*/
 @import 'components/buttons';
 
+/*========== Slider ==========*/
+@import 'components/slider';
+
 /*========== Form ==========*/
 @import "./components/form";
 
@@ -73,6 +76,9 @@ a, button, label {
 
 /*========== Header ==========*/
 @import 'components/header';
+
+/*========== Mobile-nav ==========*/
+@import 'components/mobile-nav';
 
 /*========== Footer ==========*/
 @import 'components/footer';

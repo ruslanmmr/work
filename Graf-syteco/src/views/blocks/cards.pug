@@ -1,0 +1,34 @@
+mixin news-card(type, classes) 
+  .news-preview-block(class=classes)
+    a(href="#").news-preview-block__container.image.image_cover
+      if type==1
+        img(data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Z-Control-Foto-InnoRollOut2020__FocusFillWzYwMCw0MDAsIngiLDBd.jpg", alt="image").lazyload
+      else
+        img(data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Grafik2-GSe-Visu-ReleaseJan2020__FocusFillWzYwMCw0MDAsInkiLDUwXQ.jpg", alt="image").lazyload
+      .news-preview-block__content
+        if type==1
+          span.news-preview-block__label Акция
+          h5.news-preview-block__title Mai 2020 - Neueste Graf-Syteco Entwicklung: Ziegler Z-Control
+          span.news-preview-block__text Für die neueste Generation des Z-Control hat Graf-Syteco die Module für Elektron...
+        else
+          span.news-preview-block__label Новость
+          h5.news-preview-block__title März 2020 - Neues GSe-VISU Release
+          span.news-preview-block__text Neben vielen Verbesserungen und Funktionserweiterungen beinhaltet die neue GSe V...
+
+mixin card(type, classes) 
+  .block-card(class=classes)
+    .block-card__container.image.image_cover.js-touch-hover
+      if type==1
+        img(data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Produkte/4_3-Zoll/GSt-A043_Frontal_GrauBack__FocusFillWzE5MjAsODAwLCJ5Iiw0MDRd.jpg", alt="image").lazyload
+      else
+        img(data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Z-Control-Foto-InnoRollOut2020__FocusFillWzE5MjAsODAwLCJ5IiwyNTZd.jpg", alt="image").lazyload
+      .block-card__content
+        if type==1
+          h3.block-card__title Neue HMI Serie 
+          p.block-card__text Mit dem optisch gebondeten 4,3" Display setzt das GSt-A043 neue Maßstäbe in der Umsetzung der Mensch-Maschine-Schnittstelle.
+          a(href="#").button.button_style-2.block-card__button 
+            span Подробнее
+        else
+          h3.block-card__title openSYDE Plugin
+          p.block-card__text Für die neueste Generation des Ziegler Z-Control hat Graf-Syteco die Module für Elektronik und Bedienung entwickelt.
+          a(href="#").button.button_style-2.block-card__button  Подробнее

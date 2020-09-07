@@ -1,2 +1,57 @@
 header.header
-  
+  .container
+    .header__container
+      .logo
+        a(href="/index.html").logo__link
+          include logo
+      nav.header__nav
+        ul.header__nav-list
+          li.header__nav-item
+            a(href="#").header__nav-link Решения
+          li.header__nav-item.toggle-section(data-hover)
+            a(href="#").header__nav-link.toggle-section__trigger Продукты
+              svg.icon
+                use(xlink:href="img/icons/icons-sprite.svg#arrow-down-bold")
+            .header-popup.toggle-section__content
+              ul.header-popup__list
+                li.header-popup__item
+                  a(href="#").header-popup__link Услуги
+                li.header-popup__item
+                  a(href="#").header-popup__link Сервис
+                li.header-popup__item
+                  a(href="#").header-popup__link Wer&nbsp;wir&nbsp;sind
+                li.header-popup__item
+                  a(href="#").header-popup__link О&nbsp;нас
+          li.header__nav-item
+            a(href="#").header__nav-link Програмное обеспечение
+          li.header__nav-item
+            a(href="#").header__nav-link Услуги
+          li.header__nav-item
+            a(href="#").header__nav-link.active Сервис
+          li.header__nav-item
+            a(href="#").header__nav-link О нас
+      .header__buttons
+        .header__buttons-item.toggle-section(data-hover)
+          a(href="javascript:void(0);").header-button.toggle-section__trigger
+            svg.icon.header-button__icon
+              use(xlink:href="img/icons/icons-sprite.svg#planet")
+            svg.icon.header-button__arrow
+              use(xlink:href="img/icons/icons-sprite.svg#arrow-down-bold")
+          .header-popup.toggle-section__content
+            ul.header-popup__list
+              li.header-popup__item
+                a(href="#").header-popup__link.active RU
+              li.header-popup__item
+                a(href="#").header-popup__link EN
+        
+        .header__buttons-item
+          a(href="#").header-button
+            svg.icon.header-button__icon
+              use(xlink:href="img/icons/icons-sprite.svg#user")
+        .header__buttons-item
+          a(href="javascript:void(0);").nav-toggle
+            span
+            span
+            span
+      
+

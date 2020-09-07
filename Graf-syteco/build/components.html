@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Text</title>
+    <title>Componentes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!--favicons-->
     <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
@@ -28,145 +28,300 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header"></header>
-      <main class="main">
-        <section class="section">
-          <div class="container">
-            <div class="row">
-              <div class="col-xxl-9 col-xl-10">
-                <h1>Фанера ФК 18х1525х1525 мм</h1>
-                <h2>Основные характеристики на данный товар могут меняться в зависимости от партии товара</h2>
-                <p>Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве, для изготовления тары и упаковки, а также в мебельном производстве.</p>
-                <p>В зависимости от внешнего вида <a href="#kddll">наружных слоев</a> на сорта: Е (элита), I, II, III, IV</p>
-                <h3>Заголовок группы</h3>
-                <p>Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.</p>
-                <figure><img src="img/image.jpg" alt="image">
-                  <figcaption>Подпись фотографии</figcaption>
-                </figure>
-                <p>В зависимости от внешнего вида наружных слоев на сорта: </p>
-                <ul> 
-                  <li>Сорт Е (элита)</li>
-                  <li>Сорт I, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.</li>
-                  <li>Сорт III</li>
+      <header class="header">
+        <div class="container">
+          <div class="header__container">
+            <div class="logo"><a class="logo__link" href="/index.html"><img class="logo__image" src="http://grafsyteco4.live.tietge.com/resources/themes/grafsyteco/images/logo_light.png" alt="logo"></a></div>
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Решения</a></li>
+                <li class="header__nav-item toggle-section" data-hover><a class="header__nav-link toggle-section__trigger" href="#">Продукты
+                    <svg class="icon">
+                      <use xlink:href="img/icons/icons-sprite.svg#arrow-down-bold"></use>
+                    </svg></a>
+                  <div class="header-popup toggle-section__content">
+                    <ul class="header-popup__list">
+                      <li class="header-popup__item"><a class="header-popup__link" href="#">Услуги</a></li>
+                      <li class="header-popup__item"><a class="header-popup__link" href="#">Сервис</a></li>
+                      <li class="header-popup__item"><a class="header-popup__link" href="#">Wer&nbsp;wir&nbsp;sind</a></li>
+                      <li class="header-popup__item"><a class="header-popup__link" href="#">О&nbsp;нас</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Програмное обеспечение</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Услуги</a></li>
+                <li class="header__nav-item"><a class="header__nav-link active" href="#">Сервис</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">О нас</a></li>
+              </ul>
+            </nav>
+            <div class="header__buttons">
+              <div class="header__buttons-item toggle-section" data-hover><a class="header-button toggle-section__trigger" href="javascript:void(0);">
+                  <svg class="icon header-button__icon">
+                    <use xlink:href="img/icons/icons-sprite.svg#planet"></use>
+                  </svg>
+                  <svg class="icon header-button__arrow">
+                    <use xlink:href="img/icons/icons-sprite.svg#arrow-down-bold"></use>
+                  </svg></a>
+                <div class="header-popup toggle-section__content">
+                  <ul class="header-popup__list">
+                    <li class="header-popup__item"><a class="header-popup__link active" href="#">RU</a></li>
+                    <li class="header-popup__item"><a class="header-popup__link" href="#">EN</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header__buttons-item"><a class="header-button" href="#">
+                  <svg class="icon header-button__icon">
+                    <use xlink:href="img/icons/icons-sprite.svg#user"></use>
+                  </svg></a></div>
+              <div class="header__buttons-item"><a class="nav-toggle" href="javascript:void(0);"><span></span><span></span><span></span></a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="mobile-nav">
+        <div class="mobile-nav__container container">
+          <button class="button button_style-2 mobile-nav__registration"> 
+            <svg class="icon header-button__icon">
+              <use xlink:href="img/icons/icons-sprite.svg#user"></use>
+            </svg><span>Вход / Регистрация</span>
+          </button>
+          <ul class="mobile-nav__list">
+            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Решения</a></li>
+            <li class="mobile-nav__item toggle-section" data-slide><a class="mobile-nav__link toggle-section__trigger" href="#">Продукты
+                <svg class="icon">
+                  <use xlink:href="img/icons/icons-sprite.svg#arrow-down-bold"></use>
+                </svg></a>
+              <div class="toggle-section__content">
+                <ul class="mobile-nav__sub-list">
+                  <li class="mobile-nav__sub-item"><a class="mobile-nav__sub-link" href="#">Услуги</a></li>
+                  <li class="mobile-nav__sub-item"><a class="mobile-nav__sub-link" href="#">Сервис</a></li>
+                  <li class="mobile-nav__sub-item"><a class="mobile-nav__sub-link" href="#">Wer wir sind</a></li>
+                  <li class="mobile-nav__sub-item"><a class="mobile-nav__sub-link" href="#">О нас</a></li>
                 </ul>
-                <blockquote>Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве. </blockquote>
-                <p>В зависимости от внешнего вида наружных слоев на сорта: </p>
-                <ol>
-                  <li>Сорт Е (элита)</li>
-                  <li>Сорт I, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.</li>
-                  <li>Сорт III</li>
-                  <li>Сорт IV</li>
-                </ol>
-                <h3>Таблица №1. Технические характеристики</h3>
-                <div class="table">
-                  <table>
-                    <tr>
-                      <th>Номер заказа</th>
-                      <th>Получение</th>
-                      <th>Сумма</th>
-                      <th>Оплачено</th>
-                    </tr>
-                    <tr>
-                      <td>28.03.2019</td>
-                      <td>Самовывоз</td>
-                      <td>3&nbsp;256,00&nbsp;₽</td>
-                      <td>Да</td>
-                    </tr>
-                    <tr>
-                      <td>28.03.2019</td>
-                      <td>Самовывоз</td>
-                      <td>50 136,00&nbsp;₽</td>
-                      <td>Нет</td>
-                    </tr>
-                    <tr>
-                      <td>28.03.2019</td>
-                      <td>Доставка</td>
-                      <td>36,00&nbsp;₽</td>
-                      <td>Да</td>
-                    </tr>
-                    <tr>
-                      <td>28.03.2019</td>
-                      <td>Самовывоз</td>
-                      <td>50&nbsp;136,00&nbsp;₽</td>
-                      <td>Нет</td>
-                    </tr>
-                    <tr>
-                      <td>28.03.2019</td>
-                      <td>Доставка</td>
-                      <td>36,00&nbsp;₽</td>
-                      <td>Да</td>
-                    </tr>
-                  </table>
-                </div>
-                <h3>Форма</h3>
-                <div class="row">
-                  <div class="col-lg-4 col-md-6 mb-md-2">
-                    <div class="input mb-3">
-                      <input class="input__element" type="text" name="name" placeholder="Имя*">
-                    </div>
-                    <div class="input mb-3">
-                      <input class="input__element" type="text" name="phone" placeholder="Телефон*">
-                    </div>
-                    <div class="mb-3">
-                      <select class="select select_style-1">
-                        <option value="1">Цена (по возрастанию)</option>
-                        <option value="2">Цена (по убыванию)</option>
-                        <option value="3" selected>Наличие</option>
-                        <option value="4" disabled>Популярность</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-lg-8 col-md-6 mb-2 mb-md-0">
-                    <div class="input mb-3">
-                      <textarea class="input__element input__element_textarea" name="message" placeholder="Комментарий"></textarea>
-                    </div>
-                  </div>
-                  <div class="col-xl-12">
-                    <div class="row">
-                      <div class="col-md-auto">
-                        <div class="checkbox mb-3">
-                          <input class="checkbox__input" type="checkbox" id="1">
-                          <label class="checkbox__label" for="1">Я согласен с чем-нибудь <a href="#daa">хорошим</a>.</label>
-                        </div>
+              </div>
+            </li>
+            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Програмное обеспечение</a></li>
+            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Услуги</a></li>
+            <li class="mobile-nav__item"><a class="mobile-nav__link active" href="#">Сервис</a></li>
+            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">О нас</a></li>
+          </ul>
+        </div>
+      </nav>
+      <main class="main">
+        <div class="breadcrumbs container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">главная</a></li>
+            <li class="breadcrumbs__item">целевая страница</li>
+          </ul>
+        </div>
+        <div class="content">
+          <section class="section">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-9">
+                  <h1>Фанера ФК 18х1525х1525 мм</h1>
+                  <h3>Форма</h3>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-md-2">
+                      <div class="input mb-3">
+                        <input class="input__element" type="text" name="name" placeholder="Имя*">
                       </div>
-                      <div class="col-md-auto">
-                        <div class="radio mb-3">
-                          <input class="radio__input" type="radio" id="ddfgdgd" name="dddd">
-                          <label class="radio__label" for="ddfgdgd">Значение 1</label>
-                        </div>
+                      <div class="input mb-3">
+                        <input class="input__element input__phone" type="text" name="phone" placeholder="Телефон*">
                       </div>
-                      <div class="col-md-auto">
-                        <div class="radio mb-3">
-                          <input class="radio__input" type="radio" id="dsdsds" name="dddd">
-                          <label class="radio__label" for="dsdsds">Значение 2</label>
+                      <div class="mb-3">
+                        <select class="select select_style-1">
+                          <option value="1">Цена (по возрастанию)</option>
+                          <option value="2">Цена (по убыванию)</option>
+                          <option value="3" selected>Наличие</option>
+                          <option value="4" disabled>Популярность</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-8 col-md-6 mb-2 mb-md-0">
+                      <div class="input mb-3">
+                        <textarea class="input__element input__element_textarea" name="message" placeholder="Комментарий"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-xl-12">
+                      <div class="row">
+                        <div class="col-md-auto">
+                          <div class="checkbox mb-3">
+                            <input class="checkbox__input" type="checkbox" id="1">
+                            <label class="checkbox__label" for="1">Я согласен с чем-нибудь <a href="#daa">хорошим</a>.</label>
+                          </div>
+                        </div>
+                        <div class="col-md-auto">
+                          <div class="radio mb-3">
+                            <input class="radio__input" type="radio" id="ddfgdgd" name="dddd">
+                            <label class="radio__label" for="ddfgdgd">Значение 1</label>
+                          </div>
+                        </div>
+                        <div class="col-md-auto">
+                          <div class="radio mb-3">
+                            <input class="radio__input" type="radio" id="dsdsds" name="dddd">
+                            <label class="radio__label" for="dsdsds">Значение 2</label>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <h3>Кнопки</h3>
-                <div class="row">
-                  <div class="col-sm-auto mb-3 mb-sm-0"><a class="button button_style-2" href="#">Перейти</a></div>
-                  <div class="col-md-4 col-sm-6">
-                    <button class="button button_style-1">Отправить</button>
+                  <h3>Кнопки</h3>
+                  <div class="row">
+                    <div class="col-sm-auto mb-3"><a class="button button_style-2" href="#">Перейти</a></div>
+                    <div class="col-md-4 col-sm-6 mb-3">
+                      <button class="button button_style-1 button_round"> 
+                        <svg class="icon header-button__icon">
+                          <use xlink:href="img/icons/icons-sprite.svg#user"></use>
+                        </svg><span>Отправить</span>
+                      </button>
+                    </div>
+                    <div class="col-sm-auto mb-3"><a class="button button_style-2" href="#"> <span>поделиться</span>
+                        <svg class="icon header-button__icon">
+                          <use xlink:href="img/icons/icons-sprite.svg#share"></use>
+                        </svg></a></div>
+                    <div class="col-md-4 col-sm-6 mb-3">
+                      <button class="button button_style-1">Отправить</button>
+                    </div>
                   </div>
+                  <h2>Основные характеристики на данный товар могут меняться в зависимости от партии товара</h2>
+                  <p>Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве, для изготовления тары и упаковки, а также в мебельном производстве.</p>
+                  <p>В зависимости от внешнего вида <a href="#kddll">наружных слоев</a> на сорта: Е (элита), I, II, III, IV</p>
+                  <h3>Таблица </h3>
+                  <div class="table">
+                    <table>
+                      <tr>
+                        <th>Номер заказа</th>
+                        <th>Получение</th>
+                        <th>Сумма</th>
+                        <th>Оплачено</th>
+                      </tr>
+                      <tr>
+                        <td>28.03.2019</td>
+                        <td>Самовывоз</td>
+                        <td>3&nbsp;256,00&nbsp;₽</td>
+                        <td>Да</td>
+                      </tr>
+                      <tr>
+                        <td>28.03.2019</td>
+                        <td>Самовывоз</td>
+                        <td>50 136,00&nbsp;₽</td>
+                        <td>Нет</td>
+                      </tr>
+                      <tr>
+                        <td>28.03.2019</td>
+                        <td>Доставка</td>
+                        <td>36,00&nbsp;₽</td>
+                        <td>Да</td>
+                      </tr>
+                      <tr>
+                        <td>28.03.2019</td>
+                        <td>Самовывоз</td>
+                        <td>50&nbsp;136,00&nbsp;₽</td>
+                        <td>Нет</td>
+                      </tr>
+                      <tr>
+                        <td>28.03.2019</td>
+                        <td>Доставка</td>
+                        <td>36,00&nbsp;₽</td>
+                        <td>Да</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <h3>Заголовок группы</h3>
+                  <p>Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.</p>
+                  <figure><img src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Blockmotive/GSFoto-Flipchart-4__FocusFillWzEwMjQsNzY4LCJ5IiwwXQ.jpg" alt="image">
+                    <figcaption>Подпись фотографии</figcaption>
+                  </figure>
+                  <p>В зависимости от внешнего вида наружных слоев на сорта: </p>
+                  <ul> 
+                    <li>Сорт Е (элита)</li>
+                    <li>Сорт I, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.</li>
+                    <li>Сорт III</li>
+                  </ul>
+                  <blockquote>Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве. </blockquote>
+                  <p>В зависимости от внешнего вида наружных слоев на сорта: </p>
+                  <ol>
+                    <li>Сорт Е (элита)</li>
+                    <li>Сорт I, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.</li>
+                    <li>Сорт III</li>
+                    <li>Сорт IV</li>
+                  </ol>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__container">
+            <div class="footer__section">
+              <div class="logo footer__logo"><a class="logo__link" href="index.html"><img class="logo__image" src="http://grafsyteco4.live.tietge.com/resources/themes/grafsyteco/images/logo_light.png" alt="logo"></a></div>
+              <ul class="footer__contact-list">
+                <li><a class="footer__phone link" href="tel:+79874433777">+49 (0)7464 98660</a></li>
+                <li>г. Москва, ул. Пушкина, д. Колотушкина, офис 10</li>
+                <li> <a class="link" href="mailto:email_adress@mail.ru">email_adress@mail.ru</a></li>
+              </ul>
+            </div>
+            <div class="footer__section footer__section-nav"><span class="footer__section-title">Каталог</span>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__link" href="#">Продукты</a></li>
+                <li class="footer__nav-item"><a class="footer__link" href="#">Решения</a></li>
+                <li class="footer__nav-item"><a class="footer__link" href="#">Услуги</a></li>
+                <li class="footer__nav-item"><a class="footer__link" href="#">Програмное обеспечение</a></li>
+                <li class="footer__nav-item"><a class="footer__link" href="#">Сервис</a></li>
+              </ul>
+            </div>
+            <div class="footer__section footer__section-nav"><span class="footer__section-title">Покупателям</span>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__link" href="#">О нас</a></li>
+                <li class="footer__nav-item"><a class="footer__link" href="#">Оплата</a></li>
+                <li class="footer__nav-item"><a class="footer__link" href="#">Личный кабинет</a></li>
+                <li class="footer__nav-item"><a class="footer__link" href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="footer__section footer__section-contact"><span class="footer__section-title">Оставайтесь на связи!</span>
+              <div class="footer__subscription"><span class="footer__subscription-head">Подписка: Новинки, скидки, предложения</span>
+                <form class="subscription" action="#">
+                  <div class="input subscription__input">
+                    <input class="input__element subscription__input-element" type="email" name="email" placeholder="E-mail">
+                  </div>
+                  <button class="button button_style-2 subscription__button" type="submit">Ок</button>
+                </form><a class="footer__link" href="#">Отписаться</a>
+              </div>
+              <ul class="footer-socials">
+                <li class="footer-socials__item"><a class="footer-socials__link" href="#">
+                    <svg class="icon">
+                      <use xlink:href="img/icons/socials-sprite.svg#facebook"></use>
+                    </svg></a></li>
+                <li class="footer-socials__item"><a class="footer-socials__link" href="#">
+                    <svg class="icon">
+                      <use xlink:href="img/icons/socials-sprite.svg#instagram"></use>
+                    </svg></a></li>
+                <li class="footer-socials__item"><a class="footer-socials__link" href="#">
+                    <svg class="icon">
+                      <use xlink:href="img/icons/socials-sprite.svg#twitter"></use>
+                    </svg></a></li>
+                <li class="footer-socials__item"><a class="footer-socials__link" href="#">
+                    <svg class="icon">
+                      <use xlink:href="img/icons/socials-sprite.svg#youtube"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <div class="footer__bottom"><span class="copy">&copy; 2019 Graf-Syteco. Все права<br> защищены</span><a class="footer__link" href="#">Политика обработки данных</a></div>
+          </div>
+        </div>
+      </footer>
     </div>
     <!--jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!--libs-->
-    <script src="js/libs/current-device.min.js"></script>
     <script src="js/libs/scroll-lock.min.js"></script>
     <script src="js/libs/lazysizes.min.js"></script>
     <script src="js/libs/jquery.selectric.min.js"></script>
-    <script src="js/libs/ion.rangeSlider.min.js"></script>
     <script src="js/libs/inputmask.min.js"></script>
+    <script src="js/libs/slick.min.js"></script>
     <!--common.js-->
     <script src="js/common.min.js"></script>
   </body>

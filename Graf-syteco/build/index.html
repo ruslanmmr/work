@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Template</title>
+    <title>Graf Syteco</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!--favicons-->
     <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
@@ -28,23 +28,366 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header"></header>
-      <main class="main">
+      <header class="header">
         <div class="container">
-          <h1>Заго</h1>
+          <div class="header__container">
+            <div class="logo"><a class="logo__link" href="/index.html"><img class="logo__image" src="http://grafsyteco4.live.tietge.com/resources/themes/grafsyteco/images/logo_light.png" alt="logo"></a></div>
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Решения</a></li>
+                <li class="header__nav-item toggle-section" data-hover><a class="header__nav-link toggle-section__trigger" href="#">Продукты
+                    <svg class="icon">
+                      <use xlink:href="img/icons/icons-sprite.svg#arrow-down-bold"></use>
+                    </svg></a>
+                  <div class="header-popup toggle-section__content">
+                    <ul class="header-popup__list">
+                      <li class="header-popup__item"><a class="header-popup__link" href="#">Услуги</a></li>
+                      <li class="header-popup__item"><a class="header-popup__link" href="#">Сервис</a></li>
+                      <li class="header-popup__item"><a class="header-popup__link" href="#">Wer&nbsp;wir&nbsp;sind</a></li>
+                      <li class="header-popup__item"><a class="header-popup__link" href="#">О&nbsp;нас</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Програмное обеспечение</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Услуги</a></li>
+                <li class="header__nav-item"><a class="header__nav-link active" href="#">Сервис</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">О нас</a></li>
+              </ul>
+            </nav>
+            <div class="header__buttons">
+              <div class="header__buttons-item toggle-section" data-hover><a class="header-button toggle-section__trigger" href="javascript:void(0);">
+                  <svg class="icon header-button__icon">
+                    <use xlink:href="img/icons/icons-sprite.svg#planet"></use>
+                  </svg>
+                  <svg class="icon header-button__arrow">
+                    <use xlink:href="img/icons/icons-sprite.svg#arrow-down-bold"></use>
+                  </svg></a>
+                <div class="header-popup toggle-section__content">
+                  <ul class="header-popup__list">
+                    <li class="header-popup__item"><a class="header-popup__link active" href="#">RU</a></li>
+                    <li class="header-popup__item"><a class="header-popup__link" href="#">EN</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header__buttons-item"><a class="header-button" href="#">
+                  <svg class="icon header-button__icon">
+                    <use xlink:href="img/icons/icons-sprite.svg#user"></use>
+                  </svg></a></div>
+              <div class="header__buttons-item"><a class="nav-toggle" href="javascript:void(0);"><span></span><span></span><span></span></a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="mobile-nav">
+        <div class="mobile-nav__container container">
+          <button class="button button_style-2 mobile-nav__registration"> 
+            <svg class="icon header-button__icon">
+              <use xlink:href="img/icons/icons-sprite.svg#user"></use>
+            </svg><span>Вход / Регистрация</span>
+          </button>
+          <ul class="mobile-nav__list">
+            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Решения</a></li>
+            <li class="mobile-nav__item toggle-section" data-slide><a class="mobile-nav__link toggle-section__trigger" href="#">Продукты
+                <svg class="icon">
+                  <use xlink:href="img/icons/icons-sprite.svg#arrow-down-bold"></use>
+                </svg></a>
+              <div class="toggle-section__content">
+                <ul class="mobile-nav__sub-list">
+                  <li class="mobile-nav__sub-item"><a class="mobile-nav__sub-link" href="#">Услуги</a></li>
+                  <li class="mobile-nav__sub-item"><a class="mobile-nav__sub-link" href="#">Сервис</a></li>
+                  <li class="mobile-nav__sub-item"><a class="mobile-nav__sub-link" href="#">Wer wir sind</a></li>
+                  <li class="mobile-nav__sub-item"><a class="mobile-nav__sub-link" href="#">О нас</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Програмное обеспечение</a></li>
+            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Услуги</a></li>
+            <li class="mobile-nav__item"><a class="mobile-nav__link active" href="#">Сервис</a></li>
+            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">О нас</a></li>
+          </ul>
+        </div>
+      </nav>
+      <main class="main">
+        <div class="content">
+          <div class="home-banner section slider slider_arrows slider_dots">
+                        <div class="home-banner__slide">
+                          <div class="background lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Bannermotive/GSFirma_abend_rechtsoben__FocusFillWzE5MjAsODAwLCJ5IiwyMzVd.jpg"></div>
+                          <div class="container home-banner__container">
+                            <div class="home-banner__content">
+                              <h3 class="home-banner__sub-title">GRAF-SYTECO</h3>
+                              <h2 class="home-banner__title">GSt-A043</h2>
+                              <p class="home-banner__text">Mithilfe unserer bewährten 5 Stufen zum Erfolg begleiten wir Sie von der Idee bis zum Einsatz Ihres fertigen Produktes.</p>
+                              <div class="row">
+                                <div class="col-auto"><a class="button button_style-2 home-banner__button" href="#">Кнопка перехода</a></div>
+                              </div>
+                            </div>
+                            <div class="image image_contain home-banner__image"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Produkte/10_4-Zoll/MCQ6-freigestellt__FitMaxWzYwMCw0MDBd.png" alt="image"></div>
+                          </div>
+                        </div>
+                        <div class="home-banner__slide">
+                          <div class="background lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Bannermotive/Gebaeude-Front__FocusFillWzE5MjAsODAwLCJ5IiwwXQ.jpg"></div>
+                          <div class="container home-banner__container">
+                            <div class="home-banner__content">
+                              <h3 class="home-banner__sub-title">NEUE HMI SERIE</h3>
+                              <h2 class="home-banner__title">GSt-A043</h2>
+                              <p class="home-banner__text">Bedien- und Steuerungslösungen, Systemintegration und Ingenieursdienstleistungen</p>
+                              <div class="row">
+                                <div class="col-auto"><a class="button button_style-2 home-banner__button" href="#">Кнопка перехода</a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+          </div>
+          <section class="section">
+            <div class="container">
+              <h2 class="section__title">Непонятные блоки</h2>
+              <div class="slider slider_grid row slider_3n">
+                                <div class="block-card col">
+                                  <div class="block-card__container image image_cover js-touch-hover"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Produkte/4_3-Zoll/GSt-A043_Frontal_GrauBack__FocusFillWzE5MjAsODAwLCJ5Iiw0MDRd.jpg" alt="image">
+                                    <div class="block-card__content">
+                                      <h3 class="block-card__title">Neue HMI Serie </h3>
+                                      <p class="block-card__text">Mit dem optisch gebondeten 4,3" Display setzt das GSt-A043 neue Maßstäbe in der Umsetzung der Mensch-Maschine-Schnittstelle.</p><a class="button button_style-2 block-card__button" href="#"> <span>Подробнее</span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="block-card col">
+                                  <div class="block-card__container image image_cover js-touch-hover"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Z-Control-Foto-InnoRollOut2020__FocusFillWzE5MjAsODAwLCJ5IiwyNTZd.jpg" alt="image">
+                                    <div class="block-card__content">
+                                      <h3 class="block-card__title">openSYDE Plugin</h3>
+                                      <p class="block-card__text">Für die neueste Generation des Ziegler Z-Control hat Graf-Syteco die Module für Elektronik und Bedienung entwickelt.</p><a class="button button_style-2 block-card__button" href="#"> Подробнее</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="block-card col">
+                                  <div class="block-card__container image image_cover js-touch-hover"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Produkte/4_3-Zoll/GSt-A043_Frontal_GrauBack__FocusFillWzE5MjAsODAwLCJ5Iiw0MDRd.jpg" alt="image">
+                                    <div class="block-card__content">
+                                      <h3 class="block-card__title">Neue HMI Serie </h3>
+                                      <p class="block-card__text">Mit dem optisch gebondeten 4,3" Display setzt das GSt-A043 neue Maßstäbe in der Umsetzung der Mensch-Maschine-Schnittstelle.</p><a class="button button_style-2 block-card__button" href="#"> <span>Подробнее</span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="block-card col">
+                                  <div class="block-card__container image image_cover js-touch-hover"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Z-Control-Foto-InnoRollOut2020__FocusFillWzE5MjAsODAwLCJ5IiwyNTZd.jpg" alt="image">
+                                    <div class="block-card__content">
+                                      <h3 class="block-card__title">openSYDE Plugin</h3>
+                                      <p class="block-card__text">Für die neueste Generation des Ziegler Z-Control hat Graf-Syteco die Module für Elektronik und Bedienung entwickelt.</p><a class="button button_style-2 block-card__button" href="#"> Подробнее</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="block-card col">
+                                  <div class="block-card__container image image_cover js-touch-hover"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Produkte/4_3-Zoll/GSt-A043_Frontal_GrauBack__FocusFillWzE5MjAsODAwLCJ5Iiw0MDRd.jpg" alt="image">
+                                    <div class="block-card__content">
+                                      <h3 class="block-card__title">Neue HMI Serie </h3>
+                                      <p class="block-card__text">Mit dem optisch gebondeten 4,3" Display setzt das GSt-A043 neue Maßstäbe in der Umsetzung der Mensch-Maschine-Schnittstelle.</p><a class="button button_style-2 block-card__button" href="#"> <span>Подробнее</span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="block-card col">
+                                  <div class="block-card__container image image_cover js-touch-hover"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Z-Control-Foto-InnoRollOut2020__FocusFillWzE5MjAsODAwLCJ5IiwyNTZd.jpg" alt="image">
+                                    <div class="block-card__content">
+                                      <h3 class="block-card__title">openSYDE Plugin</h3>
+                                      <p class="block-card__text">Für die neueste Generation des Ziegler Z-Control hat Graf-Syteco die Module für Elektronik und Bedienung entwickelt.</p><a class="button button_style-2 block-card__button" href="#"> Подробнее</a>
+                                    </div>
+                                  </div>
+                                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section about">
+            <div class="container">
+              <div class="row mb-4">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                  <h2>Graf-Syteco Systemintegration</h2>
+                  <p>Unser umfangreiches Produkt- und Dienstleistungsspektrum bildet die Basis unseres modularen Systemintegrationskonzeptes, welches die Steuerung komplexer Anlagen und Maschinen ermöglicht. </p>
+                  <p>Ihr Vorteil: Sie erhalten eine schnelle, individuelle und kostengünstige Lösung aus dezentralen Komponenten.</p>
+                  <h2>Weltweite Wartung - schnell, effektiv und sicher</h2>
+                  <p> 
+                    <mark> <strong>Graf-Syteco unterstützt Sie beim technischen Support Ihrer Kunden</strong></mark>
+                  </p>
+                  <p>Wir stellen Ihnen verschiedene Fernwartungspakete zur Verfügung – je nach Systemstatus über Mobilfunknetz, Internet oder LAN – bestehend aus GSM-Modem, Antenne, Kabel, Software und Aktivierungscode für unseren Fernwartungsserver. Jedes Paket ermöglicht Ihnen die Wartung der eingesetzten Bedien- und Steuergeräte – schnell, effektiv und sicher. Sie können sofort reagieren und auf die Maschine Ihres Kunden zugreifen – dank Internet an jedem Ort weltweit. Das spart dem Anwender wertvolle Zeit, denn ein Vor-Ort-Einsatz, damit verbundene Wartungskosten plus Ausfallzeiten entfallen.<br>Die Sicherheit beim Fernzugriff übers Internet gewährleisten wir über unseren Fernwartungsserver.</p>
+                </div>
+                <div class="col-lg-5"><img src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Blockmotive/GSFoto-Flipchart-4__FocusFillWzEwMjQsNzY4LCJ5IiwwXQ.jpg" alt="image"></div>
+              </div>
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6"><a class="button button_style-2 section__more-button button_round" href="#">Кнопка</a></div>
+              </div>
+            </div>
+          </section>
+          <section class="section news-preview-section">
+            <div class="container">
+              <h2 class="section__title">Новости и акции</h2>
+              <div class="slider slider_grid slider_3n row">
+                                <div class="news-preview-block col"><a class="news-preview-block__container image image_cover" href="#"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Z-Control-Foto-InnoRollOut2020__FocusFillWzYwMCw0MDAsIngiLDBd.jpg" alt="image">
+                                    <div class="news-preview-block__content"><span class="news-preview-block__label">Акция</span>
+                                      <h5 class="news-preview-block__title">Mai 2020 - Neueste Graf-Syteco Entwicklung: Ziegler Z-Control</h5><span class="news-preview-block__text">Für die neueste Generation des Z-Control hat Graf-Syteco die Module für Elektron...</span>
+                                    </div></a></div>
+                                <div class="news-preview-block col"><a class="news-preview-block__container image image_cover" href="#"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Grafik2-GSe-Visu-ReleaseJan2020__FocusFillWzYwMCw0MDAsInkiLDUwXQ.jpg" alt="image">
+                                    <div class="news-preview-block__content"><span class="news-preview-block__label">Новость</span>
+                                      <h5 class="news-preview-block__title">März 2020 - Neues GSe-VISU Release</h5><span class="news-preview-block__text">Neben vielen Verbesserungen und Funktionserweiterungen beinhaltet die neue GSe V...</span>
+                                    </div></a></div>
+                                <div class="news-preview-block col"><a class="news-preview-block__container image image_cover" href="#"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Z-Control-Foto-InnoRollOut2020__FocusFillWzYwMCw0MDAsIngiLDBd.jpg" alt="image">
+                                    <div class="news-preview-block__content"><span class="news-preview-block__label">Акция</span>
+                                      <h5 class="news-preview-block__title">Mai 2020 - Neueste Graf-Syteco Entwicklung: Ziegler Z-Control</h5><span class="news-preview-block__text">Für die neueste Generation des Z-Control hat Graf-Syteco die Module für Elektron...</span>
+                                    </div></a></div>
+                                <div class="news-preview-block col"><a class="news-preview-block__container image image_cover" href="#"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Grafik2-GSe-Visu-ReleaseJan2020__FocusFillWzYwMCw0MDAsInkiLDUwXQ.jpg" alt="image">
+                                    <div class="news-preview-block__content"><span class="news-preview-block__label">Новость</span>
+                                      <h5 class="news-preview-block__title">März 2020 - Neues GSe-VISU Release</h5><span class="news-preview-block__text">Neben vielen Verbesserungen und Funktionserweiterungen beinhaltet die neue GSe V...</span>
+                                    </div></a></div>
+                                <div class="news-preview-block col"><a class="news-preview-block__container image image_cover" href="#"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Z-Control-Foto-InnoRollOut2020__FocusFillWzYwMCw0MDAsIngiLDBd.jpg" alt="image">
+                                    <div class="news-preview-block__content"><span class="news-preview-block__label">Акция</span>
+                                      <h5 class="news-preview-block__title">Mai 2020 - Neueste Graf-Syteco Entwicklung: Ziegler Z-Control</h5><span class="news-preview-block__text">Für die neueste Generation des Z-Control hat Graf-Syteco die Module für Elektron...</span>
+                                    </div></a></div>
+                                <div class="news-preview-block col"><a class="news-preview-block__container image image_cover" href="#"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Grafik2-GSe-Visu-ReleaseJan2020__FocusFillWzYwMCw0MDAsInkiLDUwXQ.jpg" alt="image">
+                                    <div class="news-preview-block__content"><span class="news-preview-block__label">Новость</span>
+                                      <h5 class="news-preview-block__title">März 2020 - Neues GSe-VISU Release</h5><span class="news-preview-block__text">Neben vielen Verbesserungen und Funktionserweiterungen beinhaltet die neue GSe V...</span>
+                                    </div></a></div>
+              </div>
+              <div class="section__more row">
+                <div class="col-lg-3 col-md-4 col-sm-6"><a class="button button_style-1 section__more-button" href="#">Смотреть все новости</a></div>
+              </div>
+            </div>
+          </section>
+          <section class="section news-preview-section">
+            <div class="container">
+              <h2 class="section__title">Новости и акции 
+                <mark>без слайдера</mark>
+              </h2>
+              <div class="row grid">
+                                <div class="news-preview-block grid__block col-xl-4 col-sm-6"><a class="news-preview-block__container image image_cover" href="#"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Z-Control-Foto-InnoRollOut2020__FocusFillWzYwMCw0MDAsIngiLDBd.jpg" alt="image">
+                                    <div class="news-preview-block__content"><span class="news-preview-block__label">Акция</span>
+                                      <h5 class="news-preview-block__title">Mai 2020 - Neueste Graf-Syteco Entwicklung: Ziegler Z-Control</h5><span class="news-preview-block__text">Für die neueste Generation des Z-Control hat Graf-Syteco die Module für Elektron...</span>
+                                    </div></a></div>
+                                <div class="block-card grid__block col-xl-4 col-sm-6">
+                                  <div class="block-card__container image image_cover js-touch-hover"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Produkte/4_3-Zoll/GSt-A043_Frontal_GrauBack__FocusFillWzE5MjAsODAwLCJ5Iiw0MDRd.jpg" alt="image">
+                                    <div class="block-card__content">
+                                      <h3 class="block-card__title">Neue HMI Serie </h3>
+                                      <p class="block-card__text">Mit dem optisch gebondeten 4,3" Display setzt das GSt-A043 neue Maßstäbe in der Umsetzung der Mensch-Maschine-Schnittstelle.</p><a class="button button_style-2 block-card__button" href="#"> <span>Подробнее</span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="news-preview-block grid__block col-xl-4 col-sm-6"><a class="news-preview-block__container image image_cover" href="#"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Z-Control-Foto-InnoRollOut2020__FocusFillWzYwMCw0MDAsIngiLDBd.jpg" alt="image">
+                                    <div class="news-preview-block__content"><span class="news-preview-block__label">Акция</span>
+                                      <h5 class="news-preview-block__title">Mai 2020 - Neueste Graf-Syteco Entwicklung: Ziegler Z-Control</h5><span class="news-preview-block__text">Für die neueste Generation des Z-Control hat Graf-Syteco die Module für Elektron...</span>
+                                    </div></a></div>
+                                <div class="block-card grid__block col-xl-4 col-sm-6">
+                                  <div class="block-card__container image image_cover js-touch-hover"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Produkte/4_3-Zoll/GSt-A043_Frontal_GrauBack__FocusFillWzE5MjAsODAwLCJ5Iiw0MDRd.jpg" alt="image">
+                                    <div class="block-card__content">
+                                      <h3 class="block-card__title">Neue HMI Serie </h3>
+                                      <p class="block-card__text">Mit dem optisch gebondeten 4,3" Display setzt das GSt-A043 neue Maßstäbe in der Umsetzung der Mensch-Maschine-Schnittstelle.</p><a class="button button_style-2 block-card__button" href="#"> <span>Подробнее</span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="news-preview-block grid__block col-xl-4 col-sm-6"><a class="news-preview-block__container image image_cover" href="#"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/News-Presse/Z-Control-Foto-InnoRollOut2020__FocusFillWzYwMCw0MDAsIngiLDBd.jpg" alt="image">
+                                    <div class="news-preview-block__content"><span class="news-preview-block__label">Акция</span>
+                                      <h5 class="news-preview-block__title">Mai 2020 - Neueste Graf-Syteco Entwicklung: Ziegler Z-Control</h5><span class="news-preview-block__text">Für die neueste Generation des Z-Control hat Graf-Syteco die Module für Elektron...</span>
+                                    </div></a></div>
+                                <div class="block-card grid__block col-xl-4 col-sm-6">
+                                  <div class="block-card__container image image_cover js-touch-hover"><img class="lazyload" data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Produkte/4_3-Zoll/GSt-A043_Frontal_GrauBack__FocusFillWzE5MjAsODAwLCJ5Iiw0MDRd.jpg" alt="image">
+                                    <div class="block-card__content">
+                                      <h3 class="block-card__title">Neue HMI Serie </h3>
+                                      <p class="block-card__text">Mit dem optisch gebondeten 4,3" Display setzt das GSt-A043 neue Maßstäbe in der Umsetzung der Mensch-Maschine-Schnittstelle.</p><a class="button button_style-2 block-card__button" href="#"> <span>Подробнее</span></a>
+                                    </div>
+                                  </div>
+                                </div>
+              </div>
+              <div class="section__more row">
+                <div class="col-lg-3 col-md-4 col-sm-6"><a class="button button_style-1 section__more-button" href="#">Смотреть все новости</a></div>
+              </div>
+            </div>
+          </section>
+          <section class="section section-articles">
+            <div class="container">
+              <h2 class="section__title">Полезные статьи</h2>
+              <div class="row grid">
+                <div class="article-preview grid__block col-lg-3 col-sm-6">
+                  <div class="article-preview__container"><span class="article-preview__label">Статья</span><a class="article-preview__text" href="#">Für die neueste Generation des Z-Control hat Graf-Syteco die Module für Elektron...</a><span class="article-preview__date">22.02.2007</span></div>
+                </div>
+                <div class="article-preview grid__block col-lg-3 col-sm-6">
+                  <div class="article-preview__container"><span class="article-preview__label">Статья</span><a class="article-preview__text" href="#">Neben vielen Verbesserungen und beinhaltet die neue GSe V...</a><span class="article-preview__date">22.02.2007</span></div>
+                </div>
+                <div class="article-preview grid__block col-lg-3 col-sm-6">
+                  <div class="article-preview__container"><span class="article-preview__label">Статья</span><a class="article-preview__text" href="#">Für die neueste Generation des Z-Control hat Graf-Syteco die Module für Elektron...</a><span class="article-preview__date">22.02.2007</span></div>
+                </div>
+                <div class="article-preview grid__block col-lg-3 col-sm-6">
+                  <div class="article-preview__container"><span class="article-preview__label">Статья</span><a class="article-preview__text" href="#">Neben vielen Verbesserungen und Funktionserweiterungen des Z-Control hat Graf-Syteco beinhaltet die neue GSe V...</a><span class="article-preview__date">22.02.2007</span></div>
+                </div>
+              </div>
+              <div class="section__more row">
+                <div class="col-lg-3 col-md-4 col-sm-6"><a class="button button_style-1 section__more-button" href="#">Смотреть все статьи</a></div>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__container">
+            <div class="footer__section">
+              <div class="logo footer__logo"><a class="logo__link" href="index.html"><img class="logo__image" src="http://grafsyteco4.live.tietge.com/resources/themes/grafsyteco/images/logo_light.png" alt="logo"></a></div>
+              <ul class="footer__contact-list">
+                <li><a class="footer__phone link" href="tel:+79874433777">+49 (0)7464 98660</a></li>
+                <li>г. Москва, ул. Пушкина, д. Колотушкина, офис 10</li>
+                <li> <a class="link" href="mailto:email_adress@mail.ru">email_adress@mail.ru</a></li>
+              </ul>
+            </div>
+            <div class="footer__section footer__section-nav"><span class="footer__section-title">Каталог</span>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__link" href="#">Продукты</a></li>
+                <li class="footer__nav-item"><a class="footer__link" href="#">Решения</a></li>
+                <li class="footer__nav-item"><a class="footer__link" href="#">Услуги</a></li>
+                <li class="footer__nav-item"><a class="footer__link" href="#">Програмное обеспечение</a></li>
+                <li class="footer__nav-item"><a class="footer__link" href="#">Сервис</a></li>
+              </ul>
+            </div>
+            <div class="footer__section footer__section-nav"><span class="footer__section-title">Покупателям</span>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__link" href="#">О нас</a></li>
+                <li class="footer__nav-item"><a class="footer__link" href="#">Оплата</a></li>
+                <li class="footer__nav-item"><a class="footer__link" href="#">Личный кабинет</a></li>
+                <li class="footer__nav-item"><a class="footer__link" href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="footer__section footer__section-contact"><span class="footer__section-title">Оставайтесь на связи!</span>
+              <div class="footer__subscription"><span class="footer__subscription-head">Подписка: Новинки, скидки, предложения</span>
+                <form class="subscription" action="#">
+                  <div class="input subscription__input">
+                    <input class="input__element subscription__input-element" type="email" name="email" placeholder="E-mail">
+                  </div>
+                  <button class="button button_style-2 subscription__button" type="submit">Ок</button>
+                </form><a class="footer__link" href="#">Отписаться</a>
+              </div>
+              <ul class="footer-socials">
+                <li class="footer-socials__item"><a class="footer-socials__link" href="#">
+                    <svg class="icon">
+                      <use xlink:href="img/icons/socials-sprite.svg#facebook"></use>
+                    </svg></a></li>
+                <li class="footer-socials__item"><a class="footer-socials__link" href="#">
+                    <svg class="icon">
+                      <use xlink:href="img/icons/socials-sprite.svg#instagram"></use>
+                    </svg></a></li>
+                <li class="footer-socials__item"><a class="footer-socials__link" href="#">
+                    <svg class="icon">
+                      <use xlink:href="img/icons/socials-sprite.svg#twitter"></use>
+                    </svg></a></li>
+                <li class="footer-socials__item"><a class="footer-socials__link" href="#">
+                    <svg class="icon">
+                      <use xlink:href="img/icons/socials-sprite.svg#youtube"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <div class="footer__bottom"><span class="copy">&copy; 2019 Graf-Syteco. Все права<br> защищены</span><a class="footer__link" href="#">Политика обработки данных</a></div>
+          </div>
+        </div>
+      </footer>
     </div>
     <!--jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!--libs-->
-    <script src="js/libs/current-device.min.js"></script>
     <script src="js/libs/scroll-lock.min.js"></script>
     <script src="js/libs/lazysizes.min.js"></script>
     <script src="js/libs/jquery.selectric.min.js"></script>
-    <script src="js/libs/ion.rangeSlider.min.js"></script>
     <script src="js/libs/inputmask.min.js"></script>
+    <script src="js/libs/slick.min.js"></script>
     <!--common.js-->
     <script src="js/common.min.js"></script>
   </body>

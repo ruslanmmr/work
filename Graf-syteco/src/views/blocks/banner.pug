@@ -1,0 +1,18 @@
+.home-banner.section.slider.slider_arrows.slider_dots
+  mixin slide(title, type, text, bg)
+    .home-banner__slide
+      .background.lazyload(data-src=bg)
+      .container.home-banner__container
+        .home-banner__content
+          h3.home-banner__sub-title=title
+          h2.home-banner__title GSt-A043
+          p.home-banner__text=text
+          .row
+            .col-auto
+              a(href="#").button.button_style-2.home-banner__button Кнопка перехода
+        if type==1
+          .image.image_contain.home-banner__image
+            img.lazyload(data-src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Produkte/10_4-Zoll/MCQ6-freigestellt__FitMaxWzYwMCw0MDBd.png", alt="image")
+
+  +slide('GRAF-SYTECO', 1, 'Mithilfe unserer bewährten 5 Stufen zum Erfolg begleiten wir Sie von der Idee bis zum Einsatz Ihres fertigen Produktes.', 'http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Bannermotive/GSFirma_abend_rechtsoben__FocusFillWzE5MjAsODAwLCJ5IiwyMzVd.jpg')
+  +slide('NEUE HMI SERIE', 2, 'Bedien- und Steuerungslösungen, Systemintegration und Ingenieursdienstleistungen', 'http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Bannermotive/Gebaeude-Front__FocusFillWzE5MjAsODAwLCJ5IiwwXQ.jpg')

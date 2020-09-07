@@ -29,18 +29,20 @@ html(lang='ru')
   body
     .wrapper
       include ../blocks/header
+      include ../blocks/mobile-nav
       main.main
-        block content
+        block breadcrumbs
+        .content
+          block content
       include ../blocks/footer
 
     //jquery
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
     //libs
-    script(src="js/libs/current-device.min.js")
     script(src="js/libs/scroll-lock.min.js")
     script(src="js/libs/lazysizes.min.js")
     script(src="js/libs/jquery.selectric.min.js")
-    script(src="js/libs/ion.rangeSlider.min.js")
     script(src="js/libs/inputmask.min.js")
+    script(src="js/libs/slick.min.js")
     //common.js
     script(src="js/common.min.js")

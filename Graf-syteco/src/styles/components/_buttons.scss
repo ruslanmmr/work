@@ -6,6 +6,7 @@
   text-overflow: ellipsis;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: 0.875rem;
   transition: color $trs1, border-color $trs1, background-color $trs1;
@@ -22,6 +23,9 @@
     transition: fill $trs1;
     &:not(:last-child) {
       margin-right: 12px;
+    }
+    &:not(:first-child) {
+      margin-left: 12px;
     }
   }
   &_style-1 {
@@ -64,5 +68,8 @@
       background-color: $color-accent-focus;
       border-color: $color-accent-focus;
     }
+  }
+  &_round {
+    border-radius: 40px;
   }
 }
