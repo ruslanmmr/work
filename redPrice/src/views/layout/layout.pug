@@ -1,25 +1,14 @@
+//-var href = 'https://ruslanmmr.github.io/work/redPrice/build'
+-var href = 'http://localhost:9000'
+
+
 doctype html
-html(lang='ru-RU', xml:lang='ru-RU')
+html(lang='ru-RU')
   head
     base(href="https://red-price63.ru")
-    script(type='text/javascript', nonce='0f38cec19e8e479b8727c2ed781', src='//local.adguard.org?ts=1596700653289&type=content-script&dmn=red-price63.ru&css=1&js=1&gcss=1&rel=1&rji=1')
-    script(type='text/javascript', nonce='0f38cec19e8e479b8727c2ed781', src='//local.adguard.org?ts=1596700653289&name=AdGuard%20Extra&type=user-script')
-    script.
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-161700692-1');
-    meta(charset='utf-8')
     meta(content='text/html; charset=utf-8', http-equiv='content-type')
     meta(content='width=device-width, initial-scale=1', name='viewport')
     title Красная цена — интернет магазин стройматериалов
-    meta(content='Красная цена', name='keywords')
-    meta(content='Компания «Красная Цена» осуществляет оптовую и розничную продажу отделочных и строительных материалов на территории Самары. Тел.: 8(846)211-11-36.', name='description')
-    meta(content='Красная цена — интернет магазин стройматериалов', property='og:title')
-    meta(content='http://red-price63.ru/static/assets/images/svg/logotype/headlogo_white.svg', property='og:image')
-    meta(content='website', property='og:type')
-    meta(content='http://red-price63.ru/', property='og:url')
-    meta(content='Красная цена', property='og:site_name')
     link(href='/static/img/favicon.png', rel='icon')
     link(href='/static/CACHE/css/output.7f488878df3a.css', rel='stylesheet', type='text/css')
     link(href='/static/CACHE/css/output.14559a2629ff.css', media='screen', rel='stylesheet', type='text/css')
@@ -27,8 +16,6 @@ html(lang='ru-RU', xml:lang='ru-RU')
     link(href='/static/CACHE/css/output.b5ca4c8b927b.css', media='screen', rel='stylesheet', type='text/css')
     link(href='/static/CACHE/css/output.9fc39ad6d386.css', rel='stylesheet', type='text/css')
     link(href='/static/CACHE/css/output.a738cc8b1959.css', media='screen', rel='stylesheet', type='text/css')
-    script(async='', defer='', src='https://google.com/recaptcha/api.js?hl=ru')
-    meta(content='o-FSOjf5aMGU_guMsjEfntXN6T4FI9dtAy6NZr2BPHM', name='google-site-verification')
   body
     header
       .header___top_panel
@@ -94,106 +81,6 @@ html(lang='ru-RU', xml:lang='ru-RU')
               a(href='/companies/') Честные строители
             li
               a(href='/contacts/') Контакты
-    #marketplace-select-city.selection-city
-      .selection-city__wrap
-        .selection-city__wrap_title
-          p Выберите регион
-          a.selection-city_button-close(href='#', onclick='openCityPopUp()') ✖
-        .selection-city__select
-    #marketplace-select-partner.selection-city
-      .selection-city__wrap
-        .selection-city__wrap_title
-          p Выбор партнера
-          a.selection-city_button-close(href='#', onclick='openPartnerPopUp()') ✖
-        .selection-city__select
-    #mobile-menu.mobile-menu
-      .mobile-menu_title
-        .mobile-menu_search
-          form(action='/catalog/catalog_search/', method='get', novalidate='')
-            input.menu-search(autocomplete='off', data-mobile='true', data-url='/catalog/search/', name='query', placeholder='Поиск', type='text')
-            input(name='mobile_search', type='hidden', value='true')
-        nav.mobile-menu_menu-nav
-          ul.menu-nav_top-menu
-            li.top-menu_item
-              a.authorization-user(href='/users/login/')
-                | Вход / Регистрация 
-                span.icon
-                  img(alt='', src='/static/users/img/arrow.svg')
-            li.top-menu_item
-              input#list-1(title='', type='checkbox')
-              label.side-menu-label(for='list-1') Каталог
-              img.top-menu_item_icon(alt='', src='/static/assets/images/svg/icon-11.svg', title='')
-              ul.menu-nav_bottom-menu
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/e3b4c2c0421641a1af7f508c1c6f38b7.svg')
-                  a(href='/catalog/obshchestroitelnye/') Общестроительные
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/e34a8cb0b8c14727a517a2dd40577e42.svg')
-                  a(href='/catalog/pilomaterialy/') Пиломатериалы
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/68afd690b362410f831724d0b1d9e721.svg')
-                  a(href='/catalog/krovlia-metallicheskaia/') Кровля металлическая
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/a4f7b43622394bb083e531c7c9bb522e.svg')
-                  a(href='/catalog/vodostochnye-sistemy/') Водосточные системы
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/1353c106baa6417bb2f2ffb8e1d902d0.svg')
-                  a(href='/catalog/mjagkaya-krovlia/') Мягкая кровля
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/a52e2177117240fcb04187762e553de4.svg')
-                  a(href='/catalog/teploizoliatsiia/') Теплоизоляция
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/4b9e35e0a514461c8cc90d9f0f869771.svg')
-                  a(href='/catalog/fanera-osb-dsp-dvp-tssp/') Фанера, осб, дсп, двп, цсп
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/cd8be71e2af7492589d8e6950b98c43b.svg')
-                  a(href='/catalog/otdelka-chernovaya-cement/') Отделка черновая
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/639910ae5281475195661981fe02d474.svg')
-                  a(href='/catalog/otdelka-finishnaia/') Отделка финишная
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/fc219cf05b35440a8edf3e92b0cb77b9.svg')
-                  a(href='/catalog/kraski-peny-germetiki/') Краски, пены, герметики
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/faeabf536f654632882d862689db3218.svg')
-                  a(href='/catalog/saiding/') Сайдинг
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/b1b7f0ef6e6f43a9ba971283ea27d733.svg')
-                  a(href='/catalog/fasad-shtukaturnyi/') Фасад штукатурный
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/9c66ef3696cd43dd9a555609384a843f.svg')
-                  a(href='/catalog/zabor-i-terrasa/') Забор и терраса
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/f76d2a09cbf54fc784d661112ec1df9b.svg')
-                  a(href='/catalog/kommunikatsii/') Коммуникации
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/8b58286c4cea42cc8d56638a1bcc58ee.svg')
-                  a(href='/catalog/instrument-i-raskhodniki/') Инструмент и расходники
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/590b5f795f8d4b70884c053301be460c.svg')
-                  a(href='/catalog/elektrika/') Электрика
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/518a600c477a4910a2ce25155059a8b7.svg')
-                  a(href='/catalog/nasosy/') Насосы
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/08a35e4420c34d619bd735b1b60a73df.svg')
-                  a(href='/catalog/komplekty/') Комплекты
-                li.bottom-menu_item
-                  img.icon(alt='', src='/media/categories/images/icons/a4603bc716bb48a4b7af039deaf6b007.svg')
-                  a(href='/catalog/rasprodazha-i-nelikvid/') Уцененный товар
-            li.top-menu_item
-              a(href='/for-clients/') Для клиентов
-            li.top-menu_item
-              a(href='/customers/delivery_calculator/') Доставка
-            li.top-menu_item
-              a(href='/contacts/') Контакты
-        .mobile-menu_city-nav
-          .buttons-selection-city
-            a.button-selection-city.marketplace-city-select(data-city='Самара', data-count='1', href='#')
-              | Регион: 
-              span.name-city Самара
-              span.city-selection
-            span.button-selection-partner Партнер: ООО Красная Цена
     svg.hidden(height='0', width='0')
       symbol#feedback-phone(fill='none', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
         path(clip-rule='evenodd', d='M20.32 22.522c4.766-4.227 4.45-18.007-.61-21.933-.796-.706-2.492-.535-3.664-.417-.235.023-.45.045-.631.057-2.619-.086-1.69 7.15 1.765 6.817 2.525-.267 2.817 9.335.226 9.166-3.325-.362-3.913 6.823-1.294 6.884.14.003.304.009.484.015 1.141.042 2.956.109 3.724-.59zm-4.186-.426c.171.003.355.01.547.017.468.017.99.037 1.531.007.37-.02.7-.063.967-.133.276-.072.413-.155.468-.205l.01-.009c.996-.883 1.796-2.338 2.329-4.186.529-1.834.77-3.972.714-6.118-.056-2.147-.407-4.265-1.034-6.062-.632-1.81-1.514-3.209-2.57-4.028l-.026-.02-.024-.022c-.066-.058-.204-.136-.47-.195a4.43 4.43 0 0 0-.956-.078c-.507.005-.96.051-1.397.096-.25.025-.496.05-.742.067l-.05.003-.049-.002c-.076-.002-.102.015-.13.039-.047.04-.131.144-.206.362-.154.448-.19 1.147-.044 1.912.146.76.448 1.457.84 1.923.376.444.78.63 1.238.587.672-.07 1.23.208 1.636.6.386.373.66.87.858 1.369.4 1.004.603 2.3.637 3.545.034 1.243-.097 2.548-.446 3.571-.173.509-.425 1.02-.799 1.41-.396.415-.95.708-1.626.663h-.021l-.022-.003c-.405-.044-.75.114-1.073.531-.344.446-.6 1.13-.703 1.89-.102.763-.031 1.478.154 1.957.183.474.37.51.459.512zM.293 11.596l4.243-4.242.707.707-3.036 3.035h10.986v1H2.207l3.036 3.036-.707.707-4.243-4.243z', fill='currentColor', fill-rule='evenodd')
@@ -1100,6 +987,51 @@ html(lang='ru-RU', xml:lang='ru-RU')
                   span утепление
                 a.btn.btn-primary.search__button(href='#') Найти
               #success-result-search.search_panel__results__wrapper.search_results_is_shown
+          
+
+          //banner
+          .m-banner-slider.owl-carousel(data-interval='5')
+            //slide
+            .m-banner-slider__slide
+              img(data-src=href+'/img/image 1.jpg', alt="image").m-banner-slider__slide-background.owl-lazy
+              .m-banner-slider__slide-content
+                h2.m-banner-slider__slide-title СУПЕР ЦЕНА НА<br> ВОДОСТОЧНУЮ СИСТЕМУ<br> и сопутствующие товары
+                a(href="#").m-banner-slider__slide-button Узнать подробнее
+                .m-banner-slider__slide-icons
+                  img(src=href+"/img/pattern1.svg", alt="icon")
+                  img(src=href+"/img/pattern2.svg", alt="icon")
+                  img(src=href+"/img/pattern2.svg", alt="icon")
+                  img(src=href+"/img/pattern3.svg", alt="icon")
+                  img(src=href+"/img/pattern4.svg", alt="icon")
+                  img(src=href+"/img/pattern3.svg", alt="icon")
+            //slide
+            .m-banner-slider__slide
+              img(data-src=href+'/img/image 1.jpg', alt="image").m-banner-slider__slide-background.owl-lazy
+              .m-banner-slider__slide-content
+                h2.m-banner-slider__slide-title СУПЕР ЦЕНА НА<br> ВОДОСТОЧНУЮ СИСТЕМУ
+                a(href="#").m-banner-slider__slide-button Узнать подробнее
+                .m-banner-slider__slide-icons
+                  img(src=href+"/img/pattern1.svg", alt="icon")
+                  img(src=href+"/img/pattern2.svg", alt="icon")
+                  img(src=href+"/img/pattern2.svg", alt="icon")
+                  img(src=href+"/img/pattern3.svg", alt="icon")
+                  img(src=href+"/img/pattern4.svg", alt="icon")
+                  img(src=href+"/img/pattern3.svg", alt="icon")
+            //slide
+            .m-banner-slider__slide
+              img(data-src=href+'/img/image 1.jpg', alt="image").m-banner-slider__slide-background.owl-lazy
+              .m-banner-slider__slide-content
+                h2.m-banner-slider__slide-title СУПЕР ЦЕНА НА<br> ВОДОСТОЧНУЮ СИСТЕМУ
+                a(href="#").m-banner-slider__slide-button Узнать подробнее
+                .m-banner-slider__slide-icons
+                  img(src=href+"/img/pattern1.svg", alt="icon")
+                  img(src=href+"/img/pattern2.svg", alt="icon")
+                  img(src=href+"/img/pattern2.svg", alt="icon")
+                  img(src=href+"/img/pattern3.svg", alt="icon")
+                  img(src=href+"/img/pattern4.svg", alt="icon")
+                  img(src=href+"/img/pattern3.svg", alt="icon")
+          
+          
           .mp_wide_slider__wrapper(data-timeout='5')
             .mp_wide_slider.owl-carousel
               .mp_wide_slide.item
@@ -1108,6 +1040,10 @@ html(lang='ru-RU', xml:lang='ru-RU')
               .mp_wide_slide.item
                 a(href='https://red-price63.ru/catalog/product/sukhie-smesi-gruntovki/dom-moi-klei-dlia-plitki-25kg-3056/', title='')
                   img.owl_img.owl-lazy(alt='', data-src='/media/big_slides/bb14944b04c1441fa7ac14ceda80fd71.slide.jpg')
+          
+          
+            
+          
           a.quiz_banner_link.quiz_banner_link__desktop(href='/quiz/discount/')
             img(alt='Ответьте на вопросы и получите скидку', src='/static/quiz/images/svg/quiz_for_discount.svg')
           p.products_grid__headline.block-title
@@ -1401,1276 +1337,6 @@ html(lang='ru-RU', xml:lang='ru-RU')
                       path(clip-rule='evenodd', d='M12.8337 0H11.0982H9.67999H8.63422H7.30613H5.48047L6.92849 4.54874C8.48916 4.54874 9.90477 4.54874 11.4654 4.54874L12.8337 0Z', fill='white', fill-rule='evenodd')
                       path(clip-rule='evenodd', d='M8.92475 16.4863L9.89877 11.3337L10.8728 6.18097H8.92475H6.97656L7.95057 11.3337L8.92475 16.4863Z', fill='white', fill-rule='evenodd')
                     | Эксперт
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/gipsokarton/gipsokarton-2500kh1200kh95-mm-339/', data-price='175.00', data-section-title='Продукты на главной')
-              .row
-                span.corner_tag
-                  img(alt='', src='/static/assets/images/svg/thumbs-up.svg')
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/gipsokarton/gipsokarton-2500kh1200kh95-mm-339/') Гипсокартон 2500х1200х9,5 мм
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/gipsokarton/gipsokarton-2500kh1200kh95-mm-339/') Гипсокартон 2500х1200х9,5 мм
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-249', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        | много
-                    .ratio-list
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star_empty.svg')
-                    p.single_price
-                      span 175 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 175
-                        i .00
-                      span.product_page__price__tag Р.
-                    .credit_label Можно в кредит
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='175.0', data-product-id='249', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='249', data-single-price='175.0', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                    .prod_tooltip.optimum_tooltip
-                      span Оптима
-                      svg(fill='none', height='54', viewBox='0 0 54 54', width='54', xmlns='http://www.w3.org/2000/svg')
-                        path#roundy(d='M26.691 51.8821C40.6037 51.8821 51.8821 40.6037 51.8821 26.6911C51.8821 12.7784 40.6037 1.5 26.691 1.5C12.7784 1.5 1.5 12.7784 1.5 26.6911C1.5 40.6037 12.7784 51.8821 26.691 51.8821Z', fill='#C1C1C1', stroke='white', stroke-width='3')
-                        path(d='M41.3245 24.7237C42.5033 24.7793 43.4418 25.7523 43.4418 26.945C43.4418 28.0637 42.6154 28.9895 41.54 29.1455L41.54 29.1455L41.54 29.1456C42.1787 29.5364 42.6048 30.2407 42.6048 31.0441C42.6048 32.1924 41.7346 33.1372 40.6178 33.2554L40.6177 33.2555C40.6178 33.2556 40.6178 33.2556 40.6178 33.2556C40.9001 33.6286 41.0678 34.0931 41.0678 34.597C41.0678 35.211 40.6579 35.7669 40.0945 36.1694C39.5311 36.5718 38.8141 36.8207 38.1999 36.8207C37.6034 36.8207 37.0451 36.8217 36.4975 36.8227C35.0834 36.8253 33.7411 36.8277 31.9994 36.8122C28.4798 36.7806 26.8496 36.2811 24.6177 35.5971C24.2889 35.4963 23.9469 35.3916 23.584 35.2837C23.5708 35.2798 23.5439 35.2747 23.5059 35.2687C23.468 35.2627 23.4191 35.2556 23.3621 35.2477C23.3146 35.2411 23.2614 35.2339 23.2043 35.2261C23.1245 35.2153 23.0371 35.2034 22.9465 35.1906C22.6356 35.147 22.2879 35.0934 22.0881 35.0382V22.8148C23.6526 22.3678 24.4932 21.9577 25.2752 21.4856C25.5127 21.3423 25.7448 21.1932 25.9901 21.0356C26.5526 20.6742 27.1847 20.2682 28.1111 19.784L28.1112 19.7839C29.1112 19.261 30.2311 18.6754 31.1175 17.7522C32.0039 16.8289 32.6568 15.5679 32.7228 13.6941C32.7661 12.4705 33.7929 11.5139 35.0164 11.5571C36.24 11.6 37.1966 12.6271 37.1534 13.8503C37.044 16.9592 36.0815 19.0125 34.7724 20.4851L34.7725 20.4852L34.7725 20.4852L34.7726 20.4852H40.3808C41.6092 20.4852 42.6048 21.4809 42.6048 22.709C42.6048 23.6 42.081 24.3684 41.3245 24.7237ZM41.3245 24.7237V24.7237ZM41.3246 24.7236C42.5034 24.7793 43.4419 25.7523 43.4419 26.945C43.4419 28.0637 42.6155 28.9895 41.5401 29.1455L41.3246 24.7236ZM11.6915 21.9739H19.307V36.5272H11.6915V21.9739ZM16.6922 32.9306C16.6922 32.2933 16.1756 31.7767 15.5384 31.7767C14.9012 31.7767 14.3846 32.2933 14.3846 32.9306C14.3846 33.5678 14.9012 34.0841 15.5384 34.0841C16.1756 34.0841 16.6922 33.5678 16.6922 32.9306Z', fill='white', stroke='black', stroke-width='0.000135852')
-                        path(d='M16.6043 32.9304C16.6043 33.5675 16.0878 34.0841 15.4506 34.0841C14.8135 34.0841 14.2969 33.5675 14.2969 32.9304C14.2969 32.2932 14.8135 31.7767 15.4506 31.7767C16.0878 31.7767 16.6043 32.2932 16.6043 32.9304Z', fill='#C1C1C1', stroke='black', stroke-width='0.000135852')
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/gipsokarton/gipsokarton-2500kh1200kh95-mm-339/')
-                    img(alt='Гипсокартон 2500х1200х9,5 мм', src='/media/products/images/e2701b361e9441a6aff2740c499bf34f.catalog_large.png')
-                .prod_tooltip2.optimum_tooltip2
-                  span
-                    svg(fill='none', height='19', viewBox='0 0 23 19', width='23', xmlns='http://www.w3.org/2000/svg')
-                      path(d='M21.2639 9.44905C22.1097 9.48895 22.7831 10.1871 22.7831 11.043C22.7831 11.8457 22.1902 12.51 21.4185 12.6219L21.4185 12.622L21.4185 12.6221L21.4184 12.6221C21.8767 12.9025 22.1826 13.4079 22.1826 13.9844C22.1826 14.8083 21.5581 15.4863 20.7567 15.5711L20.7567 15.5713L20.7567 15.5712C20.7567 15.5713 20.7567 15.5713 20.7567 15.5713C20.9593 15.839 21.0796 16.1723 21.0796 16.5338C21.0796 16.9744 20.7855 17.3733 20.3812 17.6621C19.9769 17.9509 19.4625 18.1295 19.0217 18.1295C18.5937 18.1295 18.193 18.1302 17.8 18.1309C16.7854 18.1328 15.8222 18.1345 14.5725 18.1234C12.0468 18.1007 10.8771 17.7422 9.27556 17.2515C9.03957 17.1791 8.79421 17.104 8.53375 17.0265C8.52433 17.0238 8.50498 17.0201 8.47777 17.0158C8.45055 17.0115 8.41547 17.0064 8.37458 17.0007C8.34045 16.996 8.30228 16.9908 8.26127 16.9852C8.20405 16.9774 8.14131 16.9689 8.07632 16.9598C7.85324 16.9285 7.60373 16.89 7.46036 16.8504V8.0793C8.58301 7.75851 9.1862 7.46428 9.74738 7.12551C9.91778 7.02264 10.0843 6.91566 10.2603 6.80258C10.664 6.54328 11.1176 6.25191 11.7823 5.90445L11.7824 5.90439C12.5 5.52917 13.3035 5.10898 13.9396 4.44649C14.5757 3.78395 15.0442 2.87908 15.0916 1.5345C15.1226 0.656523 15.8594 -0.0299366 16.7373 0.00107887C17.6153 0.0318774 18.3018 0.768873 18.2708 1.64663C18.1922 3.87744 17.5016 5.35083 16.5622 6.40755L16.5623 6.4076L16.5623 6.40764L16.5624 6.40767H20.5867C21.4681 6.40767 22.1826 7.12211 22.1826 8.00333C22.1826 8.64273 21.8067 9.19407 21.2639 9.44905ZM21.2639 9.44905V9.44905ZM21.264 9.44898C22.1098 9.48897 22.7832 10.1871 22.7832 11.043C22.7832 11.8457 22.1903 12.51 21.4186 12.622L21.264 9.44898ZM6.79261e-05 7.4759H5.46474V17.9189H6.79261e-05V7.4759ZM3.58847 15.338C3.58847 14.8808 3.21775 14.5101 2.76049 14.5101C2.30323 14.5101 1.93251 14.8808 1.93251 15.338C1.93251 15.7953 2.30323 16.1658 2.76049 16.1658C3.21775 16.1658 3.58847 15.7953 3.58847 15.338Z', fill='white', stroke='black', stroke-width='0.000135852')
-                    | Оптима
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/gipsokarton/gipsokarton-gyproc-akva-lajt-2500h1200h955/', data-price='372.00', data-section-title='Продукты на главной')
-              .row
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/gipsokarton/gipsokarton-gyproc-akva-lajt-2500h1200h955/') Гипсокартон Gyproc Аква Лайт 2500х1200х9,5
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/gipsokarton/gipsokarton-gyproc-akva-lajt-2500h1200h955/') Гипсокартон Gyproc Аква Лайт 2500х1200х9,5
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-237', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        | много
-                    .ratio-list
-                      a(href='/catalog/product/gipsokarton/gipsokarton-gyproc-akva-lajt-2500h1200h955/?scroll_to_reviews=true') Оставьте отзыв
-                    p.single_price
-                      span 384 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 378
-                        i .00
-                      span.product_page__price__tag Р.
-                    .credit_label Можно в кредит
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='378.0', data-product-id='237', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='237', data-single-price='378.0', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                    .prod_tooltip.expert_tooltip
-                      span Эксперт
-                      svg(fill='none', height='54', viewBox='0 0 54 54', width='54', xmlns='http://www.w3.org/2000/svg')
-                        path#roundy3(d='M27 52.5C41.0833 52.5 52.5 41.0833 52.5 27C52.5 12.9167 41.0833 1.5 27 1.5C12.9167 1.5 1.5 12.9167 1.5 27C1.5 41.0833 12.9167 52.5 27 52.5Z', fill='#C1C1C1', stroke='white', stroke-width='3')
-                        path(d='M41.8242 25.0069C43.0184 25.0633 43.9692 26.0489 43.9692 27.2572C43.9692 28.3905 43.132 29.3284 42.0425 29.4864L42.0425 29.4865L42.0425 29.4865C42.6895 29.8825 43.1213 30.5959 43.1213 31.4098C43.1213 32.573 42.2397 33.5302 41.1083 33.65L41.1082 33.6501C41.1082 33.6501 41.1083 33.6501 41.1083 33.6502C41.3942 34.028 41.5642 34.4986 41.5642 35.009C41.5642 35.631 41.149 36.1942 40.5782 36.6019C40.0074 37.0096 39.2811 37.2617 38.6589 37.2617C38.0546 37.2617 37.4889 37.2627 36.9342 37.2638C35.5017 37.2664 34.1418 37.2688 32.3776 37.2531C28.812 37.2211 27.1605 36.715 24.8996 36.0222C24.5664 35.9201 24.22 35.8139 23.8523 35.7046C23.839 35.7007 23.8117 35.6956 23.7733 35.6895C23.7349 35.6834 23.6853 35.6762 23.6276 35.6682C23.5794 35.6615 23.5255 35.6542 23.4676 35.6463C23.3868 35.6353 23.2983 35.6233 23.2065 35.6104C22.8916 35.5662 22.5393 35.5119 22.3369 35.456V23.0732C23.9219 22.6203 24.7734 22.2049 25.5657 21.7267C25.8063 21.5814 26.0414 21.4304 26.2899 21.2708C26.8597 20.9047 27.5001 20.4933 28.4385 20.0028L28.4386 20.0027C29.4517 19.473 30.5861 18.8798 31.4841 17.9445C32.3821 17.0092 33.0435 15.7317 33.1104 13.8335C33.1542 12.594 34.1943 11.6249 35.4339 11.6686C36.6734 11.7121 37.6425 12.7526 37.5987 13.9918C37.4879 17.1412 36.5129 19.2213 35.1867 20.7131L35.1867 20.7132L35.1868 20.7132L35.1868 20.7132H40.8682C42.1126 20.7132 43.1213 21.7219 43.1213 22.966C43.1213 23.8687 42.5906 24.647 41.8242 25.0069ZM41.8242 25.0069V25.0069ZM41.8243 25.0069C43.0185 25.0633 43.9692 26.049 43.9692 27.2572C43.9692 28.3905 43.1321 29.3284 42.0426 29.4864L41.8243 25.0069ZM11.8048 22.2213H19.5196V36.9644H11.8048V22.2213ZM16.8707 33.3208C16.8707 32.6753 16.3474 32.152 15.7019 32.152C15.0563 32.152 14.533 32.6753 14.533 33.3208C14.533 33.9664 15.0563 34.4894 15.7019 34.4894C16.3474 34.4894 16.8707 33.9664 16.8707 33.3208Z', fill='white', stroke='black', stroke-width='0.000135852')
-                        path(d='M16.7829 33.3207C16.7829 33.9662 16.2596 34.4894 15.6141 34.4894C14.9686 34.4894 14.4454 33.9662 14.4454 33.3207C14.4454 32.6752 14.9686 32.152 15.6141 32.152C16.2596 32.152 16.7829 32.6752 16.7829 33.3207Z', fill='#A7A733', stroke='black', stroke-width='0.000135852')
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/gipsokarton/gipsokarton-gyproc-akva-lajt-2500h1200h955/')
-                    img(alt='Гипсокартон Gyproc Аква Лайт 2500х1200х9,5', src='/media/products/images/f655d25b46a94b87803fbfafcc5da564.catalog_large.jpg')
-                .prod_tooltip2.expert_tooltip2
-                  span
-                    svg(fill='none', height='19', viewBox='0 0 19 19', width='19', xmlns='http://www.w3.org/2000/svg')
-                      path(clip-rule='evenodd', d='M8.63718 18.815L0 6.18097H6.12224L8.63718 18.815Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M0 4.59754H5.83368L4.49363 0.22731L0 4.59754Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M9.46875 18.815L18.1059 6.18097H11.9837L9.46875 18.815Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M18.2907 4.59754H12.457L13.7971 0.22731L18.2907 4.59754Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M12.8337 0H11.0982H9.67999H8.63422H7.30613H5.48047L6.92849 4.54874C8.48916 4.54874 9.90477 4.54874 11.4654 4.54874L12.8337 0Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M8.92475 16.4863L9.89877 11.3337L10.8728 6.18097H8.92475H6.97656L7.95057 11.3337L8.92475 16.4863Z', fill='white', fill-rule='evenodd')
-                    | Эксперт
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/profilya-dlya-gipsokartona/profil-potolochnyi-stoechnyi-60kh27-3-m-382/', data-price='74.00', data-section-title='Продукты на главной')
-              .row
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/profilya-dlya-gipsokartona/profil-potolochnyi-stoechnyi-60kh27-3-m-382/') Профиль потолочный стоечный 60х27 3 м
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/profilya-dlya-gipsokartona/profil-potolochnyi-stoechnyi-60kh27-3-m-382/') Профиль потолочный стоечный 60х27 3 м
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-282', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        | много
-                    .ratio-list
-                      a(href='/catalog/product/profilya-dlya-gipsokartona/profil-potolochnyi-stoechnyi-60kh27-3-m-382/?scroll_to_reviews=true') Оставьте отзыв
-                    p.single_price
-                      span 77 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 75
-                        i .50
-                      span.product_page__price__tag Р.
-                    .credit_label Можно в кредит
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='75.5', data-product-id='282', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='282', data-single-price='75.5', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                    .prod_tooltip.econom_tooltip
-                      span Эконом
-                      svg(fill='none', height='54', viewBox='0 0 54 54', width='54', xmlns='http://www.w3.org/2000/svg')
-                        path#roundy2(d='M27 52.5C41.0833 52.5 52.5 41.0833 52.5 27C52.5 12.9167 41.0833 1.5 27 1.5C12.9167 1.5 1.5 12.9167 1.5 27C1.5 41.0833 12.9167 52.5 27 52.5Z', fill='#C1C1C1', stroke='white', stroke-width='3')
-                        path(clip-rule='evenodd', d='M43.3668 27.6904H45.9898V30.8891C45.9898 33.5078 38.4689 36.8663 35.7663 37.1355C35.3905 37.2145 35.0065 37.2782 34.6152 37.3263C34.5295 38.0823 34.4851 38.8576 34.4851 39.6474C34.4851 40.3388 34.5194 41.0192 34.5852 41.6852H30.1617C29.5854 40.8456 29.0795 39.9098 28.6578 38.8968C27.4039 39.1455 26.0826 39.2784 24.7175 39.2784C22.9265 39.2784 21.2108 39.0493 19.624 38.6304C19.6074 38.9667 19.5992 39.3056 19.5992 39.6474C19.5992 40.3388 19.6332 41.0192 19.6993 41.6852H15.2758C13.9701 39.7833 13.0266 37.3887 12.6022 34.7192C10.99 33.0402 10.0469 31.0094 10.0469 28.8212C10.0469 27.6175 10.3329 26.4619 10.858 25.3858C10.0435 23.9745 9.95746 22.4346 10.7821 21.4026C10.8461 21.3227 10.9144 21.2477 10.9863 21.1769C11.2485 21.8904 11.6989 22.6021 12.3153 23.2338C14.9157 20.3073 19.4978 18.3641 24.7175 18.3641C27.7821 18.3641 30.6271 19.0341 32.98 20.1796V20.1799L32.9442 20.2816L32.943 20.2856C32.9072 20.3918 32.8744 20.4999 32.8465 20.6095L32.8459 20.6114L32.8416 20.6291L32.8202 20.7176L32.8199 20.7198L32.8162 20.7354L32.8122 20.7531L32.8083 20.7712L32.8006 20.807L32.7969 20.8248L32.7954 20.8309L32.7932 20.8429L32.7896 20.8606L32.7825 20.8968L32.7792 20.9148L32.7758 20.9329L32.774 20.943L32.7727 20.951L32.7697 20.9693L32.7691 20.9718L32.7635 21.0055L32.7605 21.0238L32.7577 21.0419L32.7553 21.0563L32.7547 21.0603L32.7519 21.0783L32.7495 21.0967L32.7443 21.1335L32.7418 21.1518L32.7394 21.1702L32.7372 21.1886L32.7351 21.207L32.7329 21.2256L32.7308 21.244L32.7286 21.2624L32.7268 21.2811L32.7262 21.285L32.725 21.2994L32.7231 21.3181C32.7097 21.4614 32.7026 21.6063 32.7026 21.7529C32.7026 22.1378 32.7504 22.5111 32.8398 22.8682H34.3559C34.3139 22.625 34.2918 22.3748 34.2918 22.1198C34.2918 19.7038 36.2507 17.7449 38.6667 17.7449C39.0489 17.7449 39.4295 17.7951 39.7988 17.894L38.6667 22.1198V22.5932C41.0328 23.736 42.762 25.5567 43.3668 27.6904ZM24.2723 7.17967C27.2879 7.17967 29.7323 9.62417 29.7323 12.6397C29.7323 14.0407 29.2044 15.3182 28.3369 16.2846C27.1752 16.0191 25.9371 15.8752 24.6514 15.8752C23.1365 15.8752 21.6869 16.0748 20.3512 16.4386C19.3989 15.4557 18.8125 14.1163 18.8125 12.6397C18.8125 9.62417 21.257 7.17967 24.2723 7.17967ZM39.0807 25.7456C39.7262 25.7456 40.2495 26.2689 40.2495 26.9144C40.2495 27.5599 39.7262 28.083 39.0807 28.083C38.4352 28.083 37.9119 27.5599 37.9119 26.9144C37.9119 26.2689 38.4352 25.7456 39.0807 25.7456Z', fill='white', fill-rule='evenodd')
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/profilya-dlya-gipsokartona/profil-potolochnyi-stoechnyi-60kh27-3-m-382/')
-                    img(alt='Профиль потолочный стоечный 60х27 3 м', src='/media/products/images/41153dd1cf0f44ddb813c0c92eb1048f.catalog_large.png')
-                .prod_tooltip2.econom_tooltip2
-                  span
-                    svg(fill='none', height='22', viewBox='0 0 23 22', width='23', xmlns='http://www.w3.org/2000/svg')
-                      path(clip-rule='evenodd', d='M21.3215 13.0772H23V15.1166C23 16.7863 18.1874 18.9276 16.4579 19.0992C16.2175 19.1496 15.9718 19.1902 15.7214 19.2208C15.6665 19.7029 15.6381 20.1972 15.6381 20.7007C15.6381 21.1416 15.66 21.5754 15.7022 22H12.8715C12.5028 21.4647 12.1791 20.868 11.9092 20.2222C11.1068 20.3807 10.2613 20.4655 9.3878 20.4655C8.24171 20.4655 7.14382 20.3194 6.12842 20.0523C6.11784 20.2667 6.11255 20.4828 6.11255 20.7007C6.11255 21.1416 6.1343 21.5754 6.17662 22H3.34598C2.51047 20.7874 1.90675 19.2607 1.63517 17.5586C0.603514 16.4881 0 15.1933 0 13.7982C0 13.0307 0.183014 12.2939 0.519062 11.6079C-0.00215561 10.708 -0.0572162 9.72619 0.470468 9.06825C0.51142 9.01729 0.555115 8.96946 0.601162 8.92436C0.768893 9.37926 1.05713 9.83299 1.45157 10.2358C3.11555 8.3699 6.04769 7.13094 9.3878 7.13094C11.3488 7.13094 13.1694 7.55811 14.675 8.28848V8.28868L14.6521 8.3535L14.6513 8.35604C14.6284 8.42378 14.6074 8.4927 14.5896 8.56259L14.5892 8.56377L14.5864 8.57509L14.5727 8.63151L14.5725 8.63288L14.5702 8.64284L14.5676 8.65416L14.5651 8.66568L14.5602 8.68852L14.5578 8.69984L14.5569 8.70375L14.5555 8.71136L14.5531 8.72269L14.5486 8.74572L14.5465 8.75724L14.5443 8.76876L14.5431 8.77521L14.5424 8.78028L14.5404 8.792L14.54 8.79356L14.5365 8.81503L14.5345 8.82675L14.5328 8.83827L14.5312 8.84744L14.5308 8.84998L14.529 8.8615L14.5275 8.87321L14.5241 8.89664L14.5226 8.90835L14.521 8.92007L14.5196 8.93178L14.5183 8.9435L14.5169 8.95541L14.5155 8.96712L14.5141 8.97884L14.513 8.99074L14.5126 8.99328L14.5118 9.00246L14.5106 9.01437C14.502 9.10574 14.4975 9.19808 14.4975 9.2916C14.4975 9.53701 14.5281 9.775 14.5853 10.0026H15.5554C15.5286 9.84763 15.5145 9.68812 15.5145 9.52549C15.5145 7.98509 16.7679 6.73618 18.3139 6.73618C18.5585 6.73618 18.802 6.76819 19.0384 6.83125L18.3139 9.52549V9.82732C19.828 10.5559 20.9345 11.7168 21.3215 13.0772ZM9.10289 0C11.0326 0 12.5968 1.55856 12.5968 3.48123C12.5968 4.37442 12.259 5.18894 11.7039 5.8051C10.9605 5.63583 10.1682 5.54407 9.34547 5.54407C8.37612 5.54407 7.44851 5.67137 6.59379 5.90331C5.9844 5.2766 5.60916 4.42265 5.60916 3.48123C5.60916 1.55856 7.1734 0 9.10289 0ZM18.5789 11.8373C18.9919 11.8373 19.3268 12.1709 19.3268 12.5825C19.3268 12.994 18.9919 13.3275 18.5789 13.3275C18.1658 13.3275 17.8309 12.994 17.8309 12.5825C17.8309 12.1709 18.1658 11.8373 18.5789 11.8373Z', fill='white', fill-rule='evenodd')
-                    | Эконом
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/sukhie-smesi-gruntovki/tsement-evro-m-500-50-kg-zhigulevsk-90/', data-price='274.00', data-section-title='Продукты на главной')
-              .row
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/sukhie-smesi-gruntovki/tsement-evro-m-500-50-kg-zhigulevsk-90/') Цемент Евро М-500 50 кг. Жигулевск
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/sukhie-smesi-gruntovki/tsement-evro-m-500-50-kg-zhigulevsk-90/') Цемент Евро М-500 50 кг. Жигулевск
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-76', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/yellow.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/yellow.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        | огр. кол-во
-                    .ratio-list
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                    p.single_price
-                      span 290 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 282
-                        i .00
-                      span.product_page__price__tag Р.
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='282.0', data-product-id='76', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='76', data-single-price='282.0', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/sukhie-smesi-gruntovki/tsement-evro-m-500-50-kg-zhigulevsk-90/')
-                    img(alt='Цемент Евро М-500 50 кг. Жигулевск', src='/media/products/images/c1c03377442d44c488229c5c151ba8f1.catalog_large.png')
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/plity-osb-osp/osb-3-osp-3-kalevala-2500kh1250kh9-mm-1808/', data-price='520.00', data-section-title='Продукты на главной')
-              .row
-                span.corner_tag
-                  img(alt='', src='/static/assets/images/svg/thumbs-up.svg')
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/plity-osb-osp/osb-3-osp-3-kalevala-2500kh1250kh9-mm-1808/') ОСБ-ОСП (OSB-3) плита Калевала 2500х1250х9 мм
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/plity-osb-osp/osb-3-osp-3-kalevala-2500kh1250kh9-mm-1808/') ОСБ-ОСП (OSB-3) плита Калевала 2500х1250х9 ...
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-1564', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        | много
-                    .ratio-list
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                    p.single_price
-                      span 546 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 533
-                        i .00
-                      span.product_page__price__tag Р.
-                    .credit_label Можно в кредит
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='533.0', data-product-id='1564', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='1564', data-single-price='533.0', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                    .prod_tooltip.expert_tooltip
-                      span Эксперт
-                      svg(fill='none', height='54', viewBox='0 0 54 54', width='54', xmlns='http://www.w3.org/2000/svg')
-                        path#roundy3(d='M27 52.5C41.0833 52.5 52.5 41.0833 52.5 27C52.5 12.9167 41.0833 1.5 27 1.5C12.9167 1.5 1.5 12.9167 1.5 27C1.5 41.0833 12.9167 52.5 27 52.5Z', fill='#C1C1C1', stroke='white', stroke-width='3')
-                        path(d='M41.8242 25.0069C43.0184 25.0633 43.9692 26.0489 43.9692 27.2572C43.9692 28.3905 43.132 29.3284 42.0425 29.4864L42.0425 29.4865L42.0425 29.4865C42.6895 29.8825 43.1213 30.5959 43.1213 31.4098C43.1213 32.573 42.2397 33.5302 41.1083 33.65L41.1082 33.6501C41.1082 33.6501 41.1083 33.6501 41.1083 33.6502C41.3942 34.028 41.5642 34.4986 41.5642 35.009C41.5642 35.631 41.149 36.1942 40.5782 36.6019C40.0074 37.0096 39.2811 37.2617 38.6589 37.2617C38.0546 37.2617 37.4889 37.2627 36.9342 37.2638C35.5017 37.2664 34.1418 37.2688 32.3776 37.2531C28.812 37.2211 27.1605 36.715 24.8996 36.0222C24.5664 35.9201 24.22 35.8139 23.8523 35.7046C23.839 35.7007 23.8117 35.6956 23.7733 35.6895C23.7349 35.6834 23.6853 35.6762 23.6276 35.6682C23.5794 35.6615 23.5255 35.6542 23.4676 35.6463C23.3868 35.6353 23.2983 35.6233 23.2065 35.6104C22.8916 35.5662 22.5393 35.5119 22.3369 35.456V23.0732C23.9219 22.6203 24.7734 22.2049 25.5657 21.7267C25.8063 21.5814 26.0414 21.4304 26.2899 21.2708C26.8597 20.9047 27.5001 20.4933 28.4385 20.0028L28.4386 20.0027C29.4517 19.473 30.5861 18.8798 31.4841 17.9445C32.3821 17.0092 33.0435 15.7317 33.1104 13.8335C33.1542 12.594 34.1943 11.6249 35.4339 11.6686C36.6734 11.7121 37.6425 12.7526 37.5987 13.9918C37.4879 17.1412 36.5129 19.2213 35.1867 20.7131L35.1867 20.7132L35.1868 20.7132L35.1868 20.7132H40.8682C42.1126 20.7132 43.1213 21.7219 43.1213 22.966C43.1213 23.8687 42.5906 24.647 41.8242 25.0069ZM41.8242 25.0069V25.0069ZM41.8243 25.0069C43.0185 25.0633 43.9692 26.049 43.9692 27.2572C43.9692 28.3905 43.1321 29.3284 42.0426 29.4864L41.8243 25.0069ZM11.8048 22.2213H19.5196V36.9644H11.8048V22.2213ZM16.8707 33.3208C16.8707 32.6753 16.3474 32.152 15.7019 32.152C15.0563 32.152 14.533 32.6753 14.533 33.3208C14.533 33.9664 15.0563 34.4894 15.7019 34.4894C16.3474 34.4894 16.8707 33.9664 16.8707 33.3208Z', fill='white', stroke='black', stroke-width='0.000135852')
-                        path(d='M16.7829 33.3207C16.7829 33.9662 16.2596 34.4894 15.6141 34.4894C14.9686 34.4894 14.4454 33.9662 14.4454 33.3207C14.4454 32.6752 14.9686 32.152 15.6141 32.152C16.2596 32.152 16.7829 32.6752 16.7829 33.3207Z', fill='#A7A733', stroke='black', stroke-width='0.000135852')
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/plity-osb-osp/osb-3-osp-3-kalevala-2500kh1250kh9-mm-1808/')
-                    img(alt='ОСБ-ОСП (OSB-3) плита Калевала 2500х1250х9 мм', src='/media/products/images/ea8f53e457c0412eb2f20cf5a0589f96.catalog_large.png')
-                .prod_tooltip2.expert_tooltip2
-                  span
-                    svg(fill='none', height='19', viewBox='0 0 19 19', width='19', xmlns='http://www.w3.org/2000/svg')
-                      path(clip-rule='evenodd', d='M8.63718 18.815L0 6.18097H6.12224L8.63718 18.815Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M0 4.59754H5.83368L4.49363 0.22731L0 4.59754Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M9.46875 18.815L18.1059 6.18097H11.9837L9.46875 18.815Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M18.2907 4.59754H12.457L13.7971 0.22731L18.2907 4.59754Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M12.8337 0H11.0982H9.67999H8.63422H7.30613H5.48047L6.92849 4.54874C8.48916 4.54874 9.90477 4.54874 11.4654 4.54874L12.8337 0Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M8.92475 16.4863L9.89877 11.3337L10.8728 6.18097H8.92475H6.97656L7.95057 11.3337L8.92475 16.4863Z', fill='white', fill-rule='evenodd')
-                    | Эксперт
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/fanera/fanera-fk-18-mm-1525kh1525-mm-518/', data-price='999.00', data-section-title='Продукты на главной')
-              .row
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/fanera/fanera-fk-18-mm-1525kh1525-mm-518/') Фанера ФК 18 мм 1525х1525 мм
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/fanera/fanera-fk-18-mm-1525kh1525-mm-518/') Фанера ФК 18 мм 1525х1525 мм
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-376', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/red.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        | мало
-                    .ratio-list
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star_empty.svg')
-                    p.single_price
-                      span 1 030 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 1014
-                        i .50
-                      span.product_page__price__tag Р.
-                    .credit_label Можно в кредит
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='1014.5', data-product-id='376', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='376', data-single-price='1014.5', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                    .prod_tooltip.econom_tooltip
-                      span Эконом
-                      svg(fill='none', height='54', viewBox='0 0 54 54', width='54', xmlns='http://www.w3.org/2000/svg')
-                        path#roundy2(d='M27 52.5C41.0833 52.5 52.5 41.0833 52.5 27C52.5 12.9167 41.0833 1.5 27 1.5C12.9167 1.5 1.5 12.9167 1.5 27C1.5 41.0833 12.9167 52.5 27 52.5Z', fill='#C1C1C1', stroke='white', stroke-width='3')
-                        path(clip-rule='evenodd', d='M43.3668 27.6904H45.9898V30.8891C45.9898 33.5078 38.4689 36.8663 35.7663 37.1355C35.3905 37.2145 35.0065 37.2782 34.6152 37.3263C34.5295 38.0823 34.4851 38.8576 34.4851 39.6474C34.4851 40.3388 34.5194 41.0192 34.5852 41.6852H30.1617C29.5854 40.8456 29.0795 39.9098 28.6578 38.8968C27.4039 39.1455 26.0826 39.2784 24.7175 39.2784C22.9265 39.2784 21.2108 39.0493 19.624 38.6304C19.6074 38.9667 19.5992 39.3056 19.5992 39.6474C19.5992 40.3388 19.6332 41.0192 19.6993 41.6852H15.2758C13.9701 39.7833 13.0266 37.3887 12.6022 34.7192C10.99 33.0402 10.0469 31.0094 10.0469 28.8212C10.0469 27.6175 10.3329 26.4619 10.858 25.3858C10.0435 23.9745 9.95746 22.4346 10.7821 21.4026C10.8461 21.3227 10.9144 21.2477 10.9863 21.1769C11.2485 21.8904 11.6989 22.6021 12.3153 23.2338C14.9157 20.3073 19.4978 18.3641 24.7175 18.3641C27.7821 18.3641 30.6271 19.0341 32.98 20.1796V20.1799L32.9442 20.2816L32.943 20.2856C32.9072 20.3918 32.8744 20.4999 32.8465 20.6095L32.8459 20.6114L32.8416 20.6291L32.8202 20.7176L32.8199 20.7198L32.8162 20.7354L32.8122 20.7531L32.8083 20.7712L32.8006 20.807L32.7969 20.8248L32.7954 20.8309L32.7932 20.8429L32.7896 20.8606L32.7825 20.8968L32.7792 20.9148L32.7758 20.9329L32.774 20.943L32.7727 20.951L32.7697 20.9693L32.7691 20.9718L32.7635 21.0055L32.7605 21.0238L32.7577 21.0419L32.7553 21.0563L32.7547 21.0603L32.7519 21.0783L32.7495 21.0967L32.7443 21.1335L32.7418 21.1518L32.7394 21.1702L32.7372 21.1886L32.7351 21.207L32.7329 21.2256L32.7308 21.244L32.7286 21.2624L32.7268 21.2811L32.7262 21.285L32.725 21.2994L32.7231 21.3181C32.7097 21.4614 32.7026 21.6063 32.7026 21.7529C32.7026 22.1378 32.7504 22.5111 32.8398 22.8682H34.3559C34.3139 22.625 34.2918 22.3748 34.2918 22.1198C34.2918 19.7038 36.2507 17.7449 38.6667 17.7449C39.0489 17.7449 39.4295 17.7951 39.7988 17.894L38.6667 22.1198V22.5932C41.0328 23.736 42.762 25.5567 43.3668 27.6904ZM24.2723 7.17967C27.2879 7.17967 29.7323 9.62417 29.7323 12.6397C29.7323 14.0407 29.2044 15.3182 28.3369 16.2846C27.1752 16.0191 25.9371 15.8752 24.6514 15.8752C23.1365 15.8752 21.6869 16.0748 20.3512 16.4386C19.3989 15.4557 18.8125 14.1163 18.8125 12.6397C18.8125 9.62417 21.257 7.17967 24.2723 7.17967ZM39.0807 25.7456C39.7262 25.7456 40.2495 26.2689 40.2495 26.9144C40.2495 27.5599 39.7262 28.083 39.0807 28.083C38.4352 28.083 37.9119 27.5599 37.9119 26.9144C37.9119 26.2689 38.4352 25.7456 39.0807 25.7456Z', fill='white', fill-rule='evenodd')
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/fanera/fanera-fk-18-mm-1525kh1525-mm-518/')
-                    img(alt='Фанера ФК 18 мм 1525х1525 мм', src='/media/products/images/01ea02b312584e6db275bedf937ea54b.catalog_large.png')
-                .prod_tooltip2.econom_tooltip2
-                  span
-                    svg(fill='none', height='22', viewBox='0 0 23 22', width='23', xmlns='http://www.w3.org/2000/svg')
-                      path(clip-rule='evenodd', d='M21.3215 13.0772H23V15.1166C23 16.7863 18.1874 18.9276 16.4579 19.0992C16.2175 19.1496 15.9718 19.1902 15.7214 19.2208C15.6665 19.7029 15.6381 20.1972 15.6381 20.7007C15.6381 21.1416 15.66 21.5754 15.7022 22H12.8715C12.5028 21.4647 12.1791 20.868 11.9092 20.2222C11.1068 20.3807 10.2613 20.4655 9.3878 20.4655C8.24171 20.4655 7.14382 20.3194 6.12842 20.0523C6.11784 20.2667 6.11255 20.4828 6.11255 20.7007C6.11255 21.1416 6.1343 21.5754 6.17662 22H3.34598C2.51047 20.7874 1.90675 19.2607 1.63517 17.5586C0.603514 16.4881 0 15.1933 0 13.7982C0 13.0307 0.183014 12.2939 0.519062 11.6079C-0.00215561 10.708 -0.0572162 9.72619 0.470468 9.06825C0.51142 9.01729 0.555115 8.96946 0.601162 8.92436C0.768893 9.37926 1.05713 9.83299 1.45157 10.2358C3.11555 8.3699 6.04769 7.13094 9.3878 7.13094C11.3488 7.13094 13.1694 7.55811 14.675 8.28848V8.28868L14.6521 8.3535L14.6513 8.35604C14.6284 8.42378 14.6074 8.4927 14.5896 8.56259L14.5892 8.56377L14.5864 8.57509L14.5727 8.63151L14.5725 8.63288L14.5702 8.64284L14.5676 8.65416L14.5651 8.66568L14.5602 8.68852L14.5578 8.69984L14.5569 8.70375L14.5555 8.71136L14.5531 8.72269L14.5486 8.74572L14.5465 8.75724L14.5443 8.76876L14.5431 8.77521L14.5424 8.78028L14.5404 8.792L14.54 8.79356L14.5365 8.81503L14.5345 8.82675L14.5328 8.83827L14.5312 8.84744L14.5308 8.84998L14.529 8.8615L14.5275 8.87321L14.5241 8.89664L14.5226 8.90835L14.521 8.92007L14.5196 8.93178L14.5183 8.9435L14.5169 8.95541L14.5155 8.96712L14.5141 8.97884L14.513 8.99074L14.5126 8.99328L14.5118 9.00246L14.5106 9.01437C14.502 9.10574 14.4975 9.19808 14.4975 9.2916C14.4975 9.53701 14.5281 9.775 14.5853 10.0026H15.5554C15.5286 9.84763 15.5145 9.68812 15.5145 9.52549C15.5145 7.98509 16.7679 6.73618 18.3139 6.73618C18.5585 6.73618 18.802 6.76819 19.0384 6.83125L18.3139 9.52549V9.82732C19.828 10.5559 20.9345 11.7168 21.3215 13.0772ZM9.10289 0C11.0326 0 12.5968 1.55856 12.5968 3.48123C12.5968 4.37442 12.259 5.18894 11.7039 5.8051C10.9605 5.63583 10.1682 5.54407 9.34547 5.54407C8.37612 5.54407 7.44851 5.67137 6.59379 5.90331C5.9844 5.2766 5.60916 4.42265 5.60916 3.48123C5.60916 1.55856 7.1734 0 9.10289 0ZM18.5789 11.8373C18.9919 11.8373 19.3268 12.1709 19.3268 12.5825C19.3268 12.994 18.9919 13.3275 18.5789 13.3275C18.1658 13.3275 17.8309 12.994 17.8309 12.5825C17.8309 12.1709 18.1658 11.8373 18.5789 11.8373Z', fill='white', fill-rule='evenodd')
-                    | Эконом
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/fanera/fanera-fsf-vlagostoikaia-21mm-sort-3-3-2440kh1220-70/', data-price='1569.00', data-section-title='Продукты на главной')
-              .row
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/fanera/fanera-fsf-vlagostoikaia-21mm-sort-3-3-2440kh1220-70/') Фанера ФСФ влагостойкая 21мм сорт 3/3 2440х1220
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/fanera/fanera-fsf-vlagostoikaia-21mm-sort-3-3-2440kh1220-70/') Фанера ФСФ влагостойкая 21мм сорт 3/3 ...
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-62', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/yellow.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/yellow.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        | огр. кол-во
-                    .ratio-list
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star_empty.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star_empty.svg')
-                    p.single_price
-                      span 1 617 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 1593
-                        i .00
-                      span.product_page__price__tag Р.
-                    .credit_label Можно в кредит
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='1593.0', data-product-id='62', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='62', data-single-price='1593.0', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                    .prod_tooltip.optimum_tooltip
-                      span Оптима
-                      svg(fill='none', height='54', viewBox='0 0 54 54', width='54', xmlns='http://www.w3.org/2000/svg')
-                        path#roundy(d='M26.691 51.8821C40.6037 51.8821 51.8821 40.6037 51.8821 26.6911C51.8821 12.7784 40.6037 1.5 26.691 1.5C12.7784 1.5 1.5 12.7784 1.5 26.6911C1.5 40.6037 12.7784 51.8821 26.691 51.8821Z', fill='#C1C1C1', stroke='white', stroke-width='3')
-                        path(d='M41.3245 24.7237C42.5033 24.7793 43.4418 25.7523 43.4418 26.945C43.4418 28.0637 42.6154 28.9895 41.54 29.1455L41.54 29.1455L41.54 29.1456C42.1787 29.5364 42.6048 30.2407 42.6048 31.0441C42.6048 32.1924 41.7346 33.1372 40.6178 33.2554L40.6177 33.2555C40.6178 33.2556 40.6178 33.2556 40.6178 33.2556C40.9001 33.6286 41.0678 34.0931 41.0678 34.597C41.0678 35.211 40.6579 35.7669 40.0945 36.1694C39.5311 36.5718 38.8141 36.8207 38.1999 36.8207C37.6034 36.8207 37.0451 36.8217 36.4975 36.8227C35.0834 36.8253 33.7411 36.8277 31.9994 36.8122C28.4798 36.7806 26.8496 36.2811 24.6177 35.5971C24.2889 35.4963 23.9469 35.3916 23.584 35.2837C23.5708 35.2798 23.5439 35.2747 23.5059 35.2687C23.468 35.2627 23.4191 35.2556 23.3621 35.2477C23.3146 35.2411 23.2614 35.2339 23.2043 35.2261C23.1245 35.2153 23.0371 35.2034 22.9465 35.1906C22.6356 35.147 22.2879 35.0934 22.0881 35.0382V22.8148C23.6526 22.3678 24.4932 21.9577 25.2752 21.4856C25.5127 21.3423 25.7448 21.1932 25.9901 21.0356C26.5526 20.6742 27.1847 20.2682 28.1111 19.784L28.1112 19.7839C29.1112 19.261 30.2311 18.6754 31.1175 17.7522C32.0039 16.8289 32.6568 15.5679 32.7228 13.6941C32.7661 12.4705 33.7929 11.5139 35.0164 11.5571C36.24 11.6 37.1966 12.6271 37.1534 13.8503C37.044 16.9592 36.0815 19.0125 34.7724 20.4851L34.7725 20.4852L34.7725 20.4852L34.7726 20.4852H40.3808C41.6092 20.4852 42.6048 21.4809 42.6048 22.709C42.6048 23.6 42.081 24.3684 41.3245 24.7237ZM41.3245 24.7237V24.7237ZM41.3246 24.7236C42.5034 24.7793 43.4419 25.7523 43.4419 26.945C43.4419 28.0637 42.6155 28.9895 41.5401 29.1455L41.3246 24.7236ZM11.6915 21.9739H19.307V36.5272H11.6915V21.9739ZM16.6922 32.9306C16.6922 32.2933 16.1756 31.7767 15.5384 31.7767C14.9012 31.7767 14.3846 32.2933 14.3846 32.9306C14.3846 33.5678 14.9012 34.0841 15.5384 34.0841C16.1756 34.0841 16.6922 33.5678 16.6922 32.9306Z', fill='white', stroke='black', stroke-width='0.000135852')
-                        path(d='M16.6043 32.9304C16.6043 33.5675 16.0878 34.0841 15.4506 34.0841C14.8135 34.0841 14.2969 33.5675 14.2969 32.9304C14.2969 32.2932 14.8135 31.7767 15.4506 31.7767C16.0878 31.7767 16.6043 32.2932 16.6043 32.9304Z', fill='#C1C1C1', stroke='black', stroke-width='0.000135852')
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/fanera/fanera-fsf-vlagostoikaia-21mm-sort-3-3-2440kh1220-70/')
-                    img(alt='Фанера ФСФ влагостойкая 21мм сорт 3/3 2440х1220', src='/media/products/images/6a83800d011040d3bd28d5b107980f49.catalog_large.png')
-                .prod_tooltip2.optimum_tooltip2
-                  span
-                    svg(fill='none', height='19', viewBox='0 0 23 19', width='23', xmlns='http://www.w3.org/2000/svg')
-                      path(d='M21.2639 9.44905C22.1097 9.48895 22.7831 10.1871 22.7831 11.043C22.7831 11.8457 22.1902 12.51 21.4185 12.6219L21.4185 12.622L21.4185 12.6221L21.4184 12.6221C21.8767 12.9025 22.1826 13.4079 22.1826 13.9844C22.1826 14.8083 21.5581 15.4863 20.7567 15.5711L20.7567 15.5713L20.7567 15.5712C20.7567 15.5713 20.7567 15.5713 20.7567 15.5713C20.9593 15.839 21.0796 16.1723 21.0796 16.5338C21.0796 16.9744 20.7855 17.3733 20.3812 17.6621C19.9769 17.9509 19.4625 18.1295 19.0217 18.1295C18.5937 18.1295 18.193 18.1302 17.8 18.1309C16.7854 18.1328 15.8222 18.1345 14.5725 18.1234C12.0468 18.1007 10.8771 17.7422 9.27556 17.2515C9.03957 17.1791 8.79421 17.104 8.53375 17.0265C8.52433 17.0238 8.50498 17.0201 8.47777 17.0158C8.45055 17.0115 8.41547 17.0064 8.37458 17.0007C8.34045 16.996 8.30228 16.9908 8.26127 16.9852C8.20405 16.9774 8.14131 16.9689 8.07632 16.9598C7.85324 16.9285 7.60373 16.89 7.46036 16.8504V8.0793C8.58301 7.75851 9.1862 7.46428 9.74738 7.12551C9.91778 7.02264 10.0843 6.91566 10.2603 6.80258C10.664 6.54328 11.1176 6.25191 11.7823 5.90445L11.7824 5.90439C12.5 5.52917 13.3035 5.10898 13.9396 4.44649C14.5757 3.78395 15.0442 2.87908 15.0916 1.5345C15.1226 0.656523 15.8594 -0.0299366 16.7373 0.00107887C17.6153 0.0318774 18.3018 0.768873 18.2708 1.64663C18.1922 3.87744 17.5016 5.35083 16.5622 6.40755L16.5623 6.4076L16.5623 6.40764L16.5624 6.40767H20.5867C21.4681 6.40767 22.1826 7.12211 22.1826 8.00333C22.1826 8.64273 21.8067 9.19407 21.2639 9.44905ZM21.2639 9.44905V9.44905ZM21.264 9.44898C22.1098 9.48897 22.7832 10.1871 22.7832 11.043C22.7832 11.8457 22.1903 12.51 21.4186 12.622L21.264 9.44898ZM6.79261e-05 7.4759H5.46474V17.9189H6.79261e-05V7.4759ZM3.58847 15.338C3.58847 14.8808 3.21775 14.5101 2.76049 14.5101C2.30323 14.5101 1.93251 14.8808 1.93251 15.338C1.93251 15.7953 2.30323 16.1658 2.76049 16.1658C3.21775 16.1658 3.58847 15.7953 3.58847 15.338Z', fill='white', stroke='black', stroke-width='0.000135852')
-                    | Оптима
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/dvp-dsp-tssp/tssp-8-mm-32-kh-125m-1s-tamak-427/', data-price='872.00', data-section-title='Продукты на главной')
-              .row
-                span.corner_tag
-                  img(alt='', src='/static/assets/images/svg/thumbs-up.svg')
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/dvp-dsp-tssp/tssp-8-mm-32-kh-125m-1s-tamak-427/') ЦСП Тамак 8 мм (3,2х1,25)
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/dvp-dsp-tssp/tssp-8-mm-32-kh-125m-1s-tamak-427/') ЦСП Тамак 8 мм (3,2х1,25)
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-310', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/yellow.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/yellow.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        | огр. кол-во
-                    .ratio-list
-                      a(href='/catalog/product/dvp-dsp-tssp/tssp-8-mm-32-kh-125m-1s-tamak-427/?scroll_to_reviews=true') Оставьте отзыв
-                    p.single_price
-                      span 899 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 885
-                        i .50
-                      span.product_page__price__tag Р.
-                    .credit_label Можно в кредит
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='885.5', data-product-id='310', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='310', data-single-price='885.5', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                    .prod_tooltip.expert_tooltip
-                      span Эксперт
-                      svg(fill='none', height='54', viewBox='0 0 54 54', width='54', xmlns='http://www.w3.org/2000/svg')
-                        path#roundy3(d='M27 52.5C41.0833 52.5 52.5 41.0833 52.5 27C52.5 12.9167 41.0833 1.5 27 1.5C12.9167 1.5 1.5 12.9167 1.5 27C1.5 41.0833 12.9167 52.5 27 52.5Z', fill='#C1C1C1', stroke='white', stroke-width='3')
-                        path(d='M41.8242 25.0069C43.0184 25.0633 43.9692 26.0489 43.9692 27.2572C43.9692 28.3905 43.132 29.3284 42.0425 29.4864L42.0425 29.4865L42.0425 29.4865C42.6895 29.8825 43.1213 30.5959 43.1213 31.4098C43.1213 32.573 42.2397 33.5302 41.1083 33.65L41.1082 33.6501C41.1082 33.6501 41.1083 33.6501 41.1083 33.6502C41.3942 34.028 41.5642 34.4986 41.5642 35.009C41.5642 35.631 41.149 36.1942 40.5782 36.6019C40.0074 37.0096 39.2811 37.2617 38.6589 37.2617C38.0546 37.2617 37.4889 37.2627 36.9342 37.2638C35.5017 37.2664 34.1418 37.2688 32.3776 37.2531C28.812 37.2211 27.1605 36.715 24.8996 36.0222C24.5664 35.9201 24.22 35.8139 23.8523 35.7046C23.839 35.7007 23.8117 35.6956 23.7733 35.6895C23.7349 35.6834 23.6853 35.6762 23.6276 35.6682C23.5794 35.6615 23.5255 35.6542 23.4676 35.6463C23.3868 35.6353 23.2983 35.6233 23.2065 35.6104C22.8916 35.5662 22.5393 35.5119 22.3369 35.456V23.0732C23.9219 22.6203 24.7734 22.2049 25.5657 21.7267C25.8063 21.5814 26.0414 21.4304 26.2899 21.2708C26.8597 20.9047 27.5001 20.4933 28.4385 20.0028L28.4386 20.0027C29.4517 19.473 30.5861 18.8798 31.4841 17.9445C32.3821 17.0092 33.0435 15.7317 33.1104 13.8335C33.1542 12.594 34.1943 11.6249 35.4339 11.6686C36.6734 11.7121 37.6425 12.7526 37.5987 13.9918C37.4879 17.1412 36.5129 19.2213 35.1867 20.7131L35.1867 20.7132L35.1868 20.7132L35.1868 20.7132H40.8682C42.1126 20.7132 43.1213 21.7219 43.1213 22.966C43.1213 23.8687 42.5906 24.647 41.8242 25.0069ZM41.8242 25.0069V25.0069ZM41.8243 25.0069C43.0185 25.0633 43.9692 26.049 43.9692 27.2572C43.9692 28.3905 43.1321 29.3284 42.0426 29.4864L41.8243 25.0069ZM11.8048 22.2213H19.5196V36.9644H11.8048V22.2213ZM16.8707 33.3208C16.8707 32.6753 16.3474 32.152 15.7019 32.152C15.0563 32.152 14.533 32.6753 14.533 33.3208C14.533 33.9664 15.0563 34.4894 15.7019 34.4894C16.3474 34.4894 16.8707 33.9664 16.8707 33.3208Z', fill='white', stroke='black', stroke-width='0.000135852')
-                        path(d='M16.7829 33.3207C16.7829 33.9662 16.2596 34.4894 15.6141 34.4894C14.9686 34.4894 14.4454 33.9662 14.4454 33.3207C14.4454 32.6752 14.9686 32.152 15.6141 32.152C16.2596 32.152 16.7829 32.6752 16.7829 33.3207Z', fill='#A7A733', stroke='black', stroke-width='0.000135852')
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/dvp-dsp-tssp/tssp-8-mm-32-kh-125m-1s-tamak-427/')
-                    img(alt='ЦСП Тамак 8 мм (3,2х1,25)', src='/media/products/images/4ba2a8762b794ba296653d46541b2f3c.catalog_large.png')
-                .prod_tooltip2.expert_tooltip2
-                  span
-                    svg(fill='none', height='19', viewBox='0 0 19 19', width='19', xmlns='http://www.w3.org/2000/svg')
-                      path(clip-rule='evenodd', d='M8.63718 18.815L0 6.18097H6.12224L8.63718 18.815Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M0 4.59754H5.83368L4.49363 0.22731L0 4.59754Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M9.46875 18.815L18.1059 6.18097H11.9837L9.46875 18.815Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M18.2907 4.59754H12.457L13.7971 0.22731L18.2907 4.59754Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M12.8337 0H11.0982H9.67999H8.63422H7.30613H5.48047L6.92849 4.54874C8.48916 4.54874 9.90477 4.54874 11.4654 4.54874L12.8337 0Z', fill='white', fill-rule='evenodd')
-                      path(clip-rule='evenodd', d='M8.92475 16.4863L9.89877 11.3337L10.8728 6.18097H8.92475H6.97656L7.95057 11.3337L8.92475 16.4863Z', fill='white', fill-rule='evenodd')
-                    | Эксперт
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/profnastil/profnastil-c8-04mm-dlina-3m-otsinkovannyi-729/', data-price='209.00', data-section-title='Продукты на главной')
-              .row
-                span.corner_tag
-                  img(alt='', src='/static/assets/images/svg/thumbs-up.svg')
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/profnastil/profnastil-c8-04mm-dlina-3m-otsinkovannyi-729/') Профнастил C8 0,4мм Длина 3м Оцинкованный
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/profnastil/profnastil-c8-04mm-dlina-3m-otsinkovannyi-729/') Профнастил C8 0,4мм Длина 3м Оцинкованный
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-563', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/red.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        | мало
-                    .ratio-list
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                    p.single_price
-                      span 209 р./м2
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 209
-                        i .00
-                      span.product_page__price__tag Р.
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='209.0', data-product-id='563', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='563', data-single-price='209.0', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/profnastil/profnastil-c8-04mm-dlina-3m-otsinkovannyi-729/')
-                    img(alt='Профнастил C8 0,4мм Длина 3м Оцинкованный', src='/media/products/images/eb9f4d9f80604d0c820487f4f33409ed.catalog_large.png')
-            .product__wrapper.no_product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/metallocherepitsa/metallocherepitsa-monterrei-045-mm-s-poliestrovym-pokrytiem-1913/', data-price='295.00', data-section-title='Продукты на главной')
-              .row
-                span.corner_tag
-                  img(alt='', src='/static/assets/images/svg/thumbs-up.svg')
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/metallocherepitsa/metallocherepitsa-monterrei-045-mm-s-poliestrovym-pokrytiem-1913/') Металлочерепица Монтеррей 0,45 мм с полиэстровым покрытием
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/metallocherepitsa/metallocherepitsa-monterrei-045-mm-s-poliestrovym-pokrytiem-1913/') Металлочерепица Монтеррей 0,45 мм с ...
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-1666', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        | под заказ
-                    .ratio-list
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star_empty.svg')
-                    p.single_price
-                      span.pricetext Последний раз товар был продан по цене:
-                      span 299 р./м2
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title Архивная цена
-                      span.product_page__price__amount
-                        | 297
-                        i .00
-                      span.product_page__price__tag Р.
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='297.0', data-product-id='1666', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='1666', data-single-price='297.0', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/metallocherepitsa/metallocherepitsa-monterrei-045-mm-s-poliestrovym-pokrytiem-1913/')
-                    img(alt='Металлочерепица Монтеррей 0,45 мм с полиэстровым покрытием', src='/media/products/images/d8a6aaf4bc924f81ab72605d8aac9621.catalog_large.png')
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/vodostochnaia-sistema-grand-sistem/grand-system-koleno-truby-d90-60-gradusov-belyi-3187/', data-price='264.00', data-section-title='Продукты на главной')
-              .row
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/vodostochnaia-sistema-grand-sistem/grand-system-koleno-truby-d90-60-gradusov-belyi-3187/') Grand System Колено трубы D90*60 градусов (Белый)
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/vodostochnaia-sistema-grand-sistem/grand-system-koleno-truby-d90-60-gradusov-belyi-3187/') Grand System Колено трубы D90*60 градусов ...
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-2869', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        | много
-                    .ratio-list
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star_empty.svg')
-                    p.single_price
-                      span 278 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 271
-                        i .00
-                      span.product_page__price__tag Р.
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='271.0', data-product-id='2869', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='2869', data-single-price='271.0', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/vodostochnaia-sistema-grand-sistem/grand-system-koleno-truby-d90-60-gradusov-belyi-3187/')
-                    img(alt='Grand System Колено трубы D90*60 градусов (Белый)', src='/media/products/images/01ed5f1a4c3a497fa36e89e3a4fbab62.catalog_large.jpg')
-            .product__wrapper.no_product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/shinglac/shinglas-finskaia-cherepitsa-akkord-korichnevyi-2752/', data-price='265.00', data-section-title='Продукты на главной')
-              .row
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/shinglac/shinglas-finskaia-cherepitsa-akkord-korichnevyi-2752/') Shinglas Финская черепица Аккорд Коричневый
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/shinglac/shinglas-finskaia-cherepitsa-akkord-korichnevyi-2752/') Shinglas Финская черепица Аккорд Коричневый
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-2453', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        | под заказ
-                    .ratio-list
-                      a(href='/catalog/product/shinglac/shinglas-finskaia-cherepitsa-akkord-korichnevyi-2752/?scroll_to_reviews=true') Оставьте отзыв
-                    p.single_price
-                      span.pricetext Последний раз товар был продан по цене:
-                      span 269 р./м2
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title Архивная цена
-                      span.product_page__price__amount
-                        | 267
-                        i .00
-                      span.product_page__price__tag Р.
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='267.0', data-product-id='2453', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='2453', data-single-price='267.0', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/shinglac/shinglas-finskaia-cherepitsa-akkord-korichnevyi-2752/')
-                    img(alt='Shinglas Финская черепица Аккорд Коричневый', src='/media/products/images/c5a41f39eceb41f0ab51f3ea0129d6fc.catalog_large.jpg')
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/keramzitovye-bloki/keramzitoblok-peregorodochnyi-106/', data-price='21.00', data-section-title='Продукты на главной')
-              .row
-                span.corner_tag
-                  img(alt='', src='/static/assets/images/svg/thumbs-up.svg')
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/keramzitovye-bloki/keramzitoblok-peregorodochnyi-106/') Керамзитоблок (ПЕРЕГОРОДОЧНЫЙ)
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/keramzitovye-bloki/keramzitoblok-peregorodochnyi-106/') Керамзитоблок (ПЕРЕГОРОДОЧНЫЙ)
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-88', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/red.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        | мало
-                    .ratio-list
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                    p.single_price
-                      span 22 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 21
-                        i .50
-                      span.product_page__price__tag Р.
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='21.5', data-product-id='88', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='88', data-single-price='21.5', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/keramzitovye-bloki/keramzitoblok-peregorodochnyi-106/')
-                    img(alt='Керамзитоблок (ПЕРЕГОРОДОЧНЫЙ)', src='/media/products/images/e52b0b599e6047c5a33df8fc7a868a8b.catalog_large.png')
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/gazobetonnye-bloki/bloki-gazobetonnye-stenovye-625kh300kh250-mm-kottedzh-2131/', data-price='190.00', data-section-title='Продукты на главной')
-              .row
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/gazobetonnye-bloki/bloki-gazobetonnye-stenovye-625kh300kh250-mm-kottedzh-2131/') Блоки газобетонные стеновые 625Х300Х250 мм КОТТЕДЖ
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/gazobetonnye-bloki/bloki-gazobetonnye-stenovye-625kh300kh250-mm-kottedzh-2131/') Блоки газобетонные стеновые 625Х300Х250 мм ...
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-1856', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        | много
-                    .ratio-list
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                    p.single_price
-                      span 199 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 194
-                        i .50
-                      span.product_page__price__tag Р.
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='194.5', data-product-id='1856', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='1856', data-single-price='194.5', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/gazobetonnye-bloki/bloki-gazobetonnye-stenovye-625kh300kh250-mm-kottedzh-2131/')
-                    img(alt='Блоки газобетонные стеновые 625Х300Х250 мм КОТТЕДЖ', src='/media/products/images/b4c77d0c58454d2d93b88f8fe7a7ecfa.catalog_large.png')
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/kirpich/kirpich-tsokolnyi-tkz-m-150-637/', data-price='9.90', data-section-title='Продукты на главной')
-              .row
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/kirpich/kirpich-tsokolnyi-tkz-m-150-637/') Кирпич цокольный ТКЗ М-150
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/kirpich/kirpich-tsokolnyi-tkz-m-150-637/') Кирпич цокольный ТКЗ М-150
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-477', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        | много
-                    .ratio-list
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                    p.single_price
-                      span 10.10 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 10
-                        i .00
-                      span.product_page__price__tag Р.
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='10.0', data-product-id='477', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='477', data-single-price='10.0', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/kirpich/kirpich-tsokolnyi-tkz-m-150-637/')
-                    img(alt='Кирпич цокольный ТКЗ М-150', src='/media/products/images/fc0714153338472a9f407428213cee7d.catalog_large.png')
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/metalloprokat/armatura-a-3-riflenaia-8mm-6m-331/', data-price='19.50', data-section-title='Продукты на главной')
-              .row
-                span.corner_tag
-                  img(alt='', src='/static/assets/images/svg/thumbs-up.svg')
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/metalloprokat/armatura-a-3-riflenaia-8mm-6m-331/') Арматура А-3 (рифленая) 8мм 6м
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/metalloprokat/armatura-a-3-riflenaia-8mm-6m-331/') Арматура А-3 (рифленая) 8мм 6м
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-242', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/red.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        | мало
-                    .ratio-list
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star_empty.svg')
-                    p.single_price
-                      span 21 р./п.м.
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 20
-                        i .25
-                      span.product_page__price__tag Р.
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='20.25', data-product-id='242', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='242', data-single-price='20.25', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/metalloprokat/armatura-a-3-riflenaia-8mm-6m-331/')
-                    img(alt='Арматура А-3 (рифленая) 8мм 6м', src='/media/products/images/08d37ad23f1244afa20d1088bdb2d092.catalog_large.png')
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/brus-doska-obreznaia/doska-obreznaia-sort-1-sechenie-0025kh0150kh6m-534/', data-price='209.00', data-section-title='Продукты на главной')
-              .row
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/brus-doska-obreznaia/doska-obreznaia-sort-1-sechenie-0025kh0150kh6m-534/') Доска обрезная сорт 1 сечение 0,025х0,150х6м
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/brus-doska-obreznaia/doska-obreznaia-sort-1-sechenie-0025kh0150kh6m-534/') Доска обрезная сорт 1 сечение ...
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-391', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        | много
-                    .ratio-list
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                      img(alt='', src='/static/assets/images/svg/rating_star.svg')
-                    p.single_price
-                      span 210 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 209
-                        i .50
-                      span.product_page__price__tag Р.
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='209.5', data-product-id='391', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='391', data-single-price='209.5', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                    .prod_tooltip.optimum_tooltip
-                      span Оптима
-                      svg(fill='none', height='54', viewBox='0 0 54 54', width='54', xmlns='http://www.w3.org/2000/svg')
-                        path#roundy(d='M26.691 51.8821C40.6037 51.8821 51.8821 40.6037 51.8821 26.6911C51.8821 12.7784 40.6037 1.5 26.691 1.5C12.7784 1.5 1.5 12.7784 1.5 26.6911C1.5 40.6037 12.7784 51.8821 26.691 51.8821Z', fill='#C1C1C1', stroke='white', stroke-width='3')
-                        path(d='M41.3245 24.7237C42.5033 24.7793 43.4418 25.7523 43.4418 26.945C43.4418 28.0637 42.6154 28.9895 41.54 29.1455L41.54 29.1455L41.54 29.1456C42.1787 29.5364 42.6048 30.2407 42.6048 31.0441C42.6048 32.1924 41.7346 33.1372 40.6178 33.2554L40.6177 33.2555C40.6178 33.2556 40.6178 33.2556 40.6178 33.2556C40.9001 33.6286 41.0678 34.0931 41.0678 34.597C41.0678 35.211 40.6579 35.7669 40.0945 36.1694C39.5311 36.5718 38.8141 36.8207 38.1999 36.8207C37.6034 36.8207 37.0451 36.8217 36.4975 36.8227C35.0834 36.8253 33.7411 36.8277 31.9994 36.8122C28.4798 36.7806 26.8496 36.2811 24.6177 35.5971C24.2889 35.4963 23.9469 35.3916 23.584 35.2837C23.5708 35.2798 23.5439 35.2747 23.5059 35.2687C23.468 35.2627 23.4191 35.2556 23.3621 35.2477C23.3146 35.2411 23.2614 35.2339 23.2043 35.2261C23.1245 35.2153 23.0371 35.2034 22.9465 35.1906C22.6356 35.147 22.2879 35.0934 22.0881 35.0382V22.8148C23.6526 22.3678 24.4932 21.9577 25.2752 21.4856C25.5127 21.3423 25.7448 21.1932 25.9901 21.0356C26.5526 20.6742 27.1847 20.2682 28.1111 19.784L28.1112 19.7839C29.1112 19.261 30.2311 18.6754 31.1175 17.7522C32.0039 16.8289 32.6568 15.5679 32.7228 13.6941C32.7661 12.4705 33.7929 11.5139 35.0164 11.5571C36.24 11.6 37.1966 12.6271 37.1534 13.8503C37.044 16.9592 36.0815 19.0125 34.7724 20.4851L34.7725 20.4852L34.7725 20.4852L34.7726 20.4852H40.3808C41.6092 20.4852 42.6048 21.4809 42.6048 22.709C42.6048 23.6 42.081 24.3684 41.3245 24.7237ZM41.3245 24.7237V24.7237ZM41.3246 24.7236C42.5034 24.7793 43.4419 25.7523 43.4419 26.945C43.4419 28.0637 42.6155 28.9895 41.5401 29.1455L41.3246 24.7236ZM11.6915 21.9739H19.307V36.5272H11.6915V21.9739ZM16.6922 32.9306C16.6922 32.2933 16.1756 31.7767 15.5384 31.7767C14.9012 31.7767 14.3846 32.2933 14.3846 32.9306C14.3846 33.5678 14.9012 34.0841 15.5384 34.0841C16.1756 34.0841 16.6922 33.5678 16.6922 32.9306Z', fill='white', stroke='black', stroke-width='0.000135852')
-                        path(d='M16.6043 32.9304C16.6043 33.5675 16.0878 34.0841 15.4506 34.0841C14.8135 34.0841 14.2969 33.5675 14.2969 32.9304C14.2969 32.2932 14.8135 31.7767 15.4506 31.7767C16.0878 31.7767 16.6043 32.2932 16.6043 32.9304Z', fill='#C1C1C1', stroke='black', stroke-width='0.000135852')
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/brus-doska-obreznaia/doska-obreznaia-sort-1-sechenie-0025kh0150kh6m-534/')
-                    img(alt='Доска обрезная сорт 1 сечение 0,025х0,150х6м', src='/media/products/images/3e37d7e73be842a0ad13e3fcaa2165e6.catalog_large.png')
-                .prod_tooltip2.optimum_tooltip2
-                  span
-                    svg(fill='none', height='19', viewBox='0 0 23 19', width='23', xmlns='http://www.w3.org/2000/svg')
-                      path(d='M21.2639 9.44905C22.1097 9.48895 22.7831 10.1871 22.7831 11.043C22.7831 11.8457 22.1902 12.51 21.4185 12.6219L21.4185 12.622L21.4185 12.6221L21.4184 12.6221C21.8767 12.9025 22.1826 13.4079 22.1826 13.9844C22.1826 14.8083 21.5581 15.4863 20.7567 15.5711L20.7567 15.5713L20.7567 15.5712C20.7567 15.5713 20.7567 15.5713 20.7567 15.5713C20.9593 15.839 21.0796 16.1723 21.0796 16.5338C21.0796 16.9744 20.7855 17.3733 20.3812 17.6621C19.9769 17.9509 19.4625 18.1295 19.0217 18.1295C18.5937 18.1295 18.193 18.1302 17.8 18.1309C16.7854 18.1328 15.8222 18.1345 14.5725 18.1234C12.0468 18.1007 10.8771 17.7422 9.27556 17.2515C9.03957 17.1791 8.79421 17.104 8.53375 17.0265C8.52433 17.0238 8.50498 17.0201 8.47777 17.0158C8.45055 17.0115 8.41547 17.0064 8.37458 17.0007C8.34045 16.996 8.30228 16.9908 8.26127 16.9852C8.20405 16.9774 8.14131 16.9689 8.07632 16.9598C7.85324 16.9285 7.60373 16.89 7.46036 16.8504V8.0793C8.58301 7.75851 9.1862 7.46428 9.74738 7.12551C9.91778 7.02264 10.0843 6.91566 10.2603 6.80258C10.664 6.54328 11.1176 6.25191 11.7823 5.90445L11.7824 5.90439C12.5 5.52917 13.3035 5.10898 13.9396 4.44649C14.5757 3.78395 15.0442 2.87908 15.0916 1.5345C15.1226 0.656523 15.8594 -0.0299366 16.7373 0.00107887C17.6153 0.0318774 18.3018 0.768873 18.2708 1.64663C18.1922 3.87744 17.5016 5.35083 16.5622 6.40755L16.5623 6.4076L16.5623 6.40764L16.5624 6.40767H20.5867C21.4681 6.40767 22.1826 7.12211 22.1826 8.00333C22.1826 8.64273 21.8067 9.19407 21.2639 9.44905ZM21.2639 9.44905V9.44905ZM21.264 9.44898C22.1098 9.48897 22.7832 10.1871 22.7832 11.043C22.7832 11.8457 22.1903 12.51 21.4186 12.622L21.264 9.44898ZM6.79261e-05 7.4759H5.46474V17.9189H6.79261e-05V7.4759ZM3.58847 15.338C3.58847 14.8808 3.21775 14.5101 2.76049 14.5101C2.30323 14.5101 1.93251 14.8808 1.93251 15.338C1.93251 15.7953 2.30323 16.1658 2.76049 16.1658C3.21775 16.1658 3.58847 15.7953 3.58847 15.338Z', fill='white', stroke='black', stroke-width='0.000135852')
-                    | Оптима
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/brus-doska-obreznaia/doska-obreznaia-sort-1-sechenie-0050kh0150kh6m-530/', data-price='401.00', data-section-title='Продукты на главной')
-              .row
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/brus-doska-obreznaia/doska-obreznaia-sort-1-sechenie-0050kh0150kh6m-530/') Доска обрезная сорт 1 сечение 0,050х0,150х6м
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/brus-doska-obreznaia/doska-obreznaia-sort-1-sechenie-0050kh0150kh6m-530/') Доска обрезная сорт 1 сечение ...
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-387', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        | много
-                    .ratio-list
-                      a(href='/catalog/product/brus-doska-obreznaia/doska-obreznaia-sort-1-sechenie-0050kh0150kh6m-530/?scroll_to_reviews=true') Оставьте отзыв
-                    p.single_price
-                      span 403 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 402
-                        i .00
-                      span.product_page__price__tag Р.
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='402.0', data-product-id='387', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='387', data-single-price='402.0', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/brus-doska-obreznaia/doska-obreznaia-sort-1-sechenie-0050kh0150kh6m-530/')
-                    img(alt='Доска обрезная сорт 1 сечение 0,050х0,150х6м', src='/media/products/images/fa7358635e2e4c919ad97245d189b233.catalog_large.png')
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/brus-doska-obreznaia/brus-sort-1-sechenie-0150kh0200kh6m-542/', data-price='1674.00', data-section-title='Продукты на главной')
-              .row
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/brus-doska-obreznaia/brus-sort-1-sechenie-0150kh0200kh6m-542/') БРУС сорт 1 сечение 0,150х0,200х6м
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/brus-doska-obreznaia/brus-sort-1-sechenie-0150kh0200kh6m-542/') БРУС сорт 1 сечение 0,150х0,200х6м
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-399', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/green.svg')
-                        | много
-                    .ratio-list
-                      a(href='/catalog/product/brus-doska-obreznaia/brus-sort-1-sechenie-0150kh0200kh6m-542/?scroll_to_reviews=true') Оставьте отзыв
-                    p.single_price
-                      span 1 683 р./шт
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 1678
-                        i .50
-                      span.product_page__price__tag Р.
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='1678.5', data-product-id='399', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='399', data-single-price='1678.5', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/brus-doska-obreznaia/brus-sort-1-sechenie-0150kh0200kh6m-542/')
-                    img(alt='БРУС сорт 1 сечение 0,150х0,200х6м', src='/media/products/images/9a6e5b6939804fefb1070176115e911a.catalog_large.png')
-            .product__wrapper.product__wrapper__cols(data-link-href='/catalog/product/vagonka-blokkhaus-evropol/evrovagonka-sosna-00125h0089h25-m-sort-aa/', data-price='28.00', data-section-title='Продукты на главной')
-              .row
-                .col.product__info
-                  .prodname.prodname__full(style='display: none;')
-                    a(href='/catalog/product/vagonka-blokkhaus-evropol/evrovagonka-sosna-00125h0089h25-m-sort-aa/') Евровагонка (сосна) 0,0125х0,089х2,5 м сорт АА
-                  .prodname.prodname__truncated(style='display: block;')
-                    a(href='/catalog/product/vagonka-blokkhaus-evropol/evrovagonka-sosna-00125h0089h25-m-sort-aa/') Евровагонка (сосна) 0,0125х0,089х2,5 м сорт АА
-                  .infoprice
-                    .stock__wrapper
-                      a.stock__wrapper(data-ajax-url='/catalog/ajax_get_stocks/', data-stock-container-id='product_stock-3427', href='#')
-                        img(alt='', src='/static/assets/images/svg/stock/red.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        img(alt='', src='/static/assets/images/svg/stock/empty.svg')
-                        | мало
-                    .ratio-list
-                      a(href='/catalog/product/vagonka-blokkhaus-evropol/evrovagonka-sosna-00125h0089h25-m-sort-aa/?scroll_to_reviews=true') Оставьте отзыв
-                    p.single_price
-                      span 28.90 р./п.м.
-                  .actualprice
-                    p.product_page__price__wrapper
-                      span.product_page__price__title
-                        | Цена через 
-                        br
-                        |  интернет
-                      span.product_page__price__amount
-                        | 28
-                        i .45
-                      span.product_page__price__tag Р.
-                  .buy__wrapper
-                    a.btn.btn-primary.btn_add_to_cart(data-count='1', data-price='28.45', data-product-id='3427', href='#')
-                      img(alt='', src='/static/assets/images/svg/cart-icon.svg')
-                      | В корзину
-                    .row.counter__wrapper
-                      .col-3
-                        a.btn.counter__minus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                      .col-6
-                        input.form-control(autocomplete='off', data-product-id='3427', data-single-price='28.45', maxlength='6', name='count', onkeypress='return validateNumsOnly(event);', type='text', value='1')
-                      .col-3
-                        a.btn.counter__plus(href='#')
-                          svg(fill='none', height='24', viewBox='0 0 24 24', width='24', xmlns='http://www.w3.org/2000/svg')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(0 12)')
-                            path(d='M0 0H23.5', stroke='#828282', stroke-width='2', transform='translate(11.75 23.75) rotate(-90)')
-                    a.product__actions_btn(href='/customers/delivery_calculator/')
-                      span.icon
-                        svg(fill='none', height='24', viewBox='0 0 31 24', width='31', xmlns='http://www.w3.org/2000/svg')
-                          path(d='M0 8.91893V0H16.4902V19.027H0V8.91893Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(1 1)')
-                          path(d='M12.5098 12.4865H0V0H7.39216L12.5098 5.26173L12.5098 12.4865Z', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(17.4902 7.54053)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(20.3335 17.0537)')
-                          path(d='M2.84314 5.94594C4.41336 5.94594 5.68628 4.6149 5.68628 2.97297C5.68628 1.33104 4.41336 0 2.84314 0C1.27292 0 0 1.33104 0 2.97297C0 4.6149 1.27292 5.94594 2.84314 5.94594Z', fill='#ffffff', stroke='#8F9090', stroke-linejoin='round', stroke-miterlimit='10', transform='translate(5.54907 17.0537)')
-                      span.caption Доставка
-                .col.product__preview
-                  a.product__preview__wrapper(href='/catalog/product/vagonka-blokkhaus-evropol/evrovagonka-sosna-00125h0089h25-m-sort-aa/')
-                    img(alt='Евровагонка (сосна) 0,0125х0,089х2,5 м сорт АА', src='/media/products/images/d80487277c3c4cdb97681c5b79627544.catalog_large.png')
           .payment_methods__wrapper
             .row
               .col-4.col-lg-2
@@ -2785,6 +1451,8 @@ html(lang='ru-RU', xml:lang='ru-RU')
                 span
                   img(alt='', src='/media/categories/images/icons/c4303353c50846cd90a39c6a7a56e434.svg')
                 span Уценка
+    
+    
     main
       section.section-gray
         .container
@@ -3117,7 +1785,7 @@ html(lang='ru-RU', xml:lang='ru-RU')
                 svg.logo-developer
                   use(xlink:href='#stroyker-logo')
     .footer__bottom-panel
-      .footer_container
+      .container.footer_container
         .mobile-left
           a.footer-link.footer-link--search
             span.icon
@@ -3140,8 +1808,33 @@ html(lang='ru-RU', xml:lang='ru-RU')
           form(action='/catalog/catalog_search/', method='get')
             input(data-mobilebottom='true', data-url='/catalog/search/', name='query', placeholder='Поиск...', type='text')
             img(alt='', src='/static/assets/images/svg/black-cross.svg')
-        .left-bottom-panel
-        button.footer__button-feedback.mobile-hide.js-callmeback(data-popup-name='call_me_back__popup', type='button') Перезвоните мне
+        .left-bottom-panel.bottom-panel-buttons
+          button.button.button_style-1.js-callmeback(data-popup-name='call_me_back__popup', type='button')
+            img.icon(src=href+'/img/phone.svg', alt="icon")
+            span Перезвоните мне
+          
+          //message content
+          .safety-message.toggle-section
+            a(href="javascript:void(0);").toggle-section__trigger.button.button_style-1
+              img.icon(src=href+'/img/print.svg', alt="icon")
+              span Безопасность
+            .safety-message__popup.toggle-section__content
+              a(href="javascript:void(0);").safety-message__popup-close.toggle-section__close
+              span Наш сайт использует cookie, данные об IP-адресе, местоположении. Если Вы не хотите, чтобы эти данные обрабатывались, то должны покинуть сайт.
+          
+          //scrollTop
+          a(href="javascript:void(0);").button.button_style-1.js-up
+            img.icon(src=href+'/img/arrow-bordered.svg', alt="icon")
+            span Наверх
+        
+        
+        
+        
+        
+        
+        
+        
+        
         .footer___bottom_panel__message(data-close-delay='5s')
           p.message__wrapper
           a.btn_submit_order(data-url='/customers/order/', href='#') Посмотреть
@@ -3203,85 +1896,12 @@ html(lang='ru-RU', xml:lang='ru-RU')
         span —
       span.description
         | Этот товар вы можете купить в кредит не выходя из дома. Кладите товары с пометкой "Можно в кредит" в корзину далее по форме заказа
-    #city_list.dialog
-      .dialog__overlay
-      .dialog__content.dialog__content__citylist
-        a.close-popup(href='#')
-        .popup-screen-1(style='')
-          form(action='', method='post')
-            span.dialog__headline Выберите регион
-            ul.city_selector_list
-              li
-                a(data-region-id='4', href='/regions/change_region/4/') Ульяновская область
-              li.active_city
-                a(data-region-id='1', href='/regions/change_region/1/') Самарская область
-              li
-                a(data-region-id='2', href='/regions/change_region/2/') Оренбургская область
-    #popup__call_me_back.popup__template__wrapper(data-url='/customers/ajax_call_me_request/')
-      .dialog__call_me_back
-        a.close-popup(href='#', onclick='javascript:jQuery.fancybox.close();')
-          svg(fill='none', height='16', viewBox='0 0 16 16', width='16', xmlns='http://www.w3.org/2000/svg')
-            circle(cx='8', cy='8', r='7.5', stroke='#C1C1C1')
-            path(d='M4 4L12 12', stroke='#C1C1C1')
-            path(d='M4 12L12 4', stroke='#C1C1C1')
-        form(action='', method='post')
-          input(name='csrfmiddlewaretoken', type='hidden', value='JV1Op0xlvCLEYFHD6aV1AHHRDTZkUKMq93v25SS9185K2nGMJaPdeaAzGxzCVvSU')
-          img.popup_main_icon(alt='', src='/static/assets/images/svg/call-me-back-icon.svg')
-          span.dialog__headline Перезвоните мне
-          .form-group
-            input.form-control(name='name', placeholder='Как Вас зовут', type='text')
-          .form-group
-            input(name='service_office', type='hidden', value='')
-            button.as_select(type='button') Офис продаж
-            .select_dropdown__menu
-          .row.input_phone__wrapper
-            .col-8
-              .form-group
-                p.input_phone_prefix +7
-                input.form-control(name='phone', placeholder='Ваш телефон', type='email')
-            .col-4
-              .form-group
-                button.btn.btn-primary.btn_submit(type='submit') Отправить
-          .row.agreement__wrapper
-            .col-12
-              p.agreement_text
-                | Нажимая кнопку "Отправить", Вы подтверждаете свое согласие с 
-                a(href='/policy/') политикой конфиденциальности
-    #popup__call_me_ok.popup__template__wrapper
-      .dialog__call_me_back
-        a.close-popup(href='#', onclick='javascript:jQuery.fancybox.close();')
-          svg(fill='none', height='16', viewBox='0 0 16 16', width='16', xmlns='http://www.w3.org/2000/svg')
-            circle(cx='8', cy='8', r='7.5', stroke='#C1C1C1')
-            path(d='M4 4L12 12', stroke='#C1C1C1')
-            path(d='M4 12L12 4', stroke='#C1C1C1')
-        form(action='', method='post')
-          img.popup_main_icon(alt='', src='/static/assets/images/svg/call-me-back-icon.svg')
-          span.dialog__headline Мы скоро Вам перезвоним
+    
     script(src='/static/assets/js/jquery-3.3.1.min.js')
     script(src='/static/assets/libs/OwlCarousel2/owl.carousel.min.js')
     script(src='/static/assets/libs/fancybox3/dist/jquery.fancybox.min.js')
     script(src='/static/assets/libs/jquery-lazy/jquery.lazy.min.js')
     script(src='/static/assets/js/jquery.waypoints.min.js')
-    script(type='text/javascript').
-      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-      ym(24568637, "init", {
-      clickmap:true,
-      trackLinks:true,
-      accurateTrackBounce:true,
-      webvisor:true,
-      userParams: {
-      partner_mode: false,
-      partner_id: 0
-      }
-      });
-    noscript
-      div
-        img(alt='', src='https://mc.yandex.ru/watch/24568637', style='position:absolute; left:-9999px;')
-    script(type='text/javascript').
-      (function(){ var widget_id = 'u3b5UzCEFY';
-      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();
     script(src='/static/CACHE/js/output.8150263ec842.js', type='text/javascript')
     script(async='', src='/static/CACHE/js/output.08809c293499.js', type='text/javascript')
     script(src='/static/CACHE/js/output.e85c238553db.js', type='text/javascript')
@@ -3295,33 +1915,21 @@ html(lang='ru-RU', xml:lang='ru-RU')
       $("head").append('<link rel="stylesheet" type="text/css" href="/static/assets/libs/entensys-xscript/abl.css"  media="screen"/>' +
       '<link rel="stylesheet" type="text/css" href="/static/assets/fonts/stolzl/stolzl.css"  media="screen"/>');
       });
-    svg.hidden(height='0', width='0')
-      symbol#feedback-phone(fill='none', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
-        path(clip-rule='evenodd', d='M20.32 22.522c4.766-4.227 4.45-18.007-.61-21.933-.796-.706-2.492-.535-3.664-.417-.235.023-.45.045-.631.057-2.619-.086-1.69 7.15 1.765 6.817 2.525-.267 2.817 9.335.226 9.166-3.325-.362-3.913 6.823-1.294 6.884.14.003.304.009.484.015 1.141.042 2.956.109 3.724-.59zm-4.186-.426c.171.003.355.01.547.017.468.017.99.037 1.531.007.37-.02.7-.063.967-.133.276-.072.413-.155.468-.205l.01-.009c.996-.883 1.796-2.338 2.329-4.186.529-1.834.77-3.972.714-6.118-.056-2.147-.407-4.265-1.034-6.062-.632-1.81-1.514-3.209-2.57-4.028l-.026-.02-.024-.022c-.066-.058-.204-.136-.47-.195a4.43 4.43 0 0 0-.956-.078c-.507.005-.96.051-1.397.096-.25.025-.496.05-.742.067l-.05.003-.049-.002c-.076-.002-.102.015-.13.039-.047.04-.131.144-.206.362-.154.448-.19 1.147-.044 1.912.146.76.448 1.457.84 1.923.376.444.78.63 1.238.587.672-.07 1.23.208 1.636.6.386.373.66.87.858 1.369.4 1.004.603 2.3.637 3.545.034 1.243-.097 2.548-.446 3.571-.173.509-.425 1.02-.799 1.41-.396.415-.95.708-1.626.663h-.021l-.022-.003c-.405-.044-.75.114-1.073.531-.344.446-.6 1.13-.703 1.89-.102.763-.031 1.478.154 1.957.183.474.37.51.459.512zM.293 11.596l4.243-4.242.707.707-3.036 3.035h10.986v1H2.207l3.036 3.036-.707.707-4.243-4.243z', fill='currentColor', fill-rule='evenodd')
-      symbol#mobile-phone(fill='none', viewBox='0 0 24 23', xmlns='http://www.w3.org/2000/svg')
-        path(d='M14.569 7.46c-.855-.556-1.51-1.245-1.175-2.042.67-1.595 1.935-5.942 3.968-4.207 1.06.737 2.272 1.749 2.272 1.749s.63.303.773 1.129c1.464 6.052-6.653 16.715-12.838 17.036-.77.05-1.22-.459-1.22-.459s-1.319-.825-2.325-1.656c-1.92-1.607 1.602-3.966 2.98-4.964.56-.543 1.43-.226 2.177.517 1.867 1.7 7.468-5.773 5.388-7.102z', fill='#fff')
-      symbol#search-icon(fill='none', viewBox='0 0 18 19', xmlns='http://www.w3.org/2000/svg')
-        circle(cx='8', cy='8', r='7.5', stroke='#000')
-        path(d='M12.654 13.977l.707-.707 4.243 4.243-.707.707z', fill='#000')
-      symbol#stroyker-logo(fill='none', viewBox='0 0 172 11', xmlns='http://www.w3.org/2000/svg')
-        path(d='M129.849 2.795h4.633c.914 0 1.225.378 1.225.86v.01c0 .493-.329.87-1.225.87h-4.633v-1.74zm0 4.192c2.349-.132 10.025.796 10.025-3.906v-.154c0-1.644-1.363-2.6-4.454-2.6h-9.612v10.136h4.041V6.987zm15.309-4.146h4.639c.909 0 1.22.378 1.22.859v.011c0 .493-.323.87-1.22.87h-4.639v-1.74zm0 4.197h3.868c1.596 0 2.152.596 2.152 1.753v1.185c0 .286.024.424.126.532h4.125v-.068c-.102-.178-.198-.435-.198-1.146V7.8c0-1.311-.872-2.125-2.176-2.41.796-.178 2.129-.791 2.129-2.263v-.149c0-1.649-1.363-2.605-4.448-2.605h-9.613v10.135h4.035v-3.47zM163.655.184c-6.857 0-7.724 3.12-7.724 5.027v.407c0 1.895.867 5.085 7.724 5.085h.639c6.839 0 7.706-3.19 7.706-5.085v-.407c0-1.906-.879-5.027-7.706-5.027h-.639zm4.166 5.314c0 1.088-.723 2.462-3.856 2.462-3.126 0-3.855-1.426-3.855-2.49v-.167c0-1.07.669-2.393 3.855-2.393 3.133 0 3.856 1.322 3.856 2.393v.195zM124.188.24h-2.756l2.756 3.012V.24zM8.106 11c5.817 0 6.857-1.826 6.857-3.607v-.2c0-2.136-1.638-3.075-5.846-3.19l-1.991-.04c-2.08-.046-2.41-.39-2.41-.813v-.017c0-.413.222-.785 2.44-.785h.15c2.39 0 2.63.745 2.677 1.128h4.591v-.114c0-1.678-1.249-3.35-6.719-3.35H6.528C1.369.012.168 1.524.168 3.247v.132c0 1.638 1.141 3.075 5.427 3.19l2.05.057c2.32.068 2.601.412 2.601.95v.017c0 .516-.34.997-2.702.997h-.137c-2.41 0-2.72-.928-2.762-1.495H0v.143c0 1.38.64 3.763 6.755 3.763h1.351zm11.897-.2h4.22V3.092H29V.201H15.226v2.891h4.777V10.8zm14.311-8.023h4.848c.957 0 1.28.401 1.28.9v.01c0 .516-.341.917-1.28.917h-4.848V2.777zm0 4.387h4.047c1.668 0 2.248.63 2.248 1.838v1.242c0 .298.03.441.131.556h4.316v-.075c-.107-.183-.209-.452-.209-1.196V7.965c0-1.368-.908-2.221-2.277-2.525.83-.183 2.23-.824 2.23-2.365v-.154C44.8 1.197 43.37.2 40.148.2H30.093v10.6h4.221V7.164zM53.659 0c-7.174 0-8.076 3.264-8.076 5.257v.43c0 1.975.902 5.313 8.076 5.313h.663c7.156 0 8.065-3.338 8.065-5.314v-.43c0-1.992-.92-5.256-8.065-5.256h-.663zm4.352 5.554c0 1.14-.753 2.577-4.03 2.577-3.27 0-4.029-1.494-4.029-2.605v-.172c0-1.122.7-2.502 4.03-2.502 3.276 0 4.029 1.38 4.029 2.502v.2z', fill='currentColor')
-        path(d='M66.972 10.8h4.22V6.837L77.111.201H72.49L69.202 3.86 65.974.2h-5.058l6.056 6.609v3.99zm14.778 0V6.053l5.398 4.747h5.505l-6.647-5.784L92.444.201h-5.249L81.75 4.387V.2h-4.22v10.6h4.22zM93.084.2v10.6h12.357V8.149h-8.196V6.694h7.915V4.117h-7.915V2.795h8.076V.2H93.084zm17.803 2.577h4.848c.95 0 1.279.401 1.279.9v.01c0 .516-.341.917-1.279.917h-4.848V2.777zm0 4.387h4.041c1.668 0 2.248.63 2.248 1.838v1.242c0 .298.029.441.131.556h4.316v-.075c-.101-.183-.209-.452-.209-1.196V7.965c0-1.368-.909-2.221-2.278-2.525.837-.183 2.236-.824 2.236-2.365v-.154c0-1.724-1.429-2.72-4.657-2.72H106.66V10.8h4.227V7.164z', fill='currentColor')
+      path(d='M66.972 10.8h4.22V6.837L77.111.201H72.49L69.202 3.86 65.974.2h-5.058l6.056 6.609v3.99zm14.778 0V6.053l5.398 4.747h5.505l-6.647-5.784L92.444.201h-5.249L81.75 4.387V.2h-4.22v10.6h4.22zM93.084.2v10.6h12.357V8.149h-8.196V6.694h7.915V4.117h-7.915V2.795h8.076V.2H93.084zm17.803 2.577h4.848c.95 0 1.279.401 1.279.9v.01c0 .516-.341.917-1.279.917h-4.848V2.777zm0 4.387h4.041c1.668 0 2.248.63 2.248 1.838v1.242c0 .298.029.441.131.556h4.316v-.075c-.101-.183-.209-.452-.209-1.196V7.965c0-1.368-.909-2.221-2.278-2.525.837-.183 2.236-.824 2.236-2.365v-.154c0-1.724-1.429-2.72-4.657-2.72H106.66V10.8h4.227V7.164z', fill='currentColor')
+
+    
+    //чат
+    block content
 
     //это только для превью
-    //https://ruslanmmr.github.io/work/redPrice/build/
-    style.
-      @font-face {
-          font-family:'Stolzl';
-          font-style:normal;
-          font-weight:700;
-          src: url('https://ruslanmmr.github.io/work/redPrice/build/font/Stolzl.otf') format('opentype');
-        }
-    link(href='https://ruslanmmr.github.io/work/redPrice/build/styles/js-helper.min.css', rel='stylesheet', type='text/css')
-    script(src='https://ruslanmmr.github.io/work/redPrice/build/js/js-helper.min.js')
+    link(href=href+'/styles/js-helper.min.css', rel='stylesheet', type='text/css')
+    script(src=href+'/js/js-helper.min.js')
     include ../blocks/js-helper
-    
-    //Новое
-    script(src='https://ruslanmmr.github.io/work/redPrice/build/js/new.min.js')
-    link(href='https://ruslanmmr.github.io/work/redPrice/build/styles/new.min.css', rel='stylesheet', type='text/css')
-    //Новые элементы
-    block content
+ 
+    //Все для чата
+    script(src=href+'/js/new.js')
+    link(href=href+'/styles/new.css', rel='stylesheet', type='text/css')
+
+    //Стили кнопки "наверх", новый баннер, сообщение про куки
+    link(href=href+'/styles/new(08.09.20).css', rel='stylesheet', type='text/css')
+    script(src=href+'/js/new(08.09.20).js')

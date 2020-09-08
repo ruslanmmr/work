@@ -6,8 +6,8 @@ $trs2: .3s ease-out;
   position: fixed;
   bottom: 90px;
   right: 40px;
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   background-color: #828282;
   border-radius: 8px 8px 8px 0;
   display: flex;
@@ -21,9 +21,13 @@ $trs2: .3s ease-out;
   &:hover {
     background-color: #CB0008;
   }
-  @media screen and (max-width: 575px) {
+  @media screen and(max-width:991px) {
     right: 15px;
     bottom: 69px;
+  }
+  @media screen and(max-width:575px) {
+    right: 10px;
+    bottom: 64px;
   }
 }
 

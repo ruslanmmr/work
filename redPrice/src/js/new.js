@@ -3,6 +3,7 @@ $(document).ready(function(){
   popup.init();
 })
 
+//попап для чата
 window.popup = {
   init: function() {
     this.$trigger = $('[data-popup-open]');
@@ -54,7 +55,7 @@ window.popup = {
     }, 250)
   }
 }
-
+//сам чат
 function chatBlock() {
   let $block = $('.chat-block'),
       $open = $('[data-chat-open]'),
@@ -67,3 +68,4 @@ function chatBlock() {
     $block.removeClass('active');
   })
 }
+
