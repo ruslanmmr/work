@@ -1,0 +1,10 @@
+mixin card2(title, image, grid)
+  .category-card(class=grid)
+    a(href="service.html").category-card__container
+      .image.image_cover
+        img(src=image, alt="image")
+      h3.category-card__title=title
+        svg.icon(viewBox='0 0 10.5 18.1')
+          path(d='M1.4,18.1L0,16.7l7.6-7.6L0,1.5L1.4,0l9,9.1C10.4,9.1,1.3,18.1,1.4,18.1z')
+
+
