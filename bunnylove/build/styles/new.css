@@ -96,6 +96,22 @@ header.new-header {
   .content .new-content__catalog {
     margin: -10px; } }
 
+@media (max-width: 575px) {
+  .new-header__slider .slick-slide {
+    position: relative; }
+    .new-header__slider .slick-slide::before {
+      content: '';
+      display: block;
+      padding-top: 50%; }
+  .new-header__slider .new-slider__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+       object-fit: cover; } }
+
 .new-console__icon-type-search {
   stroke: #333;
   stroke-width: 1.5px; }
