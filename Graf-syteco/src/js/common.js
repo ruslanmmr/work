@@ -16,7 +16,6 @@ $(document).ready(function(){
   }).mask('.input__phone');
 })
 
-window.isTouch = false;
 const brakepoints = {
   xs: 576,
   sm: 768,
@@ -25,29 +24,28 @@ const brakepoints = {
 }
 
 
-//hover/touch custom events
-function touchHoverEvents() {
-  document.addEventListener('touchstart', event);
-  document.addEventListener('touchend', event);
-  document.addEventListener('mouseenter', event, true);
-  document.addEventListener('mouseleave', event, true);
-  document.addEventListener('mousedown', event);
-  document.addEventListener('mouseup', event);
-  document.addEventListener('contextmenu', event)
-
-  let targets = 'a[class], button, label, tr, .js-touch-hover, .selectric-items li, .selectric .label, .toggle-section__content',
-      touchEndDelay = 100, //ms 
-      timeout;
-
-  function event(event) {
+const TouchHoverEvents = {
+  targets: 'a, button, label, tr, .jsTouchHover, .js-3d-object',
+  touched: false,
+  touchEndDelay: 100, //ms
+  init: function() {
+    document.addEventListener('touchstart',  (event)=>{this.events(event)});
+    document.addEventListener('touchend',    (event)=>{this.events(event)});
+    document.addEventListener('mouseenter',  (event)=>{this.events(event)},true);
+    document.addEventListener('mouseleave',  (event)=>{this.events(event)},true);
+    document.addEventListener('mousedown',   (event)=>{this.events(event)});
+    document.addEventListener('mouseup',     (event)=>{this.events(event)});
+    document.addEventListener('contextmenu', (event)=>{this.events(event)});
+  },
+  events: function(event) {
     let $targets = [];
-    $targets[0] = event.target!==document?event.target.closest(targets):null;
+    $targets[0] = event.target!==document?event.target.closest(this.targets):null;
     let $element = $targets[0], i = 0;
 
     while($targets[0]) {
       $element = $element.parentNode;
       if($element!==document) {
-        if($element.matches(targets)) {
+        if($element.matches(this.targets)) {
           i++;
           $targets[i] = $element;
         }
@@ -59,25 +57,25 @@ function touchHoverEvents() {
 
     //touchstart
     if(event.type=='touchstart') {
-      isTouch = true;
-      if(timeout) clearTimeout(timeout);
+      this.touched = true;
+      if(this.timeout) clearTimeout(this.timeout);
       if($targets[0]) {
-        for(let $target of document.querySelectorAll(targets)) $target.classList.remove('touch');
+        for(let $target of document.querySelectorAll(this.targets)) $target.classList.remove('touch');
         for(let $target of $targets) $target.classList.add('touch');
       }
     } 
     //touchend
     else if(event.type=='touchend') {
-      timeout = setTimeout(() => {isTouch = false}, 500);
+      this.timeout = setTimeout(() => {this.touched = false}, 500);
       if($targets[0]) {
         setTimeout(()=>{
           for(let $target of $targets) $target.classList.remove('touch');
-        }, touchEndDelay)
+        }, this.touchEndDelay)
       }
     } 
     //context menu
     else if(event.type=='contextmenu') {
-      isTouch = false;
+      this.touched = false;
       if($targets[0]) {
         for(let $target of $targets) {
           $target.classList.remove('touch');
@@ -85,24 +83,23 @@ function touchHoverEvents() {
       }
     } 
     //mouseenter
-    if(event.type=='mouseenter' && !isTouch && $targets[0] && $targets[0]==event.target) {
+    if(event.type=='mouseenter' && !this.touched && $targets[0] && $targets[0]==event.target) {
       $targets[0].classList.add('hover');
     }
     //mouseleave
-    else if(event.type=='mouseleave' && !isTouch && $targets[0] && $targets[0]==event.target) {
+    else if(event.type=='mouseleave' && !this.touched && $targets[0] && $targets[0]==event.target) {
       $targets[0].classList.remove('hover');
       $targets[0].classList.remove('focus');
     }
     //mousedown
-    if(event.type=='mousedown' && !isTouch && $targets[0]) {
+    if(event.type=='mousedown' && !this.touched && $targets[0]) {
       $targets[0].classList.add('focus');
     } 
     //mouseup
-    else if(event.type=='mouseup' && !isTouch  && $targets[0]) {
+    else if(event.type=='mouseup' && !this.touched  && $targets[0]) {
       $targets[0].classList.remove('focus');
     }
   }
-
 }
 
 //lazyloading

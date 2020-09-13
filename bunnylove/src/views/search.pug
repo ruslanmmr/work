@@ -1,0 +1,225 @@
+extends layout/layout
+block content
+  #body-page.page
+    .right-col
+    .left-col
+    .new-content.new-content-type-catalog
+      .new-breadcrumbs.new-content__breadcrumbs
+        a.new-breadcrumbs__link(href='/') Главная
+        span Поиск по каталогу
+      h1.new-content__title
+        | Поиск по каталогу
+      .new-content__left
+        .filter
+          form#search-sorting(action='/catalog/search/?query=stella')
+            fieldset.filter__item
+              legend Цена
+              label.radio(for='radio-1')
+                input#radio-1(type='radio', name='ordering_by_price', value='/catalog/search/?query=stella', checked='')
+                span.outer
+                  span.inner
+                span.text По убыванию
+              label.radio(for='radio-2')
+                input#radio-2(type='radio', name='ordering_by_price', value='/catalog/search/?query=stella&ordering_by_price=asc')
+                span.outer
+                  span.inner
+                span.text По возрастанию
+            fieldset.filter__item
+              legend Наличие
+              label.radio(for='radio-3')
+                input#radio-3(type='radio', name='only_available', value='/catalog/search/?query=stella&only_available=True')
+                span.outer
+                  span.inner
+                span.text Показать в наличии
+              label.radio(for='radio-4')
+                input#radio-4(type='radio', name='only_available', value='/catalog/search/?query=stella&only_available=False', checked='')
+                span.outer
+                  span.inner
+                span.text Показать все
+      .new-content__right
+        .search-pannel
+          form(action='/catalog/search/', method='GET')
+            input(name='query', placeholder='Поиск по каталогу', value='stella', type='text')
+            button(type='submit')
+        .search-header
+          | 12 товаров по запросу: 
+          strong "stella"
+        .content
+          .new-content__catalog
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/11317806/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                img.new-card__img(src='/static/img/noimage.png', width='130', height='130', alt='Фото товара временно отсутствует')
+              a.new-card__center(href='/catalog/product/drop-nabor-iz-4-vaginalnyih-raznovesnyih--wy0540-gr/', title='Перейти на страницу товара') Набор из 4 вагинальных разновесных шариков Stella
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 2 506
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/11317806/', data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |  Купить
+              p.new-card__explanation Шарики вагинальные Stella разновесные в наборе
+            .new-card.new-card-type-catalog.new-card-type-disabled
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/194785/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                img.new-card__img(src='/media/cache/8f/76/8f76b1f754ca583bf504862aae6c9c4c.jpg', width='130', height='130', alt='Jopen Key Stella II розовые')
+              a.new-card__center(href='/catalog/product/jopen-key-stella-ii-rozovyij-0t-00004587/', title='Перейти на страницу товара') Jopen Key Stella II розовые
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 2 780
+                    span.new-card__currency ₽
+                span.new-card__waiting Нет в наличии
+              p.new-card__explanation Шарики со сменным грузом 
+            .new-card.new-card-type-catalog.new-card-type-disabled
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/195605/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                img.new-card__img(src='/media/cache/b3/ba/b3bacca51ee5483b6f984ed72a39b78b.jpg', width='130', height='130', alt='STELLA III бирюзовые')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-trio-stella-iii--se-jo-8022-05/', title='Перейти на страницу товара') STELLA III бирюзовые
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 2 890
+                    span.new-card__currency ₽
+                span.new-card__waiting Нет в наличии
+              p.new-card__explanation Вагинальные шарики трио
+            .new-card.new-card-type-catalog.new-card-type-disabled
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/198480/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                img.new-card__img(src='/media/cache/5a/98/5a983ed60c188c7c819c8157a8e5391c.jpg', width='130', height='130', alt='STELLA III розовые')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-trio-stella-iii--se-jo-8022-00/', title='Перейти на страницу товара') STELLA III розовые
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 2 890
+                    span.new-card__currency ₽
+                span.new-card__waiting Нет в наличии
+              p.new-card__explanation Вагинальные шарики трио 
+            .new-card.new-card-type-catalog.new-card-type-disabled
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/195688/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                img.new-card__img(src='/media/cache/6a/0e/6a0e449232af0b89e901c51bb9252526.jpg', width='130', height='130', alt='STELLA III фиолетовые')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-trio-stella-iii--se-jo-8022-10/', title='Перейти на страницу товара') STELLA III фиолетовые
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 3 570
+                    span.new-card__currency ₽
+                span.new-card__waiting Нет в наличии
+              p.new-card__explanation Вагинальные шарики трио 
+            .new-card.new-card-type-catalog.new-card-type-disabled
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/198036/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                img.new-card__img(src='/media/cache/78/1b/781bd42a22b354c02e9404a851570de5.jpg', width='130', height='130', alt='STELLA I бирюзовый')
+              a.new-card__center(href='/catalog/product/vaginalnyij-sharik-solo-stella-i--se-jo-8020-05/', title='Перейти на страницу товара') STELLA I бирюзовый
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 2 700
+                    span.new-card__currency ₽
+                span.new-card__waiting Нет в наличии
+              p.new-card__explanation Вагинальный шарик соло со сменным грузом 
+            .new-card.new-card-type-catalog.new-card-type-disabled
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/212438/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                img.new-card__img(src='/media/cache/53/02/5302b2a7e1284f45ddf6be14487abb46.jpg', width='130', height='130', alt='Вагинальные шарики Jopen Key Stella II')
+              a.new-card__center(href='/catalog/product/stella-ii-biryuzovyie-se-jo-8021-05/', title='Перейти на страницу товара') Вагинальные шарики Jopen Key Stella II
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 2 780
+                    span.new-card__currency ₽
+                span.new-card__waiting Нет в наличии
+              p.new-card__explanation
+                | Вагинальные шарики из премиум силикона со смещенным центром тяжести и сцепка для них, два шарика по 40 гр. и один 30 гр., общий вес до 80 гр., диаметр шариков 3,5 см
+            .new-card.new-card-type-catalog.new-card-type-disabled
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/198361/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                img.new-card__img(src='/media/cache/2f/07/2f070a1ed756627c7439dc21e6c51ad7.jpg', width='130', height='130', alt='Вагинальные шарики Jopen Key Stella II')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-duet-stella-ii--se-jo-8021-10/', title='Перейти на страницу товара') Вагинальные шарики Jopen Key Stella II
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 2 780
+                    span.new-card__currency ₽
+                span.new-card__waiting Нет в наличии
+              p.new-card__explanation Три вагинальных шарика со смещенным центром тяжести и с эластичным держателем
+            .new-card.new-card-type-catalog.new-card-type-disabled
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/1676064/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                img.new-card__img(src='/media/cache/67/e5/67e5a81ea0a6cc05e514f3d5353f415b.jpg', width='130', height='130', alt='Комплект Stella red')
+              a.new-card__center(href='/catalog/product/komplekt-stella-red-with-love--03681s/', title='Перейти на страницу товара') Комплект Stella red
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 2 270
+                    span.new-card__currency ₽
+                span.new-card__waiting Нет в наличии
+              p.new-card__explanation
+                | Сексуальный комплект красного цвета, состоящий из ажурного бюстгальтера и ажурных трусиков-стринг с открытым доступом, размер S (42-44)
+            .new-card.new-card-type-catalog.new-card-type-disabled
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/202883/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                img.new-card__img(src='/media/cache/a3/d5/a3d58ceaee190ead5dbf393906dcef51.jpg', width='130', height='130', alt='Мастурбатор Penthouse Stella Styles с вибрацией, вагина')
+              a.new-card__center(href='/catalog/product/masturbator-penthouse-stella-styles-s--ts1091283/', title='Перейти на страницу товара') Мастурбатор Penthouse Stella Styles с вибрацией, вагина
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 4 980
+                    span.new-card__currency ₽
+                span.new-card__waiting Нет в наличии
+              p.new-card__explanation Реалистичная копия половых органов порно звезды Стэлы Стайлс
+            .new-card.new-card-type-catalog.new-card-type-disabled
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/200922/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                img.new-card__img(src='/media/cache/c6/df/c6df621fb5b3ab6d312e0858b67edca5.jpg', width='130', height='130', alt='Мастурбатор Topco Pet Pussy&Ass Stella Styles')
+              a.new-card__center(href='/catalog/product/vagina-penthouse-pet-stella-styles--ts1091181/', title='Перейти на страницу товара') Мастурбатор Topco Pet Pussy&Ass Stella Styles
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 6 720
+                    span.new-card__currency ₽
+                span.new-card__waiting Нет в наличии
+              p.new-card__explanation Реалистичный мастурбатор с двумя отверстиями вагина и анус, и с вибрацией
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/11314136/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                img.new-card__img(src='/media/cache/42/df/42df2550730382e35911b33479b06cd4.jpg', width='130', height='130', alt='Трусики-стринги Stella с цепочками и стразами')
+              a.new-card__center(href='/catalog/product/drop-trusiki-stringi-stella-s-tsepochkami-i--28165/', title='Перейти на страницу товара') Трусики-стринги Stella с цепочками и стразами
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | None
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/11314136/', data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |  Купить
+              p.new-card__explanation
+                | Цветочные орнаменты плавно переходят в цепочку из страз, украшенную белыми декоративными камнями
