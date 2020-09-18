@@ -23,10 +23,15 @@ var gulp = require("gulp"),
       $pug = ["./src/views/**/*.pug", "!./src/views/blocks/*.pug", "!./src/views/layout/*.pug"],
       $pug_watch = "./src/views/**/*.pug",
       $scripts = ["./src/js/*.js", "!./src/js/libs/*.js"],
-      $styles = ["./src/styles/**/*.scss", "!./src/styles/components/*.scss"],
+      $styles = ["./src/styles/*.scss"],
       $styles_watch = ["./src/styles/**/*.scss"],
       $favicons = "./src/img/favicons/*.{jpg,jpeg,png,gif}",
-      $other = ["./src/**/*", "!./src/img/**/*.{jpg,jpeg,png,gif}", "!./src/js/*.js", "!./src/styles/*.scss", "!./src/styles/components","!./src/styles/components/**/*", "!./src/views", "!./src/views/**/*"];
+      $other = ["./src/**/*", 
+                "!./src/img/**/*.{jpg,jpeg,png,gif}", 
+                "!./src/js/*.js",
+                "!./src/styles/**/*", 
+                "!./src/views",
+                "!./src/views/**/*"];
 
 gulp.task("pug", function () {
   return gulp.src($pug)

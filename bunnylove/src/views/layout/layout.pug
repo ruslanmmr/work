@@ -1,7 +1,7 @@
--var href = 'https://ruslanmmr.github.io/work/bunnylove/build'
-//-var href = 'http://localhost:9001'
+//-var href = 'https://ruslanmmr.github.io/work/bunnylove/build'
+-var href = 'http://localhost:9000'
 
-block classes
+block variables
 
 doctype html
 html
@@ -20,24 +20,27 @@ html
     link(href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap', rel='stylesheet')
     link(href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', rel='stylesheet')
     link(href='/static/fonts/webfontkit/fonts.css', rel='stylesheet')
-    link(href='/static/css/styles.css', rel='stylesheet')
-    link(href='/static/NEW/css/style.css', rel='stylesheet')
-    link(href='/static/NEW/css/new-style-fixes.css', rel='stylesheet')
-    link(href='/static/NEW/css/new-style-fixes-media.css', rel='stylesheet')
-    link(href='/static/css/mobile.css', rel='stylesheet')
-    link(href='/static/css/fotorama.css', rel='stylesheet')
-
-    //helper
-    link(rel='stylesheet' href=href+'/styles/js-helper.min.css')
-    //new styles fix
+    
+    //просто вырезал из этого файла старые bootstrap стили, можно вырезать его и пересобрать если он на sass собран
+    link(href=href+'/styles/styles.css', rel='stylesheet')
+    //добавлена сетка бутстрап
+    link(href=href+'/styles/bootstrap-grid.min.css', rel='stylesheet')
+    //файлы стилей в которых есть изменения, файл new-style-fixes-media удалил и обьединил с этим файлом стилей
+    link(href=href+'/styles/style.css', rel='stylesheet')
+    link(href=href+'/styles/mobile.css', rel='stylesheet')
+    link(href=href+'/styles/new-style-fixes.css', rel='stylesheet')
+    //новые стили
     link(rel='stylesheet' href=href+'/styles/new.css')
+    //новые стили
+    link(rel='stylesheet' href=href+'/styles/js-helper.css')
 
   body
     header.new-header.new-header-type-standart
       .new-banner.new-header__banner
-        | 😎 
-        a.new-banner__link(href='/anonymity/') анонимность
-        |  магазина
+        .container
+          | 😎 
+          a.new-banner__link(href='/anonymity/') анонимность
+          |  магазина
       .new-mobileMenu.new-header__mobileMenu(data-action='menuWrapper')
         .new-mobileMenu__shell
           .new-mobileMenu__top
@@ -236,99 +239,99 @@ html
               use(xlink:href='#giftIcon')
             | Подарочные сертификаты
       .new-header__top
-        button.new-button.new-button-icon-city(data-action='desktopCityButton')
-          svg.new-button__icon-type-city
-            use(xlink:href='#markIcon')
-          span.new-button__span-type-city(data-action='cityChanger')
-            | Самара
-        a.new-phone.new-header__phone.new-header__phone-type-desktop.new-header__phone-icon-phone(href='tel:+7 (846) 300-44-49')
-          svg.new-phone__svg
-            use(xlink:href='#phoneIcon')
-          |  +7 (846) 300-44-49
-        a#link_call_me_back_modal.new-button.new-button-icon-callback.modals(data-modal-id='call_me_back_modal', href='/feedback/', title='Заказать обратный звонок')
-          svg.new-button__icon-type-callback
-            use(xlink:href='#callbackIcon')
-        nav.new-nav.new-header__nav
-          a.new-nav__link.nav__about(href='/about/') О нас
-          a.new-nav__link.nav__pay(href='/pay/') Оплата
-          a.new-nav__link.nav__delivery(href='/delivery/') Доставка
-          a.new-nav__link.nav__faq(href='/faq/') Вопросы
-          a.new-nav__link.nav__bonus(href='/bonus/') Бонусная программа
-          a.new-nav__link.nav__contacts(href='/contacts/') Контакты
+        .container
+          button.new-button.new-button-icon-city(data-action='desktopCityButton')
+            svg.new-button__icon-type-city
+              use(xlink:href='#markIcon')
+            span.new-button__span-type-city(data-action='cityChanger')
+              | Самара
+          a.new-phone.new-header__phone.new-header__phone-type-desktop.new-header__phone-icon-phone(href='tel:+7 (846) 300-44-49')
+            svg.new-phone__svg
+              use(xlink:href='#phoneIcon')
+            |  +7 (846) 300-44-49
+          a#link_call_me_back_modal.new-button.new-button-icon-callback.modals(data-modal-id='call_me_back_modal', href='/feedback/', title='Заказать обратный звонок')
+            svg.new-button__icon-type-callback
+              use(xlink:href='#callbackIcon')
+          nav.new-nav.new-header__nav
+            a.new-nav__link.nav__about(href='/about/') О нас
+            a.new-nav__link.nav__pay(href='/pay/') Оплата
+            a.new-nav__link.nav__delivery(href='/delivery/') Доставка
+            a.new-nav__link.nav__faq(href='/faq/') Вопросы
+            a.new-nav__link.nav__bonus(href='/bonus/') Бонусная программа
+            a.new-nav__link.nav__contacts(href='/contacts/') Контакты
       .new-header__center
         //HIDDEN MIBILE SEARCH START
         .mobile-search
-          form.new-search.mobile-search__form(method='GET', action='/catalog/search/')
+          .container
+            form.new-search.mobile-search__form(method='GET', action='/catalog/search/')
+              input#id_query.new-search__input(type='text', name='query', placeholder='Поиск по каталогу', minlength='3', required='')
+              button.new-search__submit(type='submit')
+                svg.new-search__icon
+                  use(xlink:href='#searchIcon')
+            button.mobile-search__close
+        .container
+          button.new-button.new-button-icon-humburger(data-action='menuButton')
+          a.new-logo.new-header__logo(href='/')
+            svg.new-logo__icon
+              use(xlink:href='#logoIcon')
+            |  BUNNYLOVE 
+            span.new-logo__span влюбленный кролик
+          button.new-button.new-button-icon-city.new-button-icon-city-type-table(data-action='cityButton')
+            svg.new-button__icon-type-city
+              use(xlink:href='#markIcon')
+            span.new-button__span-type-city(data-action='cityChanger')
+              | Самара
+          .new-fastBuy.new-card__fastBuy.new-card__fastBuy-type-city(data-action='cityShell')
+            .new-fastBuy__overflow(data-action='cityCloseButton')
+            .new-fastBuy__wrapper.new-fastBuy__wrapper-type-city
+              .new-console.new-mobileMenu__console.new-console-type-fastBuy
+                button.new-header__close.new-header__close-type-fastBuy(data-action='cityCloseButton')
+              .new-city.new-city-type-standart
+                p.new-city__title Выберите свой город
+                .new-city__shell
+                  button.new-button.new-button-type-city.new-button-action-check(data-action='cityLink')
+                    a(href='//bunnylove.ru/')
+                      | Самара
+                  button.new-button.new-button-type-city(data-action='cityLink')
+                    a(href='//kazan.bunnylove.ru/')
+                      | Казань
+          form.new-search.new-header__search.new-search-type-header(method='GET', action='/catalog/search/')
             input#id_query.new-search__input(type='text', name='query', placeholder='Поиск по каталогу', minlength='3', required='')
-            button.new-search__submit(type='submit')
-              svg.new-search__icon
+            button.new-search__submit.new-search__submit-type-header(type='submit')
+              svg.new-search__icon.new-search__icon-type-header
                 use(xlink:href='#searchIcon')
-
-          button.mobile-search__close
-        //HIDDEN MIBILE SEARCH END
-
-        button.new-button.new-button-icon-humburger(data-action='menuButton')
-        a.new-logo.new-header__logo(href='/')
-          svg.new-logo__icon
-            use(xlink:href='#logoIcon')
-          |  BUNNYLOVE 
-          span.new-logo__span влюбленный кролик
-        button.new-button.new-button-icon-city.new-button-icon-city-type-table(data-action='cityButton')
-          svg.new-button__icon-type-city
-            use(xlink:href='#markIcon')
-          span.new-button__span-type-city(data-action='cityChanger')
-            | Самара
-        .new-fastBuy.new-card__fastBuy.new-card__fastBuy-type-city(data-action='cityShell')
-          .new-fastBuy__overflow(data-action='cityCloseButton')
-          .new-fastBuy__wrapper.new-fastBuy__wrapper-type-city
-            .new-console.new-mobileMenu__console.new-console-type-fastBuy
-              button.new-header__close.new-header__close-type-fastBuy(data-action='cityCloseButton')
-            .new-city.new-city-type-standart
-              p.new-city__title Выберите свой город
-              .new-city__shell
-                button.new-button.new-button-type-city.new-button-action-check(data-action='cityLink')
-                  a(href='//bunnylove.ru/')
-                    | Самара
-                button.new-button.new-button-type-city(data-action='cityLink')
-                  a(href='//kazan.bunnylove.ru/')
-                    | Казань
-        form.new-search.new-header__search.new-search-type-header(method='GET', action='/catalog/search/')
-          input#id_query.new-search__input(type='text', name='query', placeholder='Поиск по каталогу', minlength='3', required='')
-          button.new-search__submit.new-search__submit-type-header(type='submit')
-            svg.new-search__icon.new-search__icon-type-header
-              use(xlink:href='#searchIcon')
-        .new-console.new-header__console
-          //new search button
-          button.new-button.new-console__button.mobile-search-open
-            svg.new-console__icon.new-console__icon-type-search
-              use(xlink:href='#searchIcon')
-          //
-          .new-button.new-console__button(data-action='cabinetButton')
-            svg.new-console__icon.new-console__icon-type-cabinet
-              use(xlink:href='#menuUserIcon')
-            | Кабинет
-          .new-loginPopup.new-console__loginPopup(data-action='cabinetPopup')
-            .new-console.new-mobileMenu__console
-              button.new-header__close(data-action='cabinetCloseButton')
-            .new-loginPopup__shell(data-action='loginOff')
-              a.new-button.new-button-type-fill.new-button.new-loginForm__button(href='/login/?next=/') Войти в аккаунт
-              a.new-loginForm__forgot(href='/password/reset/') Забыли пароль?
-              p.new-loginForm__strong или
-              p.new-loginForm__register
-                a.new-loginForm__registerLink(href='/register/') Зарегистрироваться
-                span.new-loginForm__warning +500 ₽ на счёт
-          a.new-console__compare(href='/catalog/comparison/')
-            svg.new-console__icon.new-console__icon-type-compare
-              use(xlink:href='#compareIcon')
-            | Сравнение
-            span.new-console__count.products_comparison_count 0
-          a.new-console__bag(href='/catalog/cart/')
-            svg.new-console__icon.new-console__icon-type-bag
-              use(xlink:href='#bagIcon')
-            | Корзина
-            span.new-console__count.cart_count 23
+          .new-console.new-header__console
+            //new search button
+            button.new-button.new-console__button.mobile-search-open
+              svg.new-console__icon.new-console__icon-type-search
+                use(xlink:href='#searchIcon')
+            //
+            .new-button.new-console__button(data-action='cabinetButton')
+              svg.new-console__icon.new-console__icon-type-cabinet
+                use(xlink:href='#menuUserIcon')
+              | Кабинет
+            .new-loginPopup.new-console__loginPopup(data-action='cabinetPopup')
+              .new-console.new-mobileMenu__console
+                button.new-header__close(data-action='cabinetCloseButton')
+              .new-loginPopup__shell(data-action='loginOff')
+                a.new-button.new-button-type-fill.new-button.new-loginForm__button(href='/login/?next=/') Войти в аккаунт
+                a.new-loginForm__forgot(href='/password/reset/') Забыли пароль?
+                p.new-loginForm__strong или
+                p.new-loginForm__register
+                  a.new-loginForm__registerLink(href='/register/') Зарегистрироваться
+                  span.new-loginForm__warning +500 ₽ на счёт
+            a.new-console__compare(href='/catalog/comparison/')
+              svg.new-console__icon.new-console__icon-type-compare
+                use(xlink:href='#compareIcon')
+              | Сравнение
+              span.new-console__count.products_comparison_count 0
+            a.new-console__bag(href='/catalog/cart/')
+              svg.new-console__icon.new-console__icon-type-bag
+                use(xlink:href='#bagIcon')
+              | Корзина
+              span.new-console__count.cart_count 23
       .new-header__bottom
-        .new-tabs.new-header__tabs
+        .new-tabs.new-header__tabs.container
           .new-tabs__panel.new-tabs__panel-type-header.new-tabs__panel-type-desktop
             .new-tabs__linkShell(data-action='tabLinkShell')
               a.new-tabs__link.new-tabs__link-type-header.new-tabs__link-type-passive.new-tabs__link-type-desktop(href='/certificates/')
@@ -578,32 +581,38 @@ html
                       a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/intimnaya-kosmetika/massazhnye-masla-svechi/') Массажные масла, свечи
                     li
                       a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/intimnaya-kosmetika/sedobnaya-kosmetika/') Съедобная косметика
-      .new-header__slider.new-header__slider-type-main
-        .new-slider.new-slider__shell(data-action='adSliderInMain')
-          a.new-slider__cell(href='https://bunnylove.ru/bonus/')
-            picture.new-slider__img
-              img.new-slider__img(src='/media/big_slides/d6b4d098-826a-4db9-b37d-a844b7d6f20e.slide.png', alt='Дисконтная программа')
-          a.new-slider__cell(href='/certificates/')
-            picture.new-slider__img
-              img.new-slider__img(src='/media/big_slides/5f8f71a9-fec7-456e-9d05-a712f5b550b7.slide.png', alt='Подарочный сертификат')
-          a.new-slider__cell(href='https://bunnylove.ru/promo/dostavka-za-99/')
-            picture.new-slider__img
-              img.new-slider__img(src='/media/big_slides/6086b631-dccc-451e-96a4-d1435eec4198.slide.png', alt='Акция на доставку')
-      .new-header__search.new-header__search-type-table
-        form.new-search.new-search-type-standart(method='GET', action='/catalog/search/')
-          input#id_query.new-search__input(type='text', name='query', placeholder='Поиск по каталогу', minlength='3', required='')
-          button.new-search__submit(type='submit')
-            svg.new-search__icon
-              use(xlink:href='#searchIcon')
+      if header_banner==true
+        .new-header__slider.new-header__slider-type-main.container-fluid
+          .new-slider.new-slider__shell(data-action='adSliderInMain')
+            a.new-slider__cell(href='https://bunnylove.ru/bonus/')
+              picture.new-slider__img
+                img.new-slider__img(src='/media/big_slides/d6b4d098-826a-4db9-b37d-a844b7d6f20e.slide.png', alt='Дисконтная программа')
+            a.new-slider__cell(href='/certificates/')
+              picture.new-slider__img
+                img.new-slider__img(src='/media/big_slides/5f8f71a9-fec7-456e-9d05-a712f5b550b7.slide.png', alt='Подарочный сертификат')
+            a.new-slider__cell(href='https://bunnylove.ru/promo/dostavka-za-99/')
+              picture.new-slider__img
+                img.new-slider__img(src='/media/big_slides/6086b631-dccc-451e-96a4-d1435eec4198.slide.png', alt='Акция на доставку')
     
-    block content
+    main
+      block content
 
     footer.new-footer.new-footer-type-standart
-      .new-footer__top
-        .new-footer__ad
-          | Получай бонусы за покупки и оплачивай ими следующий заказ — 
-          a.new-footer__link(href='/bonus/') подробнее о бонусной программе
-      .new-footer__center
+      //новый блок
+      .footer-topline
+        .container.footer-topline__container
+          form(action="#").footer-topline__form
+            input(type="email" placeholder="E-mail").footer-topline__input
+            button.new-button-type-fill.footer-topline__button Оформить
+          h5.footer-topline__title Если скрыть форму, текст просто 
+            a(href="#") растянется 
+            | на ширину всей полосы. (можно проверить через консоль)
+      //.new-footer__top
+        .container
+          .new-footer__ad
+            | Получай бонусы за покупки и оплачивай ими следующий заказ — 
+            a.new-footer__link(href='/bonus/') подробнее о бонусной программе
+      .new-footer__center.container
         .new-footer__contacts
           a.new-phone.new-footer__phone(rel='nofollow', target='_blank', href='tel:+7 (846) 300-44-49')
             svg.new-phone__svg
@@ -613,12 +622,16 @@ html
             svg.new-mail__svg
               use(xlink:href='#mailIcon')
             |  Написать нам
-          span.new-social__title Соцсети:
-          p
-            a.vk(rel='nofollow', target='_blank', href='http://vk.com/club22731393')
-              img(src='/static/svg/vk.svg', alt='vk')
-            a.vk(rel='nofollow', target='_blank', href='https://www.instagram.com/bunnyloveru/')
-              img(src='/static/svg/inst.svg', alt='instagram', width='30', height='30')
+          //соц сети
+          .footer-socials 
+            span.footer-socials__title Соцсети:
+            ul.footer-socials__list
+              li.footer-socials__item
+                a(href="#").footer-socials__link
+                  img(src='/static/svg/vk.svg', alt='vk')
+              li.footer-socials__item
+                a(href="#").footer-socials__link
+                  img(src='/static/svg/inst.svg', alt='instagram')
         .new-footer__shell
           .new-dropdown.new-footer__dropdown
             button.new-button.new-dropdown__button.new-dropdown__button-type-footer(data-action='dropdownButton') Каталог
@@ -655,7 +668,7 @@ html
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/articles/5-sposobov-uluchshit-seksualnuyu-zhizn-v-pare/') 5 способов улучшить сексуальную жизнь в паре
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/articles/7-luchshih-seks-igrushek-dlya-par/') 7 лучших секс-игрушек для пар
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/articles/pochemu-seks-shop/') Почему Секс-шоп?
-      .new-footer__bottom
+      .new-footer__bottom.container
         a.new-footer__copy(rel='nofollow', target='_blank', href='http://fancymedia.ru/')
           | Разработка сайта — 
           span.new-footer__span fancymedia

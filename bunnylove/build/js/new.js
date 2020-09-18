@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
   mobileSearch();
+  header();
 });
 
 function mobileSearch() {
@@ -12,4 +13,23 @@ function mobileSearch() {
     event.preventDefault();
     if ($(this).is($open)) $block.addClass('active');else $block.removeClass('active');
   });
+}
+
+function header() {
+  var $header = $('.new-header__center'),
+      scroll;
+  check();
+  $(window).scroll(function () {
+    check();
+  });
+
+  function check() {
+    scroll = $(window).scrollTop();
+
+    if (scroll > 0) {
+      $header.addClass('active');
+    } else {
+      $header.removeClass('active');
+    }
+  }
 }

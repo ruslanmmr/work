@@ -1,0 +1,11 @@
+mixin news-item(image, classes, title, text)     
+  .news-item-card(class=classes)
+    a(href="#").news-item-card__container
+      if image!==''
+        .news-item-card__image
+          img(src=image, alt="image")
+      .news-item-card__content
+        span.news-item-card__date 25 марта 2020
+        h2.news-item-card__title=title
+        if text!==''
+          p.news-item-card__text=text

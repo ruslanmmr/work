@@ -14,20 +14,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet">
     <link href="/static/fonts/webfontkit/fonts.css" rel="stylesheet">
-    <link href="/static/css/styles.css" rel="stylesheet">
-    <link href="/static/NEW/css/style.css" rel="stylesheet">
-    <link href="/static/NEW/css/new-style-fixes.css" rel="stylesheet">
-    <link href="/static/NEW/css/new-style-fixes-media.css" rel="stylesheet">
-    <link href="/static/css/mobile.css" rel="stylesheet">
-    <link href="/static/css/fotorama.css" rel="stylesheet">
-    <!--helper-->
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/bunnylove/build/styles/js-helper.min.css">
-    <!--new styles fix-->
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/bunnylove/build/styles/new.css">
+    <!--просто вырезал из этого файла старые bootstrap стили, можно вырезать его и пересобрать если он на sass собран-->
+    <link href="http://localhost:9000/styles/styles.css" rel="stylesheet">
+    <!--добавлена сетка бутстрап-->
+    <link href="http://localhost:9000/styles/bootstrap-grid.min.css" rel="stylesheet">
+    <!--файлы стилей в которых есть изменения, файл new-style-fixes-media удалил и обьединил с этим файлом стилей-->
+    <link href="http://localhost:9000/styles/style.css" rel="stylesheet">
+    <link href="http://localhost:9000/styles/mobile.css" rel="stylesheet">
+    <link href="http://localhost:9000/styles/new-style-fixes.css" rel="stylesheet">
+    <!--новые стили-->
+    <link rel="stylesheet" href="http://localhost:9000/styles/new.css">
+    <!--новые стили-->
+    <link rel="stylesheet" href="http://localhost:9000/styles/js-helper.css">
   </head>
   <body>
     <header class="new-header new-header-type-standart">
-      <div class="new-banner new-header__banner">😎 <a class="new-banner__link" href="/anonymity/">анонимность</a> магазина</div>
+      <div class="new-banner new-header__banner">
+        <div class="container">😎 <a class="new-banner__link" href="/anonymity/">анонимность</a> магазина</div>
+      </div>
       <div class="new-mobileMenu new-header__mobileMenu" data-action="menuWrapper">
         <div class="new-mobileMenu__shell">
           <div class="new-mobileMenu__top">
@@ -140,97 +144,102 @@
         </div>
       </div>
       <div class="new-header__top">
-        <button class="new-button new-button-icon-city" data-action="desktopCityButton">
-          <svg class="new-button__icon-type-city">
-            <use xlink:href="#markIcon"></use>
-          </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
-        </button><a class="new-phone new-header__phone new-header__phone-type-desktop new-header__phone-icon-phone" href="tel:+7 (846) 300-44-49">
-          <svg class="new-phone__svg">
-            <use xlink:href="#phoneIcon"></use>
-          </svg> +7 (846) 300-44-49</a><a class="new-button new-button-icon-callback modals" id="link_call_me_back_modal" data-modal-id="call_me_back_modal" href="/feedback/" title="Заказать обратный звонок">
-          <svg class="new-button__icon-type-callback">
-            <use xlink:href="#callbackIcon"></use>
-          </svg></a>
-        <nav class="new-nav new-header__nav"><a class="new-nav__link nav__about" href="/about/">О нас</a><a class="new-nav__link nav__pay" href="/pay/">Оплата</a><a class="new-nav__link nav__delivery" href="/delivery/">Доставка</a><a class="new-nav__link nav__faq" href="/faq/">Вопросы</a><a class="new-nav__link nav__bonus" href="/bonus/">Бонусная программа</a><a class="new-nav__link nav__contacts" href="/contacts/">Контакты</a></nav>
+        <div class="container">
+          <button class="new-button new-button-icon-city" data-action="desktopCityButton">
+            <svg class="new-button__icon-type-city">
+              <use xlink:href="#markIcon"></use>
+            </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
+          </button><a class="new-phone new-header__phone new-header__phone-type-desktop new-header__phone-icon-phone" href="tel:+7 (846) 300-44-49">
+            <svg class="new-phone__svg">
+              <use xlink:href="#phoneIcon"></use>
+            </svg> +7 (846) 300-44-49</a><a class="new-button new-button-icon-callback modals" id="link_call_me_back_modal" data-modal-id="call_me_back_modal" href="/feedback/" title="Заказать обратный звонок">
+            <svg class="new-button__icon-type-callback">
+              <use xlink:href="#callbackIcon"></use>
+            </svg></a>
+          <nav class="new-nav new-header__nav"><a class="new-nav__link nav__about" href="/about/">О нас</a><a class="new-nav__link nav__pay" href="/pay/">Оплата</a><a class="new-nav__link nav__delivery" href="/delivery/">Доставка</a><a class="new-nav__link nav__faq" href="/faq/">Вопросы</a><a class="new-nav__link nav__bonus" href="/bonus/">Бонусная программа</a><a class="new-nav__link nav__contacts" href="/contacts/">Контакты</a></nav>
+        </div>
       </div>
       <div class="new-header__center">
         <!--HIDDEN MIBILE SEARCH START-->
         <div class="mobile-search">
-          <form class="new-search mobile-search__form" method="GET" action="/catalog/search/">
+          <div class="container">
+            <form class="new-search mobile-search__form" method="GET" action="/catalog/search/">
+              <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
+              <button class="new-search__submit" type="submit">
+                <svg class="new-search__icon">
+                  <use xlink:href="#searchIcon"></use>
+                </svg>
+              </button>
+            </form>
+            <button class="mobile-search__close"></button>
+          </div>
+        </div>
+        <div class="container">
+          <button class="new-button new-button-icon-humburger" data-action="menuButton"></button><a class="new-logo new-header__logo" href="/">
+            <svg class="new-logo__icon">
+              <use xlink:href="#logoIcon"></use>
+            </svg> BUNNYLOVE <span class="new-logo__span">влюбленный кролик</span></a>
+          <button class="new-button new-button-icon-city new-button-icon-city-type-table" data-action="cityButton">
+            <svg class="new-button__icon-type-city">
+              <use xlink:href="#markIcon"></use>
+            </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
+          </button>
+          <div class="new-fastBuy new-card__fastBuy new-card__fastBuy-type-city" data-action="cityShell">
+            <div class="new-fastBuy__overflow" data-action="cityCloseButton"></div>
+            <div class="new-fastBuy__wrapper new-fastBuy__wrapper-type-city">
+              <div class="new-console new-mobileMenu__console new-console-type-fastBuy">
+                <button class="new-header__close new-header__close-type-fastBuy" data-action="cityCloseButton"></button>
+              </div>
+              <div class="new-city new-city-type-standart">
+                <p class="new-city__title">Выберите свой город</p>
+                <div class="new-city__shell">
+                  <button class="new-button new-button-type-city new-button-action-check" data-action="cityLink"><a href="//bunnylove.ru/">Самара</a></button>
+                  <button class="new-button new-button-type-city" data-action="cityLink"><a href="//kazan.bunnylove.ru/">Казань</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="new-search new-header__search new-search-type-header" method="GET" action="/catalog/search/">
             <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
-            <button class="new-search__submit" type="submit">
-              <svg class="new-search__icon">
+            <button class="new-search__submit new-search__submit-type-header" type="submit">
+              <svg class="new-search__icon new-search__icon-type-header">
                 <use xlink:href="#searchIcon"></use>
               </svg>
             </button>
           </form>
-          <button class="mobile-search__close"></button>
-        </div>
-        <!--HIDDEN MIBILE SEARCH END-->
-        <button class="new-button new-button-icon-humburger" data-action="menuButton"></button><a class="new-logo new-header__logo" href="/">
-          <svg class="new-logo__icon">
-            <use xlink:href="#logoIcon"></use>
-          </svg> BUNNYLOVE <span class="new-logo__span">влюбленный кролик</span></a>
-        <button class="new-button new-button-icon-city new-button-icon-city-type-table" data-action="cityButton">
-          <svg class="new-button__icon-type-city">
-            <use xlink:href="#markIcon"></use>
-          </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
-        </button>
-        <div class="new-fastBuy new-card__fastBuy new-card__fastBuy-type-city" data-action="cityShell">
-          <div class="new-fastBuy__overflow" data-action="cityCloseButton"></div>
-          <div class="new-fastBuy__wrapper new-fastBuy__wrapper-type-city">
-            <div class="new-console new-mobileMenu__console new-console-type-fastBuy">
-              <button class="new-header__close new-header__close-type-fastBuy" data-action="cityCloseButton"></button>
+          <div class="new-console new-header__console">
+            <!--new search button-->
+            <button class="new-button new-console__button mobile-search-open">
+              <svg class="new-console__icon new-console__icon-type-search">
+                <use xlink:href="#searchIcon"></use>
+              </svg>
+            </button>
+            <!---->
+            <div class="new-button new-console__button" data-action="cabinetButton">
+              <svg class="new-console__icon new-console__icon-type-cabinet">
+                <use xlink:href="#menuUserIcon"></use>
+              </svg>Кабинет
             </div>
-            <div class="new-city new-city-type-standart">
-              <p class="new-city__title">Выберите свой город</p>
-              <div class="new-city__shell">
-                <button class="new-button new-button-type-city new-button-action-check" data-action="cityLink"><a href="//bunnylove.ru/">Самара</a></button>
-                <button class="new-button new-button-type-city" data-action="cityLink"><a href="//kazan.bunnylove.ru/">Казань</a></button>
+            <div class="new-loginPopup new-console__loginPopup" data-action="cabinetPopup">
+              <div class="new-console new-mobileMenu__console">
+                <button class="new-header__close" data-action="cabinetCloseButton"></button>
               </div>
-            </div>
+              <div class="new-loginPopup__shell" data-action="loginOff"><a class="new-button new-button-type-fill new-button new-loginForm__button" href="/login/?next=/">Войти в аккаунт</a><a class="new-loginForm__forgot" href="/password/reset/">Забыли пароль?</a>
+                <p class="new-loginForm__strong">или</p>
+                <p class="new-loginForm__register"><a class="new-loginForm__registerLink" href="/register/">Зарегистрироваться</a><span class="new-loginForm__warning">+500 ₽ на счёт</span></p>
+              </div>
+            </div><a class="new-console__compare" href="/catalog/comparison/">
+              <svg class="new-console__icon new-console__icon-type-compare">
+                <use xlink:href="#compareIcon"></use>
+              </svg>Сравнение<span class="new-console__count products_comparison_count">0</span></a><a class="new-console__bag" href="/catalog/cart/">
+              <svg class="new-console__icon new-console__icon-type-bag">
+                <use xlink:href="#bagIcon"></use>
+              </svg>Корзина<span class="new-console__count cart_count">23</span></a>
           </div>
-        </div>
-        <form class="new-search new-header__search new-search-type-header" method="GET" action="/catalog/search/">
-          <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
-          <button class="new-search__submit new-search__submit-type-header" type="submit">
-            <svg class="new-search__icon new-search__icon-type-header">
-              <use xlink:href="#searchIcon"></use>
-            </svg>
-          </button>
-        </form>
-        <div class="new-console new-header__console">
-          <!--new search button-->
-          <button class="new-button new-console__button mobile-search-open">
-            <svg class="new-console__icon new-console__icon-type-search">
-              <use xlink:href="#searchIcon"></use>
-            </svg>
-          </button>
-          <!---->
-          <div class="new-button new-console__button" data-action="cabinetButton">
-            <svg class="new-console__icon new-console__icon-type-cabinet">
-              <use xlink:href="#menuUserIcon"></use>
-            </svg>Кабинет
-          </div>
-          <div class="new-loginPopup new-console__loginPopup" data-action="cabinetPopup">
-            <div class="new-console new-mobileMenu__console">
-              <button class="new-header__close" data-action="cabinetCloseButton"></button>
-            </div>
-            <div class="new-loginPopup__shell" data-action="loginOff"><a class="new-button new-button-type-fill new-button new-loginForm__button" href="/login/?next=/">Войти в аккаунт</a><a class="new-loginForm__forgot" href="/password/reset/">Забыли пароль?</a>
-              <p class="new-loginForm__strong">или</p>
-              <p class="new-loginForm__register"><a class="new-loginForm__registerLink" href="/register/">Зарегистрироваться</a><span class="new-loginForm__warning">+500 ₽ на счёт</span></p>
-            </div>
-          </div><a class="new-console__compare" href="/catalog/comparison/">
-            <svg class="new-console__icon new-console__icon-type-compare">
-              <use xlink:href="#compareIcon"></use>
-            </svg>Сравнение<span class="new-console__count products_comparison_count">0</span></a><a class="new-console__bag" href="/catalog/cart/">
-            <svg class="new-console__icon new-console__icon-type-bag">
-              <use xlink:href="#bagIcon"></use>
-            </svg>Корзина<span class="new-console__count cart_count">23</span></a>
         </div>
       </div>
       <div class="new-header__bottom">
-        <div class="new-tabs new-header__tabs">
+        <div class="new-tabs new-header__tabs container">
           <div class="new-tabs__panel new-tabs__panel-type-header new-tabs__panel-type-desktop">
             <div class="new-tabs__linkShell" data-action="tabLinkShell"><a class="new-tabs__link new-tabs__link-type-header new-tabs__link-type-passive new-tabs__link-type-desktop" href="/certificates/"><span class="new-tabs__frame new-tabs__frame-type-header new-tabs__frame-type-bigGift">
                   <svg class="new-tabs__img new-tabs__img-type-header new-tabs__img-icon-bigGift">
@@ -387,474 +396,485 @@
           </div>
         </div>
       </div>
-      <div class="new-header__slider new-header__slider-type-main">
+      <div class="new-header__slider new-header__slider-type-main container-fluid">
         <div class="new-slider new-slider__shell" data-action="adSliderInMain"><a class="new-slider__cell" href="https://bunnylove.ru/bonus/">
             <picture class="new-slider__img"><img class="new-slider__img" src="/media/big_slides/d6b4d098-826a-4db9-b37d-a844b7d6f20e.slide.png" alt="Дисконтная программа"></picture></a><a class="new-slider__cell" href="/certificates/">
             <picture class="new-slider__img"><img class="new-slider__img" src="/media/big_slides/5f8f71a9-fec7-456e-9d05-a712f5b550b7.slide.png" alt="Подарочный сертификат"></picture></a><a class="new-slider__cell" href="https://bunnylove.ru/promo/dostavka-za-99/">
             <picture class="new-slider__img"><img class="new-slider__img" src="/media/big_slides/6086b631-dccc-451e-96a4-d1435eec4198.slide.png" alt="Акция на доставку"></picture></a></div>
       </div>
-      <div class="new-header__search new-header__search-type-table">
-        <form class="new-search new-search-type-standart" method="GET" action="/catalog/search/">
-          <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
-          <button class="new-search__submit" type="submit">
-            <svg class="new-search__icon">
-              <use xlink:href="#searchIcon"></use>
-            </svg>
-          </button>
-        </form>
-      </div>
     </header>
     <main>
-      <div class="new-tabs new-tabs-type-general">
-        <div class="new-tabs__panel new-tabs__panel-type-general">
-          <button class="new-tabs__link new-tabs__link-type-general new-tabs__link-action-open" data-action="tab">
-            <svg class="new-tabs__icon new-tabs__icon-type-star new-tabs__icon-type-general">
-              <use xlink:href="#whiteStarIcon"></use>
-            </svg>Популярное
-          </button>
-          <button class="new-tabs__link new-tabs__link-type-general" data-action="tab">
-            <svg class="new-tabs__icon new-tabs__icon-type-sale new-tabs__icon-type-general">
-              <use xlink:href="#tabsSaleIcon"></use>
-            </svg>Со скидкой
-          </button>
-          <button class="new-tabs__link new-tabs__link-type-general" data-action="tab">
-            <svg class="new-tabs__icon new-tabs__icon-type-new new-tabs__icon-type-general">
-              <use xlink:href="#newSaleIcon"></use>
-            </svg>Новинки
-          </button>
+      <main>
+        <div class="new-tabs new-tabs-type-general">
+          <div class="new-tabs__panel new-tabs__panel-type-general">
+            <button class="new-tabs__link new-tabs__link-type-general new-tabs__link-action-open" data-action="tab">
+              <svg class="new-tabs__icon new-tabs__icon-type-star new-tabs__icon-type-general">
+                <use xlink:href="#whiteStarIcon"></use>
+              </svg>Популярное
+            </button>
+            <button class="new-tabs__link new-tabs__link-type-general" data-action="tab">
+              <svg class="new-tabs__icon new-tabs__icon-type-sale new-tabs__icon-type-general">
+                <use xlink:href="#tabsSaleIcon"></use>
+              </svg>Со скидкой
+            </button>
+            <button class="new-tabs__link new-tabs__link-type-general" data-action="tab">
+              <svg class="new-tabs__icon new-tabs__icon-type-new new-tabs__icon-type-general">
+                <use xlink:href="#newSaleIcon"></use>
+              </svg>Новинки
+            </button>
+          </div>
+          <div class="new-tabs__shell">
+            <div class="new-tabs__cell new-tabs__cell-type-middle new-tabs__cell-action-open" data-action="tabContent">
+              <div class="new-slider new-tabs__slider" data-action="popularSlider">
+                <div class="new-card new-slider__card">
+                  <div class="new-card__labels">
+                    <div class="new-card__label new-card__label-type-important">
+                      <svg class="new-card__icon">
+                        <use xlink:href="#whiteStarIcon"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/214775/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/7e/b5/7eb550f6ffb95bd7d23ac2a31f233e55.jpg" width="130" height="130" alt="Вакуум-волновой бесконтактный стимулятор клитора Satisfyer Pro Penguin Next Generation">
+                  </div><a class="new-card__center" href="/catalog/product/satisfyer-pro-penguin-ng-vakuum-volnovoj--j2018-8n/" title="Перейти на страницу товара">Вакуум-волновой бесконтактный стимулятор клитора Satisfyer Pro Penguin Next Generation</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">5 290<span class="new-card__currency">₽</span></span></span>
+                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/214775/" data-action="buyButton">
+                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                        <use xlink:href="#cartIcon"></use>
+                      </svg> Купить
+                    </button>
+                  </p>
+                  <p class="new-card__explanation">Satisfyer – новая технология бесконтактной стимуляции клитора, совмещающая вакуумную стимуляцию и волновую пульсацию</p>
+                </div>
+                <div class="new-card new-slider__card">
+                  <div class="new-card__labels">
+                    <div class="new-card__label new-card__label-type-important">
+                      <svg class="new-card__icon">
+                        <use xlink:href="#whiteStarIcon"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/206921/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/01/44/01448dd4e5cf49a686678ac7410b1b08.jpg" width="130" height="130" alt="Вибратор Partner Toy Plus">
+                  </div><a class="new-card__center" href="/catalog/product/partner-toy-plus-15663/" title="Перейти на страницу товара">Вибратор Partner Toy Plus</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">4 190<span class="new-card__currency">₽</span></span></span>
+                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/206921/" data-action="buyButton">
+                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                        <use xlink:href="#cartIcon"></use>
+                      </svg> Купить
+                    </button>
+                  </p>
+                  <p class="new-card__explanation">Нереалистичный вибратор с двумя моторчиками для пар или соло-игры, длина вводимой части 8 см</p>
+                </div>
+                <div class="new-card new-slider__card">
+                  <div class="new-card__labels">
+                    <div class="new-card__label new-card__label-type-important">
+                      <svg class="new-card__icon">
+                        <use xlink:href="#whiteStarIcon"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/219889/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/13/bf/13bf653cb35fcea2b40996f00ba1fc2b.jpg" width="130" height="130" alt="Мастурбатор Svakom Hedy Ice-cream Pink">
+                  </div><a class="new-card__center" href="/catalog/product/masturbator-svakom-ice-cream-egg-ssmc-02t/" title="Перейти на страницу товара">Мастурбатор Svakom Hedy Ice-cream Pink</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">690<span class="new-card__currency">₽</span></span></span>
+                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/219889/" data-action="buyButton">
+                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                        <use xlink:href="#cartIcon"></use>
+                      </svg> Купить
+                    </button>
+                  </p>
+                  <p class="new-card__explanation">Компактный мастурбатор в форме яйца с двусторонним рельефом в виде спирали и крапин</p>
+                </div>
+                <div class="new-card new-slider__card">
+                  <div class="new-card__labels">
+                    <div class="new-card__label new-card__label-type-important">
+                      <svg class="new-card__icon">
+                        <use xlink:href="#whiteStarIcon"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/192596/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/cc/09/cc09c28727f27c3a64c50fff1a178054.jpg" width="130" height="130" alt="Крем-пролонгатор Long Play - 15 мл.">
+                  </div><a class="new-card__center" href="/catalog/product/long-play-15ml-prolongiruyuschaya-smazka-130038/" title="Перейти на страницу товара">Крем-пролонгатор Long Play - 15 мл.</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">420<span class="new-card__currency">₽</span></span></span>
+                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/192596/" data-action="buyButton">
+                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                        <use xlink:href="#cartIcon"></use>
+                      </svg> Купить
+                    </button>
+                  </p>
+                  <p class="new-card__explanation">Мужской крем длительного действия для продления полового акта</p>
+                </div>
+                <div class="new-card new-slider__card">
+                  <div class="new-card__labels">
+                    <div class="new-card__label new-card__label-type-important">
+                      <svg class="new-card__icon">
+                        <use xlink:href="#whiteStarIcon"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/189861/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/0c/65/0c65e763ddbedadd260a33e8af802043.jpg" width="130" height="130" alt="Мастурбатор-яйцо CLICKER">
+                  </div><a class="new-card__center" href="/catalog/product/masturbator-yajtso-clicker-odnorazovoe-6--egg-002/" title="Перейти на страницу товара">Мастурбатор-яйцо CLICKER</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">690<span class="new-card__currency">₽</span></span></span>
+                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/189861/" data-action="buyButton">
+                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                        <use xlink:href="#cartIcon"></use>
+                      </svg> Купить
+                    </button>
+                  </p>
+                  <p class="new-card__explanation">Этот мастурбатор обещает множество плотских удовольствий</p>
+                </div>
+                <div class="new-card new-slider__card">
+                  <div class="new-card__labels">
+                    <div class="new-card__label new-card__label-type-important">
+                      <svg class="new-card__icon">
+                        <use xlink:href="#whiteStarIcon"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/205464/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/80/a1/80a1eef2133cb0df989bf4699d897c46.jpg" width="130" height="130" alt="Телесный мультискоростной вибратор-реалистик A-toys - 19,8 см.">
+                  </div><a class="new-card__center" href="/catalog/product/vibrator-a-toys-multi-speed-761005/" title="Перейти на страницу товара">Телесный мультискоростной вибратор-реалистик A-toys - 19,8 см.</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">1 840<span class="new-card__currency">₽</span></span></span>
+                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/205464/" data-action="buyButton">
+                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                        <use xlink:href="#cartIcon"></use>
+                      </svg> Купить
+                    </button>
+                  </p>
+                  <p class="new-card__explanation">Телесный мультискоростной вибратор-реалистик A-toys</p>
+                </div>
+              </div><a class="new-button new-button-type-empty" href="/catalog/tabs/all/popular/">Все популярные товары</a>
+            </div>
+            <div class="new-tabs__cell new-tabs__cell-type-middle" data-action="tabContent">
+              <div class="new-slider new-tabs__slider" data-action="discountSlider">
+                <div class="new-card new-slider__card">
+                  <div class="new-card__labels">
+                    <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-10%</span></div>
+                  </div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8508888/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/db/8f/db8ffbae8725b759ae5c8f01a66b84eb.jpg" width="130" height="130" alt="Подарочный набор We-Vibe Discover Gift Box">
+                  </div><a class="new-card__center" href="/catalog/product/we-vibe-nabor-discover-gift-box-sncgsgz/" title="Перейти на страницу товара">Подарочный набор We-Vibe Discover Gift Box</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">15 490<span class="new-card__currency">₽</span></span><span class="new-card__price">13 941<span class="new-card__currency">₽</span></span></span>
+                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8508888/" data-action="buyButton">
+                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                        <use xlink:href="#cartIcon"></use>
+                      </svg> Купить
+                    </button>
+                  </p>
+                  <p class="new-card__explanation">Этот подарочный набор специалисты We-vibe разработали и выпустили в честь десятилетия существования компании</p>
+                </div>
+                <div class="new-card new-slider__card">
+                  <div class="new-card__labels">
+                    <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-30%</span></div>
+                  </div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8804934/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/b4/a0/b4a0e1554bd18a530360a0d647fbe5d3.jpg" width="130" height="130" alt="Черная мужская портупея Adonis High Halter">
+                  </div><a class="new-card__center" href="/catalog/product/muzhskaya-sbruya-portupeya-harness-adonis--ou255blk/" title="Перейти на страницу товара">Черная мужская портупея Adonis High Halter</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">3 140<span class="new-card__currency">₽</span></span><span class="new-card__price">2 198<span class="new-card__currency">₽</span></span></span>
+                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8804934/" data-action="buyButton">
+                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                        <use xlink:href="#cartIcon"></use>
+                      </svg> Купить
+                    </button>
+                  </p>
+                  <p class="new-card__explanation">Мужская портупея Adonis High Halter</p>
+                </div>
+                <div class="new-card new-slider__card">
+                  <div class="new-card__labels">
+                    <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-20%</span></div>
+                  </div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8804951/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/82/89/8289dc0a4db8ab20c7dd37b5753c7972.jpg" width="130" height="130" alt="Темно-серое эрекционное кольцо в виде гайки">
+                  </div><a class="new-card__center" href="/catalog/product/erektsionnoe-koltso-v-vide-protektora--bon006/" title="Перейти на страницу товара">Темно-серое эрекционное кольцо в виде гайки</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">1 430<span class="new-card__currency">₽</span></span><span class="new-card__price">1 144<span class="new-card__currency">₽</span></span></span>
+                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8804951/" data-action="buyButton">
+                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                        <use xlink:href="#cartIcon"></use>
+                      </svg> Купить
+                    </button>
+                  </p>
+                  <p class="new-card__explanation">Плотное кольцо для члена в форме гайки придает вашему пенису еще более мужественный вид и позволяет наслаждаться эрекцией в течение более длительного времени</p>
+                </div>
+                <div class="new-card new-slider__card">
+                  <div class="new-card__labels">
+                    <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-20%</span></div>
+                  </div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8749487/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/7b/eb/7beb865a9ee2bd1b601da613e1a87b62.jpg" width="130" height="130" alt="Мастурбатор-вагина Fuck Me Silly To Go">
+                  </div><a class="new-card__center" href="/catalog/product/masturbator-vagina-fuck-me-silly-to--5358500000/" title="Перейти на страницу товара">Мастурбатор-вагина Fuck Me Silly To Go</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">5 340<span class="new-card__currency">₽</span></span><span class="new-card__price">4 272<span class="new-card__currency">₽</span></span></span>
+                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8749487/" data-action="buyButton">
+                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                        <use xlink:href="#cartIcon"></use>
+                      </svg> Купить
+                    </button>
+                  </p>
+                  <p class="new-card__explanation">Мастурбатор-вагина Fuck Me Silly To Go</p>
+                </div>
+                <div class="new-card new-slider__card">
+                  <div class="new-card__labels">
+                    <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-30%</span></div>
+                  </div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8599777/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/03/ad/03ad0c42d75af701cb9d842fd467723f.jpg" width="130" height="130" alt="Элегантные сетчатые перчатки Darkie">
+                  </div><a class="new-card__center" href="/catalog/product/perchatki-darkie-ob4922/" title="Перейти на страницу товара">Элегантные сетчатые перчатки Darkie</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">840<span class="new-card__currency">₽</span></span><span class="new-card__price">588<span class="new-card__currency">₽</span></span></span>
+                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8599777/" data-action="buyButton">
+                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                        <use xlink:href="#cartIcon"></use>
+                      </svg> Купить
+                    </button>
+                  </p>
+                  <p class="new-card__explanation">Один аксессуар может украсить собой весь комплект</p>
+                </div>
+                <div class="new-card new-slider__card">
+                  <div class="new-card__labels">
+                    <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-20%</span></div>
+                  </div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/5760701/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/41/b4/41b4f0870d49646c998068c018e80581.jpg" width="130" height="130" alt="Лиловый вибронабор из 5 предметов Joys Collection">
+                  </div><a class="new-card__center" href="/catalog/product/bw-012011--nabor-vibrostimulyatorov-4--bw-012011/" title="Перейти на страницу товара">Лиловый вибронабор из 5 предметов Joys Collection</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">3 490<span class="new-card__currency">₽</span></span><span class="new-card__price">2 792<span class="new-card__currency">₽</span></span></span>
+                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/5760701/" data-action="buyButton">
+                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                        <use xlink:href="#cartIcon"></use>
+                      </svg> Купить
+                    </button>
+                  </p>
+                  <p class="new-card__explanation">В наборе мощная вибропуля и 4 силиконовые насадки для стимуляции тех или иных зон</p>
+                </div>
+              </div><a class="new-button new-button-type-empty" href="/catalog/tabs/all/discount/">Все товары со скидкой</a>
+            </div>
+            <div class="new-tabs__cell new-tabs__cell-type-middle" data-action="tabContent">
+              <div class="new-slider new-tabs__slider" data-action="noveltySlider">
+                <p>По Вашему запросу товаров не найдено.</p>
+              </div><a class="new-button new-button-type-empty" href="/catalog/tabs/all/new/">Все новинки</a>
+            </div>
+          </div>
         </div>
-        <div class="new-tabs__shell">
-          <div class="new-tabs__cell new-tabs__cell-type-middle new-tabs__cell-action-open" data-action="tabContent">
-            <div class="new-slider new-tabs__slider" data-action="popularSlider">
-              <div class="new-card new-slider__card">
-                <div class="new-card__labels">
-                  <div class="new-card__label new-card__label-type-important">
-                    <svg class="new-card__icon">
-                      <use xlink:href="#whiteStarIcon"></use>
-                    </svg>
+        <div class="new-content new-content-type-halve">
+          <section class="new-weekly new-weekly-type-standart new-weekly-theme-dark">
+            <h2 class="new-weekly__title">Товары недели</h2>
+            <div class="new-slider new-weekly__slider" data-action="weeklySlider"><a class="new-weekItem new-slider__weekItem" href="/catalog/product/dildo-comet-pearl-biryuzovyij-8070-05/">
+                <p class="new-weekItem__title">Фаллоимитатор Comet Pearl</p>
+                <div class="new-weekItem__shell">
+                  <div class="new-weekItem__left"><img class="new-weekItem__img" src="/media/cache/8a/01/8a010e2b6d68033dba0e2e822b407abc.jpg" alt="Фаллоимитатор Comet Pearl"></div>
+                  <div class="new-weekItem__right">
+                    <p class="new-weekItem__priceBlock"><span class="new-weekItem__price new-weekItem__price-type-old">5 690<span class="new-weekItem__currency">₽</span></span><span class="new-weekItem__price">2 845<span class="new-weekItem__currency">₽</span></span></p>
+                    <p class="new-weekItem__text">Нереалистичный фаллоимитатор эргономично изогнутой формы для стимуляции точки G, рабочая длина 13 см</p>
                   </div>
-                </div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/214775/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/7e/b5/7eb550f6ffb95bd7d23ac2a31f233e55.jpg" width="130" height="130" alt="Вакуум-волновой бесконтактный стимулятор клитора Satisfyer Pro Penguin Next Generation">
-                </div><a class="new-card__center" href="/catalog/product/satisfyer-pro-penguin-ng-vakuum-volnovoj--j2018-8n/" title="Перейти на страницу товара">Вакуум-волновой бесконтактный стимулятор клитора Satisfyer Pro Penguin Next Generation</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">5 290<span class="new-card__currency">₽</span></span></span>
-                  <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/214775/" data-action="buyButton">
-                    <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                      <use xlink:href="#cartIcon"></use>
-                    </svg> Купить
-                  </button>
-                </p>
-                <p class="new-card__explanation">Satisfyer – новая технология бесконтактной стимуляции клитора, совмещающая вакуумную стимуляцию и волновую пульсацию</p>
-              </div>
-              <div class="new-card new-slider__card">
-                <div class="new-card__labels">
-                  <div class="new-card__label new-card__label-type-important">
-                    <svg class="new-card__icon">
-                      <use xlink:href="#whiteStarIcon"></use>
-                    </svg>
+                </div></a><a class="new-weekItem new-slider__weekItem" href="/catalog/product/11131--admini-trigger-vibrostimulyator--11131/">
+                <p class="new-weekItem__title">Вибратор Mini Trigger</p>
+                <div class="new-weekItem__shell">
+                  <div class="new-weekItem__left"><img class="new-weekItem__img" src="/media/cache/fe/42/fe4254bf69647d49bf7566e1eee1dc73.jpg" alt="Вибратор Mini Trigger"></div>
+                  <div class="new-weekItem__right">
+                    <p class="new-weekItem__priceBlock"><span class="new-weekItem__price new-weekItem__price-type-old">8 940<span class="new-weekItem__currency">₽</span></span><span class="new-weekItem__price">6 258<span class="new-weekItem__currency">₽</span></span></p>
+                    <p class="new-weekItem__text">Водонепроницаемый вибратор с рельефным изогнутым стволом и клиторальым стимулятором, рабочая длина-9 см, длина стимулятора-5,5 см</p>
                   </div>
-                </div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/206921/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/01/44/01448dd4e5cf49a686678ac7410b1b08.jpg" width="130" height="130" alt="Вибратор Partner Toy Plus">
-                </div><a class="new-card__center" href="/catalog/product/partner-toy-plus-15663/" title="Перейти на страницу товара">Вибратор Partner Toy Plus</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">4 190<span class="new-card__currency">₽</span></span></span>
-                  <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/206921/" data-action="buyButton">
-                    <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                      <use xlink:href="#cartIcon"></use>
-                    </svg> Купить
-                  </button>
-                </p>
-                <p class="new-card__explanation">Нереалистичный вибратор с двумя моторчиками для пар или соло-игры, длина вводимой части 8 см</p>
-              </div>
-              <div class="new-card new-slider__card">
-                <div class="new-card__labels">
-                  <div class="new-card__label new-card__label-type-important">
-                    <svg class="new-card__icon">
-                      <use xlink:href="#whiteStarIcon"></use>
-                    </svg>
+                </div></a><a class="new-weekItem new-slider__weekItem" href="/catalog/product/bi-014623--vakuumnyij-vibrostimulyator-klitora--bi-014623/">
+                <p class="new-weekItem__title">Вакуумный вибростимулятор клитора Hammer</p>
+                <div class="new-weekItem__shell">
+                  <div class="new-weekItem__left"><img class="new-weekItem__img" src="/media/cache/c6/23/c6230bfb640f295ba262bd562d5918b9.jpg" alt="Вакуумный вибростимулятор клитора Hammer"></div>
+                  <div class="new-weekItem__right">
+                    <p class="new-weekItem__priceBlock"><span class="new-weekItem__price new-weekItem__price-type-old">6 990<span class="new-weekItem__currency">₽</span></span><span class="new-weekItem__price">4 893<span class="new-weekItem__currency">₽</span></span></p>
+                    <p class="new-weekItem__text">Многофункциональный двухсторонний вибратор Hammer с функцией вакуумной стимуляции идеален для клиторального использования!  Одна сторона игрушки предназначена для стимуляции клитора с помощью 7 вакуумных функций, а вторая сторона вибрирует в 7 режимах и гарантирует деликатный эротический массаж клитора</p>
                   </div>
-                </div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/219889/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/13/bf/13bf653cb35fcea2b40996f00ba1fc2b.jpg" width="130" height="130" alt="Мастурбатор Svakom Hedy Ice-cream Pink">
-                </div><a class="new-card__center" href="/catalog/product/masturbator-svakom-ice-cream-egg-ssmc-02t/" title="Перейти на страницу товара">Мастурбатор Svakom Hedy Ice-cream Pink</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">690<span class="new-card__currency">₽</span></span></span>
-                  <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/219889/" data-action="buyButton">
-                    <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                      <use xlink:href="#cartIcon"></use>
-                    </svg> Купить
-                  </button>
-                </p>
-                <p class="new-card__explanation">Компактный мастурбатор в форме яйца с двусторонним рельефом в виде спирали и крапин</p>
-              </div>
-              <div class="new-card new-slider__card">
-                <div class="new-card__labels">
-                  <div class="new-card__label new-card__label-type-important">
-                    <svg class="new-card__icon">
-                      <use xlink:href="#whiteStarIcon"></use>
-                    </svg>
+                </div></a><a class="new-weekItem new-slider__weekItem" href="/catalog/product/romp-shine-beskontaktnyij-klitoralnyij-stimulyator-rpstsg3/">
+                <p class="new-weekItem__title">Бесконтактный клиторальный стимулятор Romp Shine</p>
+                <div class="new-weekItem__shell">
+                  <div class="new-weekItem__left"><img class="new-weekItem__img" src="/media/cache/94/f0/94f0a0b0b3c129ac68d6a898a17f0588.jpg" alt="Бесконтактный клиторальный стимулятор Romp Shine"></div>
+                  <div class="new-weekItem__right">
+                    <p class="new-weekItem__priceBlock"><span class="new-weekItem__price new-weekItem__price-type-old">6 980<span class="new-weekItem__currency">₽</span></span><span class="new-weekItem__price">5 584<span class="new-weekItem__currency">₽</span></span></p>
+                    <p class="new-weekItem__text">Вакуум-волновой стимулятор клитора с технологией Pleasure Air</p>
                   </div>
-                </div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/192596/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/cc/09/cc09c28727f27c3a64c50fff1a178054.jpg" width="130" height="130" alt="Крем-пролонгатор Long Play - 15 мл.">
-                </div><a class="new-card__center" href="/catalog/product/long-play-15ml-prolongiruyuschaya-smazka-130038/" title="Перейти на страницу товара">Крем-пролонгатор Long Play - 15 мл.</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">420<span class="new-card__currency">₽</span></span></span>
-                  <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/192596/" data-action="buyButton">
-                    <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                      <use xlink:href="#cartIcon"></use>
-                    </svg> Купить
-                  </button>
-                </p>
-                <p class="new-card__explanation">Мужской крем длительного действия для продления полового акта</p>
-              </div>
-              <div class="new-card new-slider__card">
-                <div class="new-card__labels">
-                  <div class="new-card__label new-card__label-type-important">
-                    <svg class="new-card__icon">
-                      <use xlink:href="#whiteStarIcon"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/189861/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/0c/65/0c65e763ddbedadd260a33e8af802043.jpg" width="130" height="130" alt="Мастурбатор-яйцо CLICKER">
-                </div><a class="new-card__center" href="/catalog/product/masturbator-yajtso-clicker-odnorazovoe-6--egg-002/" title="Перейти на страницу товара">Мастурбатор-яйцо CLICKER</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">690<span class="new-card__currency">₽</span></span></span>
-                  <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/189861/" data-action="buyButton">
-                    <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                      <use xlink:href="#cartIcon"></use>
-                    </svg> Купить
-                  </button>
-                </p>
-                <p class="new-card__explanation">Этот мастурбатор обещает множество плотских удовольствий</p>
-              </div>
-              <div class="new-card new-slider__card">
-                <div class="new-card__labels">
-                  <div class="new-card__label new-card__label-type-important">
-                    <svg class="new-card__icon">
-                      <use xlink:href="#whiteStarIcon"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/205464/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/80/a1/80a1eef2133cb0df989bf4699d897c46.jpg" width="130" height="130" alt="Телесный мультискоростной вибратор-реалистик A-toys - 19,8 см.">
-                </div><a class="new-card__center" href="/catalog/product/vibrator-a-toys-multi-speed-761005/" title="Перейти на страницу товара">Телесный мультискоростной вибратор-реалистик A-toys - 19,8 см.</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">1 840<span class="new-card__currency">₽</span></span></span>
-                  <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/205464/" data-action="buyButton">
-                    <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                      <use xlink:href="#cartIcon"></use>
-                    </svg> Купить
-                  </button>
-                </p>
-                <p class="new-card__explanation">Телесный мультискоростной вибратор-реалистик A-toys</p>
-              </div>
-            </div><a class="new-button new-button-type-empty" href="/catalog/tabs/all/popular/">Все популярные товары</a>
-          </div>
-          <div class="new-tabs__cell new-tabs__cell-type-middle" data-action="tabContent">
-            <div class="new-slider new-tabs__slider" data-action="discountSlider">
-              <div class="new-card new-slider__card">
-                <div class="new-card__labels">
-                  <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-10%</span></div>
-                </div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8508888/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/db/8f/db8ffbae8725b759ae5c8f01a66b84eb.jpg" width="130" height="130" alt="Подарочный набор We-Vibe Discover Gift Box">
-                </div><a class="new-card__center" href="/catalog/product/we-vibe-nabor-discover-gift-box-sncgsgz/" title="Перейти на страницу товара">Подарочный набор We-Vibe Discover Gift Box</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">15 490<span class="new-card__currency">₽</span></span><span class="new-card__price">13 941<span class="new-card__currency">₽</span></span></span>
-                  <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8508888/" data-action="buyButton">
-                    <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                      <use xlink:href="#cartIcon"></use>
-                    </svg> Купить
-                  </button>
-                </p>
-                <p class="new-card__explanation">Этот подарочный набор специалисты We-vibe разработали и выпустили в честь десятилетия существования компании</p>
-              </div>
-              <div class="new-card new-slider__card">
-                <div class="new-card__labels">
-                  <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-30%</span></div>
-                </div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8804934/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/b4/a0/b4a0e1554bd18a530360a0d647fbe5d3.jpg" width="130" height="130" alt="Черная мужская портупея Adonis High Halter">
-                </div><a class="new-card__center" href="/catalog/product/muzhskaya-sbruya-portupeya-harness-adonis--ou255blk/" title="Перейти на страницу товара">Черная мужская портупея Adonis High Halter</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">3 140<span class="new-card__currency">₽</span></span><span class="new-card__price">2 198<span class="new-card__currency">₽</span></span></span>
-                  <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8804934/" data-action="buyButton">
-                    <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                      <use xlink:href="#cartIcon"></use>
-                    </svg> Купить
-                  </button>
-                </p>
-                <p class="new-card__explanation">Мужская портупея Adonis High Halter</p>
-              </div>
-              <div class="new-card new-slider__card">
-                <div class="new-card__labels">
-                  <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-20%</span></div>
-                </div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8804951/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/82/89/8289dc0a4db8ab20c7dd37b5753c7972.jpg" width="130" height="130" alt="Темно-серое эрекционное кольцо в виде гайки">
-                </div><a class="new-card__center" href="/catalog/product/erektsionnoe-koltso-v-vide-protektora--bon006/" title="Перейти на страницу товара">Темно-серое эрекционное кольцо в виде гайки</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">1 430<span class="new-card__currency">₽</span></span><span class="new-card__price">1 144<span class="new-card__currency">₽</span></span></span>
-                  <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8804951/" data-action="buyButton">
-                    <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                      <use xlink:href="#cartIcon"></use>
-                    </svg> Купить
-                  </button>
-                </p>
-                <p class="new-card__explanation">Плотное кольцо для члена в форме гайки придает вашему пенису еще более мужественный вид и позволяет наслаждаться эрекцией в течение более длительного времени</p>
-              </div>
-              <div class="new-card new-slider__card">
-                <div class="new-card__labels">
-                  <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-20%</span></div>
-                </div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8749487/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/7b/eb/7beb865a9ee2bd1b601da613e1a87b62.jpg" width="130" height="130" alt="Мастурбатор-вагина Fuck Me Silly To Go">
-                </div><a class="new-card__center" href="/catalog/product/masturbator-vagina-fuck-me-silly-to--5358500000/" title="Перейти на страницу товара">Мастурбатор-вагина Fuck Me Silly To Go</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">5 340<span class="new-card__currency">₽</span></span><span class="new-card__price">4 272<span class="new-card__currency">₽</span></span></span>
-                  <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8749487/" data-action="buyButton">
-                    <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                      <use xlink:href="#cartIcon"></use>
-                    </svg> Купить
-                  </button>
-                </p>
-                <p class="new-card__explanation">Мастурбатор-вагина Fuck Me Silly To Go</p>
-              </div>
-              <div class="new-card new-slider__card">
-                <div class="new-card__labels">
-                  <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-30%</span></div>
-                </div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8599777/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/03/ad/03ad0c42d75af701cb9d842fd467723f.jpg" width="130" height="130" alt="Элегантные сетчатые перчатки Darkie">
-                </div><a class="new-card__center" href="/catalog/product/perchatki-darkie-ob4922/" title="Перейти на страницу товара">Элегантные сетчатые перчатки Darkie</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">840<span class="new-card__currency">₽</span></span><span class="new-card__price">588<span class="new-card__currency">₽</span></span></span>
-                  <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8599777/" data-action="buyButton">
-                    <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                      <use xlink:href="#cartIcon"></use>
-                    </svg> Купить
-                  </button>
-                </p>
-                <p class="new-card__explanation">Один аксессуар может украсить собой весь комплект</p>
-              </div>
-              <div class="new-card new-slider__card">
-                <div class="new-card__labels">
-                  <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-20%</span></div>
-                </div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/5760701/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/41/b4/41b4f0870d49646c998068c018e80581.jpg" width="130" height="130" alt="Лиловый вибронабор из 5 предметов Joys Collection">
-                </div><a class="new-card__center" href="/catalog/product/bw-012011--nabor-vibrostimulyatorov-4--bw-012011/" title="Перейти на страницу товара">Лиловый вибронабор из 5 предметов Joys Collection</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">3 490<span class="new-card__currency">₽</span></span><span class="new-card__price">2 792<span class="new-card__currency">₽</span></span></span>
-                  <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/5760701/" data-action="buyButton">
-                    <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                      <use xlink:href="#cartIcon"></use>
-                    </svg> Купить
-                  </button>
-                </p>
-                <p class="new-card__explanation">В наборе мощная вибропуля и 4 силиконовые насадки для стимуляции тех или иных зон</p>
-              </div>
-            </div><a class="new-button new-button-type-empty" href="/catalog/tabs/all/discount/">Все товары со скидкой</a>
-          </div>
-          <div class="new-tabs__cell new-tabs__cell-type-middle" data-action="tabContent">
-            <div class="new-slider new-tabs__slider" data-action="noveltySlider">
-              <p>По Вашему запросу товаров не найдено.</p>
-            </div><a class="new-button new-button-type-empty" href="/catalog/tabs/all/new/">Все новинки</a>
-          </div>
+                </div></a></div>
+          </section>
+          <section class="new-content__advert new-advert">
+            <picture class="new-advert__img"><img class="new-advert__img" src="/media/frontpage_bnrs/flower-image.jpg"></picture>
+          </section>
         </div>
-      </div>
-      <div class="new-content new-content-type-halve">
-        <section class="new-weekly new-weekly-type-standart new-weekly-theme-dark">
-          <h2 class="new-weekly__title">Товары недели</h2>
-          <div class="new-slider new-weekly__slider" data-action="weeklySlider"><a class="new-weekItem new-slider__weekItem" href="/catalog/product/dildo-comet-pearl-biryuzovyij-8070-05/">
-              <p class="new-weekItem__title">Фаллоимитатор Comet Pearl</p>
-              <div class="new-weekItem__shell">
-                <div class="new-weekItem__left"><img class="new-weekItem__img" src="/media/cache/8a/01/8a010e2b6d68033dba0e2e822b407abc.jpg" alt="Фаллоимитатор Comet Pearl"></div>
-                <div class="new-weekItem__right">
-                  <p class="new-weekItem__priceBlock"><span class="new-weekItem__price new-weekItem__price-type-old">5 690<span class="new-weekItem__currency">₽</span></span><span class="new-weekItem__price">2 845<span class="new-weekItem__currency">₽</span></span></p>
-                  <p class="new-weekItem__text">Нереалистичный фаллоимитатор эргономично изогнутой формы для стимуляции точки G, рабочая длина 13 см</p>
-                </div>
-              </div></a><a class="new-weekItem new-slider__weekItem" href="/catalog/product/11131--admini-trigger-vibrostimulyator--11131/">
-              <p class="new-weekItem__title">Вибратор Mini Trigger</p>
-              <div class="new-weekItem__shell">
-                <div class="new-weekItem__left"><img class="new-weekItem__img" src="/media/cache/fe/42/fe4254bf69647d49bf7566e1eee1dc73.jpg" alt="Вибратор Mini Trigger"></div>
-                <div class="new-weekItem__right">
-                  <p class="new-weekItem__priceBlock"><span class="new-weekItem__price new-weekItem__price-type-old">8 940<span class="new-weekItem__currency">₽</span></span><span class="new-weekItem__price">6 258<span class="new-weekItem__currency">₽</span></span></p>
-                  <p class="new-weekItem__text">Водонепроницаемый вибратор с рельефным изогнутым стволом и клиторальым стимулятором, рабочая длина-9 см, длина стимулятора-5,5 см</p>
-                </div>
-              </div></a><a class="new-weekItem new-slider__weekItem" href="/catalog/product/bi-014623--vakuumnyij-vibrostimulyator-klitora--bi-014623/">
-              <p class="new-weekItem__title">Вакуумный вибростимулятор клитора Hammer</p>
-              <div class="new-weekItem__shell">
-                <div class="new-weekItem__left"><img class="new-weekItem__img" src="/media/cache/c6/23/c6230bfb640f295ba262bd562d5918b9.jpg" alt="Вакуумный вибростимулятор клитора Hammer"></div>
-                <div class="new-weekItem__right">
-                  <p class="new-weekItem__priceBlock"><span class="new-weekItem__price new-weekItem__price-type-old">6 990<span class="new-weekItem__currency">₽</span></span><span class="new-weekItem__price">4 893<span class="new-weekItem__currency">₽</span></span></p>
-                  <p class="new-weekItem__text">Многофункциональный двухсторонний вибратор Hammer с функцией вакуумной стимуляции идеален для клиторального использования!  Одна сторона игрушки предназначена для стимуляции клитора с помощью 7 вакуумных функций, а вторая сторона вибрирует в 7 режимах и гарантирует деликатный эротический массаж клитора</p>
-                </div>
-              </div></a><a class="new-weekItem new-slider__weekItem" href="/catalog/product/romp-shine-beskontaktnyij-klitoralnyij-stimulyator-rpstsg3/">
-              <p class="new-weekItem__title">Бесконтактный клиторальный стимулятор Romp Shine</p>
-              <div class="new-weekItem__shell">
-                <div class="new-weekItem__left"><img class="new-weekItem__img" src="/media/cache/94/f0/94f0a0b0b3c129ac68d6a898a17f0588.jpg" alt="Бесконтактный клиторальный стимулятор Romp Shine"></div>
-                <div class="new-weekItem__right">
-                  <p class="new-weekItem__priceBlock"><span class="new-weekItem__price new-weekItem__price-type-old">6 980<span class="new-weekItem__currency">₽</span></span><span class="new-weekItem__price">5 584<span class="new-weekItem__currency">₽</span></span></p>
-                  <p class="new-weekItem__text">Вакуум-волновой стимулятор клитора с технологией Pleasure Air</p>
-                </div>
-              </div></a></div>
+        <section class="new-recommend new-recommend-type-desktop">
+          <h2 class="new-recommend__title">Рекомендуем</h2>
+          <div class="new-recommend__shell"><a class="new-recommend__cell" href="/catalog/seks-igrushki/dlya-zhenshin/vakuumnye-stimulyatory/"><span class="new-recommend__frame">
+                <svg class="new-recommend__icon new-recommend__icon-type-vakum">
+                  <use xlink:href="#vakumIcon"></use>
+                </svg></span> Вакуумные стимуляторы</a><a class="new-recommend__cell" href="/catalog/seks-igrushki/dlya-dvoih/vibratory-dlya-par/"><span class="new-recommend__frame">
+                <svg class="new-recommend__icon new-recommend__icon-type-vibro">
+                  <use xlink:href="#vibroIcon"></use>
+                </svg></span> Вибраторы для пар</a><a class="new-recommend__cell" href="/catalog/intimnaya-kosmetika/prezervativy/?brend=okamoto-yaponiya&amp;brend=sagami-yaponiya"><span class="new-recommend__frame">
+                <svg class="new-recommend__icon new-recommend__icon-type-japan">
+                  <use xlink:href="#japanCondonsIcon"></use>
+                </svg></span> Японские презервативы</a><a class="new-recommend__cell" href="/catalog/intimnaya-kosmetika/smazki/"><span class="new-recommend__frame">
+                <svg class="new-recommend__icon new-recommend__icon-type-lubricant">
+                  <use xlink:href="#lubricantIcon"></use>
+                </svg></span> Лубриканты</a><a class="new-recommend__cell" href="/catalog/seks-igrushki/dlya-muzhchin/vaginy-i-masturbatory/"><span class="new-recommend__frame">
+                <svg class="new-recommend__icon new-recommend__icon-type-stimulants">
+                  <use xlink:href="#manStimulantsIcon"></use>
+                </svg></span> Стимуляторы для мужчин</a><a class="new-recommend__cell" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/"><span class="new-recommend__frame">
+                <svg class="new-recommend__icon new-recommend__icon-type-vaginal">
+                  <use xlink:href="#vaginalBallsIcon"></use>
+                </svg></span> Вагинальные шарики</a></div>
         </section>
-        <section class="new-content__advert new-advert">
-          <picture class="new-advert__img"><img class="new-advert__img" src="/media/frontpage_bnrs/flower-image.jpg"></picture>
-        </section>
-      </div>
-      <section class="new-recommend new-recommend-type-desktop">
-        <h2 class="new-recommend__title">Рекомендуем</h2>
-        <div class="new-recommend__shell"><a class="new-recommend__cell" href="/catalog/seks-igrushki/dlya-zhenshin/vakuumnye-stimulyatory/"><span class="new-recommend__frame">
-              <svg class="new-recommend__icon new-recommend__icon-type-vakum">
-                <use xlink:href="#vakumIcon"></use>
-              </svg></span> Вакуумные стимуляторы</a><a class="new-recommend__cell" href="/catalog/seks-igrushki/dlya-dvoih/vibratory-dlya-par/"><span class="new-recommend__frame">
-              <svg class="new-recommend__icon new-recommend__icon-type-vibro">
-                <use xlink:href="#vibroIcon"></use>
-              </svg></span> Вибраторы для пар</a><a class="new-recommend__cell" href="/catalog/intimnaya-kosmetika/prezervativy/?brend=okamoto-yaponiya&amp;brend=sagami-yaponiya"><span class="new-recommend__frame">
-              <svg class="new-recommend__icon new-recommend__icon-type-japan">
-                <use xlink:href="#japanCondonsIcon"></use>
-              </svg></span> Японские презервативы</a><a class="new-recommend__cell" href="/catalog/intimnaya-kosmetika/smazki/"><span class="new-recommend__frame">
-              <svg class="new-recommend__icon new-recommend__icon-type-lubricant">
-                <use xlink:href="#lubricantIcon"></use>
-              </svg></span> Лубриканты</a><a class="new-recommend__cell" href="/catalog/seks-igrushki/dlya-muzhchin/vaginy-i-masturbatory/"><span class="new-recommend__frame">
-              <svg class="new-recommend__icon new-recommend__icon-type-stimulants">
-                <use xlink:href="#manStimulantsIcon"></use>
-              </svg></span> Стимуляторы для мужчин</a><a class="new-recommend__cell" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/"><span class="new-recommend__frame">
-              <svg class="new-recommend__icon new-recommend__icon-type-vaginal">
-                <use xlink:href="#vaginalBallsIcon"></use>
-              </svg></span> Вагинальные шарики</a></div>
-      </section>
-      <div class="new-content new-content-type-halve new-content-type-reverse">
-        <div class="new-invite new-content__invite">
-          <div class="new-invite__top">
-            <p class="new-invite__text">Получите <span class="new-invite__span"> +300 ₽</span> на свой счёт при регистрации в личном кабинете</p>
-            <form action="/register/">
-              <button class="new-button new-invite__bottom new-button-type-fill">Зарегистрироваться</button>
-            </form>
+        <div class="new-content new-content-type-halve new-content-type-reverse">
+          <div class="new-invite new-content__invite">
+            <div class="new-invite__top">
+              <p class="new-invite__text">Получите <span class="new-invite__span"> +300 ₽</span> на свой счёт при регистрации в личном кабинете</p>
+              <form action="/register/">
+                <button class="new-button new-invite__bottom new-button-type-fill">Зарегистрироваться</button>
+              </form>
+            </div>
+            <section class="new-content__advert new-advert new-content__advert-type-halve"></section><a class="new-advert__link" href="https://www.instagram.com/bunnyloveru/">
+              <picture class="new-advert__img"><img class="new-advert__img" src="/media/frontpage_bnrs/action-poster-1-d.jpg"></picture></a>
           </div>
-          <section class="new-content__advert new-advert new-content__advert-type-halve"></section><a class="new-advert__link" href="https://www.instagram.com/bunnyloveru/">
-            <picture class="new-advert__img"><img class="new-advert__img" src="/media/frontpage_bnrs/action-poster-1-d.jpg"></picture></a>
+          <section class="new-content__advert new-advert">
+            <picture class="new-advert__img"><img class="new-advert__img" src="/media/frontpage_bnrs/action-poster-2-md.jpg"></picture>
+          </section>
         </div>
-        <section class="new-content__advert new-advert">
-          <picture class="new-advert__img"><img class="new-advert__img" src="/media/frontpage_bnrs/action-poster-2-md.jpg"></picture>
-        </section>
-      </div>
-      <section class="new-why new-why-type-standart">
-        <h2 class="new-why__title">Сексшоп со смыслом</h2>
-        <div class="new-why__shell">
-          <div class="new-accordion new-why__accordion">
-            <button class="new-button new-accordion__button new-accordion__button-action-open" data-action="accordionOpener">Мы за развитие сексуальной культуры</button>
-            <div class="new-accordion__shell new-accordion__shell-action-open" data-action="accordionShell">
-              <p>Поддерживать естественную сексуальность и изучать свое тело очень важно для полноценной жизни, здоровья и крепких отношений. Интимные игрушки делают этот процесс проще и интереснее</p>
-            </div>
-          </div>
-          <div class="new-accordion new-why__accordion">
-            <button class="new-button new-accordion__button" data-action="accordionOpener">Только за актуальный ассортимент</button>
-            <div class="new-accordion__shell" data-action="accordionShell">
-              <p>Мы следим за развитием adult-индустрии и выбираем только лучшие товары и самые топовые новинки.</p>
-              <p>15000+ товаров 200+ брендов и наш ассортимент постоянно растет</p>
-            </div>
-          </div>
-          <div class="new-accordion new-why__accordion">
-            <button class="new-button new-accordion__button" data-action="accordionOpener">За индивидуальный подход</button>
-            <div class="new-accordion__shell" data-action="accordionShell">
-              <p>Мы подберем игрушки для тех, кто только начинает знакомство с эротическими товарами, и сможем удовлетворить запросы самых искушенных покупателей</p>
-            </div>
-          </div>
-          <div class="new-accordion new-why__accordion">
-            <button class="new-button new-accordion__button" data-action="accordionOpener">Мы работаем 24/7. Доставляем быстро и в любое время</button>
-            <div class="new-accordion__shell" data-action="accordionShell">
-              <p>Онлайн-консультант поможет выбрать товары в любое время суток. Курьерская служба доставит заказ в нужное время</p>
-            </div>
-          </div>
-          <div class="new-accordion new-why__accordion">
-            <button class="new-button new-accordion__button" data-action="accordionOpener">Нам важно, чтобы помощь консультантов оказалась максимально полезной</button>
-            <div class="new-accordion__shell" data-action="accordionShell">
-              <p>Сотрудники Влюбленного кролика регулярно проходят дополнительные обучения и повышают квалификацию для того, чтобы стать настоящими экспертами для наших клиентов</p>
-            </div>
-          </div>
-          <div class="new-accordion new-why__accordion">
-            <button class="new-button new-accordion__button" data-action="accordionOpener">Мы внимательны к деталям</button>
-            <div class="new-accordion__shell" data-action="accordionShell">
-              <p>С любовью упаковываем каждый заказ в крафтовую бумагу и вкладываем маленький сюрприз или милую открытку</p>
-            </div>
-          </div>
-          <div class="new-accordion new-why__accordion">
-            <button class="new-button new-accordion__button" data-action="accordionOpener">Мы за низкие цены</button>
-            <div class="new-accordion__shell" data-action="accordionShell">
-              <p>Мы разработали выгодную бонусную систему, постоянно проводим акции, распродажи и розыгрыши в соцсетях. Для постоянных клиентов действуют персональные цены</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="new-blog new-blog-type-standart">
-        <h2 class="new-blog__title">Bunnyblog</h2>
-        <div class="new-blog__shell">
-          <div class="new-blog__top">
-            <div class="new-slider new-slider__shell new-blog__slider" data-action="blogSlider">
-              <div class="new-blogPost new-slider__cell"><a class="new-blogPost__link" href="/articles/na-start-vnimanie-bdsm/"><span class="new-blogPost__imgBlock"><img class="new-blogPost__img" src="/media/article/teaser/bunny_bdsm.jpg" alt="На старт, внимание, БДСМ"></span><span class="new-blogPost__date">30 августа 2020 г.</span><span class="new-blogPost__title">На старт, внимание, БДСМ</span></a></div>
-              <div class="new-blogPost new-slider__cell"><a class="new-blogPost__link" href="/articles/5-sposobov-uluchshit-seksualnuyu-zhizn-v-pare/"><span class="new-blogPost__imgBlock"><img class="new-blogPost__img" src="/media/article/teaser/para_tiser.jpg" alt="5 способов улучшить сексуальную жизнь в паре"></span><span class="new-blogPost__date">28 февраля 2020 г.</span><span class="new-blogPost__title">5 способов улучшить сексуальную жизнь в паре</span></a></div>
-              <div class="new-blogPost new-slider__cell"><a class="new-blogPost__link" href="/articles/vybor-vibratora/"><span class="new-blogPost__imgBlock"><img class="new-blogPost__img" src="/media/article/teaser/bunny_vibr.jpg" alt="Выбор вибратора"></span><span class="new-blogPost__date">16 ноября 2018 г.</span><span class="new-blogPost__title">Выбор вибратора</span></a></div>
-            </div>
-          </div>
-          <div class="new-blog__bottom">
-            <section class="new-why new-why-type-standart new-why-type-desktop">
-              <div class="new-why__shell new-why__shell-type-desktop">
-                <div class="new-accordion new-why__accordion new-why__accordion-type-desktop">
-                  <h1 class="new-button new-accordion__button new-accordion__button-type-goods new-accordion__button-action-open" data-action="accordionOpener">«Влюбленный кролик» - интернет-магазин интимных товаров</h1>
-                  <div class="new-accordion__shell new-accordion__shell-type-desktop new-accordion__shell-action-open" data-action="accordionShell">
-                    <p><span>Магазин интим-товаров для взрослых «Влюбленный кролик» занимается продажей различных игрушек для секса, эротического нижнего белья для неё и для него, а также множества аксессуаров, которые помогут разнообразить ваши ощущения в момент интимной близости.</span></p><a class="new-button new-button-type-goods new-button-type-underline" href="/about/">Подробнее</a>
-                  </div>
-                </div>
-                <div class="new-accordion new-why__accordion new-why__accordion-type-desktop">
-                  <button class="new-button new-accordion__button new-accordion__button-type-goods" data-action="accordionOpener">Анонимность и безопасность</button>
-                  <div class="new-accordion__shell new-accordion__shell-type-desktop" data-action="accordionShell">
-                    <p><span>Одним из главных правил нашего интернет-магазина интимных товаров является анонимность и конфиденциальность. Оставленная Вами информация будет использоваться только для доставки товара курьером, не имеющим представления о содержимом пакета, а отсутствие каких-либо логотипов гарантирует, что никто не узнает о Вашем приобретении.</span></p><a class="new-button new-button-type-goods new-button-type-underline" href="/anonymity/">Подробнее</a>
-                  </div>
-                </div>
-                <div class="new-accordion new-why__accordion new-why__accordion-type-desktop">
-                  <button class="new-button new-accordion__button new-accordion__button-type-goods" data-action="accordionOpener">Новое поколение интим магазина</button>
-                  <div class="new-accordion__shell new-accordion__shell-type-desktop" data-action="accordionShell">
-                    <p><span>Новое поколение интим магазина — это виртуальная витрина всех возможных сексуальных удовольствий, о которых только можно мечтать. Мы не предлагаем Вам вибраторы и вагины, мы предлагаем секс, страсть, удовольствие, игру, чувственность и азарт.</span></p><a class="new-button new-button-type-goods new-button-type-underline" href="/new-generation/">Подробнее</a>
-                  </div>
-                </div>
+        <section class="new-why new-why-type-standart">
+          <h2 class="new-why__title">Сексшоп со смыслом</h2>
+          <div class="new-why__shell">
+            <div class="new-accordion new-why__accordion">
+              <button class="new-button new-accordion__button new-accordion__button-action-open" data-action="accordionOpener">Мы за развитие сексуальной культуры</button>
+              <div class="new-accordion__shell new-accordion__shell-action-open" data-action="accordionShell">
+                <p>Поддерживать естественную сексуальность и изучать свое тело очень важно для полноценной жизни, здоровья и крепких отношений. Интимные игрушки делают этот процесс проще и интереснее</p>
               </div>
-            </section>
+            </div>
+            <div class="new-accordion new-why__accordion">
+              <button class="new-button new-accordion__button" data-action="accordionOpener">Только за актуальный ассортимент</button>
+              <div class="new-accordion__shell" data-action="accordionShell">
+                <p>Мы следим за развитием adult-индустрии и выбираем только лучшие товары и самые топовые новинки.</p>
+                <p>15000+ товаров 200+ брендов и наш ассортимент постоянно растет</p>
+              </div>
+            </div>
+            <div class="new-accordion new-why__accordion">
+              <button class="new-button new-accordion__button" data-action="accordionOpener">За индивидуальный подход</button>
+              <div class="new-accordion__shell" data-action="accordionShell">
+                <p>Мы подберем игрушки для тех, кто только начинает знакомство с эротическими товарами, и сможем удовлетворить запросы самых искушенных покупателей</p>
+              </div>
+            </div>
+            <div class="new-accordion new-why__accordion">
+              <button class="new-button new-accordion__button" data-action="accordionOpener">Мы работаем 24/7. Доставляем быстро и в любое время</button>
+              <div class="new-accordion__shell" data-action="accordionShell">
+                <p>Онлайн-консультант поможет выбрать товары в любое время суток. Курьерская служба доставит заказ в нужное время</p>
+              </div>
+            </div>
+            <div class="new-accordion new-why__accordion">
+              <button class="new-button new-accordion__button" data-action="accordionOpener">Нам важно, чтобы помощь консультантов оказалась максимально полезной</button>
+              <div class="new-accordion__shell" data-action="accordionShell">
+                <p>Сотрудники Влюбленного кролика регулярно проходят дополнительные обучения и повышают квалификацию для того, чтобы стать настоящими экспертами для наших клиентов</p>
+              </div>
+            </div>
+            <div class="new-accordion new-why__accordion">
+              <button class="new-button new-accordion__button" data-action="accordionOpener">Мы внимательны к деталям</button>
+              <div class="new-accordion__shell" data-action="accordionShell">
+                <p>С любовью упаковываем каждый заказ в крафтовую бумагу и вкладываем маленький сюрприз или милую открытку</p>
+              </div>
+            </div>
+            <div class="new-accordion new-why__accordion">
+              <button class="new-button new-accordion__button" data-action="accordionOpener">Мы за низкие цены</button>
+              <div class="new-accordion__shell" data-action="accordionShell">
+                <p>Мы разработали выгодную бонусную систему, постоянно проводим акции, распродажи и розыгрыши в соцсетях. Для постоянных клиентов действуют персональные цены</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="new-blog new-blog-type-standart">
+          <h2 class="new-blog__title">Bunnyblog</h2>
+          <div class="new-blog__shell">
+            <div class="new-blog__top">
+              <div class="new-slider new-slider__shell new-blog__slider" data-action="blogSlider">
+                <div class="new-blogPost new-slider__cell"><a class="new-blogPost__link" href="/articles/na-start-vnimanie-bdsm/"><span class="new-blogPost__imgBlock"><img class="new-blogPost__img" src="/media/article/teaser/bunny_bdsm.jpg" alt="На старт, внимание, БДСМ"></span><span class="new-blogPost__date">30 августа 2020 г.</span><span class="new-blogPost__title">На старт, внимание, БДСМ</span></a></div>
+                <div class="new-blogPost new-slider__cell"><a class="new-blogPost__link" href="/articles/5-sposobov-uluchshit-seksualnuyu-zhizn-v-pare/"><span class="new-blogPost__imgBlock"><img class="new-blogPost__img" src="/media/article/teaser/para_tiser.jpg" alt="5 способов улучшить сексуальную жизнь в паре"></span><span class="new-blogPost__date">28 февраля 2020 г.</span><span class="new-blogPost__title">5 способов улучшить сексуальную жизнь в паре</span></a></div>
+                <div class="new-blogPost new-slider__cell"><a class="new-blogPost__link" href="/articles/vybor-vibratora/"><span class="new-blogPost__imgBlock"><img class="new-blogPost__img" src="/media/article/teaser/bunny_vibr.jpg" alt="Выбор вибратора"></span><span class="new-blogPost__date">16 ноября 2018 г.</span><span class="new-blogPost__title">Выбор вибратора</span></a></div>
+              </div>
+            </div>
+            <div class="new-blog__bottom">
+              <section class="new-why new-why-type-standart new-why-type-desktop">
+                <div class="new-why__shell new-why__shell-type-desktop">
+                  <div class="new-accordion new-why__accordion new-why__accordion-type-desktop">
+                    <h1 class="new-button new-accordion__button new-accordion__button-type-goods new-accordion__button-action-open" data-action="accordionOpener">«Влюбленный кролик» - интернет-магазин интимных товаров</h1>
+                    <div class="new-accordion__shell new-accordion__shell-type-desktop new-accordion__shell-action-open" data-action="accordionShell">
+                      <p><span>Магазин интим-товаров для взрослых «Влюбленный кролик» занимается продажей различных игрушек для секса, эротического нижнего белья для неё и для него, а также множества аксессуаров, которые помогут разнообразить ваши ощущения в момент интимной близости.</span></p><a class="new-button new-button-type-goods new-button-type-underline" href="/about/">Подробнее</a>
+                    </div>
+                  </div>
+                  <div class="new-accordion new-why__accordion new-why__accordion-type-desktop">
+                    <button class="new-button new-accordion__button new-accordion__button-type-goods" data-action="accordionOpener">Анонимность и безопасность</button>
+                    <div class="new-accordion__shell new-accordion__shell-type-desktop" data-action="accordionShell">
+                      <p><span>Одним из главных правил нашего интернет-магазина интимных товаров является анонимность и конфиденциальность. Оставленная Вами информация будет использоваться только для доставки товара курьером, не имеющим представления о содержимом пакета, а отсутствие каких-либо логотипов гарантирует, что никто не узнает о Вашем приобретении.</span></p><a class="new-button new-button-type-goods new-button-type-underline" href="/anonymity/">Подробнее</a>
+                    </div>
+                  </div>
+                  <div class="new-accordion new-why__accordion new-why__accordion-type-desktop">
+                    <button class="new-button new-accordion__button new-accordion__button-type-goods" data-action="accordionOpener">Новое поколение интим магазина</button>
+                    <div class="new-accordion__shell new-accordion__shell-type-desktop" data-action="accordionShell">
+                      <p><span>Новое поколение интим магазина — это виртуальная витрина всех возможных сексуальных удовольствий, о которых только можно мечтать. Мы не предлагаем Вам вибраторы и вагины, мы предлагаем секс, страсть, удовольствие, игру, чувственность и азарт.</span></p><a class="new-button new-button-type-goods new-button-type-underline" href="/new-generation/">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </main>
     <footer class="new-footer new-footer-type-standart">
-      <div class="new-footer__top">
-        <div class="new-footer__ad">Получай бонусы за покупки и оплачивай ими следующий заказ — <a class="new-footer__link" href="/bonus/">подробнее о бонусной программе</a></div>
+      <!--новый блок-->
+      <div class="footer-topline">
+        <div class="container footer-topline__container">
+          <form class="footer-topline__form" action="#">
+            <input class="footer-topline__input" type="email" placeholder="E-mail">
+            <button class="new-button-type-fill footer-topline__button">Оформить</button>
+          </form>
+          <h5 class="footer-topline__title">Если скрыть форму, текст просто <a href="#">растянется </a>на ширину всей полосы. (можно проверить через консоль)</h5>
+        </div>
       </div>
-      <div class="new-footer__center">
+      <!--.new-footer__top
+      .container
+        .new-footer__ad
+          | Получай бонусы за покупки и оплачивай ими следующий заказ — 
+          a.new-footer__link(href='/bonus/') подробнее о бонусной программе
+      -->
+      <div class="new-footer__center container">
         <div class="new-footer__contacts"><a class="new-phone new-footer__phone" rel="nofollow" target="_blank" href="tel:+7 (846) 300-44-49">
             <svg class="new-phone__svg">
               <use xlink:href="#phoneIcon"></use>
             </svg> +7 (846) 300-44-49</a><a class="new-mail new-footer__mail" href="/feedback/feedback/">
             <svg class="new-mail__svg">
               <use xlink:href="#mailIcon"></use>
-            </svg> Написать нам</a><span class="new-social__title">Соцсети:</span>
-          <p><a class="vk" rel="nofollow" target="_blank" href="http://vk.com/club22731393"><img src="/static/svg/vk.svg" alt="vk"></a><a class="vk" rel="nofollow" target="_blank" href="https://www.instagram.com/bunnyloveru/"><img src="/static/svg/inst.svg" alt="instagram" width="30" height="30"></a></p>
+            </svg> Написать нам</a>
+          <!--соц сети-->
+          <div class="footer-socials"> <span class="footer-socials__title">Соцсети:</span>
+            <ul class="footer-socials__list">
+              <li class="footer-socials__item"><a class="footer-socials__link" href="#"><img src="/static/svg/vk.svg" alt="vk"></a></li>
+              <li class="footer-socials__item"><a class="footer-socials__link" href="#"><img src="/static/svg/inst.svg" alt="instagram"></a></li>
+            </ul>
+          </div>
         </div>
         <div class="new-footer__shell">
           <div class="new-dropdown new-footer__dropdown">
@@ -879,7 +899,7 @@
           </div>
         </div>
       </div>
-      <div class="new-footer__bottom"><a class="new-footer__copy" rel="nofollow" target="_blank" href="http://fancymedia.ru/">Разработка сайта — <span class="new-footer__span">fancymedia</span></a>
+      <div class="new-footer__bottom container"><a class="new-footer__copy" rel="nofollow" target="_blank" href="http://fancymedia.ru/">Разработка сайта — <span class="new-footer__span">fancymedia</span></a>
         <div class="new-footer__payments">
           <div class="new-footer__payment">
             <svg class="new-footer__svg new-footer__svg-type-visa">
@@ -902,7 +922,7 @@
       <div class="js-helper-module__container">
         <!--section-->
         <div class="js-helper-module__section"><span class="js-helper-module__section-title">Страницы:</span>
-          <div class="js-helper-module__section-content"><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/index.html">Главная</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/search.html">Поиск-выдача</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar.html">Карточка товара</a></div>
+          <div class="js-helper-module__section-content"><a class="js-helper-module__section-button" href="http://localhost:9000/index.html">Главная</a><a class="js-helper-module__section-button" href="http://localhost:9000/search.html">Поиск-выдача</a><a class="js-helper-module__section-button" href="http://localhost:9000/tovar.html">Карточка товара</a><a class="js-helper-module__section-button" href="http://localhost:9000/articles.html">Статьи</a><a class="js-helper-module__section-button" href="http://localhost:9000/article.html">Статья</a></div>
         </div>
       </div>
     </div>
@@ -1233,8 +1253,8 @@
       
     </script>
     <!--helper (preview only)-->
-    <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/js/js-helper.min.js"></script>
+    <script type="text/javascript" src="http://localhost:9000/js/js-helper.min.js"></script>
     <!--new-->
-    <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/js/new.js"></script>
+    <script type="text/javascript" src="http://localhost:9000/js/new.js"></script>
   </body>
 </html>

@@ -14,20 +14,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet">
     <link href="/static/fonts/webfontkit/fonts.css" rel="stylesheet">
-    <link href="/static/css/styles.css" rel="stylesheet">
-    <link href="/static/NEW/css/style.css" rel="stylesheet">
-    <link href="/static/NEW/css/new-style-fixes.css" rel="stylesheet">
-    <link href="/static/NEW/css/new-style-fixes-media.css" rel="stylesheet">
-    <link href="/static/css/mobile.css" rel="stylesheet">
-    <link href="/static/css/fotorama.css" rel="stylesheet">
-    <!--helper-->
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/bunnylove/build/styles/js-helper.min.css">
-    <!--new styles fix-->
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/bunnylove/build/styles/new.css">
+    <!--просто вырезал из этого файла старые bootstrap стили, можно вырезать его и пересобрать если он на sass собран-->
+    <link href="http://localhost:9000/styles/styles.css" rel="stylesheet">
+    <!--добавлена сетка бутстрап-->
+    <link href="http://localhost:9000/styles/bootstrap-grid.min.css" rel="stylesheet">
+    <!--файлы стилей в которых есть изменения, файл new-style-fixes-media удалил и обьединил с этим файлом стилей-->
+    <link href="http://localhost:9000/styles/style.css" rel="stylesheet">
+    <link href="http://localhost:9000/styles/mobile.css" rel="stylesheet">
+    <link href="http://localhost:9000/styles/new-style-fixes.css" rel="stylesheet">
+    <!--новые стили-->
+    <link rel="stylesheet" href="http://localhost:9000/styles/new.css">
+    <!--новые стили-->
+    <link rel="stylesheet" href="http://localhost:9000/styles/js-helper.css">
   </head>
   <body>
     <header class="new-header new-header-type-standart">
-      <div class="new-banner new-header__banner">😎 <a class="new-banner__link" href="/anonymity/">анонимность</a> магазина</div>
+      <div class="new-banner new-header__banner">
+        <div class="container">😎 <a class="new-banner__link" href="/anonymity/">анонимность</a> магазина</div>
+      </div>
       <div class="new-mobileMenu new-header__mobileMenu" data-action="menuWrapper">
         <div class="new-mobileMenu__shell">
           <div class="new-mobileMenu__top">
@@ -140,97 +144,102 @@
         </div>
       </div>
       <div class="new-header__top">
-        <button class="new-button new-button-icon-city" data-action="desktopCityButton">
-          <svg class="new-button__icon-type-city">
-            <use xlink:href="#markIcon"></use>
-          </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
-        </button><a class="new-phone new-header__phone new-header__phone-type-desktop new-header__phone-icon-phone" href="tel:+7 (846) 300-44-49">
-          <svg class="new-phone__svg">
-            <use xlink:href="#phoneIcon"></use>
-          </svg> +7 (846) 300-44-49</a><a class="new-button new-button-icon-callback modals" id="link_call_me_back_modal" data-modal-id="call_me_back_modal" href="/feedback/" title="Заказать обратный звонок">
-          <svg class="new-button__icon-type-callback">
-            <use xlink:href="#callbackIcon"></use>
-          </svg></a>
-        <nav class="new-nav new-header__nav"><a class="new-nav__link nav__about" href="/about/">О нас</a><a class="new-nav__link nav__pay" href="/pay/">Оплата</a><a class="new-nav__link nav__delivery" href="/delivery/">Доставка</a><a class="new-nav__link nav__faq" href="/faq/">Вопросы</a><a class="new-nav__link nav__bonus" href="/bonus/">Бонусная программа</a><a class="new-nav__link nav__contacts" href="/contacts/">Контакты</a></nav>
+        <div class="container">
+          <button class="new-button new-button-icon-city" data-action="desktopCityButton">
+            <svg class="new-button__icon-type-city">
+              <use xlink:href="#markIcon"></use>
+            </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
+          </button><a class="new-phone new-header__phone new-header__phone-type-desktop new-header__phone-icon-phone" href="tel:+7 (846) 300-44-49">
+            <svg class="new-phone__svg">
+              <use xlink:href="#phoneIcon"></use>
+            </svg> +7 (846) 300-44-49</a><a class="new-button new-button-icon-callback modals" id="link_call_me_back_modal" data-modal-id="call_me_back_modal" href="/feedback/" title="Заказать обратный звонок">
+            <svg class="new-button__icon-type-callback">
+              <use xlink:href="#callbackIcon"></use>
+            </svg></a>
+          <nav class="new-nav new-header__nav"><a class="new-nav__link nav__about" href="/about/">О нас</a><a class="new-nav__link nav__pay" href="/pay/">Оплата</a><a class="new-nav__link nav__delivery" href="/delivery/">Доставка</a><a class="new-nav__link nav__faq" href="/faq/">Вопросы</a><a class="new-nav__link nav__bonus" href="/bonus/">Бонусная программа</a><a class="new-nav__link nav__contacts" href="/contacts/">Контакты</a></nav>
+        </div>
       </div>
       <div class="new-header__center">
         <!--HIDDEN MIBILE SEARCH START-->
         <div class="mobile-search">
-          <form class="new-search mobile-search__form" method="GET" action="/catalog/search/">
+          <div class="container">
+            <form class="new-search mobile-search__form" method="GET" action="/catalog/search/">
+              <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
+              <button class="new-search__submit" type="submit">
+                <svg class="new-search__icon">
+                  <use xlink:href="#searchIcon"></use>
+                </svg>
+              </button>
+            </form>
+            <button class="mobile-search__close"></button>
+          </div>
+        </div>
+        <div class="container">
+          <button class="new-button new-button-icon-humburger" data-action="menuButton"></button><a class="new-logo new-header__logo" href="/">
+            <svg class="new-logo__icon">
+              <use xlink:href="#logoIcon"></use>
+            </svg> BUNNYLOVE <span class="new-logo__span">влюбленный кролик</span></a>
+          <button class="new-button new-button-icon-city new-button-icon-city-type-table" data-action="cityButton">
+            <svg class="new-button__icon-type-city">
+              <use xlink:href="#markIcon"></use>
+            </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
+          </button>
+          <div class="new-fastBuy new-card__fastBuy new-card__fastBuy-type-city" data-action="cityShell">
+            <div class="new-fastBuy__overflow" data-action="cityCloseButton"></div>
+            <div class="new-fastBuy__wrapper new-fastBuy__wrapper-type-city">
+              <div class="new-console new-mobileMenu__console new-console-type-fastBuy">
+                <button class="new-header__close new-header__close-type-fastBuy" data-action="cityCloseButton"></button>
+              </div>
+              <div class="new-city new-city-type-standart">
+                <p class="new-city__title">Выберите свой город</p>
+                <div class="new-city__shell">
+                  <button class="new-button new-button-type-city new-button-action-check" data-action="cityLink"><a href="//bunnylove.ru/">Самара</a></button>
+                  <button class="new-button new-button-type-city" data-action="cityLink"><a href="//kazan.bunnylove.ru/">Казань</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="new-search new-header__search new-search-type-header" method="GET" action="/catalog/search/">
             <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
-            <button class="new-search__submit" type="submit">
-              <svg class="new-search__icon">
+            <button class="new-search__submit new-search__submit-type-header" type="submit">
+              <svg class="new-search__icon new-search__icon-type-header">
                 <use xlink:href="#searchIcon"></use>
               </svg>
             </button>
           </form>
-          <button class="mobile-search__close"></button>
-        </div>
-        <!--HIDDEN MIBILE SEARCH END-->
-        <button class="new-button new-button-icon-humburger" data-action="menuButton"></button><a class="new-logo new-header__logo" href="/">
-          <svg class="new-logo__icon">
-            <use xlink:href="#logoIcon"></use>
-          </svg> BUNNYLOVE <span class="new-logo__span">влюбленный кролик</span></a>
-        <button class="new-button new-button-icon-city new-button-icon-city-type-table" data-action="cityButton">
-          <svg class="new-button__icon-type-city">
-            <use xlink:href="#markIcon"></use>
-          </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
-        </button>
-        <div class="new-fastBuy new-card__fastBuy new-card__fastBuy-type-city" data-action="cityShell">
-          <div class="new-fastBuy__overflow" data-action="cityCloseButton"></div>
-          <div class="new-fastBuy__wrapper new-fastBuy__wrapper-type-city">
-            <div class="new-console new-mobileMenu__console new-console-type-fastBuy">
-              <button class="new-header__close new-header__close-type-fastBuy" data-action="cityCloseButton"></button>
+          <div class="new-console new-header__console">
+            <!--new search button-->
+            <button class="new-button new-console__button mobile-search-open">
+              <svg class="new-console__icon new-console__icon-type-search">
+                <use xlink:href="#searchIcon"></use>
+              </svg>
+            </button>
+            <!---->
+            <div class="new-button new-console__button" data-action="cabinetButton">
+              <svg class="new-console__icon new-console__icon-type-cabinet">
+                <use xlink:href="#menuUserIcon"></use>
+              </svg>Кабинет
             </div>
-            <div class="new-city new-city-type-standart">
-              <p class="new-city__title">Выберите свой город</p>
-              <div class="new-city__shell">
-                <button class="new-button new-button-type-city new-button-action-check" data-action="cityLink"><a href="//bunnylove.ru/">Самара</a></button>
-                <button class="new-button new-button-type-city" data-action="cityLink"><a href="//kazan.bunnylove.ru/">Казань</a></button>
+            <div class="new-loginPopup new-console__loginPopup" data-action="cabinetPopup">
+              <div class="new-console new-mobileMenu__console">
+                <button class="new-header__close" data-action="cabinetCloseButton"></button>
               </div>
-            </div>
+              <div class="new-loginPopup__shell" data-action="loginOff"><a class="new-button new-button-type-fill new-button new-loginForm__button" href="/login/?next=/">Войти в аккаунт</a><a class="new-loginForm__forgot" href="/password/reset/">Забыли пароль?</a>
+                <p class="new-loginForm__strong">или</p>
+                <p class="new-loginForm__register"><a class="new-loginForm__registerLink" href="/register/">Зарегистрироваться</a><span class="new-loginForm__warning">+500 ₽ на счёт</span></p>
+              </div>
+            </div><a class="new-console__compare" href="/catalog/comparison/">
+              <svg class="new-console__icon new-console__icon-type-compare">
+                <use xlink:href="#compareIcon"></use>
+              </svg>Сравнение<span class="new-console__count products_comparison_count">0</span></a><a class="new-console__bag" href="/catalog/cart/">
+              <svg class="new-console__icon new-console__icon-type-bag">
+                <use xlink:href="#bagIcon"></use>
+              </svg>Корзина<span class="new-console__count cart_count">23</span></a>
           </div>
-        </div>
-        <form class="new-search new-header__search new-search-type-header" method="GET" action="/catalog/search/">
-          <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
-          <button class="new-search__submit new-search__submit-type-header" type="submit">
-            <svg class="new-search__icon new-search__icon-type-header">
-              <use xlink:href="#searchIcon"></use>
-            </svg>
-          </button>
-        </form>
-        <div class="new-console new-header__console">
-          <!--new search button-->
-          <button class="new-button new-console__button mobile-search-open">
-            <svg class="new-console__icon new-console__icon-type-search">
-              <use xlink:href="#searchIcon"></use>
-            </svg>
-          </button>
-          <!---->
-          <div class="new-button new-console__button" data-action="cabinetButton">
-            <svg class="new-console__icon new-console__icon-type-cabinet">
-              <use xlink:href="#menuUserIcon"></use>
-            </svg>Кабинет
-          </div>
-          <div class="new-loginPopup new-console__loginPopup" data-action="cabinetPopup">
-            <div class="new-console new-mobileMenu__console">
-              <button class="new-header__close" data-action="cabinetCloseButton"></button>
-            </div>
-            <div class="new-loginPopup__shell" data-action="loginOff"><a class="new-button new-button-type-fill new-button new-loginForm__button" href="/login/?next=/">Войти в аккаунт</a><a class="new-loginForm__forgot" href="/password/reset/">Забыли пароль?</a>
-              <p class="new-loginForm__strong">или</p>
-              <p class="new-loginForm__register"><a class="new-loginForm__registerLink" href="/register/">Зарегистрироваться</a><span class="new-loginForm__warning">+500 ₽ на счёт</span></p>
-            </div>
-          </div><a class="new-console__compare" href="/catalog/comparison/">
-            <svg class="new-console__icon new-console__icon-type-compare">
-              <use xlink:href="#compareIcon"></use>
-            </svg>Сравнение<span class="new-console__count products_comparison_count">0</span></a><a class="new-console__bag" href="/catalog/cart/">
-            <svg class="new-console__icon new-console__icon-type-bag">
-              <use xlink:href="#bagIcon"></use>
-            </svg>Корзина<span class="new-console__count cart_count">23</span></a>
         </div>
       </div>
       <div class="new-header__bottom">
-        <div class="new-tabs new-header__tabs">
+        <div class="new-tabs new-header__tabs container">
           <div class="new-tabs__panel new-tabs__panel-type-header new-tabs__panel-type-desktop">
             <div class="new-tabs__linkShell" data-action="tabLinkShell"><a class="new-tabs__link new-tabs__link-type-header new-tabs__link-type-passive new-tabs__link-type-desktop" href="/certificates/"><span class="new-tabs__frame new-tabs__frame-type-header new-tabs__frame-type-bigGift">
                   <svg class="new-tabs__img new-tabs__img-type-header new-tabs__img-icon-bigGift">
@@ -387,213 +396,218 @@
           </div>
         </div>
       </div>
-      <div class="new-header__slider new-header__slider-type-main">
-        <div class="new-slider new-slider__shell" data-action="adSliderInMain"><a class="new-slider__cell" href="https://bunnylove.ru/bonus/">
-            <picture class="new-slider__img"><img class="new-slider__img" src="/media/big_slides/d6b4d098-826a-4db9-b37d-a844b7d6f20e.slide.png" alt="Дисконтная программа"></picture></a><a class="new-slider__cell" href="/certificates/">
-            <picture class="new-slider__img"><img class="new-slider__img" src="/media/big_slides/5f8f71a9-fec7-456e-9d05-a712f5b550b7.slide.png" alt="Подарочный сертификат"></picture></a><a class="new-slider__cell" href="https://bunnylove.ru/promo/dostavka-za-99/">
-            <picture class="new-slider__img"><img class="new-slider__img" src="/media/big_slides/6086b631-dccc-451e-96a4-d1435eec4198.slide.png" alt="Акция на доставку"></picture></a></div>
-      </div>
-      <div class="new-header__search new-header__search-type-table">
-        <form class="new-search new-search-type-standart" method="GET" action="/catalog/search/">
-          <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
-          <button class="new-search__submit" type="submit">
-            <svg class="new-search__icon">
-              <use xlink:href="#searchIcon"></use>
-            </svg>
-          </button>
-        </form>
-      </div>
     </header>
-    <div class="page" id="body-page">
-      <div class="right-col"></div>
-      <div class="left-col"></div>
-      <div class="new-content new-content-type-catalog">
-        <div class="new-breadcrumbs new-content__breadcrumbs"><a class="new-breadcrumbs__link" href="/">Главная</a><span>Поиск по каталогу</span></div>
-        <h1 class="new-content__title">Поиск по каталогу</h1>
-        <div class="new-content__left">
-          <div class="filter">
-            <form id="search-sorting" action="/catalog/search/?query=stella">
-              <fieldset class="filter__item">
-                <legend>Цена</legend>
-                <label class="radio" for="radio-1">
-                  <input id="radio-1" type="radio" name="ordering_by_price" value="/catalog/search/?query=stella" checked=""><span class="outer"><span class="inner"></span></span><span class="text">По убыванию</span>
-                </label>
-                <label class="radio" for="radio-2">
-                  <input id="radio-2" type="radio" name="ordering_by_price" value="/catalog/search/?query=stella&amp;ordering_by_price=asc"><span class="outer"><span class="inner"></span></span><span class="text">По возрастанию</span>
-                </label>
-              </fieldset>
-              <fieldset class="filter__item">
-                <legend>Наличие</legend>
-                <label class="radio" for="radio-3">
-                  <input id="radio-3" type="radio" name="only_available" value="/catalog/search/?query=stella&amp;only_available=True"><span class="outer"><span class="inner"></span></span><span class="text">Показать в наличии</span>
-                </label>
-                <label class="radio" for="radio-4">
-                  <input id="radio-4" type="radio" name="only_available" value="/catalog/search/?query=stella&amp;only_available=False" checked=""><span class="outer"><span class="inner"></span></span><span class="text">Показать все</span>
-                </label>
-              </fieldset>
-            </form>
+    <main>
+      <div class="page" id="body-page">
+        <div class="right-col"></div>
+        <div class="left-col"></div>
+        <div class="new-content new-content-type-catalog">
+          <div class="new-breadcrumbs new-content__breadcrumbs"><a class="new-breadcrumbs__link" href="/">Главная</a><span>Поиск по каталогу</span></div>
+          <h1 class="new-content__title">Поиск по каталогу</h1>
+          <div class="new-content__left">
+            <div class="filter">
+              <form id="search-sorting" action="/catalog/search/?query=stella">
+                <fieldset class="filter__item">
+                  <legend>Цена</legend>
+                  <label class="radio" for="radio-1">
+                    <input id="radio-1" type="radio" name="ordering_by_price" value="/catalog/search/?query=stella" checked=""><span class="outer"><span class="inner"></span></span><span class="text">По убыванию</span>
+                  </label>
+                  <label class="radio" for="radio-2">
+                    <input id="radio-2" type="radio" name="ordering_by_price" value="/catalog/search/?query=stella&amp;ordering_by_price=asc"><span class="outer"><span class="inner"></span></span><span class="text">По возрастанию</span>
+                  </label>
+                </fieldset>
+                <fieldset class="filter__item">
+                  <legend>Наличие</legend>
+                  <label class="radio" for="radio-3">
+                    <input id="radio-3" type="radio" name="only_available" value="/catalog/search/?query=stella&amp;only_available=True"><span class="outer"><span class="inner"></span></span><span class="text">Показать в наличии</span>
+                  </label>
+                  <label class="radio" for="radio-4">
+                    <input id="radio-4" type="radio" name="only_available" value="/catalog/search/?query=stella&amp;only_available=False" checked=""><span class="outer"><span class="inner"></span></span><span class="text">Показать все</span>
+                  </label>
+                </fieldset>
+              </form>
+            </div>
           </div>
-        </div>
-        <div class="new-content__right">
-          <div class="search-pannel">
-            <form action="/catalog/search/" method="GET">
-              <input name="query" placeholder="Поиск по каталогу" value="stella" type="text">
-              <button type="submit"></button>
-            </form>
-          </div>
-          <div class="search-header">12 товаров по запросу: <strong>"stella"</strong></div>
-          <div class="content">
-            <div class="new-content__catalog">
-              <div class="new-card new-card-type-catalog">
-                <div class="new-card__labels"></div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/11317806/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/static/img/noimage.png" width="130" height="130" alt="Фото товара временно отсутствует">
-                </div><a class="new-card__center" href="/catalog/product/drop-nabor-iz-4-vaginalnyih-raznovesnyih--wy0540-gr/" title="Перейти на страницу товара">Набор из 4 вагинальных разновесных шариков Stella</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 506<span class="new-card__currency">₽</span></span></span>
-                  <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/11317806/" data-action="buyButton">
-                    <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                      <use xlink:href="#cartIcon"></use>
-                    </svg> Купить
-                  </button>
-                </p>
-                <p class="new-card__explanation">Шарики вагинальные Stella разновесные в наборе</p>
-              </div>
-              <div class="new-card new-card-type-catalog new-card-type-disabled">
-                <div class="new-card__labels"></div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/194785/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/8f/76/8f76b1f754ca583bf504862aae6c9c4c.jpg" width="130" height="130" alt="Jopen Key Stella II розовые">
-                </div><a class="new-card__center" href="/catalog/product/jopen-key-stella-ii-rozovyij-0t-00004587/" title="Перейти на страницу товара">Jopen Key Stella II розовые</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 780<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
-                <p class="new-card__explanation">Шарики со сменным грузом </p>
-              </div>
-              <div class="new-card new-card-type-catalog new-card-type-disabled">
-                <div class="new-card__labels"></div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/195605/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/b3/ba/b3bacca51ee5483b6f984ed72a39b78b.jpg" width="130" height="130" alt="STELLA III бирюзовые">
-                </div><a class="new-card__center" href="/catalog/product/vaginalnyie-shariki-trio-stella-iii--se-jo-8022-05/" title="Перейти на страницу товара">STELLA III бирюзовые</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 890<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
-                <p class="new-card__explanation">Вагинальные шарики трио</p>
-              </div>
-              <div class="new-card new-card-type-catalog new-card-type-disabled">
-                <div class="new-card__labels"></div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/198480/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/5a/98/5a983ed60c188c7c819c8157a8e5391c.jpg" width="130" height="130" alt="STELLA III розовые">
-                </div><a class="new-card__center" href="/catalog/product/vaginalnyie-shariki-trio-stella-iii--se-jo-8022-00/" title="Перейти на страницу товара">STELLA III розовые</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 890<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
-                <p class="new-card__explanation">Вагинальные шарики трио </p>
-              </div>
-              <div class="new-card new-card-type-catalog new-card-type-disabled">
-                <div class="new-card__labels"></div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/195688/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/6a/0e/6a0e449232af0b89e901c51bb9252526.jpg" width="130" height="130" alt="STELLA III фиолетовые">
-                </div><a class="new-card__center" href="/catalog/product/vaginalnyie-shariki-trio-stella-iii--se-jo-8022-10/" title="Перейти на страницу товара">STELLA III фиолетовые</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">3 570<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
-                <p class="new-card__explanation">Вагинальные шарики трио </p>
-              </div>
-              <div class="new-card new-card-type-catalog new-card-type-disabled">
-                <div class="new-card__labels"></div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/198036/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/78/1b/781bd42a22b354c02e9404a851570de5.jpg" width="130" height="130" alt="STELLA I бирюзовый">
-                </div><a class="new-card__center" href="/catalog/product/vaginalnyij-sharik-solo-stella-i--se-jo-8020-05/" title="Перейти на страницу товара">STELLA I бирюзовый</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 700<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
-                <p class="new-card__explanation">Вагинальный шарик соло со сменным грузом </p>
-              </div>
-              <div class="new-card new-card-type-catalog new-card-type-disabled">
-                <div class="new-card__labels"></div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/212438/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/53/02/5302b2a7e1284f45ddf6be14487abb46.jpg" width="130" height="130" alt="Вагинальные шарики Jopen Key Stella II">
-                </div><a class="new-card__center" href="/catalog/product/stella-ii-biryuzovyie-se-jo-8021-05/" title="Перейти на страницу товара">Вагинальные шарики Jopen Key Stella II</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 780<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
-                <p class="new-card__explanation">Вагинальные шарики из премиум силикона со смещенным центром тяжести и сцепка для них, два шарика по 40 гр. и один 30 гр., общий вес до 80 гр., диаметр шариков 3,5 см</p>
-              </div>
-              <div class="new-card new-card-type-catalog new-card-type-disabled">
-                <div class="new-card__labels"></div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/198361/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/2f/07/2f070a1ed756627c7439dc21e6c51ad7.jpg" width="130" height="130" alt="Вагинальные шарики Jopen Key Stella II">
-                </div><a class="new-card__center" href="/catalog/product/vaginalnyie-shariki-duet-stella-ii--se-jo-8021-10/" title="Перейти на страницу товара">Вагинальные шарики Jopen Key Stella II</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 780<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
-                <p class="new-card__explanation">Три вагинальных шарика со смещенным центром тяжести и с эластичным держателем</p>
-              </div>
-              <div class="new-card new-card-type-catalog new-card-type-disabled">
-                <div class="new-card__labels"></div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/1676064/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/67/e5/67e5a81ea0a6cc05e514f3d5353f415b.jpg" width="130" height="130" alt="Комплект Stella red">
-                </div><a class="new-card__center" href="/catalog/product/komplekt-stella-red-with-love--03681s/" title="Перейти на страницу товара">Комплект Stella red</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 270<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
-                <p class="new-card__explanation">Сексуальный комплект красного цвета, состоящий из ажурного бюстгальтера и ажурных трусиков-стринг с открытым доступом, размер S (42-44)</p>
-              </div>
-              <div class="new-card new-card-type-catalog new-card-type-disabled">
-                <div class="new-card__labels"></div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/202883/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/a3/d5/a3d58ceaee190ead5dbf393906dcef51.jpg" width="130" height="130" alt="Мастурбатор Penthouse Stella Styles с вибрацией, вагина">
-                </div><a class="new-card__center" href="/catalog/product/masturbator-penthouse-stella-styles-s--ts1091283/" title="Перейти на страницу товара">Мастурбатор Penthouse Stella Styles с вибрацией, вагина</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">4 980<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
-                <p class="new-card__explanation">Реалистичная копия половых органов порно звезды Стэлы Стайлс</p>
-              </div>
-              <div class="new-card new-card-type-catalog new-card-type-disabled">
-                <div class="new-card__labels"></div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/200922/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/c6/df/c6df621fb5b3ab6d312e0858b67edca5.jpg" width="130" height="130" alt="Мастурбатор Topco Pet Pussy&amp;Ass Stella Styles">
-                </div><a class="new-card__center" href="/catalog/product/vagina-penthouse-pet-stella-styles--ts1091181/" title="Перейти на страницу товара">Мастурбатор Topco Pet Pussy&Ass Stella Styles</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">6 720<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
-                <p class="new-card__explanation">Реалистичный мастурбатор с двумя отверстиями вагина и анус, и с вибрацией</p>
-              </div>
-              <div class="new-card new-card-type-catalog">
-                <div class="new-card__labels"></div>
-                <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/11314136/">
-                  <svg class="new-phone__icon new-phone__icon-type-loop">
-                    <use xlink:href="#loopIcon"></use>
-                  </svg><img class="new-card__img" src="/media/cache/42/df/42df2550730382e35911b33479b06cd4.jpg" width="130" height="130" alt="Трусики-стринги Stella с цепочками и стразами">
-                </div><a class="new-card__center" href="/catalog/product/drop-trusiki-stringi-stella-s-tsepochkami-i--28165/" title="Перейти на страницу товара">Трусики-стринги Stella с цепочками и стразами</a>
-                <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">None<span class="new-card__currency">₽</span></span></span>
-                  <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/11314136/" data-action="buyButton">
-                    <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                      <use xlink:href="#cartIcon"></use>
-                    </svg> Купить
-                  </button>
-                </p>
-                <p class="new-card__explanation">Цветочные орнаменты плавно переходят в цепочку из страз, украшенную белыми декоративными камнями</p>
+          <div class="new-content__right">
+            <div class="search-pannel">
+              <form action="/catalog/search/" method="GET">
+                <input name="query" placeholder="Поиск по каталогу" value="stella" type="text">
+                <button type="submit"></button>
+              </form>
+            </div>
+            <div class="search-header">12 товаров по запросу: <strong>"stella"</strong></div>
+            <div class="content">
+              <div class="new-content__catalog">
+                <div class="new-card new-card-type-catalog">
+                  <div class="new-card__labels"></div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/11317806/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/static/img/noimage.png" width="130" height="130" alt="Фото товара временно отсутствует">
+                  </div><a class="new-card__center" href="/catalog/product/drop-nabor-iz-4-vaginalnyih-raznovesnyih--wy0540-gr/" title="Перейти на страницу товара">Набор из 4 вагинальных разновесных шариков Stella</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 506<span class="new-card__currency">₽</span></span></span>
+                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/11317806/" data-action="buyButton">
+                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                        <use xlink:href="#cartIcon"></use>
+                      </svg> Купить
+                    </button>
+                  </p>
+                  <p class="new-card__explanation">Шарики вагинальные Stella разновесные в наборе</p>
+                </div>
+                <div class="new-card new-card-type-catalog new-card-type-disabled">
+                  <div class="new-card__labels"></div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/194785/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/8f/76/8f76b1f754ca583bf504862aae6c9c4c.jpg" width="130" height="130" alt="Jopen Key Stella II розовые">
+                  </div><a class="new-card__center" href="/catalog/product/jopen-key-stella-ii-rozovyij-0t-00004587/" title="Перейти на страницу товара">Jopen Key Stella II розовые</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 780<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
+                  <p class="new-card__explanation">Шарики со сменным грузом </p>
+                </div>
+                <div class="new-card new-card-type-catalog new-card-type-disabled">
+                  <div class="new-card__labels"></div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/195605/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/b3/ba/b3bacca51ee5483b6f984ed72a39b78b.jpg" width="130" height="130" alt="STELLA III бирюзовые">
+                  </div><a class="new-card__center" href="/catalog/product/vaginalnyie-shariki-trio-stella-iii--se-jo-8022-05/" title="Перейти на страницу товара">STELLA III бирюзовые</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 890<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
+                  <p class="new-card__explanation">Вагинальные шарики трио</p>
+                </div>
+                <div class="new-card new-card-type-catalog new-card-type-disabled">
+                  <div class="new-card__labels"></div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/198480/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/5a/98/5a983ed60c188c7c819c8157a8e5391c.jpg" width="130" height="130" alt="STELLA III розовые">
+                  </div><a class="new-card__center" href="/catalog/product/vaginalnyie-shariki-trio-stella-iii--se-jo-8022-00/" title="Перейти на страницу товара">STELLA III розовые</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 890<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
+                  <p class="new-card__explanation">Вагинальные шарики трио </p>
+                </div>
+                <div class="new-card new-card-type-catalog new-card-type-disabled">
+                  <div class="new-card__labels"></div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/195688/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/6a/0e/6a0e449232af0b89e901c51bb9252526.jpg" width="130" height="130" alt="STELLA III фиолетовые">
+                  </div><a class="new-card__center" href="/catalog/product/vaginalnyie-shariki-trio-stella-iii--se-jo-8022-10/" title="Перейти на страницу товара">STELLA III фиолетовые</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">3 570<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
+                  <p class="new-card__explanation">Вагинальные шарики трио </p>
+                </div>
+                <div class="new-card new-card-type-catalog new-card-type-disabled">
+                  <div class="new-card__labels"></div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/198036/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/78/1b/781bd42a22b354c02e9404a851570de5.jpg" width="130" height="130" alt="STELLA I бирюзовый">
+                  </div><a class="new-card__center" href="/catalog/product/vaginalnyij-sharik-solo-stella-i--se-jo-8020-05/" title="Перейти на страницу товара">STELLA I бирюзовый</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 700<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
+                  <p class="new-card__explanation">Вагинальный шарик соло со сменным грузом </p>
+                </div>
+                <div class="new-card new-card-type-catalog new-card-type-disabled">
+                  <div class="new-card__labels"></div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/212438/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/53/02/5302b2a7e1284f45ddf6be14487abb46.jpg" width="130" height="130" alt="Вагинальные шарики Jopen Key Stella II">
+                  </div><a class="new-card__center" href="/catalog/product/stella-ii-biryuzovyie-se-jo-8021-05/" title="Перейти на страницу товара">Вагинальные шарики Jopen Key Stella II</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 780<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
+                  <p class="new-card__explanation">Вагинальные шарики из премиум силикона со смещенным центром тяжести и сцепка для них, два шарика по 40 гр. и один 30 гр., общий вес до 80 гр., диаметр шариков 3,5 см</p>
+                </div>
+                <div class="new-card new-card-type-catalog new-card-type-disabled">
+                  <div class="new-card__labels"></div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/198361/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/2f/07/2f070a1ed756627c7439dc21e6c51ad7.jpg" width="130" height="130" alt="Вагинальные шарики Jopen Key Stella II">
+                  </div><a class="new-card__center" href="/catalog/product/vaginalnyie-shariki-duet-stella-ii--se-jo-8021-10/" title="Перейти на страницу товара">Вагинальные шарики Jopen Key Stella II</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 780<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
+                  <p class="new-card__explanation">Три вагинальных шарика со смещенным центром тяжести и с эластичным держателем</p>
+                </div>
+                <div class="new-card new-card-type-catalog new-card-type-disabled">
+                  <div class="new-card__labels"></div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/1676064/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/67/e5/67e5a81ea0a6cc05e514f3d5353f415b.jpg" width="130" height="130" alt="Комплект Stella red">
+                  </div><a class="new-card__center" href="/catalog/product/komplekt-stella-red-with-love--03681s/" title="Перейти на страницу товара">Комплект Stella red</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 270<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
+                  <p class="new-card__explanation">Сексуальный комплект красного цвета, состоящий из ажурного бюстгальтера и ажурных трусиков-стринг с открытым доступом, размер S (42-44)</p>
+                </div>
+                <div class="new-card new-card-type-catalog new-card-type-disabled">
+                  <div class="new-card__labels"></div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/202883/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/a3/d5/a3d58ceaee190ead5dbf393906dcef51.jpg" width="130" height="130" alt="Мастурбатор Penthouse Stella Styles с вибрацией, вагина">
+                  </div><a class="new-card__center" href="/catalog/product/masturbator-penthouse-stella-styles-s--ts1091283/" title="Перейти на страницу товара">Мастурбатор Penthouse Stella Styles с вибрацией, вагина</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">4 980<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
+                  <p class="new-card__explanation">Реалистичная копия половых органов порно звезды Стэлы Стайлс</p>
+                </div>
+                <div class="new-card new-card-type-catalog new-card-type-disabled">
+                  <div class="new-card__labels"></div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/200922/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/c6/df/c6df621fb5b3ab6d312e0858b67edca5.jpg" width="130" height="130" alt="Мастурбатор Topco Pet Pussy&amp;Ass Stella Styles">
+                  </div><a class="new-card__center" href="/catalog/product/vagina-penthouse-pet-stella-styles--ts1091181/" title="Перейти на страницу товара">Мастурбатор Topco Pet Pussy&Ass Stella Styles</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">6 720<span class="new-card__currency">₽</span></span></span><span class="new-card__waiting">Нет в наличии</span></p>
+                  <p class="new-card__explanation">Реалистичный мастурбатор с двумя отверстиями вагина и анус, и с вибрацией</p>
+                </div>
+                <div class="new-card new-card-type-catalog">
+                  <div class="new-card__labels"></div>
+                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/11314136/">
+                    <svg class="new-phone__icon new-phone__icon-type-loop">
+                      <use xlink:href="#loopIcon"></use>
+                    </svg><img class="new-card__img" src="/media/cache/42/df/42df2550730382e35911b33479b06cd4.jpg" width="130" height="130" alt="Трусики-стринги Stella с цепочками и стразами">
+                  </div><a class="new-card__center" href="/catalog/product/drop-trusiki-stringi-stella-s-tsepochkami-i--28165/" title="Перейти на страницу товара">Трусики-стринги Stella с цепочками и стразами</a>
+                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">None<span class="new-card__currency">₽</span></span></span>
+                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/11314136/" data-action="buyButton">
+                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                        <use xlink:href="#cartIcon"></use>
+                      </svg> Купить
+                    </button>
+                  </p>
+                  <p class="new-card__explanation">Цветочные орнаменты плавно переходят в цепочку из страз, украшенную белыми декоративными камнями</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <footer class="new-footer new-footer-type-standart">
-      <div class="new-footer__top">
-        <div class="new-footer__ad">Получай бонусы за покупки и оплачивай ими следующий заказ — <a class="new-footer__link" href="/bonus/">подробнее о бонусной программе</a></div>
+      <!--новый блок-->
+      <div class="footer-topline">
+        <div class="container footer-topline__container">
+          <form class="footer-topline__form" action="#">
+            <input class="footer-topline__input" type="email" placeholder="E-mail">
+            <button class="new-button-type-fill footer-topline__button">Оформить</button>
+          </form>
+          <h5 class="footer-topline__title">Если скрыть форму, текст просто <a href="#">растянется </a>на ширину всей полосы. (можно проверить через консоль)</h5>
+        </div>
       </div>
-      <div class="new-footer__center">
+      <!--.new-footer__top
+      .container
+        .new-footer__ad
+          | Получай бонусы за покупки и оплачивай ими следующий заказ — 
+          a.new-footer__link(href='/bonus/') подробнее о бонусной программе
+      -->
+      <div class="new-footer__center container">
         <div class="new-footer__contacts"><a class="new-phone new-footer__phone" rel="nofollow" target="_blank" href="tel:+7 (846) 300-44-49">
             <svg class="new-phone__svg">
               <use xlink:href="#phoneIcon"></use>
             </svg> +7 (846) 300-44-49</a><a class="new-mail new-footer__mail" href="/feedback/feedback/">
             <svg class="new-mail__svg">
               <use xlink:href="#mailIcon"></use>
-            </svg> Написать нам</a><span class="new-social__title">Соцсети:</span>
-          <p><a class="vk" rel="nofollow" target="_blank" href="http://vk.com/club22731393"><img src="/static/svg/vk.svg" alt="vk"></a><a class="vk" rel="nofollow" target="_blank" href="https://www.instagram.com/bunnyloveru/"><img src="/static/svg/inst.svg" alt="instagram" width="30" height="30"></a></p>
+            </svg> Написать нам</a>
+          <!--соц сети-->
+          <div class="footer-socials"> <span class="footer-socials__title">Соцсети:</span>
+            <ul class="footer-socials__list">
+              <li class="footer-socials__item"><a class="footer-socials__link" href="#"><img src="/static/svg/vk.svg" alt="vk"></a></li>
+              <li class="footer-socials__item"><a class="footer-socials__link" href="#"><img src="/static/svg/inst.svg" alt="instagram"></a></li>
+            </ul>
+          </div>
         </div>
         <div class="new-footer__shell">
           <div class="new-dropdown new-footer__dropdown">
@@ -618,7 +632,7 @@
           </div>
         </div>
       </div>
-      <div class="new-footer__bottom"><a class="new-footer__copy" rel="nofollow" target="_blank" href="http://fancymedia.ru/">Разработка сайта — <span class="new-footer__span">fancymedia</span></a>
+      <div class="new-footer__bottom container"><a class="new-footer__copy" rel="nofollow" target="_blank" href="http://fancymedia.ru/">Разработка сайта — <span class="new-footer__span">fancymedia</span></a>
         <div class="new-footer__payments">
           <div class="new-footer__payment">
             <svg class="new-footer__svg new-footer__svg-type-visa">
@@ -641,7 +655,7 @@
       <div class="js-helper-module__container">
         <!--section-->
         <div class="js-helper-module__section"><span class="js-helper-module__section-title">Страницы:</span>
-          <div class="js-helper-module__section-content"><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/index.html">Главная</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/search.html">Поиск-выдача</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar.html">Карточка товара</a></div>
+          <div class="js-helper-module__section-content"><a class="js-helper-module__section-button" href="http://localhost:9000/index.html">Главная</a><a class="js-helper-module__section-button" href="http://localhost:9000/search.html">Поиск-выдача</a><a class="js-helper-module__section-button" href="http://localhost:9000/tovar.html">Карточка товара</a><a class="js-helper-module__section-button" href="http://localhost:9000/articles.html">Статьи</a><a class="js-helper-module__section-button" href="http://localhost:9000/article.html">Статья</a></div>
         </div>
       </div>
     </div>
@@ -972,8 +986,8 @@
       
     </script>
     <!--helper (preview only)-->
-    <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/js/js-helper.min.js"></script>
+    <script type="text/javascript" src="http://localhost:9000/js/js-helper.min.js"></script>
     <!--new-->
-    <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/js/new.js"></script>
+    <script type="text/javascript" src="http://localhost:9000/js/new.js"></script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 $(document).ready(function(){
   mobileSearch();
+  header();
 })
 
 function mobileSearch() {
@@ -13,4 +14,23 @@ function mobileSearch() {
     else $block.removeClass('active');
   })
 
+}
+
+function header() {
+  let $header = $('.new-header__center'),
+      scroll;
+
+  check();
+  $(window).scroll(function() {
+    check();
+  });
+
+  function check() {
+    scroll = $(window).scrollTop();
+    if(scroll>0){
+      $header.addClass('active');
+    } else {
+      $header.removeClass('active');
+    }
+  }
 }

@@ -14,20 +14,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet">
     <link href="/static/fonts/webfontkit/fonts.css" rel="stylesheet">
-    <link href="/static/css/styles.css" rel="stylesheet">
-    <link href="/static/NEW/css/style.css" rel="stylesheet">
-    <link href="/static/NEW/css/new-style-fixes.css" rel="stylesheet">
-    <link href="/static/NEW/css/new-style-fixes-media.css" rel="stylesheet">
-    <link href="/static/css/mobile.css" rel="stylesheet">
-    <link href="/static/css/fotorama.css" rel="stylesheet">
-    <!--helper-->
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/bunnylove/build/styles/js-helper.min.css">
-    <!--new styles fix-->
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/bunnylove/build/styles/new.css">
+    <!--просто вырезал из этого файла старые bootstrap стили, можно вырезать его и пересобрать если он на sass собран-->
+    <link href="http://localhost:9000/styles/styles.css" rel="stylesheet">
+    <!--добавлена сетка бутстрап-->
+    <link href="http://localhost:9000/styles/bootstrap-grid.min.css" rel="stylesheet">
+    <!--файлы стилей в которых есть изменения, файл new-style-fixes-media удалил и обьединил с этим файлом стилей-->
+    <link href="http://localhost:9000/styles/style.css" rel="stylesheet">
+    <link href="http://localhost:9000/styles/mobile.css" rel="stylesheet">
+    <link href="http://localhost:9000/styles/new-style-fixes.css" rel="stylesheet">
+    <!--новые стили-->
+    <link rel="stylesheet" href="http://localhost:9000/styles/new.css">
+    <!--новые стили-->
+    <link rel="stylesheet" href="http://localhost:9000/styles/js-helper.css">
   </head>
   <body>
     <header class="new-header new-header-type-standart">
-      <div class="new-banner new-header__banner">😎 <a class="new-banner__link" href="/anonymity/">анонимность</a> магазина</div>
+      <div class="new-banner new-header__banner">
+        <div class="container">😎 <a class="new-banner__link" href="/anonymity/">анонимность</a> магазина</div>
+      </div>
       <div class="new-mobileMenu new-header__mobileMenu" data-action="menuWrapper">
         <div class="new-mobileMenu__shell">
           <div class="new-mobileMenu__top">
@@ -140,97 +144,102 @@
         </div>
       </div>
       <div class="new-header__top">
-        <button class="new-button new-button-icon-city" data-action="desktopCityButton">
-          <svg class="new-button__icon-type-city">
-            <use xlink:href="#markIcon"></use>
-          </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
-        </button><a class="new-phone new-header__phone new-header__phone-type-desktop new-header__phone-icon-phone" href="tel:+7 (846) 300-44-49">
-          <svg class="new-phone__svg">
-            <use xlink:href="#phoneIcon"></use>
-          </svg> +7 (846) 300-44-49</a><a class="new-button new-button-icon-callback modals" id="link_call_me_back_modal" data-modal-id="call_me_back_modal" href="/feedback/" title="Заказать обратный звонок">
-          <svg class="new-button__icon-type-callback">
-            <use xlink:href="#callbackIcon"></use>
-          </svg></a>
-        <nav class="new-nav new-header__nav"><a class="new-nav__link nav__about" href="/about/">О нас</a><a class="new-nav__link nav__pay" href="/pay/">Оплата</a><a class="new-nav__link nav__delivery" href="/delivery/">Доставка</a><a class="new-nav__link nav__faq" href="/faq/">Вопросы</a><a class="new-nav__link nav__bonus" href="/bonus/">Бонусная программа</a><a class="new-nav__link nav__contacts" href="/contacts/">Контакты</a></nav>
+        <div class="container">
+          <button class="new-button new-button-icon-city" data-action="desktopCityButton">
+            <svg class="new-button__icon-type-city">
+              <use xlink:href="#markIcon"></use>
+            </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
+          </button><a class="new-phone new-header__phone new-header__phone-type-desktop new-header__phone-icon-phone" href="tel:+7 (846) 300-44-49">
+            <svg class="new-phone__svg">
+              <use xlink:href="#phoneIcon"></use>
+            </svg> +7 (846) 300-44-49</a><a class="new-button new-button-icon-callback modals" id="link_call_me_back_modal" data-modal-id="call_me_back_modal" href="/feedback/" title="Заказать обратный звонок">
+            <svg class="new-button__icon-type-callback">
+              <use xlink:href="#callbackIcon"></use>
+            </svg></a>
+          <nav class="new-nav new-header__nav"><a class="new-nav__link nav__about" href="/about/">О нас</a><a class="new-nav__link nav__pay" href="/pay/">Оплата</a><a class="new-nav__link nav__delivery" href="/delivery/">Доставка</a><a class="new-nav__link nav__faq" href="/faq/">Вопросы</a><a class="new-nav__link nav__bonus" href="/bonus/">Бонусная программа</a><a class="new-nav__link nav__contacts" href="/contacts/">Контакты</a></nav>
+        </div>
       </div>
       <div class="new-header__center">
         <!--HIDDEN MIBILE SEARCH START-->
         <div class="mobile-search">
-          <form class="new-search mobile-search__form" method="GET" action="/catalog/search/">
+          <div class="container">
+            <form class="new-search mobile-search__form" method="GET" action="/catalog/search/">
+              <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
+              <button class="new-search__submit" type="submit">
+                <svg class="new-search__icon">
+                  <use xlink:href="#searchIcon"></use>
+                </svg>
+              </button>
+            </form>
+            <button class="mobile-search__close"></button>
+          </div>
+        </div>
+        <div class="container">
+          <button class="new-button new-button-icon-humburger" data-action="menuButton"></button><a class="new-logo new-header__logo" href="/">
+            <svg class="new-logo__icon">
+              <use xlink:href="#logoIcon"></use>
+            </svg> BUNNYLOVE <span class="new-logo__span">влюбленный кролик</span></a>
+          <button class="new-button new-button-icon-city new-button-icon-city-type-table" data-action="cityButton">
+            <svg class="new-button__icon-type-city">
+              <use xlink:href="#markIcon"></use>
+            </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
+          </button>
+          <div class="new-fastBuy new-card__fastBuy new-card__fastBuy-type-city" data-action="cityShell">
+            <div class="new-fastBuy__overflow" data-action="cityCloseButton"></div>
+            <div class="new-fastBuy__wrapper new-fastBuy__wrapper-type-city">
+              <div class="new-console new-mobileMenu__console new-console-type-fastBuy">
+                <button class="new-header__close new-header__close-type-fastBuy" data-action="cityCloseButton"></button>
+              </div>
+              <div class="new-city new-city-type-standart">
+                <p class="new-city__title">Выберите свой город</p>
+                <div class="new-city__shell">
+                  <button class="new-button new-button-type-city new-button-action-check" data-action="cityLink"><a href="//bunnylove.ru/">Самара</a></button>
+                  <button class="new-button new-button-type-city" data-action="cityLink"><a href="//kazan.bunnylove.ru/">Казань</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="new-search new-header__search new-search-type-header" method="GET" action="/catalog/search/">
             <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
-            <button class="new-search__submit" type="submit">
-              <svg class="new-search__icon">
+            <button class="new-search__submit new-search__submit-type-header" type="submit">
+              <svg class="new-search__icon new-search__icon-type-header">
                 <use xlink:href="#searchIcon"></use>
               </svg>
             </button>
           </form>
-          <button class="mobile-search__close"></button>
-        </div>
-        <!--HIDDEN MIBILE SEARCH END-->
-        <button class="new-button new-button-icon-humburger" data-action="menuButton"></button><a class="new-logo new-header__logo" href="/">
-          <svg class="new-logo__icon">
-            <use xlink:href="#logoIcon"></use>
-          </svg> BUNNYLOVE <span class="new-logo__span">влюбленный кролик</span></a>
-        <button class="new-button new-button-icon-city new-button-icon-city-type-table" data-action="cityButton">
-          <svg class="new-button__icon-type-city">
-            <use xlink:href="#markIcon"></use>
-          </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
-        </button>
-        <div class="new-fastBuy new-card__fastBuy new-card__fastBuy-type-city" data-action="cityShell">
-          <div class="new-fastBuy__overflow" data-action="cityCloseButton"></div>
-          <div class="new-fastBuy__wrapper new-fastBuy__wrapper-type-city">
-            <div class="new-console new-mobileMenu__console new-console-type-fastBuy">
-              <button class="new-header__close new-header__close-type-fastBuy" data-action="cityCloseButton"></button>
+          <div class="new-console new-header__console">
+            <!--new search button-->
+            <button class="new-button new-console__button mobile-search-open">
+              <svg class="new-console__icon new-console__icon-type-search">
+                <use xlink:href="#searchIcon"></use>
+              </svg>
+            </button>
+            <!---->
+            <div class="new-button new-console__button" data-action="cabinetButton">
+              <svg class="new-console__icon new-console__icon-type-cabinet">
+                <use xlink:href="#menuUserIcon"></use>
+              </svg>Кабинет
             </div>
-            <div class="new-city new-city-type-standart">
-              <p class="new-city__title">Выберите свой город</p>
-              <div class="new-city__shell">
-                <button class="new-button new-button-type-city new-button-action-check" data-action="cityLink"><a href="//bunnylove.ru/">Самара</a></button>
-                <button class="new-button new-button-type-city" data-action="cityLink"><a href="//kazan.bunnylove.ru/">Казань</a></button>
+            <div class="new-loginPopup new-console__loginPopup" data-action="cabinetPopup">
+              <div class="new-console new-mobileMenu__console">
+                <button class="new-header__close" data-action="cabinetCloseButton"></button>
               </div>
-            </div>
+              <div class="new-loginPopup__shell" data-action="loginOff"><a class="new-button new-button-type-fill new-button new-loginForm__button" href="/login/?next=/">Войти в аккаунт</a><a class="new-loginForm__forgot" href="/password/reset/">Забыли пароль?</a>
+                <p class="new-loginForm__strong">или</p>
+                <p class="new-loginForm__register"><a class="new-loginForm__registerLink" href="/register/">Зарегистрироваться</a><span class="new-loginForm__warning">+500 ₽ на счёт</span></p>
+              </div>
+            </div><a class="new-console__compare" href="/catalog/comparison/">
+              <svg class="new-console__icon new-console__icon-type-compare">
+                <use xlink:href="#compareIcon"></use>
+              </svg>Сравнение<span class="new-console__count products_comparison_count">0</span></a><a class="new-console__bag" href="/catalog/cart/">
+              <svg class="new-console__icon new-console__icon-type-bag">
+                <use xlink:href="#bagIcon"></use>
+              </svg>Корзина<span class="new-console__count cart_count">23</span></a>
           </div>
-        </div>
-        <form class="new-search new-header__search new-search-type-header" method="GET" action="/catalog/search/">
-          <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
-          <button class="new-search__submit new-search__submit-type-header" type="submit">
-            <svg class="new-search__icon new-search__icon-type-header">
-              <use xlink:href="#searchIcon"></use>
-            </svg>
-          </button>
-        </form>
-        <div class="new-console new-header__console">
-          <!--new search button-->
-          <button class="new-button new-console__button mobile-search-open">
-            <svg class="new-console__icon new-console__icon-type-search">
-              <use xlink:href="#searchIcon"></use>
-            </svg>
-          </button>
-          <!---->
-          <div class="new-button new-console__button" data-action="cabinetButton">
-            <svg class="new-console__icon new-console__icon-type-cabinet">
-              <use xlink:href="#menuUserIcon"></use>
-            </svg>Кабинет
-          </div>
-          <div class="new-loginPopup new-console__loginPopup" data-action="cabinetPopup">
-            <div class="new-console new-mobileMenu__console">
-              <button class="new-header__close" data-action="cabinetCloseButton"></button>
-            </div>
-            <div class="new-loginPopup__shell" data-action="loginOff"><a class="new-button new-button-type-fill new-button new-loginForm__button" href="/login/?next=/">Войти в аккаунт</a><a class="new-loginForm__forgot" href="/password/reset/">Забыли пароль?</a>
-              <p class="new-loginForm__strong">или</p>
-              <p class="new-loginForm__register"><a class="new-loginForm__registerLink" href="/register/">Зарегистрироваться</a><span class="new-loginForm__warning">+500 ₽ на счёт</span></p>
-            </div>
-          </div><a class="new-console__compare" href="/catalog/comparison/">
-            <svg class="new-console__icon new-console__icon-type-compare">
-              <use xlink:href="#compareIcon"></use>
-            </svg>Сравнение<span class="new-console__count products_comparison_count">0</span></a><a class="new-console__bag" href="/catalog/cart/">
-            <svg class="new-console__icon new-console__icon-type-bag">
-              <use xlink:href="#bagIcon"></use>
-            </svg>Корзина<span class="new-console__count cart_count">23</span></a>
         </div>
       </div>
       <div class="new-header__bottom">
-        <div class="new-tabs new-header__tabs">
+        <div class="new-tabs new-header__tabs container">
           <div class="new-tabs__panel new-tabs__panel-type-header new-tabs__panel-type-desktop">
             <div class="new-tabs__linkShell" data-action="tabLinkShell"><a class="new-tabs__link new-tabs__link-type-header new-tabs__link-type-passive new-tabs__link-type-desktop" href="/certificates/"><span class="new-tabs__frame new-tabs__frame-type-header new-tabs__frame-type-bigGift">
                   <svg class="new-tabs__img new-tabs__img-type-header new-tabs__img-icon-bigGift">
@@ -387,870 +396,875 @@
           </div>
         </div>
       </div>
-      <div class="new-header__slider new-header__slider-type-main">
-        <div class="new-slider new-slider__shell" data-action="adSliderInMain"><a class="new-slider__cell" href="https://bunnylove.ru/bonus/">
-            <picture class="new-slider__img"><img class="new-slider__img" src="/media/big_slides/d6b4d098-826a-4db9-b37d-a844b7d6f20e.slide.png" alt="Дисконтная программа"></picture></a><a class="new-slider__cell" href="/certificates/">
-            <picture class="new-slider__img"><img class="new-slider__img" src="/media/big_slides/5f8f71a9-fec7-456e-9d05-a712f5b550b7.slide.png" alt="Подарочный сертификат"></picture></a><a class="new-slider__cell" href="https://bunnylove.ru/promo/dostavka-za-99/">
-            <picture class="new-slider__img"><img class="new-slider__img" src="/media/big_slides/6086b631-dccc-451e-96a4-d1435eec4198.slide.png" alt="Акция на доставку"></picture></a></div>
-      </div>
-      <div class="new-header__search new-header__search-type-table">
-        <form class="new-search new-search-type-standart" method="GET" action="/catalog/search/">
-          <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
-          <button class="new-search__submit" type="submit">
-            <svg class="new-search__icon">
-              <use xlink:href="#searchIcon"></use>
-            </svg>
-          </button>
-        </form>
-      </div>
     </header>
-    <div class="page" id="body-page">
-      <div class="new-breadcrumbs new-content__breadcrumbs"><a class="new-breadcrumbs__link" href="/">Главная</a><a class="new-breadcrumbs__link" href="/catalog/seks-igrushki/">Секс игрушки</a><span>Ярко-розовый вакуумный стимулятор клитора Ford</span></div>
-      <div class="right-col">
-        <div class="content">
-          <h1 class="new-content__title">Ярко-розовый вакуумный стимулятор клитора Ford</h1>
-          <article class="product">
-            <div class="product__wrap">
-              <div class="product__left">
-                <div class="marker"></div>
-                <div class="gallery">
-                  <div class="gallery__slider"><a href="/media/products/82339.jpg" rel="group" data-slide-index="0"><img src="/media/cache/ab/2f/ab2f5f9479d0830e3bffaebf43d975eb.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford"></a><a href="/media/products/gallery/82339-4.jpg" rel="group" data-slide-index="1"><img src="/media/cache/22/65/22650181e54c03b7718cc610919c3a06.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford"></a><a href="/media/products/gallery/82339-3.jpg" rel="group" data-slide-index="2"><img src="/media/cache/0c/9b/0c9bfb63a3b4267a3e53a23cbb1a7203.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford"></a><a href="/media/products/gallery/82339-1.jpg" rel="group" data-slide-index="3"><img src="/media/cache/35/49/3549bf20e75205623f5fc8c95ec016bb.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford"></a><a href="/media/products/gallery/82339-2.jpg" rel="group" data-slide-index="4"><img src="/media/cache/fd/59/fd599bd5520d99da99e2f07def75a37c.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford"></a></div>
-                  <div class="gallery__footer">
-                    <div class="gallery__pager"><a class="gallery__item" data-slide-index="0" href="/media/products/82339.jpg"><img src="/media/cache/76/70/767011e6c951f8af6628ecdc54f6f7eb.jpg" rel="group" alt="Ярко-розовый вакуумный стимулятор клитора Ford"></a><a class="gallery__item" data-slide-index="1" href="/media/products/gallery/82339-4.jpg"><img src="/media/cache/32/f1/32f1186578a946bd86ccd71aa8dcc1ec.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford (1)"></a><a class="gallery__item" data-slide-index="2" href="/media/products/gallery/82339-3.jpg"><img src="/media/cache/41/28/412867d17f6ef7c69679a971ff16ddbc.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford (2)"></a><a class="gallery__item" data-slide-index="3" href="/media/products/gallery/82339-1.jpg"><img src="/media/cache/94/e1/94e13ef9caf37bdc47d2ca243bf45879.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford (3)"></a><a class="gallery__item" data-slide-index="4" href="/media/products/gallery/82339-2.jpg"><img src="/media/cache/2a/2d/2a2ddf8798e951d802028a74bc295164.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford (4)"></a></div>
-                    <div class="bx-controls bx-has-controls-direction bx-has-pager">
-                      <div class="bx-controls-direction"><a class="gallery__nav gallery__nav--prev" href="#"></a><a class="gallery__nav gallery__nav--next" href="#"></a></div>
+    <main>
+      <div class="page" id="body-page">
+        <div class="new-breadcrumbs new-content__breadcrumbs"><a class="new-breadcrumbs__link" href="/">Главная</a><a class="new-breadcrumbs__link" href="/catalog/seks-igrushki/">Секс игрушки</a><span>Ярко-розовый вакуумный стимулятор клитора Ford</span></div>
+        <div class="right-col">
+          <div class="content">
+            <h1 class="new-content__title">Ярко-розовый вакуумный стимулятор клитора Ford</h1>
+            <article class="product">
+              <div class="product__wrap">
+                <div class="product__left">
+                  <div class="marker"></div>
+                  <div class="gallery">
+                    <div class="gallery__slider"><a href="/media/products/82339.jpg" rel="group" data-slide-index="0"><img src="/media/cache/ab/2f/ab2f5f9479d0830e3bffaebf43d975eb.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford"></a><a href="/media/products/gallery/82339-4.jpg" rel="group" data-slide-index="1"><img src="/media/cache/22/65/22650181e54c03b7718cc610919c3a06.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford"></a><a href="/media/products/gallery/82339-3.jpg" rel="group" data-slide-index="2"><img src="/media/cache/0c/9b/0c9bfb63a3b4267a3e53a23cbb1a7203.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford"></a><a href="/media/products/gallery/82339-1.jpg" rel="group" data-slide-index="3"><img src="/media/cache/35/49/3549bf20e75205623f5fc8c95ec016bb.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford"></a><a href="/media/products/gallery/82339-2.jpg" rel="group" data-slide-index="4"><img src="/media/cache/fd/59/fd599bd5520d99da99e2f07def75a37c.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford"></a></div>
+                    <div class="gallery__footer">
+                      <div class="gallery__pager"><a class="gallery__item" data-slide-index="0" href="/media/products/82339.jpg"><img src="/media/cache/76/70/767011e6c951f8af6628ecdc54f6f7eb.jpg" rel="group" alt="Ярко-розовый вакуумный стимулятор клитора Ford"></a><a class="gallery__item" data-slide-index="1" href="/media/products/gallery/82339-4.jpg"><img src="/media/cache/32/f1/32f1186578a946bd86ccd71aa8dcc1ec.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford (1)"></a><a class="gallery__item" data-slide-index="2" href="/media/products/gallery/82339-3.jpg"><img src="/media/cache/41/28/412867d17f6ef7c69679a971ff16ddbc.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford (2)"></a><a class="gallery__item" data-slide-index="3" href="/media/products/gallery/82339-1.jpg"><img src="/media/cache/94/e1/94e13ef9caf37bdc47d2ca243bf45879.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford (3)"></a><a class="gallery__item" data-slide-index="4" href="/media/products/gallery/82339-2.jpg"><img src="/media/cache/2a/2d/2a2ddf8798e951d802028a74bc295164.jpg" alt="Ярко-розовый вакуумный стимулятор клитора Ford (4)"></a></div>
+                      <div class="bx-controls bx-has-controls-direction bx-has-pager">
+                        <div class="bx-controls-direction"><a class="gallery__nav gallery__nav--prev" href="#"></a><a class="gallery__nav gallery__nav--next" href="#"></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product__right">
+                  <h2 class="title">Ярко-розовый вакуумный стимулятор клитора Ford</h2>
+                  <div class="desc">Ярко-розовый вакуумный стимулятор клитора Ford</div>
+                  <div class="number">Артикул: BI-014547-5</div>
+                  <div class="price">
+                    <div class="regular-price">
+                      Цена:
+                      None<span class="rouble">u</span>
+                    </div>
+                  </div>
+                  <div class="buttons"><a class="buttons__item -cart add_to_cart" href="/catalog/cart/add/11313228/">Купить</a>
+                    <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                  </div>
+                  <div class="option option-yes">В наличии на складе в Москве</div>
+                  <form class="product-comparison-form" action="/catalog/comparison/add/" data-action-reverse="/catalog/comparison/del/" method="post">
+                    <input type="hidden" name="product_id" value="11313228">
+                    <button class="comparison-buttons" type="submit">Сравнить</button>
+                    <button class="comparison-buttons" type="submit" style="display: none">Не сравнивать</button>
+                  </form>
+                  <div class="options -sale">
+                    <div class="options__label"><a href="/register/">Зарегистрируйтесь</a>                                    и получите 500 бонусных
+                                                          рублей за регистрацию
+                                                          и 171 бонусных
+                                                          рубль за покупку
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="product__right">
-                <h2 class="title">Ярко-розовый вакуумный стимулятор клитора Ford</h2>
-                <div class="desc">Ярко-розовый вакуумный стимулятор клитора Ford</div>
-                <div class="number">Артикул: BI-014547-5</div>
-                <div class="price">
-                  <div class="regular-price">
-                    Цена:
-                    None<span class="rouble">u</span>
+              <div class="product__desc">
+                <div class="anchor__wrapper" id="description">
+                  <h2>Описание</h2>                        Ярко-розовый вакуумный стимулятор клитора Ford. 12 режимов посасывания. Функция памяти. Водонепроницаемый.
+                </div>
+                <div class="anchor__wrapper" id="details">
+                  <h2>Характеристики</h2>
+                  <table></table>
+                </div>
+                <div class="anchor__wrapper" id="reviews">
+                  <h2 class="reviews-h2">Отзывы</h2>
+                  <div class="title-caps add-review-link-block"></div>
+                  <div class="reviews-block">
+                    <div class="table-list">
+                      <p>У этого товара пока нет отзывов, но Вы можете быть первым!<a href="/login/?next=/catalog/product/drop-yarko-rozovyij-vakuumnyij-stimulyator-klitora-ford-bi-014547-5/">Авторизируйтесь, чтобы оставить отзыв!</a></p>
+                    </div>
                   </div>
-                </div>
-                <div class="buttons"><a class="buttons__item -cart add_to_cart" href="/catalog/cart/add/11313228/">Купить</a>
-                  <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                </div>
-                <div class="option option-yes">В наличии на складе в Москве</div>
-                <form class="product-comparison-form" action="/catalog/comparison/add/" data-action-reverse="/catalog/comparison/del/" method="post">
-                  <input type="hidden" name="product_id" value="11313228">
-                  <button class="comparison-buttons" type="submit">Сравнить</button>
-                  <button class="comparison-buttons" type="submit" style="display: none">Не сравнивать</button>
-                </form>
-                <div class="options -sale">
-                  <div class="options__label"><a href="/register/">Зарегистрируйтесь</a>                                    и получите 500 бонусных
-                                                        рублей за регистрацию
-                                                        и 171 бонусных
-                                                        рубль за покупку
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product__desc">
-              <div class="anchor__wrapper" id="description">
-                <h2>Описание</h2>                        Ярко-розовый вакуумный стимулятор клитора Ford. 12 режимов посасывания. Функция памяти. Водонепроницаемый.
-              </div>
-              <div class="anchor__wrapper" id="details">
-                <h2>Характеристики</h2>
-                <table></table>
-              </div>
-              <div class="anchor__wrapper" id="reviews">
-                <h2 class="reviews-h2">Отзывы</h2>
-                <div class="title-caps add-review-link-block"></div>
-                <div class="reviews-block">
-                  <div class="table-list">
-                    <p>У этого товара пока нет отзывов, но Вы можете быть первым!<a href="/login/?next=/catalog/product/drop-yarko-rozovyij-vakuumnyij-stimulyator-klitora-ford-bi-014547-5/">Авторизируйтесь, чтобы оставить отзыв!</a></p>
-                  </div>
-                </div>
-                <div class="add-review-wrapper minified"><span class="headline">Оставить отзыв</span>
-                  <form class="add-review-form" action="/reviews/add/drop-yarko-rozovyij-vakuumnyij-stimulyator-klitora-ford-bi-014547-5" method="post">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="hIn7Y36vIFY4mozXMfxqobW0OvaAgPWH6kPr5Se8qufWycWCLj3gQHM0e0AS0sQH">
-                    <div class="column left">
-                      <input class="with-placeholder" id="id_name" type="text" name="name" placeholder="Имя" maxlength="70">
-                      <div class="sex"><span class="caption">Пол:</span>
-                        <div class="radio-btn-wrapper" data-value="male"><span class="icon"></span><span class="caption">Мужской</span></div>
-                        <div class="radio-btn-wrapper active" data-value="female"><span class="icon"></span><span class="caption">Женский</span></div>
-                        <input id="id_sex" type="hidden" name="sex">
-                      </div>
-                      <div class="ratio"><span class="caption">Ваша оценка:</span>
-                        <div class="rating">
-                          <input id="id_rating" type="hidden" name="rating" value="5"><span class="on" data-ratio="1"></span><span class="on" data-ratio="2"></span><span class="on" data-ratio="3"></span><span class="on" data-ratio="4"></span><span class="on" data-ratio="5"></span>
+                  <div class="add-review-wrapper minified"><span class="headline">Оставить отзыв</span>
+                    <form class="add-review-form" action="/reviews/add/drop-yarko-rozovyij-vakuumnyij-stimulyator-klitora-ford-bi-014547-5" method="post">
+                      <input type="hidden" name="csrfmiddlewaretoken" value="hIn7Y36vIFY4mozXMfxqobW0OvaAgPWH6kPr5Se8qufWycWCLj3gQHM0e0AS0sQH">
+                      <div class="column left">
+                        <input class="with-placeholder" id="id_name" type="text" name="name" placeholder="Имя" maxlength="70">
+                        <div class="sex"><span class="caption">Пол:</span>
+                          <div class="radio-btn-wrapper" data-value="male"><span class="icon"></span><span class="caption">Мужской</span></div>
+                          <div class="radio-btn-wrapper active" data-value="female"><span class="icon"></span><span class="caption">Женский</span></div>
+                          <input id="id_sex" type="hidden" name="sex">
+                        </div>
+                        <div class="ratio"><span class="caption">Ваша оценка:</span>
+                          <div class="rating">
+                            <input id="id_rating" type="hidden" name="rating" value="5"><span class="on" data-ratio="1"></span><span class="on" data-ratio="2"></span><span class="on" data-ratio="3"></span><span class="on" data-ratio="4"></span><span class="on" data-ratio="5"></span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="column right">
-                      <textarea class="with-placeholder" id="id_text" name="text" cols="40" rows="10" placeholder="Текст отзыва" required=""></textarea>
-                    </div>
-                    <div class="clearfix"></div>
-                    <button class="submit-btn" type="submit">Отправить</button>
-                  </form>
+                      <div class="column right">
+                        <textarea class="with-placeholder" id="id_text" name="text" cols="40" rows="10" placeholder="Текст отзыва" required=""></textarea>
+                      </div>
+                      <div class="clearfix"></div>
+                      <button class="submit-btn" type="submit">Отправить</button>
+                    </form>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="tabs__item active related-products">
-              <h4>Вам также могут понадобиться:</h4><br>
-              <div class="related_products_mobile">
-                <ul class="cart-slider">
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/forma-dlya-vyipechki-grud-105020700408110009995--7700270000/"></a>
-                      <div class="marker">
-                        <div class="marker__item marker-percent">-15%</div>
+              <div class="tabs__item active related-products">
+                <h4>Вам также могут понадобиться:</h4><br>
+                <div class="related_products_mobile">
+                  <ul class="cart-slider">
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/forma-dlya-vyipechki-grud-105020700408110009995--7700270000/"></a>
+                        <div class="marker">
+                          <div class="marker__item marker-percent">-15%</div>
+                        </div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/forma-dlya-vyipechki-grud-105020700408110009995--7700270000/"><img src="/media/cache/4d/d0/4dd0c3171552ed69abe0a9a8867ced58.jpg" alt="Форма для выпечки Грудь"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/forma-dlya-vyipechki-grud-105020700408110009995--7700270000/">Форма для выпечки Грудь</a></div><a href="/catalog/product/forma-dlya-vyipechki-grud-105020700408110009995--7700270000/">
+                            <p>Оригинальная форма для выпекания в виде женской груди</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__cost">
+                            <div class="new-item__old-cost">870 <span class="rouble">u</span></div>
+                            <div class="new-item__actual-cost">739 <span class="rouble">u</span></div>
+                          </div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/196817/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
                       </div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/forma-dlya-vyipechki-grud-105020700408110009995--7700270000/"><img src="/media/cache/4d/d0/4dd0c3171552ed69abe0a9a8867ced58.jpg" alt="Форма для выпечки Грудь"></a>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/vozbuzhdayuschij-gel-dlya-g-tochki-myagkogo--jo40214/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/vozbuzhdayuschij-gel-dlya-g-tochki-myagkogo--jo40214/"><img src="/media/cache/03/e5/03e5b343e81de776b5f8c968d753ec47.jpg" alt="Возбуждающий гель мягкого действия JO CLITORAL CHILL - 10 мл."></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/vozbuzhdayuschij-gel-dlya-g-tochki-myagkogo--jo40214/">Возбуждающий гель мягкого действ...</a></div><a href="/catalog/product/vozbuzhdayuschij-gel-dlya-g-tochki-myagkogo--jo40214/">
+                            <p>Усиление приятных ощущений во время близости, более интенсивный вагинальный оргазм… Именно этим займётся возбуждающий гель мягкого воздействия JO Chill</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">1 640 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/195879/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
                       </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/forma-dlya-vyipechki-grud-105020700408110009995--7700270000/">Форма для выпечки Грудь</a></div><a href="/catalog/product/forma-dlya-vyipechki-grud-105020700408110009995--7700270000/">
-                          <p>Оригинальная форма для выпекания в виде женской груди</p></a>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/otkryityie-trusiki-lottea-sl-10007/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/otkryityie-trusiki-lottea-sl-10007/"><img src="/media/cache/32/e3/32e3a9cb0babd08fd8f37efde6e8cbb8.jpg" alt="Трусики Lottea"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/otkryityie-trusiki-lottea-sl-10007/">Трусики Lottea</a></div><a href="/catalog/product/otkryityie-trusiki-lottea-sl-10007/">
+                            <p>Сексуальные открытые трусики красного цвета с жемчужинами и двойной резиночкой, размер-S/L (42-48)</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">1 140 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/2759483/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
                       </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__cost">
-                          <div class="new-item__old-cost">870 <span class="rouble">u</span></div>
-                          <div class="new-item__actual-cost">739 <span class="rouble">u</span></div>
-                        </div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/196817/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/drop-originalnyie-zhenskie-trusiki-lolitte-s--lolitte-crotchless-thong/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/drop-originalnyie-zhenskie-trusiki-lolitte-s--lolitte-crotchless-thong/"><img src="/media/cache/60/a6/60a6c6b1ae1362cda49b0619dccabd19.jpg" alt="Оригинальные женские трусики Lolitte с интимным доступом"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/drop-originalnyie-zhenskie-trusiki-lolitte-s--lolitte-crotchless-thong/">Оригинальные женские трусики Lol...</a></div><a href="/catalog/product/drop-originalnyie-zhenskie-trusiki-lolitte-s--lolitte-crotchless-thong/">
+                            <p>Эти милые контактные трусики-стринги – отличный вариант для вечера, наполненного страстью</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">1 060 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/9841024/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/azhurnyie-strigni-s-dostupom-anna--10047-42-44lola/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/azhurnyie-strigni-s-dostupom-anna--10047-42-44lola/"><img src="/media/cache/3f/24/3f249186bc73749588c76bf83d181b38.jpg" alt="Трусики Anna"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/azhurnyie-strigni-s-dostupom-anna--10047-42-44lola/">Трусики Anna</a></div><a href="/catalog/product/azhurnyie-strigni-s-dostupom-anna--10047-42-44lola/">
+                            <p>Кружевные трусики белого цвета с открытым доступом, размер S (42-44)</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">620 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/193857/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/suvenir-fartuk-zhenschina-7791720000/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/suvenir-fartuk-zhenschina-7791720000/"><img src="/media/cache/72/9a/729a49b1c16a8462e29a9e99ce8b1343.jpg" alt="Сувенир Фартук женщина"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/suvenir-fartuk-zhenschina-7791720000/">Сувенир Фартук женщина</a></div><a href="/catalog/product/suvenir-fartuk-zhenschina-7791720000/">
+                            <p>Фартук с изображением женского тела с округлыми формами</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">790 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/196749/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/otkryityie-trusiki-miamor-sm-ob9912/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/otkryityie-trusiki-miamor-sm-ob9912/"><img src="/media/cache/aa/1f/aa1ff04e69aa4bfa2de9dd5b27081634.jpg" alt="Трусики Miamor"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/otkryityie-trusiki-miamor-sm-ob9912/">Трусики Miamor</a></div><a href="/catalog/product/otkryityie-trusiki-miamor-sm-ob9912/">
+                            <p>Соблазнительные кружевные женские трусики черного цвета с доступом, размер S\M (42-46)</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">1 020 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/195499/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/trusyi-meshok-muzhskie-krasno-belyie-sl-449530/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/trusyi-meshok-muzhskie-krasno-belyie-sl-449530/"><img src="/media/cache/f7/dc/f7dc255c97000713bf726a136580b0ed.jpg" alt="Трусы-мешок Soft Line"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/trusyi-meshok-muzhskie-krasno-belyie-sl-449530/">Трусы-мешок Soft Line</a></div><a href="/catalog/product/trusyi-meshok-muzhskie-krasno-belyie-sl-449530/">
+                            <p>Мужские трусы без бретелек в виде мешочка с белым бантиком, размер S/L (42-48)</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">890 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/194268/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/chernyie-trusiki-s-dostupom-nicole--10078-46-48lola/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/chernyie-trusiki-s-dostupom-nicole--10078-46-48lola/"><img src="/media/cache/1c/82/1c825af2da26fbf74d3750d33711bf7c.jpg" alt="Трусики Lola Lingerie Nicole"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/chernyie-trusiki-s-dostupom-nicole--10078-46-48lola/">Трусики Lola Lingerie Nicole</a></div><a href="/catalog/product/chernyie-trusiki-s-dostupom-nicole--10078-46-48lola/">
+                            <p>Кружевные трусики-стринг с открытым доступом, размер M/L (46-48)</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">670 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/196056/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/fartuk-polechimsya-597988/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/fartuk-polechimsya-597988/"><img src="/media/cache/2d/47/2d476f8c850a587daf86e88c5029af5b.jpg" alt="Фартук Полечимся"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/fartuk-polechimsya-597988/">Фартук Полечимся</a></div><a href="/catalog/product/fartuk-polechimsya-597988/">
+                            <p>Фартук с изображением сексуальной дамочки с шикарными формами и надписью Полечимся</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">560 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/1789810/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/frivolnyie-trusiki-s-dostupom-i--04332ml46-48/"></a>
+                        <div class="marker">
+                          <div class="marker__item marker-star">*</div>
+                        </div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/frivolnyie-trusiki-s-dostupom-i--04332ml46-48/"><img src="/media/cache/59/0e/590e689cd1dbd062d5091629548cb4fd.jpg" alt="Трусики Le Frivole Easy to love"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/frivolnyie-trusiki-s-dostupom-i--04332ml46-48/">Трусики Le Frivole Easy to love</a></div><a href="/catalog/product/frivolnyie-trusiki-s-dostupom-i--04332ml46-48/">
+                            <p>Трусики-стринг с доступом из черного кружева и эластичных лент, размер M/L (46-48)</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">590 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/5113555/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/moneta-lyubit-ne-lyubit-470989/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/moneta-lyubit-ne-lyubit-470989/"><img src="/media/cache/b1/59/b159be110e2de2b942239d13ca8c00ff.jpg" alt="Монета Любит - Не любит"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/moneta-lyubit-ne-lyubit-470989/">Монета Любит - Не любит</a></div><a href="/catalog/product/moneta-lyubit-ne-lyubit-470989/">
+                            <p>Сувенир в виде монетки с надписями Любит и Не любит с двух сторон</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">190 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/211983/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/tapochki-domashnie-seh-bomba-m38-39-654552/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/tapochki-domashnie-seh-bomba-m38-39-654552/"><img src="/media/cache/61/21/61212c5d1e88c92ee731913e8e436e08.jpg" alt="Тапочки Seх бомба"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/tapochki-domashnie-seh-bomba-m38-39-654552/">Тапочки Seх бомба</a></div><a href="/catalog/product/tapochki-domashnie-seh-bomba-m38-39-654552/">
+                            <p>Мягкие плюшевые домашние тапочки-сувенир c Seх бомба, размер 38 -39 </p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">990 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/201083/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/originalnyie-konturnyie-trusiki-s-dostupom--04324xss40-42/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/originalnyie-konturnyie-trusiki-s-dostupom--04324xss40-42/"><img src="/media/cache/e4/ef/e4efabfa3e03e713572f9391653f8e31.jpg" alt="Оригинальные контурные трусики с доступом и нитью бус"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/originalnyie-konturnyie-trusiki-s-dostupom--04324xss40-42/">Оригинальные контурные трусики с...</a></div><a href="/catalog/product/originalnyie-konturnyie-trusiki-s-dostupom--04324xss40-42/">
+                            <p>При производстве этих трусиков не использовалось и квадратного сантиметра кружева</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">630 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/10472718/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/eroticheskie-trusiki-erolanta-lingerie-collection--74113146-48/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/eroticheskie-trusiki-erolanta-lingerie-collection--74113146-48/"><img src="/media/cache/aa/d8/aad83bbcc1f9fc92b0a027d8b37affcd.jpg" alt="Трусики Erolanta Lingerie Collection"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/eroticheskie-trusiki-erolanta-lingerie-collection--74113146-48/">Трусики Erolanta Lingerie Collec...</a></div><a href="/catalog/product/eroticheskie-trusiki-erolanta-lingerie-collection--74113146-48/">
+                            <p>Черные открытые трусики со вставками кружева и декоративными вырезами по бокам, размер M/L (46-48)</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">1 030 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/10579008/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/suvenirnaya-nasadka-goroskop-oven--3267sit/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/suvenirnaya-nasadka-goroskop-oven--3267sit/"><img src="/media/cache/0a/26/0a264d0c00b383d9a3a648e8a1f619a8.jpg" alt="Сувенирный латексный презерватив  Овен "></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/suvenirnaya-nasadka-goroskop-oven--3267sit/">Сувенирный латексный презерватив...</a></div><a href="/catalog/product/suvenirnaya-nasadka-goroskop-oven--3267sit/">
+                            <p>Поднять настроение и удивить своих друзей и знакомых легко и просто, достаточно лишь подарить небольшой яркий латексный сувенир</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">480 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/6794657/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/brelok-stek-so-shlepkom-1-dlya--10951/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/brelok-stek-so-shlepkom-1-dlya--10951/"><img src="/media/cache/52/cf/52cf5936a8f5cdc0060062e942523f1c.jpg" alt="Брелок Beastly Стэк со шлепком"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/brelok-stek-so-shlepkom-1-dlya--10951/">Брелок Beastly Стэк со шлепком</a></div><a href="/catalog/product/brelok-stek-so-shlepkom-1-dlya--10951/">
+                            <p>Брелок для ключек из натуральной кожи в виде стэка со шлепком на металлическом колечке, длина 9 см</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">490 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/215715/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/zavlekayuschie-belyie-trusiki-s-dostupom--043372xl3xxl50-52/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/zavlekayuschie-belyie-trusiki-s-dostupom--043372xl3xxl50-52/"><img src="/media/cache/a4/11/a41141346f926244c1f61c207383abd8.jpg" alt="Игривые белые трусики с доступом и нежной юбочкой"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/zavlekayuschie-belyie-trusiki-s-dostupom--043372xl3xxl50-52/">Игривые белые трусики с доступом...</a></div><a href="/catalog/product/zavlekayuschie-belyie-trusiki-s-dostupom--043372xl3xxl50-52/">
+                            <p>Повысить градус страстей в отдельно взятой спальне? Легко! Надев эти игривые трусики-стринги с интимным доступом, вы распалите в мужчине желание до предела</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">730 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/10472710/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/stringi-s-dostupom-biryuzovyie-s-alaxia-2/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/stringi-s-dostupom-biryuzovyie-s-alaxia-2/"><img src="/media/cache/08/24/0824ec41410a29d62c0501a03954f5e4.jpg" alt="Трусики Alaxia"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/stringi-s-dostupom-biryuzovyie-s-alaxia-2/">Трусики Alaxia</a></div><a href="/catalog/product/stringi-s-dostupom-biryuzovyie-s-alaxia-2/">
+                            <p>Трусики-стринг бирюзового цвета с откытым доступом, украшенные атласным бантиком , размер S (42-44)</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">750 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/204828/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="related_product"><a class="teaser__link" href="/catalog/product/bikini-iz-tsepochek-toyfa-theatre--704023/"></a>
+                        <div class="marker"></div>
+                        <div class="new-item__image">
+                          <div></div><a href="/catalog/product/bikini-iz-tsepochek-toyfa-theatre--704023/"><img src="/media/cache/34/e0/34e0dfef1cbb53e7f741b5e4f640f553.jpg" alt="Металлическое бикини из цепочек TOYFA Theatre"></a>
+                        </div>
+                        <div class="new-item__content">
+                          <div class="new-item__title"><a href="/catalog/product/bikini-iz-tsepochek-toyfa-theatre--704023/">Металлическое бикини из цепочек ...</a></div><a href="/catalog/product/bikini-iz-tsepochek-toyfa-theatre--704023/">
+                            <p>Откровенное бикини для особых случаев</p></a>
+                        </div>
+                        <div class="new-item__bottom">
+                          <div class="new-item__actual-cost">2 290 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/5618504/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
+                          <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="new-content__catalog">
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels">
+                      <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-15%</span></div>
+                    </div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/196817/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/4d/d0/4dd0c3171552ed69abe0a9a8867ced58.jpg" width="130" height="130" alt="Форма для выпечки Грудь">
+                    </div><a class="new-card__center" href="/catalog/product/forma-dlya-vyipechki-grud-105020700408110009995--7700270000/" title="Перейти на страницу товара">Форма для выпечки Грудь</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">870<span class="new-card__currency">₽</span></span><span class="new-card__price">739<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/196817/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Оригинальная форма для выпекания в виде женской груди</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/195879/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/03/e5/03e5b343e81de776b5f8c968d753ec47.jpg" width="130" height="130" alt="Возбуждающий гель мягкого действия JO CLITORAL CHILL - 10 мл.">
+                    </div><a class="new-card__center" href="/catalog/product/vozbuzhdayuschij-gel-dlya-g-tochki-myagkogo--jo40214/" title="Перейти на страницу товара">Возбуждающий гель мягкого действия JO CLITORAL CHILL - 10 мл.</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">1 640<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/195879/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Усиление приятных ощущений во время близости, более интенсивный вагинальный оргазм… Именно этим займётся возбуждающий гель мягкого воздействия JO Chill</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/2759483/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/32/e3/32e3a9cb0babd08fd8f37efde6e8cbb8.jpg" width="130" height="130" alt="Трусики Lottea">
+                    </div><a class="new-card__center" href="/catalog/product/otkryityie-trusiki-lottea-sl-10007/" title="Перейти на страницу товара">Трусики Lottea</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">1 140<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/2759483/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Сексуальные открытые трусики красного цвета с жемчужинами и двойной резиночкой, размер-S/L (42-48)</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/9841024/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/60/a6/60a6c6b1ae1362cda49b0619dccabd19.jpg" width="130" height="130" alt="Оригинальные женские трусики Lolitte с интимным доступом">
+                    </div><a class="new-card__center" href="/catalog/product/drop-originalnyie-zhenskie-trusiki-lolitte-s--lolitte-crotchless-thong/" title="Перейти на страницу товара">Оригинальные женские трусики Lolitte с интимным доступом</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">1 060<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/9841024/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Эти милые контактные трусики-стринги – отличный вариант для вечера, наполненного страстью</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/193857/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/3f/24/3f249186bc73749588c76bf83d181b38.jpg" width="130" height="130" alt="Трусики Anna">
+                    </div><a class="new-card__center" href="/catalog/product/azhurnyie-strigni-s-dostupom-anna--10047-42-44lola/" title="Перейти на страницу товара">Трусики Anna</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">620<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/193857/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Кружевные трусики белого цвета с открытым доступом, размер S (42-44)</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/196749/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/72/9a/729a49b1c16a8462e29a9e99ce8b1343.jpg" width="130" height="130" alt="Сувенир Фартук женщина">
+                    </div><a class="new-card__center" href="/catalog/product/suvenir-fartuk-zhenschina-7791720000/" title="Перейти на страницу товара">Сувенир Фартук женщина</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">790<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/196749/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Фартук с изображением женского тела с округлыми формами</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/195499/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/aa/1f/aa1ff04e69aa4bfa2de9dd5b27081634.jpg" width="130" height="130" alt="Трусики Miamor">
+                    </div><a class="new-card__center" href="/catalog/product/otkryityie-trusiki-miamor-sm-ob9912/" title="Перейти на страницу товара">Трусики Miamor</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">1 020<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/195499/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Соблазнительные кружевные женские трусики черного цвета с доступом, размер S\M (42-46)</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/194268/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/f7/dc/f7dc255c97000713bf726a136580b0ed.jpg" width="130" height="130" alt="Трусы-мешок Soft Line">
+                    </div><a class="new-card__center" href="/catalog/product/trusyi-meshok-muzhskie-krasno-belyie-sl-449530/" title="Перейти на страницу товара">Трусы-мешок Soft Line</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">890<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/194268/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Мужские трусы без бретелек в виде мешочка с белым бантиком, размер S/L (42-48)</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/196056/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/1c/82/1c825af2da26fbf74d3750d33711bf7c.jpg" width="130" height="130" alt="Трусики Lola Lingerie Nicole">
+                    </div><a class="new-card__center" href="/catalog/product/chernyie-trusiki-s-dostupom-nicole--10078-46-48lola/" title="Перейти на страницу товара">Трусики Lola Lingerie Nicole</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">670<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/196056/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Кружевные трусики-стринг с открытым доступом, размер M/L (46-48)</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/1789810/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/2d/47/2d476f8c850a587daf86e88c5029af5b.jpg" width="130" height="130" alt="Фартук Полечимся">
+                    </div><a class="new-card__center" href="/catalog/product/fartuk-polechimsya-597988/" title="Перейти на страницу товара">Фартук Полечимся</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">560<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/1789810/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Фартук с изображением сексуальной дамочки с шикарными формами и надписью Полечимся</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels">
+                      <div class="new-card__label new-card__label-type-important">
+                        <svg class="new-card__icon">
+                          <use xlink:href="#whiteStarIcon"></use>
+                        </svg>
                       </div>
                     </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/vozbuzhdayuschij-gel-dlya-g-tochki-myagkogo--jo40214/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/vozbuzhdayuschij-gel-dlya-g-tochki-myagkogo--jo40214/"><img src="/media/cache/03/e5/03e5b343e81de776b5f8c968d753ec47.jpg" alt="Возбуждающий гель мягкого действия JO CLITORAL CHILL - 10 мл."></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/vozbuzhdayuschij-gel-dlya-g-tochki-myagkogo--jo40214/">Возбуждающий гель мягкого действ...</a></div><a href="/catalog/product/vozbuzhdayuschij-gel-dlya-g-tochki-myagkogo--jo40214/">
-                          <p>Усиление приятных ощущений во время близости, более интенсивный вагинальный оргазм… Именно этим займётся возбуждающий гель мягкого воздействия JO Chill</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">1 640 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/195879/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/otkryityie-trusiki-lottea-sl-10007/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/otkryityie-trusiki-lottea-sl-10007/"><img src="/media/cache/32/e3/32e3a9cb0babd08fd8f37efde6e8cbb8.jpg" alt="Трусики Lottea"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/otkryityie-trusiki-lottea-sl-10007/">Трусики Lottea</a></div><a href="/catalog/product/otkryityie-trusiki-lottea-sl-10007/">
-                          <p>Сексуальные открытые трусики красного цвета с жемчужинами и двойной резиночкой, размер-S/L (42-48)</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">1 140 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/2759483/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/drop-originalnyie-zhenskie-trusiki-lolitte-s--lolitte-crotchless-thong/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/drop-originalnyie-zhenskie-trusiki-lolitte-s--lolitte-crotchless-thong/"><img src="/media/cache/60/a6/60a6c6b1ae1362cda49b0619dccabd19.jpg" alt="Оригинальные женские трусики Lolitte с интимным доступом"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/drop-originalnyie-zhenskie-trusiki-lolitte-s--lolitte-crotchless-thong/">Оригинальные женские трусики Lol...</a></div><a href="/catalog/product/drop-originalnyie-zhenskie-trusiki-lolitte-s--lolitte-crotchless-thong/">
-                          <p>Эти милые контактные трусики-стринги – отличный вариант для вечера, наполненного страстью</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">1 060 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/9841024/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/azhurnyie-strigni-s-dostupom-anna--10047-42-44lola/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/azhurnyie-strigni-s-dostupom-anna--10047-42-44lola/"><img src="/media/cache/3f/24/3f249186bc73749588c76bf83d181b38.jpg" alt="Трусики Anna"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/azhurnyie-strigni-s-dostupom-anna--10047-42-44lola/">Трусики Anna</a></div><a href="/catalog/product/azhurnyie-strigni-s-dostupom-anna--10047-42-44lola/">
-                          <p>Кружевные трусики белого цвета с открытым доступом, размер S (42-44)</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">620 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/193857/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/suvenir-fartuk-zhenschina-7791720000/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/suvenir-fartuk-zhenschina-7791720000/"><img src="/media/cache/72/9a/729a49b1c16a8462e29a9e99ce8b1343.jpg" alt="Сувенир Фартук женщина"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/suvenir-fartuk-zhenschina-7791720000/">Сувенир Фартук женщина</a></div><a href="/catalog/product/suvenir-fartuk-zhenschina-7791720000/">
-                          <p>Фартук с изображением женского тела с округлыми формами</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">790 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/196749/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/otkryityie-trusiki-miamor-sm-ob9912/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/otkryityie-trusiki-miamor-sm-ob9912/"><img src="/media/cache/aa/1f/aa1ff04e69aa4bfa2de9dd5b27081634.jpg" alt="Трусики Miamor"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/otkryityie-trusiki-miamor-sm-ob9912/">Трусики Miamor</a></div><a href="/catalog/product/otkryityie-trusiki-miamor-sm-ob9912/">
-                          <p>Соблазнительные кружевные женские трусики черного цвета с доступом, размер S\M (42-46)</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">1 020 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/195499/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/trusyi-meshok-muzhskie-krasno-belyie-sl-449530/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/trusyi-meshok-muzhskie-krasno-belyie-sl-449530/"><img src="/media/cache/f7/dc/f7dc255c97000713bf726a136580b0ed.jpg" alt="Трусы-мешок Soft Line"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/trusyi-meshok-muzhskie-krasno-belyie-sl-449530/">Трусы-мешок Soft Line</a></div><a href="/catalog/product/trusyi-meshok-muzhskie-krasno-belyie-sl-449530/">
-                          <p>Мужские трусы без бретелек в виде мешочка с белым бантиком, размер S/L (42-48)</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">890 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/194268/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/chernyie-trusiki-s-dostupom-nicole--10078-46-48lola/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/chernyie-trusiki-s-dostupom-nicole--10078-46-48lola/"><img src="/media/cache/1c/82/1c825af2da26fbf74d3750d33711bf7c.jpg" alt="Трусики Lola Lingerie Nicole"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/chernyie-trusiki-s-dostupom-nicole--10078-46-48lola/">Трусики Lola Lingerie Nicole</a></div><a href="/catalog/product/chernyie-trusiki-s-dostupom-nicole--10078-46-48lola/">
-                          <p>Кружевные трусики-стринг с открытым доступом, размер M/L (46-48)</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">670 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/196056/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/fartuk-polechimsya-597988/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/fartuk-polechimsya-597988/"><img src="/media/cache/2d/47/2d476f8c850a587daf86e88c5029af5b.jpg" alt="Фартук Полечимся"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/fartuk-polechimsya-597988/">Фартук Полечимся</a></div><a href="/catalog/product/fartuk-polechimsya-597988/">
-                          <p>Фартук с изображением сексуальной дамочки с шикарными формами и надписью Полечимся</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">560 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/1789810/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/frivolnyie-trusiki-s-dostupom-i--04332ml46-48/"></a>
-                      <div class="marker">
-                        <div class="marker__item marker-star">*</div>
-                      </div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/frivolnyie-trusiki-s-dostupom-i--04332ml46-48/"><img src="/media/cache/59/0e/590e689cd1dbd062d5091629548cb4fd.jpg" alt="Трусики Le Frivole Easy to love"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/frivolnyie-trusiki-s-dostupom-i--04332ml46-48/">Трусики Le Frivole Easy to love</a></div><a href="/catalog/product/frivolnyie-trusiki-s-dostupom-i--04332ml46-48/">
-                          <p>Трусики-стринг с доступом из черного кружева и эластичных лент, размер M/L (46-48)</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">590 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/5113555/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/moneta-lyubit-ne-lyubit-470989/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/moneta-lyubit-ne-lyubit-470989/"><img src="/media/cache/b1/59/b159be110e2de2b942239d13ca8c00ff.jpg" alt="Монета Любит - Не любит"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/moneta-lyubit-ne-lyubit-470989/">Монета Любит - Не любит</a></div><a href="/catalog/product/moneta-lyubit-ne-lyubit-470989/">
-                          <p>Сувенир в виде монетки с надписями Любит и Не любит с двух сторон</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">190 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/211983/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/tapochki-domashnie-seh-bomba-m38-39-654552/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/tapochki-domashnie-seh-bomba-m38-39-654552/"><img src="/media/cache/61/21/61212c5d1e88c92ee731913e8e436e08.jpg" alt="Тапочки Seх бомба"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/tapochki-domashnie-seh-bomba-m38-39-654552/">Тапочки Seх бомба</a></div><a href="/catalog/product/tapochki-domashnie-seh-bomba-m38-39-654552/">
-                          <p>Мягкие плюшевые домашние тапочки-сувенир c Seх бомба, размер 38 -39 </p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">990 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/201083/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/originalnyie-konturnyie-trusiki-s-dostupom--04324xss40-42/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/originalnyie-konturnyie-trusiki-s-dostupom--04324xss40-42/"><img src="/media/cache/e4/ef/e4efabfa3e03e713572f9391653f8e31.jpg" alt="Оригинальные контурные трусики с доступом и нитью бус"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/originalnyie-konturnyie-trusiki-s-dostupom--04324xss40-42/">Оригинальные контурные трусики с...</a></div><a href="/catalog/product/originalnyie-konturnyie-trusiki-s-dostupom--04324xss40-42/">
-                          <p>При производстве этих трусиков не использовалось и квадратного сантиметра кружева</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">630 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/10472718/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/eroticheskie-trusiki-erolanta-lingerie-collection--74113146-48/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/eroticheskie-trusiki-erolanta-lingerie-collection--74113146-48/"><img src="/media/cache/aa/d8/aad83bbcc1f9fc92b0a027d8b37affcd.jpg" alt="Трусики Erolanta Lingerie Collection"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/eroticheskie-trusiki-erolanta-lingerie-collection--74113146-48/">Трусики Erolanta Lingerie Collec...</a></div><a href="/catalog/product/eroticheskie-trusiki-erolanta-lingerie-collection--74113146-48/">
-                          <p>Черные открытые трусики со вставками кружева и декоративными вырезами по бокам, размер M/L (46-48)</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">1 030 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/10579008/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/suvenirnaya-nasadka-goroskop-oven--3267sit/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/suvenirnaya-nasadka-goroskop-oven--3267sit/"><img src="/media/cache/0a/26/0a264d0c00b383d9a3a648e8a1f619a8.jpg" alt="Сувенирный латексный презерватив  Овен "></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/suvenirnaya-nasadka-goroskop-oven--3267sit/">Сувенирный латексный презерватив...</a></div><a href="/catalog/product/suvenirnaya-nasadka-goroskop-oven--3267sit/">
-                          <p>Поднять настроение и удивить своих друзей и знакомых легко и просто, достаточно лишь подарить небольшой яркий латексный сувенир</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">480 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/6794657/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/brelok-stek-so-shlepkom-1-dlya--10951/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/brelok-stek-so-shlepkom-1-dlya--10951/"><img src="/media/cache/52/cf/52cf5936a8f5cdc0060062e942523f1c.jpg" alt="Брелок Beastly Стэк со шлепком"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/brelok-stek-so-shlepkom-1-dlya--10951/">Брелок Beastly Стэк со шлепком</a></div><a href="/catalog/product/brelok-stek-so-shlepkom-1-dlya--10951/">
-                          <p>Брелок для ключек из натуральной кожи в виде стэка со шлепком на металлическом колечке, длина 9 см</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">490 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/215715/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/zavlekayuschie-belyie-trusiki-s-dostupom--043372xl3xxl50-52/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/zavlekayuschie-belyie-trusiki-s-dostupom--043372xl3xxl50-52/"><img src="/media/cache/a4/11/a41141346f926244c1f61c207383abd8.jpg" alt="Игривые белые трусики с доступом и нежной юбочкой"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/zavlekayuschie-belyie-trusiki-s-dostupom--043372xl3xxl50-52/">Игривые белые трусики с доступом...</a></div><a href="/catalog/product/zavlekayuschie-belyie-trusiki-s-dostupom--043372xl3xxl50-52/">
-                          <p>Повысить градус страстей в отдельно взятой спальне? Легко! Надев эти игривые трусики-стринги с интимным доступом, вы распалите в мужчине желание до предела</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">730 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/10472710/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/stringi-s-dostupom-biryuzovyie-s-alaxia-2/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/stringi-s-dostupom-biryuzovyie-s-alaxia-2/"><img src="/media/cache/08/24/0824ec41410a29d62c0501a03954f5e4.jpg" alt="Трусики Alaxia"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/stringi-s-dostupom-biryuzovyie-s-alaxia-2/">Трусики Alaxia</a></div><a href="/catalog/product/stringi-s-dostupom-biryuzovyie-s-alaxia-2/">
-                          <p>Трусики-стринг бирюзового цвета с откытым доступом, украшенные атласным бантиком , размер S (42-44)</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">750 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/204828/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="related_product"><a class="teaser__link" href="/catalog/product/bikini-iz-tsepochek-toyfa-theatre--704023/"></a>
-                      <div class="marker"></div>
-                      <div class="new-item__image">
-                        <div></div><a href="/catalog/product/bikini-iz-tsepochek-toyfa-theatre--704023/"><img src="/media/cache/34/e0/34e0dfef1cbb53e7f741b5e4f640f553.jpg" alt="Металлическое бикини из цепочек TOYFA Theatre"></a>
-                      </div>
-                      <div class="new-item__content">
-                        <div class="new-item__title"><a href="/catalog/product/bikini-iz-tsepochek-toyfa-theatre--704023/">Металлическое бикини из цепочек ...</a></div><a href="/catalog/product/bikini-iz-tsepochek-toyfa-theatre--704023/">
-                          <p>Откровенное бикини для особых случаев</p></a>
-                      </div>
-                      <div class="new-item__bottom">
-                        <div class="new-item__actual-cost">2 290 <span class="rouble">u</span></div><a class="new-item__shopping-cart add_to_cart" href="/catalog/cart/add/5618504/"><span class="icon"></span><span class="new-item__shopping-cart-text">Купить</span></a>
-                        <div class="teaser__shadow"><img src="/static/svg/logo_color_2.svg" alt="загрузка..."></div>
-                      </div>
-                    </div>
-                  </li>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/5113555/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/59/0e/590e689cd1dbd062d5091629548cb4fd.jpg" width="130" height="130" alt="Трусики Le Frivole Easy to love">
+                    </div><a class="new-card__center" href="/catalog/product/frivolnyie-trusiki-s-dostupom-i--04332ml46-48/" title="Перейти на страницу товара">Трусики Le Frivole Easy to love</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">590<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/5113555/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Трусики-стринг с доступом из черного кружева и эластичных лент, размер M/L (46-48)</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/211983/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/b1/59/b159be110e2de2b942239d13ca8c00ff.jpg" width="130" height="130" alt="Монета Любит - Не любит">
+                    </div><a class="new-card__center" href="/catalog/product/moneta-lyubit-ne-lyubit-470989/" title="Перейти на страницу товара">Монета Любит - Не любит</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">190<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/211983/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Сувенир в виде монетки с надписями Любит и Не любит с двух сторон</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/201083/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/61/21/61212c5d1e88c92ee731913e8e436e08.jpg" width="130" height="130" alt="Тапочки Seх бомба">
+                    </div><a class="new-card__center" href="/catalog/product/tapochki-domashnie-seh-bomba-m38-39-654552/" title="Перейти на страницу товара">Тапочки Seх бомба</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">990<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/201083/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Мягкие плюшевые домашние тапочки-сувенир c Seх бомба, размер 38 -39 </p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/10472718/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/e4/ef/e4efabfa3e03e713572f9391653f8e31.jpg" width="130" height="130" alt="Оригинальные контурные трусики с доступом и нитью бус">
+                    </div><a class="new-card__center" href="/catalog/product/originalnyie-konturnyie-trusiki-s-dostupom--04324xss40-42/" title="Перейти на страницу товара">Оригинальные контурные трусики с доступом и нитью бус</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">630<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/10472718/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">При производстве этих трусиков не использовалось и квадратного сантиметра кружева</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/10579008/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/aa/d8/aad83bbcc1f9fc92b0a027d8b37affcd.jpg" width="130" height="130" alt="Трусики Erolanta Lingerie Collection">
+                    </div><a class="new-card__center" href="/catalog/product/eroticheskie-trusiki-erolanta-lingerie-collection--74113146-48/" title="Перейти на страницу товара">Трусики Erolanta Lingerie Collection</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">1 030<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/10579008/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Черные открытые трусики со вставками кружева и декоративными вырезами по бокам, размер M/L (46-48)</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/6794657/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/0a/26/0a264d0c00b383d9a3a648e8a1f619a8.jpg" width="130" height="130" alt="Сувенирный латексный презерватив  Овен ">
+                    </div><a class="new-card__center" href="/catalog/product/suvenirnaya-nasadka-goroskop-oven--3267sit/" title="Перейти на страницу товара">Сувенирный латексный презерватив  Овен </a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">480<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/6794657/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Поднять настроение и удивить своих друзей и знакомых легко и просто, достаточно лишь подарить небольшой яркий латексный сувенир</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/215715/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/52/cf/52cf5936a8f5cdc0060062e942523f1c.jpg" width="130" height="130" alt="Брелок Beastly Стэк со шлепком">
+                    </div><a class="new-card__center" href="/catalog/product/brelok-stek-so-shlepkom-1-dlya--10951/" title="Перейти на страницу товара">Брелок Beastly Стэк со шлепком</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">490<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/215715/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Брелок для ключек из натуральной кожи в виде стэка со шлепком на металлическом колечке, длина 9 см</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/10472710/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/a4/11/a41141346f926244c1f61c207383abd8.jpg" width="130" height="130" alt="Игривые белые трусики с доступом и нежной юбочкой">
+                    </div><a class="new-card__center" href="/catalog/product/zavlekayuschie-belyie-trusiki-s-dostupom--043372xl3xxl50-52/" title="Перейти на страницу товара">Игривые белые трусики с доступом и нежной юбочкой</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">730<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/10472710/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Повысить градус страстей в отдельно взятой спальне? Легко! Надев эти игривые трусики-стринги с интимным доступом, вы распалите в мужчине желание до предела</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/204828/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/08/24/0824ec41410a29d62c0501a03954f5e4.jpg" width="130" height="130" alt="Трусики Alaxia">
+                    </div><a class="new-card__center" href="/catalog/product/stringi-s-dostupom-biryuzovyie-s-alaxia-2/" title="Перейти на страницу товара">Трусики Alaxia</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">750<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/204828/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Трусики-стринг бирюзового цвета с откытым доступом, украшенные атласным бантиком , размер S (42-44)</p>
+                  </div>
+                  <div class="new-card new-card-type-catalog">
+                    <div class="new-card__labels"></div>
+                    <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/5618504/">
+                      <svg class="new-phone__icon new-phone__icon-type-loop">
+                        <use xlink:href="#loopIcon"></use>
+                      </svg><img class="new-card__img" src="/media/cache/34/e0/34e0dfef1cbb53e7f741b5e4f640f553.jpg" width="130" height="130" alt="Металлическое бикини из цепочек TOYFA Theatre">
+                    </div><a class="new-card__center" href="/catalog/product/bikini-iz-tsepochek-toyfa-theatre--704023/" title="Перейти на страницу товара">Металлическое бикини из цепочек TOYFA Theatre</a>
+                    <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 290<span class="new-card__currency">₽</span></span></span>
+                      <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/5618504/" data-action="buyButton">
+                        <svg class="new-tabs__icon new-tabs__icon-type-cart">
+                          <use xlink:href="#cartIcon"></use>
+                        </svg> Купить
+                      </button>
+                    </p>
+                    <p class="new-card__explanation">Откровенное бикини для особых случаев</p>
+                  </div>
+                </div>
+                <ul class="pager-large">
+                  <li class="prev"><a href="#go-for-prev-tab" data-go-to="prev"></a></li>
+                  <li class="active"><a href="#go-for-tab" data-go-to="1"><span>•</span></a></li>
+                  <li><a href="#go-for-tab" data-go-to="2"><span>•</span></a></li>
+                  <li><a href="#go-for-tab" data-go-to="3"><span>•</span></a></li>
+                  <li><a href="#go-for-tab" data-go-to="4"><span>•</span></a></li>
+                  <li><a href="#go-for-tab" data-go-to="5"><span>•</span></a></li>
+                  <li class="next"><a href="#go-for-next-tab" data-go-to="next"></a></li>
                 </ul>
               </div>
-              <div class="new-content__catalog">
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels">
-                    <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-15%</span></div>
-                  </div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/196817/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/4d/d0/4dd0c3171552ed69abe0a9a8867ced58.jpg" width="130" height="130" alt="Форма для выпечки Грудь">
-                  </div><a class="new-card__center" href="/catalog/product/forma-dlya-vyipechki-grud-105020700408110009995--7700270000/" title="Перейти на страницу товара">Форма для выпечки Грудь</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">870<span class="new-card__currency">₽</span></span><span class="new-card__price">739<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/196817/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Оригинальная форма для выпекания в виде женской груди</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/195879/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/03/e5/03e5b343e81de776b5f8c968d753ec47.jpg" width="130" height="130" alt="Возбуждающий гель мягкого действия JO CLITORAL CHILL - 10 мл.">
-                  </div><a class="new-card__center" href="/catalog/product/vozbuzhdayuschij-gel-dlya-g-tochki-myagkogo--jo40214/" title="Перейти на страницу товара">Возбуждающий гель мягкого действия JO CLITORAL CHILL - 10 мл.</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">1 640<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/195879/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Усиление приятных ощущений во время близости, более интенсивный вагинальный оргазм… Именно этим займётся возбуждающий гель мягкого воздействия JO Chill</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/2759483/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/32/e3/32e3a9cb0babd08fd8f37efde6e8cbb8.jpg" width="130" height="130" alt="Трусики Lottea">
-                  </div><a class="new-card__center" href="/catalog/product/otkryityie-trusiki-lottea-sl-10007/" title="Перейти на страницу товара">Трусики Lottea</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">1 140<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/2759483/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Сексуальные открытые трусики красного цвета с жемчужинами и двойной резиночкой, размер-S/L (42-48)</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/9841024/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/60/a6/60a6c6b1ae1362cda49b0619dccabd19.jpg" width="130" height="130" alt="Оригинальные женские трусики Lolitte с интимным доступом">
-                  </div><a class="new-card__center" href="/catalog/product/drop-originalnyie-zhenskie-trusiki-lolitte-s--lolitte-crotchless-thong/" title="Перейти на страницу товара">Оригинальные женские трусики Lolitte с интимным доступом</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">1 060<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/9841024/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Эти милые контактные трусики-стринги – отличный вариант для вечера, наполненного страстью</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/193857/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/3f/24/3f249186bc73749588c76bf83d181b38.jpg" width="130" height="130" alt="Трусики Anna">
-                  </div><a class="new-card__center" href="/catalog/product/azhurnyie-strigni-s-dostupom-anna--10047-42-44lola/" title="Перейти на страницу товара">Трусики Anna</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">620<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/193857/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Кружевные трусики белого цвета с открытым доступом, размер S (42-44)</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/196749/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/72/9a/729a49b1c16a8462e29a9e99ce8b1343.jpg" width="130" height="130" alt="Сувенир Фартук женщина">
-                  </div><a class="new-card__center" href="/catalog/product/suvenir-fartuk-zhenschina-7791720000/" title="Перейти на страницу товара">Сувенир Фартук женщина</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">790<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/196749/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Фартук с изображением женского тела с округлыми формами</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/195499/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/aa/1f/aa1ff04e69aa4bfa2de9dd5b27081634.jpg" width="130" height="130" alt="Трусики Miamor">
-                  </div><a class="new-card__center" href="/catalog/product/otkryityie-trusiki-miamor-sm-ob9912/" title="Перейти на страницу товара">Трусики Miamor</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">1 020<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/195499/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Соблазнительные кружевные женские трусики черного цвета с доступом, размер S\M (42-46)</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/194268/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/f7/dc/f7dc255c97000713bf726a136580b0ed.jpg" width="130" height="130" alt="Трусы-мешок Soft Line">
-                  </div><a class="new-card__center" href="/catalog/product/trusyi-meshok-muzhskie-krasno-belyie-sl-449530/" title="Перейти на страницу товара">Трусы-мешок Soft Line</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">890<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/194268/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Мужские трусы без бретелек в виде мешочка с белым бантиком, размер S/L (42-48)</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/196056/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/1c/82/1c825af2da26fbf74d3750d33711bf7c.jpg" width="130" height="130" alt="Трусики Lola Lingerie Nicole">
-                  </div><a class="new-card__center" href="/catalog/product/chernyie-trusiki-s-dostupom-nicole--10078-46-48lola/" title="Перейти на страницу товара">Трусики Lola Lingerie Nicole</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">670<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/196056/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Кружевные трусики-стринг с открытым доступом, размер M/L (46-48)</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/1789810/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/2d/47/2d476f8c850a587daf86e88c5029af5b.jpg" width="130" height="130" alt="Фартук Полечимся">
-                  </div><a class="new-card__center" href="/catalog/product/fartuk-polechimsya-597988/" title="Перейти на страницу товара">Фартук Полечимся</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">560<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/1789810/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Фартук с изображением сексуальной дамочки с шикарными формами и надписью Полечимся</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels">
-                    <div class="new-card__label new-card__label-type-important">
-                      <svg class="new-card__icon">
-                        <use xlink:href="#whiteStarIcon"></use>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/5113555/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/59/0e/590e689cd1dbd062d5091629548cb4fd.jpg" width="130" height="130" alt="Трусики Le Frivole Easy to love">
-                  </div><a class="new-card__center" href="/catalog/product/frivolnyie-trusiki-s-dostupom-i--04332ml46-48/" title="Перейти на страницу товара">Трусики Le Frivole Easy to love</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">590<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/5113555/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Трусики-стринг с доступом из черного кружева и эластичных лент, размер M/L (46-48)</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/211983/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/b1/59/b159be110e2de2b942239d13ca8c00ff.jpg" width="130" height="130" alt="Монета Любит - Не любит">
-                  </div><a class="new-card__center" href="/catalog/product/moneta-lyubit-ne-lyubit-470989/" title="Перейти на страницу товара">Монета Любит - Не любит</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">190<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/211983/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Сувенир в виде монетки с надписями Любит и Не любит с двух сторон</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/201083/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/61/21/61212c5d1e88c92ee731913e8e436e08.jpg" width="130" height="130" alt="Тапочки Seх бомба">
-                  </div><a class="new-card__center" href="/catalog/product/tapochki-domashnie-seh-bomba-m38-39-654552/" title="Перейти на страницу товара">Тапочки Seх бомба</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">990<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/201083/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Мягкие плюшевые домашние тапочки-сувенир c Seх бомба, размер 38 -39 </p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/10472718/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/e4/ef/e4efabfa3e03e713572f9391653f8e31.jpg" width="130" height="130" alt="Оригинальные контурные трусики с доступом и нитью бус">
-                  </div><a class="new-card__center" href="/catalog/product/originalnyie-konturnyie-trusiki-s-dostupom--04324xss40-42/" title="Перейти на страницу товара">Оригинальные контурные трусики с доступом и нитью бус</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">630<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/10472718/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">При производстве этих трусиков не использовалось и квадратного сантиметра кружева</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/10579008/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/aa/d8/aad83bbcc1f9fc92b0a027d8b37affcd.jpg" width="130" height="130" alt="Трусики Erolanta Lingerie Collection">
-                  </div><a class="new-card__center" href="/catalog/product/eroticheskie-trusiki-erolanta-lingerie-collection--74113146-48/" title="Перейти на страницу товара">Трусики Erolanta Lingerie Collection</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">1 030<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/10579008/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Черные открытые трусики со вставками кружева и декоративными вырезами по бокам, размер M/L (46-48)</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/6794657/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/0a/26/0a264d0c00b383d9a3a648e8a1f619a8.jpg" width="130" height="130" alt="Сувенирный латексный презерватив  Овен ">
-                  </div><a class="new-card__center" href="/catalog/product/suvenirnaya-nasadka-goroskop-oven--3267sit/" title="Перейти на страницу товара">Сувенирный латексный презерватив  Овен </a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">480<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/6794657/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Поднять настроение и удивить своих друзей и знакомых легко и просто, достаточно лишь подарить небольшой яркий латексный сувенир</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/215715/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/52/cf/52cf5936a8f5cdc0060062e942523f1c.jpg" width="130" height="130" alt="Брелок Beastly Стэк со шлепком">
-                  </div><a class="new-card__center" href="/catalog/product/brelok-stek-so-shlepkom-1-dlya--10951/" title="Перейти на страницу товара">Брелок Beastly Стэк со шлепком</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">490<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/215715/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Брелок для ключек из натуральной кожи в виде стэка со шлепком на металлическом колечке, длина 9 см</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/10472710/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/a4/11/a41141346f926244c1f61c207383abd8.jpg" width="130" height="130" alt="Игривые белые трусики с доступом и нежной юбочкой">
-                  </div><a class="new-card__center" href="/catalog/product/zavlekayuschie-belyie-trusiki-s-dostupom--043372xl3xxl50-52/" title="Перейти на страницу товара">Игривые белые трусики с доступом и нежной юбочкой</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">730<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/10472710/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Повысить градус страстей в отдельно взятой спальне? Легко! Надев эти игривые трусики-стринги с интимным доступом, вы распалите в мужчине желание до предела</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/204828/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/08/24/0824ec41410a29d62c0501a03954f5e4.jpg" width="130" height="130" alt="Трусики Alaxia">
-                  </div><a class="new-card__center" href="/catalog/product/stringi-s-dostupom-biryuzovyie-s-alaxia-2/" title="Перейти на страницу товара">Трусики Alaxia</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">750<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/204828/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Трусики-стринг бирюзового цвета с откытым доступом, украшенные атласным бантиком , размер S (42-44)</p>
-                </div>
-                <div class="new-card new-card-type-catalog">
-                  <div class="new-card__labels"></div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/5618504/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/34/e0/34e0dfef1cbb53e7f741b5e4f640f553.jpg" width="130" height="130" alt="Металлическое бикини из цепочек TOYFA Theatre">
-                  </div><a class="new-card__center" href="/catalog/product/bikini-iz-tsepochek-toyfa-theatre--704023/" title="Перейти на страницу товара">Металлическое бикини из цепочек TOYFA Theatre</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">2 290<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/5618504/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Откровенное бикини для особых случаев</p>
-                </div>
-              </div>
-              <ul class="pager-large">
-                <li class="prev"><a href="#go-for-prev-tab" data-go-to="prev"></a></li>
-                <li class="active"><a href="#go-for-tab" data-go-to="1"><span>•</span></a></li>
-                <li><a href="#go-for-tab" data-go-to="2"><span>•</span></a></li>
-                <li><a href="#go-for-tab" data-go-to="3"><span>•</span></a></li>
-                <li><a href="#go-for-tab" data-go-to="4"><span>•</span></a></li>
-                <li><a href="#go-for-tab" data-go-to="5"><span>•</span></a></li>
-                <li class="next"><a href="#go-for-next-tab" data-go-to="next"></a></li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="left-col">
-        <section class="promo-slider">
-          <div class="fotorama" data-nav="dots" data-arrows="false" data-height="249" data-autoplay="3000" data-loop="true">
-            <div class="item"><img src="/media/small_slides/bonus2_pse5GTh.png" alt="Бонус за регистрацию" height="249" width="250">
-              <div style="position: relative; top: -250px;">
-                <p style="padding-top: 140px;"><a class="promo__button" href="/register/">ЗАРЕГИСТРИРОВАТЬСЯ</a></p>
-              </div>
-            </div>
-            <div class="item"><a href="/contacts/"><img src="/media/small_slides/2.png" alt="24 часа" height="249" width="250"></a></div>
-            <div class="item"><a href="/certificates/"><img src="/media/small_slides/3.png" alt="Сертификаты" height="249" width="250"></a>
-              <div style="position: relative; top: -250px;"><a href="/certificates/"></a>
-                <p style="padding-top: 150px;"><a href="/certificates/"></a><a class="promo__button" href="/certificates/">КУПИТЬ</a></p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div class="delivery">
-          <div class="delivery__title">Как получить</div>
-          <div class="delivery__lst">
-            <dl class="delivery__item">
-              <dt class="delivery__label">Самовывоз:</dt>
-              <dd class="delivery__text"><br>                                        Ново-Вокзальная, 146а - ЧЕРЕЗ 1-3 ДНЯ<br>                                        пр. Металлургов, 81 - ЧЕРЕЗ 1-3 ДНЯ<br>                                        Московское шоссе, Лит.В - ЧЕРЕЗ 1-3 ДНЯ<br>                                        Гагарина, 48 - ЧЕРЕЗ 1-3 ДНЯ<br>                                        Авроры, 199 - ЧЕРЕЗ 1-3 ДНЯ</dd>
-            </dl>
-            <dl class="delivery__item">
-              <dt class="delivery__label">Курьером:</dt>
-              <dd class="delivery__text">от 200 руб, в удобное для Вас время</dd>
-            </dl>
-            <dl class="delivery__item">
-              <dt class="delivery__label">PickPoint</dt>
-              <dd class="delivery__text">от 220 руб, 1-5 дней</dd>
-            </dl>
-            <dl class="delivery__item">
-              <dt class="delivery__label">СДЭК</dt>
-              <dd class="delivery__text">по России, 3-6 дней</dd>
-            </dl>
-            <dl class="delivery__item">
-              <dt class="delivery__label">Почта России</dt>
-              <dd class="delivery__text">от 200 руб, 7-14 дней</dd>
-            </dl>
+            </article>
           </div>
         </div>
-        <div class="aside">
-          <div class="recent">
-            <div class="recent__title">НЕДАВНО ПРОСМОТРЕННЫЕ</div>
-            <div class="recent-slider teaser-list">
-              <div class="teaser"><a class="teaser__link" href="/catalog/product/stronic-g-nezhno-goluboj-4108873/"></a>
-                <div class="teaser__image"><img src="/media/cache/8d/09/8d0980a31e261b734add1bdd5705377d.jpg" alt="Нежно-голубой пульсатор с загнутым кончиком Stronic G - 20,8 см."></div>
-                <div class="teaser__title">Нежно-голубой пульсатор с заг...</div>
-                <div class="teaser__text">
-                  <p>Нежно-голубой водонепроницаемый пульсатор с загнутым кончиком Stronic G – силиконовая игрушка, которая не оставит вас равнодушной! Пульсатор нового поколения гарантиру...</p>
-                </div>
-                <div class="teaser__footer">
-                  <div class="teaser__price">15 900 <i class="rub"><span class="rouble">u</span></i></div><br><a class="teaser__cart add_to_cart" href="/catalog/cart/add/218623/"><span>КУПИТЬ</span></a>
+        <div class="left-col">
+          <section class="promo-slider">
+            <div class="fotorama" data-nav="dots" data-arrows="false" data-height="249" data-autoplay="3000" data-loop="true">
+              <div class="item"><img src="/media/small_slides/bonus2_pse5GTh.png" alt="Бонус за регистрацию" height="249" width="250">
+                <div style="position: relative; top: -250px;">
+                  <p style="padding-top: 140px;"><a class="promo__button" href="/register/">ЗАРЕГИСТРИРОВАТЬСЯ</a></p>
                 </div>
               </div>
-              <div class="teaser"><a class="teaser__link" href="/catalog/product/drop-nabor-iz-4-vaginalnyih-raznovesnyih--wy0540-gr/"></a>
-                <div class="teaser__image"><img src="/static/img/noimage.png" width="130" height="130"></div>
-                <div class="teaser__title">Набор из 4 вагинальных разнов...</div>
-                <div class="teaser__text">
-                  <p>Шарики вагинальные Stella разновесные в наборе</p>
-                </div>
-                <div class="teaser__footer">
-                  <div class="teaser__price">None <i class="rub"><span class="rouble">u</span></i></div><br><a class="teaser__cart add_to_cart" href="/catalog/cart/add/11317806/"><span>КУПИТЬ</span></a>
+              <div class="item"><a href="/contacts/"><img src="/media/small_slides/2.png" alt="24 часа" height="249" width="250"></a></div>
+              <div class="item"><a href="/certificates/"><img src="/media/small_slides/3.png" alt="Сертификаты" height="249" width="250"></a>
+                <div style="position: relative; top: -250px;"><a href="/certificates/"></a>
+                  <p style="padding-top: 150px;"><a href="/certificates/"></a><a class="promo__button" href="/certificates/">КУПИТЬ</a></p>
                 </div>
               </div>
-            </div><a class="recent__prev" rel="nofollow" target="_blank" href=""></a><a class="recent__next" rel="nofollow" target="_blank" href=""></a>
+            </div>
+          </section>
+          <div class="delivery">
+            <div class="delivery__title">Как получить</div>
+            <div class="delivery__lst">
+              <dl class="delivery__item">
+                <dt class="delivery__label">Самовывоз:</dt>
+                <dd class="delivery__text"><br>                                        Ново-Вокзальная, 146а - ЧЕРЕЗ 1-3 ДНЯ<br>                                        пр. Металлургов, 81 - ЧЕРЕЗ 1-3 ДНЯ<br>                                        Московское шоссе, Лит.В - ЧЕРЕЗ 1-3 ДНЯ<br>                                        Гагарина, 48 - ЧЕРЕЗ 1-3 ДНЯ<br>                                        Авроры, 199 - ЧЕРЕЗ 1-3 ДНЯ</dd>
+              </dl>
+              <dl class="delivery__item">
+                <dt class="delivery__label">Курьером:</dt>
+                <dd class="delivery__text">от 200 руб, в удобное для Вас время</dd>
+              </dl>
+              <dl class="delivery__item">
+                <dt class="delivery__label">PickPoint</dt>
+                <dd class="delivery__text">от 220 руб, 1-5 дней</dd>
+              </dl>
+              <dl class="delivery__item">
+                <dt class="delivery__label">СДЭК</dt>
+                <dd class="delivery__text">по России, 3-6 дней</dd>
+              </dl>
+              <dl class="delivery__item">
+                <dt class="delivery__label">Почта России</dt>
+                <dd class="delivery__text">от 200 руб, 7-14 дней</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="aside">
+            <div class="recent">
+              <div class="recent__title">НЕДАВНО ПРОСМОТРЕННЫЕ</div>
+              <div class="recent-slider teaser-list">
+                <div class="teaser"><a class="teaser__link" href="/catalog/product/stronic-g-nezhno-goluboj-4108873/"></a>
+                  <div class="teaser__image"><img src="/media/cache/8d/09/8d0980a31e261b734add1bdd5705377d.jpg" alt="Нежно-голубой пульсатор с загнутым кончиком Stronic G - 20,8 см."></div>
+                  <div class="teaser__title">Нежно-голубой пульсатор с заг...</div>
+                  <div class="teaser__text">
+                    <p>Нежно-голубой водонепроницаемый пульсатор с загнутым кончиком Stronic G – силиконовая игрушка, которая не оставит вас равнодушной! Пульсатор нового поколения гарантиру...</p>
+                  </div>
+                  <div class="teaser__footer">
+                    <div class="teaser__price">15 900 <i class="rub"><span class="rouble">u</span></i></div><br><a class="teaser__cart add_to_cart" href="/catalog/cart/add/218623/"><span>КУПИТЬ</span></a>
+                  </div>
+                </div>
+                <div class="teaser"><a class="teaser__link" href="/catalog/product/drop-nabor-iz-4-vaginalnyih-raznovesnyih--wy0540-gr/"></a>
+                  <div class="teaser__image"><img src="/static/img/noimage.png" width="130" height="130"></div>
+                  <div class="teaser__title">Набор из 4 вагинальных разнов...</div>
+                  <div class="teaser__text">
+                    <p>Шарики вагинальные Stella разновесные в наборе</p>
+                  </div>
+                  <div class="teaser__footer">
+                    <div class="teaser__price">None <i class="rub"><span class="rouble">u</span></i></div><br><a class="teaser__cart add_to_cart" href="/catalog/cart/add/11317806/"><span>КУПИТЬ</span></a>
+                  </div>
+                </div>
+              </div><a class="recent__prev" rel="nofollow" target="_blank" href=""></a><a class="recent__next" rel="nofollow" target="_blank" href=""></a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <footer class="new-footer new-footer-type-standart">
-      <div class="new-footer__top">
-        <div class="new-footer__ad">Получай бонусы за покупки и оплачивай ими следующий заказ — <a class="new-footer__link" href="/bonus/">подробнее о бонусной программе</a></div>
+      <!--новый блок-->
+      <div class="footer-topline">
+        <div class="container footer-topline__container">
+          <form class="footer-topline__form" action="#">
+            <input class="footer-topline__input" type="email" placeholder="E-mail">
+            <button class="new-button-type-fill footer-topline__button">Оформить</button>
+          </form>
+          <h5 class="footer-topline__title">Если скрыть форму, текст просто <a href="#">растянется </a>на ширину всей полосы. (можно проверить через консоль)</h5>
+        </div>
       </div>
-      <div class="new-footer__center">
+      <!--.new-footer__top
+      .container
+        .new-footer__ad
+          | Получай бонусы за покупки и оплачивай ими следующий заказ — 
+          a.new-footer__link(href='/bonus/') подробнее о бонусной программе
+      -->
+      <div class="new-footer__center container">
         <div class="new-footer__contacts"><a class="new-phone new-footer__phone" rel="nofollow" target="_blank" href="tel:+7 (846) 300-44-49">
             <svg class="new-phone__svg">
               <use xlink:href="#phoneIcon"></use>
             </svg> +7 (846) 300-44-49</a><a class="new-mail new-footer__mail" href="/feedback/feedback/">
             <svg class="new-mail__svg">
               <use xlink:href="#mailIcon"></use>
-            </svg> Написать нам</a><span class="new-social__title">Соцсети:</span>
-          <p><a class="vk" rel="nofollow" target="_blank" href="http://vk.com/club22731393"><img src="/static/svg/vk.svg" alt="vk"></a><a class="vk" rel="nofollow" target="_blank" href="https://www.instagram.com/bunnyloveru/"><img src="/static/svg/inst.svg" alt="instagram" width="30" height="30"></a></p>
+            </svg> Написать нам</a>
+          <!--соц сети-->
+          <div class="footer-socials"> <span class="footer-socials__title">Соцсети:</span>
+            <ul class="footer-socials__list">
+              <li class="footer-socials__item"><a class="footer-socials__link" href="#"><img src="/static/svg/vk.svg" alt="vk"></a></li>
+              <li class="footer-socials__item"><a class="footer-socials__link" href="#"><img src="/static/svg/inst.svg" alt="instagram"></a></li>
+            </ul>
+          </div>
         </div>
         <div class="new-footer__shell">
           <div class="new-dropdown new-footer__dropdown">
@@ -1275,7 +1289,7 @@
           </div>
         </div>
       </div>
-      <div class="new-footer__bottom"><a class="new-footer__copy" rel="nofollow" target="_blank" href="http://fancymedia.ru/">Разработка сайта — <span class="new-footer__span">fancymedia</span></a>
+      <div class="new-footer__bottom container"><a class="new-footer__copy" rel="nofollow" target="_blank" href="http://fancymedia.ru/">Разработка сайта — <span class="new-footer__span">fancymedia</span></a>
         <div class="new-footer__payments">
           <div class="new-footer__payment">
             <svg class="new-footer__svg new-footer__svg-type-visa">
@@ -1298,7 +1312,7 @@
       <div class="js-helper-module__container">
         <!--section-->
         <div class="js-helper-module__section"><span class="js-helper-module__section-title">Страницы:</span>
-          <div class="js-helper-module__section-content"><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/index.html">Главная</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/search.html">Поиск-выдача</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar.html">Карточка товара</a></div>
+          <div class="js-helper-module__section-content"><a class="js-helper-module__section-button" href="http://localhost:9000/index.html">Главная</a><a class="js-helper-module__section-button" href="http://localhost:9000/search.html">Поиск-выдача</a><a class="js-helper-module__section-button" href="http://localhost:9000/tovar.html">Карточка товара</a><a class="js-helper-module__section-button" href="http://localhost:9000/articles.html">Статьи</a><a class="js-helper-module__section-button" href="http://localhost:9000/article.html">Статья</a></div>
         </div>
       </div>
     </div>
@@ -1629,8 +1643,8 @@
       
     </script>
     <!--helper (preview only)-->
-    <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/js/js-helper.min.js"></script>
+    <script type="text/javascript" src="http://localhost:9000/js/js-helper.min.js"></script>
     <!--new-->
-    <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/js/new.js"></script>
+    <script type="text/javascript" src="http://localhost:9000/js/new.js"></script>
   </body>
 </html>

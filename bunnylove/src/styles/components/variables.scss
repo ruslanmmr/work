@@ -1,0 +1,21 @@
+$trs1: .25s ease-out;
+$trs2: .5s ease-out;
+$trs3: 1s ease-out;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px
+);
+
+@import "./bootstrap-4.5.2/functions";
+@import "./bootstrap-4.5.2/variables";
+@import "./bootstrap-4.5.2/mixins/breakpoints";
