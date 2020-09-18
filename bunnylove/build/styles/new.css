@@ -216,9 +216,11 @@
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.1);
-    padding: 0 29px;
+    padding: 13px 29px;
+    line-height: 20px;
     flex: 1 1 100%;
-    color: #fff; }
+    color: #fff;
+    font-size: 0.875rem; }
   .footer-topline__button {
     flex: 0 0 170px;
     margin-left: 15px; }
@@ -252,7 +254,7 @@
     .footer-topline__input {
       display: block;
       width: 100%;
-      padding: 0 20px; }
+      padding: 13px 20px; }
     .footer-topline__button {
       margin: 15px 0 0 0;
       width: 100%;
