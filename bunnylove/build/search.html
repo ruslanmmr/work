@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet">
     <link href="/static/fonts/webfontkit/fonts.css" rel="stylesheet">
+    <link href="/static/css/fotorama.css" rel="stylesheet">
+    <link href="/static/css/jquery.fancybox.css" rel="stylesheet">
     <!--просто вырезал из этого файла старые bootstrap стили, можно вырезать его и пересобрать если он на sass собран-->
     <link href="https://ruslanmmr.github.io/work/bunnylove/build/styles/styles.css" rel="stylesheet">
     <!--добавлена сетка бутстрап-->
@@ -36,7 +38,7 @@
       <div class="new-mobileMenu new-header__mobileMenu" data-action="menuWrapper">
         <div class="new-mobileMenu__shell">
           <div class="new-mobileMenu__top">
-            <div class="new-console new-mobileMenu__console">
+            <div class="new-console new-mobileMenu__console container">
               <button class="new-header__close" data-action="closeButton"></button>
               <button class="new-button new-console__button">
                 <svg class="new-console__icon new-console__icon-type-cabinet">
@@ -49,13 +51,15 @@
                 <svg class="new-console__icon new-console__icon-type-bag">
                   <use xlink:href="#bagIcon"></use>
                 </svg>Корзина<span class="new-console__count cart_count">0</span></a>
-            </div><a class="new-phone new-header__phone new-header__phone-icon-phone" href="tel:+7 (846) 300-44-49">
-              <svg class="new-phone__img new-phone__img-icon-phone">
-                <use xlink:href="#phoneIcon"></use>
-              </svg>+7 (846) 300-44-49</a><a class="new-button new-button-icon-callback modals" id="link_call_me_back_modal" data-modal-id="call_me_back_modal" href="/feedback/" title="Заказать обратный звонок">
-              <svg class="new-button__icon-type-callback">
-                <use xlink:href="#callbackIcon"></use>
-              </svg></a>
+            </div>
+            <!--доабвил обертку new-mobileMenu__contact-->
+            <div class="new-mobileMenu__contact container"><a class="new-phone new-header__phone new-header__phone-icon-phone" href="tel:+7 (846) 300-44-49">
+                <svg class="new-phone__img new-phone__img-icon-phone">
+                  <use xlink:href="#phoneIcon"></use>
+                </svg>+7 (846) 300-44-49</a><a class="new-button new-button-icon-callback modals" id="link_call_me_back_modal" data-modal-id="call_me_back_modal" href="/feedback/" title="Заказать обратный звонок">
+                <svg class="new-button__icon-type-callback">
+                  <use xlink:href="#callbackIcon"></use>
+                </svg></a></div>
           </div>
           <button class="new-button new-mobileMenu__cityButton" data-action="mobileCityButton">
             <svg class="new-button__icon-type-city">
@@ -68,7 +72,7 @@
               <button class="new-button new-button-type-city" data-action="cityLink"><a href="//kazan.bunnylove.ru/">Казань</a></button>
             </div>
           </div>
-          <div class="new-mobileMenu__form">
+          <div class="new-mobileMenu__form container">
             <form class="new-search new-search-type-standart new-search-type-mobileMenu" method="GET" action="/catalog/search/">
               <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
               <button class="new-search__submit" type="submit">
@@ -78,7 +82,7 @@
               </button>
             </form>
           </div>
-          <div class="new-header__bottom new-header__bottom-type-mobileMenu">
+          <div class="new-header__bottom new-header__bottom-type-mobileMenu container">
             <div class="new-tabs new-header__tabs">
               <div class="new-tabs__panel new-tabs__panel-type-mobileMenu">
                 <button class="new-tabs__link" data-action="tab"><span class="new-tabs__frame">
@@ -138,7 +142,7 @@
               </div>
             </div>
           </div>
-          <nav class="new-nav new-header__nav-type-mobileMenu"><a class="new-nav__link-type-mobileMenu nav__about" href="/about/">О нас</a><a class="new-nav__link-type-mobileMenu nav__pay" href="/pay/">Оплата</a><a class="new-nav__link-type-mobileMenu nav__delivery" href="/delivery/">Доставка</a><a class="new-nav__link-type-mobileMenu nav__faq" href="/faq/">Вопросы</a><a class="new-nav__link-type-mobileMenu nav__bonus" href="/bonus/">Бонусная программа</a><a class="new-nav__link-type-mobileMenu nav__contacts" href="/contacts/">Контакты</a></nav><a class="new-button new-button-icon-cake" href="/certificates/">
+          <nav class="new-nav new-header__nav-type-mobileMenu container"><a class="new-nav__link-type-mobileMenu nav__about" href="/about/">О нас</a><a class="new-nav__link-type-mobileMenu nav__pay" href="/pay/">Оплата</a><a class="new-nav__link-type-mobileMenu nav__delivery" href="/delivery/">Доставка</a><a class="new-nav__link-type-mobileMenu nav__faq" href="/faq/">Вопросы</a><a class="new-nav__link-type-mobileMenu nav__bonus" href="/bonus/">Бонусная программа</a><a class="new-nav__link-type-mobileMenu nav__contacts" href="/contacts/">Контакты</a></nav><a class="new-button new-button-icon-cake" href="/certificates/">
             <svg class="new-phone__img new-phone__img-icon-phone">
               <use xlink:href="#giftIcon"></use>
             </svg>Подарочные сертификаты</a>
@@ -656,7 +660,7 @@
       <div class="js-helper-module__container">
         <!--section-->
         <div class="js-helper-module__section"><span class="js-helper-module__section-title">Страницы:</span>
-          <div class="js-helper-module__section-content"><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/index.html">Главная</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/search.html">Поиск-выдача</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar.html">Карточка товара</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/articles.html">Статьи</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/article.html">Статья</a></div>
+          <div class="js-helper-module__section-content"><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/index.html">Главная</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/search.html">Поиск-выдача</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar.html">Карточка товара</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar-preview.html">Превью товара</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/articles.html">Статьи</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/article.html">Статья</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/contacts.html">Контакты</a></div>
         </div>
       </div>
     </div>

@@ -287,69 +287,31 @@ block content
           .new-slider.new-tabs__slider(data-action='noveltySlider')
             p По Вашему запросу товаров не найдено.
           a.new-button.new-button-type-empty(href='/catalog/tabs/all/new/') Все новинки
+  
+
+
+
+
+
     .new-content.new-content-type-halve
       section.new-weekly.new-weekly-type-standart.new-weekly-theme-dark
         h2.new-weekly__title Товары недели
         .new-slider.new-weekly__slider(data-action='weeklySlider')
+          //Заменить title на h4
+          //slide
           a.new-weekItem.new-slider__weekItem(href='/catalog/product/dildo-comet-pearl-biryuzovyij-8070-05/')
-            p.new-weekItem__title Фаллоимитатор Comet Pearl
+            h4.new-weekItem__title Фаллоимитатор Comet Pearl
             .new-weekItem__shell
               .new-weekItem__left
                 img.new-weekItem__img(src='/media/cache/8a/01/8a010e2b6d68033dba0e2e822b407abc.jpg', alt='Фаллоимитатор Comet Pearl')
-              .new-weekItem__right
-                p.new-weekItem__priceBlock
-                  span.new-weekItem__price.new-weekItem__price-type-old
-                    | 5 690
-                    span.new-weekItem__currency ₽
-                  span.new-weekItem__price
-                    | 2 845
-                    span.new-weekItem__currency ₽
-                p.new-weekItem__text
-                  | Нереалистичный фаллоимитатор эргономично изогнутой формы для стимуляции точки G, рабочая длина 13 см
+          //slide
           a.new-weekItem.new-slider__weekItem(href='/catalog/product/11131--admini-trigger-vibrostimulyator--11131/')
-            p.new-weekItem__title Вибратор Mini Trigger
+            h4.new-weekItem__title Вибратор Mini Trigger
             .new-weekItem__shell
               .new-weekItem__left
                 img.new-weekItem__img(src='/media/cache/fe/42/fe4254bf69647d49bf7566e1eee1dc73.jpg', alt='Вибратор Mini Trigger')
-              .new-weekItem__right
-                p.new-weekItem__priceBlock
-                  span.new-weekItem__price.new-weekItem__price-type-old
-                    | 8 940
-                    span.new-weekItem__currency ₽
-                  span.new-weekItem__price
-                    | 6 258
-                    span.new-weekItem__currency ₽
-                p.new-weekItem__text
-                  | Водонепроницаемый вибратор с рельефным изогнутым стволом и клиторальым стимулятором, рабочая длина-9 см, длина стимулятора-5,5 см
-          a.new-weekItem.new-slider__weekItem(href='/catalog/product/bi-014623--vakuumnyij-vibrostimulyator-klitora--bi-014623/')
-            p.new-weekItem__title Вакуумный вибростимулятор клитора Hammer
-            .new-weekItem__shell
-              .new-weekItem__left
-                img.new-weekItem__img(src='/media/cache/c6/23/c6230bfb640f295ba262bd562d5918b9.jpg', alt='Вакуумный вибростимулятор клитора Hammer')
-              .new-weekItem__right
-                p.new-weekItem__priceBlock
-                  span.new-weekItem__price.new-weekItem__price-type-old
-                    | 6 990
-                    span.new-weekItem__currency ₽
-                  span.new-weekItem__price
-                    | 4 893
-                    span.new-weekItem__currency ₽
-                p.new-weekItem__text
-                  | Многофункциональный двухсторонний вибратор Hammer с функцией вакуумной стимуляции идеален для клиторального использования!  Одна сторона игрушки предназначена для стимуляции клитора с помощью 7 вакуумных функций, а вторая сторона вибрирует в 7 режимах и гарантирует деликатный эротический массаж клитора
-          a.new-weekItem.new-slider__weekItem(href='/catalog/product/romp-shine-beskontaktnyij-klitoralnyij-stimulyator-rpstsg3/')
-            p.new-weekItem__title Бесконтактный клиторальный стимулятор Romp Shine
-            .new-weekItem__shell
-              .new-weekItem__left
-                img.new-weekItem__img(src='/media/cache/94/f0/94f0a0b0b3c129ac68d6a898a17f0588.jpg', alt='Бесконтактный клиторальный стимулятор Romp Shine')
-              .new-weekItem__right
-                p.new-weekItem__priceBlock
-                  span.new-weekItem__price.new-weekItem__price-type-old
-                    | 6 980
-                    span.new-weekItem__currency ₽
-                  span.new-weekItem__price
-                    | 5 584
-                    span.new-weekItem__currency ₽
-                p.new-weekItem__text Вакуум-волновой стимулятор клитора с технологией Pleasure Air
+      
+          
       section.new-content__advert.new-advert
         picture.new-advert__img
           img.new-advert__img(src='/media/frontpage_bnrs/flower-image.jpg')
@@ -448,6 +410,19 @@ block content
           .new-accordion__shell(data-action='accordionShell')
             p
               | Мы разработали выгодную бонусную систему, постоянно проводим акции, распродажи и розыгрыши в соцсетях. Для постоянных клиентов действуют персональные цены
+    
+    //новый блок
+    section.section.container
+      h2.section__title.section__title_type-2
+        a(href="#") BUNNYBLOG
+      .slider.slider_grid.slider_dots.blog-slider.row
+        include blocks/blocks
+        +news-item('https://bunnylove.ru/media/article/teaser/bunny_bdsm.jpg', 'news-item-card_color-1 col', 'Выбор вибратора')
+        +news-item('', 'news-item-card_color-2 col', 'Как не нужно делать')
+        +news-item('https://bunnylove.ru/media/article/teaser/bunny_vibr.jpg', 'news-item-card_color-1 col', '12 правил безопасного анального секса')
+
+
+    
     .new-blog.new-blog-type-standart
       h2.new-blog__title Bunnyblog
       .new-blog__shell

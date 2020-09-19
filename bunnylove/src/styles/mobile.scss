@@ -176,7 +176,7 @@ nav.menu .close
     padding: 12px 0 9px;
     display:block;
 }
-@media screen and (max-width:768px)
+@media screen and (max-width:767px)
 {
     body {
         margin-top: 56px;
@@ -549,27 +549,6 @@ nav.menu .close
         padding-left: 0px;
     }
     
-    .related_products_mobile .bx-next{
-        background-image: url(https://bunnylove.ru/static/svg/arrow_grey.svg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        -moz-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-    }
-    
-    .related_products_mobile .bx-prev{
-        background-image: url(https://bunnylove.ru/static/svg/arrow_grey.svg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-    
-    .related_products_mobile .bx-wrapper .bx-next:hover{
-        background-position: center center;
-    }
 
     .recent .bx-wrapper {
         height: 255px;
@@ -1551,35 +1530,9 @@ nav.menu .close
 	{
 		width: 100%;
 	}
-	.contacts__map
-	{
-		margin: 20px 0;
-		width: 100%!important;
-	}
-	.contacts__map>ymaps
-	{
-		width: 100%!important;
-	}
-	.contacts__col
-	{
-		border-bottom: 1px solid #ccc;
-		float: none;
-		margin-bottom: 50px;
-		margin-right: 0!important;
-		padding-bottom: 20px;
-		width: 100%;
-	}
 	.modal.-auth,.modal.-regs
 	{
 		width: 100%!important;
-	}
-	.contacts__title
-	{
-		text-align: center;
-	}
-	.contacts__col .contacts-photos-wrapper
-	{
-		width: auto;
 	}
 	.news-list .new
 	{
@@ -1617,7 +1570,7 @@ nav.menu .close
 		text-align: center!important;
 	}
 }
-@media screen and (max-width:768px)
+@media screen and (max-width:767px)
 {
 	.back-to-top
 	{

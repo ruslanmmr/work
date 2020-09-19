@@ -263,10 +263,6 @@ header.new-header {
   color: #212121;
 }
 
-.new-fastBuy__info {
-  width: 100%;
-}
-
 .post img {
   height: 100%;
 }
@@ -600,9 +596,6 @@ header.new-header {
   }
 }
 @include media-breakpoint-up(xl) {
-  .new-weekly__title {
-      padding-top: 20px
-  }
   .new-card-type-catalog:hover .new-card__explanation {
       padding-top: 290px;
   }

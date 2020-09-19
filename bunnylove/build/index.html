@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet">
     <link href="/static/fonts/webfontkit/fonts.css" rel="stylesheet">
+    <link href="/static/css/fotorama.css" rel="stylesheet">
+    <link href="/static/css/jquery.fancybox.css" rel="stylesheet">
     <!--просто вырезал из этого файла старые bootstrap стили, можно вырезать его и пересобрать если он на sass собран-->
     <link href="https://ruslanmmr.github.io/work/bunnylove/build/styles/styles.css" rel="stylesheet">
     <!--добавлена сетка бутстрап-->
@@ -36,7 +38,7 @@
       <div class="new-mobileMenu new-header__mobileMenu" data-action="menuWrapper">
         <div class="new-mobileMenu__shell">
           <div class="new-mobileMenu__top">
-            <div class="new-console new-mobileMenu__console">
+            <div class="new-console new-mobileMenu__console container">
               <button class="new-header__close" data-action="closeButton"></button>
               <button class="new-button new-console__button">
                 <svg class="new-console__icon new-console__icon-type-cabinet">
@@ -49,13 +51,15 @@
                 <svg class="new-console__icon new-console__icon-type-bag">
                   <use xlink:href="#bagIcon"></use>
                 </svg>Корзина<span class="new-console__count cart_count">0</span></a>
-            </div><a class="new-phone new-header__phone new-header__phone-icon-phone" href="tel:+7 (846) 300-44-49">
-              <svg class="new-phone__img new-phone__img-icon-phone">
-                <use xlink:href="#phoneIcon"></use>
-              </svg>+7 (846) 300-44-49</a><a class="new-button new-button-icon-callback modals" id="link_call_me_back_modal" data-modal-id="call_me_back_modal" href="/feedback/" title="Заказать обратный звонок">
-              <svg class="new-button__icon-type-callback">
-                <use xlink:href="#callbackIcon"></use>
-              </svg></a>
+            </div>
+            <!--доабвил обертку new-mobileMenu__contact-->
+            <div class="new-mobileMenu__contact container"><a class="new-phone new-header__phone new-header__phone-icon-phone" href="tel:+7 (846) 300-44-49">
+                <svg class="new-phone__img new-phone__img-icon-phone">
+                  <use xlink:href="#phoneIcon"></use>
+                </svg>+7 (846) 300-44-49</a><a class="new-button new-button-icon-callback modals" id="link_call_me_back_modal" data-modal-id="call_me_back_modal" href="/feedback/" title="Заказать обратный звонок">
+                <svg class="new-button__icon-type-callback">
+                  <use xlink:href="#callbackIcon"></use>
+                </svg></a></div>
           </div>
           <button class="new-button new-mobileMenu__cityButton" data-action="mobileCityButton">
             <svg class="new-button__icon-type-city">
@@ -68,7 +72,7 @@
               <button class="new-button new-button-type-city" data-action="cityLink"><a href="//kazan.bunnylove.ru/">Казань</a></button>
             </div>
           </div>
-          <div class="new-mobileMenu__form">
+          <div class="new-mobileMenu__form container">
             <form class="new-search new-search-type-standart new-search-type-mobileMenu" method="GET" action="/catalog/search/">
               <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
               <button class="new-search__submit" type="submit">
@@ -78,7 +82,7 @@
               </button>
             </form>
           </div>
-          <div class="new-header__bottom new-header__bottom-type-mobileMenu">
+          <div class="new-header__bottom new-header__bottom-type-mobileMenu container">
             <div class="new-tabs new-header__tabs">
               <div class="new-tabs__panel new-tabs__panel-type-mobileMenu">
                 <button class="new-tabs__link" data-action="tab"><span class="new-tabs__frame">
@@ -138,7 +142,7 @@
               </div>
             </div>
           </div>
-          <nav class="new-nav new-header__nav-type-mobileMenu"><a class="new-nav__link-type-mobileMenu nav__about" href="/about/">О нас</a><a class="new-nav__link-type-mobileMenu nav__pay" href="/pay/">Оплата</a><a class="new-nav__link-type-mobileMenu nav__delivery" href="/delivery/">Доставка</a><a class="new-nav__link-type-mobileMenu nav__faq" href="/faq/">Вопросы</a><a class="new-nav__link-type-mobileMenu nav__bonus" href="/bonus/">Бонусная программа</a><a class="new-nav__link-type-mobileMenu nav__contacts" href="/contacts/">Контакты</a></nav><a class="new-button new-button-icon-cake" href="/certificates/">
+          <nav class="new-nav new-header__nav-type-mobileMenu container"><a class="new-nav__link-type-mobileMenu nav__about" href="/about/">О нас</a><a class="new-nav__link-type-mobileMenu nav__pay" href="/pay/">Оплата</a><a class="new-nav__link-type-mobileMenu nav__delivery" href="/delivery/">Доставка</a><a class="new-nav__link-type-mobileMenu nav__faq" href="/faq/">Вопросы</a><a class="new-nav__link-type-mobileMenu nav__bonus" href="/bonus/">Бонусная программа</a><a class="new-nav__link-type-mobileMenu nav__contacts" href="/contacts/">Контакты</a></nav><a class="new-button new-button-icon-cake" href="/certificates/">
             <svg class="new-phone__img new-phone__img-icon-phone">
               <use xlink:href="#giftIcon"></use>
             </svg>Подарочные сертификаты</a>
@@ -683,39 +687,19 @@
         <div class="new-content new-content-type-halve">
           <section class="new-weekly new-weekly-type-standart new-weekly-theme-dark">
             <h2 class="new-weekly__title">Товары недели</h2>
-            <div class="new-slider new-weekly__slider" data-action="weeklySlider"><a class="new-weekItem new-slider__weekItem" href="/catalog/product/dildo-comet-pearl-biryuzovyij-8070-05/">
-                <p class="new-weekItem__title">Фаллоимитатор Comet Pearl</p>
+            <div class="new-slider new-weekly__slider" data-action="weeklySlider">
+              <!--Заменить title на h4-->
+              <!--slide--><a class="new-weekItem new-slider__weekItem" href="/catalog/product/dildo-comet-pearl-biryuzovyij-8070-05/">
+                <h4 class="new-weekItem__title">Фаллоимитатор Comet Pearl</h4>
                 <div class="new-weekItem__shell">
                   <div class="new-weekItem__left"><img class="new-weekItem__img" src="/media/cache/8a/01/8a010e2b6d68033dba0e2e822b407abc.jpg" alt="Фаллоимитатор Comet Pearl"></div>
-                  <div class="new-weekItem__right">
-                    <p class="new-weekItem__priceBlock"><span class="new-weekItem__price new-weekItem__price-type-old">5 690<span class="new-weekItem__currency">₽</span></span><span class="new-weekItem__price">2 845<span class="new-weekItem__currency">₽</span></span></p>
-                    <p class="new-weekItem__text">Нереалистичный фаллоимитатор эргономично изогнутой формы для стимуляции точки G, рабочая длина 13 см</p>
-                  </div>
-                </div></a><a class="new-weekItem new-slider__weekItem" href="/catalog/product/11131--admini-trigger-vibrostimulyator--11131/">
-                <p class="new-weekItem__title">Вибратор Mini Trigger</p>
+                </div></a>
+              <!--slide--><a class="new-weekItem new-slider__weekItem" href="/catalog/product/11131--admini-trigger-vibrostimulyator--11131/">
+                <h4 class="new-weekItem__title">Вибратор Mini Trigger</h4>
                 <div class="new-weekItem__shell">
                   <div class="new-weekItem__left"><img class="new-weekItem__img" src="/media/cache/fe/42/fe4254bf69647d49bf7566e1eee1dc73.jpg" alt="Вибратор Mini Trigger"></div>
-                  <div class="new-weekItem__right">
-                    <p class="new-weekItem__priceBlock"><span class="new-weekItem__price new-weekItem__price-type-old">8 940<span class="new-weekItem__currency">₽</span></span><span class="new-weekItem__price">6 258<span class="new-weekItem__currency">₽</span></span></p>
-                    <p class="new-weekItem__text">Водонепроницаемый вибратор с рельефным изогнутым стволом и клиторальым стимулятором, рабочая длина-9 см, длина стимулятора-5,5 см</p>
-                  </div>
-                </div></a><a class="new-weekItem new-slider__weekItem" href="/catalog/product/bi-014623--vakuumnyij-vibrostimulyator-klitora--bi-014623/">
-                <p class="new-weekItem__title">Вакуумный вибростимулятор клитора Hammer</p>
-                <div class="new-weekItem__shell">
-                  <div class="new-weekItem__left"><img class="new-weekItem__img" src="/media/cache/c6/23/c6230bfb640f295ba262bd562d5918b9.jpg" alt="Вакуумный вибростимулятор клитора Hammer"></div>
-                  <div class="new-weekItem__right">
-                    <p class="new-weekItem__priceBlock"><span class="new-weekItem__price new-weekItem__price-type-old">6 990<span class="new-weekItem__currency">₽</span></span><span class="new-weekItem__price">4 893<span class="new-weekItem__currency">₽</span></span></p>
-                    <p class="new-weekItem__text">Многофункциональный двухсторонний вибратор Hammer с функцией вакуумной стимуляции идеален для клиторального использования!  Одна сторона игрушки предназначена для стимуляции клитора с помощью 7 вакуумных функций, а вторая сторона вибрирует в 7 режимах и гарантирует деликатный эротический массаж клитора</p>
-                  </div>
-                </div></a><a class="new-weekItem new-slider__weekItem" href="/catalog/product/romp-shine-beskontaktnyij-klitoralnyij-stimulyator-rpstsg3/">
-                <p class="new-weekItem__title">Бесконтактный клиторальный стимулятор Romp Shine</p>
-                <div class="new-weekItem__shell">
-                  <div class="new-weekItem__left"><img class="new-weekItem__img" src="/media/cache/94/f0/94f0a0b0b3c129ac68d6a898a17f0588.jpg" alt="Бесконтактный клиторальный стимулятор Romp Shine"></div>
-                  <div class="new-weekItem__right">
-                    <p class="new-weekItem__priceBlock"><span class="new-weekItem__price new-weekItem__price-type-old">6 980<span class="new-weekItem__currency">₽</span></span><span class="new-weekItem__price">5 584<span class="new-weekItem__currency">₽</span></span></p>
-                    <p class="new-weekItem__text">Вакуум-волновой стимулятор клитора с технологией Pleasure Air</p>
-                  </div>
-                </div></a></div>
+                </div></a>
+            </div>
           </section>
           <section class="new-content__advert new-advert">
             <picture class="new-advert__img"><img class="new-advert__img" src="/media/frontpage_bnrs/flower-image.jpg"></picture>
@@ -804,6 +788,29 @@
                 <p>Мы разработали выгодную бонусную систему, постоянно проводим акции, распродажи и розыгрыши в соцсетях. Для постоянных клиентов действуют персональные цены</p>
               </div>
             </div>
+          </div>
+        </section>
+        <!--новый блок-->
+        <section class="section container">
+          <h2 class="section__title section__title_type-2"><a href="#">BUNNYBLOG</a></h2>
+          <div class="slider slider_grid slider_dots blog-slider row">
+                        <div class="news-item-card news-item-card_color-1 col"><a class="news-item-card__container" href="#">
+                            <div class="news-item-card__image"><img src="https://bunnylove.ru/media/article/teaser/bunny_bdsm.jpg" alt="image"></div>
+                            <div class="news-item-card__content"><span class="news-item-card__date">25 марта 2020</span>
+                              <h2 class="news-item-card__title">Выбор вибратора</h2>
+                              <p class="news-item-card__text"></p>
+                            </div></a></div>
+                        <div class="news-item-card news-item-card_color-2 col"><a class="news-item-card__container" href="#">
+                            <div class="news-item-card__content"><span class="news-item-card__date">25 марта 2020</span>
+                              <h2 class="news-item-card__title">Как не нужно делать</h2>
+                              <p class="news-item-card__text"></p>
+                            </div></a></div>
+                        <div class="news-item-card news-item-card_color-1 col"><a class="news-item-card__container" href="#">
+                            <div class="news-item-card__image"><img src="https://bunnylove.ru/media/article/teaser/bunny_vibr.jpg" alt="image"></div>
+                            <div class="news-item-card__content"><span class="news-item-card__date">25 марта 2020</span>
+                              <h2 class="news-item-card__title">12 правил безопасного анального секса</h2>
+                              <p class="news-item-card__text"></p>
+                            </div></a></div>
           </div>
         </section>
         <div class="new-blog new-blog-type-standart">
@@ -923,7 +930,7 @@
       <div class="js-helper-module__container">
         <!--section-->
         <div class="js-helper-module__section"><span class="js-helper-module__section-title">Страницы:</span>
-          <div class="js-helper-module__section-content"><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/index.html">Главная</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/search.html">Поиск-выдача</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar.html">Карточка товара</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/articles.html">Статьи</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/article.html">Статья</a></div>
+          <div class="js-helper-module__section-content"><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/index.html">Главная</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/search.html">Поиск-выдача</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar.html">Карточка товара</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar-preview.html">Превью товара</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/articles.html">Статьи</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/article.html">Статья</a><a class="js-helper-module__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/contacts.html">Контакты</a></div>
         </div>
       </div>
     </div>

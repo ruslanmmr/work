@@ -1,0 +1,86 @@
+extends layout/layout
+block content 
+  include blocks/breadcrumbs
+  .container
+    section.section.contacts
+      h1.section__title Контакты
+      .row
+        .col-xl-9.col-lg-8.col-md-7
+          .contacts__map
+            iframe(src="https://yandex.ru/map-widget/v1/-/CCQx7GdCcD")
+        .contacts-info.col-xl-3.col-lg-4.col-md-5
+          img(src=href+"/img/truck.svg", alt="ico").contacts-info__icon
+          h6.contacts-info__title Курьерская доставка осуществляется круглосуточно
+          ul.contacts-info__list
+            li.contacts-info__item
+              img(src="https://bunnylove.ru/static/svg/vk.svg", alt="icon")
+              span
+                | Группа 
+                a(href="#" rel='nofollow' target='_blank') Вконтакте
+            li.contacts-info__item
+              img(src="https://bunnylove.ru/static/svg/inst.svg", alt="icon")
+              span
+                | Instagram  
+                a(href="#" rel='nofollow' target='_blank') bunnyloveru
+            li.contacts-info__item
+              svg.contacts-info__item-mail-icon
+                use(xlink:href='#mailIcon')
+              span
+                | E-mail:   
+                a(rel='nofollow', target='_blank', href='mailto:info@bunnylove.ru') info@bunnylove.ru
+      .contacts__blocks
+        .row
+          -var order = 0;
+          mixin contacts-block(title)
+            -order++
+            .contacts-block.col-lg-4.col-md-6
+              .contacts-block__container
+                h5.contacts-block__title=title
+                ul.contacts-block__list 
+                  li.contacts-block__item
+                    svg.icon
+                      use(xlink:href='#ico-point')
+                    .contacts-block__item-content
+                      p
+                        strong  г. Самара, пр. Металлургов, 81
+                      p (напротив ТОЦ "СкалаХолл" и магазина "Золотое яблоко")
+                  li.contacts-block__item
+                    svg.icon
+                      use(xlink:href='#ico-phone')
+                    .contacts-block__item-content
+                      p 
+                        strong тел. 8(800) 333-53-49
+                      p 
+                        strong тел. 8(800) 333-53-49
+                  li.contacts-block__item
+                    svg.icon
+                      use(xlink:href='#ico-time')
+                    .contacts-block__item-content
+                      p 
+                        strong Время работы магазина<br> — c 10:00 до 22:00
+                .contacts-block__gallery
+                  a.fancybox(href="https://bunnylove.ru/media/shop_images/IMG_0901.JPG" rel=order)
+                    img(src="https://bunnylove.ru/media/shop_images/IMG_0901.JPG", alt="image")
+                  a.fancybox(href="https://bunnylove.ru/media/shop_images/IMG_0903.JPG" rel=order)
+                    img(src="https://bunnylove.ru/media/shop_images/IMG_0903.JPG", alt="image")
+                  a.fancybox(href="https://bunnylove.ru/media/shop_images/FullSizeRender1_X2bbrgq.jpg" rel=order)
+                    img(src="https://bunnylove.ru/media/shop_images/FullSizeRender1_X2bbrgq.jpg", alt="image")
+                .contacts-block__label 3 фото
+
+          +contacts-block('Ново-Вокзальная, 146а')
+          +contacts-block('ПР. МЕТАЛЛУРГОВ, 81')
+          +contacts-block('МОСКОВСКОЕ ШОССЕ, ЛИТ.В')
+          +contacts-block('ПР. МЕТАЛЛУРГОВ, 81')
+          +contacts-block('МОСКОВСКОЕ ШОССЕ, ЛИТ.В')
+
+
+
+      svg.hidden(width='0', height='0', style='position:absolute;')
+        symbol#ico-phone(xmlns='http://www.w3.org/2000/svg', fill='currentColor', viewBox='0 0 16 16')
+          path(d='M12.2 10c-1.1-.1-1.7 1.4-2.5 1.8C8.4 12.5 6 10 6 10S3.5 7.6 4.1 6.3c.5-.8 2-1.4 1.9-2.5-.1-1-2.3-4.6-3.4-3.6C.2 2.4 0 3.3 0 5.1c-.1 3.1 3.9 7 3.9 7 .4.4 3.9 4 7 3.9 1.8 0 2.7-.2 4.9-2.6 1-1.1-2.5-3.3-3.6-3.4z')
+        symbol#ico-point(xmlns='http://www.w3.org/2000/svg', fill='currentColor', viewbox='0 0 10 16')
+          path(d='M10 5.5C10 2.5 7.8 0 5 0S0 2.5 0 5.5V6c0 3 5 10 5 10s5-7 5-10v-.5zM5 7c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z')
+        symbol#ico-time(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 28 28')
+          circle(cx='14', cy='14', r='14', fill='currentColor')
+          path(d='M14 6.5V14l4.5 4.5', stroke='#fff', stroke-width='3', stroke-linecap='round', stroke-linejoin='round')
+

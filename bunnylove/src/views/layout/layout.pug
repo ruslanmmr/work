@@ -21,6 +21,8 @@ html
     link(href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap', rel='stylesheet')
     link(href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', rel='stylesheet')
     link(href='/static/fonts/webfontkit/fonts.css', rel='stylesheet')
+    link(href='/static/css/fotorama.css', rel='stylesheet')
+    link(href='/static/css/jquery.fancybox.css', rel='stylesheet')
     
     //просто вырезал из этого файла старые bootstrap стили, можно вырезать его и пересобрать если он на sass собран
     link(href=href+'/styles/styles.css', rel='stylesheet')
@@ -45,7 +47,7 @@ html
       .new-mobileMenu.new-header__mobileMenu(data-action='menuWrapper')
         .new-mobileMenu__shell
           .new-mobileMenu__top
-            .new-console.new-mobileMenu__console
+            .new-console.new-mobileMenu__console.container
               button.new-header__close(data-action='closeButton')
               button.new-button.new-console__button
                 svg.new-console__icon.new-console__icon-type-cabinet
@@ -61,13 +63,15 @@ html
                   use(xlink:href='#bagIcon')
                 | Корзина
                 span.new-console__count.cart_count 0
-            a.new-phone.new-header__phone.new-header__phone-icon-phone(href='tel:+7 (846) 300-44-49')
-              svg.new-phone__img.new-phone__img-icon-phone
-                use(xlink:href='#phoneIcon')
-              | +7 (846) 300-44-49
-            a#link_call_me_back_modal.new-button.new-button-icon-callback.modals(data-modal-id='call_me_back_modal', href='/feedback/', title='Заказать обратный звонок')
-              svg.new-button__icon-type-callback
-                use(xlink:href='#callbackIcon')
+            //доабвил обертку new-mobileMenu__contact
+            .new-mobileMenu__contact.container
+              a.new-phone.new-header__phone.new-header__phone-icon-phone(href='tel:+7 (846) 300-44-49')
+                svg.new-phone__img.new-phone__img-icon-phone
+                  use(xlink:href='#phoneIcon')
+                | +7 (846) 300-44-49
+              a#link_call_me_back_modal.new-button.new-button-icon-callback.modals(data-modal-id='call_me_back_modal', href='/feedback/', title='Заказать обратный звонок')
+                svg.new-button__icon-type-callback
+                  use(xlink:href='#callbackIcon')
           button.new-button.new-mobileMenu__cityButton(data-action='mobileCityButton')
             svg.new-button__icon-type-city
               use(xlink:href='#markMobileIcon')
@@ -81,13 +85,13 @@ html
               button.new-button.new-button-type-city(data-action='cityLink')
                 a(href='//kazan.bunnylove.ru/')
                   | Казань
-          .new-mobileMenu__form
+          .new-mobileMenu__form.container
             form.new-search.new-search-type-standart.new-search-type-mobileMenu(method='GET', action='/catalog/search/')
               input#id_query.new-search__input(type='text', name='query', placeholder='Поиск по каталогу', minlength='3', required='')
               button.new-search__submit(type='submit')
                 svg.new-search__icon
                   use(xlink:href='#searchIcon')
-          .new-header__bottom.new-header__bottom-type-mobileMenu
+          .new-header__bottom.new-header__bottom-type-mobileMenu.container
             .new-tabs.new-header__tabs
               .new-tabs__panel.new-tabs__panel-type-mobileMenu
                 button.new-tabs__link(data-action='tab')
@@ -228,7 +232,7 @@ html
                       a.new-dropdown__link(href='/catalog/intimnaya-kosmetika/kremasprei/') Крема, спреи
                       a.new-dropdown__link(href='/catalog/intimnaya-kosmetika/massazhnye-masla-svechi/') Массажные масла, свечи
                       a.new-dropdown__link(href='/catalog/intimnaya-kosmetika/sedobnaya-kosmetika/') Съедобная косметика
-          nav.new-nav.new-header__nav-type-mobileMenu
+          nav.new-nav.new-header__nav-type-mobileMenu.container
             a.new-nav__link-type-mobileMenu.nav__about(href='/about/') О нас
             a.new-nav__link-type-mobileMenu.nav__pay(href='/pay/') Оплата
             a.new-nav__link-type-mobileMenu.nav__delivery(href='/delivery/') Доставка

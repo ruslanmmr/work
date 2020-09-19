@@ -201,9 +201,6 @@ header.new-header {
 .new-fastBuy__price {
   color: #212121; }
 
-.new-fastBuy__info {
-  width: 100%; }
-
 .post img {
   height: 100%; }
 
@@ -448,8 +445,6 @@ header.new-header {
     margin-left: 1rem; } }
 
 @media (min-width: 1200px) {
-  .new-weekly__title {
-    padding-top: 20px; }
   .new-card-type-catalog:hover .new-card__explanation {
     padding-top: 290px; }
   .new-card-type-disabled:hover .new-card__explanation {
