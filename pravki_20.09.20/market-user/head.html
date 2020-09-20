@@ -7,16 +7,56 @@
 
 	<link rel="stylesheet" type="text/css" href="css/slick.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/new.css" />
 </head>
 <body>	
 	<div id="overlay"></div>
 	<div id="page-wrapper">
 		<div class="standart-wrapper">
+			<!-- NEW HEADER -->
+			<header class="header">
+				<div class="header__container container">
+					<a class="header__logo" href="head.html">
+						<img src="./images/logo.svg" alt="logo">
+					</a>
+					<a class="header__phone" href="tel:77017777777">+7 (701) 777-77-77</a>
+					<div class="header__buttons">
+						<a class="header__social-button" href="#">
+							<img src="./images/whatsapp.svg" alt="ico">
+						</a>
+						<a class="nav-toggle" href="javascript:void(0);"><span></span><span></span><span></span></a>
+					</div>
+				</div>
+			</header>
+			<!-- nav -->
+			<nav class="mobile-nav">
+				<div class="container mobile-nav__container" data-scroll-lock-scrollable>
+					<ul class="mobile-nav__list">
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link active">Фаст фуд</a></li>
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Пицца</a></li>
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Бутерброды</a></li>
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Салаты</a></li>
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Пицца</a></li>
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Бургеры</a></li>
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Суши</a></li>
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Десерты</a></li>
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Напитки</a></li>
+					</ul>
+					<div class="mobile-nav__contact">
+						<a href="tel:77017777777" class="mobile-nav__contact-num">+7 (701) 777-77-77</a>
+						<a href="#" class="mobile-nav__contact-btn">
+							<img src="./images/whatsapp.svg" alt="ico">
+						</a>
+					</div>
+				</div>
+			</nav>
+			
+			
 			<div class="container">
-				<div class="menu">
+				<!-- <div class="menu">
 					<a href="head.html"><img src="images/logo.svg" alt title></a>
 					<a href="home_menu_open.html"><img src="images/hamburger.svg"></a>
-				</div>
+				</div> -->
 
 				<div class="search">
 					<form>
@@ -199,5 +239,8 @@
 	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<!-- new js -->
+	<script type="text/javascript" src="js/scroll-lock.min.js"></script>
+	<script type="text/javascript" src="js/new.js"></script>
 </body>
 </html>
