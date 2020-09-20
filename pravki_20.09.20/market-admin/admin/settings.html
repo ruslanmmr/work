@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/3e33078cb7.js" crossorigin="anonymous"></script>
+    <title>Menu market | Персональные данные</title>
+</head>
+<body class="m-not-r row">
+    <svg width="0" height="0" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="order-menu-svg">
+            <circle cx="1.60001" cy="1.6" r="1.6" transform="rotate(90 1.60001 1.6)" fill="#D7D7D7"/>
+            <circle cx="1.60001" cy="8.00002" r="1.6" transform="rotate(90 1.60001 8.00002)" fill="#D7D7D7"/>
+            <circle cx="1.60001" cy="14.4" r="1.6" transform="rotate(90 1.60001 14.4)" fill="#D7D7D7"/>
+        </symbol>
+    </svg>
+
+
+    <div class="menu">
+        <a href="https://menu.market/" target="_blank" class="logo-link block">
+            <img src="../img/logo.png" alt="Menu market">
+        </a>
+        <div class="menu__profile row ai-center">
+            <img src="../img/profile_photo.png" alt="Photo">
+            <h3 class="profile-name">Company name</h3>
+        </div>
+
+        <nav class="menu__navigation">
+            
+            <a href="index.html" class="nav-item">
+                <span><i class="fas fa-shopping-cart"></i></span>
+                Заказы
+            </a>
+            <a href="products.html" class="nav-item">
+                <span><i class="fas fa-list"></i></span>
+                Позиции
+            </a>
+            <a href="banner.html" class="nav-item">
+                <span><i class="fas fa-image"></i></span>
+                Баннер
+            </a>
+            <p class="nav-item current">
+                <span><i class="fas fa-cog"></i></span>
+                Настройки
+            </p>
+        </nav>
+    </div>
+    <main class="main bg-rather-white round-left-big">
+        <header class="row jc-between ai-center">
+            <h1 class="big-head-text">Настройки</h1>
+            <div class="info row">
+                
+                <button class="main-button with-tooltip" aria-describedby="tooltip">
+                    <img src="../img/notification.svg" alt="Уведомления">
+                </button>
+                <div class="tooltip header__tooltip" role="tooltip">
+                    <div class="row">
+                        <img src="../img/products/pizza-mazarella.png" alt="" class="tooltip__thumb">
+                        <div>
+                            <p class="small-text marked-light">Новый заказ!</p>
+                            <p class="smallest-text">1 х Пицца «Мацарелла», 1 х Бутерброды с авокадо и ...</p>
+                        </div>
+                        <button class="tooltip__close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="arrow" data-popover-arrow></div>
+                </div>
+                <button class="main-button">
+                    <img src="../img/logout.svg" alt="Выход">
+                </button>
+            </div>
+        </header>
+        <div class="row jc-between ai-center mb-1">
+            <nav class="products-navigation">
+                <p class="current">Персональные данные</p>
+                <a href="settings-delivery.html">Настройки доставки</a>
+            </nav>
+        </div>
+        <div class="container container-settings">
+            <div class="main__tariff item grid">
+                <div class="item">
+                    <h3 class="small-head-text dark">Тарифный план</h3>
+                    <div class="row jc-between">
+                        <p class="text-name def-weight">
+                            Базовый
+                        </p>
+                        <p class="text-name def-weight">
+                            <span class="success">
+                                Бесплатно
+                            </span> 
+                        </p>
+                    </div>
+                    <div class="row jc-between">
+                        <div id="progressbar">
+						  <div></div>
+						</div>
+                    </div><br>
+                    <a href="tariff.html" class="main__tariff-plan_btn btn">
+                        <span>Перейти на "Премиум"</span> <i class="fas fa-chevron-right"></i>
+                    </a>
+
+                </div>
+                <div class="item">
+                    <h3 class="small-head-text dark">Выберите валюту магазина</h3>
+                    <select class="input currency">
+                        <option value="KZT">KZT - Тенге</option>
+                        <option value="RUB">RUB - Рубль</option>
+                        <option value="UAH">UAH - Гривна</option>
+                        <option value="BYN">BYN - Белорусский рубль</option>
+                    </select>
+                    <button class="btn bg-success text-name">Сохранить</button>
+
+                </div>
+            </div>
+            <div class="main__personal item">
+                <h3 class="small-head-text">Персональные данные</h3>
+
+                <form action="" class="main__personal-data def-weight dark">
+                    <br>
+                    <h4 class="text-name">Основая информация</h4>
+                    <br>
+                    <div class="row main__main-personal-info">
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="name" id="name" class="input" placeholder="Ваше имя"> <!-- имя при регистрации аккаунта -->
+                        </div>
+                        <div class="form-group">
+                            <label for="company-name">Укажите страну</label>
+							<select class="input currency">
+								<option value="RUS">Россия</option>
+								<option value="KZ">Казахстан</option>
+								<option value="UAH">Украина</option>
+								<option value="BYN">Беларусь</option>
+							</select>
+                        </div>
+                        <div class="form-group">
+                            <label for="company-name">Укажите город</label>
+                            <input type="text" autocomplete="name" id="company-name" class="input" placeholder="Укажите город">
+                        </div>
+                        <div class="form-group">
+                            <label for="company-name">Имя компании</label>
+                            <input type="text" autocomplete="name" id="company-name" class="input" placeholder="Введите имя компании">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Номер телефона</label>
+                            <input type="tel" id="phone" class="input" value="+7">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" class="input" placeholder="Укажите E-mail">
+                        </div>
+                        <div class="form-group">
+							<label for="domen">Адрес вашего сайта</label>
+							<div class="row">
+								<div class="col-2" style="padding-top:6px;">
+									<p>http://</p>
+								</div>
+								<div class="col-8" style="padding-left: 10px;">
+									<input type="text" id="domen" class="input" placeholder="Название сайта" style="width: 80%;">
+								</div>
+								<div class="col-2" style="padding-left: 10px; padding-top:6px;">
+									<p>.menu.market</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<p class="green">Доступно <i class="fas fa-check"></i></p>
+									<p class="red">Недоступно <i class="fas fa-exclamation"></i></p>
+								</div>
+							</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="file" class="file row ai-center">
+                                <img src="../img/file-label.svg" alt="Загрузить фото">
+                                <p class="main-thin">Добавьте логотип компании</p>
+                            </label>
+                            <input type="file" id="file" hidden>
+                        </div>
+                    </div>
+                        <button class="btn def-weight bg-rather-white">Отменить</button>
+                        <button class="btn def-weight bg-success">Сохранить</button>
+
+                    <br><br>
+                    <hr class="hr">
+
+                    <h4 class="text-name">Изменить пароль</h4>
+                    <div class="row main__main-personal-info">
+                        <div class="form-group">
+                            <label for="password">Старый пароль</label>
+                            <input type="password" id="password" class="input">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Новый пароль</label>
+                            <input type="password" id="password" class="input">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Подтвердите новый пароль</label>
+                            <input type="password" id="password" class="input">
+                        </div>
+                    </div>
+                    <button class="btn def-weight bg-success" type="submit">Изменить</button>
+					
+					
+					<br><br><br>
+					<button class="btn def-weight bg-rather-white">Отменить</button>
+					<button class="btn def-weight bg-success">Сохранить</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

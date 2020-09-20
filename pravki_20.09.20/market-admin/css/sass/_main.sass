@@ -1,0 +1,785 @@
+html
+    font-size: 0.972vw // 14px on 1440px width
+    --color-marked-light: #F5B729
+    --color-marked-dark: #F58429
+    --color-success: #009845
+    --color-dark: #282B30
+    --color-darkest-grey: #5A5E64
+    --color-darker-grey: #A5A7A8
+    --color-dark-grey: #BFBFBF
+    --color-light-grey: #D7D7D7
+    --color-lightest-grey: #F5F5F5
+    --color-rather-white: #F9F9F9
+    --border-color: #e4e4e4
+    color: var(--color-dark)
+    background-color: #fff
+ul
+    list-style-type: none
+    padding-left: 0
+    li 
+        padding-left: 0
+[hidden]
+    display: none !important
+.m-0
+    margin: 0
+a
+    text-decoration: none
+.input
+    padding: 1rem
+    border-radius: 0.7rem
+    background-color: var(--color-lightest-grey)
+    border: none
+    padding: 1rem
+    margin-top: 0.5rem
+
+body, html
+    font-family: Proxima Nova
+    overflow-x: hidden
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    min-height: calc(100vh - 2rem)
+.w-100
+    width: 100%
+.m-all
+    margin: 1rem
+.m-not-r
+    margin: 1rem 0 1rem 1rem
+.p-all
+    padding: 1rem
+
+.round-all-big
+    border-radius: 2.85rem
+.round-all-medium
+    border-radius: 2.14rem
+.round-left-big
+    border-radius: 2.85rem 0 0 2.85rem
+
+.success  
+    color: var(--color-success) !important
+.dark  
+    color: var(--color-dark)
+.dark-grey  
+    color: var(--color-dark-grey)
+.darkest-grey  
+    color: var(--color-darkest-grey)
+.darker-grey  
+    color: var(--color-darker-grey)
+.light-grey  
+    color: var(--color-light-grey)
+.marked-light
+    color: var(--color-marked-light)
+.marked-dark
+    color: var(--color-marked-dark) !important
+
+.bg-marked-light  
+    background-color: var(--color-marked-light)
+.bg-success  
+    background-color: var(--color-success)
+    color: #fff
+.bg-light-grey  
+    background-color: var(--color-light-grey)
+.bg-lightest-grey  
+    background-color: var(--color-lightest-grey)
+.bg-rather-white  
+    background-color: var(--color-rather-white)
+
+
+.status-marked,
+.status-marked-light,
+.status-success,
+.status-grey
+    padding: 0.5rem .75rem
+    font-size: .75rem
+    border-radius: 2.1rem
+    font-weight: 400
+
+.status-marked 
+    background-color: rgba(245, 132, 41, 0.1)
+    color: var(--color-marked-dark)
+.status-success 
+    background-color: rgba(0, 152, 69, 0.1)
+    color: var(--color-success)
+.status-grey 
+    background-color: var(--color-rather-white)
+    color: var(--color-darker-grey)
+
+.status-marked-light
+    background-color: rgba(245, 183, 41, 0.1)
+    color: var(--color-marked-light)
+
+.block
+    display: block
+.row
+    display: flex
+.column
+    display: flex
+    flex-direction: column
+.jc-between
+    justify-content: space-between
+.jc-evenly
+    justify-content: space-evenly
+.jc-around
+    justify-content: space-around
+.jc-center
+    justify-content: center
+
+.ai-center
+    align-items: center
+.ai-start
+    align-items: start
+.ai-evenly
+    align-items: end
+.ai-baseline
+    align-items: baseline
+
+.big-text   
+    font-size: 1.42rem
+.text-name
+    font-size: 1.14rem
+    &:not(.thin)
+        font-weight: 600
+.text-right
+    text-align: right
+.form-group
+    margin-bottom: 1.5rem
+.def-weight
+    font-weight: 600
+.text-back
+    display: block
+    font-size: 1,3rem
+    color: var(--color-dark)
+    font-weight: 600
+    i
+        margin-right: 1rem
+.btn
+    border: none
+    border-radius: 0.7rem
+    padding: 1rem 2rem
+    cursor: pointer
+
+.menu
+    max-width: 17rem
+    padding: 1.2rem
+    padding-right: 2.9rem
+.profile-name
+    margin: 0
+    font-size: 1.29rem
+    font-weight: 600
+
+.menu__profile 
+    margin: 2.5rem .5rem 2.5rem 0
+    img
+        height: 3.28rem
+        margin-right: 1rem
+.logo-link img
+    width: 5.3rem
+.main
+    width: 84.5rem
+    padding: 2rem 3rem
+    .container 
+        grid-gap: 2rem
+        display: grid
+        .item
+            border-radius: 1.42rem
+            &:not(.grid)
+                padding: 2rem
+                background-color: #fff
+            &.grid
+                display: grid
+                grid-gap: 2rem
+
+
+
+.container-hello
+    grid-template:  'hello rates' 12.9rem 'orders rates' / 52rem 25rem
+
+.container-index
+    grid-template: 'index index' 12.9rem 'orders rates' / 52rem 25rem
+
+.container-categories
+    grid-template-columns: repeat(4, 18.2rem)
+.container-products
+    grid-template-columns: repeat(2, 38.6rem)
+.container-add-cat
+    grid-template-columns: 2fr 2fr 1fr
+.container-orders
+    margin-top: 1rem
+    grid-template: 'orders'
+
+.container .item.main__hello:not(.grid)
+    background-color: var(--color-marked-dark)
+    grid-area: hello
+    background-image: url(../img/home_hello.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: right
+    color: #fff
+    .btn
+        display: inline-block
+.main__rates 
+    grid-area: rates
+.main__orders
+    grid-area: orders
+.main__index
+    grid-area: index
+
+.big-head-text
+    font-size: 2rem
+.biggest-text
+    font-size: 2.3rem
+    font-weight: 600
+    margin: 0
+    color: var(--color-dark)
+.medium-head-text
+    margin-top: 0
+    font-size: 1.57rem
+
+.small-head-text
+    margin-top: 0
+    font-size: 1.3rem
+
+.menu__navigation .nav-item
+    display: flex
+    align-items: center
+    padding: 1.1rem
+    margin: 0
+    color: var(--color-dark-grey)
+    border-radius: 0.57rem
+    span
+        color: var(--color-light-grey)
+        margin-right: 1.3rem
+    img
+        margin-right: 1.2rem
+        height: 1rem
+    &.current
+        position: relative
+        color: var(--color-dark)
+        background-color: var(--color-rather-white)
+        span
+            color: var(--color-marked-dark)
+        &::after 
+            content: ''
+            display: block
+            position: absolute
+            height: 100%
+            width: 0.3rem
+            border-radius: 0.7rem 0 0 0.7rem
+            top: 0
+            right: -2.9rem
+            background-color: var(--color-marked-dark)
+
+.main__username
+    margin: 0 1rem
+
+.main-button
+    display: block
+    padding: 0
+    border: none
+    background: none
+    height: 1.5rem
+    width: 1.5rem
+    margin: 0 1rem
+    cursor: pointer
+    img
+        width: 100%
+        height: 100%
+
+.rates-list
+    margin-bottom: 0
+
+.rates-item 
+    display: block
+    position: relative
+    padding-bottom: 0.6rem
+    p
+        margin-top: .6rem
+        margin-bottom: 0
+    &:not(:last-child)::after 
+        content: ''
+        display: block
+        position: absolute
+        width: calc(100% + 4rem)
+        left: -2rem
+        height: 1px
+        bottom: 0
+        background-color: var(--border-color)
+
+    
+
+.rates-item__username
+    color: var(--color-dark)
+    font-weight: 600
+.rates-item__content
+    color: var(--color-darkest-grey)
+
+.rates-item__info
+    color: var(--color-darker-grey)
+
+.rates-item__rate
+    width: 1rem
+    height: 1rem
+    svg 
+        width: inherit
+        height: inherit
+        fill: var(--color-marked-dark)
+
+.rates-item.disabled
+    .rates-item__username
+        color: var(--color-darker-grey)
+    .rates-item__content
+        color: var(--color-darker-grey)
+    .rates-item__rate svg
+        fill: var(--color-light-grey)
+
+.orders-table
+    margin-left: -2rem
+    border-collapse: collapse
+    width: calc(100% + 4rem)
+    tr:not(:last-child)
+        border-bottom: 1px solid var(--border-color)
+    th, td
+        text-align: left
+        padding: 1.6rem
+    th
+        color: var(--color-dark-grey)
+        font-size: .8rem
+    td
+        font-weight: 600
+    svg
+        height: 1.1rem
+
+.with-tooltip
+    cursor: pointer
+    border: none
+    background: none
+    height: 1.2rem  
+    svg
+        width: inherit
+        height: inherit
+
+.tooltip
+    background-color: var(--color-dark)
+    border-radius: 0.8rem
+    padding: .4rem 1rem
+    font-size: 0.8rem
+    display: none
+    color: #fff
+    &.show
+        display: block
+    .arrow,
+    .arrow::before 
+        position: absolute
+        width: 1.5rem
+        height: 1.5rem
+        z-index: -1
+        right: .5rem
+    .arrow::before 
+        content: ''
+        transform: rotate(45deg)
+        background: var(--color-dark)
+    &[data-popper-placement^='top'] > .arrow 
+        bottom: -0.3rem
+    &[data-popper-placement^='bottom'] > .arrow 
+        top: -0.3rem
+    &[data-popper-placement^='left'] > .arrow 
+        right: -0.3rem
+    &[data-popper-placement^='right'] > .arrow 
+        left: -0.3rem
+    a 
+        display: block
+        margin-bottom: .5rem
+        margin-top: 0.5rem
+        font-weight: 500
+        color: #fff
+
+.main-card 
+    // padding: 1.5rem
+    border-radius: 1.42rem
+    background-color: #fff
+.main-card__image
+    background: #FEF8EA
+    padding: 0.9rem
+    border-radius: 0.7rem
+    img
+        width: 1rem
+    span
+        color: var(--color-marked-light)
+
+.main-card__info
+    margin-bottom: 0
+    margin-top: 2rem
+    img
+        height: 1rem
+.main__index
+    grid-template-columns: repeat(4, 1fr)
+
+.main-card__dish 
+    margin-top: 0.75rem
+    img
+        width: 5.7rem
+        margin-right: 1.5rem
+
+.search
+    position: relative
+    input
+        background-color: #fff
+    &::after
+        content: '\f002'
+        display: block
+        position: absolute
+        top: 50%
+        transform: translateY(-25%)
+        right: 1rem
+        color: var(--color-light-grey)
+        font-family: FontAwesome
+        font-size: 1rem
+        text-align: right
+
+.orders-navigation 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    *
+        color: var(--color-dark-grey)
+    .input, .current
+        color: var(--color-dark)
+    .input
+        background-color: #fff
+        margin-left: .5rem
+    nav
+        font-size: 1.3rem
+        a
+            margin-left: 4.3rem
+        .current
+            font-weight: 600
+            text-decoration: underline
+
+.orders__images
+    display: grid
+    grid-template-columns: repeat(3, 1.42rem)
+    grid-template-rows: 1.42rem
+    grid-column-gap: .35rem
+    margin-right: 2rem
+    align-content: center
+    .more-imgs
+        display: flex
+        padding-top: .1rem
+        justify-content: center
+        align-items: center
+        background: var(--color-dark)
+        border-radius: .35rem
+        font-size: 0.64rem
+        color: #fff
+        font-weight: 200
+    img 
+        border-radius: .35rem
+        max-width: 100%
+
+.orders__order
+    color: var(--color-dark)
+    font-size: 0.85rem
+
+
+.main__order-table
+    margin-left: -2rem
+    margin-top: -2rem
+    color: var(--color-dark)
+    border-collapse: collapse
+    tr:not(:last-child)
+        border-bottom: 1px solid var(--border-color)
+    th, td
+        padding: 1.2rem 
+    th
+        text-align: left
+
+
+.main__order-about
+    color: var(--color-dark)
+    margin: 2rem -2rem 4rem -2rem
+    width: calc(100% + 4rem)
+    border-collapse: collapse
+    border-bottom: 1px solid var(--border-color)
+    th
+        color: var(--color-dark-grey)
+        text-align: left
+    tr:first-child
+        background-color: var(--color-rather-white)
+        th:first-child
+            padding-left: 2rem
+    
+    th, td
+        padding: 1.2rem
+
+.main__order-prods
+    font-size: .86rem
+    display: flex
+    align-items: center
+    img
+        width: 2rem
+        border-radius: .35rem
+        margin-right: 1rem
+
+
+.products-navigation 
+    display: flex
+    align-items: center
+    p, a
+        font-size: 1.3rem
+        color: var(--color-darker-grey)
+        &:first-child
+            margin-right: 3.5rem
+        &.current
+            color: var(--color-dark)
+            text-decoration: underline
+            font-weight: 600
+
+
+.category-card img
+    width: 100%
+
+.product-card
+    display: flex
+    img.product
+        width: 7.85rem
+        height: 7.85rem
+        margin-right: 2rem
+    h4.text-name
+        margin: 0
+        padding-right: 3em
+
+.product-card__info p
+    font-size: 0.85rem
+    color: var(--color-darker-grey)
+
+.product-card__useful-info
+    display: flex
+    p
+        margin: 0   
+        margin-right: 3.5rem
+        display: flex
+        align-items: center
+        color: var(--color-dark-grey)
+        img
+            margin-right: .5rem
+    img
+        width: 0.85rem
+
+.product-card__options
+    margin-left: 1rem
+    min-width: 4.5rem
+    .text-name
+        margin-top: 1.5rem
+        margin-bottom: 1.5rem
+    .status-grey
+        margin-bottom: 0
+
+    .arrow,
+    .arrow::before 
+        right: 1vw
+
+.main__tariff
+    grid-template-columns: 31.8rem 31.8rem 11.4rem
+
+.main__update-tariff
+    background: none
+    border: none
+
+.main__tariff-plan_btn
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: var(--color-success)
+    padding-left: 1.5rem
+    padding-right: 1.5rem
+    width: 16rem
+    font-size: 1.14rem
+    font-weight: 600
+    color: #fff
+
+.currency
+    display: block
+    margin-top: 0.5rem
+    margin-bottom: 1.75rem
+    width: 11.4rem
+
+.main__personal-data label
+    font-size: 0.85rem
+
+.file
+    cursor: pointer
+.main__main-personal-info
+    flex-wrap: wrap
+    .main-thin
+        margin-left: 1rem
+    .form-group
+        width: 20.3rem
+        margin-right: 4.6rem
+    .input  
+        display: block
+        width: 100%
+
+.main-thin 
+    font-weight: normal
+
+.hr
+    margin-left: -2rem
+    margin-right: -2rem
+    border: none
+    background: var(--color-light-grey)
+    height: 1px
+
+.change-password
+    color: var(--color-success)
+    text-decoration: underline
+    font-size: 0.85rem
+
+
+.main__policy
+    grid-template-columns: 1fr 1fr
+
+.main__delivery
+    table
+        margin-top: -1.5rem
+    td
+        padding-top: 1.14rem 
+    .with-input
+        display: block
+        margin: 0 0.5rem
+        input
+            max-width: 2.8rem
+            margin-top: -0.25rem  
+        + td
+            padding-right: 2rem
+
+
+.small-input
+    width: 2.8rem
+    margin-top: -.5rem
+    text-align: center
+
+.main__delivery-settings
+    margin-top: .9rem
+    margin-bottom: .9rem
+
+.container-tariff
+    grid-template-columns: repeat(4, 1fr)
+    text-align: center
+    .sum
+        margin: 0
+        color: var(--color-success)
+        font-weight: 600
+        font-size: 1.7rem
+        span
+            font-weight: normal
+    .note 
+        min-height: 1.3rem
+        font-weight: 300
+
+    .info
+        font-size: 1.14rem
+
+
+.small-text
+    font-size: .85rem
+    margin-top: 0
+    margin-bottom: 0.2em
+
+.smallest-text
+    font-size: 0.7rem
+    margin: 0
+
+.header__tooltip
+    color: #fff
+    margin-left: -5rem
+    width: 15rem
+    p
+        margin-left: 1rem
+
+.tooltip__thumb
+    width: 3rem
+    height: 3rem
+
+.tooltip__close
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 0.85rem
+    height: 0.85rem
+    font-size: 0.4rem
+    cursor: pointer
+    border: 0.5px solid #FFFFFF
+    background: none
+    border-radius: 0.3rem
+    color: #fff
+.mr-1
+    margin-right: 1rem
+    margin-left: 0
+.mb-1
+    margin-bottom: 1rem
+.main__add-category .input
+    display: block
+    width: 20rem
+    margin-top: .75rem
+    margin-bottom: 2.5rem
+
+.main__add-product
+    display: grid
+    grid-template-columns: 2fr 2fr 1fr 1fr
+    grid-template-rows: 9rem 7rem
+    grid-gap: 4.2rem
+    margin-right: 2rem
+    .file img
+        width: 7rem
+    .input
+        display: block
+        margin-top: .75rem
+        margin-bottom: 2.5rem
+        width: 100%
+    .number, .number-small
+        display: inline-block
+        width: 5rem
+        margin-right: 1rem
+    .number-small
+        width: 3rem
+
+    .textarea
+        resize: none
+        height: 7rem
+        margin: 0
+    
+.text-medium-small
+    font-size: .9rem
+.main__product-have
+    grid-column: 3/5
+.switch
+    display: block
+    position: relative
+    background-color: var(--color-rather-white)
+    width: 3.6rem
+    height: 2.2rem
+    cursor: pointer
+    transition: .5s ease
+    border-radius: 1.5rem
+    .circle
+        display: block
+        top: 2px
+        left: 2px
+        position: absolute
+        background-color: #fff
+        height: calc(2.2rem - 4px)
+        width: calc(2.2rem - 4px)
+        border-radius: 100%
+        transition: .5s ease
+
+input:checked + .switch 
+    background-color: var(--color-success)
+    .circle
+        left: calc(1.4rem + 2px)
+
+@media (min-width: 1500px)
+    .header__tooltip
+        margin-left: -1rem !important
+@media (min-width: 1600px)
+    .header__tooltip
+        margin-left: -2.5rem !important
