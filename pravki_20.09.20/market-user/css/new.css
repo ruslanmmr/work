@@ -193,6 +193,9 @@
 .main-slider .slick-slide.slick-active + .slick-slide {
   opacity: 1;
 }
+.slider .slick-dots {
+  margin-top: 5px;
+}
 
 .slider .slick-dots li.slick-active button {
   width: 4px;
