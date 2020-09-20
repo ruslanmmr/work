@@ -1,0 +1,28 @@
+extends layout/layout
+block content
+  include blocks/breadcrumbs
+  .container
+    section.section
+      h1.section__title Мои отзывы
+      .row.justify-content-center
+        .account.col-xl-9
+          .feedback-list.list
+            .list__item.list__item--reviews
+              .list__image
+                a(href='/catalog/product/uslada-lb-10005/')
+                  img(src='/media/cache/d7/d5/d7d59e168f56ed6106eb3da73b882d1a.jpg', alt='Лубрикант Услада B5')
+              .list__content
+                .list__left
+                  .list__title
+                    a(href='/catalog/product/uslada-lb-10005/') Лубрикант Услада B5
+                  .rating
+                    span.on
+                    span.on
+                    span.on
+                    span.on
+                    span.on
+                .list__text
+                  p отличный лубрикант без запаха, рекомендую!
+              .list__remove.list__remove--absolute
+                a.remove-icon2.review_delete(href='/reviews/delete/139', title='Удалить отзыв')
+                div(style='clear: both;')

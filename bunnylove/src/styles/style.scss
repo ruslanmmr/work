@@ -5137,18 +5137,17 @@ div[data-move=dropdownScroll] .mCSB_inside>.mCSB_container {
     font-size: 14px;
     line-height: 18px;
     color: #000;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     position: relative;
-    padding: 10px
+    padding: 10px;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &:last-child {
+      margin-right: -10px;
+    }
   }
 
   .new-console__button {
@@ -5235,8 +5234,7 @@ div[data-move=dropdownScroll] .mCSB_inside>.mCSB_container {
     box-sizing: border-box;
     height: auto;
     z-index: 11;
-    -webkit-transform: translate(calc(75px - 100%), 0);
-    transform: translate(calc(75px - 100%), 0)
+    transform: translate(calc(71px - 100%), 0)
   }
 
   .new-mobileMenu__console {
@@ -6251,9 +6249,6 @@ div[data-move=dropdownScroll] .mCSB_inside>.mCSB_container {
     height: 26px
   }
 
-  .new-console__bag {
-    padding: 10px 0
-  }
 
   .new-console__icon-type-bag {
     width: 23px;
@@ -6275,11 +6270,6 @@ div[data-move=dropdownScroll] .mCSB_inside>.mCSB_container {
   .new-console__count {
     top: 4px;
     right: -2px
-  }
-
-  .new-console__compare {
-    padding: 10px 0;
-    margin-right: 25px
   }
 
   .new-console__icon-type-compare {

@@ -401,455 +401,239 @@
           </div>
         </div>
       </div>
-      <div class="new-header__slider new-header__slider-type-main container-fluid">
-        <div class="new-slider new-slider__shell" data-action="adSliderInMain"><a class="new-slider__cell" href="https://bunnylove.ru/bonus/">
-            <picture class="new-slider__img"><img class="new-slider__img" src="/media/big_slides/d6b4d098-826a-4db9-b37d-a844b7d6f20e.slide.png" alt="Дисконтная программа"></picture></a><a class="new-slider__cell" href="/certificates/">
-            <picture class="new-slider__img"><img class="new-slider__img" src="/media/big_slides/5f8f71a9-fec7-456e-9d05-a712f5b550b7.slide.png" alt="Подарочный сертификат"></picture></a><a class="new-slider__cell" href="https://bunnylove.ru/promo/dostavka-za-99/">
-            <picture class="new-slider__img"><img class="new-slider__img" src="/media/big_slides/6086b631-dccc-451e-96a4-d1435eec4198.slide.png" alt="Акция на доставку"></picture></a></div>
-      </div>
     </header>
     <main>
-      <main>
-        <div class="new-tabs new-tabs-type-general">
-          <div class="new-tabs__panel new-tabs__panel-type-general">
-            <button class="new-tabs__link new-tabs__link-type-general new-tabs__link-action-open" data-action="tab">
-              <svg class="new-tabs__icon new-tabs__icon-type-star new-tabs__icon-type-general">
-                <use xlink:href="#whiteStarIcon"></use>
-              </svg>Популярное
-            </button>
-            <button class="new-tabs__link new-tabs__link-type-general" data-action="tab">
-              <svg class="new-tabs__icon new-tabs__icon-type-sale new-tabs__icon-type-general">
-                <use xlink:href="#tabsSaleIcon"></use>
-              </svg>Со скидкой
-            </button>
-            <button class="new-tabs__link new-tabs__link-type-general" data-action="tab">
-              <svg class="new-tabs__icon new-tabs__icon-type-new new-tabs__icon-type-general">
-                <use xlink:href="#newSaleIcon"></use>
-              </svg>Новинки
-            </button>
-          </div>
-          <div class="new-tabs__shell">
-            <div class="new-tabs__cell new-tabs__cell-type-middle new-tabs__cell-action-open" data-action="tabContent">
-              <div class="new-slider new-tabs__slider" data-action="popularSlider">
-                <div class="new-card new-slider__card">
-                  <div class="new-card__labels">
-                    <div class="new-card__label new-card__label-type-important">
-                      <svg class="new-card__icon">
-                        <use xlink:href="#whiteStarIcon"></use>
-                      </svg>
+      <div class="new-breadcrumbs">
+        <div class="container"><a class="new-breadcrumbs__link" href="/">Главная</a><a class="new-breadcrumbs__link" href="/catalog/seks-igrushki/">Секс игрушки</a><a class="new-breadcrumbs__link" href="/catalog/seks-igrushki/dlya-muzhchin/">Для мужчин</a><span>Мастурбатор Svakom Hedy Ice-cream Pink</span></div>
+      </div>
+      <div class="container">
+        <section class="section">
+          <h1 class="section__title">Мои данные</h1>
+          <div class="row justify-content-center">
+            <div class="account col-xl-9">
+              <div class="account__profile-head">
+                <div class="account__profile-email"> 
+                  <svg class="icon">
+                    <use xlink:href="#mailIcon"></use>
+                  </svg>luzhetskiy@gmail.com
+                </div><a class="account__profile-pass-reset" href="/password/reset/">Изменить пароль</a>
+              </div>
+              <div class="account__form">
+                <form class="form form-account" role="form" action="/users/profile/" method="POST">
+                  <input type="hidden" name="csrfmiddlewaretoken" value="6u3bYfnezngEacQkOQWSIuhoBqcZs1TKbqo15QqPZl5FHJ5xS0Af5E23BJPoJAsU">
+                  <fieldset class="form__group">
+                    <legend class="form__title">Ваше ФИО</legend>
+                    <div class="row grid">
+                      <div class="col-md-4 col-sm-6 grid__block">
+                        <input class="input" id="id_last_name" type="text" name="last_name" value="Лужецкий" placeholder="фамилия" maxlength="30">
+                      </div>
+                      <div class="col-md-4 col-sm-6 grid__block">
+                        <input class="input" id="id_first_name" type="text" name="first_name" value="Дмитрий" placeholder="имя" maxlength="30">
+                      </div>
+                      <div class="col-md-4 col-sm-6 grid__block">
+                        <input class="input" id="id_middle_name" type="text" name="middle_name" placeholder="отчество" maxlength="30">
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="form__group">
+                    <legend class="form__title">Ваш пол</legend>
+                    <div class="row grid">
+                      <div class="col-auto grid__block">
+                        <label class="radio" for="id_gender_0">
+                          <input id="id_gender_0" type="radio" name="gender" value=""><span class="outer"><span class="inner"></span></span><span class="text">---------</span>
+                        </label>
+                      </div>
+                      <div class="col-auto grid__block">
+                        <label class="radio" for="id_gender_1">
+                          <input id="id_gender_1" type="radio" name="gender" value="male" checked=""><span class="outer"><span class="inner"></span></span><span class="text">мужской</span>
+                        </label>
+                      </div>
+                      <div class="col-auto grid__block">
+                        <label class="radio" for="id_gender_2">
+                          <input id="id_gender_2" type="radio" name="gender" value="female"><span class="outer"><span class="inner"></span></span><span class="text">женский</span>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="form__group">
+                    <legend class="form__title">Дата рождения</legend>
+                    <div class="row grid">
+                      <div class="col-lg-2 col-md-3 col-4 grid__block">
+                        <select class="select" id="id_birthday_day" name="birthday_day">
+                          <option value="0">---</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="24">24</option>
+                          <option value="25">25</option>
+                          <option value="26">26</option>
+                          <option value="27">27</option>
+                          <option value="28">28</option>
+                          <option value="29">29</option>
+                          <option value="30">30</option>
+                          <option value="31" selected="">31</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-2 col-md-3 col-4 grid__block">
+                        <select class="select" id="id_birthday_month" name="birthday_month">
+                          <option value="0">---</option>
+                          <option value="1">Январь</option>
+                          <option value="2">Февраль</option>
+                          <option value="3" selected="">Март</option>
+                          <option value="4">Апрель</option>
+                          <option value="5">Май</option>
+                          <option value="6">Июнь</option>
+                          <option value="7">Июль</option>
+                          <option value="8">Август</option>
+                          <option value="9">Сентябрь</option>
+                          <option value="10">Октябрь</option>
+                          <option value="11">Ноябрь</option>
+                          <option value="12">Декабрь</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-2 col-md-3 col-4 grid__block">
+                        <select class="select" id="id_birthday_year" name="birthday_year">
+                          <option value="0">---</option>
+                          <option value="2002">2002</option>
+                          <option value="2001">2001</option>
+                          <option value="2000">2000</option>
+                          <option value="1999">1999</option>
+                          <option value="1998">1998</option>
+                          <option value="1997">1997</option>
+                          <option value="1996">1996</option>
+                          <option value="1995">1995</option>
+                          <option value="1994">1994</option>
+                          <option value="1993">1993</option>
+                          <option value="1992">1992</option>
+                          <option value="1991">1991</option>
+                          <option value="1990">1990</option>
+                          <option value="1989" selected="">1989</option>
+                          <option value="1988">1988</option>
+                          <option value="1987">1987</option>
+                          <option value="1986">1986</option>
+                          <option value="1985">1985</option>
+                          <option value="1984">1984</option>
+                          <option value="1983">1983</option>
+                          <option value="1982">1982</option>
+                          <option value="1981">1981</option>
+                          <option value="1980">1980</option>
+                          <option value="1979">1979</option>
+                          <option value="1978">1978</option>
+                          <option value="1977">1977</option>
+                          <option value="1976">1976</option>
+                          <option value="1975">1975</option>
+                          <option value="1974">1974</option>
+                          <option value="1973">1973</option>
+                          <option value="1972">1972</option>
+                          <option value="1971">1971</option>
+                          <option value="1970">1970</option>
+                          <option value="1969">1969</option>
+                          <option value="1968">1968</option>
+                          <option value="1967">1967</option>
+                          <option value="1966">1966</option>
+                          <option value="1965">1965</option>
+                          <option value="1964">1964</option>
+                          <option value="1963">1963</option>
+                          <option value="1962">1962</option>
+                          <option value="1961">1961</option>
+                          <option value="1960">1960</option>
+                          <option value="1959">1959</option>
+                          <option value="1958">1958</option>
+                          <option value="1957">1957</option>
+                          <option value="1956">1956</option>
+                          <option value="1955">1955</option>
+                          <option value="1954">1954</option>
+                          <option value="1953">1953</option>
+                          <option value="1952">1952</option>
+                          <option value="1951">1951</option>
+                          <option value="1950">1950</option>
+                          <option value="1949">1949</option>
+                          <option value="1948">1948</option>
+                          <option value="1947">1947</option>
+                          <option value="1946">1946</option>
+                          <option value="1945">1945</option>
+                          <option value="1944">1944</option>
+                          <option value="1943">1943</option>
+                          <option value="1942">1942</option>
+                          <option value="1941">1941</option>
+                        </select>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="form__group">
+                    <legend class="form__title">Телефон</legend>
+                    <div class="row grid">
+                      <div class="col-md-4 col-sm-6 grid__block">
+                        <input class="input" id="id_phone" type="text" name="phone" value="79276080280" placeholder="телефон" maxlength="12" minlength="11" required="">
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="form__group">
+                    <legend class="form__title">Адрес доставки</legend>
+                    <div class="row grid">
+                      <div class="col-lg-4 col-sm-6 grid__block">
+                        <input class="input" id="id_city" type="text" name="city" placeholder="город" maxlength="40">
+                      </div>
+                      <div class="col-lg-4 col-sm-6 grid__block">
+                        <input class="input" id="id_street" type="text" name="street" placeholder="улица" maxlength="120">
+                      </div>
+                      <div class="col-lg-2 col-sm-3 grid__block">
+                        <input class="input" id="id_house_number" type="text" name="house_number" placeholder="дом" maxlength="10">
+                      </div>
+                      <div class="col-lg-2 col-sm-3 grid__block">
+                        <input class="input" id="id_apartment_number" type="text" name="apartment_number" placeholder="квартира" maxlength="10">
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="form__group">
+                    <legend class="form__title">Почтовый индекс</legend>
+                    <div class="row grid">
+                      <div class="col-lg-4 col-sm-6 grid__block">
+                        <input class="input" id="id_zip_code" type="text" name="zip_code" placeholder="почтовый индекс" maxlength="6" minlength="6">
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="form__group">
+                    <div class="row grid">
+                      <div class="col-auto grid__block">
+                        <div class="new-checkbox">
+                          <input class="new-checkbox__input" id="id_is_agreed_to_newsletter" type="checkbox" name="is_agreed_to_newsletter">
+                          <label class="new-checkbox__label" for="id_is_agreed_to_newsletter">Согласен получать письма контроля качества</label>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                      <button class="new-button-type-fill form-account__submit" type="submit">Сохранить изменения</button>
                     </div>
                   </div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/214775/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/7e/b5/7eb550f6ffb95bd7d23ac2a31f233e55.jpg" width="130" height="130" alt="Вакуум-волновой бесконтактный стимулятор клитора Satisfyer Pro Penguin Next Generation">
-                  </div><a class="new-card__center" href="/catalog/product/satisfyer-pro-penguin-ng-vakuum-volnovoj--j2018-8n/" title="Перейти на страницу товара">Вакуум-волновой бесконтактный стимулятор клитора Satisfyer Pro Penguin Next Generation</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">5 290<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/214775/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Satisfyer – новая технология бесконтактной стимуляции клитора, совмещающая вакуумную стимуляцию и волновую пульсацию</p>
-                </div>
-                <div class="new-card new-slider__card">
-                  <div class="new-card__labels">
-                    <div class="new-card__label new-card__label-type-important">
-                      <svg class="new-card__icon">
-                        <use xlink:href="#whiteStarIcon"></use>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/206921/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/01/44/01448dd4e5cf49a686678ac7410b1b08.jpg" width="130" height="130" alt="Вибратор Partner Toy Plus">
-                  </div><a class="new-card__center" href="/catalog/product/partner-toy-plus-15663/" title="Перейти на страницу товара">Вибратор Partner Toy Plus</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">4 190<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/206921/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Нереалистичный вибратор с двумя моторчиками для пар или соло-игры, длина вводимой части 8 см</p>
-                </div>
-                <div class="new-card new-slider__card">
-                  <div class="new-card__labels">
-                    <div class="new-card__label new-card__label-type-important">
-                      <svg class="new-card__icon">
-                        <use xlink:href="#whiteStarIcon"></use>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/219889/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/13/bf/13bf653cb35fcea2b40996f00ba1fc2b.jpg" width="130" height="130" alt="Мастурбатор Svakom Hedy Ice-cream Pink">
-                  </div><a class="new-card__center" href="/catalog/product/masturbator-svakom-ice-cream-egg-ssmc-02t/" title="Перейти на страницу товара">Мастурбатор Svakom Hedy Ice-cream Pink</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">690<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/219889/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Компактный мастурбатор в форме яйца с двусторонним рельефом в виде спирали и крапин</p>
-                </div>
-                <div class="new-card new-slider__card">
-                  <div class="new-card__labels">
-                    <div class="new-card__label new-card__label-type-important">
-                      <svg class="new-card__icon">
-                        <use xlink:href="#whiteStarIcon"></use>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/192596/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/cc/09/cc09c28727f27c3a64c50fff1a178054.jpg" width="130" height="130" alt="Крем-пролонгатор Long Play - 15 мл.">
-                  </div><a class="new-card__center" href="/catalog/product/long-play-15ml-prolongiruyuschaya-smazka-130038/" title="Перейти на страницу товара">Крем-пролонгатор Long Play - 15 мл.</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">420<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/192596/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Мужской крем длительного действия для продления полового акта</p>
-                </div>
-                <div class="new-card new-slider__card">
-                  <div class="new-card__labels">
-                    <div class="new-card__label new-card__label-type-important">
-                      <svg class="new-card__icon">
-                        <use xlink:href="#whiteStarIcon"></use>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/189861/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/0c/65/0c65e763ddbedadd260a33e8af802043.jpg" width="130" height="130" alt="Мастурбатор-яйцо CLICKER">
-                  </div><a class="new-card__center" href="/catalog/product/masturbator-yajtso-clicker-odnorazovoe-6--egg-002/" title="Перейти на страницу товара">Мастурбатор-яйцо CLICKER</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">690<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/189861/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Этот мастурбатор обещает множество плотских удовольствий</p>
-                </div>
-                <div class="new-card new-slider__card">
-                  <div class="new-card__labels">
-                    <div class="new-card__label new-card__label-type-important">
-                      <svg class="new-card__icon">
-                        <use xlink:href="#whiteStarIcon"></use>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/205464/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/80/a1/80a1eef2133cb0df989bf4699d897c46.jpg" width="130" height="130" alt="Телесный мультискоростной вибратор-реалистик A-toys - 19,8 см.">
-                  </div><a class="new-card__center" href="/catalog/product/vibrator-a-toys-multi-speed-761005/" title="Перейти на страницу товара">Телесный мультискоростной вибратор-реалистик A-toys - 19,8 см.</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price">1 840<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/205464/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Телесный мультискоростной вибратор-реалистик A-toys</p>
-                </div>
-              </div><a class="new-button new-button-type-empty" href="/catalog/tabs/all/popular/">Все популярные товары</a>
-            </div>
-            <div class="new-tabs__cell new-tabs__cell-type-middle" data-action="tabContent">
-              <div class="new-slider new-tabs__slider" data-action="discountSlider">
-                <div class="new-card new-slider__card">
-                  <div class="new-card__labels">
-                    <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-10%</span></div>
-                  </div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8508888/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/db/8f/db8ffbae8725b759ae5c8f01a66b84eb.jpg" width="130" height="130" alt="Подарочный набор We-Vibe Discover Gift Box">
-                  </div><a class="new-card__center" href="/catalog/product/we-vibe-nabor-discover-gift-box-sncgsgz/" title="Перейти на страницу товара">Подарочный набор We-Vibe Discover Gift Box</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">15 490<span class="new-card__currency">₽</span></span><span class="new-card__price">13 941<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8508888/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Этот подарочный набор специалисты We-vibe разработали и выпустили в честь десятилетия существования компании</p>
-                </div>
-                <div class="new-card new-slider__card">
-                  <div class="new-card__labels">
-                    <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-30%</span></div>
-                  </div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8804934/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/b4/a0/b4a0e1554bd18a530360a0d647fbe5d3.jpg" width="130" height="130" alt="Черная мужская портупея Adonis High Halter">
-                  </div><a class="new-card__center" href="/catalog/product/muzhskaya-sbruya-portupeya-harness-adonis--ou255blk/" title="Перейти на страницу товара">Черная мужская портупея Adonis High Halter</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">3 140<span class="new-card__currency">₽</span></span><span class="new-card__price">2 198<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8804934/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Мужская портупея Adonis High Halter</p>
-                </div>
-                <div class="new-card new-slider__card">
-                  <div class="new-card__labels">
-                    <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-20%</span></div>
-                  </div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8804951/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/82/89/8289dc0a4db8ab20c7dd37b5753c7972.jpg" width="130" height="130" alt="Темно-серое эрекционное кольцо в виде гайки">
-                  </div><a class="new-card__center" href="/catalog/product/erektsionnoe-koltso-v-vide-protektora--bon006/" title="Перейти на страницу товара">Темно-серое эрекционное кольцо в виде гайки</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">1 430<span class="new-card__currency">₽</span></span><span class="new-card__price">1 144<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8804951/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Плотное кольцо для члена в форме гайки придает вашему пенису еще более мужественный вид и позволяет наслаждаться эрекцией в течение более длительного времени</p>
-                </div>
-                <div class="new-card new-slider__card">
-                  <div class="new-card__labels">
-                    <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-20%</span></div>
-                  </div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8749487/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/7b/eb/7beb865a9ee2bd1b601da613e1a87b62.jpg" width="130" height="130" alt="Мастурбатор-вагина Fuck Me Silly To Go">
-                  </div><a class="new-card__center" href="/catalog/product/masturbator-vagina-fuck-me-silly-to--5358500000/" title="Перейти на страницу товара">Мастурбатор-вагина Fuck Me Silly To Go</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">5 340<span class="new-card__currency">₽</span></span><span class="new-card__price">4 272<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8749487/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Мастурбатор-вагина Fuck Me Silly To Go</p>
-                </div>
-                <div class="new-card new-slider__card">
-                  <div class="new-card__labels">
-                    <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-30%</span></div>
-                  </div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/8599777/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/03/ad/03ad0c42d75af701cb9d842fd467723f.jpg" width="130" height="130" alt="Элегантные сетчатые перчатки Darkie">
-                  </div><a class="new-card__center" href="/catalog/product/perchatki-darkie-ob4922/" title="Перейти на страницу товара">Элегантные сетчатые перчатки Darkie</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">840<span class="new-card__currency">₽</span></span><span class="new-card__price">588<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/8599777/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">Один аксессуар может украсить собой весь комплект</p>
-                </div>
-                <div class="new-card new-slider__card">
-                  <div class="new-card__labels">
-                    <div class="new-card__label new-card__label-type-sale"><span class="new-card__fill">-20%</span></div>
-                  </div>
-                  <div class="new-card__top" title="Прeдпросмотр товара" data-action="fastBuyArea" data-preview-url="/catalog/product-preview/5760701/">
-                    <svg class="new-phone__icon new-phone__icon-type-loop">
-                      <use xlink:href="#loopIcon"></use>
-                    </svg><img class="new-card__img" src="/media/cache/41/b4/41b4f0870d49646c998068c018e80581.jpg" width="130" height="130" alt="Лиловый вибронабор из 5 предметов Joys Collection">
-                  </div><a class="new-card__center" href="/catalog/product/bw-012011--nabor-vibrostimulyatorov-4--bw-012011/" title="Перейти на страницу товара">Лиловый вибронабор из 5 предметов Joys Collection</a>
-                  <p class="new-card__bottom" data-action="buyButtonShell"><span class="new-card__priceBlock"><span class="new-card__price new-card__price-type-old">3 490<span class="new-card__currency">₽</span></span><span class="new-card__price">2 792<span class="new-card__currency">₽</span></span></span>
-                    <button class="new-button new-card__button new-button-type-round" data-url="/catalog/cart/add/5760701/" data-action="buyButton">
-                      <svg class="new-tabs__icon new-tabs__icon-type-cart">
-                        <use xlink:href="#cartIcon"></use>
-                      </svg> Купить
-                    </button>
-                  </p>
-                  <p class="new-card__explanation">В наборе мощная вибропуля и 4 силиконовые насадки для стимуляции тех или иных зон</p>
-                </div>
-              </div><a class="new-button new-button-type-empty" href="/catalog/tabs/all/discount/">Все товары со скидкой</a>
-            </div>
-            <div class="new-tabs__cell new-tabs__cell-type-middle" data-action="tabContent">
-              <div class="new-slider new-tabs__slider" data-action="noveltySlider">
-                <p>По Вашему запросу товаров не найдено.</p>
-              </div><a class="new-button new-button-type-empty" href="/catalog/tabs/all/new/">Все новинки</a>
-            </div>
-          </div>
-        </div>
-        <div class="new-content new-content-type-halve">
-          <section class="new-weekly new-weekly-type-standart new-weekly-theme-dark">
-            <h2 class="new-weekly__title">Товары недели</h2>
-            <div class="new-slider new-weekly__slider" data-action="weeklySlider">
-              <!--Заменить title на h4-->
-              <!--slide--><a class="new-weekItem new-slider__weekItem" href="/catalog/product/dildo-comet-pearl-biryuzovyij-8070-05/">
-                <h4 class="new-weekItem__title">Фаллоимитатор Comet Pearl</h4>
-                <div class="new-weekItem__shell">
-                  <div class="new-weekItem__left"><img class="new-weekItem__img" src="/media/cache/8a/01/8a010e2b6d68033dba0e2e822b407abc.jpg" alt="Фаллоимитатор Comet Pearl"></div>
-                </div></a>
-              <!--slide--><a class="new-weekItem new-slider__weekItem" href="/catalog/product/11131--admini-trigger-vibrostimulyator--11131/">
-                <h4 class="new-weekItem__title">Вибратор Mini Trigger</h4>
-                <div class="new-weekItem__shell">
-                  <div class="new-weekItem__left"><img class="new-weekItem__img" src="/media/cache/fe/42/fe4254bf69647d49bf7566e1eee1dc73.jpg" alt="Вибратор Mini Trigger"></div>
-                </div></a>
-            </div>
-          </section>
-          <section class="new-content__advert new-advert">
-            <picture class="new-advert__img"><img class="new-advert__img" src="/media/frontpage_bnrs/flower-image.jpg"></picture>
-          </section>
-        </div>
-        <section class="new-recommend new-recommend-type-desktop">
-          <h2 class="new-recommend__title">Рекомендуем</h2>
-          <div class="new-recommend__shell"><a class="new-recommend__cell" href="/catalog/seks-igrushki/dlya-zhenshin/vakuumnye-stimulyatory/"><span class="new-recommend__frame">
-                <svg class="new-recommend__icon new-recommend__icon-type-vakum">
-                  <use xlink:href="#vakumIcon"></use>
-                </svg></span> Вакуумные стимуляторы</a><a class="new-recommend__cell" href="/catalog/seks-igrushki/dlya-dvoih/vibratory-dlya-par/"><span class="new-recommend__frame">
-                <svg class="new-recommend__icon new-recommend__icon-type-vibro">
-                  <use xlink:href="#vibroIcon"></use>
-                </svg></span> Вибраторы для пар</a><a class="new-recommend__cell" href="/catalog/intimnaya-kosmetika/prezervativy/?brend=okamoto-yaponiya&amp;brend=sagami-yaponiya"><span class="new-recommend__frame">
-                <svg class="new-recommend__icon new-recommend__icon-type-japan">
-                  <use xlink:href="#japanCondonsIcon"></use>
-                </svg></span> Японские презервативы</a><a class="new-recommend__cell" href="/catalog/intimnaya-kosmetika/smazki/"><span class="new-recommend__frame">
-                <svg class="new-recommend__icon new-recommend__icon-type-lubricant">
-                  <use xlink:href="#lubricantIcon"></use>
-                </svg></span> Лубриканты</a><a class="new-recommend__cell" href="/catalog/seks-igrushki/dlya-muzhchin/vaginy-i-masturbatory/"><span class="new-recommend__frame">
-                <svg class="new-recommend__icon new-recommend__icon-type-stimulants">
-                  <use xlink:href="#manStimulantsIcon"></use>
-                </svg></span> Стимуляторы для мужчин</a><a class="new-recommend__cell" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/"><span class="new-recommend__frame">
-                <svg class="new-recommend__icon new-recommend__icon-type-vaginal">
-                  <use xlink:href="#vaginalBallsIcon"></use>
-                </svg></span> Вагинальные шарики</a></div>
-        </section>
-        <div class="new-content new-content-type-halve new-content-type-reverse">
-          <div class="new-invite new-content__invite">
-            <div class="new-invite__top">
-              <p class="new-invite__text">Получите <span class="new-invite__span"> +300 ₽</span> на свой счёт при регистрации в личном кабинете</p>
-              <form action="/register/">
-                <button class="new-button new-invite__bottom new-button-type-fill">Зарегистрироваться</button>
-              </form>
-            </div>
-            <section class="new-content__advert new-advert new-content__advert-type-halve"></section><a class="new-advert__link" href="https://www.instagram.com/bunnyloveru/">
-              <picture class="new-advert__img"><img class="new-advert__img" src="/media/frontpage_bnrs/action-poster-1-d.jpg"></picture></a>
-          </div>
-          <section class="new-content__advert new-advert">
-            <picture class="new-advert__img"><img class="new-advert__img" src="/media/frontpage_bnrs/action-poster-2-md.jpg"></picture>
-          </section>
-        </div>
-        <section class="new-why new-why-type-standart">
-          <h2 class="new-why__title">Сексшоп со смыслом</h2>
-          <div class="new-why__shell">
-            <div class="new-accordion new-why__accordion">
-              <button class="new-button new-accordion__button new-accordion__button-action-open" data-action="accordionOpener">Мы за развитие сексуальной культуры</button>
-              <div class="new-accordion__shell new-accordion__shell-action-open" data-action="accordionShell">
-                <p>Поддерживать естественную сексуальность и изучать свое тело очень важно для полноценной жизни, здоровья и крепких отношений. Интимные игрушки делают этот процесс проще и интереснее</p>
-              </div>
-            </div>
-            <div class="new-accordion new-why__accordion">
-              <button class="new-button new-accordion__button" data-action="accordionOpener">Только за актуальный ассортимент</button>
-              <div class="new-accordion__shell" data-action="accordionShell">
-                <p>Мы следим за развитием adult-индустрии и выбираем только лучшие товары и самые топовые новинки.</p>
-                <p>15000+ товаров 200+ брендов и наш ассортимент постоянно растет</p>
-              </div>
-            </div>
-            <div class="new-accordion new-why__accordion">
-              <button class="new-button new-accordion__button" data-action="accordionOpener">За индивидуальный подход</button>
-              <div class="new-accordion__shell" data-action="accordionShell">
-                <p>Мы подберем игрушки для тех, кто только начинает знакомство с эротическими товарами, и сможем удовлетворить запросы самых искушенных покупателей</p>
-              </div>
-            </div>
-            <div class="new-accordion new-why__accordion">
-              <button class="new-button new-accordion__button" data-action="accordionOpener">Мы работаем 24/7. Доставляем быстро и в любое время</button>
-              <div class="new-accordion__shell" data-action="accordionShell">
-                <p>Онлайн-консультант поможет выбрать товары в любое время суток. Курьерская служба доставит заказ в нужное время</p>
-              </div>
-            </div>
-            <div class="new-accordion new-why__accordion">
-              <button class="new-button new-accordion__button" data-action="accordionOpener">Нам важно, чтобы помощь консультантов оказалась максимально полезной</button>
-              <div class="new-accordion__shell" data-action="accordionShell">
-                <p>Сотрудники Влюбленного кролика регулярно проходят дополнительные обучения и повышают квалификацию для того, чтобы стать настоящими экспертами для наших клиентов</p>
-              </div>
-            </div>
-            <div class="new-accordion new-why__accordion">
-              <button class="new-button new-accordion__button" data-action="accordionOpener">Мы внимательны к деталям</button>
-              <div class="new-accordion__shell" data-action="accordionShell">
-                <p>С любовью упаковываем каждый заказ в крафтовую бумагу и вкладываем маленький сюрприз или милую открытку</p>
-              </div>
-            </div>
-            <div class="new-accordion new-why__accordion">
-              <button class="new-button new-accordion__button" data-action="accordionOpener">Мы за низкие цены</button>
-              <div class="new-accordion__shell" data-action="accordionShell">
-                <p>Мы разработали выгодную бонусную систему, постоянно проводим акции, распродажи и розыгрыши в соцсетях. Для постоянных клиентов действуют персональные цены</p>
+                </form>
               </div>
             </div>
           </div>
         </section>
-        <!--новый блок-->
-        <section class="section container">
-          <h2 class="section__title section__title_type-2"><a href="#">BUNNYBLOG</a></h2>
-          <div class="slider slider_grid slider_dots blog-slider row">
-                        <div class="news-item-card news-item-card_color-1 col"><a class="news-item-card__container" href="#">
-                            <div class="news-item-card__image"><img src="https://bunnylove.ru/media/article/teaser/bunny_bdsm.jpg" alt="image"></div>
-                            <div class="news-item-card__content"><span class="news-item-card__date">25 марта 2020</span>
-                              <h2 class="news-item-card__title">Выбор вибратора</h2>
-                              <p class="news-item-card__text"></p>
-                            </div></a></div>
-                        <div class="news-item-card news-item-card_color-2 col"><a class="news-item-card__container" href="#">
-                            <div class="news-item-card__content"><span class="news-item-card__date">25 марта 2020</span>
-                              <h2 class="news-item-card__title">Как не нужно делать</h2>
-                              <p class="news-item-card__text"></p>
-                            </div></a></div>
-                        <div class="news-item-card news-item-card_color-1 col"><a class="news-item-card__container" href="#">
-                            <div class="news-item-card__image"><img src="https://bunnylove.ru/media/article/teaser/bunny_vibr.jpg" alt="image"></div>
-                            <div class="news-item-card__content"><span class="news-item-card__date">25 марта 2020</span>
-                              <h2 class="news-item-card__title">12 правил безопасного анального секса</h2>
-                              <p class="news-item-card__text"></p>
-                            </div></a></div>
-          </div>
-        </section>
-        <div class="new-blog new-blog-type-standart">
-          <h2 class="new-blog__title">Bunnyblog</h2>
-          <div class="new-blog__shell">
-            <div class="new-blog__top">
-              <div class="new-slider new-slider__shell new-blog__slider" data-action="blogSlider">
-                <div class="new-blogPost new-slider__cell"><a class="new-blogPost__link" href="/articles/na-start-vnimanie-bdsm/"><span class="new-blogPost__imgBlock"><img class="new-blogPost__img" src="/media/article/teaser/bunny_bdsm.jpg" alt="На старт, внимание, БДСМ"></span><span class="new-blogPost__date">30 августа 2020 г.</span><span class="new-blogPost__title">На старт, внимание, БДСМ</span></a></div>
-                <div class="new-blogPost new-slider__cell"><a class="new-blogPost__link" href="/articles/5-sposobov-uluchshit-seksualnuyu-zhizn-v-pare/"><span class="new-blogPost__imgBlock"><img class="new-blogPost__img" src="/media/article/teaser/para_tiser.jpg" alt="5 способов улучшить сексуальную жизнь в паре"></span><span class="new-blogPost__date">28 февраля 2020 г.</span><span class="new-blogPost__title">5 способов улучшить сексуальную жизнь в паре</span></a></div>
-                <div class="new-blogPost new-slider__cell"><a class="new-blogPost__link" href="/articles/vybor-vibratora/"><span class="new-blogPost__imgBlock"><img class="new-blogPost__img" src="/media/article/teaser/bunny_vibr.jpg" alt="Выбор вибратора"></span><span class="new-blogPost__date">16 ноября 2018 г.</span><span class="new-blogPost__title">Выбор вибратора</span></a></div>
-              </div>
-            </div>
-            <div class="new-blog__bottom">
-              <section class="new-why new-why-type-standart new-why-type-desktop">
-                <div class="new-why__shell new-why__shell-type-desktop">
-                  <div class="new-accordion new-why__accordion new-why__accordion-type-desktop">
-                    <h1 class="new-button new-accordion__button new-accordion__button-type-goods new-accordion__button-action-open" data-action="accordionOpener">«Влюбленный кролик» - интернет-магазин интимных товаров</h1>
-                    <div class="new-accordion__shell new-accordion__shell-type-desktop new-accordion__shell-action-open" data-action="accordionShell">
-                      <p><span>Магазин интим-товаров для взрослых «Влюбленный кролик» занимается продажей различных игрушек для секса, эротического нижнего белья для неё и для него, а также множества аксессуаров, которые помогут разнообразить ваши ощущения в момент интимной близости.</span></p><a class="new-button new-button-type-goods new-button-type-underline" href="/about/">Подробнее</a>
-                    </div>
-                  </div>
-                  <div class="new-accordion new-why__accordion new-why__accordion-type-desktop">
-                    <button class="new-button new-accordion__button new-accordion__button-type-goods" data-action="accordionOpener">Анонимность и безопасность</button>
-                    <div class="new-accordion__shell new-accordion__shell-type-desktop" data-action="accordionShell">
-                      <p><span>Одним из главных правил нашего интернет-магазина интимных товаров является анонимность и конфиденциальность. Оставленная Вами информация будет использоваться только для доставки товара курьером, не имеющим представления о содержимом пакета, а отсутствие каких-либо логотипов гарантирует, что никто не узнает о Вашем приобретении.</span></p><a class="new-button new-button-type-goods new-button-type-underline" href="/anonymity/">Подробнее</a>
-                    </div>
-                  </div>
-                  <div class="new-accordion new-why__accordion new-why__accordion-type-desktop">
-                    <button class="new-button new-accordion__button new-accordion__button-type-goods" data-action="accordionOpener">Новое поколение интим магазина</button>
-                    <div class="new-accordion__shell new-accordion__shell-type-desktop" data-action="accordionShell">
-                      <p><span>Новое поколение интим магазина — это виртуальная витрина всех возможных сексуальных удовольствий, о которых только можно мечтать. Мы не предлагаем Вам вибраторы и вагины, мы предлагаем секс, страсть, удовольствие, игру, чувственность и азарт.</span></p><a class="new-button new-button-type-goods new-button-type-underline" href="/new-generation/">Подробнее</a>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </main>
+      </div>
     </main>
     <footer class="new-footer new-footer-type-standart">
       <!--новый блок-->

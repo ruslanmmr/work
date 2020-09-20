@@ -1,0 +1,27 @@
+extends layout/layout
+block content
+  include blocks/breadcrumbs
+  .container
+    section.section
+      h1.section__title Избранные товары
+      .row.justify-content-center
+        .account.col-xl-9
+          .card-block
+            .card-item
+              span.card-number
+                span 1111111111
+              img(src='/static/img/sale15.jpg', alt='15')
+              .delete-card-link
+                a(href='/users/bonuses/card/deleted/') удалить бонусную карту
+            .bonuses-info-wrapper
+              span.bonuses-line.info Количество бонусных рублей:
+              span.bonuses-line.size 880
+              span.description
+                | Вы можете оплатить бонусами 
+                b 20%
+                |  от заказа
+                a(href='/faq/#discount_limits') *
+          a.tie-a-new-card(href='/users/bonuses/card/')
+            span.icon
+            span.caption
+              | Привязать новую карту

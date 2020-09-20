@@ -1,6 +1,124 @@
 //Стили от 17 сентября
 @import './components/variables.scss';
 
+.input {
+  border: 1px solid #e0e0e0;
+  line-height: 20px;
+  padding: 12px 15px;
+  background-color: #fff;
+  font-size: 0.875rem;
+  display: block;
+  width: 100%;
+  &::placeholder {
+    transition: color $trs1;
+  }
+}
+.new-checkbox {
+  position: relative;
+  &__input {
+    display: none;
+    &:checked ~ .new-checkbox__label {
+      &:before {
+        background-color: #d02a2e;
+        border-color: #d02a2e;
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  &__label {
+    display: block;
+    padding: 0 0 0 30px;
+    line-height: 20px;
+    font-size: 0.875rem;
+    position: relative;
+    cursor: pointer;
+    &:before {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #000;
+      position: absolute;
+      left: 0;
+      top: 1px;
+      transition: border-color $trs1, background-color $trs1;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 5px;
+      left: 4px;
+      width: 10px;
+      height: 6px;
+      border-width: 0 0 2px 2px;
+      transform: rotate(-45deg);
+      border-style: solid;
+      border-color: #fff;
+      opacity: 0;
+      transition: opacity $trs1;
+    }
+  }
+}
+
+.notify-message {
+  padding: 16px 15px 16px 50px;
+  margin-top: 12px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  position: relative;
+  width: 100%;
+  width: 300px;
+  min-height: 52px;
+  text-align: left;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: -8px;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+    border-radius: 2px;
+  }
+  svg {
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    color: #fff;
+  }
+  &_error {
+    background-color: #FBE9EA;
+    svg {
+      background-color: #D51E28;
+      padding: 2px;
+    }
+    &:before {
+      background-color: #FBE9EA;
+    }
+  }
+  &_succes {
+    background-color: #F2F2F2;
+    svg {
+      background-color: #83BD45;
+      padding: 4px;
+    }
+    &:before {
+      background-color: #F2F2F2;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    width: 160px;
+  }
+}
+
 
 .news-item-card {
   &_color-1 {
@@ -504,5 +622,68 @@
   }
   @include media-breakpoint-down(sm) {
     margin-top: 35px;
+  }
+}
+
+.account {
+  &__profile-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  &__profile-pass-reset {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  &__profile-email {
+    position: relative;
+    padding-left: 30px;
+    margin: 0 15px 15px 0;
+    .icon {
+      width: 20px;
+      height: 20px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 4px;
+      background-color: #dfdfdf;
+      border-radius: 20px;
+      color: #c2c2c2;
+    }
+  }
+}
+
+.form-account {
+  .fancy-select {
+    .trigger {
+      border: 1px solid #e0e0e0;
+      line-height: 20px;
+      padding: 12px 15px 12px 30px;
+      background-color: #fff;
+      font-size: 0.875rem;
+      display: block;
+      width: 100%;
+      &:after {
+        top: 20px;
+        left: 15px;
+      }
+    }
+    .options {
+      top: 46px !important;
+      min-width: 100% !important;
+    }
+  }
+  &__group {
+    margin-bottom: -20px;
+  }
+  &__item {
+    margin-bottom: 20px;
+  }
+  &__submit {
+    border-radius: 0;
+    width: 100%;
   }
 }

@@ -311,17 +311,6 @@ header.new-header {
   min-width: 320px;
 }
 
-@include media-breakpoint-up(lg) {
-
-  .new-console__bag, .new-console__button, .new-console__compare {
-      padding: 10px 0;
-  }
-
-  .new-console__bag:not(:last-child), .new-console__button:not(:last-child), .new-console__compare:not(:last-child) {
-      margin: 0 20px 0 0;
-  }
-}
-
 .new-slider__card,
 .new-card-type-catalog {
   height: auto;

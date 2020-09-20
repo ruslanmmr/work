@@ -3812,6 +3812,16 @@ div[data-move=dropdownScroll] .mCSB_inside > .mCSB_container {
     align-items: center;
     position: relative;
     padding: 10px; }
+    .new-console__bag:not(:last-child),
+    .new-console__button:not(:last-child),
+    .new-console__compare:not(:last-child),
+    .new-console__star:not(:last-child) {
+      margin-right: 10px; }
+    .new-console__bag:last-child,
+    .new-console__button:last-child,
+    .new-console__compare:last-child,
+    .new-console__star:last-child {
+      margin-right: -10px; }
   .new-console__button {
     margin-right: 20px; }
   .new-console__button-action-open {
@@ -3862,7 +3872,7 @@ div[data-move=dropdownScroll] .mCSB_inside > .mCSB_container {
     box-sizing: border-box;
     height: auto;
     z-index: 11;
-    transform: translate(calc(75px - 100%), 0); }
+    transform: translate(calc(71px - 100%), 0); }
   .new-mobileMenu__console {
     background: 0 0;
     padding: 0;
@@ -4446,8 +4456,6 @@ div[data-move=dropdownScroll] .mCSB_inside > .mCSB_container {
   .new-search__icon-type-header {
     width: 26px;
     height: 26px; }
-  .new-console__bag {
-    padding: 10px 0; }
   .new-console__icon-type-bag {
     width: 23px;
     height: 27px;
@@ -4462,9 +4470,6 @@ div[data-move=dropdownScroll] .mCSB_inside > .mCSB_container {
   .new-console__count {
     top: 4px;
     right: -2px; }
-  .new-console__compare {
-    padding: 10px 0;
-    margin-right: 25px; }
   .new-console__icon-type-compare {
     width: 24px;
     height: 25px;

@@ -1,0 +1,46 @@
+extends layout/layout
+block content
+  include blocks/breadcrumbs
+  .container
+    section.section
+      h1.section__title Мои заказы
+      .row.justify-content-center
+        .account.col-xl-9
+          .cart-table-scroll
+            .cart-table.cart-table--orders
+              .cart-table-row.cart-table-row--head
+                .cart-table-col Номер заказа
+                .cart-table-col Дата
+                .cart-table-col Получение
+                .cart-table-col Сумма
+                .cart-table-col Бонус к зачислению
+                .cart-table-col Оплачен
+              .cart-table-row
+                .cart-table-col
+                  span.mobile-title Номер заказа
+                  span.art-number
+                    a(href='/users/orders/4744/') 4744
+                .cart-table-col
+                  span.mobile-title Дата
+                  | 28.03.2019
+                .cart-table-col
+                  span.mobile-title Получение
+                  | Самовывоз
+                .cart-table-col
+                  span.mobile-title Сумма
+                  | 36 ₽
+                .cart-table-col
+                  span.mobile-title Бонус к зачислению
+                  | 2
+                .cart-table-col
+                  span.mobile-title Оплачен
+                  | да
+          ul.total
+            li
+              label До скидки в 15% осталось:
+              var 15 000 ₽
+            li
+              label Бонусов начислено:
+              var 0
+              p
+                small Бонусы зачисляются только после оплаты заказа.

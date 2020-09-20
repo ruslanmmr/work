@@ -2757,26 +2757,6 @@ body > .page:after {
   .front-tabs > a {
     width: 309px; } }
 
-/* line 2462, ../sass/_main.scss */
-.account {
-  padding-top: 20px; }
-
-/* line 2466, ../sass/_main.scss */
-.account__form {
-  padding: 15px 15px 30px;
-  margin-bottom: 30px;
-  clear: both; }
-
-@media (max-width: 768px) {
-  /* line 2474, ../sass/_main.scss */
-  .account__form input[type="text"] {
-    width: 100%;
-    margin-bottom: 5px; }
-  /* line 2478, ../sass/_main.scss */
-  .account__form .small {
-    width: 49% !important;
-    margin: 0; } }
-
 /* line 2485, ../sass/_main.scss */
 .errorlist {
   padding: 10px 18px 0 18px;
@@ -2798,13 +2778,8 @@ body > .page:after {
 
 /* line 2504, ../sass/_main.scss */
 .account__email {
-  float: left;
   color: #575757;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 34px;
-  position: relative;
-  margin-left: 20px; }
+  position: relative; }
 
 /* line 2512, ../sass/_main.scss */
 .account__email:before {
@@ -2890,12 +2865,12 @@ body > .page:after {
 
 /* line 2594, ../sass/_main.scss */
 .form__title {
-  color: #575757;
-  font-size: 18px;
+  color: #000;
+  font-size: 1.125rem;
   font-weight: 700;
-  line-height: 21px;
   border: 0;
-  margin-bottom: 15px; }
+  width: 100%;
+  margin: 0 0 15px 0; }
 
 /* line 2603, ../sass/_main.scss */
 .form__input, .form__textarea {
@@ -7015,7 +6990,11 @@ body {
   width: 100%;
   margin-bottom: 30px;
   border-collapse: collapse;
-  min-width: 860px; }
+  width: 100%;
+  font-size: 0.875rem; }
+
+.cart-product-price {
+  white-space: nowrap; }
 
 @media (max-width: 767px) {
   /* line 6526, ../sass/_main.scss */
@@ -7096,8 +7075,6 @@ body {
   display: table-cell;
   padding: 15px 15px 15px 0;
   text-align: left;
-  font-size: 15px;
-  line-height: 19px;
   color: #212121;
   vertical-align: middle; }
 
@@ -9330,13 +9307,12 @@ p.reviews_empty {
   border: 4px solid transparent;
   border-top-color: #d02a2e;
   top: 13px;
-  left: 10px; }
+  left: 10px;
+  transition: transform 0.25s ease-out; }
 
 /* line 40, ../sass/_select.scss */
 .fancy-select .trigger.open:after {
-  border-top-color: transparent;
-  border-bottom-color: #d02a2e;
-  top: 9px; }
+  transform: translateY(-4px) rotate(180deg); }
 
 /* line 46, ../sass/_select.scss */
 .fancy-select ul.options {
@@ -11187,15 +11163,19 @@ ul#mainSlider {
 
 /* line 3, ../sass/pages/_cart.scss */
 .discount-help-wrapper ul {
-  list-style-type: none; }
+  list-style-type: none;
+  padding: 0 !important;
+  margin: 0 0 30px 0 !important; }
 
 /* line 5, ../sass/pages/_cart.scss */
 .discount-help-wrapper ul li {
-  text-align: right; }
+  text-align: right;
+  padding: 0 !important; }
 
 /* line 7, ../sass/pages/_cart.scss */
 .discount-help-wrapper ul li:before {
-  background-color: transparent; }
+  background-color: transparent;
+  display: none !important; }
 
 /* line 13, ../sass/pages/_cart.scss */
 .promo-code td {

@@ -1,3 +1,108 @@
+.input {
+  border: 1px solid #e0e0e0;
+  line-height: 20px;
+  padding: 12px 15px;
+  background-color: #fff;
+  font-size: 0.875rem;
+  display: block;
+  width: 100%; }
+  .input::-moz-placeholder {
+    -moz-transition: color 0.25s ease-out;
+    transition: color 0.25s ease-out; }
+  .input:-ms-input-placeholder {
+    -ms-transition: color 0.25s ease-out;
+    transition: color 0.25s ease-out; }
+  .input::placeholder {
+    transition: color 0.25s ease-out; }
+
+.new-checkbox {
+  position: relative; }
+  .new-checkbox__input {
+    display: none; }
+    .new-checkbox__input:checked ~ .new-checkbox__label:before {
+      background-color: #d02a2e;
+      border-color: #d02a2e; }
+    .new-checkbox__input:checked ~ .new-checkbox__label:after {
+      opacity: 1; }
+  .new-checkbox__label {
+    display: block;
+    padding: 0 0 0 30px;
+    line-height: 20px;
+    font-size: 0.875rem;
+    position: relative;
+    cursor: pointer; }
+    .new-checkbox__label:before {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #000;
+      position: absolute;
+      left: 0;
+      top: 1px;
+      transition: border-color 0.25s ease-out, background-color 0.25s ease-out; }
+    .new-checkbox__label:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 5px;
+      left: 4px;
+      width: 10px;
+      height: 6px;
+      border-width: 0 0 2px 2px;
+      transform: rotate(-45deg);
+      border-style: solid;
+      border-color: #fff;
+      opacity: 0;
+      transition: opacity 0.25s ease-out; }
+
+.notify-message {
+  padding: 16px 15px 16px 50px;
+  margin-top: 12px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  position: relative;
+  width: 100%;
+  width: 300px;
+  min-height: 52px;
+  text-align: left; }
+  .notify-message:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: -8px;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+    border-radius: 2px; }
+  .notify-message svg {
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    color: #fff; }
+  .notify-message_error {
+    background-color: #FBE9EA; }
+    .notify-message_error svg {
+      background-color: #D51E28;
+      padding: 2px; }
+    .notify-message_error:before {
+      background-color: #FBE9EA; }
+  .notify-message_succes {
+    background-color: #F2F2F2; }
+    .notify-message_succes svg {
+      background-color: #83BD45;
+      padding: 4px; }
+    .notify-message_succes:before {
+      background-color: #F2F2F2; }
+  @media (max-width: 1023.98px) {
+    .notify-message {
+      width: 160px; } }
+
 .news-item-card_color-1 .news-item-card__content:before {
   background: #BC2B77 linear-gradient(246.04deg, #BC2B77 0%, #F42E6B 50%, #CF43FE 100%); }
 
@@ -396,3 +501,56 @@
 @media (max-width: 767.98px) {
   .contacts-info {
     margin-top: 35px; } }
+
+.account__profile-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px; }
+
+.account__profile-pass-reset {
+  display: inline-block;
+  margin-bottom: 15px; }
+
+.account__profile-email {
+  position: relative;
+  padding-left: 30px;
+  margin: 0 15px 15px 0; }
+  .account__profile-email .icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 4px;
+    background-color: #dfdfdf;
+    border-radius: 20px;
+    color: #c2c2c2; }
+
+.form-account .fancy-select .trigger {
+  border: 1px solid #e0e0e0;
+  line-height: 20px;
+  padding: 12px 15px 12px 30px;
+  background-color: #fff;
+  font-size: 0.875rem;
+  display: block;
+  width: 100%; }
+  .form-account .fancy-select .trigger:after {
+    top: 20px;
+    left: 15px; }
+
+.form-account .fancy-select .options {
+  top: 46px !important;
+  min-width: 100% !important; }
+
+.form-account__group {
+  margin-bottom: -20px; }
+
+.form-account__item {
+  margin-bottom: 20px; }
+
+.form-account__submit {
+  border-radius: 0;
+  width: 100%; }
