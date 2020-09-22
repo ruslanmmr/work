@@ -1,0 +1,68 @@
+.button {
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.875rem;
+  transition: color $trs1, border-color $trs1, background-color $trs1;
+  height: 40px;
+  line-height: 38px;
+  padding: 0 15px;
+  border-radius: 2px;
+  width: 100%;
+  min-width: 144px;
+  font-weight: 400;
+  .icon {
+    height: 18px;
+    width: 18px;
+    transition: fill $trs1;
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+  &_style-1 {
+    border: 1px solid $color-accent;
+    color: $color-accent;
+    background-color: transparent;;
+    .icon {
+      fill: $color-accent;
+      stroke: $color-accent;
+    }
+    &.touch,
+    &.hover {
+      color: #fff;
+      background-color: $color-accent-hover;
+      border-color: $color-accent-hover;
+      .icon {
+        fill: #fff;
+        stroke: #fff;
+      }
+    }
+    &.focus {
+      background-color: $color-accent-focus;
+      border-color: $color-accent-focus;
+    }
+  }
+  &_style-2 {
+    border: 1px solid $color-accent;
+    color: #fff;
+    background-color: $color-accent;
+    .icon {
+      fill: #fff;
+      stroke: #fff;
+    }
+    &.touch,
+    &.hover {
+      background-color: $color-accent-hover;
+      border-color: $color-accent-hover;
+    }
+    &.focus {
+      background-color: $color-accent-focus;
+      border-color: $color-accent-focus;
+    }
+  }
+}

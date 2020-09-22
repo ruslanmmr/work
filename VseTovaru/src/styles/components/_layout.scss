@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main {
+  flex: 1 1 100%;
+}
+
+.section {
+  position: relative;
+  margin-bottom: 60px;
+  &__title {
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+  @include media-breakpoint-down(sm) {
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+}

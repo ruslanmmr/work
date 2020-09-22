@@ -1,0 +1,13 @@
+.header {
+  flex-shrink: 0;
+}
+
+.logo {
+  display: block;
+  width: 240px;
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
