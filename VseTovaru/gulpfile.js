@@ -48,9 +48,9 @@ gulp.task("scripts", function () {
     .pipe(sourcemaps.write("./maps/"))
     .pipe(gulp.dest("./build/scripts/"))
     .pipe(filter(['**/*.js']))
-    .pipe(uglify())
+    /* .pipe(uglify())
     .pipe(rename({suffix: ".min"}))
-    .pipe(gulp.dest("./build/scripts/"))
+    .pipe(gulp.dest("./build/scripts/")) */
     .pipe(debug({"title": "scripts"}))
     .on("end", browsersync.reload);
 });
@@ -63,9 +63,9 @@ gulp.task("styles", function() {
     .pipe(sourcemaps.write("./maps/"))
     .pipe(gulp.dest("./build/styles/"))
     .pipe(filter(['**/*.css']))
-    .pipe(mincss({level:{1:{specialComments:'none'},2:{}}}))
+    /* .pipe(mincss({level:{1:{specialComments:'none'},2:{}}}))
     .pipe(rename({suffix: ".min"}))
-    .pipe(gulp.dest("./build/styles/"))
+    .pipe(gulp.dest("./build/styles/")) */
     .pipe(debug({"title": "styles"}))
     .on("end", browsersync.reload);
 });

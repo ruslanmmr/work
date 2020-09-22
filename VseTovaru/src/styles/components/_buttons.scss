@@ -6,34 +6,36 @@
   text-overflow: ellipsis;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  font-size: 0.875rem;
   transition: color $trs1, border-color $trs1, background-color $trs1;
-  height: 40px;
-  line-height: 38px;
+  height: 36px;
+  line-height: 32px;
+  border-width: 2px;
+  border-style: solid;
   padding: 0 15px;
   border-radius: 2px;
   width: 100%;
   min-width: 144px;
-  font-weight: 400;
+  font-weight: 700;
   .icon {
-    height: 18px;
-    width: 18px;
-    transition: fill $trs1;
+    height: 20px;
+    width: 20px;
+    transition: inherit;
     &:not(:last-child) {
       margin-right: 12px;
     }
   }
   &_style-1 {
-    border: 1px solid $color-accent;
+    border-color: $color-accent;
     color: $color-accent;
     background-color: transparent;;
     .icon {
-      fill: $color-accent;
-      stroke: $color-accent;
+      color: $color-accent;
     }
     &.touch,
-    &.hover {
+    &.hover,
+    &.active {
       color: #fff;
       background-color: $color-accent-hover;
       border-color: $color-accent-hover;
@@ -48,15 +50,15 @@
     }
   }
   &_style-2 {
-    border: 1px solid $color-accent;
+    border-color: $color-accent;
     color: #fff;
     background-color: $color-accent;
     .icon {
-      fill: #fff;
-      stroke: #fff;
+      color: #fff;
     }
     &.touch,
-    &.hover {
+    &.hover,
+    &.active {
       background-color: $color-accent-hover;
       border-color: $color-accent-hover;
     }
@@ -64,5 +66,73 @@
       background-color: $color-accent-focus;
       border-color: $color-accent-focus;
     }
+  }
+  &_style-3 {
+    border-color: $color-accent;
+    background-color: $color-accent;
+    color: $color-accent2;
+    .icon {
+      color: $color-accent2;
+    }
+    &.touch,
+    &.hover,
+    &.active {
+      border-color: $color-accent2;
+    }
+  }
+  &_style-4 {
+    border-color: #fff;
+    background-color: #fff;
+    color: $color-accent2;
+    .icon {
+      color: $color-accent2;
+    }
+    &.touch,
+    &.hover,
+    &.active {
+      border-color: $color-accent2;
+      background-color: $color-accent2;
+      color: #fff;
+    }
+  }
+  &_style-5 {
+    border: none;
+    line-height: 36px;
+    padding: 0;
+    min-width: 0px;
+    font-weight: normal;
+    font-size: 1.25rem;
+    color: $color-accent2;
+    width: auto;
+    border-bottom: 1px solid $color-accent2;
+    position: relative;
+    overflow: visible;
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 0 0 6px;
+      border-color: transparent transparent transparent $color-accent2;
+      transition: inherit;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    &.touch,
+    &.hover {
+      color: $color-accent;
+      border-color: $color-accent;
+      &:after {
+        border-color: transparent transparent transparent $color-accent;
+      }
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 1rem;
+    }
+  }
+  &_radius {
+    border-radius: 36px;
   }
 }

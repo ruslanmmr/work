@@ -15,9 +15,138 @@ header.header
             a(href="#").header-nav__link Юридическим лицам
           li.header-nav__item
             a(href="#").header-nav__link Контакты
-      <i class="fab fa-accessible-icon"></i>
+      .header-socials
+        ul.header-socials__list
+          li.header-socials__item 
+            a(href="#").header-socials__link 
+              <i class="fab fa-facebook-f"></i>
+          li.header-socials__item 
+            a(href="#").header-socials__link  
+              <i class="fab fa-vk"></i>
+          li.header-socials__item 
+            a(href="#").header-socials__link
+              <i class="fab fa-instagram"></i>
+          li.header-socials__item 
+            a(href="#").header-socials__link
+              <i class="fab fa-odnoklassniki"></i>
+      a(href="#").header__auth-button
+        svg.icon
+          use(xlink:href='img/icons/icons-sprite.svg#key')
+        span Войти
+
+      
   .header__center
     .container
-      a(href="#").logo
+      a(href="javascript:void(0);").nav-open
+        span Меню
+      a(href="index.html").logo
         img(src="./img/logos/logo.png", alt="logo").logo__image
+      .header__contacts
+        .header__phone
+          a(href="tel:#") 
+            strong +7 (800) 999-77-55
+          br
+          | многоканальный
+        .header__info
+          | Режим работы: 
+          strong 10:00 - 22:00
+          br
+          | Адрес: 
+          strong Москва, Красноармейская 15 
+      .header__buttons
+        a(href="#").header__icon-button
+          svg.icon
+            use(xlink:href='img/icons/icons-sprite.svg#heart')
+          span 37
+        a(href="#").header__icon-button
+          svg.icon
+            use(xlink:href='img/icons/icons-sprite.svg#cart')
+          span 25
   .header__bottom
+    .container
+      .desktop-catalogue.toggle-section(data-hover)
+        a(href="javascript:void(0);").button.button_style-3.desktop-catalogue__trigger.toggle-section__trigger Каталог товаров
+        .desktop-catalogue__content.toggle-section__content
+          mixin Section(title)
+            .desktop-catalogue-section.toggle-section(data-slide)
+              a(href="javascript:void(0);").toggle-section__trigger.desktop-catalogue-section__trigger
+                span=title 
+                svg.icon
+                  use(xlink:href='img/icons/icons-sprite.svg#arrow')
+              ul.desktop-catalogue-section__list.toggle-section__content
+                li.desktop-catalogue-section__item
+                  a(href="#").desktop-catalogue-section__link Ультрафиолетовые
+                li.desktop-catalogue-section__item
+                  a(href="#").desktop-catalogue-section__link Кварцевые
+                li.desktop-catalogue-section__item
+                  a(href="#").desktop-catalogue-section__link Переносные
+          .desktop-catalogue__content-section
+            +Section('Бактерицидные настольные лампы')
+            +Section('Светодиодные лампы')
+            +Section('Садово-парковые светильники')
+            +Section('Светодиодная лента и комплектующие')
+          .desktop-catalogue__content-section
+            +Section('Бактерицидные настольные лампы')
+            +Section('Светодиодные лампы')
+            +Section('Садово-парковые светильники')
+            +Section('Светодиодная лента и комплектующие')
+      .header-search
+        form(action="#").header-search__form
+          .input.header-search__input
+            input(type="text" name='name' placeholder="Поиск по сайту").input__element
+          button.button.button_style-3.header-search__button
+            svg.icon
+              use(xlink:href='img/icons/icons-sprite.svg#lupa')
+            span Искать
+
+nav.mobile-nav
+  .mobile-nav__block(data-scroll-lock-scrollable)
+    a(href="javascript:void(0);").mobile-nav__close
+    .mobile-nav__content  
+      a(href="#").logo.mobile-nav__logo
+        img(src="./img/logos/logo-white.png", alt="logo").logo__image
+      .mobile-nav__nav
+        a(href="#").mobile-nav__registration Вход | Регистрация
+        .mobile-nav__catalogue
+          mixin section(title)
+            .mobile-catalogue-section.toggle-section(data-slide)
+              a(href="javascript:void(0);").toggle-section__trigger.mobile-catalogue-section__trigger
+                span=title 
+                svg.icon
+                  use(xlink:href='img/icons/icons-sprite.svg#arrow')
+              ul.mobile-catalogue-section__list.toggle-section__content
+                li.mobile-catalogue-section__item
+                  a(href="#").mobile-catalogue-section__link Ультрафиолетовые
+                li.mobile-catalogue-section__item
+                  a(href="#").mobile-catalogue-section__link Кварцевые
+                li.mobile-catalogue-section__item
+                  a(href="#").mobile-catalogue-section__link Переносные
+          +section('Бактерицидные настольные лампы')
+          +section('Светодиодные лампы')
+          +section('Садово-парковые светильники')
+          +section('Светодиодная лента и комплектующие')
+        ul.mobile-nav__list
+          li.mobile-nav__item
+            a(href="#").mobile-nav__link О компании
+          li.mobile-nav__item
+            a(href="#").mobile-nav__link Доставка и оплата
+          li.mobile-nav__item
+            a(href="#").mobile-nav__link Акции
+          li.mobile-nav__item
+            a(href="#").mobile-nav__link Новости
+          li.mobile-nav__item
+            a(href="#").mobile-nav__link Юридическим лицам
+          li.mobile-nav__item
+            a(href="#").mobile-nav__link Контакты
+        .mobile-nav__contact
+          .mobile-nav__phone
+            a(href="tel:#") 
+              strong +7 (800) 999-77-55
+            br
+            | многоканальный
+          .mobile-nav__info
+            | Режим работы: 
+            strong 10:00 - 22:00
+            br
+            | Адрес: 
+            strong Москва, Красноармейская 15 

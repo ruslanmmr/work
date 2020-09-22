@@ -10,7 +10,7 @@
     border-radius: 2px;
     transition: background-color 5000s;
     width: 100%;
-    font-size: 0.875rem;
+    color: $color-text;
     &:-webkit-autofill,
     &:-webkit-autofill:hover, 
     &:-webkit-autofill:focus,
@@ -20,7 +20,7 @@
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus {
-      -webkit-text-fill-color: inherit;
+      -webkit-text-fill-color: $color-text;
       box-shadow: 0 0 0px 1000px #fff inset;
     }
     &::-webkit-outer-spin-button,

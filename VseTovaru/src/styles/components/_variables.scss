@@ -3,8 +3,11 @@ $container-max-widths: (      sm:540px, md:720px, lg:960px, xl:1170px);
 $grid-breakpoints:     (xs:0, sm:576px, md:768px, lg:1024px, xl:1200px);
 $grid-gutter-width: 20px;
 $container-padding-x: 15px;
+//fontawesome
+$fa-font-path: '../fonts';
 
-$trs1: .25s ease-out;
+
+$trs1: .2s ease-out;
 $trs2: .5s ease-out;
 $trs3: 1s ease-out;
 
@@ -19,8 +22,8 @@ $color-link: $color-accent;
 $color-link-hover: $color-accent-hover;
 $color-link-visited: #B46CB8;
 
-$color-text: #333333;
-$color-text-muted: #767676;
+$color-text: $color-accent2;
+$color-text-muted: rgba(25, 41, 82, 0.5);
 $color-text-light: #BDBDBD;
 
 $color-blockquote: #E5E5E5;
@@ -32,3 +35,5 @@ $color-sections-bg: #F5F5F5;
 
 $color-border-1: #D9D9DE;
 $color-border-2: #BDBDBD;
+
+$header-bg: #eceff1;

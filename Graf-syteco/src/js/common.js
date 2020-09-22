@@ -342,7 +342,7 @@ function toggle() {
       let timeout;
       
       $toggle.add($content).on('mouseenter', function(event){
-        if(!isTouch) {
+        if(!TouchHoverEvents.touched) {
           if(timeout) clearTimeout(timeout);
           state=true;
           check();
@@ -350,7 +350,7 @@ function toggle() {
       })
 
       $toggle.add($content).on('mouseleave', function(event){
-        if(!isTouch) {
+        if(!TouchHoverEvents.touched) {
           let delay;
           if($(this).is($toggle)) {
             delay=500;

@@ -2,4 +2,101 @@ extends layout/layout
 block title
   title Template
 block content
-  .container
+  section.section.banners
+    .container
+      .row.banners__container
+        .col-lg-5.order-lg-2
+          .banner-block.banner-block_style-3.grid__block
+            .banner-block__container
+              img(src="./img/ddd.png", alt="image").banner-block__image
+              .banner-block__content
+                .banner-block__text
+                  h2.banner-block__title Товар месяца
+                  p.banner-block__text Лучшее дизайнерское<br> решение для интерьера
+                .banner-block__bottom
+                  a(href="#").button.button_style-5.banner-block__button Заказать
+                  p.banner-block__text Подвесной светильник SECTO OCTO<br> 4240 LAMP от IMPERIUMLOFT
+        .col-lg-7
+          .banner-block.banner-block_style-1
+            .banner-block__container
+              img(src="./img/sadff.png", alt="image").banner-block__image
+              .banner-block__content
+                .banner-block__text
+                  h2.banner-block__title Новое поступление
+                  p.banner-block__text Интерьерные светильники
+                .banner-block__bottom
+                  a(href="#").button.button_style-4.button_radius.banner-block__button Перейти в каталог
+          .banner-block.banner-block_style-2
+            .banner-block__container
+              img(src="./img/dssd.png", alt="image").banner-block__image
+              .banner-block__content
+                .banner-block__text
+                  h2.banner-block__title Включаем скидки
+                  p.banner-block__text Светодиодная лампа REV 30Вт, T100, E27, 6500К, 2400Лм (32417 1)
+                .banner-block__bottom
+                  span.banner-block__discount -20%
+                  a(href="#").button.button_style-5.banner-block__button Подробнее
+  
+  section.section   
+    .container
+      .row.grid
+        mixin block(title, href)
+          .m-catalogue-card.grid__block.col-xl-20pc.col-lg-3.col-md-4.col-6
+            .m-catalogue-card__container.jsTouchHover
+              .image.image_contain.m-catalogue-card__image
+                img(src=href, alt="image").lazyload
+              .m-catalogue-card__content
+                h2.m-catalogue-card__title=title
+                a(href="#").button.button_style-5.m-catalogue-card__button Перейти в раздел
+        +block('Бактерицидные настольные лампы', './img/image1.png')
+        +block('Светодиодные лампы', './img/image2.png')
+        +block('Садово-парковые светильники', './img/image3.png')
+        +block('Светодиодная лента и комплектующие', './img/image4.png')
+        +block('Интерьерные светильники', './img/image5.png')
+        +block('Светодиодные светильники', './img/image6.png')
+        +block('Светодиодные прожекторы', './img/image7.png')
+        +block('Светодиодные свечи', './img/image8.png')
+        +block('Новогодняя продукция', './img/image9.png')
+        +block('Встраиваемые светильники', './img/image10.png')
+        +block('Аккумуляторные светильники', './img/image11.png')
+        +block('Электротовары и комплектующие', './img/image12.png')
+        +block('Лампы', './img/image13.png', './img/image13.png')
+  
+  section.section.news-section
+    .container
+      .news-section__content
+        h2.section__title Новости
+        .row.news-section__container
+          //block
+          .news-block.col-xl-3.col-lg-4.col-sm-12
+            .news-block__container
+              a(href="#").news-block__image.image.image_contain
+                img(src="./img/ddddd.jpg", alt="image").lazyload
+              .news-block__content
+                span.news-block__date 13.05.2020
+                h5.news-block__title Новинка!<br> Садово-парковые светильники Feron серия<br> «Марсель» PL6001, PL6002
+                .news-block__text
+                  p Светильники уличные декоративные серии «Марсель» TM Feron предназначены для общего и...
+                a(href="#").button.button_style-5.news-block__button Подробнее
+          //block
+          .news-block.col-xl-3.col-lg-4.col-sm-12
+            .news-block__container
+              a(href="#").news-block__image.image.image_contain
+                img(src="./img/1466431479.jpg", alt="image").lazyload
+              .news-block__content
+                span.news-block__date 13.05.2020
+                h5.news-block__title Новинка!<br> Подвесной светильник <br> Tom Dixon Melt
+                .news-block__text
+                  p Obsessed with the idea of creating an imperfect, organic and naturalistic lighting object, Melt was created in collaboration...
+                a(href="#").button.button_style-5.news-block__button Подробнее
+          //block
+          .news-block.col-xl-3.col-lg-4.col-sm-12
+            .news-block__container
+              a(href="#").news-block__image.image.image_contain
+                img(src="./img/logo_stekker123.png", alt="image").lazyload
+              .news-block__content
+                span.news-block__date 07.04.2020
+                h5.news-block__title Новинка!<br> Тестер-пробник STEKKER<br> TST 500-3
+                .news-block__text
+                  p Тестер-пробник ТМ «STEKKER» серии TST предназначен для тестирования путем световой индикации...
+                a(href="#").button.button_style-5.news-block__button Подробнее

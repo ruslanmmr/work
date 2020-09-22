@@ -16,8 +16,10 @@ var brakepoints = {
 $(document).ready(function () {
   TouchHoverEvents.init();
   select.init();
+  header.init();
   lazy();
-  console.log('_');
+  toggle();
+  nav();
 }); //hover/touch custom events
 
 var TouchHoverEvents = {
@@ -181,4 +183,146 @@ var select = {
     }
   }
 };
+
+function toggle() {
+  var $section = $('.toggle-section'),
+      speed = 250;
+  $section.each(function () {
+    var $this = $(this),
+        $toggle = $this.children('.toggle-section__trigger'),
+        $content = $this.children('.toggle-section__content'),
+        state = $this.hasClass('active') ? true : false,
+        initialized;
+    $toggle.on('click', function () {
+      state = !state ? true : false;
+      check();
+    });
+
+    if ($this.is('[data-hover]')) {
+      var timeout;
+      $toggle.add($content).on('mouseenter', function (event) {
+        if (!TouchHoverEvents.touched) {
+          if (timeout) clearTimeout(timeout);
+          state = true;
+          check();
+        }
+      });
+      $toggle.add($content).on('mouseleave', function (event) {
+        if (!TouchHoverEvents.touched) {
+          var delay;
+
+          if ($(this).is($toggle)) {
+            delay = 500;
+          } else {
+            delay = 100;
+          }
+
+          timeout = setTimeout(function () {
+            state = false;
+            check();
+          }, delay);
+        }
+      });
+    }
+
+    if ($this.is('[data-out-hide]') || $this.is('[data-hover]')) {
+      $(document).on('click touchstart', function (event) {
+        var $target = $(event.target);
+
+        if (!$target.closest($content).length && !$target.closest($toggle).length && state) {
+          state = false;
+          check();
+        }
+      });
+    }
+
+    function check() {
+      if (state) {
+        $this.add($content).add($toggle).addClass('active');
+
+        if ($this.is('[data-slide]')) {
+          $content.slideDown(speed);
+        }
+      } else {
+        $this.add($toggle).add($content).removeClass('active');
+
+        if ($this.is('[data-slide]')) {
+          if (initialized) {
+            $content.stop().slideUp(speed);
+          } else {
+            $content.hide(0);
+          }
+        }
+      }
+    }
+
+    check();
+    initialized = true;
+  });
+}
+
+var header = {
+  init: function init() {
+    var _this3 = this;
+
+    this.el = $('.header');
+    this.height = this.el.height();
+    this.isFixed = false;
+    this.scroll = $(window).scrollTop();
+    this.checkFixed();
+    $(window).scroll(function () {
+      _this3.scroll = $(window).scrollTop();
+
+      _this3.checkFixed();
+    });
+  },
+  checkFixed: function checkFixed() {
+    if (this.scroll > this.height && !this.isFixed) {
+      this.isFixed = true;
+      this.el.addClass('header_fixed');
+    } else if (this.scroll <= this.height - 56 && this.isFixed) {
+      this.isFixed = false;
+      this.el.removeClass('header_fixed');
+    }
+  }
+};
+
+function nav() {
+  var $open = $('.nav-open'),
+      $close = $('.mobile-nav__close'),
+      $nav = $('.mobile-nav'),
+      $container = $('.mobile-nav__block'),
+      state;
+  $open.on('click', function (event) {
+    event.preventDefault();
+
+    if (!state) {
+      open();
+    }
+  });
+  $close.on('click', function (event) {
+    event.preventDefault();
+
+    if (state) {
+      close();
+    }
+  });
+  $nav.on('touchstart', function (event) {
+    if (state && $(event.target).closest($container).length == 0 && event.type == 'touchstart') {
+      close();
+    }
+  });
+
+  function open() {
+    state = true;
+    scrollLock.disablePageScroll();
+    $nav.addClass('active');
+  }
+
+  function close() {
+    state = false;
+    scrollLock.enablePageScroll();
+    $nav.removeClass('active');
+  }
+}
 //# sourceMappingURL=maps/common.js.map
