@@ -622,6 +622,27 @@ ol:not([class]) {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.25s ease-out, visibility 0.25s ease-out; }
+  .slider .slick-dots {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    justify-content: center;
+    display: flex; }
+    .slider .slick-dots li:not(:last-child) {
+      margin-right: 8px; }
+    .slider .slick-dots button {
+      font-size: 0;
+      width: 8px;
+      height: 8px;
+      background-color: #F3F6FB;
+      border-radius: 8px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #d51e28;
+      display: block;
+      transition: border-color 0.25s ease-out, background-color 0.25s ease-out; }
+    .slider .slick-dots .slick-active button {
+      background-color: #d51e28; }
   .slider.slick-initialized {
     display: block;
     opacity: 1;
@@ -635,25 +656,14 @@ ol:not([class]) {
     display: block;
     display: flex;
     flex-wrap: nowrap; }
+  .slider img {
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out; }
+  .slider .slick-loading {
+    opacity: 0;
+    visibility: hidden; }
   .slider_grid .slick-dots {
     display: none !important;
-    justify-content: center;
     margin-top: 20px; }
-    .slider_grid .slick-dots li:not(:last-child) {
-      margin-right: 8px; }
-    .slider_grid .slick-dots button {
-      font-size: 0;
-      width: 8px;
-      height: 8px;
-      background-color: #F3F6FB;
-      border-radius: 8px;
-      border-width: 1px;
-      border-style: solid;
-      border-color: #d51e28;
-      display: block;
-      transition: border-color 0.25s ease-out, background-color 0.25s ease-out; }
-    .slider_grid .slick-dots .slick-active button {
-      background-color: #d51e28; }
   @media (max-width: 1023.98px) {
     .slider_grid .slick-dots {
       display: flex !important; } }
@@ -2203,6 +2213,14 @@ ol:not([class]) {
   height: 295px;
   flex-direction: column;
   box-shadow: 1px 1px 0 0 #c4c4c4; }
+  @media (max-width: 575.98px) {
+    .new-card-type-catalog {
+      width: 80%;
+      height: auto; } }
+
+@media (max-width: 575.98px) {
+  .related_product {
+    height: auto; } }
 
 .new-content__catalog {
   flex-wrap: wrap;

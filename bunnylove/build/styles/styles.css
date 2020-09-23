@@ -9740,7 +9740,8 @@ table {
 th,
 td {
   padding: 6px 10px;
-  border-left: 2px solid #fff; }
+  border-left: 2px solid #fff;
+  transition: background-color 0.25s ease-out; }
 
 /* line 33, ../sass/styles.scss */
 th:first-child,

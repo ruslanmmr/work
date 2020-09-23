@@ -750,8 +750,6 @@ nav.menu .close {
     content: ' ';
     display: block; }
   .teaser {
-    padding: 16px 5% 17px 5%;
-    width: 50%;
     margin: 0px;
     display: flex;
     flex-direction: column;
@@ -985,10 +983,6 @@ nav.menu .close {
     margin-left: auto;
     margin-right: auto;
     text-align: center; }
-  .table-grey tr:hover td {
-    background-color: #fff; }
-  tr:nth-child(odd) td {
-    background-color: #fff; }
   .cart-thumb__inner {
     background-color: #fff; }
   .table-headers {

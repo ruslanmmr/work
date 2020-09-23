@@ -726,6 +726,35 @@ ol:not([class]) {
   opacity: 0;
   visibility: hidden;
   transition: opacity $trs1, visibility $trs1;
+  .slick-dots {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    li {
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+    button {
+      font-size: 0;
+      width: 8px;
+      height: 8px;
+      background-color: #F3F6FB;
+      border-radius: 8px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #d51e28;
+      display: block;
+      transition: border-color $trs1, background-color $trs1;
+    }
+    .slick-active {
+      button {
+        background-color: #d51e28;
+      }
+    }
+  }
   &.slick-initialized {
     display: block;
     opacity: 1;
@@ -742,33 +771,17 @@ ol:not([class]) {
     display: flex;
     flex-wrap: nowrap;
   }
+  img {
+    transition: opacity $trs2, visibility $trs2;
+  }
+  .slick-loading {
+    opacity: 0;
+    visibility: hidden;
+  }
   &_grid {
     .slick-dots {
       display: none !important;
-      justify-content: center;
       margin-top: 20px;
-      li {
-        &:not(:last-child) {
-          margin-right: 8px;
-        }
-      }
-      button {
-        font-size: 0;
-        width: 8px;
-        height: 8px;
-        background-color: #F3F6FB;
-        border-radius: 8px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #d51e28;
-        display: block;
-        transition: border-color $trs1, background-color $trs1;
-      }
-      .slick-active {
-        button {
-          background-color: #d51e28;
-        }
-      }
     }
   }
   @include media-breakpoint-down(md) {
@@ -2793,14 +2806,19 @@ ol:not([class]) {
   box-sizing: border-box;
   position: relative;
   height: 295px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-shadow: 1px 1px 0 0 #c4c4c4;
-  box-shadow: 1px 1px 0 0 #c4c4c4
+  box-shadow: 1px 1px 0 0 #c4c4c4;
+  @include media-breakpoint-down(xs) {
+    width: 80%;
+    height: auto;
+  } 
 }
 
+@include media-breakpoint-down(xs) {
+  .related_product {
+    height: auto;
+  }
+}
 .new-content__catalog {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;

@@ -10978,6 +10978,7 @@ th,
 td {
   padding: 6px 10px;
   border-left: 2px solid #fff;
+  transition: background-color $trs1;
 }
 /* line 33, ../sass/styles.scss */
 th:first-child,

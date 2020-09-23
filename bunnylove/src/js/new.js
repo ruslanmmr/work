@@ -45,6 +45,8 @@ function header() {
 
 let slider = {
   el: $('.slider'),
+  arrowPrev: '<svg class="icon" stroke="none" fill="currentColor" viewBox="0 0 10.5 18.1"><path d="M9,0l1.4,1.4L2.8,9l7.6,7.6L9,18.1L0,9C0,9,9.1,0,9,0z"></path></svg>',
+  arrowNext: '<svg class="icon" stroke="none" fill="currentColor" viewBox="0 0 10.5 18.1"><path d="M1.4,18.1L0,16.7l7.6-7.6L0,1.5L1.4,0l9,9.1C10.4,9.1,1.3,18.1,1.4,18.1z"></path></svg>',
   init: function() {
     slider.el.each(function () {
       let slideCount = 1,
@@ -67,7 +69,15 @@ let slider = {
         slideCountSm = 2;
         slideCountXs = 1;
         initSlider($(this));
-      } 
+      } else if($(this).is('.new-promo__slider')) {
+        slideCount = 1;
+        slideCountLg = 1;
+        slideCountMd = 3;
+        slideCountSm = 2;
+        slideCountXs = 1;
+        autoplay = true;
+        initSlider($(this));
+      }
 
       function initSlider($target) {
         $target.slick({
@@ -80,7 +90,7 @@ let slider = {
           slidesToShow: slideCount,
           slidesToScroll: slideCount,
           autoplay: autoplay,
-          autoplaySpeed: 5000,
+          autoplaySpeed: 3000,
           responsive: [{
               breakpoint: brakepoints.lg,
               settings: {
@@ -110,6 +120,35 @@ let slider = {
               }
             }
           ]
+        });
+      }
+
+      //product-slider
+
+      if($(this).is('.product-slider')) {
+        $(this).slick({
+          slidesToShow: 1,
+          lazyLoad: 'ondemand',
+          slidesToScroll: 1,
+          arrows: false,
+          dots: false,
+          rows: 0,
+          asNavFor: '.product-nav-slider'
+        });
+      }
+      if($(this).is('.product-nav-slider')) {
+        $(this).slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          lazyLoad: 'ondemand',
+          asNavFor: '.product-slider',
+          dots: false,
+          rows: 0,
+          centerMode: true,
+          centerPadding: 0,
+          focusOnSelect: true,
+          prevArrow: `<button type="button" class="product-nav-slider__arrow product-nav-slider__arrow-prev">${slider.arrowPrev}</button>`,
+          nextArrow: `<button type="button" class="product-nav-slider__arrow product-nav-slider__arrow-next">${slider.arrowNext}</button>`
         });
       }
     
