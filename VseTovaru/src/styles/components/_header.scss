@@ -9,7 +9,7 @@
     transition: transform $trs2;
     position: fixed;
     top: -56px;
-    transform: translateY(100%);
+    transform: translateY(56px);
     @include media-breakpoint-up(sm) {
       .header__top,
       .header__center {

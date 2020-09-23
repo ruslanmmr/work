@@ -8479,7 +8479,7 @@ a:not([class]):hover {
     transition: transform 0.5s ease-out;
     position: fixed;
     top: -56px;
-    transform: translateY(100%); }
+    transform: translateY(56px); }
     @media (min-width: 576px) {
       .header_fixed .header__top,
       .header_fixed .header__center {
