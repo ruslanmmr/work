@@ -15,6 +15,9 @@
       .header__center {
         display: none;
       }
+      .header__buttons-bottom {
+        display: flex;
+      }
     }
     @include media-breakpoint-down(xs) {
       .header__top,
@@ -84,6 +87,11 @@
   &__buttons {
     display: flex;
   }
+  &__buttons-bottom {
+    display: none;
+    margin-left: 20px;
+    flex: 0 0 auto;
+  }
   &__icon-button {
     flex-shrink: 0;
     display: block;
@@ -132,6 +140,7 @@
     .container {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
   }
   @include media-breakpoint-down(md) {
@@ -215,6 +224,24 @@
     line-height: 32px;
     height: 36px;
     border-radius: 36px;
+    padding-right: 70px;
+    &::before,
+    &:after {
+      content: '';
+      display: block;
+      height: 2px;
+      background-color: $color-accent2;
+      right: 16px;
+      position: absolute;
+    }
+    &::before {
+      width: 16px;
+      top: 12px;
+    }
+    &:after {
+      width: 11px;
+      bottom: 12px;
+    }
   }
   &__content {
     background-color: #fff;
@@ -222,8 +249,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: calc(100vw - 30px);
-    max-width: 830px;
+    width: 300px;
     opacity: 0;
     visibility: hidden;
     transition: opacity $trs1, visibility $trs1, transform $trs1;
@@ -237,62 +263,67 @@
     }
   }
   &__content {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &__content-section {
-    width: 50%;
-    padding: 0 15px;
+    padding: 15px 0;
   }
   &-section {
-    margin-bottom: 20px;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
     &__trigger {
       text-decoration: none;
       color: inherit;
-      font-size: 1.5rem;
+      font-size: 1.125rem;
       position: relative;
-      padding-right: 40px;
+      padding: 5px 50px 5px 20px;
       display: block;
       font-weight: 700;
       .icon {
         position: absolute;
-        right: 10px;
-        top: 0.35em;
-        width: 20px;
-        height: 20px;
+        right: 20px;
+        top: 9px;
+        width: 18px;
+        height: 18px;
         color: inherit;
-        transform: rotate(90deg);
         transition: transform $trs1;
       }
       &.touch,
-      &.hover {
-        color: $color-accent;
-      }
+      &.hover,
       &.active {
-        .icon {
-          transform: rotate(0);
-        }
+        color: $color-accent;
       }
     }
     &__list {
-      padding: 20px 0 0 0;
+      position: absolute;
+      border: 1px solid $color-accent2;
+      left: 100%;
+      height: calc(100% + 2px);
+      top: -1px;
+      background-color: #fff;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity $trs1, visibility $trs1;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
     }
     &__item {
       &:not(:last-child) {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
       }
     }
     &__link {
       text-decoration: none;
       color: inherit;
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       padding: 0 15px 3px 15px;
-      line-height: 30px;
+      line-height: 28px;
       border-width: 1px 0 1px 0;
       border-style: solid;
       border-color: transparent;
       transition: border-color $trs1;
-      display: inline-block;
+      display: block;
       min-width: 180px;
       &.touch,
       &.hover {
@@ -320,17 +351,18 @@
  
 .logo {
   display: block;
-  width: 240px;
+  height: 60px;
+  width: auto;
   &__image {
     display: block;
-    width: 100%;
-    height: auto;
+    height: 100%;
+    width: auto;
   }
   @include media-breakpoint-down(md) {
-    width: 180px;
+    height: 50px;
   }
   @include media-breakpoint-down(xs) {
-    width: 120px;
+    height: 30px;
   }
 }
 

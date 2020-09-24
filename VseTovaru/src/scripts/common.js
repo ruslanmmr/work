@@ -13,6 +13,7 @@ $(document).ready(function(){
   lazy();
   toggle();
   nav();
+  up();
 })
 
 //hover/touch custom events
@@ -87,6 +88,23 @@ const TouchHoverEvents = {
     }
   }
 }
+function up() {
+  let $btn = $('.js-up');
+
+  $(window).on('scroll', function() {
+    let scroll = $(window).scrollTop();
+    if(scroll>$('.header').height()) {
+      $btn.addClass('active');
+    } else {
+      $btn.removeClass('active');
+    }
+  })
+
+  $btn.on('click', function(event) {
+    event.preventDefault();
+    $("html, body").animate({scrollTop:0}, 300);
+  })
+}
 
 //lazyloading
 function lazy() {
@@ -146,7 +164,9 @@ function toggle() {
       $toggle.add($content).on('mouseleave', function(event){
         if(!TouchHoverEvents.touched) {
           let delay;
-          if($(this).is($toggle)) {
+          if($this.is('[data-no-delay]')) {
+            delay=0;
+          } else if($(this).is($toggle)) {
             delay=500;
           } else {
             delay=100;

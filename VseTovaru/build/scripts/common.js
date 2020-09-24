@@ -20,6 +20,7 @@ $(document).ready(function () {
   lazy();
   toggle();
   nav();
+  up();
 }); //hover/touch custom events
 
 var TouchHoverEvents = {
@@ -152,7 +153,27 @@ var TouchHoverEvents = {
         $targets[0].classList.remove('focus');
       }
   }
-}; //lazyloading
+};
+
+function up() {
+  var $btn = $('.js-up');
+  $(window).on('scroll', function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll > $('.header').height()) {
+      $btn.addClass('active');
+    } else {
+      $btn.removeClass('active');
+    }
+  });
+  $btn.on('click', function (event) {
+    event.preventDefault();
+    $("html, body").animate({
+      scrollTop: 0
+    }, 300);
+  });
+} //lazyloading
+
 
 function lazy() {
   //add backgrounds
@@ -211,7 +232,9 @@ function toggle() {
         if (!TouchHoverEvents.touched) {
           var delay;
 
-          if ($(this).is($toggle)) {
+          if ($this.is('[data-no-delay]')) {
+            delay = 0;
+          } else if ($(this).is($toggle)) {
             delay = 500;
           } else {
             delay = 100;

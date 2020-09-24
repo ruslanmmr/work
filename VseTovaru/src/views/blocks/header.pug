@@ -40,7 +40,7 @@ header.header
       a(href="javascript:void(0);").nav-open
         span Меню
       a(href="index.html").logo
-        img(src="./img/logos/logo.png", alt="logo").logo__image
+        img(src="./img/logos/logo.svg", alt="logo").logo__image
       .header__contacts
         .header__phone
           a(href="tel:#") 
@@ -64,12 +64,12 @@ header.header
           span 25
   .header__bottom
     .container
-      .desktop-catalogue.toggle-section(data-hover)
+      .desktop-catalogue.toggle-section(data-hover data-no-delay)
         a(href="javascript:void(0);").button.button_style-3.desktop-catalogue__trigger.toggle-section__trigger Каталог товаров
         .desktop-catalogue__content.toggle-section__content
           mixin Section(title)
-            .desktop-catalogue-section.toggle-section(data-slide)
-              a(href="javascript:void(0);").toggle-section__trigger.desktop-catalogue-section__trigger
+            .desktop-catalogue-section.toggle-section(data-hover data-no-delay) 
+              a(href="#").toggle-section__trigger.desktop-catalogue-section__trigger
                 span=title 
                 svg.icon
                   use(xlink:href='img/icons/icons-sprite.svg#arrow')
@@ -80,16 +80,14 @@ header.header
                   a(href="#").desktop-catalogue-section__link Кварцевые
                 li.desktop-catalogue-section__item
                   a(href="#").desktop-catalogue-section__link Переносные
-          .desktop-catalogue__content-section
-            +Section('Бактерицидные настольные лампы')
-            +Section('Светодиодные лампы')
-            +Section('Садово-парковые светильники')
-            +Section('Светодиодная лента и комплектующие')
-          .desktop-catalogue__content-section
-            +Section('Бактерицидные настольные лампы')
-            +Section('Светодиодные лампы')
-            +Section('Садово-парковые светильники')
-            +Section('Светодиодная лента и комплектующие')
+          +Section('Бактерицидные настольные лампы')
+          +Section('Светодиодные лампы')
+          +Section('Садово-парковые светильники')
+          +Section('Светодиодная лента и комплектующие')
+          +Section('Бактерицидные настольные лампы')
+          +Section('Светодиодные лампы')
+          +Section('Садово-парковые светильники')
+          +Section('Светодиодная лента и комплектующие')
       .header-search
         form(action="#").header-search__form
           .input.header-search__input
@@ -98,13 +96,22 @@ header.header
             svg.icon
               use(xlink:href='img/icons/icons-sprite.svg#lupa')
             span Искать
+      .header__buttons.header__buttons-bottom
+        a(href="#").header__icon-button
+          svg.icon
+            use(xlink:href='img/icons/icons-sprite.svg#heart')
+          span 37
+        a(href="#").header__icon-button
+          svg.icon
+            use(xlink:href='img/icons/icons-sprite.svg#cart')
+          span 25
 
 nav.mobile-nav
   .mobile-nav__block(data-scroll-lock-scrollable)
     a(href="javascript:void(0);").mobile-nav__close
     .mobile-nav__content  
       a(href="#").logo.mobile-nav__logo
-        img(src="./img/logos/logo-white.png", alt="logo").logo__image
+        img(src="./img/logos/logo-white.svg", alt="logo").logo__image
       .mobile-nav__nav
         a(href="#").mobile-nav__registration Вход | Регистрация
         .mobile-nav__catalogue

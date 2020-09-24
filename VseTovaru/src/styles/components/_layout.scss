@@ -5,12 +5,12 @@
 }
 .main {
   flex: 1 1 100%;
-  padding: 210px 0 80px 0;
+  padding: 216px 0 80px 0;
   @include media-breakpoint-down(md) {
-    padding: 155px 0 80px 0;
+    padding: 166px 0 80px 0;
   }
   @include media-breakpoint-down(sm) {
-    padding: 140px 0 60px 0;
+    padding: 137px 0 60px 0;
   }
 }
 .grid {
