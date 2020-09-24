@@ -331,19 +331,6 @@
       }
     }
   }
-  @include media-breakpoint-down(md) {
-    &__content {
-      max-width: 690px;
-    }
-    &-section {
-      &__trigger {
-        font-size: 1.25rem;
-        .icon {
-          top: 0.25em;
-        }
-      }
-    }
-  }
   @include media-breakpoint-down(sm) {
     display: none;
   }

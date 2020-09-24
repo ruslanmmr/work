@@ -8751,13 +8751,6 @@ a:not([class]):hover {
     min-width: 180px; }
     .desktop-catalogue-section__link.touch, .desktop-catalogue-section__link.hover {
       border-color: #eec338; }
-  @media (max-width: 1023.98px) {
-    .desktop-catalogue__content {
-      max-width: 690px; }
-    .desktop-catalogue-section__trigger {
-      font-size: 1.25rem; }
-      .desktop-catalogue-section__trigger .icon {
-        top: 0.25em; } }
   @media (max-width: 767.98px) {
     .desktop-catalogue {
       display: none; } }
