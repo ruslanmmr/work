@@ -1491,6 +1491,14 @@ ol:not([class]) {
   top: 50%;
   transform: translate(0, -50%); }
 
+.new-fastBuy__availability {
+  width: 100%;
+  margin-bottom: 10px; }
+  @media (max-width: 767.98px) {
+    .new-fastBuy__availability {
+      margin-bottom: 30px;
+      justify-content: center; } }
+
 .new-header__close-type-fastBuy {
   margin: 0;
   left: 15px; }
