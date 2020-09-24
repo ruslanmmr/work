@@ -1,0 +1,16 @@
+extends layout/layout
+block content
+  include blocks/breadcrumbs
+  .container
+    section.section
+      h1 Подсказки
+        .notify-message.notify-message_error
+          svg(viewBox='0 0 19 20', fill='none', stroke='currentColor')
+            path(d='M13.7775 14.5256L4.72707 5.4741', stroke-width='2')
+            path(d='M13.7775 5.47442L4.72656 14.5254', stroke-width='2')
+          | Центрироваться будет на сервере. На статике это не работает
+
+        .notify-message.notify-message_succes
+          svg(viewBox='0 0 9 8', fill='none', stroke='currentColor')
+            path(d='M0.800781 3.39961L3.57001 6.39961L8.00078 1.59961', stroke-width='2')
+          | Центрироваться будет на сервере. На статике это не работает
