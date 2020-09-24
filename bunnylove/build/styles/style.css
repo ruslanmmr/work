@@ -618,10 +618,18 @@ ol:not([class]) {
 
 /* Slider */
 .slider {
+  min-width: 1px;
+  min-height: 1px;
   display: flex;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.25s ease-out, visibility 0.25s ease-out; }
+  .slider * {
+    min-width: 1px;
+    min-height: 1px; }
+  .slider.disabled .slick-track {
+    transform: translate(0) !important;
+    margin: 0 auto; }
   .slider .slick-dots {
     position: relative;
     z-index: 2;
@@ -811,6 +819,18 @@ ol:not([class]) {
 
 .new-header__close:after {
   transform: translate(-50%, -50%) rotate(-45deg); }
+
+.new-dropdown__wrapper-type-desktop ul:not([class]), .new-dropdown__wrapper-type-desktop ol:not([class]) {
+  margin-bottom: 0.5rem;
+  padding: 0; }
+  .new-dropdown__wrapper-type-desktop ul:not([class]) li:not([class]), .new-dropdown__wrapper-type-desktop ol:not([class]) li:not([class]) {
+    padding: 0; }
+    .new-dropdown__wrapper-type-desktop ul:not([class]) li:not([class])::before, .new-dropdown__wrapper-type-desktop ol:not([class]) li:not([class])::before {
+      display: none;
+      padding: 0; }
+
+.new-dropdown__wrapper-type-desktop .shifted li:not(:last-child) {
+  margin-bottom: 0.5rem; }
 
 .new-header__phone {
   color: #fff;
@@ -1442,6 +1462,14 @@ ol:not([class]) {
 .new-fastBuy__look {
   margin: 0 auto;
   color: #c4c4c4; }
+
+.new-fastBuy__shell-slider {
+  padding: 15px 15px 0 15px;
+  margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    .new-fastBuy__shell-slider {
+      margin: 0;
+      padding: 15px; } }
 
 .new-header__close-type-fastBuy:after,
 .new-header__close-type-fastBuy:before {
@@ -3563,8 +3591,7 @@ div[data-move=dropdownScroll] .mCSB_inside > .mCSB_container {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-    width: 100%;
-    align-items: center; }
+    width: 100%; }
   .new-card-type-catalog {
     width: calc(100% / 3); }
   .new-card-type-catalog:nth-child(2n) {
@@ -4109,10 +4136,11 @@ div[data-move=dropdownScroll] .mCSB_inside > .mCSB_container {
   .new-fastBuy__slider {
     padding: 0 25px;
     margin: 0 0 20px; }
-  .new-fastBuy__shell {
+  .new-fastBuy__shell-slider {
     width: 350px;
     margin-right: 30px;
-    max-width: none; }
+    max-width: none;
+    padding: 0; }
   .new-fastBuy__shell-type-wrap {
     max-width: calc(100% - 380px);
     width: auto;
@@ -4797,7 +4825,6 @@ div[data-move=dropdownScroll] .mCSB_inside > .mCSB_container {
   .new-dropdown__link-type-desktop {
     padding: 5px 0;
     line-height: 1.3;
-    margin: 0 0 5px;
     color: #000; }
   .new-dropdown__link-type-desktop:hover {
     text-decoration: underline; }

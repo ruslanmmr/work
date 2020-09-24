@@ -8,7 +8,7 @@ block content
         .product-section__head.row
           //slider
           .product-section__images.col-lg-5.col-md-6
-            .product-section__slider
+            .product-slider-wrap
               .card-labels
                 span.card-label.card-label_new new
                 span.card-label.card-label_star 
@@ -24,9 +24,6 @@ block content
                 +slide('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
                 +slide('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
                 +slide('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
-                +slide('https://bunnylove.ru/media/cache/cd/15/cd1599a26bb7bfc42f02fadd357bf3d6.jpg')
-                +slide('https://bunnylove.ru/media/cache/e1/3a/e13aacebf3f55dcccae1a06d4f1d4730.jpg')
-                +slide('https://bunnylove.ru/media/cache/33/6d/336db0946c2f718168627bd45c47ac1e.jpg')
                 
             //навигационный слайдер
             .slider.product-nav-slider
@@ -38,10 +35,6 @@ block content
               +slide2('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
               +slide2('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
               +slide2('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
-              +slide2('https://bunnylove.ru/media/cache/cd/15/cd1599a26bb7bfc42f02fadd357bf3d6.jpg')
-              +slide2('https://bunnylove.ru/media/cache/e1/3a/e13aacebf3f55dcccae1a06d4f1d4730.jpg')
-              +slide2('https://bunnylove.ru/media/cache/33/6d/336db0946c2f718168627bd45c47ac1e.jpg')
-
           //content
           .product-section__description.col-lg-7.col-md-6
             .product-section__text
@@ -65,12 +58,12 @@ block content
                   svg.icon
                     use(xlink:href='#cart')
                   span Купить
-                a(href="#").button.button_style-2.button_rounded.button_icon.product-section__buttons-item
+                a(href="#").button.button_style-3.button_rounded.button_icon.product-section__buttons-item
                   svg.icon
-                    use(xlink:href='#heart')
-                a(href="#").button.button_style-2.button_rounded.button_icon.product-section__buttons-item
+                    use(xlink:href='#menuHeartIcon')
+                a(href="#").button.button_style-3.button_rounded.button_icon.product-section__buttons-item
                   svg.icon
-                    use(xlink:href='#comparison')
+                    use(xlink:href='#compareIcon')
               .product-section__message
                 svg.icon
                   use(xlink:href='#wallet')

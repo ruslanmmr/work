@@ -41,8 +41,8 @@ function header() {
   }
 }
 
-var slider = {
-  el: $('.slider'),
+window.slider = {
+  el: $('.slider').not('.slick-initialized'),
   arrowPrev: '<svg class="icon" stroke="none" fill="currentColor" viewBox="0 0 10.5 18.1"><path d="M9,0l1.4,1.4L2.8,9l7.6,7.6L9,18.1L0,9C0,9,9.1,0,9,0z"></path></svg>',
   arrowNext: '<svg class="icon" stroke="none" fill="currentColor" viewBox="0 0 10.5 18.1"><path d="M1.4,18.1L0,16.7l7.6-7.6L0,1.5L1.4,0l9,9.1C10.4,9.1,1.3,18.1,1.4,18.1z"></path></svg>',
   init: function init() {
@@ -132,6 +132,10 @@ var slider = {
       }
 
       if ($(this).is('.product-nav-slider')) {
+        if ($(this).find('.product-nav-slider__slide').length <= 3) {
+          $(this).addClass('disabled');
+        }
+
         $(this).slick({
           slidesToShow: 3,
           slidesToScroll: 1,
