@@ -1906,6 +1906,9 @@ ol:not([class]) {
   transform: translate(0, -50%)
 }
 
+.new-fastBuy__wrapper .product-section {
+  width: calc(100% + 30px);
+}
 @include media-breakpoint-down(md) {
   .new-fastBuy__wrapper .product-section {
     margin: 0;

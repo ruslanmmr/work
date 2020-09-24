@@ -1491,6 +1491,9 @@ ol:not([class]) {
   top: 50%;
   transform: translate(0, -50%); }
 
+.new-fastBuy__wrapper .product-section {
+  width: calc(100% + 30px); }
+
 @media (max-width: 1023.98px) {
   .new-fastBuy__wrapper .product-section {
     margin: 0;
