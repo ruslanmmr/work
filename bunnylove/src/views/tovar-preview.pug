@@ -8,83 +8,77 @@ block content
       .new-console.new-mobileMenu__console.new-console-type-fastBuy
         button.new-header__close.new-header__close-type-fastBuy(data-action='fastBuyCloseButton')
         p.new-fastBuy__look Предпросмотр
-      .new-fastBuy__shell.new-fastBuy__shell-slider
-        .product-slider-wrap
-          .card-labels
-            span.card-label.card-label_new new
-            span.card-label.card-label_star 
-              svg.icon
-                use(xlink:href='#whiteStarIcon')
-            span.card-label.card-label_discount -30%
-          //главный слайдер
-          .slider.product-slider
-            mixin slide(href)
+
+      //просто часть карточки
+      .product-section.row
+        .product-section__images.col-lg-5.col-md-6
+          .product-slider-wrap
+            .card-labels
+              span.card-label.card-label_new new
+              span.card-label.card-label_star 
+                svg.icon
+                  use(xlink:href='#whiteStarIcon')
+              span.card-label.card-label_discount -30%
+            //главный слайдер
+            .slider.product-slider
+              mixin slide(href)
+                //slide
+                .product-slider__slide.image.image_contain
+                  img(data-lazy=href alt="image")
+              +slide('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
+              +slide('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
+              +slide('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
+              +slide('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
+              +slide('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
+              +slide('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
+              
+          //навигационный слайдер
+          .slider.product-nav-slider
+            mixin slide2(href)
               //slide
-              .product-slider__slide.image.image_contain
-                img(data-lazy=href alt="image")
-            +slide('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
-            +slide('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
-            +slide('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
-            +slide('https://bunnylove.ru/media/cache/cd/15/cd1599a26bb7bfc42f02fadd357bf3d6.jpg')
-            +slide('https://bunnylove.ru/media/cache/e1/3a/e13aacebf3f55dcccae1a06d4f1d4730.jpg')
-            +slide('https://bunnylove.ru/media/cache/33/6d/336db0946c2f718168627bd45c47ac1e.jpg')      
-        //навигационный слайдер
-        .slider.product-nav-slider
-          mixin slide2(href)
-            //slide
-            .product-nav-slider__slide
-              .image.image_contain
-                img(data-lazy=href alt="image")
-          +slide2('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
-          +slide2('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
-          +slide2('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
-          +slide2('https://bunnylove.ru/media/cache/cd/15/cd1599a26bb7bfc42f02fadd357bf3d6.jpg')
-          +slide2('https://bunnylove.ru/media/cache/e1/3a/e13aacebf3f55dcccae1a06d4f1d4730.jpg')
-          +slide2('https://bunnylove.ru/media/cache/33/6d/336db0946c2f718168627bd45c47ac1e.jpg')
+              .product-nav-slider__slide
+                .image.image_contain
+                  img(data-lazy=href alt="image")
+            +slide2('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
+            +slide2('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
+            +slide2('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
+            +slide2('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
+            +slide2('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
+            +slide2('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
+        //content
+        .product-section__description.col-lg-7.col-md-6
+          .product-section__text
+            h6 Ярко-розовый вакуумный стимулятор клитора Ford
+            p Силиконовая рельефная анальная пробка с удобным для ношения ограничителем, диаметр 3,2 см
+            span.product-section__art-value Артикул: SEM-55196
+            .product-section__info-labels
+              .product-info-label.product-section__info-label
+                img(src=href+"/img/dam-pack.svg", alt="ico")
+              .product-info-label.product-section__info-label
+                img(src=href+"/img/exp-date.svg", alt="ico")
+              .product-availability-label.product-availability-label_true.product-section__info-label
+                img(src=href+"/img/check.svg", alt="ico")
+                span В наличии на складе в Москве
+            .product-section__pricing
+              span.product-section__price-label Цена:
+              span.product-section__old-price 5&nbsp;600 P
+              span.product-section__price 6&nbsp;600 P
+            .product-section__buttons
+              a(href="#").button.button_style-1.button_rounded.product-section__buttons-item
+                svg.icon
+                  use(xlink:href='#cart')
+                span Купить
+              a(href="#").button.button_style-3.button_rounded.button_icon.product-section__buttons-item
+                svg.icon
+                  use(xlink:href='#menuHeartIcon')
+              a(href="#").button.button_style-3.button_rounded.button_icon.product-section__buttons-item
+                svg.icon
+                  use(xlink:href='#compareIcon')
+            a(href="#").product-section__more-link Подробнее о товаре
+            .product-section__message
+              svg.icon
+                use(xlink:href='#wallet')
+              span  
+                a(href="#") Зарегистрируйтесь 
+                | и получите 500 бонусных рублей за регистрацию и 238 бонусных рублей за покупку
       
-      
-      .new-fastBuy__shell.new-fastBuy__shell-type-wrap
-        p.new-fastBuy__article Артикул: EGG-002
-        p.new-fastBuy__title Мастурбатор Tenga EGG Clicker
-        p.new-fastBuy__text
-          | Компактный мастурбатор в форме яйца с внутренним рельефом в виде больших и маленьких бугорков
-        .product-availability-label.product-availability-label_true.new-fastBuy__availability
-          img(src=href+"/img/check.svg", alt="ico")
-          span В наличии на складе в Москве
-        p.new-fastBuy__price
-          | Цена:
-          | 690
-          span.new-fastBuy__currency ₽
-        p.new-fastBuy__price.new-fastBuy__price-type-your
-        button.new-button.new-card__button.new-button-type-fastBuy(data-url='/catalog/cart/add/189861/', data-action='buyButton')
-          svg.new-tabs__icon.new-tabs__icon-type-fastBuy
-            use(xlink:href='#cartIcon')
-          | Купить
-        .new-fastBuy__more
-          a(href='/catalog/product/masturbator-yajtso-clicker-odnorazovoe-6--egg-002/') Подробнее о товаре
-        .new-fastBuy__support
-          form.product-comparison-form.new-tpl(action='/catalog/comparison/add/', data-action-reverse='/catalog/comparison/del/', method='post')
-            input(type='hidden', name='product_id', value='189861')
-            button.comparison-buttons.new-button.new-button-type-empty.new-button-type-gray.action-add
-              svg.new-fastBuy__icon.new-fastBuy__icon-type-compare
-                use(xlink:href='#compareIcon')
-              | Сравнить
-            button.comparison-buttons.new-button.new-button-type-empty.new-button-type-gray.action-del(style='display: none')
-              svg.new-fastBuy__icon.new-fastBuy__icon-type-compare
-                use(xlink:href='#compareIcon')
-              | Не сравнивать
-        //убрать тег p
-        .new-fastBuy__info
-          svg.new-fastBuy__icon.new-fastBuy__icon-type-wallet
-            use(xlink:href='#walletIcon')
-          a.new-fastBuy__bold(href='/register/') Зарегистрируйтесь
-          |                   и получите 
-          span.new-fastBuy__bold
-            | 500 бонусных
-            | рублей
-          |  за регистрацию
-          |                   и 
-          span.new-fastBuy__bold
-            | 34 бонусных
-            | рубля
-          |  за покупку

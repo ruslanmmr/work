@@ -1906,12 +1906,16 @@ ol:not([class]) {
   transform: translate(0, -50%)
 }
 
-.new-fastBuy__availability {
-  width: 100%;
-  margin-bottom: 10px;
-  @include media-breakpoint-down(sm) {
-    margin-bottom: 30px;
-    justify-content: center;
+@include media-breakpoint-down(md) {
+  .new-fastBuy__wrapper .product-section {
+    margin: 0;
+    padding: 40px 25px;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .new-fastBuy__wrapper .product-section {
+    margin: 0;
+    padding: 30px 5px;
   }
 }
 

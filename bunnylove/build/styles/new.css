@@ -667,6 +667,13 @@
   border-color: #f6f6f6;
   margin-bottom: 16px; }
 
+.product-section__more-link {
+  text-decoration: underline;
+  display: inline-block;
+  margin: 0 0 16px 0; }
+  .product-section__more-link:hover {
+    text-decoration: none; }
+
 .product-section__price-label {
   margin-right: 10px; }
 

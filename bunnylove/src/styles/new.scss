@@ -829,6 +829,14 @@
     border-color: #f6f6f6;
     margin-bottom: 16px;
   }
+  &__more-link {
+    text-decoration: underline;
+    display: inline-block;
+    margin: 0 0 16px 0;
+    &:hover {
+      text-decoration: none;
+    }
+  }
   &__price-label {
     margin-right: 10px;
   }
