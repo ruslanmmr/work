@@ -1907,17 +1907,16 @@ ol:not([class]) {
 }
 
 .new-fastBuy__wrapper .product-section {
-  width: calc(100% + 30px);
+  width: 100%;
+  margin: 0;
 }
 @include media-breakpoint-down(md) {
   .new-fastBuy__wrapper .product-section {
-    margin: 0;
     padding: 40px 25px;
   }
 }
 @include media-breakpoint-down(xs) {
   .new-fastBuy__wrapper .product-section {
-    margin: 0;
     padding: 30px 5px;
   }
 }
@@ -5708,7 +5707,7 @@ div[data-move=dropdownScroll] .mCSB_inside>.mCSB_container {
   }
 
   .new-fastBuy__wrapper {
-    padding: 50px;
+    padding: 50px 35px;
     max-width: 90vw;
     max-height: 90vh;
     -webkit-box-shadow: 0 0 0 2000px rgba(0, 0, 0, .4);
