@@ -461,13 +461,13 @@ body {
     height: 50px;
     pointer-events: none; }
     .center__wave_1 {
-      -webkit-animation-duration: 2.5s;
-              animation-duration: 2.5s;
+      -webkit-animation-duration: 5s;
+              animation-duration: 5s;
       color: #434B4E;
       left: 0; }
     .center__wave_2 {
-      -webkit-animation-duration: 2s;
-              animation-duration: 2s;
+      -webkit-animation-duration: 3s;
+              animation-duration: 3s;
       color: #000;
       left: -5%; }
   .center__scale {
