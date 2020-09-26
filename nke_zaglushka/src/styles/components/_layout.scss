@@ -25,15 +25,11 @@
   @media screen and (max-width:1439px) {
     padding-top: 60px;
     padding-bottom: 60px;
-    min-height: 760px;
+    min-height: 820px;
   }
   @media screen and (max-width:575px) {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    min-height: 500px;
-    @media screen and (max-height:620px) {
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 620px;
   }
 }
