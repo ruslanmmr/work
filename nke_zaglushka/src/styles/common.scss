@@ -1,0 +1,16 @@
+//variables
+@import "./components/variables";
+//normalize.css
+@import "../../node_modules/normalize.css/normalize";
+
+/*========== Basic ==========*/
+@import "./components/basic";
+
+/*========== Layout ==========*/
+@import "./components/layout";
+
+/*========== Typography ==========*/
+@import "./components/typography";
+
+/*========== Blocks ==========*/
+@import 'components/blocks';
