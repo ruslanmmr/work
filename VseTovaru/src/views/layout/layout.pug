@@ -1,3 +1,4 @@
+block variables
 doctype html
 html(lang='ru')
   head
@@ -27,6 +28,8 @@ html(lang='ru')
     link(href='https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap', rel='stylesheet')
     //styles
     link(rel="stylesheet" href="./styles/common.css")
+    //helper (только для навигации по верстке)
+    link(rel="stylesheet" href="./styles/helper.css")
 
   body
     .wrapper
@@ -36,6 +39,9 @@ html(lang='ru')
       include ../blocks/footer
       a(href="javascript:void(0);").js-up
         <i class="fas fa-arrow-up"></i>
+
+      //helper (только для навигации по верстке)
+      include ../blocks/helper
 
     //jquery
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
@@ -47,3 +53,5 @@ html(lang='ru')
     script(src="./scripts/libs/inputmask.min.js")
     //common.js
     script(src="./scripts/common.js")
+    //helper (только для навигации по верстке)
+    script(src="./scripts/helper.js")

@@ -36,7 +36,7 @@ var gulp = require("gulp"),
 gulp.task("pug", function () {
   return gulp.src($pug)
     .pipe(pug({
-      pretty: true
+      pretty: false
     }))
     .pipe(gulp.dest("./build/"))
     .pipe(debug({

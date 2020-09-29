@@ -10,34 +10,29 @@ var gulp = require("gulp"),
     rename = require("gulp-rename"),
     imagemin = require("gulp-imagemin"),
     favicons = require("gulp-favicons"),
-    replace = require("gulp-replace"),
     newer = require("gulp-newer"),
-    plumber = require("gulp-plumber"),
-    debug = require("gulp-debug"),
     watch = require("gulp-watch"),
     clean = require("gulp-clean"),
-    rsync = require('gulp-rsync'),
     filter = require('gulp-filter');
 
 
-  let $images = ["./src/img/**/*.{jpg,jpeg,png,gif}", "!./src/img/favicons/*.{jpg,jpeg,png,gif}"],
-      $pug = ["./src/views/**/*.pug", "!./src/views/blocks/*.pug", "!./src/views/layout/*.pug"],
+  let $pug = ["./src/views/**/*.pug", "!./src/views/blocks/*.pug", "!./src/views/layout/*.pug"],
       $pug_watch = "./src/views/**/*.pug",
-      $scripts = ["./src/scripts/**/*.js", "!./src/scripts/libs/*.js"],
-      $styles = ["./src/styles/**/*.scss", "!./src/styles/components/**/*.scss"],
-      $styles_watch = ["./src/styles/**/*.scss"],
+
+      $scripts = "./src/scripts/*.js",
+      $scripts_watch = "./src/scripts/**/*.js",
+
+      $styles = "./src/styles/*.scss",
+      $styles_watch = "./src/styles/**/*.scss",
+
+      $images = ["./src/img/**/*.{jpg,jpeg,png,gif}", "!./src/img/favicons/*.{jpg,jpeg,png,gif}"],
       $favicons = "./src/img/favicons/*.{jpg,jpeg,png,gif}",
-      $other = ["./src/**/*", "!./src/img/**/*.{jpg,jpeg,png,gif}", "!./src/scripts/*.js", "!./src/styles/*.scss", "!./src/styles/components","!./src/styles/components/**/*", "!./src/views", "!./src/views/**/*"];
+      $other = ["./src/**/*", "!./src/img/**/*.{jpg,jpeg,png,gif}", "!./src/scripts/*.js", "!./src/styles/**/*", "!./src/views", "!./src/views/**/*"];
 
 gulp.task("pug", function () {
   return gulp.src($pug)
-    .pipe(pug({
-      pretty: true
-    }))
+    .pipe(pug({pretty:true}))
     .pipe(gulp.dest("./build/"))
-    .pipe(debug({
-      "title": "html"
-    }))
     .on("end", browsersync.reload);
 });
 
@@ -47,15 +42,29 @@ gulp.task("scripts", function () {
     .pipe(babel({presets: ["@babel/preset-env"]}))
     .pipe(sourcemaps.write("./maps/"))
     .pipe(gulp.dest("./build/scripts/"))
+    .on("end", browsersync.reload);
+});
+gulp.task("scripts_production", function () {
+  return gulp.src($scripts)
+    .pipe(sourcemaps.init())
+    .pipe(babel({presets: ["@babel/preset-env"]}))
+    .pipe(sourcemaps.write("./maps/"))
+    .pipe(gulp.dest("./build/scripts/"))
     .pipe(filter(['**/*.js']))
     .pipe(uglify())
     .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("./build/scripts/"))
-    .pipe(debug({"title": "scripts"}))
-    .on("end", browsersync.reload);
 });
 
 gulp.task("styles", function() {
+  return gulp.src($styles)
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(sourcemaps.write("./maps/"))
+    .pipe(gulp.dest("./build/styles/"))
+    .on("end", browsersync.reload);
+});
+gulp.task("styles_production", function() {
   return gulp.src($styles)
     .pipe(sourcemaps.init())
     .pipe(sass())
@@ -66,12 +75,16 @@ gulp.task("styles", function() {
     .pipe(mincss({level:{1:{specialComments:'none'},2:{}}}))
     .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("./build/styles/"))
-    .pipe(debug({"title": "styles"}))
     .on("end", browsersync.reload);
 });
 
-
 gulp.task("images", function () {
+  return gulp.src($images)
+    .pipe(newer("./build/img/"))
+    .pipe(gulp.dest("./build/img/"))
+    .on("end", browsersync.reload);
+});
+gulp.task("images_production", function () {
   return gulp.src($images)
     .pipe(newer("./build/img/"))
     .pipe(imagemin([
@@ -80,9 +93,6 @@ gulp.task("images", function () {
       imagemin.optipng({optimizationLevel: 5})
     ]))
     .pipe(gulp.dest("./build/img/"))
-    .pipe(debug({
-      "title": "images"
-    }))
     .on("end", browsersync.reload);
 });
 
@@ -102,9 +112,7 @@ gulp.task("favicons", function () {
       }
     }))
     .pipe(gulp.dest("./build/img/favicons/"))
-    .pipe(debug({
-      "title": "favicons"
-    }));
+    .on("end", browsersync.reload);
 });
 
 gulp.task("other", function () {
@@ -118,9 +126,6 @@ gulp.task("clean", function () {
       read: false
     })
     .pipe(clean())
-    .pipe(debug({
-      "title": "clean"
-    }));
 });
 
 gulp.task("serve", function () {
@@ -138,7 +143,7 @@ gulp.task("watch", function () {
   return new Promise((res, rej) => {
     watch($pug_watch, gulp.series("pug"));
     watch($styles_watch, gulp.series("styles"));
-    watch($scripts, gulp.series("scripts"));
+    watch($scripts_watch, gulp.series("scripts"));
     watch($images, gulp.series("images"));
     watch($favicons, gulp.series("favicons"));
     watch($other, gulp.series("other"));
@@ -147,8 +152,13 @@ gulp.task("watch", function () {
 });
 
 
-// BUILD
+// default
 gulp.task("default", gulp.series("clean",
   gulp.parallel("pug", "scripts", "styles", "images", "favicons", "other"),
   gulp.parallel("watch", "serve")
 ));
+
+//production
+gulp.task("production", 
+  gulp.series("clean", gulp.parallel("pug", "scripts_production", "styles_production", "images_production", "favicons", "other"))
+);

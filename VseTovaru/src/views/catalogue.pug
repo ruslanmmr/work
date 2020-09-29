@@ -1,0 +1,67 @@
+extends layout/layout
+block variables
+  -var namespace = 'Каталог товаров'
+block title
+  title #{namespace}
+block content 
+  include blocks/breadcrumbs
+  section.section.catalogue
+    .container
+      .row
+        include blocks/aside
+        .catalogue__content.col-xl-80pc.col-lg-9
+          .row.grid
+            -var index = 0
+            mixin card()
+              -index++
+              if index==5
+                -index=1
+              .catalogue-card.grid__block.col-xl-3.col-lg-4
+                .catalogue-card__container.jsTouchHover
+                  .card-labels.catalogue-card__card-labels
+                    if index==1
+                      .card-label.card-label_type-discount -20%
+                    else if index==2
+                      .card-label.card-label_type-new НОВИНКА
+                    else if index==3
+                      .card-label.card-label_type-top ТОП ПРОДАЖ
+                    else if index==4  
+                      .card-label.card-label_type-new НОВИНКА
+                      .card-label.card-label_type-top ТОП ПРОДАЖ
+                  
+                  .image.image_contain.catalogue-card__image
+                    if index==1
+                      img(data-src='./img/bra.jpg', alt="image").lazyload
+                    else if index==2  
+                      img(data-src='./img/image1.png', alt="image").lazyload
+                    else if index==3
+                      img(data-src='./img/image2.png', alt="image").lazyload
+                    else if index==4
+                      img(data-src='./img/image3.png', alt="image").lazyload
+                  .catalogue-card__content
+                    .catalogue-card__content-top
+                      if index==1
+                        h2.catalogue-card__title Бра LOFT IT LOFT2105
+                      else if index==2  
+                        h2.catalogue-card__title Бра LOFT IT LOFT2105 LOFT2105W
+                      span.catalogue-card__label Испания
+                    .catalogue-card__content-bottom
+
+            +card()
+            +card()
+            +card()
+            +card()
+            +card()
+            +card()
+            +card()
+            +card()
+            +card()
+            +card()
+            +card()
+            +card()
+            +card()
+            +card()
+            +card()
+            +card()
+
+  include blocks/news-block

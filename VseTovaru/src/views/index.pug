@@ -1,6 +1,9 @@
 extends layout/layout
+block variables
+  -var namespace = 'Главная'
 block title
-  title Template
+  title #{namespace}
+
 block content
   section.section.banners
     .container
@@ -36,7 +39,6 @@ block content
                 .banner-block__bottom
                   span.banner-block__discount -20%
                   a(href="#").button.button_style-5.banner-block__button Подробнее
-  
   section.section   
     .container
       .row.grid
@@ -44,7 +46,7 @@ block content
           .m-catalogue-card.grid__block.col-xl-20pc.col-lg-3.col-md-4.col-6
             .m-catalogue-card__container.jsTouchHover
               .image.image_contain.m-catalogue-card__image
-                img(src=href, alt="image").lazyload
+                img(data-src=href, alt="image").lazyload
               .m-catalogue-card__content
                 h2.m-catalogue-card__title=title
                 a(href="#").button.button_style-5.m-catalogue-card__button Перейти в раздел
@@ -62,41 +64,4 @@ block content
         +block('Электротовары и комплектующие', './img/image12.png')
         +block('Лампы', './img/image13.png', './img/image13.png')
   
-  section.section.news-section
-    .container
-      .news-section__content
-        h2.section__title Новости
-        .row.news-section__container
-          //block
-          .news-block.col-xl-3.col-lg-4.col-sm-12
-            .news-block__container
-              a(href="#").news-block__image.image.image_contain
-                img(src="./img/ddddd.jpg", alt="image").lazyload
-              .news-block__content
-                span.news-block__date 13.05.2020
-                h5.news-block__title Новинка!<br> Садово-парковые светильники Feron серия<br> «Марсель» PL6001, PL6002
-                .news-block__text
-                  p Светильники уличные декоративные серии «Марсель» TM Feron предназначены для общего и...
-                a(href="#").button.button_style-5.news-block__button Подробнее
-          //block
-          .news-block.col-xl-3.col-lg-4.col-sm-12
-            .news-block__container
-              a(href="#").news-block__image.image.image_contain
-                img(src="./img/1466431479.jpg", alt="image").lazyload
-              .news-block__content
-                span.news-block__date 13.05.2020
-                h5.news-block__title Новинка!<br> Подвесной светильник <br> Tom Dixon Melt
-                .news-block__text
-                  p Obsessed with the idea of creating an imperfect, organic and naturalistic lighting object, Melt was created in collaboration...
-                a(href="#").button.button_style-5.news-block__button Подробнее
-          //block
-          .news-block.col-xl-3.col-lg-4.col-sm-12
-            .news-block__container
-              a(href="#").news-block__image.image.image_contain
-                img(src="./img/logo_stekker123.png", alt="image").lazyload
-              .news-block__content
-                span.news-block__date 07.04.2020
-                h5.news-block__title Новинка!<br> Тестер-пробник STEKKER<br> TST 500-3
-                .news-block__text
-                  p Тестер-пробник ТМ «STEKKER» серии TST предназначен для тестирования путем световой индикации...
-                a(href="#").button.button_style-5.news-block__button Подробнее
+  include blocks/news-block
