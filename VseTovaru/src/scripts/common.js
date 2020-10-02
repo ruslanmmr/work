@@ -14,6 +14,9 @@ $(document).ready(function(){
   toggle();
   nav();
   up();
+  jsRange();
+  customScroll();
+  mobileFilter();
 })
 
 //hover/touch custom events
@@ -136,13 +139,14 @@ let select = {
 
 function toggle() {
   let $section = $('.toggle-section'),
-      speed = 250;
+      speed = 250
 
   $section.each(function() {
     let $this = $(this),
         $toggle = $this.children('.toggle-section__trigger'),
         $content = $this.children('.toggle-section__content'),
         state = $this.hasClass('active') ? true : false,
+        height = $content.height(),
         initialized;
 
     $toggle.on('click', function() {
@@ -194,6 +198,9 @@ function toggle() {
       if(state) {
         $this.add($content).add($toggle).addClass('active');
         if($this.is('[data-slide]')) {
+          if($content.is('.scrollbar')) {
+            $content.height(height);
+          }
           $content.slideDown(speed);
         }
       } 
@@ -201,6 +208,9 @@ function toggle() {
         $this.add($toggle).add($content).removeClass('active');
         if($this.is('[data-slide]')) {
           if(initialized) {
+            if($content.is('.scrollbar')) {
+              height = $content.height();
+            }
             $content.stop().slideUp(speed);
           } else {
             $content.hide(0);
@@ -275,5 +285,147 @@ function nav() {
     state = false;
     scrollLock.enablePageScroll();
     $nav.removeClass('active');
+  }
+}
+
+function jsRange() {
+  let $range = $('.filter-range');
+
+  $range.each(function() {
+    let $this = $(this),  
+        $rangeItem = $this.find('.js-range'),
+        $inputFrom = $this.find(".filter-range__input-from input"),
+        $inputTo = $this.find(".filter-range__input-to input"),
+        instance,
+        min = +$rangeItem.attr('data-min'),
+        max = +$rangeItem.attr('data-max'),
+        from, to;
+
+    $rangeItem.ionRangeSlider({
+      skin: "round",
+      type: "double",
+      min: min,
+      max: max,
+      from: min,
+      to: max,
+      onStart: updateInputs,
+      onChange: updateInputs,
+      onFinish: updateInputs
+    });
+    instance = $rangeItem.data("ionRangeSlider");
+    
+    function updateInputs (data) {
+        from = data.from;
+        to = data.to;
+    
+        $inputFrom.prop("value", from);
+        $inputTo.prop("value", to);
+    }
+    
+    $inputFrom.on("change", function () {
+        var val = $(this).prop("value");
+    
+        // validate
+        if (val < min) {
+            val = min;
+        } else if (val > to) {
+            val = to;
+        }
+    
+        instance.update({
+            from: val
+        });
+    
+        $(this).prop("value", val);
+    
+    });
+    
+    $inputTo.on("change", function () {
+        var val = $(this).prop("value");
+        //console.log(val, max)
+    
+        // validate
+        if (val < from) {
+          val = from;
+        } else if (val > max) {
+          val = max;
+        }
+    
+        instance.update({
+            to: val
+        });
+        $(this).prop("value", val);
+    });
+
+  })
+}
+
+function customScroll() {
+  let $containers = document.querySelectorAll('.scrollbar');
+  if(device.desktop()) {
+    $containers.forEach(($target)=>{
+      let $parent = $($target),
+          $content = $parent.find('.scrollbar__content'),
+          simpleBar = new SimpleBar($target);
+      
+      simpleBar.getScrollElement().addEventListener('scroll', function() {
+        gradientCheck();
+      });
+      gradientCheck();
+    
+      function gradientCheck() {
+        let scrollHeight = $content.outerHeight() - $parent.outerHeight(),
+            scroll = $parent.offset().top - $content.offset().top;
+
+        if(scroll > 0) {
+          $parent.removeClass('scrollbar_start')
+        } else {
+          $parent.addClass('scrollbar_start')
+        }
+        if(scroll < scrollHeight) {
+          $parent.removeClass('scrollbar_end')
+        } else {
+          $parent.addClass('scrollbar_end')
+        }
+      }
+
+    })
+  } else {
+    $containers.forEach(($this)=>{
+      $this.classList.add('scrollbar_mobile');
+    })
+  }
+}
+
+function mobileFilter() {
+  let $open = $('.catalogue-filter-toggle'),
+      $close = $('.filter__close'),
+      $filter = $('.filter'),
+      state;
+
+  $open.on('click', function(event) {
+    event.preventDefault();
+    open();
+  })
+  $close.on('click', function(event) {
+    event.preventDefault();
+    close();
+  })
+  $(document).on('click touchstart', function(event) {
+    let $target = $(event.target);
+    if($target.closest($filter).length && !$target.closest('.filter__wrap').length && state) {
+      close();
+    }
+  })
+
+  function open() {
+    state=true;
+    scrollLock.disablePageScroll();
+    $filter.addClass('active');
+  }
+  function close() {
+    state=false;
+    scrollLock.enablePageScroll();
+    $filter.removeClass('active')
   }
 }

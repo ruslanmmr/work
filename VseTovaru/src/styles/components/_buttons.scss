@@ -26,54 +26,33 @@
       margin-right: 12px;
     }
   }
+  i {
+    margin-right: 10px;
+  }
   &_style-1 {
     border-color: $color-accent;
-    color: $color-accent;
-    background-color: transparent;;
-    .icon {
-      color: $color-accent;
-    }
+    color: $color-accent2;
+    background-color: transparent;
     &.touch,
     &.hover,
     &.active {
-      color: #fff;
-      background-color: $color-accent-hover;
-      border-color: $color-accent-hover;
-      .icon {
-        fill: #fff;
-        stroke: #fff;
-      }
-    }
-    &.focus {
-      background-color: $color-accent-focus;
-      border-color: $color-accent-focus;
+      border-color: $color-accent2;
     }
   }
   &_style-2 {
-    border-color: $color-accent;
-    color: #fff;
-    background-color: $color-accent;
-    .icon {
-      color: #fff;
-    }
+    border-color: $color-accent2;
+    color: $color-accent2;
+    background-color: transparent;
     &.touch,
-    &.hover,
-    &.active {
-      background-color: $color-accent-hover;
-      border-color: $color-accent-hover;
-    }
-    &.focus {
-      background-color: $color-accent-focus;
-      border-color: $color-accent-focus;
+    &.hover {
+      background-color: $color-accent2;
+      color: #fff;
     }
   }
   &_style-3 {
     border-color: $color-accent;
     background-color: $color-accent;
     color: $color-accent2;
-    .icon {
-      color: $color-accent2;
-    }
     &.touch,
     &.hover,
     &.active {
@@ -84,9 +63,6 @@
     border-color: #fff;
     background-color: #fff;
     color: $color-accent2;
-    .icon {
-      color: $color-accent2;
-    }
     &.touch,
     &.hover,
     &.active {

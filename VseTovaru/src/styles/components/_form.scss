@@ -4,8 +4,8 @@
     border-style: solid;
     border-width: 1px;
     border-color: $color-input-border;
-    line-height: 22px;
-    padding: 8px 16px;
+    line-height: 18px;
+    padding: 8px 12px;
     background-color: #fff;
     border-radius: 2px;
     transition: background-color 5000s;
@@ -191,19 +191,19 @@
   }
   &__label {
     display: block;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 24px;
     line-height: 20px;
     position: relative;
     &:before {
       content: '';
       display: block;
-      width: 18px;
-      height: 18px;
-      border: 2px solid $color-text;
+      width: 16px;
+      height: 16px;
+      border: 1px solid $color-text;
       border-radius: 2px;
       position: absolute;
       left: 0;
-      top: 1px;
+      top: 2px;
       transition: border-color $trs1, background-color $trs1;
     }
     &:after {
@@ -211,8 +211,8 @@
       display: block;
       position: absolute;
       left: 0;
-      top: 5px;
-      left: 4px;
+      top: 6px;
+      left: 3px;
       width: 10px;
       height: 6px;
       border-width: 0 0 2px 2px;
@@ -221,6 +221,42 @@
       border-color: #fff;
       opacity: 0;
       transition: opacity $trs1;
+    }
+  }
+  &_color {
+    .checkbox {
+      &__input {
+        &:checked ~ .checkbox__label {
+          border-color: $color-text;
+          &:after {
+            border-color: #fff;
+          }
+        }
+      }
+      &__label {
+        padding: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 16px;
+        border: 2px solid #fff;
+        transition: border-color $trs1;
+        &:after {
+          transform: translate(0);
+          opacity: 1;
+          visibility: visible;
+          border: 1px solid $color-text;
+          transition: border-color $trs1;
+          background-color: transparent !important;
+          width: 12px;
+          height: 12px;
+          border-radius: 12px;
+          top: 0;
+          left: 0;
+        }
+        &::before {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -237,18 +273,18 @@
   }
   &__label {
     display: block;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 24px;
     line-height: 20px;
     &:before {
       content: '';
       display: block;
-      width: 18px;
-      height: 18px;
-      border: 2px solid $color-text; 
+      width: 16px;
+      height: 16px;
+      border: 1px solid $color-text; 
       border-radius: 20px;
       position: absolute;
       left: 0;
-      top: 1px;
+      top: 2px;
     }
     &:after {
       content: '';
@@ -256,7 +292,7 @@
       position: absolute;
       left: 0;
       top: 6px;
-      left: 5px;
+      left: 4px;
       width: 8px;
       height: 8px;
       border-radius: 8px;
@@ -267,4 +303,43 @@
   }
 }
 
-
+//
+.irs--round .irs-line {
+  background-color: #e5e5e5;
+  border-radius: 0;
+  height: 1px;
+  top: 5px;
+}
+.irs--round .irs-from, .irs--round .irs-single, .irs--round .irs-to,
+.irs--round .irs-max, .irs--round .irs-min {
+  display: none;
+}
+.irs--round {
+  height: 11px;
+}
+.irs--round .irs-handle {
+  top: 0;
+  width: 11px;
+  height: 11px;
+  border: none;
+  border-radius: 11px;
+  background-color: #fff !important;
+  box-shadow: none;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  display: flex;
+  cursor: pointer;
+  &::before {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: $color-accent;
+  }
+}
+.irs--round .irs-bar {
+  top: 5px;
+  height: 1px;
+  background-color: $color-accent;
+}

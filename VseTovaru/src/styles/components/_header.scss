@@ -86,6 +86,9 @@
   }
   &__buttons {
     display: flex;
+    .toggle-section {
+      position: relative;
+    }
   }
   &__buttons-bottom {
     display: none;
@@ -99,7 +102,7 @@
     color: inherit;
     text-decoration: none;
     font-weight: 700;
-    &:not(:last-child) {
+    &_favorites {
       margin-right: 25px;
     }
     .icon {
@@ -124,7 +127,7 @@
       font-size: 0.875rem;
       transition: inherit;
     }
-    &.touch, &.hover {
+    &.touch, &.hover, &.active {
       .icon {
         color: $color-accent;
       }
@@ -151,7 +154,8 @@
   }
   @include media-breakpoint-down(xs) {
     &__icon-button {
-      &:not(:last-child) {
+      
+      &_favorites {
         margin-right: 15px;
       }
       .icon {
@@ -215,6 +219,105 @@
     }
   }
 }
+
+.cart-preview {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $trs1, visibility $trs1, transform $trs1;
+  transform: translateY(5px);
+  border: 1px solid $color-accent2;
+  border-radius: 2px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  z-index: 10;
+  padding: 10px;
+  background-color: #fff;
+  width: 360px;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    top: -5px;
+    right: 12px;
+    transform: rotate(-45deg);
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    border-color: $color-accent2;
+  }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  &__bottom {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #a1a1a1;
+  }
+  &__cart-btn {
+    font-size: 1.25rem;
+  }
+  &__buttons {
+    display: flex;
+    margin: 10px -5px 0 -5px;
+    .button {
+      margin: 0 5px;
+    }
+  }
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    padding: 0 45px;
+    i {
+      font-size: 0.75em;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.cart-preview-item {
+  padding-right: 45px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  display: flex;
+  align-items: flex-start;
+  &__image {
+    flex: 0 0 40px;
+    margin-right: 5px;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__text {
+    font-size: 0.75rem;
+    flex: 1 1 100%;
+  }
+  &__title {
+    font-size: inherit;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  &__price {
+    font-weight: 700;
+    flex: 0 0 auto;
+    margin-left: 20px;
+    font-size: 0.75rem;
+    i {
+      font-size: 0.85em;
+    }
+  }
+}
+
 
 .desktop-catalogue {
   flex: 0 0 auto;

@@ -54,14 +54,43 @@ header.header
           | Адрес: 
           strong Москва, Красноармейская 15 
       .header__buttons
-        a(href="#").header__icon-button
+        a(href="#").header__icon-button.header__icon-button_favorites
           svg.icon
             use(xlink:href='img/icons/icons-sprite.svg#heart')
           span 37
-        a(href="#").header__icon-button
-          svg.icon
-            use(xlink:href='img/icons/icons-sprite.svg#cart')
-          span 25
+        .toggle-section(data-hover)
+          a(href="#").header__icon-button.toggle-section__trigger
+            svg.icon
+              use(xlink:href='img/icons/icons-sprite.svg#cart')
+            span 25
+          .cart-preview.toggle-section__content 
+            .cart-preview__content  
+              //item
+              .cart-preview-item
+                .image.image_contain.cart-preview-item__image
+                  img(data-src='./img/bra.jpg', alt="image").lazyload
+                .cart-preview-item__text
+                  h6.cart-preview-item__title Бра LOFT IT LOFT2105 LOFT2105W   х 1
+                  span.cart-preview-item__label (Испания) 
+                .cart-preview-item__price 3920 <i class="fas fa-ruble-sign"></i>
+              //item
+              .cart-preview-item
+                .image.image_contain.cart-preview-item__image
+                  img(data-src='./img/image3.png', alt="image").lazyload
+                .cart-preview-item__text
+                  h6.cart-preview-item__title Бра LOFT IT PhoneLOFT9993-BL   х 1
+                  span.cart-preview-item__label (Испания) 
+                .cart-preview-item__price 10720 <i class="fas fa-ruble-sign"></i>
+            .cart-preview__bottom
+              .cart-preview__total
+                span Итого: 
+                span 14 640 <i class="fas fa-ruble-sign"></i>
+              .cart-preview__buttons
+                a(href="#").button.button_style-1.button_radius Продолжить покупки
+                a(href="#").button.button_style-3.button_radius.cart-preview__cart-btn Оформить заказ
+                  
+
+
   .header__bottom
     .container
       .desktop-catalogue.toggle-section(data-hover data-no-delay)
@@ -97,14 +126,40 @@ header.header
               use(xlink:href='img/icons/icons-sprite.svg#lupa')
             span Искать
       .header__buttons.header__buttons-bottom
-        a(href="#").header__icon-button
+        a(href="#").header__icon-button.header__icon-button_favorites
           svg.icon
             use(xlink:href='img/icons/icons-sprite.svg#heart')
           span 37
-        a(href="#").header__icon-button
-          svg.icon
-            use(xlink:href='img/icons/icons-sprite.svg#cart')
-          span 25
+        .toggle-section(data-hover)
+          a(href="#").header__icon-button.toggle-section__trigger
+            svg.icon
+              use(xlink:href='img/icons/icons-sprite.svg#cart')
+            span 25
+          .cart-preview.toggle-section__content 
+            .cart-preview__content  
+              //item
+              .cart-preview-item
+                .image.image_contain.cart-preview-item__image
+                  img(data-src='./img/bra.jpg', alt="image").lazyload
+                .cart-preview-item__text
+                  h6.cart-preview-item__title Бра LOFT IT LOFT2105 LOFT2105W   х 1
+                  span.cart-preview-item__label (Испания) 
+                .cart-preview-item__price 3920 <i class="fas fa-ruble-sign"></i>
+              //item
+              .cart-preview-item
+                .image.image_contain.cart-preview-item__image
+                  img(data-src='./img/image3.png', alt="image").lazyload
+                .cart-preview-item__text
+                  h6.cart-preview-item__title Бра LOFT IT PhoneLOFT9993-BL   х 1
+                  span.cart-preview-item__label (Испания) 
+                .cart-preview-item__price 10720 <i class="fas fa-ruble-sign"></i>
+            .cart-preview__bottom
+              .cart-preview__total
+                span Итого: 
+                span 14 640 <i class="fas fa-ruble-sign"></i>
+              .cart-preview__buttons
+                a(href="#").button.button_style-1.button_radius Продолжить покупки
+                a(href="#").button.button_style-3.button_radius.cart-preview__cart-btn Оформить заказ
 
 nav.mobile-nav
   .mobile-nav__block(data-scroll-lock-scrollable)
