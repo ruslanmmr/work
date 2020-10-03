@@ -79,12 +79,13 @@ blockquote {
 }
 
 ul:not([class]) {
+  padding-left: 1rem;
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
   li:not([class]) {
     position: relative;
-    padding-left: 22px;
+    padding-left: 20px;
     &:not(:last-child) {
       margin: 0 0 0.875rem 0;
     }
@@ -102,16 +103,23 @@ ul:not([class]) {
 }
 ol:not([class]) {
   counter-reset: section;
+  padding-left: 1rem;
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
   li:not([class]) {
+    padding-left: 20px;
+    font-weight: normal;
+    position: relative;
     &:not(:last-child) {
       margin: 0 0 0.875rem 0;
     }
     &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
       counter-increment: section;
-      content: counters(section, ".") ". ";
+      content: counter(section) ". ";
     }
   }
 }
@@ -158,25 +166,12 @@ table:not([class]) {
   }
 }
 
-a:not([class]),
-.link {
-  color: $color-link;
-  text-decoration: none;
-  transition: color $trs1;
-  position: relative;
-}
-.link {
-  &.touch, &.hover {
-    color: $color-link-hover;
-  }
-}
 a:not([class]) {
-  &:visited {
-    color: $color-link-visited
-  }
+  text-decoration: underline;
+  color: $color-accent2;
   &:hover {
-    color: $color-link-hover;
-    text-decoration: underline;
+    text-decoration: none;
+    color: $color-accent;
   }
 }
 

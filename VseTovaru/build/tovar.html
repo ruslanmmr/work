@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Карточка товара</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--color-->
+    <meta name="theme-color" content="#000">
+    <!--favicons-->
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&amp;display=swap" rel="stylesheet">
+    <!--styles-->
+    <link rel="stylesheet" href="./styles/common.css">
+    <!--helper (только для навигации по верстке)-->
+    <link rel="stylesheet" href="./styles/helper.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <nav class="header-nav">
+              <ul class="header-nav__list">
+                <li class="header-nav__item"><a class="header-nav__link" href="#">О компании</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Доставка и оплата</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Акции</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Новости</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Юридическим лицам</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="header-socials">
+              <ul class="header-socials__list">
+                <li class="header-socials__item"> <a class="header-socials__link" href="#">
+                     <i class="fab fa-facebook-f"></i></a></li>
+                <li class="header-socials__item"> <a class="header-socials__link" href="#">
+                     <i class="fab fa-vk"></i></a></li>
+                <li class="header-socials__item"> <a class="header-socials__link" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="header-socials__item"> <a class="header-socials__link" href="#"><i class="fab fa-odnoklassniki"></i></a></li>
+              </ul>
+            </div><a class="header__auth-button" href="#">
+              <svg class="icon">
+                <use xlink:href="img/icons/icons-sprite.svg#key"></use>
+              </svg><span>Войти</span></a>
+          </div>
+        </div>
+        <div class="header__center">
+          <div class="container"><a class="nav-open" href="javascript:void(0);"><span>Меню</span></a><a class="logo" href="index.html"><img class="logo__image" src="./img/logos/logo.svg" alt="logo"></a>
+            <div class="header__contacts">
+              <div class="header__phone"><a href="tel:#"> <strong>+7 (800) 999-77-55</strong></a><br>многоканальный</div>
+              <div class="header__info">Режим работы: <strong>10:00 - 22:00</strong><br>Адрес: <strong>Москва, Красноармейская 15 </strong></div>
+            </div>
+            <div class="header__buttons"><a class="header__icon-button header__icon-button_favorites" href="#">
+                <svg class="icon">
+                  <use xlink:href="img/icons/icons-sprite.svg#heart"></use>
+                </svg><span>37</span></a>
+              <div class="toggle-section" data-hover><a class="header__icon-button toggle-section__trigger" href="#">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/icons-sprite.svg#cart"></use>
+                  </svg><span>25</span></a>
+                <div class="cart-preview toggle-section__content"> 
+                  <div class="cart-preview__content"> 
+                    <!--item-->
+                    <div class="cart-preview-item">
+                      <div class="image image_contain cart-preview-item__image"><img class="lazyload" data-src="./img/bra.jpg" alt="image"></div>
+                      <div class="cart-preview-item__text">
+                        <h6 class="cart-preview-item__title">Бра LOFT IT LOFT2105 LOFT2105W   х 1</h6><span class="cart-preview-item__label">(Испания) </span>
+                      </div>
+                      <div class="cart-preview-item__price">3920 <i class="fas fa-ruble-sign"></i></div>
+                    </div>
+                    <!--item-->
+                    <div class="cart-preview-item">
+                      <div class="image image_contain cart-preview-item__image"><img class="lazyload" data-src="./img/image3.png" alt="image"></div>
+                      <div class="cart-preview-item__text">
+                        <h6 class="cart-preview-item__title">Бра LOFT IT PhoneLOFT9993-BL   х 1</h6><span class="cart-preview-item__label">(Испания) </span>
+                      </div>
+                      <div class="cart-preview-item__price">10720 <i class="fas fa-ruble-sign"></i></div>
+                    </div>
+                  </div>
+                  <div class="cart-preview__bottom">
+                    <div class="cart-preview__total"><span>Итого: </span><span>14 640 <i class="fas fa-ruble-sign"></i></span></div>
+                    <div class="cart-preview__buttons"><a class="button button_style-1 button_radius" href="#">Продолжить покупки</a><a class="button button_style-3 button_radius cart-preview__cart-btn" href="#">Оформить заказ</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="container">
+            <div class="desktop-catalogue toggle-section" data-hover data-no-delay><a class="button button_style-3 desktop-catalogue__trigger toggle-section__trigger" href="javascript:void(0);">Каталог товаров</a>
+              <div class="desktop-catalogue__content toggle-section__content">
+                                <div class="desktop-catalogue-section toggle-section" data-hover data-no-delay> <a class="toggle-section__trigger desktop-catalogue-section__trigger" href="#"><span>Бактерицидные настольные лампы</span>
+                                    <svg class="icon">
+                                      <use xlink:href="img/icons/icons-sprite.svg#arrow"></use>
+                                    </svg></a>
+                                  <ul class="desktop-catalogue-section__list toggle-section__content">
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Ультрафиолетовые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Кварцевые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Переносные</a></li>
+                                  </ul>
+                                </div>
+                                <div class="desktop-catalogue-section toggle-section" data-hover data-no-delay> <a class="toggle-section__trigger desktop-catalogue-section__trigger" href="#"><span>Светодиодные лампы</span>
+                                    <svg class="icon">
+                                      <use xlink:href="img/icons/icons-sprite.svg#arrow"></use>
+                                    </svg></a>
+                                  <ul class="desktop-catalogue-section__list toggle-section__content">
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Ультрафиолетовые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Кварцевые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Переносные</a></li>
+                                  </ul>
+                                </div>
+                                <div class="desktop-catalogue-section toggle-section" data-hover data-no-delay> <a class="toggle-section__trigger desktop-catalogue-section__trigger" href="#"><span>Садово-парковые светильники</span>
+                                    <svg class="icon">
+                                      <use xlink:href="img/icons/icons-sprite.svg#arrow"></use>
+                                    </svg></a>
+                                  <ul class="desktop-catalogue-section__list toggle-section__content">
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Ультрафиолетовые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Кварцевые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Переносные</a></li>
+                                  </ul>
+                                </div>
+                                <div class="desktop-catalogue-section toggle-section" data-hover data-no-delay> <a class="toggle-section__trigger desktop-catalogue-section__trigger" href="#"><span>Светодиодная лента и комплектующие</span>
+                                    <svg class="icon">
+                                      <use xlink:href="img/icons/icons-sprite.svg#arrow"></use>
+                                    </svg></a>
+                                  <ul class="desktop-catalogue-section__list toggle-section__content">
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Ультрафиолетовые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Кварцевые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Переносные</a></li>
+                                  </ul>
+                                </div>
+                                <div class="desktop-catalogue-section toggle-section" data-hover data-no-delay> <a class="toggle-section__trigger desktop-catalogue-section__trigger" href="#"><span>Бактерицидные настольные лампы</span>
+                                    <svg class="icon">
+                                      <use xlink:href="img/icons/icons-sprite.svg#arrow"></use>
+                                    </svg></a>
+                                  <ul class="desktop-catalogue-section__list toggle-section__content">
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Ультрафиолетовые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Кварцевые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Переносные</a></li>
+                                  </ul>
+                                </div>
+                                <div class="desktop-catalogue-section toggle-section" data-hover data-no-delay> <a class="toggle-section__trigger desktop-catalogue-section__trigger" href="#"><span>Светодиодные лампы</span>
+                                    <svg class="icon">
+                                      <use xlink:href="img/icons/icons-sprite.svg#arrow"></use>
+                                    </svg></a>
+                                  <ul class="desktop-catalogue-section__list toggle-section__content">
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Ультрафиолетовые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Кварцевые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Переносные</a></li>
+                                  </ul>
+                                </div>
+                                <div class="desktop-catalogue-section toggle-section" data-hover data-no-delay> <a class="toggle-section__trigger desktop-catalogue-section__trigger" href="#"><span>Садово-парковые светильники</span>
+                                    <svg class="icon">
+                                      <use xlink:href="img/icons/icons-sprite.svg#arrow"></use>
+                                    </svg></a>
+                                  <ul class="desktop-catalogue-section__list toggle-section__content">
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Ультрафиолетовые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Кварцевые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Переносные</a></li>
+                                  </ul>
+                                </div>
+                                <div class="desktop-catalogue-section toggle-section" data-hover data-no-delay> <a class="toggle-section__trigger desktop-catalogue-section__trigger" href="#"><span>Светодиодная лента и комплектующие</span>
+                                    <svg class="icon">
+                                      <use xlink:href="img/icons/icons-sprite.svg#arrow"></use>
+                                    </svg></a>
+                                  <ul class="desktop-catalogue-section__list toggle-section__content">
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Ультрафиолетовые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Кварцевые</a></li>
+                                    <li class="desktop-catalogue-section__item"><a class="desktop-catalogue-section__link" href="#">Переносные</a></li>
+                                  </ul>
+                                </div>
+              </div>
+            </div>
+            <div class="header-search">
+              <form class="header-search__form" action="#">
+                <div class="input header-search__input">
+                  <input class="input__element" type="text" name="name" placeholder="Поиск по сайту">
+                </div>
+                <button class="button button_style-3 header-search__button">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/icons-sprite.svg#lupa"></use>
+                  </svg><span>Искать</span>
+                </button>
+              </form>
+            </div>
+            <div class="header__buttons header__buttons-bottom"><a class="header__icon-button header__icon-button_favorites" href="#">
+                <svg class="icon">
+                  <use xlink:href="img/icons/icons-sprite.svg#heart"></use>
+                </svg><span>37</span></a>
+              <div class="toggle-section" data-hover><a class="header__icon-button toggle-section__trigger" href="#">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/icons-sprite.svg#cart"></use>
+                  </svg><span>25</span></a>
+                <div class="cart-preview toggle-section__content"> 
+                  <div class="cart-preview__content"> 
+                    <!--item-->
+                    <div class="cart-preview-item">
+                      <div class="image image_contain cart-preview-item__image"><img class="lazyload" data-src="./img/bra.jpg" alt="image"></div>
+                      <div class="cart-preview-item__text">
+                        <h6 class="cart-preview-item__title">Бра LOFT IT LOFT2105 LOFT2105W   х 1</h6><span class="cart-preview-item__label">(Испания) </span>
+                      </div>
+                      <div class="cart-preview-item__price">3920 <i class="fas fa-ruble-sign"></i></div>
+                    </div>
+                    <!--item-->
+                    <div class="cart-preview-item">
+                      <div class="image image_contain cart-preview-item__image"><img class="lazyload" data-src="./img/image3.png" alt="image"></div>
+                      <div class="cart-preview-item__text">
+                        <h6 class="cart-preview-item__title">Бра LOFT IT PhoneLOFT9993-BL   х 1</h6><span class="cart-preview-item__label">(Испания) </span>
+                      </div>
+                      <div class="cart-preview-item__price">10720 <i class="fas fa-ruble-sign"></i></div>
+                    </div>
+                  </div>
+                  <div class="cart-preview__bottom">
+                    <div class="cart-preview__total"><span>Итого: </span><span>14 640 <i class="fas fa-ruble-sign"></i></span></div>
+                    <div class="cart-preview__buttons"><a class="button button_style-1 button_radius" href="#">Продолжить покупки</a><a class="button button_style-3 button_radius cart-preview__cart-btn" href="#">Оформить заказ</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="mobile-nav">
+        <div class="mobile-nav__block" data-scroll-lock-scrollable><a class="mobile-nav__close" href="javascript:void(0);"></a>
+          <div class="mobile-nav__content"> <a class="logo mobile-nav__logo" href="#"><img class="logo__image" src="./img/logos/logo-white.svg" alt="logo"></a>
+            <div class="mobile-nav__nav"><a class="mobile-nav__registration" href="#">Вход | Регистрация</a>
+              <div class="mobile-nav__catalogue">
+                                <div class="mobile-catalogue-section toggle-section" data-slide><a class="toggle-section__trigger mobile-catalogue-section__trigger" href="javascript:void(0);"><span>Бактерицидные настольные лампы</span>
+                                    <svg class="icon">
+                                      <use xlink:href="img/icons/icons-sprite.svg#arrow"></use>
+                                    </svg></a>
+                                  <ul class="mobile-catalogue-section__list toggle-section__content">
+                                    <li class="mobile-catalogue-section__item"><a class="mobile-catalogue-section__link" href="#">Ультрафиолетовые</a></li>
+                                    <li class="mobile-catalogue-section__item"><a class="mobile-catalogue-section__link" href="#">Кварцевые</a></li>
+                                    <li class="mobile-catalogue-section__item"><a class="mobile-catalogue-section__link" href="#">Переносные</a></li>
+                                  </ul>
+                                </div>
+                                <div class="mobile-catalogue-section toggle-section" data-slide><a class="toggle-section__trigger mobile-catalogue-section__trigger" href="javascript:void(0);"><span>Светодиодные лампы</span>
+                                    <svg class="icon">
+                                      <use xlink:href="img/icons/icons-sprite.svg#arrow"></use>
+                                    </svg></a>
+                                  <ul class="mobile-catalogue-section__list toggle-section__content">
+                                    <li class="mobile-catalogue-section__item"><a class="mobile-catalogue-section__link" href="#">Ультрафиолетовые</a></li>
+                                    <li class="mobile-catalogue-section__item"><a class="mobile-catalogue-section__link" href="#">Кварцевые</a></li>
+                                    <li class="mobile-catalogue-section__item"><a class="mobile-catalogue-section__link" href="#">Переносные</a></li>
+                                  </ul>
+                                </div>
+                                <div class="mobile-catalogue-section toggle-section" data-slide><a class="toggle-section__trigger mobile-catalogue-section__trigger" href="javascript:void(0);"><span>Садово-парковые светильники</span>
+                                    <svg class="icon">
+                                      <use xlink:href="img/icons/icons-sprite.svg#arrow"></use>
+                                    </svg></a>
+                                  <ul class="mobile-catalogue-section__list toggle-section__content">
+                                    <li class="mobile-catalogue-section__item"><a class="mobile-catalogue-section__link" href="#">Ультрафиолетовые</a></li>
+                                    <li class="mobile-catalogue-section__item"><a class="mobile-catalogue-section__link" href="#">Кварцевые</a></li>
+                                    <li class="mobile-catalogue-section__item"><a class="mobile-catalogue-section__link" href="#">Переносные</a></li>
+                                  </ul>
+                                </div>
+                                <div class="mobile-catalogue-section toggle-section" data-slide><a class="toggle-section__trigger mobile-catalogue-section__trigger" href="javascript:void(0);"><span>Светодиодная лента и комплектующие</span>
+                                    <svg class="icon">
+                                      <use xlink:href="img/icons/icons-sprite.svg#arrow"></use>
+                                    </svg></a>
+                                  <ul class="mobile-catalogue-section__list toggle-section__content">
+                                    <li class="mobile-catalogue-section__item"><a class="mobile-catalogue-section__link" href="#">Ультрафиолетовые</a></li>
+                                    <li class="mobile-catalogue-section__item"><a class="mobile-catalogue-section__link" href="#">Кварцевые</a></li>
+                                    <li class="mobile-catalogue-section__item"><a class="mobile-catalogue-section__link" href="#">Переносные</a></li>
+                                  </ul>
+                                </div>
+              </div>
+              <ul class="mobile-nav__list">
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">О компании</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Доставка и оплата</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Акции</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Новости</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Юридическим лицам</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Контакты</a></li>
+              </ul>
+              <div class="mobile-nav__contact">
+                <div class="mobile-nav__phone"><a href="tel:#"> <strong>+7 (800) 999-77-55</strong></a><br>многоканальный</div>
+                <div class="mobile-nav__info">Режим работы: <strong>10:00 - 22:00</strong><br>Адрес: <strong>Москва, Красноармейская 15 </strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main class="main">
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list container">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная </a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Раздел</a></li>
+            <li class="breadcrumbs__item">Карточка товара</li>
+          </ul>
+        </div>
+        <section class="section product-section">
+          <div class="container">
+            <div class="product-section__heading">
+              <h1 class="section__title product-section__title">Бра LOFT IT LOFT2105 LOFT2105W <span>Испания</span></h1><span class="product-section__art">Артикул: 55139</span>
+            </div>
+            <div class="product-section__head row">
+              <!--slider-->
+              <div class="product-section__images col-xl-5 col-lg-6 col-md-5">
+                <div class="product-slider-wrap"><a class="product-section__favorites-button" href="#">
+                    <svg class="icon">
+                      <use xlink:href="img/icons/icons-sprite.svg#heart"></use>
+                    </svg></a>
+                  <div class="card-labels product-section__card-labels">
+                    <div class="card-label card-label_type-discount">-20%</div>
+                    <div class="card-label card-label_type-new">НОВИНКА</div>
+                    <div class="card-label card-label_type-top">ТОП ПРОДАЖ</div>
+                  </div>
+                  <!--главный слайдер-->
+                  <div class="slider product-slider">
+                                        <!--slide-->
+                                        <div class="product-slider__slide image image_contain"><img class="lazyload" data-src="./img/bra.jpg" alt="image"></div>
+                                        <!--slide-->
+                                        <div class="product-slider__slide image image_contain"><img class="lazyload" data-src="./img/image1.png" alt="image"></div>
+                                        <!--slide-->
+                                        <div class="product-slider__slide image image_contain"><img class="lazyload" data-src="./img/image2.png" alt="image"></div>
+                                        <!--slide-->
+                                        <div class="product-slider__slide image image_contain"><img class="lazyload" data-src="./img/image3.png" alt="image"></div>
+                  </div>
+                </div>
+                <!--навигационный слайдер-->
+                <div class="slider product-nav-slider row">
+                                    <!--slide-->
+                                    <div class="product-nav-slider__slide col">
+                                      <div class="image image_cover"><img class="lazyload" data-src="./img/bra.jpg" alt="image"></div>
+                                    </div>
+                                    <!--slide-->
+                                    <div class="product-nav-slider__slide col">
+                                      <div class="image image_cover"><img class="lazyload" data-src="./img/image1.png" alt="image"></div>
+                                    </div>
+                                    <!--slide-->
+                                    <div class="product-nav-slider__slide col">
+                                      <div class="image image_cover"><img class="lazyload" data-src="./img/image2.png" alt="image"></div>
+                                    </div>
+                                    <!--slide-->
+                                    <div class="product-nav-slider__slide col">
+                                      <div class="image image_cover"><img class="lazyload" data-src="./img/image3.png" alt="image"></div>
+                                    </div>
+                </div>
+              </div>
+              <div class="product-section__content col-xl-7 col-lg-6 col-md-7">
+                <div class="row">
+                  <div class="col-sm-6 product-section__left-col">
+                    <div class="product-section__pricing"><span class="product-section__price">3920 <i class="fas fa-ruble-sign"></i></span><span class="product-section__old-price">4500 <i class="fas fa-ruble-sign"></i></span></div>
+                    <div class="product-section__colors">
+                      <h6 class="product-section__colors-title">Доступные цвета:</h6>
+                      <ul class="product-section__colors-list">
+                                                <li>
+                                                  <div class="checkbox checkbox_color">
+                                                    <input class="checkbox__input" type="radio" name="color" id="0">
+                                                    <label class="checkbox__label" for="0" style="background-color:#545761;"></label>
+                                                  </div>
+                                                </li>
+                                                <li>
+                                                  <div class="checkbox checkbox_color">
+                                                    <input class="checkbox__input" type="radio" name="color" id="2">
+                                                    <label class="checkbox__label" for="2" style="background-color:#fff;"></label>
+                                                  </div>
+                                                </li>
+                                                <li>
+                                                  <div class="checkbox checkbox_color">
+                                                    <input class="checkbox__input" type="radio" name="color" id="4">
+                                                    <label class="checkbox__label" for="4" style="background-color:#eec337;"></label>
+                                                  </div>
+                                                </li>
+                                                <li>
+                                                  <div class="checkbox checkbox_color">
+                                                    <input class="checkbox__input" type="radio" name="color" id="6">
+                                                    <label class="checkbox__label" for="6" style="background-color:#c28400;"></label>
+                                                  </div>
+                                                </li>
+                                                <li>
+                                                  <div class="checkbox checkbox_color">
+                                                    <input class="checkbox__input" type="radio" name="color" id="8">
+                                                    <label class="checkbox__label" for="8" style="background-color:#c26400;"></label>
+                                                  </div>
+                                                </li>
+                      </ul>
+                    </div>
+                    <div class="product-section__availability"><span class="product-section__availability-true">Есть в наличии <i class="fas fa-check"></i></span><span class="product-section__availability-false">Нет в наличии</span></div>
+                    <div class="product-section__files">
+                      <h6 class="product-section__files-title"><i class="fas fa-download"></i> Файлы для скачивания</h6>
+                      <ul class="product-section__files-list">
+                        <li><a href="#ldslds">Прайс.pdf</a></li>
+                        <li><a href="#dff">Price.doc</a></li>
+                      </ul>
+                    </div>
+                    <div class="product-section__count">
+                      <h6 class="product-section__count-title">Количество:</h6>
+                      <div class="calc-count-block"><a class="button calc-count-block__button js-minus" href="javascript:void(0);"></a>
+                        <div class="input">
+                          <input class="input__element calc-count-block__input" type="number" name="ddd" value="1">
+                        </div><a class="button calc-count-block__button js-plus" href="javascript:void(0);"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 product-section__right-col">
+                    <div class="product-section__specifications">
+                      <h2 class="product-section__specifications-title">Характеристики</h2>
+                      <ul class="product-section__specifications-list">
+                        <li><span>Мощность</span><span>11 W</span></li>
+                        <li><span>Гарантия</span><span>1 год</span></li>
+                        <li><span>Напряжение</span><span>230V / 50Hz</span></li>
+                        <li><span>Цвет колбы</span><span>Матовый</span></li>
+                        <li><span>Производитель</span><span>Saffit</span></li>
+                        <li><span>Световой поток</span><span>905Lm</span></li>
+                        <li><span>Цоколь</span><span>E27</span></li>
+                        <li><span>Срок службы</span><span>5000 часов</span></li>
+                        <li><span>Угол рассеивания</span><span>220 градусов</span></li>
+                        <li><span>Цвет свечения</span><span>4000K</span></li>
+                        <li><span>Размер</span><span>45х85мм</span></li>
+                        <li><span>Тип лампы</span><span>G45</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-12 product-section__buttons">
+                    <div class="row">
+                      <div class="col-xl-4 col-sm-6"><a class="button button_style-3 button_radius" href="#">В корзину</a></div>
+                      <div class="col-xl-4 col-sm-6"><a class="button button_style-1 button_radius" href="#">Купить в один клик</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-section__description">
+              <div class="product-section__description-head">
+                <h2 class="product-section__description-title">Описание</h2>
+              </div>
+              <div class="product-section__description-content">
+                <p>Светодиодная лампочка в форме свечи с цоколем E14 и размерами 80 мм по высоте обладает мощностью в 11 W, благодаря чему она может осветить 3.7 кв. м. Цветовая температура – 2700K К, т.е. теплый свет близкий к цвету Солнца. Ориентировочный срок службы заявленный производителем Saffit составляет 30 000 ч. Изделие рассчитано на использование в сети с переменным напряжением в 230В.</p>
+                <ul> 
+                  <li>Сорт Е (элита)</li>
+                  <li>Сорт I, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.</li>
+                  <li>Сорт III</li>
+                </ul>
+                <p>Светодиодная лампочка в форме свечи с цоколем E14 и размерами 80 мм по высоте обладает.</p>
+                <ol> 
+                  <li>Сорт Е (элита)</li>
+                  <li>Сорт I, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.</li>
+                  <li>Сорт II</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <h2 class="section__title">Похожие товары</h2>
+            <div class="slider slider_grid products-slider row">
+                            <div class="catalogue-card catalogue-card_style-2 col">
+                              <div class="catalogue-card__container jsTouchHover">
+                                <div class="card-labels catalogue-card__card-labels">
+                                  <div class="card-label card-label_type-discount">-20%</div>
+                                </div><a class="catalogue-card__favorites-button active" href="#">
+                                  <svg class="icon">
+                                    <use xlink:href="img/icons/icons-sprite.svg#heart"></use>
+                                  </svg></a><a class="image image_contain catalogue-card__image" href="#"><img class="lazyload" data-src="./img/bra.jpg" alt="image"></a>
+                                <div class="catalogue-card__content">
+                                  <div class="catalogue-card__content-top">
+                                    <h3 class="catalogue-card__title">Бра LOFT IT LOFT2105</h3><span class="catalogue-card__label">Испания</span>
+                                  </div>
+                                  <div class="catalogue-card__content-bottom">
+                                    <div class="catalogue-card__pricing"><span class="catalogue-card__price">10720 <i class="fas fa-ruble-sign"></i></span>
+                                    </div><a class="button button_style-5 catalogue-card__button" href="#">В корзину</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="catalogue-card catalogue-card_style-2 col">
+                              <div class="catalogue-card__container jsTouchHover">
+                                <div class="card-labels catalogue-card__card-labels">
+                                  <div class="card-label card-label_type-new">НОВИНКА</div>
+                                </div><a class="catalogue-card__favorites-button" href="#">
+                                  <svg class="icon">
+                                    <use xlink:href="img/icons/icons-sprite.svg#heart"></use>
+                                  </svg></a><a class="image image_contain catalogue-card__image" href="#"><img class="lazyload" data-src="./img/image1.png" alt="image"></a>
+                                <div class="catalogue-card__content">
+                                  <div class="catalogue-card__content-top">
+                                    <h3 class="catalogue-card__title">Бра LOFT IT LOFT2105 LOFT2105W</h3><span class="catalogue-card__label">Испания</span>
+                                  </div>
+                                  <div class="catalogue-card__content-bottom">
+                                    <div class="catalogue-card__pricing"><span class="catalogue-card__price">10720 <i class="fas fa-ruble-sign"></i></span>
+                                    </div><a class="button button_style-5 catalogue-card__button" href="#">В корзину</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="catalogue-card catalogue-card_style-2 col">
+                              <div class="catalogue-card__container jsTouchHover">
+                                <div class="card-labels catalogue-card__card-labels">
+                                  <div class="card-label card-label_type-top">ТОП ПРОДАЖ</div>
+                                </div><a class="catalogue-card__favorites-button" href="#">
+                                  <svg class="icon">
+                                    <use xlink:href="img/icons/icons-sprite.svg#heart"></use>
+                                  </svg></a><a class="image image_contain catalogue-card__image" href="#"><img class="lazyload" data-src="./img/image2.png" alt="image"></a>
+                                <div class="catalogue-card__content">
+                                  <div class="catalogue-card__content-top">
+                                    <h3 class="catalogue-card__title">Бра LOFT IT LOFT2105 LOFT2105W</h3><span class="catalogue-card__label">Испания</span>
+                                  </div>
+                                  <div class="catalogue-card__content-bottom">
+                                    <div class="catalogue-card__pricing"><span class="catalogue-card__price">10720 <i class="fas fa-ruble-sign"></i></span><span class="catalogue-card__old-price">12000 <i class="fas fa-ruble-sign"></i></span>
+                                    </div><a class="button button_style-5 catalogue-card__button" href="#">В корзину</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="catalogue-card catalogue-card_style-2 col">
+                              <div class="catalogue-card__container jsTouchHover">
+                                <div class="card-labels catalogue-card__card-labels">
+                                  <div class="card-label card-label_type-new">НОВИНКА</div>
+                                  <div class="card-label card-label_type-top">ТОП ПРОДАЖ</div>
+                                </div><a class="catalogue-card__favorites-button" href="#">
+                                  <svg class="icon">
+                                    <use xlink:href="img/icons/icons-sprite.svg#heart"></use>
+                                  </svg></a><a class="image image_contain catalogue-card__image" href="#"><img class="lazyload" data-src="./img/image3.png" alt="image"></a>
+                                <div class="catalogue-card__content">
+                                  <div class="catalogue-card__content-top">
+                                    <h3 class="catalogue-card__title">Бра LOFT IT LOFT2105 LOFT2105W</h3><span class="catalogue-card__label">Испания</span>
+                                  </div>
+                                  <div class="catalogue-card__content-bottom">
+                                    <div class="catalogue-card__pricing"><span class="catalogue-card__price">10720 <i class="fas fa-ruble-sign"></i></span>
+                                    </div><a class="button button_style-5 catalogue-card__button" href="#">В корзину</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="catalogue-card catalogue-card_style-2 col">
+                              <div class="catalogue-card__container jsTouchHover">
+                                <div class="card-labels catalogue-card__card-labels">
+                                  <div class="card-label card-label_type-discount">-20%</div>
+                                </div><a class="catalogue-card__favorites-button active" href="#">
+                                  <svg class="icon">
+                                    <use xlink:href="img/icons/icons-sprite.svg#heart"></use>
+                                  </svg></a><a class="image image_contain catalogue-card__image" href="#"><img class="lazyload" data-src="./img/bra.jpg" alt="image"></a>
+                                <div class="catalogue-card__content">
+                                  <div class="catalogue-card__content-top">
+                                    <h3 class="catalogue-card__title">Бра LOFT IT LOFT2105</h3><span class="catalogue-card__label">Испания</span>
+                                  </div>
+                                  <div class="catalogue-card__content-bottom">
+                                    <div class="catalogue-card__pricing"><span class="catalogue-card__price">10720 <i class="fas fa-ruble-sign"></i></span>
+                                    </div><a class="button button_style-5 catalogue-card__button" href="#">В корзину</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__container row">
+            <div class="footer__section col-auto order-sm-2">
+              <h5 class="footer__section-title">О компании</h5>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">О нас</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Новости</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Юридическим лицам</a></li>
+              </ul>
+            </div>
+            <div class="footer__section col-auto order-sm-3">
+              <h5 class="footer__section-title">Нашим покупателям</h5>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Оплата</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Доставка</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Акции</a></li>
+              </ul>
+            </div>
+            <div class="footer__section footer__section-contacts col-auto order-sm-1">
+              <h5 class="footer__section-title">Контакты</h5><a class="footer__phone" href="tel:#">+7 (800) 999-77-55</a><span class="footer__adress">Москва, Красноармейская 15</span><span class="footer__time">Режим работы: <strong>10:00 - 22:00</strong></span>
+            </div>
+            <div class="footer__section col-auto order-sm-4">
+              <h5 class="footer__section-title">Мы принимаем к оплате</h5><img class="footer__payment" src="./img/cards.png" alt="payment">
+              <div class="footer-socials">
+                <h5 class="footer-socials__title">Следите за нами</h5>
+                <ul class="footer-socials__list">
+                  <li class="footer-socials__item"> <a class="footer-socials__link" href="#">
+                       <i class="fab fa-facebook-f"></i></a></li>
+                  <li class="footer-socials__item"> <a class="footer-socials__link" href="#">
+                       <i class="fab fa-vk"></i></a></li>
+                  <li class="footer-socials__item"> <a class="footer-socials__link" href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li class="footer-socials__item"> <a class="footer-socials__link" href="#"><i class="fab fa-odnoklassniki"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer><a class="js-up" href="javascript:void(0);"><i class="fas fa-arrow-up"></i></a>
+      <!--helper (только для навигации по верстке)-->
+      <div class="helper"><a class="helper__trigger" href="javascript:void(0);"> 
+          <svg class="icon" stroke="none" fill="currentColor" viewBox="0 0 12 20">
+            <path d="M2.18 19.05L.77 17.64 8.4 10 .77 2.36 2.18.95 11.23 10l-9.05 9.05z"></path>
+          </svg></a>
+        <div class="helper__container">
+          <!--section-->
+          <div class="helper__section"><span class="helper__section-title">Страницы:</span>
+            <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="components.html">Типографика, компоненты</a><a class="helper__section-button" href="catalogue.html">Каталог</a><a class="helper__section-button" href="tovar.html">Карточка товара</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--libs-->
+    <script src="./scripts/libs/current-device.min.js"></script>
+    <script src="./scripts/libs/scroll-lock.min.js"></script>
+    <script src="./scripts/libs/lazysizes.min.js"></script>
+    <script src="./scripts/libs/jquery.selectric.min.js"></script>
+    <script src="./scripts/libs/ion.rangeSlider.min.js"></script>
+    <script src="./scripts/libs/inputmask.min.js"></script>
+    <script src="./scripts/libs/simplebar.min.js"></script>
+    <script src="./scripts/libs/slick.js"></script>
+    <!--common.js-->
+    <script src="./scripts/common.js"></script>
+    <!--helper (только для навигации по верстке)-->
+    <script src="./scripts/helper.js"></script>
+  </body>
+</html>

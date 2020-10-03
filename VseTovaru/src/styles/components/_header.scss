@@ -194,7 +194,7 @@
   &__input {
     width: 100%;
     input {
-      padding: 6px 200px 6px 35px;
+      padding: 8px 200px 8px 35px;
       border-color: transparent;
       border-radius: 36px;
     }
@@ -204,7 +204,7 @@
   }
   @include media-breakpoint-down(xs) {
     &__input input {
-      padding: 6px 20px 6px 20px;
+      padding: 8px 20px 8px 20px;
     }
     &__button {
       min-width: 36px;

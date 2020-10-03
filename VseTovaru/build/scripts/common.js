@@ -8,22 +8,26 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 lazySizes.cfg.init = false;
 var brakepoints = {
-  sm: 576,
-  md: 768,
-  lg: 1024,
-  xl: 1200
+  xs: 576,
+  sm: 768,
+  md: 1024,
+  lg: 1200
 };
 $(document).ready(function () {
   TouchHoverEvents.init();
   select.init();
   header.init();
-  lazy();
+  slider.init();
   toggle();
   nav();
   up();
   jsRange();
   customScroll();
   mobileFilter();
+  calculator();
+  setTimeout(function () {
+    lazy();
+  }, 500);
 }); //hover/touch custom events
 
 var TouchHoverEvents = {
@@ -494,5 +498,140 @@ function mobileFilter() {
     scrollLock.enablePageScroll();
     $filter.removeClass('active');
   }
+}
+
+window.slider = {
+  arrowPrev: '<i class="fas fa-chevron-left"></i>',
+  arrowNext: '<i class="fas fa-chevron-right"></i>',
+  init: function init() {
+    this.el = $('.slider').not('.slick-initialized');
+    slider.el.each(function () {
+      var slideCount = 1,
+          slideCountLg = 1,
+          slideCountMd = 1,
+          slideCountSm = 1,
+          slideCountXs = 1,
+          arrows = false,
+          dots = false,
+          centerMode = false,
+          autoplay = false;
+
+      if ($(this).is('.products-slider')) {
+        slideCount = 5;
+        slideCountLg = 4;
+        slideCountMd = 3;
+        slideCountSm = 2;
+        slideCountXs = 2;
+        dots = true;
+        initSlider($(this));
+      }
+
+      function initSlider($target) {
+        $target.slick({
+          rows: 0,
+          infinite: true,
+          dots: dots,
+          arrows: arrows,
+          speed: 500,
+          centerMode: centerMode,
+          slidesToShow: slideCount,
+          slidesToScroll: slideCount,
+          autoplay: autoplay,
+          autoplaySpeed: 3000,
+          responsive: [{
+            breakpoint: brakepoints.lg,
+            settings: {
+              slidesToShow: slideCountLg,
+              slidesToScroll: slideCountLg
+            }
+          }, {
+            breakpoint: brakepoints.md,
+            settings: {
+              slidesToShow: slideCountMd,
+              slidesToScroll: slideCountMd
+            }
+          }, {
+            breakpoint: brakepoints.sm,
+            settings: {
+              slidesToShow: slideCountSm,
+              slidesToScroll: slideCountSm
+            }
+          }, {
+            breakpoint: brakepoints.xs,
+            settings: {
+              slidesToShow: slideCountXs,
+              slidesToScroll: slideCountXs
+            }
+          }]
+        });
+      }
+
+      if ($(this).is('.product-slider')) {
+        $(this).slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          prevArrow: "<a href='javascript:void(0);' class=\"product-slider__arrow product-slider__arrow-prev\">".concat(slider.arrowPrev, "</a>"),
+          nextArrow: "<a href='javascript:void(0);' class=\"product-slider__arrow product-slider__arrow-next\">".concat(slider.arrowNext, "</a>"),
+          dots: false,
+          rows: 0,
+          asNavFor: '.product-nav-slider'
+        });
+      }
+
+      if ($(this).is('.product-nav-slider')) {
+        $(this).slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          asNavFor: '.product-slider',
+          dots: false,
+          arrows: false,
+          rows: 0,
+          centerMode: true,
+          centerPadding: 0,
+          focusOnSelect: true
+        });
+      }
+    });
+  }
+};
+
+function calculator() {
+  var $element = $('.calc-count-block');
+  $element.each(function () {
+    var $this = $(this),
+        $plus = $this.find('.js-plus'),
+        $minus = $this.find('.js-minus'),
+        $input = $this.find('input'),
+        val = +$input.val();
+    check();
+    $plus.on('click', function () {
+      val++;
+      check();
+      $input.trigger('change');
+    });
+    $minus.on('click', function () {
+      val--;
+      check();
+      $input.trigger('change');
+    });
+    $input.on('change input', function () {
+      setTimeout(function () {
+        val = +$input.val();
+        check();
+      }, 100);
+    });
+
+    function check() {
+      if (val < 1 || val == 1) {
+        val = 1;
+        $minus.addClass('disabled');
+      } else {
+        $minus.removeClass('disabled');
+      }
+
+      $input.val(val);
+    }
+  });
 }
 //# sourceMappingURL=maps/common.js.map
