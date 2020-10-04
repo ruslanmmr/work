@@ -486,16 +486,6 @@
   }
 }
 .catalogue-card {
-  &_style-2 {
-    .catalogue-card__button {
-      font-size: 1.125rem !important;
-      max-width: 120px;
-      margin: 0 auto;
-    }
-    .catalogue-card__pricing {
-      margin: 10px -8px 0 -8px;
-    }
-  }
   &__container {
     position: relative;
     border-radius: 4px;
@@ -613,13 +603,6 @@
     &__old-price {
       font-size: 1rem;
       padding-bottom: 0.1em;
-    }
-  }
-  @include media-breakpoint-down(xs) {
-    &_style-2 {
-      .catalogue-card__button {
-        max-width: 100%;
-      }
     }
   }
 }

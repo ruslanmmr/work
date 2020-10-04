@@ -155,52 +155,53 @@ block content
       .slider.slider_grid.products-slider.row
         -var index = 0
         mixin card()
-          -index++
-          if index==5
-            -index=1
-          .catalogue-card.catalogue-card_style-2.col
-            .catalogue-card__container.jsTouchHover
-              .card-labels.catalogue-card__card-labels
-                if index==1
-                  .card-label.card-label_type-discount -20%
-                else if index==2
-                  .card-label.card-label_type-new НОВИНКА
-                else if index==3
-                  .card-label.card-label_type-top ТОП ПРОДАЖ
-                else if index==4  
-                  .card-label.card-label_type-new НОВИНКА
-                  .card-label.card-label_type-top ТОП ПРОДАЖ
-              if index==1
-                a(href="#").catalogue-card__favorites-button.active
-                  svg.icon
-                    use(xlink:href='img/icons/icons-sprite.svg#heart')
-              else
-                a(href="#").catalogue-card__favorites-button
-                  svg.icon
-                    use(xlink:href='img/icons/icons-sprite.svg#heart')
-              
-              a(href="#").image.image_contain.catalogue-card__image
-                if index==1
-                  img(data-src='./img/bra.jpg', alt="image").lazyload
-                else if index==2  
-                  img(data-src='./img/image1.png', alt="image").lazyload
-                else if index==3
-                  img(data-src='./img/image2.png', alt="image").lazyload
-                else if index==4
-                  img(data-src='./img/image3.png', alt="image").lazyload
-              .catalogue-card__content
-                .catalogue-card__content-top
+              -index++
+              if index==5
+                -index=1
+              .catalogue-card.col
+                .catalogue-card__container.jsTouchHover
+                  .card-labels.catalogue-card__card-labels
+                    if index==1
+                      .card-label.card-label_type-discount -20%
+                    else if index==2
+                      .card-label.card-label_type-new НОВИНКА
+                    else if index==3
+                      .card-label.card-label_type-top ТОП ПРОДАЖ
+                    else if index==4  
+                      .card-label.card-label_type-new НОВИНКА
+                      .card-label.card-label_type-top ТОП ПРОДАЖ
                   if index==1
-                    h3.catalogue-card__title Бра LOFT IT LOFT2105
+                    a(href="#").catalogue-card__favorites-button.active
+                      svg.icon
+                        use(xlink:href='img/icons/icons-sprite.svg#heart')
                   else
-                    h3.catalogue-card__title Бра LOFT IT LOFT2105 LOFT2105W
-                  span.catalogue-card__label Испания
-                .catalogue-card__content-bottom
-                  .catalogue-card__pricing
-                    span.catalogue-card__price 10720 <i class="fas fa-ruble-sign"></i>
-                    if index==3
-                      span.catalogue-card__old-price 12000 <i class="fas fa-ruble-sign"></i>
-                  a(href="#").button.button_style-5.catalogue-card__button В корзину
+                    a(href="#").catalogue-card__favorites-button
+                      svg.icon
+                        use(xlink:href='img/icons/icons-sprite.svg#heart')
+                  
+                  a(href="#").image.image_contain.catalogue-card__image
+                    if index==1
+                      img(data-src='./img/bra.jpg', alt="image").lazyload
+                    else if index==2  
+                      img(data-src='./img/image1.png', alt="image").lazyload
+                    else if index==3
+                      img(data-src='./img/image2.png', alt="image").lazyload
+                    else if index==4
+                      img(data-src='./img/image3.png', alt="image").lazyload
+                  .catalogue-card__content
+                    .catalogue-card__content-top
+                      if index==1
+                        h3.catalogue-card__title Бра LOFT IT LOFT2105
+                      else
+                        h3.catalogue-card__title Бра LOFT IT LOFT2105 LOFT2105W
+                      span.catalogue-card__label Испания
+                    .catalogue-card__content-bottom
+                      .catalogue-card__pricing
+                        span.catalogue-card__price 10720 <i class="fas fa-ruble-sign"></i>
+                        if index==3
+                          span.catalogue-card__old-price 12000 <i class="fas fa-ruble-sign"></i>
+                      a(href="#").button.button_style-3.button_radius.catalogue-card__button В корзину
+            
         +card()
         +card()
         +card()
