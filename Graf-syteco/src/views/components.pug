@@ -1,19 +1,21 @@
 extends layout/layout
+
+block variables
+  -var page_title = 'Компоненты'
+
 block title
-  title Componentes
+  title #{site_title} - #{page_title}
+
 block breadcrumbs 
-  .breadcrumbs.container
-    ul.breadcrumbs__list
-      li.breadcrumbs__item
-        a(href="index.html").breadcrumbs__link главная
-      li.breadcrumbs__item целевая страница
+  include blocks/breadcrumbs
+
 block content
   section.section
     .container
       .row
         .col-lg-9
           h1 Фанера ФК 18х1525х1525 мм
-          h3 Форма
+          h2 Форма
           .row
             .col-lg-4.col-md-6.mb-md-2
               .input.mb-3
@@ -34,7 +36,7 @@ block content
                 .col-md-auto
                   .checkbox.mb-3
                     input(type="checkbox" id='1').checkbox__input
-                    label(for='1').checkbox__label Я согласен с чем-нибудь 
+                    label(for='1').checkbox__label Я согласен<br> с чем-нибудь 
                       a(href="#daa") хорошим
                       |.
                 .col-md-auto
@@ -45,22 +47,42 @@ block content
                   .radio.mb-3
                     input(type="radio" id='dsdsds' name='dddd').radio__input
                     label(for='dsdsds').radio__label Значение 2
-          h3 Кнопки
+          h2 Кнопки
           .row
-            .col-sm-auto.mb-3
-              a(href="#").button.button_style-2 Перейти
+
             .col-md-4.col-sm-6.mb-3
-              button.button.button_style-1.button_round 
+              a(href="#").button.button_style-1 
+                span Кнопка
+
+            .col-md-4.col-sm-6.mb-3
+              button.button.button_style-1.button_round
                 svg.icon.header-button__icon
                   use(xlink:href="img/icons/icons-sprite.svg#user")
-                span Отправить
-            .col-sm-auto.mb-3
-              a(href="#").button.button_style-2 
-                span Поделиться
-                svg.icon.header-button__icon
-                  use(xlink:href="img/icons/icons-sprite.svg#share")
+                span Кнопка
+
             .col-md-4.col-sm-6.mb-3
-              button.button.button_style-1 Отправить
+              button.button.button_style-1
+                span Кнопка
+                svg.icon.header-button__icon
+                  use(xlink:href="img/icons/icons-sprite.svg#user")
+
+            .col-md-4.col-sm-6.mb-3
+              a(href="#").button.button_style-2
+                span Кнопка
+
+            .col-md-4.col-sm-6.mb-3
+              button.button.button_style-2.button_round
+                svg.icon.header-button__icon
+                  use(xlink:href="img/icons/icons-sprite.svg#user")
+                span Кнопка
+
+            .col-md-4.col-sm-6.mb-3
+              button.button.button_style-2
+                span Кнопка
+                svg.icon.header-button__icon
+                  use(xlink:href="img/icons/icons-sprite.svg#user")
+
+
           h2 Основные характеристики на данный товар могут меняться в зависимости от партии товара
           p Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве, для изготовления тары и упаковки, а также в мебельном производстве.
           p В зависимости от внешнего вида <a href="#kddll">наружных слоев</a> на сорта: Е (элита), I, II, III, IV

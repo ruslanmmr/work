@@ -1,0 +1,36 @@
+extends layout/layout
+
+block variables
+  -var page_title = 'Steuerungen und I/O Module'
+
+block title
+  title #{site_title} - #{page_title}
+
+block breadcrumbs 
+  include blocks/breadcrumbs
+
+block content
+  section.section
+    h1.section__title.container Steuerungen und I/O Module
+    section.section.product-section.product-section_type-1
+      .container
+        .row
+          .product-section__text.col-lg-7
+            h2 I/O Module
+            p Die I/O-Module der MCM-Reihe von Graf-Syteco werden in CAN-Bus Systeme integriert und erweitern den steuerungstechnischen Funktionsumfang der Bedien-/Steuergeräte und der Steuerungen durch Dezentralisierung. Durch ihr Gehäuse mit hoher Schutzart können sie dezentral an vielen Stellen an der mobilen Arbeitsmaschine eingesetzt werden, ohne dass ein Schaltkasten notwendig ist. 
+            p Die MCM-Module sind mit unterschiedlichen E/A's zur Erfassung von Sensorik oder Steuerung von Aktorik ausgestattet. Alle MCM-Module haben eine E1-Zulassung und können an jedem Straßenfahrzeug verbaut werden. Für die Parametrierung und Konfiguration über CAN-Bus steht das im GSe-VISU enthaltene Softwaretool "GSUtility" zur Verfügung.
+          .product-section__image.col-lg-5
+            .image.image_contain
+              img(src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Produkte/MCM-Module/MCM2XX-MCM241_freigestellt-web__FitMaxWzYwMCw0MDBd.png", alt="image").lazyload
+        span.product-section__big-title I/O Module
+      
+    section.section.product-section.product-section_type-1
+      .container
+        .row
+          .product-section__text.col-lg-7
+            h2 Mobile Steuerungen
+            p Die I/O-Module der MCM-Reihe von Graf-Syteco werden in CAN-Bus Systeme integriert und erweitern den steuerungstechnischen Funktionsumfang der Bedien-/Steuergeräte und der Steuerungen durch Dezentralisierung. Durch ihr Gehäuse mit hoher Schutzart können sie dezentral an vielen Stellen an der mobilen Arbeitsmaschine eingesetzt werden, ohne dass ein Schaltkasten notwendig ist. 
+          .product-section__image.col-lg-5
+            .image.image_contain
+              img(src="http://grafsyteco4.live.tietge.com/assets/Uploads/Bilder/Produkte/Mobile-Steuerungen/ESX_4CS_GW-webseite__FitMaxWzYwMCw0MDBd.png", alt="image").lazyload
+        span.product-section__big-title Mobile<br> Steuerungen

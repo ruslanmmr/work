@@ -1,3 +1,5 @@
+include ../blocks/variables
+block variables
 doctype html
 html(lang='ru')
   head
@@ -24,7 +26,10 @@ html(lang='ru')
     //fonts
     link(href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap', rel='stylesheet')
     //styles
-    link(rel="stylesheet" href="styles/common.min.css")
+    link(rel="stylesheet" href="styles/common.css")
+
+    //helper
+    link(rel="stylesheet" href="styles/helper.css")
 
   body
     .wrapper
@@ -36,13 +41,21 @@ html(lang='ru')
           block content
       include ../blocks/footer
 
+    //helper (только для верстки)
+    include ../blocks/helper
+
     //jquery
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+
     //libs
     script(src="js/libs/scroll-lock.min.js")
     script(src="js/libs/lazysizes.min.js")
     script(src="js/libs/jquery.selectric.min.js")
     script(src="js/libs/inputmask.min.js")
     script(src="js/libs/slick.min.js")
+
     //common.js
-    script(src="js/common.min.js")
+    script(src="js/common.js")
+
+    //helper (только для верстки)
+    script(src="js/helper.js")

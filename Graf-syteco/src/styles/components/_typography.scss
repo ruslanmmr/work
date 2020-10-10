@@ -18,19 +18,19 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 h1 {
-  font-size: 1.875rem;
+  font-size: 2.25rem;
 }
 h2 {
-  font-size: 1.625rem;
+  font-size: 1.875rem;
 }
 h3 {
-  font-size: 1.375rem;
+  font-size: 1.5rem;
 }
 h4 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 h5, h6 {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 p {
   margin: 0 0 1rem 0;
@@ -76,9 +76,6 @@ blockquote {
 }
 
 ul:not([class]) {
-  padding: 0;
-  margin: 0;
-  list-style: none;
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
@@ -93,29 +90,34 @@ ul:not([class]) {
       display: block;
       position: absolute;
       left: 0;
-      top: 0.6rem;
+      top: 50%;
+      top: 6px;
       width: 10px;
-      height: 2px;
-      background-color: $color-text;
+      height: 10px;
+      background-color: $color-accent;
     }
   }
 }
 
 ol:not([class]) {
   counter-reset: section;
-  padding: 0;
-  margin: 0;
-  list-style: none;
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
   li:not([class]) {
+    padding-left: 22px;
+    position: relative;
     &:not(:last-child) {
       margin: 0 0 0.875rem 0;
     }
     &:before {
       counter-increment: section;
-      content: counters(section, ".") ". ";
+      content: counter(section) '. ';
+      color: $color-accent;
+      font-weight: 500;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
   }
 }
@@ -163,28 +165,28 @@ table:not([class]) {
   }
 }
 
-a:not([class]),
-.link {
-  color: $color-link;
-  text-decoration: none;
-  transition: color $trs1;
-  position: relative;
-}
-.link {
-  &.touch, &.hover {
-    color: $color-link-hover;
-  }
-}
 a:not([class]) {
-  &:visited {
-    color: $color-link-visited
-  }
+  color: $color-accent;
+  transition: color $trs1;
   &:hover {
-    color: $color-link-hover;
+    text-decoration: underline;
+    color: $color-accent-hover;
+  }
+  &:visited {
+    color: $color-link-visited;
   }
 }
 
 @include media-breakpoint-down(xs) {
+  h1 {
+    font-size: 1.875rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.375rem;
+  }
   img:not([class]) {
     margin-left: -20px;
     margin-right: -20px;

@@ -1,6 +1,11 @@
 extends layout/layout
+
+block variables
+  -var page_title = 'Главная'
+
 block title
-  title Graf Syteco
+  title #{site_title} - #{page_title}
+
 block content
   include blocks/banner
 

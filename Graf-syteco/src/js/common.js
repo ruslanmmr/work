@@ -1,7 +1,7 @@
 lazySizes.cfg.init = false;
 
 $(document).ready(function(){
-  touchHoverEvents();
+  TouchHoverEvents.init();
   lazy();
   toggle();
   select.init();
@@ -19,13 +19,13 @@ $(document).ready(function(){
 const brakepoints = {
   xs: 576,
   sm: 768,
-  md: 992,
+  md: 1024,
   lg: 1200
 }
 
 
 const TouchHoverEvents = {
-  targets: 'a, button, label, tr, .jsTouchHover, .js-3d-object',
+  targets: 'a[class], button, label, tr, .jsTouchHover',
   touched: false,
   touchEndDelay: 100, //ms
   init: function() {
@@ -117,7 +117,7 @@ function lazy() {
 }
 
 //select
-let select = {
+const select = {
   init: function() {
     this.items = $('select');
     if(this.items.length) {
@@ -130,8 +130,7 @@ let select = {
   }
 }
 
-
-let header = {
+const header = {
   init: function() {
     this.el = $('.header');
     this.isVisible = true;
@@ -172,7 +171,7 @@ let header = {
   }
 }
 
-let nav = {
+const nav = {
   init: function() {
     this.$nav = $('.mobile-nav');
     this.$toggle = $('.nav-toggle');
@@ -219,7 +218,7 @@ let nav = {
   }
 }
 
-let slider = {
+const slider = {
   el: $('.slider'),
   arrowPrev: '<svg class="icon" viewBox="0 0 10.5 18.1"><path stroke="none" d="M9,0l1.4,1.4L2.8,9l7.6,7.6L9,18.1L0,9C0,9,9.1,0,9,0z"></path></svg>',
   arrowNext: '<svg class="icon" viewBox="0 0 10.5 18.1"><path stroke="none" d="M1.4,18.1L0,16.7l7.6-7.6L0,1.5L1.4,0l9,9.1C10.4,9.1,1.3,18.1,1.4,18.1z"></path></svg>',
@@ -342,6 +341,9 @@ function toggle() {
       let timeout;
       
       $toggle.add($content).on('mouseenter', function(event){
+        $('[data-hover] .toggle-section__trigger').removeClass('active');
+        $('[data-hover] .toggle-section__content').removeClass('active');
+
         if(!TouchHoverEvents.touched) {
           if(timeout) clearTimeout(timeout);
           state=true;
@@ -353,9 +355,7 @@ function toggle() {
         if(!TouchHoverEvents.touched) {
           let delay;
           if($(this).is($toggle)) {
-            delay=500;
-          } else {
-            delay=100;
+            delay=300;
           }
           timeout = setTimeout(()=>{
             state=false;

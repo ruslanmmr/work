@@ -12,18 +12,71 @@ header.header
             a(href="#").header__nav-link.toggle-section__trigger Продукты
               svg.icon
                 use(xlink:href="img/icons/icons-sprite.svg#arrow-down-bold")
-            .header-popup.toggle-section__content
-              ul.header-popup__list
-                li.header-popup__item
-                  a(href="#").header-popup__link Услуги
-                li.header-popup__item
-                  a(href="#").header-popup__link Сервис
-                li.header-popup__item
-                  a(href="#").header-popup__link Wer&nbsp;wir&nbsp;sind
-                li.header-popup__item
-                  a(href="#").header-popup__link О&nbsp;нас
-          li.header__nav-item
-            a(href="#").header__nav-link Програмное обеспечение
+            //popup
+            ul.popup-nav-list.row.toggle-section__content
+              li.col-auto
+                a(href="#sd23d").popup-nav-list__link Bedien- und Steuergeräte
+                ul
+                  li 
+                    a(href="#dsd").popup-nav-list__link 10.4′′
+                  li 
+                    a(href="#wqdwwd").popup-nav-list__link 10.1′′
+              li.col-auto
+                a(href="#wdqwd").popup-nav-list__link Bedien- und Steuergeräte
+                ul
+                  li 
+                    a(href="#dqwd").popup-nav-list__link I/O Module
+                  li
+                    a(href="#fgsc").popup-nav-list__link Mobile Steuerungen
+                  li 
+                    a(href="#dqwd").popup-nav-list__link I/O Module
+                  li
+                    a(href="#fgsc").popup-nav-list__link Mobile Steuerungen
+
+          li.header__nav-item.toggle-section(data-hover)
+            a(href="#").header__nav-link.toggle-section__trigger Програмное обеспечение
+              svg.icon
+                use(xlink:href="img/icons/icons-sprite.svg#arrow-down-bold")
+
+            //popup
+            ul.popup-nav-list.row.toggle-section__content
+              li.col-auto
+                a(href="#sd23d").popup-nav-list__link Bedien- und Steuergeräte
+                ul
+                  li 
+                    a(href="#dsd").popup-nav-list__link 10.4′′
+                  li 
+                    a(href="#wqdwwd").popup-nav-list__link 10.1′′
+              li.col-auto
+                a(href="#wdqwd").popup-nav-list__link Bedien- und Steuergeräte
+                ul
+                  li 
+                    a(href="#dqwd").popup-nav-list__link I/O Module
+                  li
+                    a(href="#fgsc").popup-nav-list__link Mobile Steuerungen
+                  li 
+                    a(href="#dqwd").popup-nav-list__link I/O Module
+                  li
+                    a(href="#fgsc").popup-nav-list__link Mobile Steuerungen
+              li.col-auto
+                a(href="#sd23d").popup-nav-list__link Bedien- und Steuergeräte
+                ul
+                  li 
+                    a(href="#dsd").popup-nav-list__link 10.4′′
+                  li 
+                    a(href="#wqdwwd").popup-nav-list__link 10.1′′
+              li.col-auto
+                a(href="#wdqwd").popup-nav-list__link Bedien- und Steuergeräte
+                ul
+                  li 
+                    a(href="#dqwd").popup-nav-list__link I/O Module
+                  li
+                    a(href="#fgsc").popup-nav-list__link Mobile Steuerungen
+                  li 
+                    a(href="#dqwd").popup-nav-list__link I/O Module
+                  li
+                    a(href="#fgsc").popup-nav-list__link Mobile Steuerungen
+
           li.header__nav-item
             a(href="#").header__nav-link Услуги
           li.header__nav-item
@@ -48,10 +101,10 @@ header.header
           a(href="#").header-button
             svg.icon.header-button__icon
               use(xlink:href="img/icons/icons-sprite.svg#user")
-        .header__buttons-item
-          a(href="javascript:void(0);").nav-toggle
-            span
-            span
-            span
+        a(href="javascript:void(0);").nav-toggle.header__buttons-item
+          span
+          span
+          span
+          
       
 
