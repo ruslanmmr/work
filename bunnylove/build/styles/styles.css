@@ -9782,32 +9782,6 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #bfbfbf;
   text-overflow: ellipsis; }
 
-/* line 61, ../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
-input:focus:-moz-placeholder, textarea:focus:-moz-placeholder {
-  line-height: 200px;
-  -moz-transition: line-height 0.5s ease;
-  transition: line-height 0.5s ease; }
-
-/* line 64, ../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
-input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
-  line-height: 200px;
-  -moz-transition: line-height 0.5s ease;
-  transition: line-height 0.5s ease; }
-
-/* line 67, ../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
-input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
-  line-height: 200px;
-  -ms-transition: line-height 0.5s ease;
-  transition: line-height 0.5s ease; }
-
-/* line 56, ../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
-input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
-  line-height: 200px;
-  -webkit-transition: line-height 0.5s ease;
-  transition: line-height 0.5s ease; }
-
-/* 13-08-2015 */
-/* line 2, ../sass/_modifications.scss */
 * {
   outline: none; }
 

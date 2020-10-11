@@ -479,7 +479,7 @@ ul:not([class]) li:not([class])::before {
   display: block;
   position: absolute;
   left: 0;
-  top: 0.35rem;
+  top: 0.25rem;
   width: 12px;
   height: 12px;
   border-radius: 12px;
@@ -2255,7 +2255,6 @@ ol:not([class]) {
   box-shadow: 1px 1px 0 0 #c4c4c4; }
   @media (max-width: 575.98px) {
     .new-card-type-catalog {
-      width: 80%;
       height: auto; } }
 
 @media (max-width: 575.98px) {
@@ -2265,6 +2264,12 @@ ol:not([class]) {
 .new-content__catalog {
   flex-wrap: wrap;
   box-shadow: 0 -1px 0 0 #c4c4c4; }
+  @media (max-width: 1023.98px) {
+    .new-content__catalog {
+      margin-bottom: 15px; } }
+  @media (max-width: 575.98px) {
+    .new-content__catalog {
+      margin: 0 -15px 15px -15px; } }
 
 .new-breadcrumbs {
   font-size: 0.875rem;

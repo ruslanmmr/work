@@ -1,0 +1,162 @@
+extends layout/layout
+block content
+  include blocks/breadcrumbs
+  .container
+    section.section.certificates
+      .row
+        .col-lg-9
+          h1.section__title Электронные подарочные сертификаты
+          .certificates-box
+            h3.certificates-box__title Купите электронный сертификат сейчас
+            .row
+              .col-md-6
+                img(src="https://bunnylove.ru/static/img/card-sertificate-light.jpg", alt="image").certificates-box__image
+              .col-md-6
+                form(action="#").certificates-box__form
+                  .certificates-box__form-item
+                    span.certificates-box__form-item-num 1
+                    input.input.certificates-box__form-input(type='text' name='value' value='5000' placeholder='Номинал сертификата' required='')
+                    span.certificates-box__form-item-rub ₽
+                  
+                  .certificates-box__form-item
+                    span.certificates-box__form-item-num 2
+                    input.input.certificates-box__form-input(type='email' name='email' value='luzhetskiy@gmail.com' placeholder='Email' maxlength='254' required='')
+                  
+                  .certificates-box__form-item
+                    span.certificates-box__form-item-num 3
+                    textarea.input.certificates-box__form-textarea(name='description' placeholder='Добавьте текст поздравления')
+                  
+                  .certificates-box__form-item
+                    span.certificates-box__form-item-num 4
+                    .certificates-box__form-captcha
+                      img(src="https://bunnylove.ru/captcha/image/a15b44832516f3988a464fcf15e56070ae9185e1/", alt="captcha")
+                      input.input(autocomplete='off' name='captcha_1' type='text')
+
+                  .certificates-box__form-item
+                    span.certificates-box__form-item-num 5
+                    button.button.button_style-1.button_xl Купить
+          .certificates__info
+            h4 Сертификат от bunnylove—это идеальный подарок для вас и ваших любимых
+            p <strong>Электронный подарочный сертификат</strong>  — альтернатива сертификату в виде пластиковой карты. Всего через несколько минут после оплаты на Вашу почту придет письмо-открытка с уникальным кодом. Это письмо Вы можете распечатать или просто переслать человеку, которого хотите поздравить.
+            p Это удобно!
+            ul 
+              li не нужно тратить время на поиск подарка
+              li не нужно дожидаться доставки
+              li Вы сами укажете желаемый номинал карты
+              li использовать сертификат можно в интернет-магазине или розничных магазинах сети
+              li электронный сертификат нельзя потерять
+            p 
+              a(href="#").certificates__link Правила обращения и использования электронных подарочных сертификатов
+            p 
+              a(href="#").certificates__link Правила обращения и использования подарочных сертификатов
+        .col-lg-3
+          .new-promo(style='background-image:url(https://bunnylove.ru/static/img/pattern.png);')
+            .slider.slider_dots.new-promo__slider
+              .new-promo__slide 
+                img(src="https://bunnylove.ru/media/small_slides/bonus2_pse5GTh.png", alt="image")
+                a(href="#").button Зарегистрироваться
+              .new-promo__slide 
+                a(href="#")
+                  img(src="https://bunnylove.ru/media/small_slides/2.png", alt="image")
+              .new-promo__slide 
+                img(src="https://bunnylove.ru/media/small_slides/3.png", alt="image")
+                a(href="#").button КУПИТЬ
+          //old slider
+          .recent
+            .recent__title Подарочные сертификаты
+            .bx-wrapper(style='max-width: 100%; margin: 0px auto;')
+              .bx-viewport(style='width: 100%; overflow: hidden; position: relative; height: 255px;')
+                .recent-slider.teaser-list(style='width: 615%; position: relative; transition-duration: 0s; transform: translate3d(-1052px, 0px, 0px);')
+                  .teaser.bx-clone(style='float: left; list-style: none; position: relative; width: 263px;')
+                    a.teaser__link(href='/catalog/product/podarochnyij-sertifikat-nominal-5000-5000/')
+                    .teaser__image
+                      img(src='/media/cache/d7/08/d708b670176ceb8adbb69d5a820e05fc.jpg' alt='Подарочный сертификат 5000')
+                    .teaser__title Подарочный сертификат 5000
+                    .teaser__text
+                      p Номинал 5000 руб. Может быть использован онлайн и в магазинах розничной сети
+                    .teaser__footer
+                      .teaser__price
+                        | 5 000 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/196134/')
+                        span КУПИТЬ
+                  .teaser(style='float: left; list-style: none; position: relative; width: 263px;')
+                    a.teaser__link(href='/catalog/product/podarochnyij-sertifikat-nominal-1000-1000/')
+                    .teaser__image
+                      img(src='/media/cache/2e/8c/2e8c9ac0f9f7caead5e3c900df937046.jpg' alt='Подарочный сертификат 1000')
+                    .teaser__title Подарочный сертификат 1000
+                    .teaser__text
+                      p Номинал 1000 руб. Может быть использован онлайн и в магазинах розничной сети
+                    .teaser__footer
+                      .teaser__price
+                        | 1 000 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/189600/')
+                        span КУПИТЬ
+                  .teaser(style='float: left; list-style: none; position: relative; width: 263px;')
+                    a.teaser__link(href='/catalog/product/podarochnyij-sertifikat-2000/')
+                    .teaser__image
+                      img(src='/media/cache/a2/cc/a2cccdb440384332405543eb0bce9539.jpg' alt='Подарочный сертификат 2000')
+                    .teaser__title Подарочный сертификат 2000
+                    .teaser__text
+                      p Номинал 2000 руб. Может быть использован онлайн и в магазинах розничной сети
+                    .teaser__footer
+                      .teaser__price
+                        | 2 000 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/215022/')
+                        span КУПИТЬ
+                  .teaser(style='float: left; list-style: none; position: relative; width: 263px;')
+                    a.teaser__link(href='/catalog/product/podarochnyij-sertifikat-nominal-3000-3000/')
+                    .teaser__image
+                      img(src='/media/cache/b5/c6/b5c6cd049fb58856bc0e052f65a7d0c0.jpg' alt='Подарочный сертификат 3000')
+                    .teaser__title Подарочный сертификат 3000
+                    .teaser__text
+                      p Номинал 3000 руб. Может быть использован онлайн и в магазинах розничной сети
+                    .teaser__footer
+                      .teaser__price
+                        | 3 000 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/190894/')
+                        span КУПИТЬ
+                  .teaser(style='float: left; list-style: none; position: relative; width: 263px;')
+                    a.teaser__link(href='/catalog/product/podarochnyij-sertifikat-nominal-5000-5000/')
+                    .teaser__image
+                      img(src='/media/cache/d7/08/d708b670176ceb8adbb69d5a820e05fc.jpg' alt='Подарочный сертификат 5000')
+                    .teaser__title Подарочный сертификат 5000
+                    .teaser__text
+                      p Номинал 5000 руб. Может быть использован онлайн и в магазинах розничной сети
+                    .teaser__footer
+                      .teaser__price
+                        | 5 000 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/196134/')
+                        span КУПИТЬ
+                  .teaser.bx-clone(style='float: left; list-style: none; position: relative; width: 263px;')
+                    a.teaser__link(href='/catalog/product/podarochnyij-sertifikat-nominal-1000-1000/')
+                    .teaser__image
+                      img(src='/media/cache/2e/8c/2e8c9ac0f9f7caead5e3c900df937046.jpg' alt='Подарочный сертификат 1000')
+                    .teaser__title Подарочный сертификат 1000
+                    .teaser__text
+                      p Номинал 1000 руб. Может быть использован онлайн и в магазинах розничной сети
+                    .teaser__footer
+                      .teaser__price
+                        | 1 000 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/189600/')
+                        span КУПИТЬ
+              .bx-controls
+            a.recent__prev(rel='nofollow' target='_blank' href='')
+            a.recent__next(rel='nofollow' target='_blank' href='')

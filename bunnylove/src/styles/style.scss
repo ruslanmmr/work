@@ -546,7 +546,7 @@ ul:not([class]) {
       display: block;
       position: absolute;
       left: 0;
-      top: 0.35rem;
+      top: 0.25rem;
       width: 12px;
       height: 12px;
       border-radius: 12px;
@@ -2866,7 +2866,7 @@ ol:not([class]) {
   flex-direction: column;
   box-shadow: 1px 1px 0 0 #c4c4c4;
   @include media-breakpoint-down(xs) {
-    width: 80%;
+    //width: 80%;
     height: auto;
   } 
 }
@@ -2880,7 +2880,13 @@ ol:not([class]) {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-shadow: 0 -1px 0 0 #c4c4c4;
-  box-shadow: 0 -1px 0 0 #c4c4c4
+  box-shadow: 0 -1px 0 0 #c4c4c4;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 15px;
+  }
+  @include media-breakpoint-down(xs) {
+    margin: 0 -15px 15px -15px;
+  }
 }
 
 .new-breadcrumbs {
