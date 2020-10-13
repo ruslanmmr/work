@@ -1,5 +1,5 @@
 -var href = 'https://ruslanmmr.github.io/work/bunnylove/build'
-//-var href = 'http://localhost:9000'
+//-var href = 'http://localhost:9002'
 
 block variables
 
@@ -20,21 +20,9 @@ html
     meta(name='description', content='Секс-шоп «Влюбленный кролик» - онлайн магазин интим товаров в Самаре. В нашем каталоге широкий ассортимент эротических аксессуаров по выгодным ценам.')
     link(href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap', rel='stylesheet')
     link(href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', rel='stylesheet')
-    link(href='/static/fonts/webfontkit/fonts.css', rel='stylesheet')
-    link(href='/static/css/fotorama.css', rel='stylesheet')
-    link(href='/static/css/jquery.fancybox.css', rel='stylesheet')
     
-    //просто вырезал из этого файла старые bootstrap стили, можно вырезать его и пересобрать если он на sass собран
-    link(href=href+'/styles/styles.css', rel='stylesheet')
-    //добавлена сетка бутстрап
-    link(href=href+'/styles/bootstrap-grid.min.css', rel='stylesheet')
-    //файлы стилей в которых есть изменения, файл new-style-fixes-media удалил и обьединил с этим файлом стилей
-    link(href=href+'/styles/style.css', rel='stylesheet')
-    link(href=href+'/styles/mobile.css', rel='stylesheet')
-    link(href=href+'/styles/new-style-fixes.css', rel='stylesheet')
-    //новые стили
-    link(rel='stylesheet' href=href+'/styles/new.css')
-    //новые стили
+    link(rel='stylesheet' href=href+'/styles/styles.css')
+    
     link(rel='stylesheet' href=href+'/styles/js-helper.css')
 
   body

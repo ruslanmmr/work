@@ -1,0 +1,912 @@
+extends layout/layout
+block content 
+  include blocks/breadcrumbs
+  .container
+    section.section.contacts
+      h1.section__title Контакты
+      .row
+        .col-xl-9.col-lg-8 
+          .cart-page
+            .cart-table-scroll
+              .cart-table
+                .cart-table-row.cart-table-row--head
+                  .cart-table-col Артикул
+                  .cart-table-col
+                  .cart-table-col.cart-table-col--left Наименование
+                  .cart-table-col Цена
+                  .cart-table-col Кол-во
+                  .cart-table-col Сумма
+                  .cart-table-col
+                .cart-table-row
+                  .cart-table-col.mobile-hide
+                    a(href='/catalog/product/masturbator-svakom-ice-cream-egg-ssmc-02t/') SSMC-02T
+                  .cart-table-col
+                    span.cart-thumb__image
+                      a(href='/catalog/product/masturbator-svakom-ice-cream-egg-ssmc-02t/')
+                        img(src='/media/cache/43/29/43291a5a7cfaa70268e99590a8984c70.jpg' alt='Мастурбатор Svakom Hedy Ice-cream Pink')
+                  .cart-table-col
+                    .cart-table__product-info
+                      a(href='/catalog/product/masturbator-svakom-ice-cream-egg-ssmc-02t/')
+                        .cart-thumb__title Мастурбатор Svakom Hedy Ice-cream Pink
+                      span.artikul-mobile
+                        | Артикул 
+                        a(href='/catalog/product/masturbator-svakom-ice-cream-egg-ssmc-02t/') SSMC-02T
+                      .cart-thumb__category
+                        | Компактный мастурбатор в форме яйца с двусторонним рельефом в виде спирали и крапин
+                      .store-stock
+                        span.store-stock__title  В наличии:
+                        .store-stock__content
+                          span.store-stock__item
+                            a(href='/contacts/') Ново-Вокзальная, 146а
+                            | ,
+                          span.store-stock__item
+                            a(href='/contacts/') Московское шоссе, Лит.В
+                            | ,
+                          span.store-stock__item
+                            a(href='/contacts/') Гагарина, 48
+                            | ,
+                          span.store-stock__item
+                            a(href='/contacts/') Авроры, 199
+                  .cart-table-col.cart-table-col--mobile-line
+                    span.cart-product-price 690 ₽
+                  .cart-table-col.cart-table-col--mobile-line
+                    .qty
+                      .notifyjs-wrapper.notifyjs-hidable
+                        .notifyjs-arrow(style='top: 20px; left: 10px; border-bottom: 5px solid rgb(214, 233, 198); border-left: 5px solid transparent; border-right: 5px solid transparent; display: none;')
+                        .notify-message.notify-message_succes(style='top: 25px; left: 0px; display: none;')
+                          svg(viewBox='0 0 9 8' fill='none' stroke='currentColor')
+                            path(d='M0.800781 3.39961L3.57001 6.39961L8.00078 1.59961' stroke-width='2')
+                          |                                           Количество товара в корзине изменено
+                      a.qty__control.minus(href='/catalog/cart/upd/219889/?q=down') -
+                      input.qty__input(type='text' disabled='disabled' value='1')
+                      .notifyjs-wrapper.notifyjs-hidable
+                        .notifyjs-arrow(style='top: 20px; left: 10px; border-bottom: 5px solid rgb(238, 211, 215); border-left: 5px solid transparent; border-right: 5px solid transparent; display: none;')
+                        .notify-message.notify-message_error(style='top: 25px; left: 0px; display: none;')
+                          svg(viewBox='0 0 19 20' fill='none' stroke='currentColor')
+                            path(d='M13.7775 14.5256L4.72707 5.4741' stroke-width='2')
+                            path(d='M13.7775 5.47442L4.72656 14.5254' stroke-width='2')
+                          |                                           Доступно товаров: 9
+                      a.qty__control.plus(href='/catalog/cart/upd/219889/?q=up') +
+                  .cart-table-col.cart-table-col--mobile-line
+                    span.cart-product-price-new
+                      strong 690 ₽
+                  .cart-table-col.cart-table-col--remove
+                    a.delete(href='/catalog/cart/del/219889/')
+            .bonus-wrap
+              form#discount_form(method='post' action='#discount_form')
+                input(type='hidden' name='csrfmiddlewaretoken' value='zZBe7F4kcq2oqJ2PZNQad97immNZSTjJ4dZ7om7Ba3zUJG2XfxtCsrFAWFustH5p')
+                .bonus
+                  .bonus__label
+                    a(href='/bonus/') Заплатить бонусами
+                  p
+                    a(href='/register/') Зарегистрируйтесь
+                    |  и Вы сможете оплатить часть
+                    |                                     покупки бонусами!
+                .bonus
+                  .bonus__label
+                    a(href='/faq/#how-to-get-promocode') У меня есть промо-код
+                  .bonus-form
+                    input#id_promo_code.bonus__input(type='text' name='promo_code' maxlength='20' minlength='2')
+                    input#id_unbind_promo_code(type='hidden' name='unbind_promo_code')
+                    input(type='submit' value='применить')
+                  #promo_code_text.bonus__text
+              .order-data
+                .discount-help-wrapper
+                  .discount-help-wrapper
+                    ul
+                      li
+                        span.discount-help-wrapper__title Сумма без скидок: 
+                        strong
+                          span.base_price 690
+                        |  ₽
+                      li
+                        span.discount-help-wrapper__title Сумма с учётом персональных скидок:
+                        strong
+                          span.total_price 690
+                        |  ₽
+                  .order-total.step-first.order-main
+                    .sum
+                      label Итого:
+                      var
+                        span.cart_total_price 690
+                        span ₽
+                    a.new-button-type-fill.button-inline(href='/catalog/cart/delivery/') Далее
+            h4 Вам также могут понадобиться:
+            br
+            .tabs__item.active
+              .related_products_mobile.related-products
+                ul.cart-slider
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/224143/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/bd/d1/bdd1ed4a196550a6be7538c341c9a4dc.jpg' width='130' height='130' alt='Лубрикант Jo Classic Hybrid')
+                        a.new-card__center(href='/catalog/product/lubrikant-gibrid-jo-lubricant-hybrid-jo10178/' title='Перейти на страницу товара') Лубрикант Jo Classic Hybrid
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 860
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/224143/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Увлажняющая гель-смазка на водно-силиконовой основе, 30мл
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                          .new-card__label.new-card__label-type-important
+                            svg.new-card__icon
+                              use(xlink:href='#whiteStarIcon')
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/192911/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/6f/30/6f30870959a5f134eb4bc452bd3d908c.jpg' width='130' height='130' alt='Крем Swiss Navy Maxsize')
+                        a.new-card__center(href='/catalog/product/swiss-navy-maxsize-10-ml-msc10ml/' title='Перейти на страницу товара') Крем Swiss Navy Maxsize
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 930
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/192911/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation
+                          | Крем для улучшения эрекции и эффектом увеличения размеров с уникальным компонентом Бутеа Суперба, 10 мл
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/3641365/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/53/71/537169fe7abf7136d61915779cf46917.jpg' width='130' height='130' alt='Лубрикант Swiss Navy Warming')
+                        a.new-card__center(href='/catalog/product/lubrikant-swiss-navy-warming-snwrm/' title='Перейти на страницу товара') Лубрикант Swiss Navy Warming
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 1 390
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/3641365/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Гель на водной основе с безопасной формулой и с согревающим эффектом, 59 мл
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/209758/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/06/1e/061e00b47d7640dcea3a179de3da8330.jpg' width='130' height='130' alt='Пролонгирующий спрей Waname Delay Spray')
+                        a.new-card__center(href='/catalog/product/sprej-waname-delay-spray-474035/' title='Перейти на страницу товара') Пролонгирующий спрей Waname Delay Spray
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 980
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/209758/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Мягкий пролонгирующий и анестезирующий спрей для продления эрекции, 50 мл
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/193234/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/e5/80/e58014546e1f9631a351bb601ec62fc3.jpg' width='130' height='130' alt='Презервативы Vitalis strong')
+                        a.new-card__center(href='/catalog/product/vitalis-prezervvativyi-12sht-strong-vit22/' title='Перейти на страницу товара') Презервативы Vitalis strong
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 1 180
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/193234/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Утолщенные латексные презервативы с силиконовой смазкой, 12 шт
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/193588/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/a0/23/a0236a70f8a7aba0d3136f311c63b2c3.jpg' width='130' height='130' alt='Презервативы LUXE №3 Big Box Assorted')
+                        a.new-card__center(href='/catalog/product/prezervativyi-luxe-3-big-box--luxe3/' title='Перейти на страницу товара') Презервативы LUXE №3 Big Box Assorted
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 60
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/193588/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Набор из трех презервативов различных текстур 
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/214552/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/46/5e/465e0cc8d3f4b6f8deab209bd6c8c955.jpg' width='130' height='130' alt="Лубрикант О'кей плюс с хлоргексидином")
+                        a.new-card__center(href='/catalog/product/gel-lubrikant-okej-plyus-50-g-lb-20019/' title='Перейти на страницу товара') Лубрикант О'кей плюс с хлоргексидином
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 390
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/214552/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Вагинальный лубрикант на водной основе с хлоргексидином, 50 мл
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/3886291/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/6f/db/6fdb681aaacf9940a19bc00388342383.jpg' width='130' height='130' alt='Лубрикант COSMO VIBRO')
+                        a.new-card__center(href='/catalog/product/lubrikant-cosmo-vibro-23122/' title='Перейти на страницу товара') Лубрикант COSMO VIBRO
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 340
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/3886291/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation
+                          | Стимулирующий лубрикант на силиконовой основе с эффектом легкого покалывания, 25 гр
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/206964/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/cf/8b/cf8bc31ca3a2b18f9e00fcb009b07d25.jpg' width='130' height='130' alt='Крем Power Night')
+                        a.new-card__center(href='/catalog/product/krem-dlya-muzhchin-power-night--541436/' title='Перейти на страницу товара') Крем Power Night
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 340
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/206964/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Возбуждающий крем для мужчин на водной основе, 50 мл
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/205278/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/60/82/6082faec2c13dfffc7176c51a04a2c1f.jpg' width='130' height='130' alt='Лубрикант JO Agape Warming')
+                        a.new-card__center(href='/catalog/product/personalnyij-lyubrikant-na-vodnoj-osnove--jo42009/' title='Перейти на страницу товара') Лубрикант JO Agape Warming
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 1 330
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/205278/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation
+                          | Персональный возбуждающий лубрикант на водной основе с разогревающим эффектом, 60 мл
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/214526/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/29/45/2945402c176474ec4ea8787866c10722.jpg' width='130' height='130' alt='Набор Shunga Geishas Secrets Sparkling strawberry wine')
+                        a.new-card__center(href='/catalog/product/nabor-geishas-secret-klubnika-i--8208sg/' title='Перейти на страницу товара') Набор Shunga Geishas Secrets Sparkling strawberry wine
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 2 690
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/214526/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Великолепный набор Клубничное шампанское, состоиящий из 5 предметов
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/191627/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/ef/16/ef1697594149024479054914265da80c.jpg' width='130' height='130' alt='Презервативы MY SIZE 49')
+                        a.new-card__center(href='/catalog/product/my-size-prezervativyi-3sht-49-ms357/' title='Перейти на страницу товара') Презервативы MY SIZE 49
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 640
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/191627/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Презервативы поразмерные, диаметр 3,2 - 3,5 см, длина 16,3 см, 3 шт
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/4166248/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/20/84/2084cdae1707a220e1bee2e6d5c62bde.jpg' width='130' height='130' alt='Лубрикант Universal Sex')
+                        a.new-card__center(href='/catalog/product/gel-smazka-universal-sex-bmn-0001/' title='Перейти на страницу товара') Лубрикант Universal Sex
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 890
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/4166248/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation
+                          | Универсальная гель-смазка на водной основе, обладающая шелковистой структурой и долгим скольжением, 100 мл
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/192133/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/9b/ee/9bee09c1c4169a2e01fe2d44880a41d7.jpg' width='130' height='130' alt='Лубрикант JO Personal Premium Lubricant')
+                        a.new-card__center(href='/catalog/product/nejtralnyij-lyubrikant-na-silikonovoj-osnove--jo40005/' title='Перейти на страницу товара') Лубрикант JO Personal Premium Lubricant
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 2 280
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/192133/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Нейтральный лубрикант на силиконовой основе, 135 мл
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/199725/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/95/b4/95b44c1084169e98c6eaf965054729cc.jpg' width='130' height='130' alt='Крем Swiss Navy MaxSize')
+                        a.new-card__center(href='/catalog/product/swiss-navy-maxsize-2-ml-63699/' title='Перейти на страницу товара') Крем Swiss Navy MaxSize
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 320
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/199725/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation
+                          | Крем для улучшения эрекции и эффектом увеличения размеров с уникальным компонентом Бутеа Суперба, 4 мл
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/9361637/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/89/62/89623687689bd52e0c9467abd31d0717.jpg' width='130' height='130' alt='Лубрикант Ёska')
+                        a.new-card__center(href='/catalog/product/lubrikant-na-vodnoj-osnove-yoska--1998es/' title='Перейти на страницу товара') Лубрикант Ёska
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 1 970
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/9361637/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation
+                          | Гель-лубрикант на водной основе без глицерина с экстракторм ромашки и алоэ вера, 200 мл
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/195222/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/f5/60/f560df67ef2973f14dcd16bbfe9ff6c9.jpg' width='130' height='130' alt='Крем Персидский Шах')
+                        a.new-card__center(href='/catalog/product/bioritm-persidskij-shah-50-ml-29042/' title='Перейти на страницу товара') Крем Персидский Шах
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 970
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/195222/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Мужской возбуждающий крем с эффектом увеличения пениса, 50 мл
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                          .new-card__label.new-card__label-type-sale
+                            span.new-card__fill -10%
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/193201/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/6a/be/6abea346864dcbf85dc3be2c9765f37f.jpg' width='130' height='130' alt='Лубрикант YESforLOV Intimate Moisturising')
+                        a.new-card__center(href='/catalog/product/yesforlov-intimate-moisturising-lubricant-10fc05/' title='Перейти на страницу товара') Лубрикант YESforLOV Intimate Moisturising
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price.new-card__price-type-old
+                              | 2 150
+                              span.new-card__currency ₽
+                            span.new-card__price
+                              | 1 935
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/193201/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation
+                          | Интимный гель-смазка на водной основе с гиалуроновой кислотой, аллантоином и алоэ вера,100 мл
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/205263/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/af/ab/afaba1b913f16b346bacccbc939d99a2.jpg' width='130' height='130' alt='Лубрикант Jo Premium Jelly Maximum')
+                        a.new-card__center(href='/catalog/product/personalnyij-lyubrikant-na-silikonovoj-osnove--jo40772/' title='Перейти на страницу товара') Лубрикант Jo Premium Jelly Maximum
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 1 980
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/205263/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Универсальный лубрикант на силиконовой основе, 120 мл
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/7538961/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/72/c7/72c7e1c05408fa746438d1a3b510830a.jpg' width='130' height='130' alt='Интимный гель Couples Elixir')
+                        a.new-card__center(href='/catalog/product/yfl01b29--yesforlov-intimnyij-gel--yfl01b29/' title='Перейти на страницу товара') Интимный гель Couples Elixir
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 2 980
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/7538961/' data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Возбуждающий гель для пар, сочетающий в себе эффект льда и пламени, 30 мл
+              .related-products
+                .new-content__catalog
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/224143/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/bd/d1/bdd1ed4a196550a6be7538c341c9a4dc.jpg' width='130' height='130' alt='Лубрикант Jo Classic Hybrid')
+                    a.new-card__center(href='/catalog/product/lubrikant-gibrid-jo-lubricant-hybrid-jo10178/' title='Перейти на страницу товара') Лубрикант Jo Classic Hybrid
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 860
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/224143/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Увлажняющая гель-смазка на водно-силиконовой основе, 30мл
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                      .new-card__label.new-card__label-type-important
+                        svg.new-card__icon
+                          use(xlink:href='#whiteStarIcon')
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/192911/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/6f/30/6f30870959a5f134eb4bc452bd3d908c.jpg' width='130' height='130' alt='Крем Swiss Navy Maxsize')
+                    a.new-card__center(href='/catalog/product/swiss-navy-maxsize-10-ml-msc10ml/' title='Перейти на страницу товара') Крем Swiss Navy Maxsize
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 930
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/192911/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation
+                      | Крем для улучшения эрекции и эффектом увеличения размеров с уникальным компонентом Бутеа Суперба, 10 мл
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/3641365/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/53/71/537169fe7abf7136d61915779cf46917.jpg' width='130' height='130' alt='Лубрикант Swiss Navy Warming')
+                    a.new-card__center(href='/catalog/product/lubrikant-swiss-navy-warming-snwrm/' title='Перейти на страницу товара') Лубрикант Swiss Navy Warming
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 1 390
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/3641365/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Гель на водной основе с безопасной формулой и с согревающим эффектом, 59 мл
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/209758/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/06/1e/061e00b47d7640dcea3a179de3da8330.jpg' width='130' height='130' alt='Пролонгирующий спрей Waname Delay Spray')
+                    a.new-card__center(href='/catalog/product/sprej-waname-delay-spray-474035/' title='Перейти на страницу товара') Пролонгирующий спрей Waname Delay Spray
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 980
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/209758/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Мягкий пролонгирующий и анестезирующий спрей для продления эрекции, 50 мл
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/193234/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/e5/80/e58014546e1f9631a351bb601ec62fc3.jpg' width='130' height='130' alt='Презервативы Vitalis strong')
+                    a.new-card__center(href='/catalog/product/vitalis-prezervvativyi-12sht-strong-vit22/' title='Перейти на страницу товара') Презервативы Vitalis strong
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 1 180
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/193234/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Утолщенные латексные презервативы с силиконовой смазкой, 12 шт
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/193588/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/a0/23/a0236a70f8a7aba0d3136f311c63b2c3.jpg' width='130' height='130' alt='Презервативы LUXE №3 Big Box Assorted')
+                    a.new-card__center(href='/catalog/product/prezervativyi-luxe-3-big-box--luxe3/' title='Перейти на страницу товара') Презервативы LUXE №3 Big Box Assorted
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 60
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/193588/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Набор из трех презервативов различных текстур 
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/214552/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/46/5e/465e0cc8d3f4b6f8deab209bd6c8c955.jpg' width='130' height='130' alt="Лубрикант О'кей плюс с хлоргексидином")
+                    a.new-card__center(href='/catalog/product/gel-lubrikant-okej-plyus-50-g-lb-20019/' title='Перейти на страницу товара') Лубрикант О'кей плюс с хлоргексидином
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 390
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/214552/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Вагинальный лубрикант на водной основе с хлоргексидином, 50 мл
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/3886291/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/6f/db/6fdb681aaacf9940a19bc00388342383.jpg' width='130' height='130' alt='Лубрикант COSMO VIBRO')
+                    a.new-card__center(href='/catalog/product/lubrikant-cosmo-vibro-23122/' title='Перейти на страницу товара') Лубрикант COSMO VIBRO
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 340
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/3886291/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation
+                      | Стимулирующий лубрикант на силиконовой основе с эффектом легкого покалывания, 25 гр
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/206964/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/cf/8b/cf8bc31ca3a2b18f9e00fcb009b07d25.jpg' width='130' height='130' alt='Крем Power Night')
+                    a.new-card__center(href='/catalog/product/krem-dlya-muzhchin-power-night--541436/' title='Перейти на страницу товара') Крем Power Night
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 340
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/206964/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Возбуждающий крем для мужчин на водной основе, 50 мл
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/205278/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/60/82/6082faec2c13dfffc7176c51a04a2c1f.jpg' width='130' height='130' alt='Лубрикант JO Agape Warming')
+                    a.new-card__center(href='/catalog/product/personalnyij-lyubrikant-na-vodnoj-osnove--jo42009/' title='Перейти на страницу товара') Лубрикант JO Agape Warming
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 1 330
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/205278/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation
+                      | Персональный возбуждающий лубрикант на водной основе с разогревающим эффектом, 60 мл
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/214526/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/29/45/2945402c176474ec4ea8787866c10722.jpg' width='130' height='130' alt='Набор Shunga Geishas Secrets Sparkling strawberry wine')
+                    a.new-card__center(href='/catalog/product/nabor-geishas-secret-klubnika-i--8208sg/' title='Перейти на страницу товара') Набор Shunga Geishas Secrets Sparkling strawberry wine
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 2 690
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/214526/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Великолепный набор Клубничное шампанское, состоиящий из 5 предметов
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/191627/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/ef/16/ef1697594149024479054914265da80c.jpg' width='130' height='130' alt='Презервативы MY SIZE 49')
+                    a.new-card__center(href='/catalog/product/my-size-prezervativyi-3sht-49-ms357/' title='Перейти на страницу товара') Презервативы MY SIZE 49
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 640
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/191627/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Презервативы поразмерные, диаметр 3,2 - 3,5 см, длина 16,3 см, 3 шт
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/4166248/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/20/84/2084cdae1707a220e1bee2e6d5c62bde.jpg' width='130' height='130' alt='Лубрикант Universal Sex')
+                    a.new-card__center(href='/catalog/product/gel-smazka-universal-sex-bmn-0001/' title='Перейти на страницу товара') Лубрикант Universal Sex
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 890
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/4166248/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation
+                      | Универсальная гель-смазка на водной основе, обладающая шелковистой структурой и долгим скольжением, 100 мл
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/192133/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/9b/ee/9bee09c1c4169a2e01fe2d44880a41d7.jpg' width='130' height='130' alt='Лубрикант JO Personal Premium Lubricant')
+                    a.new-card__center(href='/catalog/product/nejtralnyij-lyubrikant-na-silikonovoj-osnove--jo40005/' title='Перейти на страницу товара') Лубрикант JO Personal Premium Lubricant
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 2 280
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/192133/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Нейтральный лубрикант на силиконовой основе, 135 мл
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/199725/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/95/b4/95b44c1084169e98c6eaf965054729cc.jpg' width='130' height='130' alt='Крем Swiss Navy MaxSize')
+                    a.new-card__center(href='/catalog/product/swiss-navy-maxsize-2-ml-63699/' title='Перейти на страницу товара') Крем Swiss Navy MaxSize
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 320
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/199725/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation
+                      | Крем для улучшения эрекции и эффектом увеличения размеров с уникальным компонентом Бутеа Суперба, 4 мл
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/9361637/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/89/62/89623687689bd52e0c9467abd31d0717.jpg' width='130' height='130' alt='Лубрикант Ёska')
+                    a.new-card__center(href='/catalog/product/lubrikant-na-vodnoj-osnove-yoska--1998es/' title='Перейти на страницу товара') Лубрикант Ёska
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 1 970
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/9361637/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation
+                      | Гель-лубрикант на водной основе без глицерина с экстракторм ромашки и алоэ вера, 200 мл
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/195222/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/f5/60/f560df67ef2973f14dcd16bbfe9ff6c9.jpg' width='130' height='130' alt='Крем Персидский Шах')
+                    a.new-card__center(href='/catalog/product/bioritm-persidskij-shah-50-ml-29042/' title='Перейти на страницу товара') Крем Персидский Шах
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 970
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/195222/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Мужской возбуждающий крем с эффектом увеличения пениса, 50 мл
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                      .new-card__label.new-card__label-type-sale
+                        span.new-card__fill -10%
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/193201/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/6a/be/6abea346864dcbf85dc3be2c9765f37f.jpg' width='130' height='130' alt='Лубрикант YESforLOV Intimate Moisturising')
+                    a.new-card__center(href='/catalog/product/yesforlov-intimate-moisturising-lubricant-10fc05/' title='Перейти на страницу товара') Лубрикант YESforLOV Intimate Moisturising
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price.new-card__price-type-old
+                          | 2 150
+                          span.new-card__currency ₽
+                        span.new-card__price
+                          | 1 935
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/193201/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation
+                      | Интимный гель-смазка на водной основе с гиалуроновой кислотой, аллантоином и алоэ вера,100 мл
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/205263/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/af/ab/afaba1b913f16b346bacccbc939d99a2.jpg' width='130' height='130' alt='Лубрикант Jo Premium Jelly Maximum')
+                    a.new-card__center(href='/catalog/product/personalnyij-lyubrikant-na-silikonovoj-osnove--jo40772/' title='Перейти на страницу товара') Лубрикант Jo Premium Jelly Maximum
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 1 980
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/205263/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Универсальный лубрикант на силиконовой основе, 120 мл
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/7538961/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/72/c7/72c7e1c05408fa746438d1a3b510830a.jpg' width='130' height='130' alt='Интимный гель Couples Elixir')
+                    a.new-card__center(href='/catalog/product/yfl01b29--yesforlov-intimnyij-gel--yfl01b29/' title='Перейти на страницу товара') Интимный гель Couples Elixir
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 2 980
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/7538961/' data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Возбуждающий гель для пар, сочетающий в себе эффект льда и пламени, 30 мл
+                ul.pager-large
+                  li.prev
+                    a(href='#go-for-prev-tab' data-go-to='prev')
+                  li.active
+                    a(href='#go-for-tab' data-go-to='1')
+                      span •
+                  li
+                    a(href='#go-for-tab' data-go-to='2')
+                      span •
+                  li.next
+                    a(href='#go-for-next-tab' data-go-to='next')
+        
+        .col-xl-3.col-lg-4
+          .step.active
+            .step__number 1
+            .step__title Проверка заказа
+          .step
+            .step__number 2
+            .step__title Доставка
+          .step
+            .step__number 3
+            .step__title Оплата
+          .step.last
+            .step__number 4
+            .step__title Завершение
+          .about-bonuses-wrapper
+            span.headline Бесплатная доставка
+            span
+              span
+                | от 3000 
+                span.rouble u
+              |  — бесплатная доставка по городу (если все товары в одном магазине)
+            span
+              span
+                | от 5000 
+                span.rouble u
+              |  — бесплатная доставка по городу (если товары в двух разных магазинах)
+            span
+              span
+                | от 7000 
+                span.rouble u
+              |  — бесплатная доставка по городу (если товары в трех разных магазинах)
