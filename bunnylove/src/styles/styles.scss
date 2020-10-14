@@ -9309,6 +9309,13 @@ body > .page:after {
   border: 1px solid red;
 }
 
+.radio, .checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 /* line 2051, ../sass/style.scss */
 .radio.-inline {
   margin-right: 30px;
