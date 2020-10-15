@@ -13371,6 +13371,9 @@ p.reviews_empty {
 .radio-large {
   margin-bottom: 28px; }
 
+.radio-large input {
+  display: none; }
+
 /* line 6640, ../sass/style.scss */
 .radio-large .outer {
   width: 24px;
@@ -18036,7 +18039,9 @@ ol:not([class]) li:not([class]):before {
 
 /* line 10458, ../sass/style.scss */
 .new-why-type-standart {
-  padding: 32px 0; }
+  padding: 32px 0;
+  margin-right: 15px;
+  margin-left: 15px; }
 
 /* line 10462, ../sass/style.scss */
 .new-accordion__button {
