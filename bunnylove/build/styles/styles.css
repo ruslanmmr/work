@@ -13372,7 +13372,7 @@ p.reviews_empty {
   margin-bottom: 28px; }
 
 .radio-large input {
-  display: none; }
+  display: none !important; }
 
 /* line 6640, ../sass/style.scss */
 .radio-large .outer {
