@@ -18712,8 +18712,7 @@ ol:not([class]) li:not([class]):before {
 
 /* line 11003, ../sass/style.scss */
 .new-content-type-catalog {
-  padding-bottom: 40px;
-  box-shadow: 0 1px 0 0 #dedede; }
+  padding-bottom: 40px; }
 
 /* line 11007, ../sass/style.scss */
 .new-content__filters-action-open {
