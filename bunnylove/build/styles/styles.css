@@ -25323,11 +25323,11 @@ textarea.input {
   .notifyjs-bootstrap-error:before {
     background-color: #FBE9EA !important; }
 
-.notifyjs-bootstrap-succes {
+.notifyjs-bootstrap-success {
   background-color: #F2F2F2 !important; }
-  .notifyjs-bootstrap-succes:after {
+  .notifyjs-bootstrap-success:after {
     background-image: url("../img/succes.svg") !important; }
-  .notifyjs-bootstrap-succes:before {
+  .notifyjs-bootstrap-success:before {
     background-color: #F2F2F2 !important; }
 
 /*# sourceMappingURL=styles.css.map */
