@@ -6677,13 +6677,11 @@ body > .page:after {
 
 /* line 1806, ../sass/style.scss */
 .title-caps {
-  text-align: center;
   color: #212121;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: normal;
-  line-height: 21px;
+  line-height: 20px;
   text-transform: uppercase;
-  font-family: 'pf_din_text_comp_prolight';
   margin: 0 0 30px 0; }
 
 /* line 1815, ../sass/style.scss */
@@ -15622,6 +15620,9 @@ ul#mainSlider {
   margin: 25px -15px 25px -15px;
   padding: 20px 45px; }
 
+.need-change-wrap #confirmation-container {
+  margin-bottom: 30px; }
+
 /* line 8440, ../sass/style.scss */
 .need-change-wrap.show {
   display: inline-block !important; }
@@ -15786,11 +15787,6 @@ ul#mainSlider {
   text-align: justify; }
 
 /* line 8584, ../sass/style.scss */
-.title-caps.add-review-link-block {
-  text-align: left;
-  float: left;
-  margin: 3px 30px 30px; }
-
 /*# sourceMappingURL=styles.css.map */
 @font-face {
   font-family: "PT Sans";

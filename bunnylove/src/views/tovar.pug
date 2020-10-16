@@ -54,6 +54,12 @@ block content
                 span.product-section__old-price 5&nbsp;600 P
                 span.product-section__price 6&nbsp;600 P
               .product-section__buttons
+                .notifyjs-wrapper.notifyjs-hidable
+                  .notifyjs-arrow(style='top: 40px; left: 20px; border-bottom: 5px solid rgb(238, 211, 215); border-left: 5px solid transparent; border-right: 5px solid transparent;')
+                  .notifyjs-container(style='top: 45px; left: 10px; display: block;')
+                    .notifyjs-bootstrap-base.notifyjs-bootstrap-error
+                      span(data-notify-text='') Товар уже был добавлен в корзину
+
                 a(href="#").button.button_style-1.button_rounded.product-section__buttons-item
                   svg.icon
                     use(xlink:href='#cart')
@@ -115,6 +121,40 @@ block content
           h3 Отзывы
           p У этого товара пока нет отзывов, но Вы можете быть первым! 
             a(href="#") Авторизируйтесь, чтобы оставить отзыв!
+
+          .title-caps.add-review-link-block
+            a.add-review.show-new-review-form(href='#add-new-review') Добавить отзыв
+          .add-review-wrapper.minified(style='display: none;')
+            span.headline Оставить отзыв
+            form.add-review-form(action='/reviews/add/prezervativ-luxe-1-nochnoj-razvedchik-luxe1nr' method='post')
+              input(type='hidden' name='csrfmiddlewaretoken' value='UlcqMOu1UDjVA1LQAprzf6EVQ73hmt2kWmO6xNwdOUj56v9LsoJq7XDJHyKPvY9R')
+              .column.left
+                input#id_name.with-placeholder(type='text' name='name' value='Дмитрий' placeholder='Имя' maxlength='70')
+                .sex
+                  span.caption Пол:
+                  .radio-btn-wrapper.active(data-value='male')
+                    span.icon
+                    span.caption Мужской
+                  .radio-btn-wrapper(data-value='female')
+                    span.icon
+                    span.caption Женский
+                  input#id_sex(type='hidden' name='sex' value='male')
+                .ratio
+                  span.caption Ваша оценка:
+                  .rating
+                    input#id_rating(type='hidden' name='rating' value='5')
+                    span.on(data-ratio='1')
+                    span.on(data-ratio='2')
+                    span.on(data-ratio='3')
+                    span.on(data-ratio='4')
+                    span.on(data-ratio='5')
+              .column.right
+                textarea#id_text.with-placeholder(name='text' cols='40' rows='10' placeholder='Текст отзыва' required='')
+              .clearfix
+              button.submit-btn(type='submit') Отправить
+
+          
+          
           section.product-section__items-slider
             h3.section__title Вам также могут понадобиться:
             .tabs__item.active
