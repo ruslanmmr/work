@@ -20954,8 +20954,7 @@ div[data-move=dropdownScroll] .mCSB_inside > .mCSB_container {
   /* line 12825, ../sass/style.scss */
   .new-content-type-catalog {
     display: flex;
-    flex-wrap: wrap;
-    box-shadow: 0 -1px 0 0 #dedede; }
+    flex-wrap: wrap; }
   /* line 12831, ../sass/style.scss */
   .new-content__right {
     width: calc(100% - 240px);
