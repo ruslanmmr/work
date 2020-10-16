@@ -29822,6 +29822,14 @@ header.new-header {
   min-width: 40px;
   padding: 0;
 }
+.button_style-green {
+  background-color: #83BD45;
+  border-color: #83BD45;
+}
+.button_style-green:hover {
+  background-color: #75ac3b;
+  border-color: #75ac3b;
+}
 
 /* line 122, ../sass/new.scss */
 .input {
@@ -31357,6 +31365,62 @@ textarea.input {
   /* line 1452, ../sass/new.scss */
   .certificates-box__form {
     margin-top: 30px;
+  }
+}
+
+.notifyjs-bootstrap-base {
+  border-radius: 0    !important;
+  border: none        !important;
+  font-weight: normal !important;
+  padding: 15px 20px 15px 50px !important;
+  color: #333333 !important;
+  margin-top: 10px !important;
+  position: relative !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  background-image: none !important;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: -8px;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+    border-radius: 2px;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    color: #fff;
+  }
+}
+.notifyjs-arrow {
+  display: none !important;
+}
+.notifyjs-bootstrap-error {
+  background-color: #FBE9EA !important;
+  &:after {
+    background-image: url('../img/error.svg') !important;
+  }
+  &:before {
+    background-color: #FBE9EA !important;
+  }
+}
+.notifyjs-bootstrap-succes {
+  background-color: #F2F2F2 !important;
+  &:after {
+    background-image: url('../img/succes.svg') !important;
+  }
+  &:before {
+    background-color: #F2F2F2 !important;
   }
 }
 
