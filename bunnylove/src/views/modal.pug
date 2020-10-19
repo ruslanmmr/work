@@ -1,0 +1,35 @@
+extends layout/layout
+block content
+  include blocks/breadcrumbs
+  #write_to_us_modal.dialog.dialog--open
+    .dialog__overlay
+    .dialog__content
+      span.close-x
+        span
+        span
+      .dialog_form
+        .dialog__title Написать нам
+        .icon_ok.icon_ok_hidden
+        form#feedback_form.mod_form.mod_form__modal(action='/feedback/feedback/' method='post')
+          input(type='hidden' name='csrfmiddlewaretoken' value='yMmoyyTCIMhYEqFVMAkbSodHhGLQlOugANY4jxVOC3h8aU3QEzC2Kfcv87soujBN')
+          .success
+          input#id_name.mod_form__input.mod_required(type='text' name='name' placeholder='Имя' required='' maxlength='255')
+          input#id_email.mod_form__input.mod_required(type='email' name='email' placeholder='Email' required='' maxlength='254')
+          input#id_phone.mod_form__input.phone(type='text' name='phone' placeholder='телефон' maxlength='17')
+          textarea#id_message.mod_form__input.mod_required(name='message' cols='40' rows='10' placeholder='Сообщение' required='')
+          script(src='https://google.com/recaptcha/api.js' async='' defer='')
+          .mod_form__footer
+            div
+              .grecaptcha-badge(data-style='bottomright' style='width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;')
+                .grecaptcha-logo
+                  iframe(src='https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LcfvqYZAAAAAB7P5dAbTgw0nXfq0sFUxVjkgD7T&co=aHR0cDovL2J1bm55bG92ZS5mYW5jeW1lZGlhLnJ1Ojgw&hl=ru&v=T9w1ROdplctW2nVKvNJYXH8o&size=invisible&cb=cvu4087z36yn' width='256' height='60' role='presentation' name='a-jx8cuhm47hnv' frameborder='0' scrolling='no' sandbox='allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox')
+                .grecaptcha-error
+                textarea#g-recaptcha-response-2.g-recaptcha-response(name='g-recaptcha-response' style='width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;')
+              iframe(style='display: none;')
+            button#recaptcha-invisible-66226.g-recaptcha.mod_form__submit.btn(data-sitekey='6LcfvqYZAAAAAB7P5dAbTgw0nXfq0sFUxVjkgD7T' data-callback='customFeedbackFormCallback') Отправить
+          div(style='display:none')
+            input#id_i_agree(type='checkbox' name='i_agree' required='' checked='')
+          span.mod_form__footer
+            | Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с 
+            a(href='/privacy/' target='_blank')
+              | политикой конфиденциальности

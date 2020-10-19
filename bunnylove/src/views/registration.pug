@@ -1,0 +1,37 @@
+extends layout/layout
+block content
+  include blocks/breadcrumbs
+  .container
+    section.section
+      h1.new-content__title.section__title
+        | Войти
+      .row
+        .account.col-xl-9
+          .registration-header
+            div
+              span Войти 
+              a(href='/register/') Зарегистрироваться
+          #mod_form__login.mod_form__wrapper
+            form.mod_form.mod_form__login(action='/login/' method='post')
+              input(type='hidden' name='csrfmiddlewaretoken' value='V0gISpkBldDpjE2UK0auKs2cKo6qwOvHX1SoDomNfuDzP8qPCZslCj10BPNYFjCe')
+              input#id_username.mod_form__input.mod_required(type='email' name='username' placeholder='email' required='' maxlength='254')
+              input#id_password.mod_form__input.mod_required(type='password' name='password' placeholder='пароль' required='')
+              img.fa.fa-gray.fa-show-id_password(src='/static/svg/iconfinder_eye_118676.svg' alt='👁' data-toggle='#id_password')
+              .mod_form__checkbox.remember_me__checkbox
+                label.remember-me-label 
+                  input#id_remember_me(type='checkbox' name='remember_me')
+                  |  Запомнить меня 
+                  
+                a.mod_form__link(href='/password/reset/') Забыли пароль?
+              .modal-form__footer
+                input.modal-form__submit.btn(type='submit' value='Войти')
+                span.mod_form__agreement
+                  | Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с
+                  a(href='/privacy/' target='_blank') политикой конфиденциальности
+              div(style='display:none')
+                input#id_i_agree(type='checkbox' name='i_agree' required='' checked='')
+      .row.justify-content-center
+        .account.col-xl-9
+      .row
+        .col-lg-9
+        .col-lg-3

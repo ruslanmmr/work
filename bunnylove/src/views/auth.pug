@@ -1,0 +1,52 @@
+extends layout/layout
+block content
+  include blocks/breadcrumbs
+  .container
+    section.section
+      h1.new-content__title.section__title
+        | Зарегистрироваться
+      .row
+        .account.col-xl-9
+          .registration-header
+            div
+              a(href='/login/') Войти 
+              span Зарегистрироваться
+          #mod_form__register.mod_form__wrapper.active
+            form.mod_form.mod_form__register.active(action='/register/' method='post')
+              input(type='hidden' name='csrfmiddlewaretoken' value='qE2RA9FZgwNHtUpLNitCjMHhHaFZiwSRsFExl8HbaNNRZoNGFhLtbDG5yBmxr1Zo')
+              .wrapper_mod_form
+                .mod_form__column.left
+                  input#id_email.mod_form__input.mod_required(type='email' name='email' placeholder='email' required='' maxlength='254')
+                  input#id_phone.mod_form__input.mod_required.phone(type='text' name='phone' placeholder='телефон' required='' maxlength='12' minlength='11')
+                .mod_form__column.right
+                  input#id_password1.mod_form__input.mod_required(type='password' name='password1' placeholder='пароль' required='' minlength='4')
+                  img.fa.fa-gray.fa-show-id_password(src='/static/svg/iconfinder_eye_118676.svg' alt='👁' data-toggle='#id_password1')
+                  input#id_password2.mod_form__input.mod_required(type='password' name='password2' placeholder='подтверждение пароля' required='')
+                  img.fa.fa-gray.fa-show-id_password(src='/static/svg/iconfinder_eye_118676.svg' alt='👁' data-toggle='#id_password2')
+              .mod_form__row
+                .mod_form__checkbox
+                  input#id_is_agreed_to_newsletter(type='checkbox' name='is_agreed_to_newsletter' checked='')
+                  label.label-registration(for='id_is_agreed_to_newsletter') Согласен на получение писем контроля качества
+                .mod_form__checkbox
+                  input#id_subscribe(type='checkbox' name='subscribe' checked='') 
+                  label.label-registration(for='id_subscribe')  Добавить в список рассылки
+                  div (вы получите дополнительно 200 бонусных рублей)
+              .mod_form__footer
+                div
+                  .grecaptcha-badge(data-style='bottomright' style='width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;')
+                    .grecaptcha-logo
+                      iframe(src='https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LcfvqYZAAAAAB7P5dAbTgw0nXfq0sFUxVjkgD7T&co=aHR0cDovL2J1bm55bG92ZS5mYW5jeW1lZGlhLnJ1Ojgw&hl=ru&v=T9w1ROdplctW2nVKvNJYXH8o&size=invisible&cb=yupa0l68gorw' width='256' height='60' role='presentation' name='a-5588cjeijm8' frameborder='0' scrolling='no' sandbox='allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox')
+                    .grecaptcha-error
+                    textarea#g-recaptcha-response.g-recaptcha-response(name='g-recaptcha-response' style='width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;')
+                  iframe(style='display: none;')
+                button#recaptcha-invisible-69976.g-recaptcha.mod_form__submit.btn(data-sitekey='6LcfvqYZAAAAAB7P5dAbTgw0nXfq0sFUxVjkgD7T' data-callback='recaptcha_onSubmit_69976') Зарегистрироваться
+                script.
+                  function recaptcha_onSubmit_69976() {
+                  var form_element = document.getElementById("recaptcha-invisible-69976").closest("form");
+                  if (form_element) { form_element.submit(); }
+                  }
+                span.mod_form__agreement
+                  | Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с
+                  a(href='/privacy/' target='_blank') политикой конфиденциальности
+              div(style='display:none')
+                input#id_i_agree(type='checkbox' name='i_agree' required='' checked='')
