@@ -21,6 +21,7 @@ block content
                   //slide
                   .product-slider__slide.image.image_contain
                     img(data-lazy=href alt="image")
+                    a.fancybox(href=href rel='slider')
                 +slide('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
                 +slide('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
                 +slide('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
@@ -54,7 +55,7 @@ block content
                 span.product-section__old-price 5&nbsp;600 P
                 span.product-section__price 6&nbsp;600 P
               .product-section__buttons
-                .notifyjs-wrapper.notifyjs-hidable
+                //.notifyjs-wrapper.notifyjs-hidable
                   .notifyjs-arrow(style='top: 40px; left: 20px; border-bottom: 5px solid rgb(238, 211, 215); border-left: 5px solid transparent; border-right: 5px solid transparent;')
                   .notifyjs-container(style='top: 45px; left: 10px; display: block;')
                     .notifyjs-bootstrap-base.notifyjs-bootstrap-error
