@@ -10,7 +10,7 @@ block content
     .background.background_shadow.background_shadow-bottom.lazyload(data-src='./img/image 26.jpg')
     .container.home__container
       .image.home__image
-        img(data-src="./img/man.png", alt="image").lazyload
+        img(src='#' data-src="./img/man.png", alt="image").lazyload
       h1.section__title.home__title Строительные услуги<br> в <mark>Екатеринбурге</mark>
       p.home__text и Свердловской области
       ul.home__list
@@ -21,7 +21,7 @@ block content
         li.home__item
           svg.icon
             use(xlink:href='./img/icons/icons-sprite.svg#ico-check')
-          | Ответсвенный подход
+          | Ответственный подход
         li.home__item
           svg.icon
             use(xlink:href='./img/icons/icons-sprite.svg#ico-check')
@@ -38,7 +38,7 @@ block content
           p Политическая психология транслирует либерализм. Институциализация, отбрасывая подробности, позиционирует механизм власти. Теологическая парадигма, на первый взгляд, индуцирует ролевой коммунизм. Экспертиза выполненного проекта, не меняя концепции, изложенной выше, определяет инструмент маркетинга.
         .col-xl-5.col-lg-6.about-us__image
           .image.image_cover
-            img(data-src="./img/204094150674ea4121ea812d5f347e16.png", alt="image").lazyload
+            img(src='#' data-src="./img/204094150674ea4121ea812d5f347e16.png", alt="image").lazyload
       .row.about-us__blocks
         .about-item.col-md-4
           .about-item__container 
@@ -62,16 +62,16 @@ block content
       .row.partners__container
         .partners-block.col-md-3.col-6
           .partners-block__image.image.image_contain.jsTouchHover
-            img(data-src="./img/luk-clr.png", alt="img").lazyload
+            img(src='#' data-src="./img/luk-clr.png", alt="img").lazyload
         .partners-block.col-md-3.col-6
           .partners-block__image.image.image_contain.jsTouchHover
-            img(data-src="./img/yandex-clr.png", alt="img").lazyload
+            img(src='#' data-src="./img/yandex-clr.png", alt="img").lazyload
         .partners-block.col-md-3.col-6
           .partners-block__image.image.image_contain.jsTouchHover
-            img(data-src="./img/rosbank-clr.png", alt="img").lazyload
+            img(src='#' data-src="./img/rosbank-clr.png", alt="img").lazyload
         .partners-block.col-md-3.col-6
           .partners-block__image.image.image_contain.jsTouchHover
-            img(data-src="./img/rusgidro-clr.png", alt="img").lazyload
+            img(src='#' data-src="./img/rusgidro-clr.png", alt="img").lazyload
 
   section.section.services
     .container.services__container
@@ -95,7 +95,7 @@ block content
         mixin tab(type)
           .services-block
             .services-block__image.image.image_cover
-              img(data-src="./img/Rectangle 71.jpg", alt="image").lazyload
+              img(src='#' data-src="./img/Rectangle71.jpg", alt="image").lazyload
             if type=='1'
               p Воздействие на потребителя стабилизирует теоретический коллапс Советского Союза, отмечает Б.Рассел. Как уже подчеркивалось, потребление порождает онтологический либерализм. Политическая психология транслирует либерализм. Институциализация, отбрасывая подробности, позиционирует механизм власти. 
             else
@@ -122,7 +122,7 @@ block content
           h3.banner__sub-title Ванная «под ключ» со всей сантехникой и отделкой от 25000 руб!
           a(href="#").button.button_style-2 Экспресс-замер
         .banner__image.image.image_cover
-          img(data-src='./img/Rectangle 76.png', alt="image").lazyload
+          img(src='#' data-src='./img/Rectangle76.png', alt="image").lazyload
 
   section.section.schema
     .background.background_bottom.background_shadow.background_shadow-top.lazyload(data-src='./img/blocks.svg')
@@ -159,16 +159,16 @@ block content
         mixin slide(href)
           .examples-slide.col
             a(href=href data-fancybox).examples-slide__image.image.image_cover
-              img(data-src=href, alt="image").lazyload
-        +slide('./img/Rectangle 79 (1).jpg')
-        +slide('./img/Rectangle 80.jpg')
-        +slide('./img/Rectangle 81.jpg')
-        +slide('./img/Rectangle 79 (1).jpg')
-        +slide('./img/Rectangle 80.jpg')
-        +slide('./img/Rectangle 81.jpg')
-        +slide('./img/Rectangle 79 (1).jpg')
-        +slide('./img/Rectangle 80.jpg')
-        +slide('./img/Rectangle 81.jpg')
+              img(src='#' data-src=href, alt="image").lazyload
+        +slide('./img/Rectangle79(1).jpg')
+        +slide('./img/Rectangle80.jpg')
+        +slide('./img/Rectangle81.jpg')
+        +slide('./img/Rectangle79(1).jpg')
+        +slide('./img/Rectangle80.jpg')
+        +slide('./img/Rectangle81.jpg')
+        +slide('./img/Rectangle79(1).jpg')
+        +slide('./img/Rectangle80.jpg')
+        +slide('./img/Rectangle81.jpg')
 
   section.section.section_pt-2.section_pb-2.contacts
     .background.lazyload(data-src='./img/image 26.jpg')
