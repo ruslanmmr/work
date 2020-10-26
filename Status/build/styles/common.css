@@ -2979,7 +2979,7 @@ table {
   background-repeat: no-repeat;
   opacity: 0;
   visibility: hidden;
-  transition: 1s ease-out; }
+  transition: opacity 1s ease-out, visibility 1s ease-out; }
   .background.lazyloaded {
     opacity: 1;
     visibility: visible; }
