@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Статус Групп - Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--color-->
+    <meta name="theme-color" content="#000">
+    <!--favicons-->
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+    <!--fancybox-->
+    <link rel="stylesheet" href="./styles/jquery.fancybox.min.css">
+    <!--styles-->
+    <link rel="stylesheet" href="./styles/common.css">
+    <!--helper (только для навигации по верстке)-->
+    <link rel="stylesheet" href="./styles/helper.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container header__container">
+          <div class="logo"><a class="logo__link" href="index.html"><img src="./img/logos/logo.svg" alt="image"><span>ООО «Статус Групп»</span></a></div>
+          <div class="header__content">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-link current" href="/">Главная</a></li>
+                <li class="header__nav-item toggle-section" data-hover><a class="header__nav-link toggle-section__trigger" href="#">Услуги
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons-sprite.svg#ico-triangle"></use>
+                    </svg></a>
+                  <ul class="header__dropdown toggle-section__content"> 
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Фасадные работы</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Отделочные работы</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Электрика</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Натяжные потолки</a></li>
+                    <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Сантехника</a></li>
+                    <li class="header__dropdown-item"> <a class="header__dropdown-link" href="#">Полы</a></li>
+                  </ul>
+                </li>
+                <li class="header__nav-item"><a class="header__nav-link" href="javascript:void(0);">Акции</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="javascript:void(0);">Контакты</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="javascript:void(0);">Застройщикам</a></li>
+              </ul>
+            </nav><a class="button button_style-1 header__button" href="#modal" data-modal>ОСТАВИТЬ ЗАЯВКУ</a><a class="nav-toggle" href="javascript:void(0);"><span></span><span></span><span></span></a>
+          </div>
+        </div>
+      </header>
+      <nav class="mobile-nav">
+        <div class="mobile-nav__container container" data-scroll-lock-scrollable>
+          <ul class="mobile-nav__list">
+            <li class="mobile-nav__item"><a class="mobile-nav__link active" href="#">Главная</a></li>
+            <li class="mobile-nav__item toggle-section" data-slide><a class="mobile-nav__link toggle-section__trigger" href="#">Услуги
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons-sprite.svg#ico-triangle"></use>
+                </svg></a>
+              <div class="toggle-section__content">
+                <ul class="mobile-nav__sub-list">
+                  <li class="mobile-nav__sub-item"><a class="mobile-nav__sub-link" href="#">Фасадные работы</a></li>
+                  <li class="mobile-nav__sub-item"><a class="mobile-nav__sub-link" href="#">Отделочные работы</a></li>
+                  <li class="mobile-nav__sub-item"><a class="mobile-nav__sub-link" href="#">Электрика</a></li>
+                  <li class="mobile-nav__sub-item"><a class="mobile-nav__sub-link" href="#">Натяжные потолки</a></li>
+                  <li class="mobile-nav__sub-item"><a class="mobile-nav__sub-link" href="#">Сантехника</a></li>
+                  <li class="mobile-nav__sub-item"><a class="mobile-nav__sub-link" href="#">Полы</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Акции</a></li>
+            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Контакты</a></li>
+            <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Застройщикам</a></li>
+          </ul><a class="button button_style-1" href="#modal" data-modal>ОСТАВИТЬ ЗАЯВКУ</a>
+        </div>
+      </nav>
+      <main class="main">
+        <section class="section section_mb-1 home">
+          <div class="background background_shadow background_shadow-bottom lazyload" data-src="./img/image 26.jpg"></div>
+          <div class="container home__container">
+            <div class="image home__image"><img class="lazyload" data-src="./img/man.png" alt="image"></div>
+            <h1 class="section__title home__title">Строительные услуги<br> в <mark>Екатеринбурге</mark></h1>
+            <p class="home__text">и Свердловской области</p>
+            <ul class="home__list">
+              <li class="home__item">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons-sprite.svg#ico-check"></use>
+                </svg>10 лет опыта на рынке
+              </li>
+              <li class="home__item">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons-sprite.svg#ico-check"></use>
+                </svg>Ответсвенный подход
+              </li>
+              <li class="home__item">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons-sprite.svg#ico-check"></use>
+                </svg>Годовая гарантия на все<br> виды работ
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="section about-us">
+          <div class="background background_bottom background_shadow background_shadow-top lazyload" data-src="./img/blocks.svg"></div>
+          <div class="container">
+            <h2 class="section__title">О нас</h2>
+            <div class="row">
+              <div class="col-xl-7 col-lg-6 about-us__text">
+                <p>Воздействие на потребителя стабилизирует теоретический коллапс Советского Союза, отмечает Б.Рассел. Как уже подчеркивалось, потребление порождает онтологический либерализм.</p>
+                <p>Политическая психология транслирует либерализм. Институциализация, отбрасывая подробности, позиционирует механизм власти. Теологическая парадигма, на первый взгляд, индуцирует ролевой коммунизм. Экспертиза выполненного проекта, не меняя концепции, изложенной выше, определяет инструмент маркетинга.</p>
+              </div>
+              <div class="col-xl-5 col-lg-6 about-us__image">
+                <div class="image image_cover"><img class="lazyload" data-src="./img/204094150674ea4121ea812d5f347e16.png" alt="image"></div>
+              </div>
+            </div>
+            <div class="row about-us__blocks">
+              <div class="about-item col-md-4">
+                <div class="about-item__container"> <img class="about-item__image" src="./img/icons/Union.svg" alt="icon">
+                  <div class="about-item__index">10</div>
+                  <div class="about-item__text">лет на рынке</div>
+                </div>
+              </div>
+              <div class="about-item col-md-4">
+                <div class="about-item__container"> <img class="about-item__image" src="./img/icons/like.svg" alt="icon">
+                  <div class="about-item__index">> 3000</div>
+                  <div class="about-item__text">довольных клиентов</div>
+                </div>
+              </div>
+              <div class="about-item col-md-4">
+                <div class="about-item__container"> <img class="about-item__image" src="./img/icons/people.svg" alt="icon">
+                  <div class="about-item__index">30</div>
+                  <div class="about-item__text">опытных мастеров</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section partners">
+          <div class="container">
+            <h2 class="section__title">Наши партнёры</h2>
+            <div class="row partners__container">
+              <div class="partners-block col-md-3 col-6">
+                <div class="partners-block__image image image_contain jsTouchHover"><img class="lazyload" data-src="./img/luk-clr.png" alt="img"></div>
+              </div>
+              <div class="partners-block col-md-3 col-6">
+                <div class="partners-block__image image image_contain jsTouchHover"><img class="lazyload" data-src="./img/yandex-clr.png" alt="img"></div>
+              </div>
+              <div class="partners-block col-md-3 col-6">
+                <div class="partners-block__image image image_contain jsTouchHover"><img class="lazyload" data-src="./img/rosbank-clr.png" alt="img"></div>
+              </div>
+              <div class="partners-block col-md-3 col-6">
+                <div class="partners-block__image image image_contain jsTouchHover"><img class="lazyload" data-src="./img/rusgidro-clr.png" alt="img"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section services">
+          <div class="container services__container">
+            <div class="services__left">
+              <h2 class="section__title services__title">Наши услуги</h2>
+              <ul class="services__list">
+                                <li class="services__item"><a class="services__link" href="javascript:void(0);"> <span>Фасадные работы</span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow"></use>
+                                    </svg></a></li>
+                                <li class="services__item"><a class="services__link" href="javascript:void(0);"> <span>Электрика</span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow"></use>
+                                    </svg></a></li>
+                                <li class="services__item"><a class="services__link" href="javascript:void(0);"> <span>Сантехника</span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow"></use>
+                                    </svg></a></li>
+                                <li class="services__item"><a class="services__link" href="javascript:void(0);"> <span>Штукатурные работы</span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow"></use>
+                                    </svg></a></li>
+                                <li class="services__item"><a class="services__link" href="javascript:void(0);"> <span>Малярные работы</span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow"></use>
+                                    </svg></a></li>
+                                <li class="services__item"><a class="services__link" href="javascript:void(0);"> <span>Натяжные потолки</span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow"></use>
+                                    </svg></a></li>
+                                <li class="services__item"><a class="services__link" href="javascript:void(0);"> <span>Полы</span>
+                                    <svg class="icon">
+                                      <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow"></use>
+                                    </svg></a></li>
+              </ul>
+            </div>
+            <div class="services__right">
+                            <div class="services-block">
+                              <div class="services-block__image image image_cover"><img class="lazyload" data-src="./img/Rectangle 71.jpg" alt="image"></div>
+                              <p>Воздействие на потребителя стабилизирует теоретический коллапс Советского Союза, отмечает Б.Рассел. Как уже подчеркивалось, потребление порождает онтологический либерализм. Политическая психология транслирует либерализм. Институциализация, отбрасывая подробности, позиционирует механизм власти. </p>
+                              <div class="services-block__button"><a class="button button_style-1" href="#"> <span>Узнать больше</span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow-short"></use>
+                                  </svg></a></div>
+                            </div>
+                            <div class="services-block">
+                              <div class="services-block__image image image_cover"><img class="lazyload" data-src="./img/Rectangle 71.jpg" alt="image"></div>
+                              <p>Воздействие на потребителя стабилизирует теоретический коллапс Советского Союза, отмечает Б.Рассел.</p>
+                              <div class="services-block__button"><a class="button button_style-1" href="#"> <span>Узнать больше</span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow-short"></use>
+                                  </svg></a></div>
+                            </div>
+                            <div class="services-block">
+                              <div class="services-block__image image image_cover"><img class="lazyload" data-src="./img/Rectangle 71.jpg" alt="image"></div>
+                              <p>Воздействие на потребителя стабилизирует теоретический коллапс Советского Союза, отмечает Б.Рассел. Как уже подчеркивалось, потребление порождает онтологический либерализм. Политическая психология транслирует либерализм. Институциализация, отбрасывая подробности, позиционирует механизм власти. </p>
+                              <div class="services-block__button"><a class="button button_style-1" href="#"> <span>Узнать больше</span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow-short"></use>
+                                  </svg></a></div>
+                            </div>
+                            <div class="services-block">
+                              <div class="services-block__image image image_cover"><img class="lazyload" data-src="./img/Rectangle 71.jpg" alt="image"></div>
+                              <p>Воздействие на потребителя стабилизирует теоретический коллапс Советского Союза, отмечает Б.Рассел.</p>
+                              <div class="services-block__button"><a class="button button_style-1" href="#"> <span>Узнать больше</span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow-short"></use>
+                                  </svg></a></div>
+                            </div>
+                            <div class="services-block">
+                              <div class="services-block__image image image_cover"><img class="lazyload" data-src="./img/Rectangle 71.jpg" alt="image"></div>
+                              <p>Воздействие на потребителя стабилизирует теоретический коллапс Советского Союза, отмечает Б.Рассел. Как уже подчеркивалось, потребление порождает онтологический либерализм. Политическая психология транслирует либерализм. Институциализация, отбрасывая подробности, позиционирует механизм власти. </p>
+                              <div class="services-block__button"><a class="button button_style-1" href="#"> <span>Узнать больше</span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow-short"></use>
+                                  </svg></a></div>
+                            </div>
+                            <div class="services-block">
+                              <div class="services-block__image image image_cover"><img class="lazyload" data-src="./img/Rectangle 71.jpg" alt="image"></div>
+                              <p>Воздействие на потребителя стабилизирует теоретический коллапс Советского Союза, отмечает Б.Рассел.</p>
+                              <div class="services-block__button"><a class="button button_style-1" href="#"> <span>Узнать больше</span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow-short"></use>
+                                  </svg></a></div>
+                            </div>
+                            <div class="services-block">
+                              <div class="services-block__image image image_cover"><img class="lazyload" data-src="./img/Rectangle 71.jpg" alt="image"></div>
+                              <p>Воздействие на потребителя стабилизирует теоретический коллапс Советского Союза, отмечает Б.Рассел. Как уже подчеркивалось, потребление порождает онтологический либерализм. Политическая психология транслирует либерализм. Институциализация, отбрасывая подробности, позиционирует механизм власти. </p>
+                              <div class="services-block__button"><a class="button button_style-1" href="#"> <span>Узнать больше</span>
+                                  <svg class="icon">
+                                    <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow-short"></use>
+                                  </svg></a></div>
+                            </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <div class="banner">
+              <div class="banner__content">
+                <h2 class="section__title banner__title">Акция !</h2>
+                <h3 class="banner__sub-title">Ванная «под ключ» со всей сантехникой и отделкой от 25000 руб!</h3><a class="button button_style-2" href="#">Экспресс-замер</a>
+              </div>
+              <div class="banner__image image image_cover"><img class="lazyload" data-src="./img/Rectangle 76.png" alt="image"></div>
+            </div>
+          </div>
+        </section>
+        <section class="section schema">
+          <div class="background background_bottom background_shadow background_shadow-top lazyload" data-src="./img/blocks.svg"></div>
+          <div class="container">
+            <h1 class="section__title schema__title">Схема<br> работы с нами</h1>
+            <div class="schema__content row"><img class="schema__line" src="./img/line.svg" alt="line">
+              <div class="schema-item col-lg-3 col-md-4 col-sm-6">
+                <div class="schema-item__container"><img src="./img/icons/work-1.svg" alt="image"><span>Вы оставляете заказ на сайте или по телефону</span></div>
+              </div>
+              <div class="schema-item col-lg-3 col-md-4 col-sm-6">
+                <div class="schema-item__container"><img src="./img/icons/work-2.svg" alt="image"><span>Мы уточняем детали и согласуем время замера</span></div>
+              </div>
+              <div class="schema-item col-lg-3 col-md-4 col-sm-6">
+                <div class="schema-item__container"><img src="./img/icons/work-3.svg" alt="image"><span>Выезжаем на бесплатный замер, рассчитываем стоимость</span></div>
+              </div>
+              <div class="schema-item col-lg-3 col-md-4 col-sm-6">
+                <div class="schema-item__container"><img src="./img/icons/work-4.svg" alt="image"><span>Заключаем договор на предоставление услуг</span></div>
+              </div>
+              <div class="schema-item col-lg-3 col-md-4 col-sm-6">
+                <div class="schema-item__container"><img src="./img/icons/work-5.svg" alt="image"><span>Мы выполняем работу</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section_mb-1 section_mt-1 examples">
+          <div class="container">
+            <h2 class="section__title">Примеры работ</h2>
+            <div class="slider slider_grid slider_3n row">
+                            <div class="examples-slide col"><a class="examples-slide__image image image_cover" href="./img/Rectangle 79 (1).jpg" data-fancybox><img class="lazyload" data-src="./img/Rectangle 79 (1).jpg" alt="image"></a></div>
+                            <div class="examples-slide col"><a class="examples-slide__image image image_cover" href="./img/Rectangle 80.jpg" data-fancybox><img class="lazyload" data-src="./img/Rectangle 80.jpg" alt="image"></a></div>
+                            <div class="examples-slide col"><a class="examples-slide__image image image_cover" href="./img/Rectangle 81.jpg" data-fancybox><img class="lazyload" data-src="./img/Rectangle 81.jpg" alt="image"></a></div>
+                            <div class="examples-slide col"><a class="examples-slide__image image image_cover" href="./img/Rectangle 79 (1).jpg" data-fancybox><img class="lazyload" data-src="./img/Rectangle 79 (1).jpg" alt="image"></a></div>
+                            <div class="examples-slide col"><a class="examples-slide__image image image_cover" href="./img/Rectangle 80.jpg" data-fancybox><img class="lazyload" data-src="./img/Rectangle 80.jpg" alt="image"></a></div>
+                            <div class="examples-slide col"><a class="examples-slide__image image image_cover" href="./img/Rectangle 81.jpg" data-fancybox><img class="lazyload" data-src="./img/Rectangle 81.jpg" alt="image"></a></div>
+                            <div class="examples-slide col"><a class="examples-slide__image image image_cover" href="./img/Rectangle 79 (1).jpg" data-fancybox><img class="lazyload" data-src="./img/Rectangle 79 (1).jpg" alt="image"></a></div>
+                            <div class="examples-slide col"><a class="examples-slide__image image image_cover" href="./img/Rectangle 80.jpg" data-fancybox><img class="lazyload" data-src="./img/Rectangle 80.jpg" alt="image"></a></div>
+                            <div class="examples-slide col"><a class="examples-slide__image image image_cover" href="./img/Rectangle 81.jpg" data-fancybox><img class="lazyload" data-src="./img/Rectangle 81.jpg" alt="image"></a></div>
+            </div>
+          </div>
+        </section>
+        <section class="section section_pt-2 section_pb-2 contacts">
+          <div class="background lazyload" data-src="./img/image 26.jpg"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-7 col-md-6">
+                <h2 class="section__title">Контакты</h2>
+                <p class="contacts__text">Если у вас остались вопросы, <br> мы будем рады на них ответить!<br> Оставьте заявку и мы вам перезвоним.</p>
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons-sprite.svg#ico-phone"></use>
+                    </svg><a class="contacts__link" href="tel:+79089212222">+7 (908) 921-22-22</a>
+                  </li>
+                  <li class="contacts__item">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons-sprite.svg#ico-mail"></use>
+                    </svg><a class="contacts__link" href="mailto:info@domain.ru">info@domain.ru</a>
+                  </li>
+                  <li class="contacts__item">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons-sprite.svg#ico-clock"></use>
+                    </svg><span> <strong>Пн-Пт </strong>8:00-23:00<br><strong>Сб </strong>8:00-15:00</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xl-5 col-md-6">
+                <div class="form-block">
+                  <h4 class="form-block__title">Оставить заявку</h4>
+                  <form class="form-block__container" action="#">
+                    <div class="input form-block__input">
+                      <input class="input__element" type="text" name="name" placeholder="Ваше имя">
+                    </div>
+                    <div class="input form-block__input">
+                      <input class="input__element input__phone" type="text" name="phone" placeholder="Ваш телефон">
+                    </div>
+                    <div class="form-block__select">
+                      <select class="select">
+                        <option value="1">Цена (по возрастанию)</option>
+                        <option value="2">Цена (по убыванию)</option>
+                        <option value="3" selected>Наличие</option>
+                        <option value="4" disabled>Популярность</option>
+                      </select>
+                    </div>
+                    <div class="form-block__checkbox">
+                      <div class="checkbox">
+                        <input class="checkbox__input" type="checkbox" id="0">
+                        <label class="checkbox__label" for="0">Я согласен с условиями обработки персональных данных</label>
+                      </div>
+                    </div>
+                    <button class="button button_style-1 form-block__button">ПОЗВОНИТЕ МНЕ</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container footer__container">
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item"><a class="footer__nav-link" href="/">Главная</a></li>
+              <li class="footer__nav-item toggle-section" data-hover><a class="footer__nav-link toggle-section__trigger" href="#">Услуги
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons-sprite.svg#ico-triangle"></use>
+                  </svg></a>
+                <ul class="footer__dropdown toggle-section__content"> 
+                  <li class="footer__dropdown-item"><a class="footer__dropdown-link" href="#">Фасадные работы</a></li>
+                  <li class="footer__dropdown-item"><a class="footer__dropdown-link" href="#">Отделочные работы</a></li>
+                  <li class="footer__dropdown-item"><a class="footer__dropdown-link" href="#">Электрика</a></li>
+                  <li class="footer__dropdown-item"><a class="footer__dropdown-link" href="#">Натяжные потолки</a></li>
+                  <li class="footer__dropdown-item"><a class="footer__dropdown-link" href="#">Сантехника</a></li>
+                  <li class="footer__dropdown-item"> <a class="footer__dropdown-link" href="#">Полы</a></li>
+                </ul>
+              </li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="javascript:void(0);">Акции</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="javascript:void(0);">Контакты</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="javascript:void(0);">Застройщикам</a></li>
+            </ul>
+          </nav><span class="footer__info">ООО «Статус Групп», ИНН 6658484048</span>
+        </div>
+      </footer><a class="js-up" href="javascript:void(0);">
+        <svg class="icon">
+          <use xlink:href="./img/icons/icons-sprite.svg#ico-arrow-right"> </use>
+        </svg></a>
+      <div class="modal" id="modal">
+        <div class="form-block">
+          <h4 class="form-block__title">Оставить заявку</h4>
+          <form class="form-block__container" action="#">
+            <div class="input form-block__input">
+              <input class="input__element" type="text" name="name" placeholder="Ваше имя">
+            </div>
+            <div class="input form-block__input">
+              <input class="input__element input__phone" type="text" name="phone" placeholder="Ваш телефон">
+            </div>
+            <div class="form-block__select">
+              <select class="select">
+                <option value="1">Цена (по возрастанию)</option>
+                <option value="2">Цена (по убыванию)</option>
+                <option value="3" selected>Наличие</option>
+                <option value="4" disabled>Популярность</option>
+              </select>
+            </div>
+            <div class="form-block__checkbox">
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="1">
+                <label class="checkbox__label" for="1">Я согласен с условиями обработки персональных данных</label>
+              </div>
+            </div>
+            <button class="button button_style-1 form-block__button">ПОЗВОНИТЕ МНЕ</button>
+          </form>
+        </div>
+      </div>
+      <!--helper (только для навигации по верстке)-->
+      <div class="helper"><a class="helper__trigger" href="javascript:void(0);"> 
+          <svg class="icon" stroke="none" fill="currentColor" viewBox="0 0 12 20">
+            <path d="M2.18 19.05L.77 17.64 8.4 10 .77 2.36 2.18.95 11.23 10l-9.05 9.05z"></path>
+          </svg></a>
+        <div class="helper__container">
+          <!--section-->
+          <div class="helper__section"><span class="helper__section-title">Страницы:</span>
+            <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="usluga.html">Услуга</a><a class="helper__section-button" href="components.html">Типографика, компоненты</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--libs-->
+    <script src="./scripts/libs/scroll-lock.min.js"></script>
+    <script src="./scripts/libs/lazysizes.min.js"></script>
+    <script src="./scripts/libs/jquery.selectric.min.js"></script>
+    <script src="./scripts/libs/inputmask.min.js"></script>
+    <script src="./scripts/libs/slick.min.js"></script>
+    <script src="./scripts/libs/jquery.fancybox.min.js"></script>
+    <!--common-->
+    <script src="./scripts/common.js"></script>
+    <!--helper (только для навигации по верстке)-->
+    <script src="./scripts/helper.js"></script>
+  </body>
+</html>

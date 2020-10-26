@@ -1,0 +1,41 @@
+header.header
+  .container.header__container
+    .logo
+      a(href="index.html").logo__link
+        img(src="./img/logos/logo.svg", alt="image")
+        span ООО «Статус Групп»
+    .header__content
+      nav.header__nav
+        ul.header__nav-list
+          li.header__nav-item
+            a(href="/").header__nav-link.current Главная
+          li.header__nav-item.toggle-section(data-hover)
+            a(href="#").header__nav-link.toggle-section__trigger Услуги
+              svg.icon
+                use(xlink:href='./img/icons/icons-sprite.svg#ico-triangle')
+            ul.header__dropdown.toggle-section__content 
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Фасадные работы
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Отделочные работы
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Электрика
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Натяжные потолки
+              li.header__dropdown-item
+                a(href="#").header__dropdown-link Сантехника
+              li.header__dropdown-item 
+                a(href="#").header__dropdown-link Полы
+            
+          li.header__nav-item
+            a(href="javascript:void(0);").header__nav-link Акции
+          li.header__nav-item
+            a(href="javascript:void(0);").header__nav-link Контакты
+          li.header__nav-item
+            a(href="javascript:void(0);").header__nav-link Застройщикам
+
+      a(href="#modal" data-modal).button.button_style-1.header__button ОСТАВИТЬ ЗАЯВКУ
+      a(href="javascript:void(0);").nav-toggle
+        span
+        span
+        span

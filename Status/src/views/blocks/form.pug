@@ -1,0 +1,20 @@
+.form-block
+  h4.form-block__title Оставить заявку
+  form(action="#").form-block__container
+    .input.form-block__input
+      input(type="text" name='name' placeholder="Ваше имя").input__element
+    .input.form-block__input
+      input(type="text" name='phone' placeholder="Ваш телефон").input__element.input__phone
+    .form-block__select
+      select.select
+        option(value="1") Цена (по возрастанию)
+        option(value="2") Цена (по убыванию)
+        option(value="3" selected) Наличие
+        option(value="4" disabled) Популярность
+    .form-block__checkbox
+      .checkbox
+        input(type="checkbox" id=checkbox).checkbox__input
+        label(for=checkbox).checkbox__label Я согласен с условиями обработки персональных данных
+    button.button.button_style-1.form-block__button ПОЗВОНИТЕ МНЕ
+
+-checkbox++

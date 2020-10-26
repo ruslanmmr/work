@@ -1,0 +1,76 @@
+extends layout/layout
+block variables
+  -var namespace = 'Компоненты, типографика'
+block title
+  title #{title} - #{namespace}
+  
+block content
+  include blocks/breadcrumbs
+  section.section
+    .container
+      h1 Заголовок h1
+      h2 Заголовок h2
+      h3 Заголовок h3
+      h4 Заголовок h4
+      h5 Заголовок h5
+      h6 Заголовок h6
+      p Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве, для изготовления тары и упаковки, а также в мебельном производстве.
+      p В зависимости от внешнего вида <a href="#adress">наружных слоев</a> на сорта: Е (элита), I, II, III, IV
+      h3 Заголовок группы
+      p Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.
+      figure
+        img(src="https://via.placeholder.com/1024x400/000000/FFFFFF/?text=Изображение", alt="image")
+        figcaption Подпись изображения
+      p В зависимости от внешнего вида наружных слоев на сорта: 
+      ul  
+        li Сорт Е (элита)
+        li Сорт I, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.
+        li Сорт III
+      blockquote Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве. 
+      p В зависимости от внешнего вида наружных слоев на сорта: 
+      ol
+        li Сорт Е (элита)
+        li Сорт I, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.
+        li Сорт III
+        li Сорт IV
+      h3 Форма
+      .row
+        .col-lg-4.col-md-6.mb-md-2
+          .input.mb-3
+            input(type="text" name='name' placeholder="Имя*").input__element
+          .input.mb-3
+            input(type="text" name='phone' placeholder="Телефон*").input__element
+          .mb-3
+            select.select.select_style-1
+              option(value="1") Цена (по возрастанию)
+              option(value="2") Цена (по убыванию)
+              option(value="3" selected) Наличие
+              option(value="4" disabled) Популярность
+        .col-lg-8.col-md-6.mb-2.mb-md-0
+          .input.mb-3
+            textarea(name='message' placeholder="Комментарий").input__element.input__element_textarea
+        .col-xl-12
+          .row
+            .col-md-auto
+              .checkbox.mb-3
+                input(type="checkbox" id='1').checkbox__input
+                label(for='1').checkbox__label Я согласен с чем-нибудь 
+                  a(href="#daa") хорошим
+                  |.
+            .col-md-auto
+              .radio.mb-3
+                input(type="radio" id='ddfgdgd' name='dddd').radio__input
+                label(for='ddfgdgd').radio__label Значение 1
+            .col-md-auto
+              .radio.mb-3
+                input(type="radio" id='dsdsds' name='dddd').radio__input
+                label(for='dsdsds').radio__label Значение 2
+      h3 Кнопки
+      .row
+        .col-auto
+          button.button.button_style-1 Отправить
+        .col-auto
+          button.button.button_style-1 
+            span Отправить
+            svg.icon
+              use(xlink:href='./img/icons/icons-sprite.svg#ico-arrow-short')

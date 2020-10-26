@@ -1,0 +1,129 @@
+//bg
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  user-select: none;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: $trs3;
+  &.lazyloaded {
+    opacity: 1;
+    visibility: visible;
+  }
+  &_shadow {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 60px;
+    }
+  }
+  &_shadow-top {
+    &:before {
+      background: linear-gradient(180deg, rgba(255,255,255,1) 5%, rgba(255,255,255,0) 100%);
+      top: 0;
+    }
+  }
+  &_shadow-bottom {
+    &:before {
+      background: linear-gradient(0, rgba(255,255,255,1) 5%, rgba(255,255,255,0) 100%);
+      bottom: 0;
+    }
+  }
+  &_left {
+    background-position-x: left;
+  }
+  &_right {
+    background-position-x: right;
+  }
+  &_top {
+    background-position-y: top;
+  }
+  &_bottom {
+    background-position-y: bottom;
+  }
+}
+//images
+.image {
+  display: block;
+  position: relative;
+  img {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: $trs3;
+    &.lazyloaded {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &_cover,
+  &_contain {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &_cover {
+    background-color: rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border-radius: 15px;
+    img {
+      object-fit: cover;
+    }
+  }
+  &_contain {
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.js-up {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  position: fixed;
+  z-index: 50;
+  right: $container-padding-x;
+  bottom: $container-padding-x;
+  border-radius: 50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $trs1, visibility $trs1, transform $trs1;
+  background-color: $color-accent;
+  color: #fff;
+  .icon {
+    margin: auto;
+    width: 25px;
+    height: 25px;
+    transform: rotate(-90deg);
+  }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  &.touch,
+  &.hover {
+    transform: scale(1.05);
+  }
+  @include media-breakpoint-down(xs) {
+    right: $mobile-container-padding-x;
+    bottom: $mobile-container-padding-x;
+  }
+}
+
+.fancybox-slide--html {
+  padding: $mobile-container-padding-x;
+}
