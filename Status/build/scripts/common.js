@@ -7,6 +7,16 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 lazySizes.cfg.init = false;
+document.addEventListener('lazybeforeunveil', function (e) {
+  var el = e.target.tagName,
+      bg = e.target.getAttribute('data-src');
+
+  if (el !== 'IMG') {
+    var _bg = e.target.getAttribute('data-src');
+
+    e.target.style.backgroundImage = "url('".concat(_bg, "')");
+  }
+});
 var brakepoints = {
   xs: 576,
   sm: 768,
@@ -18,7 +28,6 @@ $(document).ready(function () {
   select.init();
   slider.init();
   nav.init();
-  lazy();
   toggle();
   up();
   tabs();
@@ -28,6 +37,7 @@ $(document).ready(function () {
     clearIncomplete: false
   }).mask('.input__phone');
   fancy();
+  lazySizes.init();
 }); //hover/touch custom events
 
 var TouchHoverEvents = {
@@ -160,23 +170,7 @@ var TouchHoverEvents = {
         $targets[0].classList.remove('focus');
       }
   }
-}; //lazyloading
-
-function lazy() {
-  //add backgrounds
-  document.addEventListener('lazybeforeunveil', function (e) {
-    var el = e.target.tagName,
-        bg = e.target.getAttribute('data-src');
-
-    if (el !== 'IMG') {
-      var _bg = e.target.getAttribute('data-src');
-
-      e.target.style.backgroundImage = "url('".concat(_bg, "')");
-    }
-  });
-  lazySizes.init();
-} //select
-
+}; //select
 
 var select = {
   init: function init() {
