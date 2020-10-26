@@ -6,7 +6,6 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-lazySizes.cfg.init = false;
 document.addEventListener('lazybeforeunveil', function (e) {
   var el = e.target.tagName,
       bg = e.target.getAttribute('data-src');

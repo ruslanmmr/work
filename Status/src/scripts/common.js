@@ -1,4 +1,3 @@
-lazySizes.cfg.init = false;
 document.addEventListener('lazybeforeunveil', function(e){
   let el = e.target.tagName,
       bg = e.target.getAttribute('data-src');
@@ -7,6 +6,7 @@ document.addEventListener('lazybeforeunveil', function(e){
     e.target.style.backgroundImage = `url('${bg}')`;
   }
 });
+
 const brakepoints = {
   xs: 576,
   sm: 768,
