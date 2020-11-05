@@ -1,0 +1,23 @@
+extends layout/layout
+block variables
+  -var namespace = 'Отправить предложение'
+block title
+  title #{title} - #{namespace}
+
+block content
+  include blocks/breadcrumbs
+
+  section.section.section-form
+    .container
+      .row
+        .col-lg-6
+          h3.section__title.section-form__succes-title
+            svg.icon
+              use(xlink:href='./img/icons/icons-sprite.svg#tick')
+            span Спасибо за ваше предложение.<br> Мы обязательно с вами свяжемся в ближайшее время!
+          p.section-form__succes-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+            
+        .col-lg-6.d-none.d-lg-block
+          .image.image_cover.section-form__image
+            img(src="#" data-src='./img/form.jpg' alt="img").lazyload
+              

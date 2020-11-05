@@ -1,0 +1,41 @@
+extends layout/layout
+block variables
+  -var namespace = 'Длинный заголовок первой новости'
+block title
+  title #{title} - #{namespace}
+
+block content
+  include blocks/breadcrumbs
+  section.section.news-block
+    .image.image_cover.news-block__head
+      img(src='#' data-src="./img/newsbg.jpg", alt="image").lazyload
+    .news-block__content
+      .container  
+        span.news-block__date 02.11.2020
+        .news-block__text
+          .row.mb-0.mb-md-5
+            .col-md-6.mb-5.mb-md-0
+              h5 Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit 
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            .col-md-6.mb-5.mb-md-0
+              h5 Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit 
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      
+        .news-block__more
+          h5.news-block__more-title Еще новости
+          .row.grid
+            mixin news(image)
+              .news-card.grid__block.col-lg-4.col-sm-6
+                .news-card__container
+                  a(href="./news-item.html").news-card__image.image.image_cover
+                    img(src='#' data-src=image, alt="image").lazyload
+                  span.news-card__date 02.11.2020
+                  h4.news-card__title 
+                    a(href="#") Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                  p.news-card__title Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            
+            +news('./img/item1.jpg')
+            +news('./img/item2.jpg')
+            +news('./img/item3.jpg')
+          

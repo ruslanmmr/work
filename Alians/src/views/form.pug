@@ -1,0 +1,43 @@
+extends layout/layout
+block variables
+  -var namespace = 'Отправить предложение'
+block title
+  title #{title} - #{namespace}
+
+block content
+  include blocks/breadcrumbs
+
+  section.section.section-form
+    .container
+      .row
+        .col-lg-5
+          h3.section__title.section__title_decorated Отправить предложение<br> по вопросам благоустройства<br> или ЖКХ
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+          form(action="#").form.js-validation.section-form__form
+            .form__group.row
+              .form__item.col-lg-12.col-sm-6
+                .input
+                  span.input__label ФИО
+                  input(type="text" name='name').input__element.required
+              .form__item.col-lg-12.col-sm-6
+                .input
+                  span.input__label E-mail
+                  input(type="text" name='email').input__element.required
+              .form__item.col-lg-12.col-sm-6
+                .input
+                  span.input__label Телефон
+                  input(type="text" name='phone').input__element.input_phone.required
+              .form__item.col-12
+                .input
+                  span.input__label Сообщение
+                  textarea(type="text" name='message').input__element.input__textarea.required
+            .form__group.section-form__bottom
+              .row
+                .col-lg-12.col-md-6
+                  button.button.button_style-1 Отправить сообщение
+                  span.form__agree Нажимая на кнопку, вы даете согласие на 
+                    a(href="#") обработку персональных данных
+        .col-lg-6.offset-lg-1.d-none.d-lg-block
+          .image.image_cover.section-form__image
+            img(src="#" data-src='./img/form.jpg' alt="img").lazyload
+              

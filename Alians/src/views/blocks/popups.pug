@@ -1,0 +1,43 @@
+.popup#popup.popup(data-scroll-lock-scrollable)
+  .popup-block
+    .popup-block__container
+      a(href="javascript:void(0);" data-popup-close).popup-block__close-button
+        svg.icon
+          use(xlink:href="img/icons/icons-sprite.svg#close")
+      h5.popup__title принять участие
+      p.popup__text Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+      form(action="#").form.js-validation.popup__form
+        .form__group
+          .form__item
+            .input
+              span.input__label ФИО
+              input(type="text" name='name').input__element.required
+          .form__item
+            .input
+              span.input__label E-mail
+              input(type="text" name='email').input__element.required
+          .form__item
+            .input
+              span.input__label Телефон
+              input(type="text" name='phone').input__element.input_phone.required
+          .form__item
+            .input
+              span.input__label Сообщение
+              textarea(type="text" name='message').input__element.input__textarea.required
+        .form__group
+          button.button.button_style-1 Отправить сообщение
+          span.form__agree Нажимая на кнопку, вы даете согласие на 
+            a(href="#") обработку персональных данных
+
+.popup#succes.popup-message(data-scroll-lock-scrollable)
+  .popup-block
+    .popup-block__container
+      a(href="javascript:void(0);" data-popup-close).popup-block__close-button
+        svg.icon
+          use(xlink:href="img/icons/icons-sprite.svg#close")
+      svg.icon.popup-message__icon
+        use(xlink:href='./img/icons/icons-sprite.svg#tick')
+      h5.popup__title спасибо за сообщение
+      p.popup__text Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+      
+

@@ -1,0 +1,119 @@
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  user-select: none;
+  touch-action: pan-y;
+  outline: none;
+  * {
+    outline: none;
+  }
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.slick-slide {
+  min-height: 1px;
+  &.dragging img {
+    pointer-events: none;
+  }
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $trs1, visibility $trs1;
+  &.slick-initialized {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    .slick-slide {
+      flex: 0 0 auto;
+      margin-bottom: 0 !important;
+    }
+  }
+  &__next,
+  &__prev {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    display: flex;
+    border-radius: 2px;
+    border: 1px solid #dddddd;
+    z-index: 2;
+    color: #d0d0d0;
+    transition: color $trs1;
+    top: calc(50% - 26px);
+    .icon {
+      margin: auto;
+      width: 22px;
+      height: 22px;
+    }
+    &.touch, &.hover {
+      color: $color-accent;
+    }
+  }
+  &__next {
+    left: calc(100% + #{$grid-gutter-width/2});
+  }
+  &__prev {
+    right: calc(100% + #{$grid-gutter-width/2});
+    .icon {
+      transform: rotate(180deg);
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    padding-top: 60px;
+    &__next,
+    &__prev {
+      top: 0;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.5);
+      .icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    &__next {
+      left: calc(#{$mobile-container-padding-x} + 60px);
+      right: auto;
+    }
+    &__prev {
+      left: $mobile-container-padding-x;
+    }
+    &_grid {
+      margin: 0 #{-$mobile-container-padding-x};
+      .slick-list {
+        padding: 0 $mobile-grid-gutter-width/2;
+      }
+    }
+  }
+}

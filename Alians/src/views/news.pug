@@ -1,0 +1,53 @@
+extends layout/layout
+block variables
+  -var namespace = 'Новости'
+block title
+  title #{title} - #{namespace}
+
+block content
+  include blocks/breadcrumbs
+  section.section.news
+    .container
+      .row.grid
+        mixin news(image)
+          .news-card.grid__block.col-lg-4.col-sm-6
+            .news-card__container
+              a(href="./news-item.html").news-card__image.image.image_cover
+                img(src='#' data-src=image, alt="image").lazyload
+              span.news-card__date 02.11.2020
+              h4.news-card__title 
+                a(href="#") Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              p.news-card__title Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        
+        +news('./img/item1.jpg')
+        +news('./img/item2.jpg')
+        +news('./img/item3.jpg')
+        +news('./img/item4.jpg')
+        +news('./img/item5.jpg')
+        +news('./img/item6.jpg')
+
+      .pagination
+        a(href="#").pagination__control.pagination__prev 
+          span Назад
+          svg.icon
+            use(xlink:href='./img/icons/icons-sprite.svg#arrow')
+        ul.pagination__list
+          li.pagination__item 
+            a(href="#").pagination__link.active 1
+          li.pagination__item 
+            a(href="#").pagination__link 2
+          li.pagination__item 
+            a(href="#").pagination__link 3
+          li.pagination__item 
+            a(href="#").pagination__link 4
+          li.pagination__item 
+            a(href="#").pagination__link 5
+          li.pagination__item 
+            a(href="#").pagination__link 6
+          li.pagination__item  
+            a(href="#").pagination__link 7
+        a(href="#").pagination__control.pagination__next 
+          span Далее
+          svg.icon
+            use(xlink:href='./img/icons/icons-sprite.svg#arrow')
+    

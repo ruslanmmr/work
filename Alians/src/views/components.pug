@@ -1,0 +1,117 @@
+extends layout/layout
+block variables
+  -var namespace = 'Компоненты, типографика'
+block title
+  title #{title} - #{namespace}
+  
+block content
+  include blocks/breadcrumbs
+  section.section
+    .container
+      .row
+        .col-xxl-9.col-xl-10
+          h1 Заголовок h1
+          h2 Заголовок h2
+          h3 Заголовок h3
+          h4 Заголовок h4
+          h5 Заголовок h5
+          h6 Заголовок h6
+          p Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве, для изготовления тары и упаковки, а также в мебельном производстве.
+          p В зависимости от внешнего вида <a href="#adress">наружных слоев</a> на сорта: Е (элита), I, II, III, IV
+          h3 Заголовок группы
+          p Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.
+          figure
+            img(src="https://via.placeholder.com/1024x400/000000/FFFFFF/?text=Изображение", alt="image")
+            figcaption Подпись изображения
+          p В зависимости от внешнего вида наружных слоев на сорта: 
+          ul  
+            li Сорт Е (элита)
+            li Сорт I, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.
+            li Сорт III
+          blockquote Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве. 
+          p В зависимости от внешнего вида наружных слоев на сорта: 
+          ol
+            li Сорт Е (элита)
+            li Сорт I, потолков, перегородок, в качестве настила под напольные покрытия, для опалубки, для изготовления тары и упаковки, а также в мебельном производстве.
+            li Сорт III
+            li Сорт IV
+          h3 Таблица №1. Технические характеристики
+          .table
+            table
+              tr
+                th Номер заказа
+                th Получение
+                th Сумма
+                th Оплачено
+              tr
+                td 28.03.2019
+                td Самовывоз
+                td 3&nbsp;256,00&nbsp;₽
+                td Да
+              tr
+                td 28.03.2019
+                td Самовывоз
+                td 50 136,00&nbsp;₽
+                td Нет
+              tr
+                td 28.03.2019
+                td Доставка
+                td 36,00&nbsp;₽
+                td Да
+              tr
+                td 28.03.2019
+                td Самовывоз
+                td 50&nbsp;136,00&nbsp;₽
+                td Нет
+              tr
+                td 28.03.2019
+                td Доставка
+                td 36,00&nbsp;₽
+                td Да
+          h3 Форма
+          form(action="#").form.js-validation
+            .form__group.row
+              .form__item.col-sm-6
+                .input
+                  span.input__label ФИО
+                  input(type="text" name='name').input__element.required
+              .form__item.col-sm-6
+                .input
+                  span.input__label E-mail
+                  input(type="text" name='email').input__element.required
+              .form__item.col-sm-6
+                .input
+                  span.input__label Телефон
+                  input(type="text" name='phone').input__element.input_phone.required
+              .form__item.col-12
+                .input
+                  span.input__label Сообщение
+                  textarea(type="text" name='message').input__element.input__textarea.required
+              .form__item.col-12
+                .checkbox
+                  input(type="checkbox" id='1').checkbox__input
+                  label(for='1').checkbox__label Я согласен с чем-нибудь 
+                    a(href="#daa") хорошим
+                    |.
+              .form__item.col-12
+                .row
+                  .col-md-auto
+                    .radio
+                      input(type="radio" id='ddfgdgd' name='dddd').radio__input
+                      label(for='ddfgdgd').radio__label Значение 1
+                  .col-md-auto
+                    .radio
+                      input(type="radio" id='dsdsds' name='dddd').radio__input
+                      label(for='dsdsds').radio__label Значение 2
+            .form__group
+              .row
+                .col-lg-4.col-sm-6
+                  button.button.button_style-1 Отправить сообщение
+                  span.form__agree Нажимая на кнопку, вы даете согласие на 
+                    a(href="#") обработку персональных данных
+                  
+                
+          h3 Кнопки
+          .row
+            .col-md-4.col-sm-6
+              button.button.button_style-1 Отправить
