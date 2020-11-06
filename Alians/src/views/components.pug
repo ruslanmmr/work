@@ -95,7 +95,7 @@ block content
                     |.
               .form__item.col-12
                 .row
-                  .col-md-auto
+                  .col-md-auto.mb-3
                     .radio
                       input(type="radio" id='ddfgdgd' name='dddd').radio__input
                       label(for='ddfgdgd').radio__label Значение 1
@@ -113,5 +113,10 @@ block content
                 
           h3 Кнопки
           .row
-            .col-md-4.col-sm-6
+            .col-md-4.col-sm-6.mb-3
               button.button.button_style-1 Отправить
+            .col-auto
+              a(href="#").button.button_style-2
+                span Кнопка
+                svg.icon
+                  use(xlink:href='./img/icons/icons-sprite.svg#arrow')
