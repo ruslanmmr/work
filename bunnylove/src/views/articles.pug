@@ -19,6 +19,22 @@ block content
         +promo-item('https://bunnylove.ru/media/cache/9e/50/9e507b2f6ff34695641d41642eb9026b.jpg', 'День семьи, любви и верности')
         +promo-item('https://bunnylove.ru/media/cache/18/ae/18ae94fa1ad76e3fade879e9d98712ff.png', 'BIG MAY SALE')
       
-      .section__more.row.justify-content-center
-        .col-sm-auto
-          button.new-button.new-button_fluid.new-button-type-fill Показать ещё
+      .section__more
+        ul.pager-large.-digital
+          li.first
+            a(href='/promo/?page=1')
+          li.prev
+            a(href='/promo/?page=2')
+          li
+            a.active(href='/promo/')
+              span 1
+          li
+            a(href='/promo/?page=2')
+              span 2
+          li
+            a(href='/promo/?page=3')
+              span 3
+          li.next
+            a(href='/promo/?page=2')
+          li.last
+            a(href='/promo/?page=')
