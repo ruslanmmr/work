@@ -1,0 +1,367 @@
+extends layout/layout
+block content
+  section.section-dark
+    .container
+      .catalog-side.mobile-show
+        span.catalog-side__title
+          span.icon
+            svg(width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z' fill='currentColor')
+          | Каталог продукции
+        .catalog-side__content
+          ul
+            li.menu-item.current
+              a(href='/catalog/cadovaya-tehnika/') Cадовая техника
+            li.menu-item.current
+              a(href='/catalog/generatory-elektrostancii/') Генераторы (Электростанции)
+            li.menu-item.current
+              a(href='/catalog/stroitelnaya-tehnika/') Строительная техника
+            li.menu-item.current
+              a(href='/catalog/svarochnoe-oborudovanie/') Сварочное оборудование
+            li.menu-item.current
+              a(href='/catalog/pusko-zaryadnye-ustrojstva/') Пуско-зарядные устройства
+            li.menu-item.current
+              a(href='/catalog/teplovye-pushki/') Тепловые пушки
+            li.menu-item.current
+              a(href='/catalog/kompressory/') Компрессоры
+            li.menu-item.current
+              a(href='/catalog/nasosnoe-oborudovanie/') Насосное оборудование
+            li.menu-item.current
+              a(href='/catalog/stabilizatory-napryazheniya/') Стабилизаторы напряжения
+            li.menu-item.current
+              a(href='/catalog/mojki-vysokogo-davleniya/') Мойки высокого давления
+            li.menu-item.current
+              a(href='/catalog/zernodrobilki/') Зернодробилки
+      .page-head
+        .breadcrumbs.breadcrumbs--lk(itemscope='' itemtype='http://schema.org/BreadcrumbList')
+          span(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+            a(itemprop='item' title='Главная' href='/')
+              | Главная
+              meta(itemprop='name' content='Главная')
+            meta(itemprop='position' content='1')
+          span.sep
+          span(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+            a(itemprop='item' title='Каталог' href='/catalog/')
+              | Каталог
+              meta(itemprop='name' content='Каталог')
+            meta(itemprop='position' content='2')
+          span.sep
+          span(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+            a(itemprop='item' title='Cадовая техника' href='/catalog/cadovaya-tehnika/')
+              | Cадовая техника
+              meta(itemprop='name' content='Cадовая техника')
+            meta(itemprop='position' content='3')
+          span.sep
+          span(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+            a(itemprop='item' title='Снегоуборщики' href='/catalog/category/cadovaya-tehnika/snegouborshiki/')
+              | Снегоуборщики
+              meta(itemprop='name' content='Снегоуборщики')
+            meta(itemprop='position' content='4')
+      .content-block
+        div(itemscope='' itemtype='http://schema.org/Product')
+          .product-card
+            .product-card__navigation
+              a.product-card__nav-prev(href='/catalog/product/snegouborshik-benzinovyj-patriot-pro-650-426108410/')
+                span.icon
+                  svg.icon-svg
+                    use(xlink:href='#product-nav-arrow')
+                |                 Предыдущий товар
+              a.product-card__nav-next(href='/catalog/product/snegouborshik-benzinovyj-gusenichnyj-honda-hss-655-etd1-s-elektrostarterom-hss655k1etd/')
+                | Следующий товар
+                span.icon
+                  svg.icon-svg
+                    use(xlink:href='#product-nav-arrow')
+            .product-card__head
+              h1.product-card__title(itemprop='name')
+                | Снегоуборщик бензиновый HYUNDAI S 5556 [S 5556]
+              span.product-card__artikul(itemprop='sku') 143882
+            .product-card__container
+              .product-card__slideshow
+                #sync1.owl-carousel.owl-theme
+                  a(href="/media/products/images/image_YH0d7Lm" data-fancybox='images').item
+                    img(itemprop='image' src='/media/products/images/image_YH0d7Lm' alt='Снегоуборщик бензиновый HYUNDAI S 5556 [S 5556] (фото 1)')
+                    span.product-item__flag-content
+                #sync2.owl-carousel.owl-theme
+                  .item
+                    img(src='/media/products/images/image_YH0d7Lm' alt='')
+              .product-card__content
+                .product-card__left
+                  .product-card__personal-cost
+                    span цена за шт:
+                    |                         40889,00 ₽
+                  .product-card__main-cost(itemprop='offers' itemtype='http://schema.org/Offer' itemscope='')
+                    meta(itemprop='price' content='40889')
+                    meta(itemprop='priceCurrency' content='RUB')
+                    link(itemprop='availability' href='http://schema.org/OutOfStock')
+                  .shopping-cart-product.not-available
+                    a.btn-border.btn--empty-main-min.not-for-sale.not-available(href='#question-main' data-product-code='143882' data-product-name='Снегоуборщик бензиновый HYUNDAI S 5556 [S 5556]')
+                      | Узнать о наличии
+                  .product-card-schedule
+                    .product-card-schedule__image
+                      img(src='/static/images/schedule.svg' alt='')
+                    .schedule-btn
+                      a(rel='tab4')
+                        span.icon
+                          svg.icon-svg
+                            use(xlink:href='#schedule-icon')
+                        | Показать график цен
+                  .product-card__btns.ya-share-block
+                    a.btn-radius.share-btn
+                      span.icon-svg
+                        svg.icon
+                          use(xlink:href='#share-icon')
+                      | Поделиться
+                    .share-block__show
+                      p Чтобы поделиться ссылкой, нажмите на иконку вашей соцсети
+                      .ya-share2(data-services='vkontakte,twitter,odnoklassniki,facebook')
+                  .product-card__rating
+                    span.product-item__rating
+                      span.star.star--empty
+                      span.star.star--empty
+                      span.star.star--empty
+                      span.star.star--empty
+                      span.star.star--empty
+                    span.product-card__review-link
+                      a(rel='tab3') Отзывы (0)
+                .product-card__right
+                  .product-card__discription
+                    span.product-card__discription-title Наличие:
+                    ul
+                      li
+                        span.green-color
+                          .product-item__status.product-item__status--none
+                            | нет в наличии
+                  .product-card__discription
+                    span.product-card__discription-title Оплата:
+                    ul
+                      li — Картой / наличными при получении
+                      li — Онлайн на сайте
+                      li — Оплата в кредит
+                      li — Безналом по счёту
+                    a.btn-get-an-account-min(href='/cart/')
+                      span.icon
+                        svg.icon
+                          use(xlink:href='#check-btn')
+                      | Получить счёт
+                  .product-card__discription
+                    ul
+                      li
+                        strong Доставка:
+                        |  точно и в срок
+                    a.btn-calculate-min(href='/cart/delivery_calculator/')
+                      span.icon
+                        svg.icon
+                          use(xlink:href='#delivery-white')
+                      | Рассчитать доставку
+          .product-card-container
+            .product-card-content.noselect
+              .tabs-content
+                ul.tabs
+                  li.active(rel='tab2') Характеристики
+                  li.review-tab-link(rel='tab3') Отзывы
+                  li.schedule-link(rel='tab4') График цен
+                  li.tab_last(rel='tab5') Документы
+                .tabsgroup
+                  // #tab1
+                  span.tab_drawer_heading(rel='tab2')
+                    span.icon
+                      svg.icon-svg
+                        use(xlink:href='#tab-arrow')
+                    |                             Характеристики
+                  #tab2.tab-content(style='display: none;')
+                    ul.char
+                      li
+                        span.char-text
+                          span.char-text__mask Двигатель
+                        span.char-text
+                          | Hyundai
+                      li
+                        span.char-text
+                          span.char-text__mask Система пуска
+                        span.char-text
+                          | Ручной стартер
+                      li
+                        span.char-text
+                          span.char-text__mask Ширина захвата
+                        span.char-text
+                          | 53
+                      li
+                        span.char-text
+                          span.char-text__mask Высота захвата
+                        span.char-text
+                          | 51
+                      li
+                        span.char-text
+                          span.char-text__mask Дальность выброса снега
+                        span.char-text
+                          | от 1 до 11
+                      li
+                        span.char-text
+                          span.char-text__mask Для дома и дачи
+                        span.char-text
+                          | да
+                      li
+                        span.char-text
+                          span.char-text__mask Для мокрого снега
+                        span.char-text
+                          | да
+                      li
+                        span.char-text
+                          span.char-text__mask Самоходный
+                        span.char-text
+                          | да
+                      li
+                        span.char-text
+                          span.char-text__mask С электростартером
+                        span.char-text
+                          | нет
+                      li
+                        span.char-text
+                          span.char-text__mask Производство
+                        span.char-text
+                          | Китай
+                      li
+                        span.char-text
+                          span.char-text__mask Материал шнека
+                        span.char-text
+                          | металлический
+                      li
+                        span.char-text
+                          span.char-text__mask Тип двигателя
+                        span.char-text
+                          | Бензиновый
+                      li
+                        span.char-text
+                          span.char-text__mask Вес
+                        span.char-text
+                          | 57 кг
+                      li
+                        span.char-text
+                          span.char-text__mask Топливо
+                        span.char-text
+                          | Бензин АИ-92
+                      li
+                        span.char-text
+                          span.char-text__mask Тип
+                        span.char-text
+                          | колесные
+                      li
+                        span.char-text
+                          span.char-text__mask Мощность двигателя
+                        span.char-text
+                          | 5,5
+                      li
+                        span.char-text
+                          span.char-text__mask Система шнеков
+                        span.char-text
+                          | двухступенчатая
+                      li
+                        span.char-text
+                          span.char-text__mask Производитель
+                        span.char-text
+                          | HYUNDAI
+                      li
+                        span.char-text
+                          span.char-text__mask Топливо
+                        span.char-text Бензин АИ-92
+                      li
+                        span.char-text
+                          span.char-text__mask Вес
+                        span.char-text 57 кг
+                      li
+                        span.char-text
+                          span.char-text__mask Объем топливного бака
+                        span.char-text 3,6 л.
+                      li
+                        span.char-text
+                          span.char-text__mask Количество скоростей (назад)
+                        span.char-text 1
+                      li
+                        span.char-text
+                          span.char-text__mask Габариты
+                        span.char-text 765х580х630 мм
+                      li
+                        span.char-text
+                          span.char-text__mask Модель двигателя
+                        span.char-text ICW160
+                      li
+                        span.char-text
+                          span.char-text__mask Количество скоростей (вперед)
+                        span.char-text 4
+                      li
+                        span.char-text
+                          span.char-text__mask Рекомендуемое масло
+                        span.char-text Синтетическое масло SAE 5W30
+                      li
+                        span.char-text
+                          span.char-text__mask Объем двигателя
+                        span.char-text 163 см3
+                  // #tab2
+                  span.tab_drawer_heading(rel='tab3')
+                    span.icon
+                      svg.icon-svg
+                        use(xlink:href='#tab-arrow')
+                    |                             Отзывы
+                  #tab3.tab-content(style='display: none;')
+                    p
+                      | Для возможности оставлять свои отзывы на товары сайта необходимо 
+                      a(href='/account/login/?next=/catalog/product/snegouborshik-benzinovyj-hyundai-s-5556-s-5556/') авторизироваться
+                      | .
+                    h2 Отзывы на товар 
+                    p Отзывов для данного товара пока еще нет.
+                  // #tab3
+                  span.tab_drawer_heading(rel='tab4')
+                    span.icon
+                      svg.icon-svg
+                        use(xlink:href='#tab-arrow')
+                    |                             График цен
+                  #tab4.tab-content(style='display: none;')
+                    h2 График цен на товар
+                    p Цена на данный продукт еще не менялась.
+                  span.tab_drawer_heading(rel='tab5')
+                    span.icon
+                      svg.icon-svg
+                        use(xlink:href='#tab-arrow')
+                    |                             Документы
+                  #tab5.tab-content(style='display: none;')
+                    h2 Документы и сертификаты
+                    .documents
+                      p Документация для данного товара временно отсутствует.
+                  // #tab4
+                  // .tab_container
+            .product-card-side
+  section.section
+    .container
+  section.section-dark.feedback-form
+    .container
+      #question-main.question-main
+        .question-form
+          span.content-title.center.h2 Остались вопросы?
+          form#feedback-message-request-form(action='/crm/message/' method='post')
+            input(type='hidden' name='csrfmiddlewaretoken' value='aueWHiYP2crrjPzUuxFhBJGUiNeg3NLLGhApeMZUfxHOXUaSCEb4XxAac50neSnw')
+            .question-form__column
+              .form-group
+                input.form-control(type='text' name='name' autocomplete='off' required='')
+                label.label-name(for='name')
+                  span.content-name
+                    | Имя*
+              .form-group
+                input.form-control.phone(type='phone' name='phone' autocomplete='off' required='')
+                label.label-name(for='phone')
+                  span.content-name
+                    | Телефон
+              .form-group
+                input.form-control(type='mail' name='email' autocomplete='off' required='')
+                label.label-name(for='text')
+                  span.content-name
+                    | e-mail
+            .question-form__column
+              .form-group
+                textarea.form-control(name='message' autocomplete='off' required='')
+                label.label-name(for='message')
+                  span.content-name
+                    | Комментарий
+              input#id_url(type='hidden' name='url')
+              button.btn.btn--main-min(type='submit') Отправить
+          p
+            | Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности
