@@ -1,85 +1,181 @@
 var gulp = require("gulp"),
     browsersync = require("browser-sync").create(),
     autoprefixer = require("gulp-autoprefixer"),
-    babel = require("gulp-babel"),
-    uglify = require("gulp-uglify"),
-    pug = require("gulp-pug"),
+    pug = require('gulp-pug'),
+    babel = require('gulp-babel'),
     sass = require("gulp-sass"),
+    filter = require('gulp-filter'),
     mincss = require("gulp-clean-css"),
     sourcemaps = require("gulp-sourcemaps"),
     rename = require("gulp-rename"),
-    imagemin = require("gulp-imagemin"),
     favicons = require("gulp-favicons"),
-    replace = require("gulp-replace"),
     newer = require("gulp-newer"),
-    plumber = require("gulp-plumber"),
-    debug = require("gulp-debug"),
     watch = require("gulp-watch"),
     clean = require("gulp-clean"),
-    rsync = require('gulp-rsync');
+    uglify = require("gulp-uglify"),
+    rsync = require('gulp-rsync'),
+    webpack = require('webpack'),
+    webpackStream = require('webpack-stream');
+
+let $images = ["./src/img/**/*.{jpg,jpeg,png,gif}", "!./src/img/favicons/*.{jpg,jpeg,png,gif}"],
+    $images_watch = $images,
+
+    $pug = ["./src/views/**/*.pug", "!./src/views/blocks/*.pug", "!./src/views/layout/*.pug"],
+    $pug_watch = "./src/views/**/*.pug",
+
+    $scripts = ["./src/scripts/*.js"],
+    $scripts_watch = ["./src/scripts/**/*"],
+
+    $webpack = "./src/scripts/webpack/**/*.js",
+    $webpack_watch = "./src/scripts/webpack/**/*",
+
+    $styles = ["./src/styles/**/*.scss", "!./src/styles/components/**/*.scss"],
+    $styles_watch = "./src/styles/**/*.scss",
+
+    $favicons = "./src/img/favicons/*.{jpg,jpeg,png,gif}"
+
+    $other = ["./src/**/*", 
+              "!./src/img/**/*.{jpg,jpeg,png,gif}", 
+              "!./src/img/favicons/*.{jpg,jpeg,png,gif}", 
+              "!./src/scripts/*.js",
+              "!./src/scripts/webpack",
+              "!./src/scripts/webpack/**/*", 
+              "!./src/styles/**/*", 
+              "!./src/views", 
+              "!./src/views/**/*", 
+              "!./src/locales", 
+              "!./src/locales/**/*"
+              ];
 
 
-  let $images = ["./src/img/**/*.{jpg,jpeg,png,gif}", "!./src/img/favicons/*.{jpg,jpeg,png,gif}"],
-      $pug = ["./src/views/**/*.pug", "!./src/views/blocks/*.pug", "!./src/views/layout/*.pug"],
-      $pug_watch = "./src/views/**/*.pug",
-      $scripts = ["./src/js/*.js", "!./src/js/libs/*.js"],
-      $styles = ["./src/styles/**/*.scss", "!./src/styles/components/*.scss"],
-      $styles_watch = ["./src/styles/**/*.scss"],
-      $favicons = "./src/img/favicons/*.{jpg,jpeg,png,gif}",
-      $other = ["./src/**/*", "!./src/img/**/*.{jpg,jpeg,png,gif}", "!./src/js/*.js", "!./src/styles/*.scss", "!./src/styles/components","!./src/styles/components/**/*", "!./src/views", "!./src/views/**/*"];
-
-gulp.task("pug", function () {
+gulp.task("pug", function() {
   return gulp.src($pug)
-    .pipe(pug({
-      pretty: true
-    }))
+    .pipe(pug({pretty:true}))
     .pipe(gulp.dest("./build/"))
-    .pipe(debug({
-      "title": "html"
-    }))
     .on("end", browsersync.reload);
 });
 
-gulp.task("scripts", function () {
+gulp.task("scripts", function() {
   return gulp.src($scripts)
     .pipe(sourcemaps.init())
     .pipe(babel({presets: ["@babel/preset-env"]}))
-    .pipe(gulp.dest("./build/js/"))
-    .pipe(uglify())
-    .pipe(rename({suffix: ".min"}))
     .pipe(sourcemaps.write("./maps/"))
-    .pipe(gulp.dest("./build/js/"))
-    .pipe(debug({"title": "scripts"}))
+    .pipe(gulp.dest("./build/scripts/"))
     .on("end", browsersync.reload);
 });
+gulp.task("scripts_production", function() {
+  return gulp.src($scripts)
+    .pipe(sourcemaps.init())
+    .pipe(babel({presets: ["@babel/preset-env"]}))
+    .pipe(sourcemaps.write("./maps/"))
+    .pipe(gulp.dest("./build/scripts/"))
+    .pipe(filter(['**/*.js']))
+    .pipe(babel({presets: ["@babel/preset-env"]}))
+    .pipe(uglify())
+    .pipe(rename({suffix: ".min"}))
+    .pipe(gulp.dest("./build/scripts/"))
+});
 
-gulp.task("styles", function () {
+gulp.task("webpack_scripts", function() {
+  return gulp.src($webpack)
+    .pipe(webpackStream({
+      mode: 'development',
+      output: {
+        filename: 'app.js',
+      },
+      performance: {
+        hints: false,
+        maxEntrypointSize: 1000,
+        maxAssetSize: 1000
+      },
+      module: {
+        rules: [{
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader',
+          options: {
+            presets: ["@babel/preset-env", {'plugins': ['@babel/plugin-proposal-class-properties']}]
+          }
+        }]
+      },
+      module: {
+        rules: [{
+          test: /\.(frag|vert|glsl)$/,
+          use: [
+            { 
+              loader: 'glsl-shader-loader',
+              options: {}  
+            }
+          ]
+        }]
+      }
+    }))
+    .pipe(gulp.dest("./build/scripts/"))
+    .on("end", browsersync.reload);
+});
+gulp.task("webpack_scripts_production", function() {
+  return gulp.src($webpack)
+    .pipe(webpackStream({
+      mode: 'production',
+      output: {
+        filename: 'app.min.js',
+      },
+      performance: {
+        hints: false,
+        maxEntrypointSize: 1000,
+        maxAssetSize: 1000
+      },
+      module: {
+        rules: [{
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader',
+          options: {
+            presets: ["@babel/preset-env", {'plugins': ['@babel/plugin-proposal-class-properties']}]
+          }
+        }]
+      },
+      module: {
+        rules: [{
+          test: /\.(frag|vert|glsl)$/,
+          use: [
+            { 
+              loader: 'glsl-shader-loader',
+              options: {}  
+            }
+          ]
+        }]
+      }
+    }))
+    .pipe(gulp.dest("./build/scripts/"))
+});
+
+gulp.task("styles", function() {
+  return gulp.src($styles)
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(sourcemaps.write("./maps/"))
+    .pipe(gulp.dest("./build/styles/"))
+    .on("end", browsersync.reload);
+});
+gulp.task("styles_production", function() {
   return gulp.src($styles)
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer())
-    .pipe(gulp.dest("./build/styles/"))
-    .pipe(mincss())
-    .pipe(rename({suffix: ".min"}))
     .pipe(sourcemaps.write("./maps/"))
     .pipe(gulp.dest("./build/styles/"))
-    .pipe(debug({"title": "styles"}))
+    .pipe(filter(['**/*.css']))
+    .pipe(mincss({level:{1:{specialComments:'none'},2:{}}}))
+    .pipe(rename({suffix: ".min"}))
+    .pipe(gulp.dest("./build/styles/"))
     .on("end", browsersync.reload);
 });
-
 
 gulp.task("images", function () {
   return gulp.src($images)
     .pipe(newer("./build/img/"))
-    .pipe(imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.mozjpeg({quality: 75, progressive: true}),
-      imagemin.optipng({optimizationLevel: 5})
-    ]))
     .pipe(gulp.dest("./build/img/"))
-    .pipe(debug({
-      "title": "images"
-    }))
     .on("end", browsersync.reload);
 });
 
@@ -99,9 +195,6 @@ gulp.task("favicons", function () {
       }
     }))
     .pipe(gulp.dest("./build/img/favicons/"))
-    .pipe(debug({
-      "title": "favicons"
-    }));
 });
 
 gulp.task("other", function () {
@@ -115,9 +208,6 @@ gulp.task("clean", function () {
       read: false
     })
     .pipe(clean())
-    .pipe(debug({
-      "title": "clean"
-    }));
 });
 
 gulp.task("serve", function () {
@@ -132,20 +222,40 @@ gulp.task("serve", function () {
 });
 
 gulp.task("watch", function () {
-  return new Promise((res, rej) => {
+  return new Promise((res) => {
     watch($pug_watch, gulp.series("pug"));
     watch($styles_watch, gulp.series("styles"));
-    watch($scripts, gulp.series("scripts"));
-    watch($images, gulp.series("images"));
+    watch($scripts_watch, gulp.series("scripts"));
+    watch($webpack_watch, gulp.series("webpack_scripts"));
+    watch($images_watch, gulp.series("images"));
     watch($favicons, gulp.series("favicons"));
     watch($other, gulp.series("other"));
     res();
   });
 });
 
+gulp.task("default", 
+  gulp.series(
+    "clean",
+    gulp.parallel("pug", "styles", "scripts", "webpack_scripts", "images", "favicons", "other"),
+    gulp.parallel("watch", "serve")
+  )
+);
 
-// BUILD
-gulp.task("default", gulp.series("clean",
-  gulp.parallel("pug", "scripts", "styles", "images", "favicons", "other"),
-  gulp.parallel("watch", "serve")
-));
+gulp.task("production", 
+  gulp.series(
+    "clean", gulp.parallel("pug", "styles_production", "scripts_production", "webpack_scripts_production", "images", "favicons", "other")
+  )
+);
+
+gulp.task("transfer", function () {
+  return gulp.src('./build/**')
+    .pipe(rsync({
+      root: './build/',
+      hostname: 'user@00.000.000.000',
+      destination: 'www/domain.com/',
+      archive: true,
+      silent: false,
+      chmod : "Du=rwx,Dgo=rx,Fu=rw,Fog=r" 
+    }));
+});
