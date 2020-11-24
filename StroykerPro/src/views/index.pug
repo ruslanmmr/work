@@ -143,9 +143,39 @@ block content
           img.bg3(src='/static/img/hid-bg.png' alt='')
   
   section.section.form-section
-    .container  
-      h2.section__title.title Акция! Выберите подарок от STROYKER.PRO
-  
+    .container
+      .row.form-section__container
+        .col-md-6.col-xs-12
+          .form-section__content
+            h2.section__title.title Акция! Выберите подарок от STROYKER.PRO
+            form(action="#").form-section__form.default-form.lk-form
+              .form-section__group.row
+                .form-section__item.col-xs-12
+                  .radio-element
+                    input#1.radio-element__input(type='radio' name='dddd')
+                    label.radio-element__label(for='1') Бесплатный аудит вашего сайта
+                .form-section__item.col-xs-12
+                  .radio-element
+                    input#2.radio-element__input(type='radio' name='dddd')
+                    label.radio-element__label(for='2') Бесплатное SEO продвижение на год
+              .form-section__group.row 
+                .form-section__item.col-sm-6.col-xs-12
+                  input(type='text' name='name' required placeholder='Адрес вашего сайта')
+                .form-section__item.col-sm-6.col-xs-12
+                  input(type='text' name='name2' required placeholder='Номер телефона')
+              .form-section__group.row
+                .form-section__item.col-sm-6.col-xs-12
+                  input.btn(type='submit' value='Кнопка')
+
+        .form-section__slider.col-md-6.col-xs-12
+          .owl-carousel
+            .item.form-section__slide
+              img(data-src="https://stroyker.pro/media/cache/62/2b/622bfee6542cdab7e8c3a2292b914180.jpg", alt="image").owl-lazy
+            .item.form-section__slide
+              img(data-src="https://stroyker.pro/media/cache/63/d7/63d7cfb5cc8911987945eb40d8c5304a.jpg", alt="image").owl-lazy
+            .item.form-section__slide
+              img(data-src="https://stroyker.pro/media/cache/bc/96/bc96de566b67977edd9e513cf141e2a8.jpg", alt="image").owl-lazy
+
   
   .carousel-box
     .container

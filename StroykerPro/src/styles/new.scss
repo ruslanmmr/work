@@ -1,3 +1,113 @@
+$trs1: .25s ease-in-out;
+$trs2: .5s ease-in-out;
+$trs3: 1s ease-in-out;
+
+.checkbox-element {
+  position: relative;
+  &__input {
+    display: none;
+    &:checked ~ .checkbox-element__label {
+      &:before {
+        background-color: #FFCC00;
+        border-color: #000;
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  &__label {
+    cursor: pointer;
+    display: block;
+    padding: 0 0 0 30px;
+    line-height: 20px;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #000;
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: border-color $trs1, background-color $trs1;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 5px;
+      left: 5px;
+      width: 10px;
+      height: 6px;
+      border-width: 0 0 2px 2px;
+      transform: rotate(-45deg);
+      border-style: solid;
+      border-color: #fff;
+      opacity: 0;
+      transition: opacity $trs1;
+    }
+  }
+  &__count {
+    font-size: 0.75rem;
+    line-height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--color-text-light, #BDBDBD);
+    min-width: 24px;
+    text-align: center;
+  }
+}
+
+.radio-element {
+  position: relative;
+  &__input {
+    display: none;
+    &:checked ~ .radio-element__label {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  &__label {
+    cursor: pointer;
+    display: block;
+    padding: 0 24px 0 30px;
+    line-height: 20px;
+    &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #000;
+      border-radius: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 5px;
+      left: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      background-color: #FFCC00;
+      opacity: 0;
+      transition: opacity $trs1;
+    }
+  }
+}
+
+
+
 .sort-list {
   display: flex;
   flex-wrap: wrap;
@@ -46,7 +156,7 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
-    transition: opacity .25s ease-in-out, visibility .25s ease-in-out, transform .25s ease-in-out;
+    transition: opacity $trs1, visibility $trs1, transform $trs1;
   }
   &__title {
     padding-left: 45px;
@@ -130,5 +240,114 @@
 }
 
 .form-section {
-  
+  background: #F5F5F5;
+  padding: 80px 0;
+  margin-top: -80px;
+  .owl-nav {
+    display: flex;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+  .owl-prev, .owl-next {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    background-color: #fff;
+    position: relative;
+    transition: background-color $trs1;
+    &::before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-width: 2px 2px 0 0;
+      border-style: solid;
+      border-color: #FFCC00;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: border-color $trs1;
+    }
+    &:hover {
+      background-color: #FFCC00;
+      &:before {
+        border-color: #000;
+      }
+    }
+  }
+  .owl-prev {
+    margin-right: 4px;
+    &:before {
+      transform: translate(-35%, -50%) rotate(-135deg);
+    }
+  }
+  .owl-next {
+    &:before {
+      transform: translate(-65%, -50%) rotate(45deg);
+    }
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__slider {
+    min-height: 100%;
+  }
+  &__slide {
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 75%;
+    }
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    background-color: #fff;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+  }
+  &__group {
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: -16px;
+    }
+  }
+  &__item {
+    margin-bottom: 16px;
+  }
+  &__form {
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .btn {
+    width: 100%;
+  }
+  @media screen and (max-width:1199px) {
+    background-color: transparent;
+    padding: 0;
+    margin-top: 0;
+    &__content {
+      padding: 0;
+    }
+  }
+  @media screen and (max-width:991px) {
+    &__slider {
+      margin-top: 40px;
+    }
+  }
 }
