@@ -1,0 +1,14 @@
+extends layout/layout
+block content
+  include blocks/breadcrumbs
+  .container
+    section.section
+      h1.section__title Акции
+      .grid.row
+        include blocks/blocks
+        +promo-item('https://bunnylove.ru/media/cache/71/ae/71ae58092a7f4c3401bb8b8ae88bd685.jpg', 'Обменяй старые батарейки на новые!')
+        +promo-item('https://bunnylove.ru/media/cache/9e/50/9e507b2f6ff34695641d41642eb9026b.jpg', 'День семьи, любви и верности')
+        +promo-item('https://bunnylove.ru/media/cache/18/ae/18ae94fa1ad76e3fade879e9d98712ff.png', 'BIG MAY SALE')
+        +promo-item('https://bunnylove.ru/media/cache/71/ae/71ae58092a7f4c3401bb8b8ae88bd685.jpg', 'Обменяй старые батарейки на новые!')
+        +promo-item('https://bunnylove.ru/media/cache/9e/50/9e507b2f6ff34695641d41642eb9026b.jpg', 'День семьи, любви и верности')
+        +promo-item('https://bunnylove.ru/media/cache/18/ae/18ae94fa1ad76e3fade879e9d98712ff.png', 'BIG MAY SALE')

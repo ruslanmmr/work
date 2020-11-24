@@ -5789,48 +5789,30 @@ body > .page:after {
 .pager-large li {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 4px; }
+  margin: 0 5px; }
 
-/* line 4471, ../sass/css.scss */
-.pager-large li > a:hover,
-.pager-large li > a:focus {
-  text-decoration: none;
-  background-color: #EEE; }
-
-/* line 4476, ../sass/css.scss */
-.pager-large a {
-  display: block;
-  border: 1px solid transparent;
-  border-radius: 50%;
-  position: relative;
-  width: 11px;
-  height: 11px;
-  color: #989898; }
-
-/* line 4485, ../sass/css.scss */
-.pager-large span {
-  position: relative;
-  top: -6px; }
-
-/* line 4489, ../sass/css.scss */
-.pager-large li:hover a,
-.pager-large .active a {
-  border: 1px solid #DEE7E7;
-  color: #222222; }
+.pager-large li:not([class]) a {
+  color: #000;
+  line-height: 32px; }
+  .pager-large li:not([class]) a.active {
+    pointer-events: none;
+    color: #d51e28; }
+  .pager-large li:not([class]) a:hover {
+    color: #d51e28; }
 
 /* line 4494, ../sass/css.scss */
 .pager-large .prev a,
 .pager-large .next a,
 .pager-large .first a,
 .pager-large .last a {
-  background-color: rgba(255, 255, 255, 0);
-  background-repeat: no-repeat;
+  border: 1px solid transparent;
+  border-radius: 100%;
+  position: relative;
   width: 32px;
   height: 32px;
-  text-indent: -999px;
-  border-color: #DEE7E7 !important;
+  border-color: #DEE7E7;
   position: relative;
-  display: block;
+  display: block !important;
   transition: background-color 0.25s ease-out, border-color 0.25s ease-out; }
 
 /* line 4508, ../sass/css.scss */
@@ -5848,78 +5830,57 @@ body > .page:after {
   top: 50%;
   transition: border-color 0.25s ease-out; }
 
-/* line 4522, ../sass/css.scss */
+.pager-large .first a:after,
+.pager-large .last a:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  border-color: #d51e28;
+  top: 50%;
+  transition: border-color 0.25s ease-out; }
+
 .pager-large .next a:before {
   transform: translateY(-50%) rotate(-45deg);
   left: 8px; }
 
-/* line 4526, ../sass/css.scss */
 .pager-large .prev a:before {
   transform: translateY(-50%) rotate(135deg);
   left: 12px; }
 
-/* line 4530, ../sass/css.scss */
-.pager-large .prev span, .pager-large .next span {
-  display: block;
-  width: 32px;
-  height: 32px; }
+.pager-large .first a:before {
+  transform: translateY(-50%) rotate(135deg);
+  left: 9px; }
 
-/* line 4535, ../sass/css.scss */
-.pager-large .next span, .pager-large .prev a {
-  display: none; }
+.pager-large .first a:after {
+  transform: translateY(-50%) rotate(135deg);
+  left: 15px; }
 
-/* line 4538, ../sass/css.scss */
-.pager-large .first a {
-  background-image: url(../svg/arrow_double_grey.svg);
-  background-position: center center; }
+.pager-large .last a:before {
+  transform: translateY(-50%) rotate(-45deg);
+  right: 9px; }
 
-/* line 4542, ../sass/css.scss */
-.pager-large .last a {
-  background-image: url(../svg/arrow_double_grey.svg);
-  background-position: center center;
-  transform: rotate(180deg); }
+.pager-large .last a:after {
+  transform: translateY(-50%) rotate(-45deg);
+  right: 15px; }
 
 /* line 4547, ../sass/css.scss */
 .pager-large li.prev > a:hover,
-.pager-large li.next > a:hover {
-  background-color: #d02a2c;
-  border-color: #d02a2c !important; }
-
-/* line 4552, ../sass/css.scss */
-.pager-large li.prev > a:hover:before,
-.pager-large li.next > a:hover:before {
-  border-color: #fff; }
-
-/* line 4556, ../sass/css.scss */
+.pager-large li.next > a:hover,
 .pager-large li.first > a:hover,
 .pager-large li.last > a:hover {
   background-color: #d02a2c;
-  border-color: #d02a2c !important; }
-
-/* line 4561, ../sass/css.scss */
-.pager-large.-digital a {
-  border-color: transparent;
-  color: #d02a2e;
-  font-size: 12px;
-  font-family: 'PT Sans';
-  text-decoration: underline; }
-
-/* line 4568, ../sass/css.scss */
-.pager-large.-digital a:hover {
-  background-color: transparent;
-  border-color: transparent; }
-
-/* line 4572, ../sass/css.scss */
-.pager-large.-digital a.active {
-  text-decoration: none;
-  color: #000;
-  background-color: transparent; }
-
-/* line 4577, ../sass/css.scss */
-.pager-large.-digital-short {
-  color: #000000;
-  font-size: 14px;
-  font-weight: 400; }
+  border-color: #d02a2c; }
+  .pager-large li.prev > a:hover:before, .pager-large li.prev > a:hover:after,
+  .pager-large li.next > a:hover:before,
+  .pager-large li.next > a:hover:after,
+  .pager-large li.first > a:hover:before,
+  .pager-large li.first > a:hover:after,
+  .pager-large li.last > a:hover:before,
+  .pager-large li.last > a:hover:after {
+    border-color: #fff; }
 
 /* line 4582, ../sass/css.scss */
 .search {
@@ -23010,9 +22971,6 @@ nav.menu .close {
   .pager-large li {
     margin-left: 7px;
     margin-right: 7px; }
-  /* line 18898, ../sass/css.scss */
-  .pager-large a {
-    height: 27px; }
   /* line 18900, ../sass/css.scss */
   .tabs__content .pager-large a {
     height: 11px; }
@@ -23021,8 +22979,7 @@ nav.menu .close {
     height: 32px; }
   /* line 18904, ../sass/css.scss */
   .pager-large.-digital a {
-    font-size: 1.5em;
-    line-height: 32px; }
+    font-size: 1.5em; }
   /* line 18907, ../sass/css.scss */
   .podpiska {
     min-height: 0;
@@ -25419,4 +25376,44 @@ textarea.input {
 .notifyjs-bootstrap-success:before {
   background-color: #F2F2F2 !important; }
 
-/*# sourceMappingURL=styles.css.map */
+.promo-item-card__container {
+  display: flex;
+  padding: 20px;
+  border: 1px solid #ebebeb;
+  transition: background-color .25s ease-in-out; }
+  .promo-item-card__container:hover {
+    background-color: #f8f8f8; }
+
+.promo-item-card__image {
+  flex: 0 0 490px;
+  position: relative;
+  display: block;
+  transition: opacity .25s ease-in-out; }
+  .promo-item-card__image::before {
+    content: '';
+    display: block;
+    padding-top: 41%; }
+  .promo-item-card__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -o-object-fit: contain;
+       object-fit: contain; }
+  .promo-item-card__image:hover {
+    opacity: 0.8; }
+
+.promo-item-card__title {
+  margin-top: 0; }
+
+.promo-item-card__content {
+  flex: 1 1 100%;
+  padding-left: 40px; }
+
+@media screen and (max-width: 1023px) {
+  .promo-item-card__container {
+    display: block; }
+  .promo-item-card__content {
+    padding: 30px 0 0 0; } }

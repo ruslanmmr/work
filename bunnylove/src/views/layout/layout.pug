@@ -1,5 +1,5 @@
 -var href = 'https://ruslanmmr.github.io/work/bunnylove/build'
-//-var href = 'http://localhost:9001'
+//-var href = 'http://localhost:9000'
 
 block variables
 
@@ -939,26 +939,6 @@ html
     
     <script src="/static/js/mobile_cart_rel_products_carousel.js"></script>
     <script async="" src="/static/js/adaptive_scripts.js"></script>
-
-    script.
-      $(document).ready(function () {
-        $(".fancybox").fancybox({
-          afterShow: function () {
-            if ('ontouchstart' in document.documentElement) {
-              $('.fancybox-nav').css('display', 'none');
-              $('.fancybox-wrap').swipe({
-                swipe: function (event, direction) {
-                  if (direction === 'left' || direction === 'up') {
-                    $.fancybox.prev(direction);
-                  } else {
-                    $.fancybox.next(direction);
-                  }
-                }
-              });
-            }
-          }
-        });
-      });
 
     <script src="/static/NEW/js/main.js"></script>
 

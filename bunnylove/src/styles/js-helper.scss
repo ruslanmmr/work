@@ -1,13 +1,19 @@
-$trs1: .2s ease-out;
+//vars
+$color-accent: #353535 !important;
+$color-active: #ca2323 !important;
+$color-hover: #000 !important;
+$trs: .25s ease-in-out !important;
 
-
-.js-helper-module {
+.helper {
   position: fixed;
   left: 0;
   top: 50%;
   transform: translate(-100%, -50%);
-  z-index: 3000;
-  transition: transform $trs1;
+  z-index: 1000;
+  transition: transform $trs;
+  width: 100%;
+  max-width: 280px;
+  color: #000;
   &__trigger {
     display: block;
     position: absolute;
@@ -17,17 +23,22 @@ $trs1: .2s ease-out;
     border-radius: 0 2px 2px 0;
     border-width: 1px 1px 1px 0;
     border-style: solid;
-    border-color: #D9D9DE;
+    border-color: #D9D9DE !important;
     background-color: #fff;
     box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.05);
     display: flex;
     z-index: 2;
+    color: $color-accent;
+    outline: none;
     .icon {
       margin: auto;
-      width: 15px;
-      height: 15px;
-      fill: #ED1C24;
-      transition: transform $trs1, fill $trs1;
+      width: 18px;
+      height: 18px;
+      color: inherit;
+      transition: transform $trs;
+    }
+    &:hover {
+      color: $color-active;
     }
   }
   &__container {
@@ -36,7 +47,7 @@ $trs1: .2s ease-out;
     padding: 20px 15px;
     background-color: #fff;
     box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.05);
-    width: 220px;
+    width: 100%;
     border-radius: 0 0 2px 0;
     border-width: 1px 1px 1px 0;
     border-style: solid;
@@ -47,10 +58,10 @@ $trs1: .2s ease-out;
       margin-bottom: 15px;
     }
     &-title {
-      font-size: 0.875rem;
+      font-size: 14px;
       font-weight: 500;
       display: block;
-      margin-bottom: 7px;
+      margin: 0 0 10px 0;
     }
     &-content {
       margin: 0 -5px -5px 0;
@@ -59,28 +70,30 @@ $trs1: .2s ease-out;
     }
     &-button {
       margin: 0 5px 5px 0;
-      font-size: 0.625rem;
+      font-size: 10px;
+      font-weight: 500;
       text-align: center;
-      background-color: #ED1C24;
-      color: #fff;
-      transition: background-color $trs1;
-      line-height: 25px;
+      background-color: $color-accent;
+      color: #fff !important;
+      transition: background-color $trs;
+      line-height: 32px;
       padding: 0 10px;
       border-radius: 2px;
       text-decoration: none;
+      border: none;
+      outline: none;
       &:hover {
-        background-color: #CB0008;
-        color: #fff;
+        background-color: $color-hover;
       }
-      &.disabled {
-        background-color: #acacac;
+      &.active {
         pointer-events: none;
+        background-color: $color-active;
       }
     }
   }
   &.active {
     transform: translate(0, -50%);
-    .js-helper-module__trigger {
+    .helper__trigger {
       .icon {
         transform: rotate(180deg);
       }

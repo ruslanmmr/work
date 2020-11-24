@@ -9,3 +9,14 @@ mixin news-item(image, classes, title, text)
         h2.news-item-card__title=title
         if text!==''
           p.news-item-card__text=text
+
+mixin promo-item(image, title)
+  .promo-item-card.col-12.grid__block
+    .promo-item-card__container
+      a(href="#").promo-item-card__image
+        img(src=image, alt="image")
+      .promo-item-card__content
+        h3.promo-item-card__title
+          a(href="#")=title
+        p.promo-item-card__text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis quibusdam ab fugiat a dolor! Unde animi dolorem porro voluptatibus ratione!
+        span.promo-item-card__date Действует до: 01.04.2021
