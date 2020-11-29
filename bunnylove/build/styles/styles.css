@@ -17848,24 +17848,42 @@ ol:not([class]) li:not([class]):before {
   text-align: center;
   height: auto;
   display: flex !important;
-  flex-direction: column;
-  justify-content: space-between; }
+  flex-direction: column; }
 
 /* line 14750, ../sass/css.scss */
 .new-weekly__slider {
-  padding: 0 45px 25px 45px; }
+  padding: 0 55px 25px 55px; }
 
 /* line 14753, ../sass/css.scss */
 .new-weekly__slider .slick-track {
   display: flex; }
 
 /* line 14756, ../sass/css.scss */
+.new-weekItem__shell {
+  display: flex;
+  flex-direction: column; }
+
 .new-weekItem__left {
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
   overflow: hidden;
-  margin: 0 auto; }
+  margin: 0 auto 20px auto; }
+
+.new-weekItem__priceBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.new-weekItem__price {
+  font-weight: 700;
+  font-size: 24px; }
+  .new-weekItem__price:not(:last-child) {
+    margin-right: 15px; }
+
+.new-weekItem__price-type-old {
+  text-decoration: line-through;
+  font-size: 18px; }
 
 /* line 14763, ../sass/css.scss */
 .new-weekly__slider .slick-arrow {
@@ -17876,6 +17894,19 @@ ol:not([class]) li:not([class]):before {
   left: 10px;
   bottom: 97.5px;
   z-index: 1; }
+
+@media (min-width: 1024px) {
+  .new-weekItem__shell {
+    flex-direction: row; }
+  .new-weekItem__left {
+    flex: 0 0 200px;
+    height: 200px;
+    margin: 0; }
+  .new-weekItem__right {
+    flex: 1 1 100%;
+    padding-left: 30px; }
+  .new-weekItem__title {
+    margin-bottom: 30px; } }
 
 /* line 14772, ../sass/css.scss */
 .new-weekly__slider .slick-arrow:before {
@@ -19964,9 +19995,6 @@ div[data-move=dropdownScroll] .mCSB_inside > .mCSB_container {
     margin-top: 0; } }
 
 @media (min-width: 576px) {
-  /* line 16524, ../sass/css.scss */
-  .new-weekItem__title {
-    margin: 0 auto 20px; }
   /* line 16526, ../sass/css.scss */
   .new-content-type-halve {
     display: flex; }
@@ -20225,10 +20253,6 @@ div[data-move=dropdownScroll] .mCSB_inside > .mCSB_container {
   .new-weekItem__shell {
     display: flex;
     align-items: flex-start; }
-  /* line 16725, ../sass/css.scss */
-  .new-weekItem__left {
-    height: 260px;
-    width: 260px; }
   /* line 16728, ../sass/css.scss */
   .new-advert__link {
     height: 100%; }
@@ -21246,10 +21270,6 @@ div[data-move=dropdownScroll] .mCSB_inside > .mCSB_container {
   /* line 17516, ../sass/css.scss */
   .new-weekly__slider {
     padding: 0 80px 30px 80px; }
-  /* line 17518, ../sass/css.scss */
-  .new-weekItem__left {
-    width: 320px;
-    height: 320px; }
   /* line 17521, ../sass/css.scss */
   .new-weekItem__left img {
     display: block;

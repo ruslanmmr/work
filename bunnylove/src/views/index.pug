@@ -298,24 +298,47 @@ block content
       section.new-weekly.new-weekly-type-standart.new-weekly-theme-dark
         h2.new-weekly__title Товары недели
         .new-slider.new-weekly__slider(data-action='weeklySlider')
-          //Заменить title на h4
           //slide
-          a.new-weekItem.new-slider__weekItem(href='/catalog/product/dildo-comet-pearl-biryuzovyij-8070-05/')
-            h4.new-weekItem__title Фаллоимитатор Comet Pearl
+          .new-weekItem.new-slider__weekItem
+            h4.new-weekItem__title 
+              a(href="#") Фаллоимитатор Comet Pearl
             .new-weekItem__shell
-              .new-weekItem__left
-                img.new-weekItem__img(src='/media/cache/8a/01/8a010e2b6d68033dba0e2e822b407abc.jpg', alt='Фаллоимитатор Comet Pearl')
+              a(href="#").new-weekItem__left
+                img.new-weekItem__img(src='/media/cache/8a/01/8a010e2b6d68033dba0e2e822b407abc.jpg' alt='Фаллоимитатор Comet Pearl')
+              .new-weekItem__right
+                p.new-weekItem__priceBlock
+                  span.new-weekItem__price.new-weekItem__price-type-old
+                    | 5 690
+                    span.new-weekItem__currency ₽
+                  span.new-weekItem__price
+                    | 2 845
+                    span.new-weekItem__currency ₽
+                p.new-weekItem__text
+                  | Нереалистичный фаллоимитатор эргономично изогнутой формы для стимуляции точки G, рабочая длина 13 см
           //slide
-          a.new-weekItem.new-slider__weekItem(href='/catalog/product/11131--admini-trigger-vibrostimulyator--11131/')
-            h4.new-weekItem__title Вибратор Mini Trigger
+          .new-weekItem.new-slider__weekItem
+            h4.new-weekItem__title
+              a(href="#") Вибратор Mini Trigger
             .new-weekItem__shell
-              .new-weekItem__left
-                img.new-weekItem__img(src='/media/cache/fe/42/fe4254bf69647d49bf7566e1eee1dc73.jpg', alt='Вибратор Mini Trigger')
-      
+              a(href="#").new-weekItem__left
+                img.new-weekItem__img(src='/media/cache/fe/42/fe4254bf69647d49bf7566e1eee1dc73.jpg' alt='Вибратор Mini Trigger')
+              .new-weekItem__right
+                p.new-weekItem__priceBlock
+                  span.new-weekItem__price.new-weekItem__price-type-old
+                    | 8 940
+                    span.new-weekItem__currency ₽
+                  span.new-weekItem__price
+                    | 6 258
+                    span.new-weekItem__currency ₽
+                p.new-weekItem__text
+                  | Водонепроницаемый вибратор с рельефным изогнутым стволом и клиторальым стимулятором, рабочая длина-9 см, длина стимулятора-5,5 см
           
       section.new-content__advert.new-advert
         picture.new-advert__img
           img.new-advert__img(src='/media/frontpage_bnrs/flower-image.jpg')
+
+    
+    
     section.new-recommend.new-recommend-type-desktop
       h2.new-recommend__title Рекомендуем
       .new-recommend__shell
