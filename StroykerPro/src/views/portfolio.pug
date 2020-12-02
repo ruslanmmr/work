@@ -29,7 +29,7 @@ block content
           a(style='border-color: #46BFFF' href='?project_type=7')
             | Строитель
       //Новый код старт
-      .row
+      .row.pagination-target-container
         mixin block(image, flag1, flag2)
           .portfolio-work-block.col-xs-12  
             a(href="#").portfolio-work-block__container(style=`background-image:url('${href}${image}')`)
@@ -56,7 +56,9 @@ block content
         +block('/img/Frame 14.jpg', true, true)
         +block('/img/Frame 14.jpg', true, false)
       //Новый код конец
-  
+      .show-more
+        a.btn.ajax-show-more(href='javascript;' data-pager-next='2' data-pager-num-pages='2') Показать еще
+
   
   
   
