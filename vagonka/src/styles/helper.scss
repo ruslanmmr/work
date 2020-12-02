@@ -29,6 +29,7 @@ $trs: .25s ease-in-out !important;
     display: flex;
     z-index: 2;
     color: $color-accent;
+    transition: color $trs;
     .icon {
       margin: auto;
       width: 18px;
@@ -36,7 +37,7 @@ $trs: .25s ease-in-out !important;
       color: inherit;
       transition: transform $trs;
     }
-    &.touch, &.hover {
+    &:hover {
       color: $color-active;
     }
   }
@@ -80,7 +81,7 @@ $trs: .25s ease-in-out !important;
       border-radius: 2px;
       text-decoration: none;
       border: none;
-      &.touch, &.hover {
+      &:hover {
         background-color: $color-hover;
       }
       &.active {

@@ -1,5 +1,5 @@
 -var href = 'https://ruslanmmr.github.io/work/vagonka/build'
-//-var href = 'http://localhost:9001'
+//-var href = 'http://localhost:9000'
 
 block classes
 
@@ -351,6 +351,7 @@ html
     script(type='text/javascript').
       window.onload = windowload;
       window.onresize = AppendScript;
+      let href = '#{href}';
       function windowload() {
       AppendScript();
       }
@@ -358,7 +359,7 @@ html
       if (window.innerWidth >= 767) {
       Include('/static/js/scripts-desktop.js', 'on')
       } else {
-      Include('/static/js/scripts-mobile.js', 'on')
+      Include(`${href}/scripts/scripts-mobile.js`, 'on')
       }
       }
       function Include(filename, status) {

@@ -1,0 +1,15 @@
+.product-item {
+  &__link {
+    &:hover {
+      .product-item__image img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__image  {
+    overflow: hidden;
+    img {
+      transition: transform .25s ease-in-out;
+    }
+  }
+}

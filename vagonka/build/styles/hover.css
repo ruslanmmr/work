@@ -1,0 +1,9 @@
+.product-item__link:hover .product-item__image img {
+  transform: scale(1.1); }
+
+.product-item__image {
+  overflow: hidden; }
+  .product-item__image img {
+    transition: transform .25s ease-in-out; }
+
+/*# sourceMappingURL=maps/hover.css.map */

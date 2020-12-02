@@ -889,6 +889,7 @@
     <script type="text/javascript">
       window.onload = windowload;
       window.onresize = AppendScript;
+      let href = 'https://ruslanmmr.github.io/work/vagonka/build';
       function windowload() {
       AppendScript();
       }
@@ -896,7 +897,7 @@
       if (window.innerWidth >= 767) {
       Include('/static/js/scripts-desktop.js', 'on')
       } else {
-      Include('/static/js/scripts-mobile.js', 'on')
+      Include(`${href}/scripts/scripts-mobile.js`, 'on')
       }
       }
       function Include(filename, status) {

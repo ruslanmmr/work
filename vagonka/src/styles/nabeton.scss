@@ -1,0 +1,14 @@
+.product-item {
+  &__link {
+    &:hover {
+      .product-item__image img {
+        transform: scale(1.1) translateY(-5%);
+      }
+    }
+  }
+  &__image  {
+    img {
+      transition: transform .25s ease-in-out;
+    }
+  }
+}
