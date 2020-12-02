@@ -199,6 +199,9 @@
     .works-box .btn.ajax-show-more {
       margin-top: 30px; } }
 
+.tab-list {
+  height: auto; }
+
 .section {
   margin-bottom: 80px; }
   .section__title {

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/static/css/media.css"/>
     <link rel="stylesheet" href="/static/css/custom.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&amp;family=Russo+One&amp;display=swap&amp;family=Montserrat:wght@800&amp;display=swap" rel="stylesheet"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <!--script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js')-->
     <link rel="stylesheet" href="https://ruslanmmr.github.io/work/StroykerPro/build/styles/new.css"/>
     <!--new-->
     <meta property="og:title" content="STROYKER.PRO"/>
@@ -682,8 +682,8 @@
     <div class="popup popup-tnx">
       <div class="ico"><img src="/static/img/tnx.svg" alt=""/></div>
       <div class="title">Сообщение отправлено!</div><a class="btn btn-close" href="">ОК</a>
+      <script src="/static/libs/jquery/jquery-1.11.2.min.js"></script>
     </div>
-    <script src="/static/libs/jquery/jquery-1.11.2.min.js"></script>
     <script src="/static/js/ajax_setup.js"></script>
     <script src="/static/js/owl.carousel.js"></script>
     <script src="/static/js/jquery.mCustomScrollbar.min.js"></script>
@@ -692,11 +692,22 @@
     <script src="/static/js/jcf.select.js"></script>
     <script src="/static/js/jcf.file.js"></script>
     <script src="/static/cart/js/cart.js"></script>
-    <script src="/static/js/common.js"></script>
+    <script src="/static/js/new.js"></script>
+    <!--script(src='/static/js/common.js')-->
+    <script src="https://ruslanmmr.github.io/work/StroykerPro/build/scripts/common.js"></script>
     <script src="/static/js/custom.js"></script>
     <script src="/static/catalog/js/catalog.js"></script>
-    <script type="text/javascript" src="/static/crm/js/crm_forms.js"></script>
-    <script type="text/javascript" src="/static/subscription/js/subscription.js"></script>
+    <script type="text/javascript">
+      // This url dictionary is used in js scripts instead of direct links.
+      const URLS = {
+      static: "/static/",
+      cart: "/cart/",
+      register: "/account/register/",
+      }
+      
+    </script>
+    <script src="/static/crm/js/crm_forms.js"></script>
+    <script src="/static/subscription/js/subscription.js"></script>
     <!--newjs-->
     <script src="https://ruslanmmr.github.io/work/StroykerPro/build/scripts/new.js"></script>
     <!--helper-->
@@ -714,7 +725,7 @@
       <div class="helper__container">
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Страницы:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="https://ruslanmmr.github.io/work/StroykerPro/build/index.html">Главная</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/StroykerPro/build/portfolio.html">Портфолио</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="https://ruslanmmr.github.io/work/StroykerPro/build/index.html">Главная</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/StroykerPro/build/portfolio.html">Портфолио</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/StroykerPro/build/project.html">Проект</a></div>
         </div>
       </div>
     </div>

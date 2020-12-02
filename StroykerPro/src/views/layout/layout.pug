@@ -19,7 +19,7 @@ html(lang='ru')
     link(rel='stylesheet' href='/static/css/media.css')
     link(rel='stylesheet' href='/static/css/custom.css')
     link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&family=Russo+One&display=swap&family=Montserrat:wght@800&display=swap' rel='stylesheet')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js')
+    //script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js')
     link(rel='stylesheet' href=href+'/styles/new.css')
 
     //new
@@ -166,7 +166,10 @@ html(lang='ru')
       .title Сообщение отправлено!
       a.btn.btn-close(href='') ОК
 
-    script(src='/static/libs/jquery/jquery-1.11.2.min.js')
+      script(src='/static/libs/jquery/jquery-1.11.2.min.js')
+    
+    
+    
     script(src='/static/js/ajax_setup.js')
     script(src='/static/js/owl.carousel.js')
     script(src='/static/js/jquery.mCustomScrollbar.min.js')
@@ -175,11 +178,22 @@ html(lang='ru')
     script(src='/static/js/jcf.select.js')
     script(src='/static/js/jcf.file.js')
     script(src='/static/cart/js/cart.js')
-    script(src='/static/js/common.js')
+    script(src='/static/js/new.js')
+    //script(src='/static/js/common.js')
+    script(src=href+'/scripts/common.js')
     script(src='/static/js/custom.js')
     script(src='/static/catalog/js/catalog.js')
-    script(type='text/javascript' src='/static/crm/js/crm_forms.js')
-    script(type='text/javascript' src='/static/subscription/js/subscription.js')
+    script(type='text/javascript').
+      // This url dictionary is used in js scripts instead of direct links.
+      const URLS = {
+      static: "/static/",
+      cart: "/cart/",
+      register: "/account/register/",
+      }
+    
+    script(src='/static/crm/js/crm_forms.js')
+    script(src='/static/subscription/js/subscription.js')
+
     //newjs
     script(src=href+'/scripts/new.js')
 
