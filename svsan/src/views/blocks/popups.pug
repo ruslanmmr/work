@@ -1,0 +1,28 @@
+.popup#form-popup
+  .popup-block
+    .popup-block__container
+      button(data-popup-close aria-label='close-popup').popup-block__close-button
+      h2.popup__title Заказать обратный звонок
+      form(action='/contacts/' method='post')
+        input(type='hidden' name='csrfmiddlewaretoken' value='tFa9lPmnXfyNa5eOfif2b4HAiBpU8aoy')
+        .form-item
+          input#id_name(maxlength='140' name='name' placeholder='Ваше имя' required='required' type='text')
+        .form-item
+          input#id_phone(maxlength='254' name='email' placeholder='Ваш номер телефона' required='required' type='text')
+        .form-item
+          #id_captcha.g-recaptcha(data-sitekey='6LfraUkUAAAAAH7PvYzCVa2ln46VeJ-ZWqtA35Ld' data-size='normal')
+            div(style='width: 304px; height: 78px;')
+              div
+                iframe(src='https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfraUkUAAAAAH7PvYzCVa2ln46VeJ-ZWqtA35Ld&co=aHR0cHM6Ly9zdnNhbi5ydTo0NDM.&hl=ru&v=UFwvoDBMjc8LiYc1DKXiAomK&size=normal&cb=bpaza81kpqm8' width='304' height='78' role='presentation' name='a-quzz1tw5jr8c' frameborder='0' scrolling='no' sandbox='allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox')
+              textarea#g-recaptcha-response.g-recaptcha-response(name='g-recaptcha-response' style='width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;')
+            iframe(style='display: none;')
+        input.btn(type='submit' value='Отправить')
+
+.popup.popup-secces#form-succes
+  .popup-block
+    .popup-block__container
+      button(data-popup-close aria-label='close-popup').popup-block__close-button
+      h2.popup__title.popup-secces__title Ваша заявка успешно отправлена
+
+
+      
