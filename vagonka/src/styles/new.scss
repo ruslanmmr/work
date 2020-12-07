@@ -266,7 +266,7 @@ header {
     text-decoration: none;
     height: 100%;
     position: relative;
-    &:after {
+    /* &:after {
       content: '';
       display: block;
       position: absolute;
@@ -278,7 +278,7 @@ header {
       opacity: 0.6;
       transition: background-color $trs1, opacity $trs1;
       z-index: 2;
-    }
+    } */
     .image {
       position: absolute;
       top: 0;
@@ -287,15 +287,15 @@ header {
       height: 100%;
       z-index: 1;
       img {
-        filter: grayscale(100%);
+        //filter: grayscale(100%);
         transition: filter $trs1;
       }
     }
     &:hover {
-      &:after {
+      /* &:after {
         background-color: var(--preview-bg-hover-color, #2363D1);
         opacity: 0.8;
-      }
+      } */
       .image img {
         filter: grayscale(0);
       }
