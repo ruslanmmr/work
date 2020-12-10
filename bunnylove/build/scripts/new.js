@@ -4,7 +4,6 @@ $(document).ready(function () {
   mobileSearch();
   header();
   slider.init();
-  console.log('ddd');
 });
 var brakepoints = {
   xs: 576,
@@ -155,3 +154,4 @@ window.slider = {
     });
   }
 };
+//# sourceMappingURL=maps/new.js.map

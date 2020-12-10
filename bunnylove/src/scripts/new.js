@@ -2,7 +2,6 @@ $(document).ready(function(){
   mobileSearch();
   header();
   slider.init();
-  console.log('ddd');
 })
 
 const brakepoints = {

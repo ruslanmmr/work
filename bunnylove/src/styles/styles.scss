@@ -29715,7 +29715,7 @@ header.new-header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 1.125rem;
+  font-size: 1rem;
   transition: color 0.25s ease-out, border-color 0.25s ease-out, background-color 0.25s ease-out;
   height: 40px;
   line-height: 38px;
@@ -29799,6 +29799,10 @@ header.new-header {
 /* line 19687, ../sass/css.scss */
 .button_rounded {
   border-radius: 40px;
+}
+
+.button_bordered {
+  border-radius: 4px;
 }
 
 /* line 19690, ../sass/css.scss */
@@ -31460,4 +31464,6 @@ textarea.input {
   background-color: #F2F2F2 !important;
 }
 
-@import './components/new'
+@import './components/new';
+@import './components/noty';
+@import './components/metroui';
