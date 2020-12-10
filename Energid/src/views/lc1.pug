@@ -1,0 +1,56 @@
+extends layout/layout
+block content
+  .lc-wrapper
+    h1.lc-wrapper__title.container Личный кабинет
+      
+    .lc-start-head.container
+      .lc-start-head__main
+        a(href="/").lc-start-head__user
+          img(src='/static/images/user.svg' alt='icon')
+          span Лужецкий<br> Дмитрий Александрович
+        ul.lc-start-head__info-list
+          li 
+            strong Компания: 
+            | Fancymedia
+          li
+            strong Объём потребления в месяц: 
+            | 300,00 кВт•ч
+      .lc-start-head__data
+        ul.lc-start-head__data-list
+          li.lc-start-head__mail-label dmitry@fancymedia.ru
+          li +7 927 608 02 80
+        a(href="/").lc-text-link
+          svg.icon(viewBox='0 0 24 28' fill='none' stroke='currentColor')
+            path(d='M23 12.3016V27.0006H1V4.38672H13.1579' stroke='#5AC37D' stroke-width='2')
+            path(fill-rule='evenodd' clip-rule='evenodd' d='M13.9112 18.9117L9.62695 22.1342L10.3217 16.933L16.6322 6.19141L20.2217 8.22666L13.9112 18.9117Z' stroke-width='2')
+            path(fill-rule='evenodd' clip-rule='evenodd' d='M21.9589 1.27639V1.27639C22.9431 1.84174 23.2905 3.0855 22.7115 4.04659L21.4957 6.13837V6.13837L17.9062 4.10312V4.10312L19.1799 1.95481C19.701 1.05025 20.9747 0.711045 21.9589 1.27639V1.27639Z' stroke-width='2')
+          span Изменить
+
+    .lc-start-buttons
+      a(href=href+"/lc2.html").lc-category-big-btn
+        img(src=href+"/img/ico-message-white.svg", alt="image").lc-category-big-btn__icon
+        h2.lc-category-big-btn__title Главная
+        img(src=href+"/img/icon-right-arrow-white.svg", alt="arrow").lc-category-big-btn__arrow
+
+      a(href=href+"/lc2.html").lc-category-big-btn
+        h2.lc-category-big-btn__title Показания
+        img(src=href+"/img/ico-shovel-white.svg", alt="image").lc-category-big-btn__icon
+        img(src=href+"/img/icon-right-arrow-white.svg", alt="arrow").lc-category-big-btn__arrow
+
+      a(href=href+"/lc2.html").lc-category-big-btn
+        img(src=href+"/img/ico-message-white.svg", alt="image").lc-category-big-btn__icon
+        h2.lc-category-big-btn__title История
+        img(src=href+"/img/icon-right-arrow-white.svg", alt="arrow").lc-category-big-btn__arrow
+
+      a(href=href+"/lc2.html").lc-category-big-btn
+        img(src=href+"/img/ico-message-white.svg", alt="image").lc-category-big-btn__icon
+        h2.lc-category-big-btn__title Сообщения
+        img(src=href+"/img/icon-right-arrow-white.svg", alt="arrow").lc-category-big-btn__arrow
+        
+      a(href=href+"/lc2.html").lc-category-big-btn
+        img(src=href+"/img/ico-profile-white.svg", alt="image").lc-category-big-btn__icon
+        h2.lc-category-big-btn__title Профиль
+        img(src=href+"/img/icon-right-arrow-white.svg", alt="arrow").lc-category-big-btn__arrow
+
+      
+

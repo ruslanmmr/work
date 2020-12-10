@@ -1,8 +1,8 @@
 include ../blocks/variables
 block variables
 
-//-var href = 'https://ruslanmmr.github.io/work/Energid/build'
--var href = 'http://localhost:9000'
+-var href = 'https://ruslanmmr.github.io/work/Energid/build'
+//-var href = 'http://localhost:9000'
 
 doctype html
 html(lang='ru-RU')
@@ -15,8 +15,6 @@ html(lang='ru-RU')
     title Энергид — комплексный сервис для оптимизации затрат на энергоснабжение
     meta(name='keywords' content='энергид, энергоснабжение')
     meta(name='description' content='')
-    script(type='text/javascript' nonce='809db3e0d4c94c039f96fcccc55' src='//local.adguard.org?ts=1604219912732&type=content-script&dmn=energuide.ru&app=com.google.Chrome&css=1&js=1&gcss=1&rel=1&rji=1&sbe=0')
-    script(type='text/javascript' nonce='809db3e0d4c94c039f96fcccc55' src='//local.adguard.org?ts=1604219912732&name=AdGuard%20Extra&type=user-script')
     link(rel='apple-touch-icon' href='/static/apple-touch-icon.png')
     link(rel='icon' href='/static/favicon.ico')
     //font
@@ -25,7 +23,6 @@ html(lang='ru-RU')
     link(rel='stylesheet' href=href+'/styles/new.css' type='text/css')
 
   body
-
     // мобильное меню пользователя - начало
     .user_mobile_menu__wrapper
       span.user_mobile_menu__corner  
@@ -63,7 +60,9 @@ html(lang='ru-RU')
                         | English (en)
                   a.header-link(href='/users/login/') Войти
                   a.header-user.active(href='/users/login/')
-                    img(src='/static/images/icons/user_only.svg' alt='')
+                    svg(xmlns='http://www.w3.org/2000/svg' width='14' height='13' viewBox='0 0 14 13' fill='none' stroke='currentColor')
+                      path(fill-rule='evenodd' clip-rule='evenodd' d='M4.05273 4.05284C4.05273 2.42536 5.37226 1.10547 7.00034 1.10547C8.62794 1.10547 9.94747 2.42536 9.94747 4.05284C9.94747 5.68032 8.62794 7.00021 7.00034 7.00021C5.37226 7.00021 4.05273 5.68032 4.05273 4.05284Z')
+                      path(d='M12.8949 12.8947C12.8949 9.63924 10.2557 7 7.00021 7C3.74472 7 1.10547 9.63924 1.10547 12.8947')
                 .header__contacts
                   a(href='tel:+73512143334') +7 (351) 214-33-34
                   a(href='mailto:info@esk-ne.ru') info@esk-ne.ru
@@ -82,12 +81,9 @@ html(lang='ru-RU')
                     a(href='/contacts/') Контакты
                 // end header__nav
                 a.header__overlay-close.close-mobile-menu(href='#0' title='Close Menu') Закрыть
-            // end header__nav-wrap
-            // header-content
-            // header
-            // end s-pageheader
-    
-    block content
+            
+    .site-index
+      block content
 
     .container
       .row.row-footer

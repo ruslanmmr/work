@@ -1,105 +1,101 @@
 extends layout/layout
 block content
-  .site-index
+  #banner.home-banner.carousel.slide.-mb-6(data-ride='carousel' data-interval="false")
+    ol.carousel-indicators
+      li.active(data-target='#banner' data-slide-to='0')
+      li(data-target='#banner' data-slide-to='1')
+      li(data-target='#banner' data-slide-to='2')
+    .carousel-inner
+      mixin slide(active, image)
+        //slide
+        .carousel-item.home-banner__slide(class=active?'active':'')
+          a(href="#").home-banner__slide-bg(style=`background-image: url(${image});`)
+          .home-banner__slide-container.container
+            .home-banner__slide-content
+              .home-banner__slide-top
+                img(src=href+'/img/new-logo.svg')
+                span Энергетическая<br> компания
+              .home-banner__slide-text
+                strong Не трачу время на текущие платежи,<br> 
+                | а занимаюсь развитием своего бизнеса!
 
-    #banner.home-banner.carousel.slide.-mb-6(data-ride='carousel' data-interval="false")
-      ol.carousel-indicators
-        li.active(data-target='#banner' data-slide-to='0')
-        li(data-target='#banner' data-slide-to='1')
-        li(data-target='#banner' data-slide-to='2')
-      .carousel-inner
-        mixin slide(active, image)
-          //slide
-          .carousel-item.home-banner__slide(class=active?'active':'')
-            a(href="#").home-banner__slide-bg(style=`background-image: url(${image});`)
-            .home-banner__slide-container.container
-              .home-banner__slide-content
-                .home-banner__slide-top
-                  img(src=href+'/img/new-logo.svg')
-                  span Энергетическая<br> компания
-                .home-banner__slide-text
-                  strong Не трачу время на текущие платежи,<br> 
-                  | а занимаюсь развитием своего бизнеса!
+      +slide(true, 'https://energuide.ru/static/images/img1.jpg')
+      +slide(false, 'https://energuide.ru/static/images/img2.jpg')
+      +slide(false, 'https://energuide.ru/static/images/img3.jpg')
 
-        +slide(true, 'https://energuide.ru/static/images/img1.jpg')
-        +slide(false, 'https://energuide.ru/static/images/img2.jpg')
-        +slide(false, 'https://energuide.ru/static/images/img3.jpg')
-
-      a.carousel-control-prev(href='#banner' role='button' data-slide='prev')
-        svg.home-banner__icon.home-banner__prev(fill='currentColor' viewBox='0 0 24 24')
-          path(d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z')
-        span.sr-only Previous
-      a.carousel-control-next(href='#banner' role='button' data-slide='next')
-        svg.home-banner__icon.home-banner__next(fill='currentColor' viewBox='0 0 24 24')
-          path(d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z')
-        span.sr-only Next
+    a.carousel-control-prev(href='#banner' role='button' data-slide='prev')
+      svg.home-banner__icon.home-banner__prev(fill='currentColor' viewBox='0 0 24 24')
+        path(d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z')
+      span.sr-only Previous
+    a.carousel-control-next(href='#banner' role='button' data-slide='next')
+      svg.home-banner__icon.home-banner__next(fill='currentColor' viewBox='0 0 24 24')
+        path(d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z')
+      span.sr-only Next
 
 
-    .container-fluid.-mb-6
-      .row.teaserList
-        .col-md-4.col-sm-6.teaserList__col
-          .teaserBlock
-            .teaserBlock__media
-              a(href='/calculators/')
-                img.teaserBlock__img(src='/static/images/img1.jpg' alt='')
-            .teaserBlock__content
-              h2.teaserBlock__title
-                a(href='/calculators/') Калькулятор
-              .teaserBlock__txt
-                | Сравнивайте цены на оптовом и розничном рынках электроэнергии от различных поставщиков
-              a.teaserBlock__btn.btn.btn-primary(href='/calculators/') Сократить расходы
-        .col-md-4.col-sm-6.teaserList__col
-          .teaserBlock
-            .teaserBlock__media
-              a(href='/analytics/')
-                img.teaserBlock__img(src='/static/images/img2.jpg' alt='')
-            .teaserBlock__content
-              h2.teaserBlock__title
-                a(href='/analytics/') Аналитика
-              .teaserBlock__txt
-                | Прогнозируйте расходы с точностью до 95%: цены оптового рынка, тарифы на передачу и сбытовые надбавки
-              a.teaserBlock__btn.btn.btn-primary(href='/analytics/') Сделать прогноз
-        .col-md-4.col-sm-6.teaserList__col
-          .teaserBlock
-            .teaserBlock__media
-              a(href='/power_supply/')
-                img.teaserBlock__img(src='/static/images/img3.jpg' alt='')
-            .teaserBlock__content
-              h2.teaserBlock__title
-                a(href='/power_supply/') Энергоснабжение
-              .teaserBlock__txt Заключите договор энергоснабжения с надежнымы энергосбытовыми компаниями
-              a.teaserBlock__btn.btn.btn-primary(href='/power_supply/') Отправить заявку
-    .blockLarge.blockLarge--green.-py-6
-      .container-fluid
-        .row
-          .col-md-10.offset-md-1
-            h1.blockLarge__title Выбирайте Зеленую энергию
-            .blockLarge__txt
-              | Наша задача – делать это так, чтобы мир был чище за счёт преобразований в энергосистемах, более эффективного использования ресурсов и применения интеллектуальных технологических решений. Мы призываем наших потребителей присоединяться к этим изменениям
-    .mainTop.mainTop--right(style=`background-image: url(/static/images/fortum.jpg);`)
-      .mainTop__decoration(style=`background-image: url(${href}/img/ffddfllld.png);`)
-      .mainTop__item.container-fluid
-        .mainTop__display.row
-          .col-xl-4.col-md-8.d-flex.align-items-center
-            .mainTop__content
-              h2.mainTop__title Получите уникальные условия на покупку «зеленой» энергии
-              a.mainTop__btn.btn.btn-primary(href='/green_energy/') Отправить заявку
-    .facts.-py-6
-      .container
-        .facts__row.row
-          .facts__col.col-lg-4.col-md-6
-            .facts__item
-              .facts__val 96%
-              .facts__desc Электроэнргии производится без выбросов СО2
-          .facts__col.col-lg-4.col-md-6
-            .facts__item
-              .facts__val 5,11 ГВт
-              .facts__desc
-                | должна составить суммарная мощность ветроэлектростанций и солнечных электростанциий в России к 2024 году
-          .facts__col.col-lg-4.col-md-6
-            .facts__item
-              .facts__val 14
-              .facts__desc
-                | ветроустановок установлено на первой в России ветроэлектростанци в Ульяновской области
-  // SEO - начало
-  // SEO - конец
+  .container-fluid.-mb-6
+    .row.teaserList
+      .col-md-4.col-sm-6.teaserList__col
+        .teaserBlock
+          .teaserBlock__media
+            a(href='/calculators/')
+              img.teaserBlock__img(src='/static/images/img1.jpg' alt='')
+          .teaserBlock__content
+            h2.teaserBlock__title
+              a(href='/calculators/') Калькулятор
+            .teaserBlock__txt
+              | Сравнивайте цены на оптовом и розничном рынках электроэнергии от различных поставщиков
+            a.teaserBlock__btn.btn.btn-primary(href='/calculators/') Сократить расходы
+      .col-md-4.col-sm-6.teaserList__col
+        .teaserBlock
+          .teaserBlock__media
+            a(href='/analytics/')
+              img.teaserBlock__img(src='/static/images/img2.jpg' alt='')
+          .teaserBlock__content
+            h2.teaserBlock__title
+              a(href='/analytics/') Аналитика
+            .teaserBlock__txt
+              | Прогнозируйте расходы с точностью до 95%: цены оптового рынка, тарифы на передачу и сбытовые надбавки
+            a.teaserBlock__btn.btn.btn-primary(href='/analytics/') Сделать прогноз
+      .col-md-4.col-sm-6.teaserList__col
+        .teaserBlock
+          .teaserBlock__media
+            a(href='/power_supply/')
+              img.teaserBlock__img(src='/static/images/img3.jpg' alt='')
+          .teaserBlock__content
+            h2.teaserBlock__title
+              a(href='/power_supply/') Энергоснабжение
+            .teaserBlock__txt Заключите договор энергоснабжения с надежнымы энергосбытовыми компаниями
+            a.teaserBlock__btn.btn.btn-primary(href='/power_supply/') Отправить заявку
+  .blockLarge.blockLarge--green.-py-6
+    .container-fluid
+      .row
+        .col-md-10.offset-md-1
+          h1.blockLarge__title Выбирайте Зеленую энергию
+          .blockLarge__txt
+            | Наша задача – делать это так, чтобы мир был чище за счёт преобразований в энергосистемах, более эффективного использования ресурсов и применения интеллектуальных технологических решений. Мы призываем наших потребителей присоединяться к этим изменениям
+  .mainTop.mainTop--right(style=`background-image: url(/static/images/fortum.jpg);`)
+    .mainTop__decoration(style=`background-image: url(${href}/img/ffddfllld.png);`)
+    .mainTop__item.container-fluid
+      .mainTop__display.row
+        .col-xl-4.col-md-8.d-flex.align-items-center
+          .mainTop__content
+            h2.mainTop__title Получите уникальные условия на покупку «зеленой» энергии
+            a.mainTop__btn.btn.btn-primary(href='/green_energy/') Отправить заявку
+  .facts.-py-6
+    .container
+      .facts__row.row
+        .facts__col.col-lg-4.col-md-6
+          .facts__item
+            .facts__val 96%
+            .facts__desc Электроэнргии производится без выбросов СО2
+        .facts__col.col-lg-4.col-md-6
+          .facts__item
+            .facts__val 5,11 ГВт
+            .facts__desc
+              | должна составить суммарная мощность ветроэлектростанций и солнечных электростанциий в России к 2024 году
+        .facts__col.col-lg-4.col-md-6
+          .facts__item
+            .facts__val 14
+            .facts__desc
+              | ветроустановок установлено на первой в России ветроэлектростанци в Ульяновской области

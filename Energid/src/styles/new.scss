@@ -1,8 +1,4 @@
-$color-accent: #61B87C;
-$color-accent-hover: #50a16a;
-$color-accent-2: #FAB216;
-$gradient: linear-gradient(90deg, #63B77D 0%, #F8B215 100%), #61B87C;
-$trs1: .2s ease-in-out;
+@import "./components/variables";
 
 .select2-container {
   box-sizing: border-box;
@@ -11676,7 +11672,8 @@ label.control-label {
   border-radius: 50%;
   font-size: 11px;
   color: #fff;
-  text-transform: uppercase
+  text-transform: uppercase;
+  transition: background-color $trs1, color $trs1;
 }
 
 .header-user:hover {
@@ -20734,3 +20731,4 @@ h1.mainTop__title {
 
 //new
 @import "./components/banner";
+@import "./components/lc";
