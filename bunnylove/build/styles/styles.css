@@ -20760,7 +20760,8 @@ div[data-move=dropdownScroll] .mCSB_inside > .mCSB_container {
     line-height: 36px;
     color: #000;
     max-width: 280px;
-    pointer-events: none; }
+    pointer-events: none;
+    font-family: inherit; }
   /* line 17131, ../sass/css.scss */
   .new-accordion__button-type-goods:before {
     content: none; }
