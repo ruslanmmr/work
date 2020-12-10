@@ -8,7 +8,6 @@ const Helper = {
     this.$trigger = this.$block.querySelector('.helper__trigger');
 
     this.set_active_page();
-    window.addEventListener('change', ()=>{this.set_active_page();});
 
     this.$trigger.addEventListener('click', ()=>{
       if(!this.state) {
@@ -25,15 +24,13 @@ const Helper = {
         page = last_value=='' ? 'index.html': last_value;
 
     let $links = this.$block.querySelectorAll('a');
-    
 
     $links.forEach(($this)=>{
       let href_values = $this.getAttribute('href').split('/'),
           href_page = href_values[href_values.length-1];
+          
       if(page==href_page) {
         $this.classList.add('active');
-      } else {
-        $this.classList.remove('active');
       }
     })
   },
@@ -46,4 +43,3 @@ const Helper = {
     this.$block.classList.remove('active');
   }
 }
-

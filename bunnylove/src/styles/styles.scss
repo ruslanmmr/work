@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import './components/variables';
 /*!
  * Fotorama 4.6.2 | http://fotorama.io/license/
  */
@@ -31468,3 +31469,4 @@ textarea.input {
 @import './components/new';
 @import './components/noty';
 @import './components/metroui';
+@import './components/tippy';

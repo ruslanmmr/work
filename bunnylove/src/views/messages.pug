@@ -16,13 +16,7 @@ block content
           | Центрироваться будет на сервере. На статике это не работает
 
       .row
-        .col-auto 
-          button.button.button_style-1.button_bordered(data-type="error" data-text='Всплывающее сообщение об ошибке') Ошибка
-        .col-auto 
-          button.button.button_style-1.button_bordered(data-type="success" data-text='Всплывающее успешное сообщение') Все ок
-        .col-auto 
-          button.button.button_style-1.button_bordered(data-type="alert" data-text='Всплывающее уведомление') Уведомление
-        .col-auto 
-          button.button.button_style-1.button_bordered(data-type="warning" data-text='Всплывающее предупреждение') Предупреждение
-        .col-auto 
-          button.button.button_style-1.button_bordered(data-type="info" data-text='Всплывающее сообщение c инфой') Информация
+        .col-sm-auto.col-12
+          button.button.button_style-1.button_bordered.mb-1(data-type="alert" data-text='Вы добавили в корзину товары из разных магазинов, время доставки может быть увеличено.') Уведомление ( тип1 )
+        .col-sm-auto.col-12
+          button.button.button_style-1.button_bordered(data-tippy-content='Вы добавили в корзину товары из разных магазинов, время доставки может быть увеличено.') Уведомление ( тип2 )

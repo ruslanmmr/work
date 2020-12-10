@@ -14,7 +14,7 @@ function notify() {
   document.addEventListener('click', function (event) {
     var $target = $(event.target);
 
-    if ($target.closest('.button').length) {
+    if ($target.closest('[data-text]').length) {
       //получили значения каким удобно способом
       var msg = $target.attr('data-text'),
           type = $target.attr('data-type'); //В type и text подставили нужные значения, показали сообщение
@@ -24,6 +24,21 @@ function notify() {
         text: msg
       }).show();
     }
-  });
+  }); //tooltip
+
+  var tooltips = {
+    el: '[data-tippy-content]',
+    init: function init() {
+      tippy(tooltips.el, {
+        duration: 300,
+        trigger: 'click',
+        placement: 'auto',
+        zIndex: 99,
+        offset: [0, 15],
+        maxWidth: 380
+      });
+    }
+  };
+  tooltips.init();
 }
 //# sourceMappingURL=maps/notifications.js.map
