@@ -1,8 +1,8 @@
 include ../blocks/variables
 block variables
 
--var href = 'https://ruslanmmr.github.io/work/Energid/build'
-//-var href = 'http://localhost:9000'
+//-var href = 'https://ruslanmmr.github.io/work/Energid/build'
+-var href = 'http://localhost:9000'
 
 doctype html
 html(lang='ru-RU')
@@ -17,25 +17,58 @@ html(lang='ru-RU')
     meta(name='description' content='')
     link(rel='apple-touch-icon' href='/static/apple-touch-icon.png')
     link(rel='icon' href='/static/favicon.ico')
-    //font
-    link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet")
+    //fonts
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap' rel='stylesheet')
     //NEW STYLES
     link(rel='stylesheet' href=href+'/styles/new.css' type='text/css')
+    block styles
 
   body
-    // мобильное меню пользователя - начало
-    .user_mobile_menu__wrapper
-      span.user_mobile_menu__corner  
+    .user_mobile_menu__wrapper.user_mobile_menu__wrapper__active
+      span.user_mobile_menu__corner
       .user_mobile_menu__container
         .row
+          .col-4.user_mobile_menu__profile__image
+            img(src='/static/images/user.svg' alt='')
+          .col-8.user_mobile_menu__profile__name
+            | Лужецкий Дмитрий Александрович
+          .col-12.user_mobile_menu__profile__description
+            | Fancymedia
+          .col-12.user_mobile_menu__action__wrapper
+            a.user_profile__sidebar__action.user_profile__sidebar__action__wide(href=href+"/lc2.html")
+              p
+                img(src=href+"/img/ico-message.svg", alt="image").icon
+                span Главная
+          .col-12.user_mobile_menu__action__wrapper
+            a.user_profile__sidebar__action.user_profile__sidebar__action__wide(href=href+"/lc3.html")
+              p
+                img(src=href+"/img/ico-shovel.svg", alt="image")
+                span Показания
+          .col-12.user_mobile_menu__action__wrapper
+            a.user_profile__sidebar__action.user_profile__sidebar__action__wide(href=href+"/lc4.html")
+              p
+                img(src=href+"/img/ico-message.svg", alt="image")
+                span История
+          .col-12.user_mobile_menu__action__wrapper
+            a.user_profile__sidebar__action.user_profile__sidebar__action__wide(href=href+"/lc5.html")
+              p
+                img(src=href+"/img/ico-message.svg", alt="image")
+                span Сообщения
+          .col-12.user_mobile_menu__action__wrapper
+            a.user_profile__sidebar__action.user_profile__sidebar__action__wide(href=href+"/lc6.html")
+              p
+                img(src=href+"/img/ico-profile.svg", alt="image")
+                span Профиль
           .col-12.user_mobile_menu__footer
-            a.user_profile__quit(href='/users/login/')
-              | Войти
+            a.user_profile__quit(href='/users/logout/')
+              | Выйти
               svg(width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg')
                 path(d='M10 18V21H21V1H10V4' stroke='#5AC37D' stroke-width='2')
                 path(d='M12 11H2' stroke='#5AC37D' stroke-width='2')
                 path(d='M6 6L2 11L6 16' stroke='#5AC37D' stroke-width='2')
-    // мобильное меню пользователя - конец
+
+
     .page
       .s-pageheader
         header.header
@@ -50,7 +83,7 @@ html(lang='ru-RU')
             nav.header__nav-wrap
               .container-fluid.header__pos
                 .header__right
-                  form#lang_select_form(action='/set_language/' method='post')
+                  //form#lang_select_form(action='/set_language/' method='post')
                     input(type='hidden' name='csrfmiddlewaretoken' value='sBLI67weeg7BonTY5OAdh6aabc6wcaUijCOCfCDiLYafiRPt6bvfO9pzpZjA6Voq')
                     input(name='next' type='hidden' value='/')
                     select#lang_select.selectpicker(data-width='130px' data-style='btn-lang' name='language' onchange="$('#lang_select_form').submit()")
@@ -58,11 +91,8 @@ html(lang='ru-RU')
                         | Русский (ru)
                       option(value='en')
                         | English (en)
-                  a.header-link(href='/users/login/') Войти
-                  a.header-user.active(href='/users/login/')
-                    svg(xmlns='http://www.w3.org/2000/svg' width='14' height='13' viewBox='0 0 14 13' fill='none' stroke='currentColor')
-                      path(fill-rule='evenodd' clip-rule='evenodd' d='M4.05273 4.05284C4.05273 2.42536 5.37226 1.10547 7.00034 1.10547C8.62794 1.10547 9.94747 2.42536 9.94747 4.05284C9.94747 5.68032 8.62794 7.00021 7.00034 7.00021C5.37226 7.00021 4.05273 5.68032 4.05273 4.05284Z')
-                      path(d='M12.8949 12.8947C12.8949 9.63924 10.2557 7 7.00021 7C3.74472 7 1.10547 9.63924 1.10547 12.8947')
+                  a.header-link(href='/users/login/') Выйти
+                  a.header-user(href=href+"/lc1.html") дл
                 .header__contacts
                   a(href='tel:+73512143334') +7 (351) 214-33-34
                   a(href='mailto:info@esk-ne.ru') info@esk-ne.ru
@@ -154,12 +184,15 @@ html(lang='ru-RU')
     script(src='/static/scripts/main.js')
     script(src='/static/scripts/js.cookie.js')
     script(src='/static/scripts/csrf.js')
-    script(type='text/javascript' src='/static/scripts/ui/global.js')
+    //script(type='text/javascript' src='/static/scripts/ui/global.js')
+    script(src=href+"/scripts/global.js")
     script(type='text/javascript' src='/static/scripts/ui/dia.js')
     script(type='text/javascript' src='/static/scripts/vendor/jquery-validation/jquery.validate.js')
     script(type='text/javascript' src='/static/scripts/vendor/jquery-validation/additional-methods.js')
     script(type='text/javascript' src='/static/scripts/vendor/jquery-validation/localization/messages_ru.min.js')
     script(type='text/javascript' src='/static/scripts/helpers.js')
+
+    block scripts
 
     //helper (preview only)
     include ../blocks/helper

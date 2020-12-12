@@ -695,7 +695,7 @@ section {
 
 body {
   margin: 0;
-  font-family: 'Oswald', sans-serif;
+  font-family: $font1;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -1018,7 +1018,8 @@ h6 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
-  color: inherit
+  color: inherit;
+  font-family: $font2;
 }
 
 .h1,
@@ -2388,31 +2389,6 @@ pre code {
   }
 }
 
-.table {
-  width: 100%;
-  margin-bottom: 1rem;
-  background-color: transparent
-}
-
-.table td,
-.table th {
-  padding: .75rem;
-  vertical-align: top;
-  border-top: 1px solid #dee2e6
-}
-
-.table thead th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6
-}
-
-.table tbody+tbody {
-  border-top: 2px solid #dee2e6
-}
-
-.table .table {
-  background-color: #f9f8f8
-}
 
 .table-sm td,
 .table-sm th {
@@ -2548,18 +2524,6 @@ pre code {
 .table-hover .table-active:hover>td,
 .table-hover .table-active:hover>th {
   background-color: rgba(0, 0, 0, .075)
-}
-
-.table .thead-dark th {
-  color: #f9f8f8;
-  background-color: #212529;
-  border-color: #32383e
-}
-
-.table .thead-light th {
-  color: #495057;
-  background-color: #e9ecef;
-  border-color: #dee2e6
 }
 
 .table-dark {
@@ -10482,20 +10446,6 @@ a.text-dark:hover {
     border: 1px solid #000
   }
 
-  .table {
-    border-collapse: collapse !important
-  }
-
-  .table td,
-  .table th {
-    background-color: #fff !important
-  }
-
-  .table-bordered td,
-  .table-bordered th {
-    border: 1px solid #dee2e6 !important
-  }
-
   .table-dark {
     color: inherit
   }
@@ -10504,11 +10454,6 @@ a.text-dark:hover {
   .table-dark td,
   .table-dark th,
   .table-dark thead th {
-    border-color: #dee2e6
-  }
-
-  .table .thead-dark th {
-    color: inherit;
     border-color: #dee2e6
   }
 }
@@ -11057,7 +11002,7 @@ textarea.form-control {
   position: relative;
   min-height: 64px;
   outline: none;
-  padding: 20px 20px 0
+  padding: 20px 18px 0
 }
 
 textarea.form-control {
@@ -11085,10 +11030,11 @@ label.control-label {
   background-color: transparent;
   border: 2px solid #d5d5d5;
   border-radius: 0;
-  padding: 19px 50px 12px 20px;
+  padding: 18px 50px 12px 18px;
   position: relative;
   min-height: 64px;
-  outline: none
+  outline: none;
+  transition: border-color .3s ease;
 }
 
 .select2-container--custom-select .select2-selection--single:after,
@@ -11102,7 +11048,7 @@ label.control-label {
   border-width: 10px 8px 0;
   border-color: #4a4a4a transparent transparent;
   position: absolute;
-  top: 25px;
+  top: 27px;
   right: 15px
 }
 
@@ -11118,8 +11064,9 @@ label.control-label {
 
 .active-label~.select2-container .select2-selection--multiple,
 .active-label~.select2-container .select2-selection--single {
-  padding-top: 30px;
-  border-color: $color-accent
+  padding-top: 26px;
+  border-color: $color-accent;
+  font-size: 18px;
 }
 
 .select2-container--default.select2-container--focus .select2-selection--multiple,
@@ -11134,21 +11081,20 @@ label.control-label {
 
 .form-group .control-label {
   font-size: 18px;
-  letter-spacing: 1px;
   text-indent: 20px;
   position: absolute;
   top: 20px;
   margin: 0;
-  transition: top .3s ease
+  transition: .3s ease;
+  pointer-events: none;
+  color: #000;
 }
 
 .form-group .control-label.active-label {
   font-size: 12px;
-  letter-spacing: normal;
   color: $color-accent;
   position: absolute;
   top: 12px;
-  left: 2px
 }
 
 .active-label~.select2-container .select2-search--inline {
@@ -12441,7 +12387,13 @@ label.control-label {
   color: #fff;
   min-width: 310px;
   font-size: 22px;
-  letter-spacing: 1px
+  letter-spacing: 1px;
+  line-height: 34px;
+  @media (max-width:575px) {
+    letter-spacing: normal;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 #chart {
@@ -15494,7 +15446,7 @@ textarea.form-control {
   line-height: 21px;
   color: #000;
   font-weight: normal;
-  cursor: inherit;
+  cursor: pointer;
   z-index: 10;
 }
 
@@ -15541,9 +15493,14 @@ textarea.form-control {
 .form-group label:not(.checkbox):not(.radio):not(.form-check-label).control-label.active-label {
   margin-left: 0px;
   top: 10px;
+  line-height: 14px;
 }
 
 @media (max-width: 575px) {
+
+  .form-group .control-label {
+    //top: 15px;
+  }
 
   input,
   textarea,
@@ -15554,9 +15511,31 @@ textarea.form-control {
     min-height: 56px !important;
     border: 2px solid #D5D5D5;
     background-color: transparent !important;
-    padding: 17px 20px 16px !important;
+    padding: 17px 18px 0 !important;
     font-size: 14px !important;
     line-height: 16px !important;
+  }
+
+  .active-label ~ .select2-container .select2-selection--multiple, .active-label ~ .select2-container .select2-selection--single {
+    font-size: 14px;
+  }
+
+
+  .select2-container--custom-select .select2-selection--single, 
+  .select2-container--default .select2-selection--multiple, 
+  .select2-container--default .select2-selection--single {
+    padding: 24px 18px 0 !important;
+    min-height: 56px;
+    font-size: 14px;
+  }
+
+  .select2-container--custom-select .select2-selection--single:after, .select2-container--default .select2-selection--multiple:after, .select2-container--default .select2-selection--single:after {
+    border-width: 6px 6px 0;
+    top: 24px;
+  }
+
+  .form-group .control-label.active-label {
+    left: 0;
   }
 
   input:active,
@@ -15572,16 +15551,15 @@ textarea.form-control {
   textarea.form-control:focus,
   input.form-control:focus {
     background-color: #fff !important;
-    padding: 12px 20px 0px !important;
   }
 
-  .active-label+[type="email"],
+  /* .active-label+[type="email"],
   .active-label+[type="number"],
   .active-label+[type="password"],
   .active-label+[type="text"] {
     background-color: #fff !important;
     padding: 12px 20px 0px !important;
-  }
+  } */
 
   textarea,
   textarea.form-control {
@@ -15632,7 +15610,12 @@ textarea.form-control {
   }
 
   .form-group label:not(.checkbox):not(.radio):not(.control-label):not(.form-check-label) {
-    margin: 20px 0 0 15px;
+    margin: 20px 0 0 20px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .form-group .control-label {
     font-size: 14px;
     line-height: 16px;
   }
@@ -15641,7 +15624,7 @@ textarea.form-control {
   .form-group label:not(.checkbox):not(.radio):not(.control-label):not(.form-check-label).active-label {
     font-size: 12px;
     line-height: 14px;
-    margin: 10px 0 0 22px;
+    margin: 10px 0 0 20px;
   }
 
   .form-group label:not(.checkbox):not(.radio):not(.control-label):not(.form-check-label).label_active_input.label_invalid_input,
@@ -15650,6 +15633,7 @@ textarea.form-control {
     line-height: 14px;
     margin-top: 10px;
   }
+
 
   .form-group label:not(.checkbox):not(.radio):not(.control-label):not(.form-check-label).label_invalid_input {
     font-size: 12px;
@@ -16466,291 +16450,6 @@ body {
 
 .btn-actions.btn-actions-red:active svg path {
   stroke: #fff;
-}
-
-table,
-table.table,
-.table {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  max-width: 100%;
-  background-color: transparent;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: normal;
-  color: #4A4A4A;
-}
-
-table tr,
-table.table tr,
-.table tr {
-  width: 100%;
-  max-width: 100%;
-  border: 0px !important;
-  background-color: transparent;
-}
-
-table tr:nth-child(even),
-table.table tr:nth-child(even),
-.table tr:nth-child(even) {
-  background-color: #F9F8F8;
-}
-
-table tr.table_head,
-table.table tr.table_head,
-.table tr.table_head,
-table tr:nth-child(1),
-table.table tr:nth-child(1),
-.table tr:nth-child(1) {
-  border: 0px !important;
-  background-color: #779FD4;
-}
-
-table th,
-table.table th,
-.table th {
-  padding: 14px 0px 13px;
-  border: 0px !important;
-  font-weight: bold;
-  color: #fff;
-}
-
-table td,
-table.table td,
-.table td {
-  padding: 0;
-  border: 0px !important;
-  padding: 14px 0px 13px;
-}
-
-table.table__saved_reports,
-table.table.table__saved_reports,
-.table.table__saved_reports {
-  text-align: center;
-}
-
-table.table__saved_reports tr td:nth-child(1),
-table.table.table__saved_reports tr td:nth-child(1),
-.table.table__saved_reports tr td:nth-child(1),
-table.table__saved_reports tr th:nth-child(1),
-table.table.table__saved_reports tr th:nth-child(1),
-.table.table__saved_reports tr th:nth-child(1) {
-  width: 8%;
-  text-align: left;
-  padding-left: 30px;
-}
-
-table.table__saved_reports tr td:nth-child(2),
-table.table.table__saved_reports tr td:nth-child(2),
-.table.table__saved_reports tr td:nth-child(2),
-table.table__saved_reports tr th:nth-child(2),
-table.table.table__saved_reports tr th:nth-child(2),
-.table.table__saved_reports tr th:nth-child(2) {
-  width: 6%;
-  text-align: center;
-}
-
-table.table__saved_reports tr td:nth-child(3),
-table.table.table__saved_reports tr td:nth-child(3),
-.table.table__saved_reports tr td:nth-child(3),
-table.table__saved_reports tr th:nth-child(3),
-table.table.table__saved_reports tr th:nth-child(3),
-.table.table__saved_reports tr th:nth-child(3) {
-  width: 8%;
-  text-align: center;
-}
-
-table.table__saved_reports tr td:nth-child(4),
-table.table.table__saved_reports tr td:nth-child(4),
-.table.table__saved_reports tr td:nth-child(4),
-table.table__saved_reports tr th:nth-child(4),
-table.table.table__saved_reports tr th:nth-child(4),
-.table.table__saved_reports tr th:nth-child(4) {
-  width: 30%;
-  text-align: center;
-}
-
-table.table__saved_reports tr td:nth-child(5),
-table.table.table__saved_reports tr td:nth-child(5),
-.table.table__saved_reports tr td:nth-child(5),
-table.table__saved_reports tr th:nth-child(5),
-table.table.table__saved_reports tr th:nth-child(5),
-.table.table__saved_reports tr th:nth-child(5) {
-  width: 17%;
-  text-align: center;
-}
-
-table.table__saved_reports tr td:nth-child(6),
-table.table.table__saved_reports tr td:nth-child(6),
-.table.table__saved_reports tr td:nth-child(6),
-table.table__saved_reports tr th:nth-child(6),
-table.table.table__saved_reports tr th:nth-child(6),
-.table.table__saved_reports tr th:nth-child(6) {
-  width: 30%;
-  text-align: right;
-  padding-right: 25px;
-}
-
-table.table__saved_reports tr td:nth-child(6) form,
-table.table.table__saved_reports tr td:nth-child(6) form,
-.table.table__saved_reports tr td:nth-child(6) form,
-table.table__saved_reports tr th:nth-child(6) form,
-table.table.table__saved_reports tr th:nth-child(6) form,
-.table.table__saved_reports tr th:nth-child(6) form {
-  float: right;
-}
-
-table.table__saved_reports .btn-actions,
-table.table.table__saved_reports .btn-actions,
-.table.table__saved_reports .btn-actions {
-  margin-left: 10px;
-}
-
-@media (max-width: 530px) {
-
-  table.table__saved_reports tr.table_head,
-  table.table.table__saved_reports tr.table_head,
-  .table.table__saved_reports tr.table_head {
-    display: none;
-  }
-
-  table.table__saved_reports tr td,
-  table.table.table__saved_reports tr td,
-  .table.table__saved_reports tr td,
-  table.table__saved_reports tr th,
-  table.table.table__saved_reports tr th,
-  .table.table__saved_reports tr th {
-    display: inline-block;
-    vertical-align: middle;
-    width: auto;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    vertical-align: top;
-    float: left;
-    padding: 14px 0px 13px !important;
-  }
-
-  table.table__saved_reports tr td:nth-child(1),
-  table.table.table__saved_reports tr td:nth-child(1),
-  .table.table__saved_reports tr td:nth-child(1),
-  table.table__saved_reports tr th:nth-child(1),
-  table.table.table__saved_reports tr th:nth-child(1),
-  .table.table__saved_reports tr th:nth-child(1) {
-    display: none;
-  }
-
-  table.table__saved_reports tr td:nth-child(2),
-  table.table.table__saved_reports tr td:nth-child(2),
-  .table.table__saved_reports tr td:nth-child(2),
-  table.table__saved_reports tr th:nth-child(2),
-  table.table.table__saved_reports tr th:nth-child(2),
-  .table.table__saved_reports tr th:nth-child(2) {
-    width: 25%;
-    text-align: left;
-    padding-left: 15px !important;
-  }
-
-  table.table__saved_reports tr td:nth-child(3),
-  table.table.table__saved_reports tr td:nth-child(3),
-  .table.table__saved_reports tr td:nth-child(3),
-  table.table__saved_reports tr th:nth-child(3),
-  table.table.table__saved_reports tr th:nth-child(3),
-  .table.table__saved_reports tr th:nth-child(3) {
-    width: 10%;
-    text-align: center;
-  }
-
-  table.table__saved_reports tr td:nth-child(4),
-  table.table.table__saved_reports tr td:nth-child(4),
-  .table.table__saved_reports tr td:nth-child(4),
-  table.table__saved_reports tr th:nth-child(4),
-  table.table.table__saved_reports tr th:nth-child(4),
-  .table.table__saved_reports tr th:nth-child(4) {
-    width: 40%;
-    text-align: center;
-  }
-
-  table.table__saved_reports tr td:nth-child(5),
-  table.table.table__saved_reports tr td:nth-child(5),
-  .table.table__saved_reports tr td:nth-child(5),
-  table.table__saved_reports tr th:nth-child(5),
-  table.table.table__saved_reports tr th:nth-child(5),
-  .table.table__saved_reports tr th:nth-child(5) {
-    width: 25%;
-    text-align: right;
-    padding-right: 15px !important;
-  }
-
-  table.table__saved_reports tr td:nth-child(6),
-  table.table.table__saved_reports tr td:nth-child(6),
-  .table.table__saved_reports tr td:nth-child(6),
-  table.table__saved_reports tr th:nth-child(6),
-  table.table.table__saved_reports tr th:nth-child(6),
-  .table.table__saved_reports tr th:nth-child(6) {
-    width: 100%;
-    text-align: center;
-    padding-right: 0px;
-  }
-}
-
-@media (max-width: 460px) {
-
-  table.table__saved_reports tr td:nth-child(2),
-  table.table.table__saved_reports tr td:nth-child(2),
-  .table.table__saved_reports tr td:nth-child(2),
-  table.table__saved_reports tr th:nth-child(2),
-  table.table.table__saved_reports tr th:nth-child(2),
-  .table.table__saved_reports tr th:nth-child(2) {
-    width: 100%;
-    padding-bottom: 0px !important;
-  }
-
-  table.table__saved_reports tr td:nth-child(2) br,
-  table.table.table__saved_reports tr td:nth-child(2) br,
-  .table.table__saved_reports tr td:nth-child(2) br,
-  table.table__saved_reports tr th:nth-child(2) br,
-  table.table.table__saved_reports tr th:nth-child(2) br,
-  .table.table__saved_reports tr th:nth-child(2) br {
-    display: none;
-  }
-
-  table.table__saved_reports tr td:nth-child(3),
-  table.table.table__saved_reports tr td:nth-child(3),
-  .table.table__saved_reports tr td:nth-child(3),
-  table.table__saved_reports tr th:nth-child(3),
-  table.table.table__saved_reports tr th:nth-child(3),
-  .table.table__saved_reports tr th:nth-child(3) {
-    width: 25%;
-    text-align: left;
-    padding-left: 15px !important;
-    padding-bottom: 0px !important;
-  }
-
-  table.table__saved_reports tr td:nth-child(4),
-  table.table.table__saved_reports tr td:nth-child(4),
-  .table.table__saved_reports tr td:nth-child(4),
-  table.table__saved_reports tr th:nth-child(4),
-  table.table.table__saved_reports tr th:nth-child(4),
-  .table.table__saved_reports tr th:nth-child(4) {
-    width: 75%;
-    text-align: left;
-    padding-right: 15px !important;
-    padding-bottom: 0px !important;
-  }
-
-  table.table__saved_reports tr td:nth-child(5),
-  table.table.table__saved_reports tr td:nth-child(5),
-  .table.table__saved_reports tr td:nth-child(5),
-  table.table__saved_reports tr th:nth-child(5),
-  table.table.table__saved_reports tr th:nth-child(5),
-  .table.table__saved_reports tr th:nth-child(5) {
-    width: 100%;
-    text-align: left;
-    padding-left: 15px !important;
-    padding-bottom: 0px !important;
-  }
 }
 
 .report_popup__toggler {
@@ -20731,4 +20430,4 @@ h1.mainTop__title {
 
 //new
 @import "./components/banner";
-@import "./components/lc";
+@import "./components/table";

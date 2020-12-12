@@ -11,17 +11,30 @@
     <meta name="description" content="">
     <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
     <link rel="icon" href="/static/favicon.ico">
-    <!--font-->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
     <!--NEW STYLES-->
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/Energid/build/styles/new.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:9000/styles/new.css" type="text/css">
   </head>
   <body>
-    <!-- мобильное меню пользователя - начало-->
-    <div class="user_mobile_menu__wrapper"><span class="user_mobile_menu__corner"> </span>
+    <div class="user_mobile_menu__wrapper user_mobile_menu__wrapper__active"><span class="user_mobile_menu__corner"></span>
       <div class="user_mobile_menu__container">
         <div class="row">
-          <div class="col-12 user_mobile_menu__footer"><a class="user_profile__quit" href="/users/login/">Войти
+          <div class="col-4 user_mobile_menu__profile__image"><img src="/static/images/user.svg" alt=""></div>
+          <div class="col-8 user_mobile_menu__profile__name">Лужецкий Дмитрий Александрович</div>
+          <div class="col-12 user_mobile_menu__profile__description">Fancymedia</div>
+          <div class="col-12 user_mobile_menu__action__wrapper"><a class="user_profile__sidebar__action user_profile__sidebar__action__wide" href="http://localhost:9000/lc2.html">
+              <p><img class="icon" src="http://localhost:9000/img/ico-message.svg" alt="image"><span>Главная</span></p></a></div>
+          <div class="col-12 user_mobile_menu__action__wrapper"><a class="user_profile__sidebar__action user_profile__sidebar__action__wide" href="http://localhost:9000/lc3.html">
+              <p><img src="http://localhost:9000/img/ico-shovel.svg" alt="image"><span>Показания</span></p></a></div>
+          <div class="col-12 user_mobile_menu__action__wrapper"><a class="user_profile__sidebar__action user_profile__sidebar__action__wide" href="http://localhost:9000/lc4.html">
+              <p><img src="http://localhost:9000/img/ico-message.svg" alt="image"><span>История</span></p></a></div>
+          <div class="col-12 user_mobile_menu__action__wrapper"><a class="user_profile__sidebar__action user_profile__sidebar__action__wide" href="http://localhost:9000/lc5.html">
+              <p><img src="http://localhost:9000/img/ico-message.svg" alt="image"><span>Сообщения</span></p></a></div>
+          <div class="col-12 user_mobile_menu__action__wrapper"><a class="user_profile__sidebar__action user_profile__sidebar__action__wide" href="http://localhost:9000/lc6.html">
+              <p><img src="http://localhost:9000/img/ico-profile.svg" alt="image"><span>Профиль</span></p></a></div>
+          <div class="col-12 user_mobile_menu__footer"><a class="user_profile__quit" href="/users/logout/">Выйти
               <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 18V21H21V1H10V4" stroke="#5AC37D" stroke-width="2"></path>
                 <path d="M12 11H2" stroke="#5AC37D" stroke-width="2"></path>
@@ -30,29 +43,25 @@
         </div>
       </div>
     </div>
-    <!-- мобильное меню пользователя - конец-->
     <div class="page">
       <div class="s-pageheader">
         <header class="header">
           <div class="header__content">
             <div class="container-fluid">
-              <div class="header__logo header__logo__ru"><a class="logo" href="/"><img src="https://ruslanmmr.github.io/work/Energid/build/img/new-logo.svg"></a></div><a class="header__search-trigger" href="#0"></a>
+              <div class="header__logo header__logo__ru"><a class="logo" href="/"><img src="http://localhost:9000/img/new-logo.svg"></a></div><a class="header__search-trigger" href="#0"></a>
             </div><a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
             <nav class="header__nav-wrap">
               <div class="container-fluid header__pos">
                 <div class="header__right">
-                  <form id="lang_select_form" action="/set_language/" method="post">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="sBLI67weeg7BonTY5OAdh6aabc6wcaUijCOCfCDiLYafiRPt6bvfO9pzpZjA6Voq">
-                    <input name="next" type="hidden" value="/">
-                    <select class="selectpicker" id="lang_select" data-width="130px" data-style="btn-lang" name="language" onchange="$('#lang_select_form').submit()">
-                      <option value="ru" selected="selected">Русский (ru)</option>
-                      <option value="en">English (en)</option>
-                    </select>
-                  </form><a class="header-link" href="/users/login/">Войти</a><a class="header-user active" href="/users/login/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none" stroke="currentColor">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.05273 4.05284C4.05273 2.42536 5.37226 1.10547 7.00034 1.10547C8.62794 1.10547 9.94747 2.42536 9.94747 4.05284C9.94747 5.68032 8.62794 7.00021 7.00034 7.00021C5.37226 7.00021 4.05273 5.68032 4.05273 4.05284Z"></path>
-                      <path d="M12.8949 12.8947C12.8949 9.63924 10.2557 7 7.00021 7C3.74472 7 1.10547 9.63924 1.10547 12.8947"></path>
-                    </svg></a>
+                  <!--form#lang_select_form(action='/set_language/' method='post')
+                  input(type='hidden' name='csrfmiddlewaretoken' value='sBLI67weeg7BonTY5OAdh6aabc6wcaUijCOCfCDiLYafiRPt6bvfO9pzpZjA6Voq')
+                  input(name='next' type='hidden' value='/')
+                  select#lang_select.selectpicker(data-width='130px' data-style='btn-lang' name='language' onchange="$('#lang_select_form').submit()")
+                    option(value='ru' selected='selected')
+                      | Русский (ru)
+                    option(value='en')
+                      | English (en)
+                  --><a class="header-link" href="/users/login/">Выйти</a><a class="header-user" href="http://localhost:9000/lc1.html">дл</a>
                 </div>
                 <div class="header__contacts"><a href="tel:+73512143334">+7 (35-12) 14-33-34</a><a href="mailto:info@esk-ne.ru">info@esk-ne.ru</a></div>
                 <ul class="header__nav">
@@ -82,7 +91,7 @@
                     <div class="carousel-item home-banner__slide active"><a class="home-banner__slide-bg" href="#" style="background-image: url(https://energuide.ru/static/images/img1.jpg);"></a>
                       <div class="home-banner__slide-container container">
                         <div class="home-banner__slide-content">
-                          <div class="home-banner__slide-top"><img src="https://ruslanmmr.github.io/work/Energid/build/img/new-logo.svg"><span>Энергетическая<br> компания</span></div>
+                          <div class="home-banner__slide-top"><img src="http://localhost:9000/img/new-logo.svg"><span>Энергетическая<br> компания</span></div>
                           <div class="home-banner__slide-text"><strong>Не трачу время на текущие платежи,<br> </strong>а занимаюсь развитием своего бизнеса!</div>
                         </div>
                       </div>
@@ -91,7 +100,7 @@
                     <div class="carousel-item home-banner__slide"><a class="home-banner__slide-bg" href="#" style="background-image: url(https://energuide.ru/static/images/img2.jpg);"></a>
                       <div class="home-banner__slide-container container">
                         <div class="home-banner__slide-content">
-                          <div class="home-banner__slide-top"><img src="https://ruslanmmr.github.io/work/Energid/build/img/new-logo.svg"><span>Энергетическая<br> компания</span></div>
+                          <div class="home-banner__slide-top"><img src="http://localhost:9000/img/new-logo.svg"><span>Энергетическая<br> компания</span></div>
                           <div class="home-banner__slide-text"><strong>Не трачу время на текущие платежи,<br> </strong>а занимаюсь развитием своего бизнеса!</div>
                         </div>
                       </div>
@@ -100,7 +109,7 @@
                     <div class="carousel-item home-banner__slide"><a class="home-banner__slide-bg" href="#" style="background-image: url(https://energuide.ru/static/images/img3.jpg);"></a>
                       <div class="home-banner__slide-container container">
                         <div class="home-banner__slide-content">
-                          <div class="home-banner__slide-top"><img src="https://ruslanmmr.github.io/work/Energid/build/img/new-logo.svg"><span>Энергетическая<br> компания</span></div>
+                          <div class="home-banner__slide-top"><img src="http://localhost:9000/img/new-logo.svg"><span>Энергетическая<br> компания</span></div>
                           <div class="home-banner__slide-text"><strong>Не трачу время на текущие платежи,<br> </strong>а занимаюсь развитием своего бизнеса!</div>
                         </div>
                       </div>
@@ -155,7 +164,7 @@
         </div>
       </div>
       <div class="mainTop mainTop--right" style="background-image: url(/static/images/fortum.jpg);">
-        <div class="mainTop__decoration" style="background-image: url(https://ruslanmmr.github.io/work/Energid/build/img/ffddfllld.png);"></div>
+        <div class="mainTop__decoration" style="background-image: url(http://localhost:9000/img/ffddfllld.png);"></div>
         <div class="mainTop__item container-fluid">
           <div class="mainTop__display row">
             <div class="col-xl-4 col-md-8 d-flex align-items-center">
@@ -193,7 +202,7 @@
     </div>
     <div class="container">
       <div class="row row-footer">
-        <div class="footer-decoration" style="background-image: url(https://ruslanmmr.github.io/work/Energid/build/img/ddsd.png);"></div>
+        <div class="footer-decoration" style="background-image: url(http://localhost:9000/img/ddsd.png);"></div>
         <div class="col col-footer">
           <div class="footerlist">
             <h3 class="footerlist__title">Аналитика</h3><a class="footerlist__link" href="/analytics/ore_prices/">Цены на оптовом рынке электроэнергии (мощности)</a><a class="footerlist__link" href="/analytics/surcharge/">Сбытовая надбавка</a><a class="footerlist__link" href="/analytics/surcharge-people/">Тарифы для населения </a><a class="footerlist__link" href="/analytics/transfer-rates/">Тарифы на передачу электроэнергии (мощности)</a><a class="footerlist__link" href="/analytics/generation-structure/">Структура генерации по ОЭС</a><a class="footerlist__link" href="/analytics/generation-and-consumption/">Генерация и потребление по ОЭС</a>
@@ -259,14 +268,15 @@
     <script src="/static/scripts/main.js"></script>
     <script src="/static/scripts/js.cookie.js"></script>
     <script src="/static/scripts/csrf.js"></script>
-    <script type="text/javascript" src="/static/scripts/ui/global.js"></script>
+    <!--script(type='text/javascript' src='/static/scripts/ui/global.js')-->
+    <script src="http://localhost:9000/scripts/global.js"></script>
     <script type="text/javascript" src="/static/scripts/ui/dia.js"></script>
     <script type="text/javascript" src="/static/scripts/vendor/jquery-validation/jquery.validate.js"></script>
     <script type="text/javascript" src="/static/scripts/vendor/jquery-validation/additional-methods.js"></script>
     <script type="text/javascript" src="/static/scripts/vendor/jquery-validation/localization/messages_ru.min.js"></script>
     <script type="text/javascript" src="/static/scripts/helpers.js"></script>
     <!--helper (preview only)-->
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/Energid/build/styles/helper.css">
+    <link rel="stylesheet" href="http://localhost:9000/styles/helper.css">
     <div class="helper"><a class="helper__trigger" href="javascript:void(0);">
         <svg class="icon" viewBox="0 0 100 100" fill="currentColor">
           <g transform="translate(50 50)">
@@ -279,14 +289,14 @@
       <div class="helper__container">
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Страницы:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="https://ruslanmmr.github.io/work/Energid/build/index.html">Главная</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="http://localhost:9000/index.html">Главная</a></div>
         </div>
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Личный кабинет:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="https://ruslanmmr.github.io/work/Energid/build/lc1.html">Лк — Старт</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/Energid/build/lc2.html">Лк — Главная</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="http://localhost:9000/lc1.html">Лк — Старт</a><a class="helper__section-button" href="http://localhost:9000/lc2.html">Лк — Главная</a><a class="helper__section-button" href="http://localhost:9000/lc3.html">Лк — Показания</a><a class="helper__section-button" href="http://localhost:9000/lc4.html">Лк — История</a><a class="helper__section-button" href="http://localhost:9000/lc5.html">Лк — Сообщения</a><a class="helper__section-button" href="http://localhost:9000/lc6.html">Лк — Профиль</a></div>
         </div>
       </div>
     </div>
-    <script src="https://ruslanmmr.github.io/work/Energid/build/scripts/helper.js"></script>
+    <script src="http://localhost:9000/scripts/helper.js"></script>
   </body>
 </html>
