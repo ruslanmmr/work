@@ -774,10 +774,6 @@ span.flatpickr-weekday {
     .lc-block__title.toggle-section__trigger.active .icon {
       transform: rotate(360deg); }
 
-.lc-block__content.toggle-section__content {
-  margin-top: 30px;
-  display: none; }
-
 .lc-block .fileUpload {
   margin-bottom: 0; }
 
@@ -791,7 +787,8 @@ span.flatpickr-weekday {
       margin-bottom: 0; } }
 
 .toggle-section__content .lc-block__content {
-  padding-top: 30px; }
+  padding-top: 30px;
+  display: none; }
 
 .lc-contract:not(:last-child) {
   border-bottom: 1px solid #E0E0E0;

@@ -607,12 +607,6 @@
       }
     }
   }
-  &__content {
-    &.toggle-section__content {
-      margin-top: 30px;
-      display: none;
-    }
-  }
   .fileUpload {
     margin-bottom: 0;
   }
@@ -633,6 +627,7 @@
 }
 .toggle-section__content .lc-block__content {
   padding-top: 30px;
+  display: none;
 }
 
 .lc-contract {
