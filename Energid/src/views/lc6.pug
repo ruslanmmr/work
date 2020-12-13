@@ -12,4 +12,94 @@ block content
       -var index = 4
       include blocks/sidebar
       .lc-wrapper__section
-        h1.lc-wrapper__title Профиль
+        h1.lc-wrapper__title Анкета пользователя и пароль
+        .lc-block
+          .lc-block__content
+            form.n-form
+              input(type='hidden' name='csrfmiddlewaretoken' value='7EcsdfDtsryarO0pCXKStRQdaSUVo5cdicY0lEVxTxVOluCMUAzj8LqzIBNbdLOh')
+              .n-form__container.row
+                .col-sm-6
+                  .form-group
+                    label.active-label.label_active_input(for='fname') Имя
+                    input#fname.form-control(type='text' name='first_name' value='Дмитрий' required='')
+                .col-sm-6
+                  .form-group
+                    label.active-label.label_active_input(for='mname') Отчество
+                    input#mname.form-control(type='text' name='middle_name' value='Александрович' required='' maxlength='100')
+                .col-sm-6
+                  .form-group
+                    label.active-label.label_active_input(for='lname') Фамилия
+                    input#lname.form-control(type='text' name='last_name' value='Лужецкий' required='')
+                .col-12
+                  .form-group
+                    label.active-label.label_active_input(for='compname') Организация
+                    textarea#compname.form-control(name='company' required='') Fancymedia
+                .col-sm-6
+                  .form-group
+                    label.active-label.label_active_input(for='mvalue') Объем энергопотребления в мес, кВт*ч 
+                    input#mvalue.form-control(type='text' name='capacity' value='300.00' required='')
+                .col-sm-6
+                .col-sm-6
+                  .form-group
+                    button.btn.btn-primary.w-100(type='submit') Сохранить изменения
+
+        .lc-block
+          h2.lc-block__title Загруженные файлы
+          //
+          .lc-block__content
+            .listFiles.user_area__personal_data__fileslist
+              .listFiles__item
+                .listFiles__name
+                  a.file(href='/media/data_invoice/2018/12/01/%D0%93%D0%9F_%D0%A0%D0%A4-1.xlsx')
+                    span.file__icon.icon-file
+                    span.file__name ГП.xlsx
+                    span.file__size (0,4 mb)
+                .listFiles__type ГП сбытовая надбавка
+                .listFiles__remove
+                  a.btn.btn-default.btn-actions.btn-actions-red.btn-file-remove(href='/users/delete_saved_file' data_id='2')
+                    svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                      path(d='M4.24219 4.24219L12.7275 12.7275' stroke='#D5D5D5' stroke-width='2')
+                      path(d='M4.24219 12.7266L12.7275 4.24128' stroke='#D5D5D5' stroke-width='2')
+                    | Удалить
+            //
+            .row
+              .col-sm-7
+                .fileUpload.user_area__personal_data__fileupload
+                  form#fileUpload.fileUpload__form(method='post' action='/users/profile/' enctype='multipart/form-data')
+                    input(type='hidden' name='csrfmiddlewaretoken' value='7EcsdfDtsryarO0pCXKStRQdaSUVo5cdicY0lEVxTxVOluCMUAzj8LqzIBNbdLOh')
+                    h3.fileUpload__title Загрузить файл
+                    .fileUpload__desc.form-group
+                      label(for='filedescr') Описание файла
+                      input#filedescr.form-control(type='text' name='name')
+                    div
+                      .row
+                        .col-12.col-sm-6.col-md-5
+                          label.fileUpload__btn(for='fileUploadBtn')
+                            input#fileUploadBtn.fileUpload__trigger(type='file' name='file' style='display:none')
+                            | 														Выбрать ...
+                        .col-12
+                          button#fileUploadSubmit.fileUpload__submit.btn.btn-primary(style='display: none;' type='submit') Загрузить
+
+        .lc-block
+          h2.lc-block__title Изменить пароль
+          .lc-block__content.row
+            form.n-form.col-sm-6(method='post' action='/users/profile/')
+              input(type='hidden' name='csrfmiddlewaretoken' value='7EcsdfDtsryarO0pCXKStRQdaSUVo5cdicY0lEVxTxVOluCMUAzj8LqzIBNbdLOh')
+              .n-form__container.row
+                .col-12
+                  .form-group
+                    label(for='passwd') Текущий пароль
+                    input#passwd.form-control.default_at_pageload(type='password' name='current_password' required='')
+                .col-12
+                  .form-group
+                    label(for='reg-password') Пароль
+                    input#reg-password.form-control.default_at_pageload(type='password' name='password1' required='')
+                    a.show-pass(href='javascript:void(0);')
+                .col-12
+                  .form-group
+                    label(for='reg-password-confirm') Повторите пароль
+                    input#reg-password-confirm.form-control.default_at_pageload(type='password' name='password2' required='')
+                    a.show-pass(href='javascript:void(0);')
+                .col-12
+                  .form-group
+                    button.btn.btn-primary.w-100(type='submit') Сохранить

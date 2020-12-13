@@ -109,7 +109,129 @@
             </div>
           </div>
           <div class="lc-wrapper__section">
-            <h1 class="lc-wrapper__title">Профиль</h1>
+            <h1 class="lc-wrapper__title">Анкета пользователя и пароль</h1>
+            <div class="lc-block">
+              <div class="lc-block__content">
+                <form class="n-form">
+                  <input type="hidden" name="csrfmiddlewaretoken" value="7EcsdfDtsryarO0pCXKStRQdaSUVo5cdicY0lEVxTxVOluCMUAzj8LqzIBNbdLOh">
+                  <div class="n-form__container row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label class="active-label label_active_input" for="fname">Имя</label>
+                        <input class="form-control" id="fname" type="text" name="first_name" value="Дмитрий" required="">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label class="active-label label_active_input" for="mname">Отчество</label>
+                        <input class="form-control" id="mname" type="text" name="middle_name" value="Александрович" required="" maxlength="100">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label class="active-label label_active_input" for="lname">Фамилия</label>
+                        <input class="form-control" id="lname" type="text" name="last_name" value="Лужецкий" required="">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label class="active-label label_active_input" for="compname">Организация</label>
+                        <textarea class="form-control" id="compname" name="company" required="">Fancymedia</textarea>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label class="active-label label_active_input" for="mvalue">Объем энергопотребления в мес, кВт*ч </label>
+                        <input class="form-control" id="mvalue" type="text" name="capacity" value="300.00" required="">
+                      </div>
+                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <button class="btn btn-primary w-100" type="submit">Сохранить изменения</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="lc-block">
+              <h2 class="lc-block__title">Загруженные файлы</h2>
+              <!---->
+              <div class="lc-block__content">
+                <div class="listFiles user_area__personal_data__fileslist">
+                  <div class="listFiles__item">
+                    <div class="listFiles__name"><a class="file" href="/media/data_invoice/2018/12/01/%D0%93%D0%9F_%D0%A0%D0%A4-1.xlsx"><span class="file__icon icon-file"></span><span class="file__name">ГП.xlsx</span><span class="file__size">(0,4 mb)</span></a></div>
+                    <div class="listFiles__type">ГП сбытовая надбавка</div>
+                    <div class="listFiles__remove"><a class="btn btn-default btn-actions btn-actions-red btn-file-remove" href="/users/delete_saved_file" data_id="2">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.24219 4.24219L12.7275 12.7275" stroke="#D5D5D5" stroke-width="2"></path>
+                          <path d="M4.24219 12.7266L12.7275 4.24128" stroke="#D5D5D5" stroke-width="2"></path>
+                        </svg>Удалить</a></div>
+                  </div>
+                </div>
+                <!---->
+                <div class="row">
+                  <div class="col-sm-7">
+                    <div class="fileUpload user_area__personal_data__fileupload">
+                      <form class="fileUpload__form" id="fileUpload" method="post" action="/users/profile/" enctype="multipart/form-data">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="7EcsdfDtsryarO0pCXKStRQdaSUVo5cdicY0lEVxTxVOluCMUAzj8LqzIBNbdLOh">
+                        <h3 class="fileUpload__title">Загрузить файл</h3>
+                        <div class="fileUpload__desc form-group">
+                          <label for="filedescr">Описание файла</label>
+                          <input class="form-control" id="filedescr" type="text" name="name">
+                        </div>
+                        <div>
+                          <div class="row">
+                            <div class="col-12 col-sm-6 col-md-5">
+                              <label class="fileUpload__btn" for="fileUploadBtn">
+                                <input class="fileUpload__trigger" id="fileUploadBtn" type="file" name="file" style="display:none"> Выбрать…
+                              </label>
+                            </div>
+                            <div class="col-12">
+                              <button class="fileUpload__submit btn btn-primary" id="fileUploadSubmit" style="display: none;" type="submit">Загрузить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lc-block">
+              <h2 class="lc-block__title">Изменить пароль</h2>
+              <div class="lc-block__content row">
+                <form class="n-form col-sm-6" method="post" action="/users/profile/">
+                  <input type="hidden" name="csrfmiddlewaretoken" value="7EcsdfDtsryarO0pCXKStRQdaSUVo5cdicY0lEVxTxVOluCMUAzj8LqzIBNbdLOh">
+                  <div class="n-form__container row">
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="passwd">Текущий пароль</label>
+                        <input class="form-control default_at_pageload" id="passwd" type="password" name="current_password" required="">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="reg-password">Пароль</label>
+                        <input class="form-control default_at_pageload" id="reg-password" type="password" name="password1" required=""><a class="show-pass" href="javascript:void(0);"></a>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="reg-password-confirm">Повторите пароль</label>
+                        <input class="form-control default_at_pageload" id="reg-password-confirm" type="password" name="password2" required=""><a class="show-pass" href="javascript:void(0);"></a>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <button class="btn btn-primary w-100" type="submit">Сохранить</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>

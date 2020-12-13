@@ -15091,9 +15091,6 @@ ul.checklist__elements.checklist__elements_xs li {
 .user_area__content__wrapper .form__action__message {
   margin-top: 0px !important; }
 
-.user_area__personal_data__fileslist {
-  padding-top: 25px; }
-
 .user_area__personal_data__fileslist .listFiles__item {
   -webkit-transition-property: background-color;
   -webkit-transition-duration: 0.3s;
@@ -15113,9 +15110,6 @@ ul.checklist__elements.checklist__elements_xs li {
 
 .fileUpload__btn {
   min-width: 195px; }
-
-.user_area__personal_data__fileupload {
-  margin-bottom: 60px; }
 
 @media (max-width: 575px) {
   .listFiles__item .listFiles__type {
