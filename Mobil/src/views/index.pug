@@ -1,0 +1,61 @@
+extends layout/layout
+block variables
+  -var title = sitename+' - Сalculator'
+block content
+  main.main.calculator
+    .container.calculator__container
+      a.logo(href="/")
+        img(src="./img/logos/logo-black.png", alt="image")
+      .calculator__info
+        .calculator__bg(style='background-image:url("./img/Rectangle 1.jpg");')
+        .calculator__info-content
+          //test
+          .calculator__form
+            .calculator__form-section
+              span кухонный блок
+              .calculator__form-item
+                input#val-1_true(type="radio" name='value1' value="yes" data-price='4000')
+                span да
+              .calculator__form-item
+                input#val-1_false(type="radio" name='value1' value="no")
+                span нет
+
+
+            .input
+              input(type="text" name='total').input__element
+      
+      
+      .calculator__content
+        button(aria-label='back').calculator__back-button
+          svg(viewBox='0 0 29 8' fill='currentColor').icon
+            path(d='M0.646368 3.70791C0.451107 3.90317 0.451107 4.21975 0.646368 4.41501L3.82835 7.59699C4.02361 7.79226 4.34019 7.79226 4.53546 7.59699C4.73072 7.40173 4.73072 7.08515 4.53546 6.88989L1.70703 4.06146L4.53546 1.23303C4.73072 1.03777 4.73072 0.721189 4.53546 0.525926C4.34019 0.330664 4.02361 0.330664 3.82835 0.525926L0.646368 3.70791ZM28.7991 3.56146L0.999922 3.56146L0.999922 4.56146L28.7991 4.56146L28.7991 3.56146Z')
+          | Назад
+        .calculator__slides
+
+          //slide
+          .calculator-slide
+            .calculator-slide__top
+              .calculator-slide__content
+                span.calculator-slide__q-title Вопрос 1
+                h2.calculator-slide__q Нужен ли встраиваемый кухонный блок?
+                .calculator-slide__buttons
+                  label(for="val-1_true").button.button_style-1.calculator-slide__button <strong>Да</strong>
+                  label(for="val-1_false").button.button_style-1.calculator-slide__button Нет
+              .calculator-slide__image
+                img(src="./img/image.png", alt="image")
+            button.button.button_style-2.calculator-slide__next-button Далее
+
+          //slide
+          .calculator-slide
+            .calculator-slide__top
+              .calculator-slide__content
+                span.calculator-slide__q-title Вопрос 2
+                h2.calculator-slide__q Нужен ли встраиваемый туалетно-душевой блок?
+                .calculator-slide__buttons
+                  label(for="val-2_true").button.button_style-1.calculator-slide__button <strong>Да</strong>
+                  label(for="val-2_false").button.button_style-1.calculator-slide__button Нет
+              .calculator-slide__image
+                img(src="./img/image.png", alt="image")
+            button.button.button_style-2.calculator-slide__next-button Далее
+
+

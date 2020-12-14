@@ -1,0 +1,134 @@
+.calculator {
+  &__container {
+    height: 100%;
+    display: flex;
+  }
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: calc(100% + #{$xxl-field});
+    background-color: rgba(255, 255, 255, 0.8);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__info {
+    flex: 0 0 440px;
+    position: relative;
+    height: 100%;
+  }
+  &__info-content {
+    height: 100%;
+    padding-top: 200px;
+    position: relative;
+    z-index: 2;
+  }
+  &__slides {
+    position: relative;
+    height: 100%;
+  }
+  &__content {
+    flex: 1 1 100%;
+    height: 100%;
+    position: relative;
+    padding-left: 150px;
+    padding-top: 160px;
+    padding-right: 80px;
+  }
+  &__back-button {
+    position: absolute;
+    top: 84px;
+    color: var(--color-accent);
+    display: inline-flex;
+    line-height: 24px;
+    font-size: 1.125rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $trs1, visibility $trs1;
+    &.active {
+      opacity: 1;
+      visibility: hidden;
+    }
+    .icon {
+      margin-right: 11px;
+      width: 28px;
+      height: 24px;
+      transition: transform $trs1;
+    }
+    &[data-touch], &[data-hover] {
+      .icon {
+        transform: translateX(-4px);
+      }
+    }
+  }
+  &__form {
+    background-color: #000;
+    padding: 100px;
+    color: #fff;
+    input {
+      appearance: auto;
+    }
+    &-item {
+      display: flex;
+    }
+    &-section {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.calculator-slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  &__top {
+    display: flex;
+  }
+  &__content {
+    flex: 1 1 100%;
+    padding-right: 80px;
+    color: var(--color-light);
+  }
+  &__image {
+    position: relative;
+    flex: 0 0 260px;
+    img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__q-title {
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block;
+    margin: 0 0 15px 0;
+    line-height: 1;
+  }
+  &__q {
+    margin: 0 0 40px 0;
+    display: block;
+  }
+  &__button {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &__next-button {
+    margin-top: 40px;
+  }
+}
+
+.logo {
+  position: absolute;
+  width: 180px;
+  top: 37px;
+  z-index: 2;
+}

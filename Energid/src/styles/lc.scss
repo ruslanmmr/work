@@ -625,9 +625,14 @@
     }
   }
 }
+[data-slide] {
+  .toggle-section__content {
+    width: 100% !important;
+    display: none;
+  }
+}
 .toggle-section__content .lc-block__content {
   padding-top: 30px;
-  display: none;
 }
 
 .lc-contract {

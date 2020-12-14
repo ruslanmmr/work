@@ -786,9 +786,12 @@ span.flatpickr-weekday {
     .lc-block__title.toggle-section__trigger .icon {
       margin-bottom: 0; } }
 
-.toggle-section__content .lc-block__content {
-  padding-top: 30px;
+[data-slide] .toggle-section__content {
+  width: 100% !important;
   display: none; }
+
+.toggle-section__content .lc-block__content {
+  padding-top: 30px; }
 
 .lc-contract:not(:last-child) {
   border-bottom: 1px solid #E0E0E0;

@@ -1,0 +1,10 @@
+:root {
+  --color-accent: #BD9670;
+  --color-accent-hover:rgba(189, 151, 112, 0.3);
+  --color-light: #fff;
+  --color-dark: #282828;
+  --color-muted:#7e7e7e;
+  --color-text:     #000;
+  --color-bg: #282828; }
+
+/*# sourceMappingURL=maps/theme.css.map */

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Mobil — Сalculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000">
+    <!--favicons-->
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <!--open graph-->
+    <meta property="og:title" content="Mobil">
+    <meta property="og:site_name" content="Новый сайт">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Описание нового сайта.">
+    <meta property="og:image" content="">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <!--styles-->
+    <link rel="stylesheet" href="./styles/theme.css">
+    <link rel="stylesheet" href="./styles/common.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="main calculator">
+        <div class="container calculator__container"><a class="logo" href="/"><img src="./img/logos/logo-black.png" alt="image"></a>
+          <div class="calculator__info">
+            <div class="calculator__bg" style="background-image:url(&quot;./img/Rectangle 1.jpg&quot;);"></div>
+            <div class="calculator__info-content">
+              <!--test-->
+              <div class="calculator__form">
+                <div class="calculator__form-section"><span>кухонный блок</span>
+                  <div class="calculator__form-item">
+                    <input id="val-1_true" type="radio" name="value1" value="yes" data-price="4000"><span>да</span>
+                  </div>
+                  <div class="calculator__form-item">
+                    <input id="val-1_false" type="radio" name="value1" value="no"><span>нет</span>
+                  </div>
+                </div>
+                <div class="input">
+                  <input class="input__element" type="text" name="total">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calculator__content">
+            <button class="calculator__back-button" aria-label="back">
+              <svg class="icon" viewBox="0 0 29 8" fill="currentColor">
+                <path d="M0.646368 3.70791C0.451107 3.90317 0.451107 4.21975 0.646368 4.41501L3.82835 7.59699C4.02361 7.79226 4.34019 7.79226 4.53546 7.59699C4.73072 7.40173 4.73072 7.08515 4.53546 6.88989L1.70703 4.06146L4.53546 1.23303C4.73072 1.03777 4.73072 0.721189 4.53546 0.525926C4.34019 0.330664 4.02361 0.330664 3.82835 0.525926L0.646368 3.70791ZM28.7991 3.56146L0.999922 3.56146L0.999922 4.56146L28.7991 4.56146L28.7991 3.56146Z"></path>
+              </svg>Назад
+            </button>
+            <div class="calculator__slides">
+              <!--slide-->
+              <div class="calculator-slide">
+                <div class="calculator-slide__top">
+                  <div class="calculator-slide__content"><span class="calculator-slide__q-title">Вопрос 1</span>
+                    <h2 class="calculator-slide__q">Нужен ли встраиваемый кухонный блок?</h2>
+                    <div class="calculator-slide__buttons">
+                      <label class="button button_style-1 calculator-slide__button" for="val-1_true"><strong>Да</strong></label>
+                      <label class="button button_style-1 calculator-slide__button" for="val-1_false">Нет</label>
+                    </div>
+                  </div>
+                  <div class="calculator-slide__image"><img src="./img/image.png" alt="image"></div>
+                </div>
+                <button class="button button_style-2 calculator-slide__next-button">Далее</button>
+              </div>
+              <!--slide-->
+              <div class="calculator-slide">
+                <div class="calculator-slide__top">
+                  <div class="calculator-slide__content"><span class="calculator-slide__q-title">Вопрос 2</span>
+                    <h2 class="calculator-slide__q">Нужен ли встраиваемый туалетно-душевой блок?</h2>
+                    <div class="calculator-slide__buttons">
+                      <label class="button button_style-1 calculator-slide__button" for="val-2_true"><strong>Да</strong></label>
+                      <label class="button button_style-1 calculator-slide__button" for="val-2_false">Нет</label>
+                    </div>
+                  </div>
+                  <div class="calculator-slide__image"><img src="./img/image.png" alt="image"></div>
+                </div>
+                <button class="button button_style-2 calculator-slide__next-button">Далее</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!--libs-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="./scripts/libs/inputmask.min.js"></script>
+    <script src="./scripts/scripts.js"> </script>
+  </body>
+</html>

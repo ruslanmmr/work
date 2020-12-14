@@ -1,0 +1,23 @@
+.wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+.main {
+  flex: 1 1 100%;
+  height: 100%;
+}
+
+
+.container {
+  max-width: map-get($container-max-widths, xxl);
+  padding: 0 $container-padding-x;
+  margin: 0 auto;
+}
+
+
+@include media-breakpoint-down(md) {
+  .container {
+    padding-right: $mobile-container-padding-x;
+    padding-left: $mobile-container-padding-x;
+  }
+}

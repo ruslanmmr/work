@@ -6,22 +6,24 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-lazySizes.cfg.init = false;
+window.onload = function () {
+  TouchHoverEvents.init();
+  Slider.init();
+};
+
 var brakepoints = {
   sm: 576,
   md: 768,
   lg: 1024,
-  xl: 1200
+  xl: 1280,
+  xxl: 1600
 };
-$(document).ready(function () {
-  TouchHoverEvents.init();
-  select.init();
-  lazy();
-  toggle();
-}); //hover/touch custom events
+var $body = document.body;
+var $wrapper = document.querySelector('.wrapper');
+var speed = 0.5; //seconds
 
 var TouchHoverEvents = {
-  targets: 'a[class], button, label, tr, .jsTouchHover',
+  targets: 'a, button, label, tr, .jsTouchHover',
   touched: false,
   touchEndDelay: 100,
   //ms
@@ -98,7 +100,7 @@ var TouchHoverEvents = {
           for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
             var _$target = _step2.value;
 
-            _$target.classList.add('touch');
+            _$target.setAttribute('data-touch', '');
           }
         } catch (err) {
           _iterator2.e(err);
@@ -123,7 +125,7 @@ var TouchHoverEvents = {
 
                 _$target2.dispatchEvent(new CustomEvent("customTouchend"));
 
-                _$target2.classList.remove('touch');
+                _$target2.removeAttribute('data-touch');
               }
             } catch (err) {
               _iterator3.e(err);
@@ -136,126 +138,151 @@ var TouchHoverEvents = {
 
 
     if (event.type == 'mouseenter' && !this.touched && $targets[0] && $targets[0] == event.target) {
-      $targets[0].classList.add('hover');
+      $targets[0].setAttribute('data-hover', '');
     } //mouseleave
     else if (event.type == 'mouseleave' && !this.touched && $targets[0] && $targets[0] == event.target) {
-        $targets[0].classList.remove('hover', 'focus');
+        $targets[0].removeAttribute('data-focus');
+        $targets[0].removeAttribute('data-hover');
       } //mousedown
 
 
     if (event.type == 'mousedown' && !this.touched && $targets[0]) {
-      $targets[0].classList.add('focus');
+      $targets[0].setAttribute('data-focus', '');
     } //mouseup
     else if (event.type == 'mouseup' && !this.touched && $targets[0]) {
-        $targets[0].classList.remove('focus');
+        $targets[0].removeAttribute('data-focus');
       }
-  }
-}; //lazyloading
-
-function lazy() {
-  //add backgrounds
-  document.addEventListener('lazybeforeunveil', function (e) {
-    var el = e.target.tagName,
-        bg = e.target.getAttribute('data-src');
-
-    if (el !== 'IMG') {
-      var _bg = e.target.getAttribute('data-src');
-
-      e.target.style.backgroundImage = "url('".concat(_bg, "')");
-    }
-  });
-  lazySizes.init();
-} //select
-
-
-var select = {
-  init: function init() {
-    this.items = $('select');
-
-    if (this.items.length) {
-      this.items.selectric({
-        disableOnMobile: false,
-        nativeOnMobile: false,
-        arrowButtonMarkup: '<svg class="icon" viewBox="0 0 12 7" xmlns="http://www.w3.org/2000/svg"><path d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z"/><path d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z"/></svg>'
-      });
-    }
   }
 };
+var Mask = {
+  init: function init() {
+    Inputmask({
+      mask: "+7 999 999-9999",
+      showMaskOnHover: false,
+      clearIncomplete: false
+    }).mask('[data-phone]');
+  }
+};
+var Slider = {
+  init: function init() {
+    var _this3 = this;
 
-function toggle() {
-  var $section = $('.toggle-section'),
-      speed = 250;
-  $section.each(function () {
-    var $this = $(this),
-        $toggle = $this.children('.toggle-section__trigger'),
-        $content = $this.children('.toggle-section__content'),
-        state = $this.hasClass('active') ? true : false,
-        initialized;
-    $toggle.on('click', function () {
-      state = !state ? true : false;
-      check();
+    this.index = 0;
+    this.m = 120;
+    this.$slides = document.querySelectorAll('.calculator-slide');
+    this.$next = document.querySelectorAll('.calculator-slide__next-button');
+    this.$back = document.querySelector('.calculator__back-button');
+
+    this.getPrev = function () {
+      var value = _this3.index - 1;
+      return value;
+    };
+
+    this.getNext = function () {
+      var value = _this3.index + 1;
+      return value;
+    }; //listeners
+
+
+    this.$next.forEach(function ($button) {
+      $button.addEventListener('click', function () {
+        if (!_this3.inAnimation) {
+          _this3.index++;
+
+          _this3.change();
+        }
+      });
     });
+    this.$back.addEventListener('click', function () {
+      if (!_this3.inAnimation) {
+        _this3.index--;
 
-    if ($this.is('[data-hover]')) {
-      var timeout;
-      $toggle.add($content).on('mouseenter', function (event) {
-        if (!TouchHoverEvents.touched) {
-          if (timeout) clearTimeout(timeout);
-          state = true;
-          check();
-        }
-      });
-      $toggle.add($content).on('mouseleave', function (event) {
-        if (!TouchHoverEvents.touched) {
-          var delay;
-
-          if ($(this).is($toggle)) {
-            delay = 500;
-          } else {
-            delay = 100;
-          }
-
-          timeout = setTimeout(function () {
-            state = false;
-            check();
-          }, delay);
-        }
-      });
-    }
-
-    if ($this.is('[data-out-hide]') || $this.is('[data-hover]')) {
-      $(document).on('click touchstart', function (event) {
-        var $target = $(event.target);
-
-        if (!$target.closest($content).length && !$target.closest($toggle).length && state) {
-          state = false;
-          check();
-        }
-      });
-    }
-
-    function check() {
-      if (state) {
-        $this.add($content).add($toggle).addClass('active');
-
-        if ($this.is('[data-slide]')) {
-          $content.slideDown(speed);
-        }
-      } else {
-        $this.add($toggle).add($content).removeClass('active');
-
-        if ($this.is('[data-slide]')) {
-          if (initialized) {
-            $content.stop().slideUp(speed);
-          } else {
-            $content.hide(0);
-          }
-        }
+        _this3.change();
       }
+    });
+    this.change();
+  },
+  change: function change() {
+    this.inAnimation = true;
+
+    if (this.index == 0) {
+      this.$back.classList.remove('active');
+    } else {
+      this.$back.classList.add('active');
     }
 
-    check();
-    initialized = true;
-  });
-}
-//# sourceMappingURL=maps/common.js.map
+    if (!this.old || this.old < this.index) {
+      this.next();
+    }
+    /* gsap.timeline()
+      .to($slide, {autoAlpha:1, duration:speed, ease:'power2.inOut'})
+      .to($slide, {y:0, duration:speed, ease:'power2.out'}, `-=${speed}`)
+     if(this.index==0 || this.index==1 || this.index==2) {
+      let y = $slide.getBoundingClientRect().height;
+      gsap.timeline()
+        .to($next, {autoAlpha:0.3, duration:speed, ease:'power2.inOut'})
+        .fromTo($next, {y:y+this.m+this.m}, {y:y+this.m, duration:speed, ease:'power2.out'}, `-=${speed}`)
+    } */
+
+  },
+  next: function next() {
+    this.animation = gsap.timeline({
+      paused: true
+    });
+    var $slide = this.$slides[this.index],
+        $prev_slide = this.$slides[this.getPrev()],
+        $next_slide = this.$slides[this.getNext()];
+
+    if (!this.old) {
+      var timeline = gsap.timeline().to($slide, {
+        autoAlpha: 1,
+        duration: speed,
+        ease: 'power2.inOut'
+      }).fromTo($slide, {
+        y: this.m
+      }, {
+        y: 0,
+        duration: speed,
+        ease: 'power2.out'
+      }, "-=".concat(speed));
+      this.animation.add(timeline, ">");
+    } else {
+      var _timeline = gsap.timeline().to($prev_slide, {
+        autoAlpha: 0,
+        duration: speed,
+        ease: 'power2.out'
+      }).to($slide, {
+        autoAlpha: 1,
+        duration: speed,
+        ease: 'power2.inOut'
+      }).to($slide, {
+        y: 0,
+        duration: speed,
+        ease: 'power2.out'
+      }, "-=".concat(speed));
+
+      this.animation.add(_timeline, ">");
+    }
+
+    if (this.index == 0 || this.index == 1 || this.index == 2) {
+      var y = $slide.getBoundingClientRect().height;
+
+      var _timeline2 = gsap.timeline().to($next_slide, {
+        autoAlpha: 0.3,
+        duration: speed,
+        ease: 'power2.inOut'
+      }).fromTo($next_slide, {
+        y: y + this.m + this.m
+      }, {
+        y: y + this.m,
+        duration: speed,
+        ease: 'power2.out'
+      }, "-=".concat(speed));
+
+      this.animation.add(_timeline2, ">-".concat(speed - 0.1));
+    }
+
+    this.animation.play();
+  }
+};
+//# sourceMappingURL=maps/scripts.js.map
