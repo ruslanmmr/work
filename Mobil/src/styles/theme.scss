@@ -1,6 +1,10 @@
 :root {
   --color-accent: #BD9670;
-  --color-accent-hover:rgba(189, 151, 112, 0.3);
+  --color-accent-transparent: rgba(189, 151, 112, 0.3);
+  --color-accent-hover:#ad8862;
+  --color-accent-focus:#997756;
+
+  --color-error: #ff482f;
 
   --color-light: #fff;
   --color-dark: #282828;

@@ -16,15 +16,43 @@
     background-position: center center;
   }
   &__info {
-    flex: 0 0 440px;
+    flex: 0 0 460px;
     position: relative;
     height: 100%;
   }
   &__info-content {
     height: 100%;
     padding-top: 200px;
+    padding-right: 140px;
     position: relative;
     z-index: 2;
+    font-weight: 600;
+  }
+  &__title {
+    font-size: 3.25rem;
+    line-height: 1;
+    margin: 0 0 40px 0;
+  }
+  &__base-price {
+    background-color: var(--color-accent);
+    font-size: 2.25rem;
+    line-height: 60px;
+    width: 100%;
+    text-align: center;
+    color: var(--color-light);
+  }
+  &__ads {
+    margin: 45px 0 0 0;
+    padding-top: 13px;
+    border-top: 2px solid var(--color-accent);
+  }
+  &__ad {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    span {
+      color: var(--color-accent);
+    }
   }
   &__slides {
     position: relative;
@@ -34,9 +62,8 @@
     flex: 1 1 100%;
     height: 100%;
     position: relative;
-    padding-left: 150px;
-    padding-top: 160px;
-    padding-right: 80px;
+    padding-left: 140px;
+    padding-top: 180px;
   }
   &__back-button {
     position: absolute;
@@ -47,10 +74,11 @@
     font-size: 1.125rem;
     opacity: 0;
     visibility: hidden;
-    transition: opacity $trs1, visibility $trs1;
+    transition: opacity $trs2, visibility $trs2;
+    font-weight: 400;
     &.active {
       opacity: 1;
-      visibility: hidden;
+      visibility: visible;
     }
     .icon {
       margin-right: 11px;
@@ -64,18 +92,59 @@
       }
     }
   }
-  &__form {
+  &__hidden-inputs {
     background-color: #000;
-    padding: 100px;
+    padding: 20px;
     color: #fff;
+    position: fixed;
+    z-index: 1000;
+    opacity: 0.3;
+    top: 0;
+    right: 0;
+    width: 200px;
+    font-size: 0.75rem;
     input {
       appearance: auto;
+      background-color: #fff;
+      padding: 2px;
+      margin-top: 2px;
+      color: #000;
+      font-size: 0.875rem;
+      width: 100%;
     }
-    &-item {
-      display: flex;
+  }
+  &__hidden-section {
+    &:not(:last-child) {
+      margin-bottom: 10px;
     }
-    &-section {
-      margin-bottom: 20px;
+  }
+  @include media-breakpoint-down(xxl) {
+    &__content {
+      padding-left: 90px;
+      padding-top: 130px;
+    }
+    &__title {
+      font-size: 2.25rem;
+      margin: 0 0 35px 0;
+    }
+    &__ads {
+      margin: 40px 0 0 0;
+    } 
+    &__back-button {
+      top: 50px;
+    }
+    &__info {
+      flex: 0 0 370px;
+    }
+    &__base-price {
+      font-size: 2rem;
+    }
+    &__info-content {
+      padding-right: 90px;
+      padding-top: 164px;
+    }
+    &__bg {
+      width: calc(100% + #{$xl-field});
     }
   }
 }
@@ -85,17 +154,27 @@
   width: 100%;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
+  &.dev {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: all;
+  }
+  &.active {
+    pointer-events: all;
+  }
   &__top {
     display: flex;
   }
   &__content {
     flex: 1 1 100%;
-    padding-right: 80px;
     color: var(--color-light);
   }
   &__image {
     position: relative;
     flex: 0 0 260px;
+    min-height: 250px;
+    margin-left: 60px;
     img {
       display: block;
       position: absolute;
@@ -123,6 +202,52 @@
   }
   &__next-button {
     margin-top: 40px;
+    opacity: 0.5;
+    pointer-events: none;
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+  &__back-button {
+    margin-top: 80px;
+  }
+  &__total-price {
+    font-size: 68px;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin: 0 0 45px 0;
+    span {
+      font-size: 1.6em;
+      margin-left: 0.2em;
+    }
+  }
+  &__inputs {
+    margin-bottom: 20px;
+  }
+  &__input {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    &__q-title {
+      font-size: 1.125rem;
+    }
+    &__total-price {
+      font-size: 48px;
+      margin: 0 0 40px 0;
+    }
+    &__inputs {
+      margin-bottom: 10px;
+    }
+    &__back-button {
+      margin-top: 60px;
+    }
   }
 }
 
@@ -130,5 +255,46 @@
   position: absolute;
   width: 180px;
   top: 37px;
-  z-index: 2;
+  transform: translateX(-7%);
+  z-index: 100;
+  @include media-breakpoint-down(xxl) {
+    width: 140px;
+    top: 30px;
+  }
+}
+
+.calc-count {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  &__value {
+    color: var(--color-accent);
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0 14px;
+    line-height: 68px;
+    width: 1.7em;
+    text-align: center;
+  }
+  &__button {
+    color: var(--color-light);
+    border: 1px solid var(--color-light);
+    height: 25px;
+    width: 40px;
+    display: flex;
+    transition: background-color $trs1, color $trs1, opacity $trs1;
+    .icon {
+      width: 10px;
+      height: 10px;
+      margin: auto;
+    }
+    &[data-touch], &[data-hover] {
+      background-color: var(--color-light);
+      color: var(--color-dark);
+    }
+    &.hidden {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
 }

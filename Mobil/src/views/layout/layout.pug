@@ -38,10 +38,11 @@ html(lang='ru')
     link(rel="stylesheet" href="./styles/common.css")
 
   body
-    .wrapper
+    .wrapper(style='opacity:0;visibility:hidden;')
       block content
     
     //libs
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js')
+    script(src='./scripts/libs/gsap.min.js')
     script(src="./scripts/libs/inputmask.min.js")
+    script(src="./scripts/libs/validate.min.js")
     script(src="./scripts/scripts.js") 

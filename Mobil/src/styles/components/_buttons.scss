@@ -11,14 +11,20 @@
   padding: 0 30px;
   width: 100%;
   font-size: 1.125rem;
+  text-decoration: none;
+  font-weight: 500;
   &_style-1 {
     border: 2px solid var(--color-accent);
     color: var(--color-light);
     &[data-touch], &[data-hover] {
-      background-color: var(--color-accent-hover);
+      background-color: var(--color-accent-transparent);
     }
     &[data-focus] {
       background-color: var(--color-accent);
+    }
+    &.active {
+      background-color: var(--color-accent);
+      pointer-events: none;
     }
   }
   &_style-2 {
@@ -33,6 +39,22 @@
     &[data-focus] {
       color: var(--color-dark);
       background-color: var(--color-light);
+    }
+  }
+  &_style-3 {
+    border: 2px solid var(--color-accent);
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    text-align: center;
+    justify-content: center;
+    font-weight: 700;
+    &[data-touch], &[data-hover] {
+      background-color: var(--color-accent-hover);
+      border-color: var(--color-accent-hover);
+    }
+    &[data-focus] {
+      background-color: var(--color-accent-focus);
+      border-color: var(--color-accent-focus);
     }
   }
 }

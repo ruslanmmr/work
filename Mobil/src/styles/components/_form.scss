@@ -3,7 +3,7 @@
   display: block;
   font-size: 0;
   &__element {
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 24px;
     padding: 10px 0;
     display: block;
@@ -39,15 +39,21 @@
     display: block;
     position: absolute;
     top: 100%;
+    width: 100%;
     left: 0;
     color: var(--color-error);
     opacity: 0;
     font-weight: 400;
-    padding-left: 10px;
+    text-align: right;
   }
   &.error {
     .input__element {
       border-color: var(--color-error);
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    &__element {
+      font-size: 1rem;
     }
   }
 }

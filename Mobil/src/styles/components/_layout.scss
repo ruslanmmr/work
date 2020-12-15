@@ -1,17 +1,25 @@
 .wrapper {
   height: 100%;
   overflow: hidden;
+  min-height: 800px;
 }
 .main {
   flex: 1 1 100%;
   height: 100%;
 }
 
-
 .container {
   max-width: map-get($container-max-widths, xxl);
   padding: 0 $container-padding-x;
   margin: 0 auto;
+}
+@include media-breakpoint-down(xxl) {
+  .container {
+    max-width: map-get($container-max-widths, xl);
+  }
+  .wrapper {
+    min-height: 600px;
+  }
 }
 
 

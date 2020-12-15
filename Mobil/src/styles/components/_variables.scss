@@ -10,8 +10,8 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1248px,
-  xxl: 1440px
+  xl: 1180px,
+  xxl: 1288px
 );
 
 $container-padding-x:        24px;
@@ -26,5 +26,5 @@ $xl-field: calc((100vw - #{map-get($container-max-widths, xl) - $container-paddi
 $xl-field-negative: calc((-100vw + #{map-get($container-max-widths, xl) - $container-padding-x * 2})/2);
 
 $trs1: .2s ease-in-out;
-$trs2: .4s ease-in-out;
+$trs2: .5s ease-in-out;
 $trs3: 1s ease-in-out;

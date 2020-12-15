@@ -9,29 +9,42 @@ block content
       .calculator__info
         .calculator__bg(style='background-image:url("./img/Rectangle 1.jpg");')
         .calculator__info-content
-          //test
-          .calculator__form
-            .calculator__form-section
-              span кухонный блок
-              .calculator__form-item
-                input#val-1_true(type="radio" name='value1' value="yes" data-price='4000')
-                span да
-              .calculator__form-item
-                input#val-1_false(type="radio" name='value1' value="no")
-                span нет
+          h1.calculator__title Расчет стоимости
+          .calculator__base-price 19,000 $
+          .calculator__ads
 
-
-            .input
-              input(type="text" name='total').input__element
+          
       
       
-      .calculator__content
-        button(aria-label='back').calculator__back-button
+      form.form.js-validation.calculator__content
+        //test
+        .calculator__hidden-inputs
+          .calculator__hidden-section
+            span Базовая цена
+            input#baseprice(type="text" value='19000' disabled)
+          .calculator__hidden-section
+            span Кухонный блок
+            input#val1.calculator__value-input(type="text" name='Кухонный блок' value="0" data-price='4000' data-calculation-input disabled)
+          .calculator__hidden-section
+            span Душевой блок
+            input#val2.calculator__value-input(type="text" name='Душевой блок' value="0" data-price='4000' data-calculation-input disabled)
+          .calculator__hidden-section
+            span Экстерьерные панели
+            input#val4.calculator__value-input(type="text" name='Экстерьерные панели' value="0" data-price='4000' data-calculation-input disabled)
+          .calculator__hidden-section
+            span Окно
+            input#val3.calculator__value-input(type="text" name='Окно' value="0" data-max='4' data-price='1000' data-calculation-input disabled)
+          .calculator__hidden-section
+            span Количество юнитов
+            input#count.calculator__value-input(type="text" name='Юнит' value="0" disabled)
+          .calculator__hidden-section
+            span Общая цена
+            input#totalprice(type="text" name='total' value='19000' disabled)
+        button(type='button' aria-label='slide back' data-slide-back).calculator__back-button
           svg(viewBox='0 0 29 8' fill='currentColor').icon
             path(d='M0.646368 3.70791C0.451107 3.90317 0.451107 4.21975 0.646368 4.41501L3.82835 7.59699C4.02361 7.79226 4.34019 7.79226 4.53546 7.59699C4.73072 7.40173 4.73072 7.08515 4.53546 6.88989L1.70703 4.06146L4.53546 1.23303C4.73072 1.03777 4.73072 0.721189 4.53546 0.525926C4.34019 0.330664 4.02361 0.330664 3.82835 0.525926L0.646368 3.70791ZM28.7991 3.56146L0.999922 3.56146L0.999922 4.56146L28.7991 4.56146L28.7991 3.56146Z')
           | Назад
         .calculator__slides
-
           //slide
           .calculator-slide
             .calculator-slide__top
@@ -39,23 +52,126 @@ block content
                 span.calculator-slide__q-title Вопрос 1
                 h2.calculator-slide__q Нужен ли встраиваемый кухонный блок?
                 .calculator-slide__buttons
-                  label(for="val-1_true").button.button_style-1.calculator-slide__button <strong>Да</strong>
-                  label(for="val-1_false").button.button_style-1.calculator-slide__button Нет
+                  label(data-slide-next for='val1' data-input-button='1').button.button_style-1.calculator-slide__button <strong>Да</strong>
+                  label(data-slide-next for='val1' data-input-button='0').button.button_style-1.calculator-slide__button Нет
               .calculator-slide__image
                 img(src="./img/image.png", alt="image")
-            button.button.button_style-2.calculator-slide__next-button Далее
+            button(type='button' data-slide-next aria-label='slide next').button.button_style-2.calculator-slide__next-button Далее
 
           //slide
-          .calculator-slide
+          .calculator-slide(data-slide-opacity)
             .calculator-slide__top
               .calculator-slide__content
                 span.calculator-slide__q-title Вопрос 2
                 h2.calculator-slide__q Нужен ли встраиваемый туалетно-душевой блок?
                 .calculator-slide__buttons
-                  label(for="val-2_true").button.button_style-1.calculator-slide__button <strong>Да</strong>
-                  label(for="val-2_false").button.button_style-1.calculator-slide__button Нет
+                  label(data-slide-next for='val2' data-input-button='1').button.button_style-1.calculator-slide__button <strong>Да</strong>
+                  label(data-slide-next for='val2' data-input-button='0').button.button_style-1.calculator-slide__button Нет
               .calculator-slide__image
                 img(src="./img/image.png", alt="image")
-            button.button.button_style-2.calculator-slide__next-button Далее
+            button(type='button' aria-label='slide next' data-slide-next).button.button_style-2.calculator-slide__next-button Далее
+
+          //slide
+          .calculator-slide(data-slide-opacity)
+            .calculator-slide__top
+              .calculator-slide__content
+                span.calculator-slide__q-title Вопрос 3
+                h2.calculator-slide__q Нужны ли экстерьерные панели?
+                .calculator-slide__buttons
+                  label(data-slide-next for='val4' data-input-button='1').button.button_style-1.calculator-slide__button <strong>Да</strong>
+                  label(data-slide-next for='val4' data-input-button='0').button.button_style-1.calculator-slide__button Нет
+              .calculator-slide__image
+                img(src="./img/image.png", alt="image")
+            button(type='button' aria-label='slide next' data-slide-next).button.button_style-2.calculator-slide__next-button Далее
+
+          //slide
+          .calculator-slide(data-slide-opacity)
+            .calculator-slide__top
+              .calculator-slide__content
+                span.calculator-slide__q-title Вопрос 4
+                h2.calculator-slide__q Нужны ли окна?
+                .calculator-slide__buttons
+                  label(data-slide-next for='val3' data-input-button='1').button.button_style-1.calculator-slide__button <strong>Да</strong>
+                  label(data-slide-next='1' for='val3' data-input-button='0').button.button_style-1.calculator-slide__button Нет
+              .calculator-slide__image
+                img(src="./img/image.png", alt="image")
+            button(type='button' aria-label='slide next' data-slide-next).button.button_style-2.calculator-slide__next-button Далее
+
+          //slide
+          .calculator-slide
+            .calculator-slide__top
+              .calculator-slide__content
+                span.calculator-slide__q-title Вопрос 5
+                h2.calculator-slide__q Сколько окон?
+                .calculator-slide__buttons
+                  .calc-count
+                    label.calc-count__button.calc-count__button_minus(for='val3' data-input-button='-')
+                      svg(viewBox='0 0 8 9' fill='currentColor').icon
+                        path(d='M0.0961912 4.35498L7.59619 0.0248524L7.59619 8.68511L0.0961912 4.35498Z')
+                    .calc-count__value 0
+                    label.calc-count__button.calc-count__button_plus(for='val3' data-input-button='+')
+                      svg(viewBox='0 0 9 9' fill='currentColor').icon
+                        path(d='M8.06665 4.35498L0.566651 0.0248524L0.56665 8.68511L8.06665 4.35498Z')
+              .calculator-slide__image
+                img(src="./img/image.png", alt="image")
+            button(type='button' aria-label='slide next' data-slide-next).button.button_style-2.calculator-slide__next-button.active Далее
 
 
+          //slide
+          .calculator-slide.calculator-slide_congratulation
+            .calculator-slide__top
+              .calculator-slide__content
+                span.calculator-slide__q-title Отлично!
+                h2.h1.calculator-slide__q Итоговая цена одного юнита составит:
+                .calculator-slide__total-price $ 
+                  span 
+                p Оставьте заказ прям сейчас, и мы дадим 
+                  mark 10% скидки 
+                  | от этой цены
+                button(type='button' aria-label='slide next' data-slide-next).button.button_style-3.calculator-slide__next-button.active Оставить заказ
+
+
+          //slide
+          .calculator-slide
+            .calculator-slide__top
+              .calculator-slide__content
+                span.calculator-slide__q-title Вопрос 1
+                h2.h1.calculator-slide__q Сколько юнитов вам необходимо?
+                .calculator-slide__buttons
+                  label(data-slide-next for='count' data-input-button='1').button.button_style-1.calculator-slide__button <strong>Одного достаточно</strong>
+                  label(data-slide-next for='count' data-input-button='Несколько').button.button_style-1.calculator-slide__button Надо несколько
+            button(type='button' aria-label='slide next' data-slide-next).button.button_style-2.calculator-slide__next-button Далее
+
+          //slide
+          .calculator-slide.form.js-validation(data-slide-opacity)
+            .calculator-slide__top
+              .calculator-slide__content
+                span.calculator-slide__q-title Вопрос 2
+                h2.h1.calculator-slide__q Для расчета стоимости доставки от производства введите свой ZIP
+                .calculator-slide__inputs
+                  .input.calculator-slide__input
+                    input(type="text" placeholder="Введите ваш ZIP" data-validate='text' name='zip').input__element
+            button(type='button' aria-label='slide next' data-slide-next='validate').button.button_style-2.calculator-slide__next-button.active Далее
+
+          //slide
+          .calculator-slide(data-slide-opacity)
+            .calculator-slide__top
+              .calculator-slide__content
+                span.calculator-slide__q-title Вопрос 3
+                h2.h1.calculator-slide__q Введите свои контактные данные для получения оффера
+                .calculator-slide__inputs
+                  .input.calculator-slide__input
+                    input(type="text" placeholder="Имя" data-validate='name' name='name').input__element
+                  .input.calculator-slide__input
+                    input(type="text" placeholder="E-mail" data-validate='email' name='email').input__element
+                  .input.calculator-slide__input
+                    input(type="text" placeholder="Номер телефона" data-validate='phone' name='phone').input__element
+            button(type='submit' aria-label='submit').button.button_style-3.calculator-slide__next-button.active Получить оффер
+
+          
+          //slide
+          .calculator-slide
+            .calculator-slide__top
+              .calculator-slide__content
+                h2.h1.calculator-slide__q Thank you for your time and attention. We will get in touch with you soon.
+            a(href="https://mobild.space/").button.button_style-3.calculator-slide__back-button Вернуться на главную
