@@ -6,12 +6,23 @@ block content
     .container.calculator__container
       a.logo(href="/")
         img(src="./img/logos/logo-black.png", alt="image")
+        img(src="./img/logos/logo-white.png", alt="image")
       .calculator__info
         .calculator__bg(style='background-image:url("./img/Rectangle 1.jpg");')
         .calculator__info-content
-          h1.calculator__title Расчет стоимости
-          .calculator__base-price 19,000 $
-          .calculator__ads
+          .calculator__info-head
+            h1.calculator__title Расчет стоимости
+            .calculator__total-price 
+              span 19,000
+              | $
+            svg(viewBox='0 0 14 9' fill='none' stroke='currentColor').icon
+              path(d='M1 1.24365L7 7.24365L13 1.24365' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+
+          .calculator__more
+            .calculator__ad 
+              span 19,000 $ 
+              | Базовая стоимость
+            .calculator__ads
 
           
       
@@ -49,61 +60,68 @@ block content
           .calculator-slide
             .calculator-slide__top
               .calculator-slide__content
-                span.calculator-slide__q-title Вопрос 1
-                h2.calculator-slide__q Нужен ли встраиваемый кухонный блок?
+                .calculator-slide__head
+                  span.calculator-slide__q-title Вопрос 1
+                  h2.calculator-slide__q Нужен ли встраиваемый кухонный блок?
+                .calculator-slide__image
+                  img(src="./img/image.png", alt="image")
                 .calculator-slide__buttons
                   label(data-slide-next for='val1' data-input-button='1').button.button_style-1.calculator-slide__button <strong>Да</strong>
                   label(data-slide-next for='val1' data-input-button='0').button.button_style-1.calculator-slide__button Нет
-              .calculator-slide__image
-                img(src="./img/image.png", alt="image")
             button(type='button' data-slide-next aria-label='slide next').button.button_style-2.calculator-slide__next-button Далее
 
           //slide
           .calculator-slide(data-slide-opacity)
             .calculator-slide__top
               .calculator-slide__content
-                span.calculator-slide__q-title Вопрос 2
-                h2.calculator-slide__q Нужен ли встраиваемый туалетно-душевой блок?
+                .calculator-slide__head
+                  span.calculator-slide__q-title Вопрос 2
+                  h2.calculator-slide__q Нужен ли встраиваемый туалетно-душевой блок?
+                .calculator-slide__image
+                  img(src="./img/image.png", alt="image")
                 .calculator-slide__buttons
                   label(data-slide-next for='val2' data-input-button='1').button.button_style-1.calculator-slide__button <strong>Да</strong>
                   label(data-slide-next for='val2' data-input-button='0').button.button_style-1.calculator-slide__button Нет
-              .calculator-slide__image
-                img(src="./img/image.png", alt="image")
             button(type='button' aria-label='slide next' data-slide-next).button.button_style-2.calculator-slide__next-button Далее
 
           //slide
           .calculator-slide(data-slide-opacity)
             .calculator-slide__top
               .calculator-slide__content
-                span.calculator-slide__q-title Вопрос 3
-                h2.calculator-slide__q Нужны ли экстерьерные панели?
+                .calculator-slide__head
+                  span.calculator-slide__q-title Вопрос 3
+                  h2.calculator-slide__q Нужны ли экстерьерные панели?
+                .calculator-slide__image
+                  img(src="./img/image.png", alt="image")
                 .calculator-slide__buttons
                   label(data-slide-next for='val4' data-input-button='1').button.button_style-1.calculator-slide__button <strong>Да</strong>
                   label(data-slide-next for='val4' data-input-button='0').button.button_style-1.calculator-slide__button Нет
-              .calculator-slide__image
-                img(src="./img/image.png", alt="image")
             button(type='button' aria-label='slide next' data-slide-next).button.button_style-2.calculator-slide__next-button Далее
 
           //slide
           .calculator-slide(data-slide-opacity)
             .calculator-slide__top
               .calculator-slide__content
-                span.calculator-slide__q-title Вопрос 4
-                h2.calculator-slide__q Нужны ли окна?
+                .calculator-slide__head
+                  span.calculator-slide__q-title Вопрос 4
+                  h2.calculator-slide__q Нужны ли окна?
+                .calculator-slide__image
+                  img(src="./img/image.png", alt="image")
                 .calculator-slide__buttons
                   label(data-slide-next for='val3' data-input-button='1').button.button_style-1.calculator-slide__button <strong>Да</strong>
                   label(data-slide-next='1' for='val3' data-input-button='0').button.button_style-1.calculator-slide__button Нет
-              .calculator-slide__image
-                img(src="./img/image.png", alt="image")
             button(type='button' aria-label='slide next' data-slide-next).button.button_style-2.calculator-slide__next-button Далее
 
           //slide
           .calculator-slide
             .calculator-slide__top
               .calculator-slide__content
-                span.calculator-slide__q-title Вопрос 5
-                h2.calculator-slide__q Сколько окон?
-                .calculator-slide__buttons
+                .calculator-slide__head
+                  span.calculator-slide__q-title Вопрос 5
+                  h2.calculator-slide__q Сколько окон?
+                .calculator-slide__image
+                  img(src="./img/image.png", alt="image")
+                .calculator-slide__count
                   .calc-count
                     label.calc-count__button.calc-count__button_minus(for='val3' data-input-button='-')
                       svg(viewBox='0 0 8 9' fill='currentColor').icon
@@ -112,66 +130,63 @@ block content
                     label.calc-count__button.calc-count__button_plus(for='val3' data-input-button='+')
                       svg(viewBox='0 0 9 9' fill='currentColor').icon
                         path(d='M8.06665 4.35498L0.566651 0.0248524L0.56665 8.68511L8.06665 4.35498Z')
-              .calculator-slide__image
-                img(src="./img/image.png", alt="image")
             button(type='button' aria-label='slide next' data-slide-next).button.button_style-2.calculator-slide__next-button.active Далее
 
 
           //slide
           .calculator-slide.calculator-slide_congratulation
             .calculator-slide__top
-              .calculator-slide__content
+              .calculator-slide__head
                 span.calculator-slide__q-title Отлично!
                 h2.h1.calculator-slide__q Итоговая цена одного юнита составит:
-                .calculator-slide__total-price $ 
-                  span 
-                p Оставьте заказ прям сейчас, и мы дадим 
-                  mark 10% скидки 
-                  | от этой цены
-                button(type='button' aria-label='slide next' data-slide-next).button.button_style-3.calculator-slide__next-button.active Оставить заказ
+              .calculator-slide__total-price $ 
+                span 
+              p Оставьте заказ прям сейчас, и мы дадим 
+                mark 10% скидки 
+                | от этой цены
+            button(type='button' aria-label='slide next' data-slide-next).button.button_style-3.calculator-slide__next-button.active Оставить заказ
 
 
           //slide
           .calculator-slide
             .calculator-slide__top
-              .calculator-slide__content
+              .calculator-slide__head
                 span.calculator-slide__q-title Вопрос 1
                 h2.h1.calculator-slide__q Сколько юнитов вам необходимо?
-                .calculator-slide__buttons
-                  label(data-slide-next for='count' data-input-button='1').button.button_style-1.calculator-slide__button <strong>Одного достаточно</strong>
-                  label(data-slide-next for='count' data-input-button='Несколько').button.button_style-1.calculator-slide__button Надо несколько
+              .calculator-slide__buttons.calculator-slide__buttons_type-2
+                label(data-slide-next for='count' data-input-button='1').button.button_style-1.calculator-slide__button.calculator-slide__button_type-2 <strong>Одного достаточно</strong>
+                label(data-slide-next for='count' data-input-button='Несколько').button.button_style-1.calculator-slide__button.calculator-slide__button_type-2 Надо несколько
             button(type='button' aria-label='slide next' data-slide-next).button.button_style-2.calculator-slide__next-button Далее
 
           //slide
           .calculator-slide.form.js-validation(data-slide-opacity)
             .calculator-slide__top
-              .calculator-slide__content
+              .calculator-slide__head
                 span.calculator-slide__q-title Вопрос 2
                 h2.h1.calculator-slide__q Для расчета стоимости доставки от производства введите свой ZIP
-                .calculator-slide__inputs
-                  .input.calculator-slide__input
-                    input(type="text" placeholder="Введите ваш ZIP" data-validate='text' name='zip').input__element
+              .calculator-slide__inputs
+                .input.calculator-slide__input
+                  input(type="text" placeholder="Введите ваш ZIP" data-validate='text' name='zip').input__element
             button(type='button' aria-label='slide next' data-slide-next='validate').button.button_style-2.calculator-slide__next-button.active Далее
 
           //slide
           .calculator-slide(data-slide-opacity)
             .calculator-slide__top
-              .calculator-slide__content
+              .calculator-slide__head
                 span.calculator-slide__q-title Вопрос 3
                 h2.h1.calculator-slide__q Введите свои контактные данные для получения оффера
-                .calculator-slide__inputs
-                  .input.calculator-slide__input
-                    input(type="text" placeholder="Имя" data-validate='name' name='name').input__element
-                  .input.calculator-slide__input
-                    input(type="text" placeholder="E-mail" data-validate='email' name='email').input__element
-                  .input.calculator-slide__input
-                    input(type="text" placeholder="Номер телефона" data-validate='phone' name='phone').input__element
+              .calculator-slide__inputs
+                .input.calculator-slide__input
+                  input(type="text" placeholder="Имя" data-validate='name' name='name').input__element
+                .input.calculator-slide__input
+                  input(type="text" placeholder="E-mail" data-validate='email' name='email').input__element
+                .input.calculator-slide__input
+                  input(type="text" placeholder="Номер телефона" data-validate='phone' name='phone').input__element
             button(type='submit' aria-label='submit').button.button_style-3.calculator-slide__next-button.active Получить оффер
 
           
           //slide
           .calculator-slide
             .calculator-slide__top
-              .calculator-slide__content
-                h2.h1.calculator-slide__q Thank you for your time and attention. We will get in touch with you soon.
+              h2.h1.calculator-slide__q Thank you for your time and attention. We will get in touch with you soon.
             a(href="https://mobild.space/").button.button_style-3.calculator-slide__back-button Вернуться на главную

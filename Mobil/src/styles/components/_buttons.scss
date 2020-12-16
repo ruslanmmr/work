@@ -10,7 +10,7 @@
   line-height: 56px;
   padding: 0 30px;
   width: 100%;
-  font-size: 1.125rem;
+  font-size: inherit;
   text-decoration: none;
   font-weight: 500;
   &_style-1 {
@@ -37,8 +37,7 @@
       background-color: rgba(255, 255, 255, 0.2);
     }
     &[data-focus] {
-      color: var(--color-dark);
-      background-color: var(--color-light);
+      background-color: rgba(255, 255, 255, 0.3);
     }
   }
   &_style-3 {
@@ -56,5 +55,15 @@
       background-color: var(--color-accent-focus);
       border-color: var(--color-accent-focus);
     }
+  }
+  @include media-breakpoint-down(xl) {
+    height: 50px;
+    line-height: 46px;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 40px;
+    line-height: 36px;
+    text-align: center;
+    justify-content: center;
   }
 }

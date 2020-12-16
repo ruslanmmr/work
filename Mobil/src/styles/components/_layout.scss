@@ -21,11 +21,24 @@
     min-height: 600px;
   }
 }
-
-
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(xl) {
   .container {
-    padding-right: $mobile-container-padding-x;
-    padding-left: $mobile-container-padding-x;
+    max-width: map-get($container-max-widths, lg);
+  }
+  .wrapper {
+    min-height: 520px;
+  }
+}
+@include media-breakpoint-down(lg) {
+  .container {
+    max-width: map-get($container-max-widths, md);
+  }
+  .wrapper {
+    min-height: 740px;
+  }
+}
+@include media-breakpoint-down(sm) {
+  .wrapper {
+    min-height: 600px;
   }
 }

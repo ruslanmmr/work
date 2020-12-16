@@ -38,13 +38,21 @@
   <body>
     <div class="wrapper" style="opacity:0;visibility:hidden;">
       <main class="main calculator">
-        <div class="container calculator__container"><a class="logo" href="/"><img src="./img/logos/logo-black.png" alt="image"></a>
+        <div class="container calculator__container"><a class="logo" href="/"><img src="./img/logos/logo-black.png" alt="image"><img src="./img/logos/logo-white.png" alt="image"></a>
           <div class="calculator__info">
             <div class="calculator__bg" style="background-image:url(&quot;./img/Rectangle 1.jpg&quot;);"></div>
             <div class="calculator__info-content">
-              <h1 class="calculator__title">Расчет стоимости</h1>
-              <div class="calculator__base-price">19,000 $</div>
-              <div class="calculator__ads"></div>
+              <div class="calculator__info-head">
+                <h1 class="calculator__title">Расчет стоимости</h1>
+                <div class="calculator__total-price"> <span>19,000</span>$</div>
+                <svg class="icon" viewBox="0 0 14 9" fill="none" stroke="currentColor">
+                  <path d="M1 1.24365L7 7.24365L13 1.24365" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="calculator__more">
+                <div class="calculator__ad"> <span>19,000 $ </span>Базовая стоимость</div>
+                <div class="calculator__ads"></div>
+              </div>
             </div>
           </div>
           <form class="form js-validation calculator__content">
@@ -81,65 +89,76 @@
               <!--slide-->
               <div class="calculator-slide">
                 <div class="calculator-slide__top">
-                  <div class="calculator-slide__content"><span class="calculator-slide__q-title">Вопрос 1</span>
-                    <h2 class="calculator-slide__q">Нужен ли встраиваемый кухонный блок?</h2>
+                  <div class="calculator-slide__content">
+                    <div class="calculator-slide__head"><span class="calculator-slide__q-title">Вопрос 1</span>
+                      <h2 class="calculator-slide__q">Нужен ли встраиваемый кухонный блок?</h2>
+                    </div>
+                    <div class="calculator-slide__image"><img src="./img/image.png" alt="image"></div>
                     <div class="calculator-slide__buttons">
                       <label class="button button_style-1 calculator-slide__button" data-slide-next for="val1" data-input-button="1"><strong>Да</strong></label>
                       <label class="button button_style-1 calculator-slide__button" data-slide-next for="val1" data-input-button="0">Нет</label>
                     </div>
                   </div>
-                  <div class="calculator-slide__image"><img src="./img/image.png" alt="image"></div>
                 </div>
                 <button class="button button_style-2 calculator-slide__next-button" type="button" data-slide-next aria-label="slide next">Далее</button>
               </div>
               <!--slide-->
               <div class="calculator-slide" data-slide-opacity>
                 <div class="calculator-slide__top">
-                  <div class="calculator-slide__content"><span class="calculator-slide__q-title">Вопрос 2</span>
-                    <h2 class="calculator-slide__q">Нужен ли встраиваемый туалетно-душевой блок?</h2>
+                  <div class="calculator-slide__content">
+                    <div class="calculator-slide__head"><span class="calculator-slide__q-title">Вопрос 2</span>
+                      <h2 class="calculator-slide__q">Нужен ли встраиваемый туалетно-душевой блок?</h2>
+                    </div>
+                    <div class="calculator-slide__image"><img src="./img/image.png" alt="image"></div>
                     <div class="calculator-slide__buttons">
                       <label class="button button_style-1 calculator-slide__button" data-slide-next for="val2" data-input-button="1"><strong>Да</strong></label>
                       <label class="button button_style-1 calculator-slide__button" data-slide-next for="val2" data-input-button="0">Нет</label>
                     </div>
                   </div>
-                  <div class="calculator-slide__image"><img src="./img/image.png" alt="image"></div>
                 </div>
                 <button class="button button_style-2 calculator-slide__next-button" type="button" aria-label="slide next" data-slide-next>Далее</button>
               </div>
               <!--slide-->
               <div class="calculator-slide" data-slide-opacity>
                 <div class="calculator-slide__top">
-                  <div class="calculator-slide__content"><span class="calculator-slide__q-title">Вопрос 3</span>
-                    <h2 class="calculator-slide__q">Нужны ли экстерьерные панели?</h2>
+                  <div class="calculator-slide__content">
+                    <div class="calculator-slide__head"><span class="calculator-slide__q-title">Вопрос 3</span>
+                      <h2 class="calculator-slide__q">Нужны ли экстерьерные панели?</h2>
+                    </div>
+                    <div class="calculator-slide__image"><img src="./img/image.png" alt="image"></div>
                     <div class="calculator-slide__buttons">
                       <label class="button button_style-1 calculator-slide__button" data-slide-next for="val4" data-input-button="1"><strong>Да</strong></label>
                       <label class="button button_style-1 calculator-slide__button" data-slide-next for="val4" data-input-button="0">Нет</label>
                     </div>
                   </div>
-                  <div class="calculator-slide__image"><img src="./img/image.png" alt="image"></div>
                 </div>
                 <button class="button button_style-2 calculator-slide__next-button" type="button" aria-label="slide next" data-slide-next>Далее</button>
               </div>
               <!--slide-->
               <div class="calculator-slide" data-slide-opacity>
                 <div class="calculator-slide__top">
-                  <div class="calculator-slide__content"><span class="calculator-slide__q-title">Вопрос 4</span>
-                    <h2 class="calculator-slide__q">Нужны ли окна?</h2>
+                  <div class="calculator-slide__content">
+                    <div class="calculator-slide__head"><span class="calculator-slide__q-title">Вопрос 4</span>
+                      <h2 class="calculator-slide__q">Нужны ли окна?</h2>
+                    </div>
+                    <div class="calculator-slide__image"><img src="./img/image.png" alt="image"></div>
                     <div class="calculator-slide__buttons">
                       <label class="button button_style-1 calculator-slide__button" data-slide-next for="val3" data-input-button="1"><strong>Да</strong></label>
                       <label class="button button_style-1 calculator-slide__button" data-slide-next="1" for="val3" data-input-button="0">Нет</label>
                     </div>
                   </div>
-                  <div class="calculator-slide__image"><img src="./img/image.png" alt="image"></div>
                 </div>
                 <button class="button button_style-2 calculator-slide__next-button" type="button" aria-label="slide next" data-slide-next>Далее</button>
               </div>
               <!--slide-->
               <div class="calculator-slide">
                 <div class="calculator-slide__top">
-                  <div class="calculator-slide__content"><span class="calculator-slide__q-title">Вопрос 5</span>
-                    <h2 class="calculator-slide__q">Сколько окон?</h2>
-                    <div class="calculator-slide__buttons">
+                  <div class="calculator-slide__content">
+                    <div class="calculator-slide__head"><span class="calculator-slide__q-title">Вопрос 5</span>
+                      <h2 class="calculator-slide__q">Сколько окон?</h2>
+                    </div>
+                    <div class="calculator-slide__image"><img src="./img/image.png" alt="image"></div>
+                    <div class="calculator-slide__count">
                       <div class="calc-count">
                         <label class="calc-count__button calc-count__button_minus" for="val3" data-input-button="-">
                           <svg class="icon" viewBox="0 0 8 9" fill="currentColor">
@@ -155,32 +174,31 @@
                       </div>
                     </div>
                   </div>
-                  <div class="calculator-slide__image"><img src="./img/image.png" alt="image"></div>
                 </div>
                 <button class="button button_style-2 calculator-slide__next-button active" type="button" aria-label="slide next" data-slide-next>Далее</button>
               </div>
               <!--slide-->
               <div class="calculator-slide calculator-slide_congratulation">
                 <div class="calculator-slide__top">
-                  <div class="calculator-slide__content"><span class="calculator-slide__q-title">Отлично!</span>
+                  <div class="calculator-slide__head"><span class="calculator-slide__q-title">Отлично!</span>
                     <h2 class="h1 calculator-slide__q">Итоговая цена одного юнита составит:</h2>
-                    <div class="calculator-slide__total-price">$ <span> </span></div>
-                    <p>Оставьте заказ прям сейчас, и мы дадим
-                      <mark>10% скидки </mark>от этой цены
-                    </p>
-                    <button class="button button_style-3 calculator-slide__next-button active" type="button" aria-label="slide next" data-slide-next>Оставить заказ</button>
                   </div>
+                  <div class="calculator-slide__total-price">$ <span> </span></div>
+                  <p>Оставьте заказ прям сейчас, и мы дадим
+                    <mark>10% скидки </mark>от этой цены
+                  </p>
                 </div>
+                <button class="button button_style-3 calculator-slide__next-button active" type="button" aria-label="slide next" data-slide-next>Оставить заказ</button>
               </div>
               <!--slide-->
               <div class="calculator-slide">
                 <div class="calculator-slide__top">
-                  <div class="calculator-slide__content"><span class="calculator-slide__q-title">Вопрос 1</span>
+                  <div class="calculator-slide__head"><span class="calculator-slide__q-title">Вопрос 1</span>
                     <h2 class="h1 calculator-slide__q">Сколько юнитов вам необходимо?</h2>
-                    <div class="calculator-slide__buttons">
-                      <label class="button button_style-1 calculator-slide__button" data-slide-next for="count" data-input-button="1"><strong>Одного достаточно</strong></label>
-                      <label class="button button_style-1 calculator-slide__button" data-slide-next for="count" data-input-button="Несколько">Надо несколько</label>
-                    </div>
+                  </div>
+                  <div class="calculator-slide__buttons calculator-slide__buttons_type-2">
+                    <label class="button button_style-1 calculator-slide__button calculator-slide__button_type-2" data-slide-next for="count" data-input-button="1"><strong>Одного достаточно</strong></label>
+                    <label class="button button_style-1 calculator-slide__button calculator-slide__button_type-2" data-slide-next for="count" data-input-button="Несколько">Надо несколько</label>
                   </div>
                 </div>
                 <button class="button button_style-2 calculator-slide__next-button" type="button" aria-label="slide next" data-slide-next>Далее</button>
@@ -188,12 +206,12 @@
               <!--slide-->
               <div class="calculator-slide form js-validation" data-slide-opacity>
                 <div class="calculator-slide__top">
-                  <div class="calculator-slide__content"><span class="calculator-slide__q-title">Вопрос 2</span>
+                  <div class="calculator-slide__head"><span class="calculator-slide__q-title">Вопрос 2</span>
                     <h2 class="h1 calculator-slide__q">Для расчета стоимости доставки от производства введите свой ZIP</h2>
-                    <div class="calculator-slide__inputs">
-                      <div class="input calculator-slide__input">
-                        <input class="input__element" type="text" placeholder="Введите ваш ZIP" data-validate="text" name="zip">
-                      </div>
+                  </div>
+                  <div class="calculator-slide__inputs">
+                    <div class="input calculator-slide__input">
+                      <input class="input__element" type="text" placeholder="Введите ваш ZIP" data-validate="text" name="zip">
                     </div>
                   </div>
                 </div>
@@ -202,18 +220,18 @@
               <!--slide-->
               <div class="calculator-slide" data-slide-opacity>
                 <div class="calculator-slide__top">
-                  <div class="calculator-slide__content"><span class="calculator-slide__q-title">Вопрос 3</span>
+                  <div class="calculator-slide__head"><span class="calculator-slide__q-title">Вопрос 3</span>
                     <h2 class="h1 calculator-slide__q">Введите свои контактные данные для получения оффера</h2>
-                    <div class="calculator-slide__inputs">
-                      <div class="input calculator-slide__input">
-                        <input class="input__element" type="text" placeholder="Имя" data-validate="name" name="name">
-                      </div>
-                      <div class="input calculator-slide__input">
-                        <input class="input__element" type="text" placeholder="E-mail" data-validate="email" name="email">
-                      </div>
-                      <div class="input calculator-slide__input">
-                        <input class="input__element" type="text" placeholder="Номер телефона" data-validate="phone" name="phone">
-                      </div>
+                  </div>
+                  <div class="calculator-slide__inputs">
+                    <div class="input calculator-slide__input">
+                      <input class="input__element" type="text" placeholder="Имя" data-validate="name" name="name">
+                    </div>
+                    <div class="input calculator-slide__input">
+                      <input class="input__element" type="text" placeholder="E-mail" data-validate="email" name="email">
+                    </div>
+                    <div class="input calculator-slide__input">
+                      <input class="input__element" type="text" placeholder="Номер телефона" data-validate="phone" name="phone">
                     </div>
                   </div>
                 </div>
@@ -222,9 +240,7 @@
               <!--slide-->
               <div class="calculator-slide">
                 <div class="calculator-slide__top">
-                  <div class="calculator-slide__content">
-                    <h2 class="h1 calculator-slide__q">Thank you for your time and attention. We will get in touch with you soon.</h2>
-                  </div>
+                  <h2 class="h1 calculator-slide__q">Thank you for your time and attention. We will get in touch with you soon.</h2>
                 </div><a class="button button_style-3 calculator-slide__back-button" href="https://mobild.space/">Вернуться на главную</a>
               </div>
             </div>

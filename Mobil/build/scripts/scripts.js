@@ -15,17 +15,17 @@ var brakepoints = {
 };
 var $body = document.body;
 var $wrapper = document.querySelector('.wrapper');
-var speed = 0.5; //seconds
 
 window.onload = function () {
   gsap.to($wrapper, {
     autoAlpha: 1,
-    duration: speed,
+    duration: 1,
     ease: 'power2.inOut'
   });
   TouchHoverEvents.init();
   Slider.init();
   Form.init();
+  MobileInfo.init();
   Validation.init();
 };
 
@@ -208,12 +208,12 @@ var Form = {
     }); //calc price
 
     var $calculation_inputs = document.querySelectorAll('[data-calculation-input]'),
-        $total = document.querySelector('.calculator-slide__total-price span'),
+        $total = document.querySelectorAll('.calculator-slide__total-price span, .calculator__total-price span'),
         $total_input = document.querySelector('#totalprice'),
         $ads_container = document.querySelector('.calculator__ads');
 
     var checkPrice = function checkPrice() {
-      var $ads = document.querySelectorAll('.calculator__ad');
+      var $ads = document.querySelectorAll('.calculator__ads .calculator__ad');
       $ads.forEach(function ($this) {
         $this.remove();
       });
@@ -227,11 +227,13 @@ var Form = {
           var name = $input.getAttribute('name');
 
           for (var i = 0; i < value; i++) {
-            $ads_container.insertAdjacentHTML('beforeend', "<div class=\"calculator__ad\"><span>+".concat(price, " $</span> ").concat(name, "</div>"));
+            $ads_container.insertAdjacentHTML('beforeend', "<div class=\"calculator__ad\"><span>+".concat(priceCorrecting(price, 2, ','), " $</span>").concat(name, "</div>"));
           }
         }
       });
-      $total.textContent = priceCorrecting(total, 2, ',');
+      $total.forEach(function ($el) {
+        $el.textContent = priceCorrecting(total, 2, ',') + ' ';
+      });
       $total_input.value = total; //
     };
 
@@ -251,11 +253,6 @@ var Form = {
         }
       });
     });
-  },
-  on: function on(callback, func) {
-    if (callback == 'changed') {
-      this.changed_callback = func;
-    }
   }
 };
 var Slider = {
@@ -333,7 +330,9 @@ var Slider = {
     });
     this.animation.eventCallback('onComplete', function () {
       _this5.inAnimation = false;
-    });
+    }); //speed
+
+    if (this.step == 0) this.speed = 1;else this.speed = 0.6;
     var $slide = this.$slides[this.steps[this.step]],
         $prev_slide = this.$slides[this.steps[this.step - 1]],
         $next_slide = this.$slides[this.steps[this.step] + 1];
@@ -342,44 +341,41 @@ var Slider = {
     if (this.step == 0) {
       var timeline = gsap.timeline().to($slide, {
         autoAlpha: 1,
-        duration: speed,
+        duration: this.speed,
         ease: 'power2.inOut'
       }).fromTo($slide, {
-        y: this.m
+        y: 200
       }, {
         y: 0,
-        duration: speed,
-        ease: 'power2.out'
-      }, "-=".concat(speed));
+        duration: this.speed,
+        ease: 'power2.inOut'
+      }, "-=".concat(this.speed));
       this.animation.add(timeline, ">");
     } else {
-      var y = this.m,
-          ease = 'power2.out';
+      var y = $prev_slide.getBoundingClientRect().height + this.m;
 
-      if ($slide.getAttribute('data-slide-opacity') !== null) {
-        y = $prev_slide.getBoundingClientRect().height + this.m;
-        ease = 'power2.inOut';
-      }
+      if ($slide.getAttribute('data-slide-opacity') !== null) {}
 
       var _timeline = gsap.timeline().to($prev_slide, {
         autoAlpha: 0,
-        duration: speed,
+        duration: this.speed,
         ease: 'power2.inOut'
       }).to($prev_slide, {
-        y: -this.m,
-        duration: speed,
-        ease: 'power2.in'
-      }, "-=".concat(speed)).to($slide, {
-        autoAlpha: 1,
-        duration: speed,
+        y: -y,
+        scale: 0.7,
+        duration: this.speed,
         ease: 'power2.inOut'
-      }, "-=".concat(speed - 0.1)).fromTo($slide, {
+      }, "-=".concat(this.speed)).to($slide, {
+        autoAlpha: 1,
+        duration: this.speed,
+        ease: 'power2.inOut'
+      }, "-=".concat(this.speed)).fromTo($slide, {
         y: y
       }, {
         y: 0,
-        duration: speed,
-        ease: ease
-      }, "-=".concat(speed));
+        duration: this.speed,
+        ease: 'power2.inOut'
+      }, "-=".concat(this.speed));
 
       this.animation.add(_timeline, ">"); //scale
 
@@ -389,29 +385,33 @@ var Slider = {
           scale: 0.8
         }, {
           scale: 1,
-          duration: speed,
-          ease: 'power2.out'
+          duration: this.speed,
+          ease: 'power2.inOut'
         });
-        this.animation.add(scale, ">-".concat(speed));
+        this.animation.add(scale, ">-".concat(this.speed));
       }
     }
 
     if ($next_slide && $next_slide.getAttribute('data-slide-opacity') !== null) {
-      var _y = $slide.getBoundingClientRect().height;
+      var y1 = $slide.getBoundingClientRect().height,
+          y2 = $prev_slide ? $prev_slide.getBoundingClientRect().height : y1,
+          val1 = y1 + y2 + this.m + this.m,
+          val2 = y1 + this.m;
+      if (this.step == 0) val1 = 200 + y1 + this.m;
 
       var _timeline2 = gsap.timeline().to($next_slide, {
         autoAlpha: 0.2,
-        duration: speed / 2,
+        duration: this.speed,
         ease: 'power2.inOut'
       }).fromTo($next_slide, {
-        y: _y + this.m + this.m
+        y: val1
       }, {
-        y: _y + this.m,
-        duration: speed / 2,
-        ease: 'power2.out'
-      }, "-=".concat(speed / 2));
+        y: val2,
+        duration: this.speed,
+        ease: 'power2.inOut'
+      }, "-=".concat(this.speed));
 
-      this.animation.add(_timeline2, ">-".concat(speed / 3));
+      this.animation.add(_timeline2, ">-".concat(this.speed));
     }
 
     this.animation.play();
@@ -419,7 +419,7 @@ var Slider = {
   prev: function prev() {
     var _this6 = this;
 
-    this.animations[this.step + 1].reverse();
+    this.animations[this.step + 1].duration(0.4).reverse();
     this.animations[this.step + 1].eventCallback('onReverseComplete', function () {
       _this6.inAnimation = false;
     });
@@ -615,6 +615,25 @@ var Validation = {
             $msg.remove();
           });
         }
+      }
+    });
+  }
+};
+var MobileInfo = {
+  init: function init() {
+    var _this9 = this;
+
+    var $toggle = document.querySelector('.calculator__info-head'),
+        $block = document.querySelector('.calculator__info');
+    $toggle.addEventListener('click', function () {
+      if (!_this9.flag) {
+        _this9.flag = true;
+        $block.classList.add('active');
+        $toggle.classList.add('active');
+      } else {
+        _this9.flag = false;
+        $block.classList.remove('active');
+        $toggle.classList.remove('active');
       }
     });
   }

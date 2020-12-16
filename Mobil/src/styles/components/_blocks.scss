@@ -17,8 +17,8 @@
   }
   &__info {
     flex: 0 0 460px;
-    position: relative;
     height: 100%;
+    position: relative;
   }
   &__info-content {
     height: 100%;
@@ -28,12 +28,17 @@
     z-index: 2;
     font-weight: 600;
   }
+  &__info-head {
+    .icon {
+      display: none;
+    }
+  }
   &__title {
     font-size: 3.25rem;
     line-height: 1;
     margin: 0 0 40px 0;
   }
-  &__base-price {
+  &__total-price {
     background-color: var(--color-accent);
     font-size: 2.25rem;
     line-height: 60px;
@@ -41,17 +46,20 @@
     text-align: center;
     color: var(--color-light);
   }
-  &__ads {
-    margin: 45px 0 0 0;
+  &__more {
+    margin: 40px 0 0 0;
     padding-top: 13px;
     border-top: 2px solid var(--color-accent);
   }
   &__ad {
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
+    margin-bottom: 10px;
     span {
       color: var(--color-accent);
+      display: inline-block;
+      width: 5.1em;
+      text-align: right;
+      padding-right: 10px;
+      white-space: nowrap;
     }
   }
   &__slides {
@@ -64,6 +72,9 @@
     position: relative;
     padding-left: 140px;
     padding-top: 180px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
   }
   &__back-button {
     position: absolute;
@@ -76,9 +87,12 @@
     visibility: hidden;
     transition: opacity $trs2, visibility $trs2;
     font-weight: 400;
+    pointer-events: none;
+    z-index: 100;
     &.active {
       opacity: 1;
       visibility: visible;
+      pointer-events: all;
     }
     .icon {
       margin-right: 11px;
@@ -98,11 +112,12 @@
     color: #fff;
     position: fixed;
     z-index: 1000;
-    opacity: 0.3;
     top: 0;
     right: 0;
     width: 200px;
     font-size: 0.75rem;
+    opacity: 0;
+    visibility: hidden;
     input {
       appearance: auto;
       background-color: #fff;
@@ -127,8 +142,8 @@
       font-size: 2.25rem;
       margin: 0 0 35px 0;
     }
-    &__ads {
-      margin: 40px 0 0 0;
+    &__more {
+      margin: 35px 0 0 0;
     } 
     &__back-button {
       top: 50px;
@@ -136,7 +151,7 @@
     &__info {
       flex: 0 0 370px;
     }
-    &__base-price {
+    &__total-price {
       font-size: 2rem;
     }
     &__info-content {
@@ -147,6 +162,134 @@
       width: calc(100% + #{$xl-field});
     }
   }
+  @include media-breakpoint-down(xl) {
+    &__content {
+      padding-left: 60px;
+      padding-top: 120px;
+    }
+    &__title {
+      font-size: 1.75rem;
+      margin: 0 0 30px 0;
+    }
+    &__more {
+      margin: 30px 0 0 0;
+    }
+    &__info {
+      flex: 0 0 340px;
+    }
+    &__total-price {
+      font-size: 1.5rem;
+      line-height: 50px;
+    }
+    &__info-content {
+      padding-right: 60px;
+      padding-top: 152px;
+    }
+    &__bg {
+      width: calc(100% + #{$lg-field});
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__info {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100000;
+      background-color: var(--color-accent);
+      color: var(--color-light);
+      height: auto;
+      transform: translateY(100%);
+      transition: transform $trs1;
+      &.active {
+        transform: translateY(0);
+      }
+    }
+    &__info-content {
+      padding: 0;
+    }
+    &__info-head {
+      position: absolute;
+      width: 100%;
+      bottom: 100%;
+      background-color: var(--color-accent);
+      padding: 0 $container-padding-x;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 76px;
+      user-select: none;
+      cursor: pointer;
+      .icon {
+        display: block;
+        position: absolute;
+        right: $container-padding-x;
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        margin-top: -5px;
+        transition: transform $trs1;
+      }
+      &.active {
+        .icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &__total-price {
+      padding: 0;
+      font-size: 1.875rem;
+      line-height: 1;
+      text-align: left;
+      color: inherit;
+    }
+    &__ad {
+      span {
+        color: var(--color-light);
+      }
+    }
+    &__more {
+      padding: 24px 24px 14px 24px;
+      margin: 0;
+      border: none;
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        width: calc(100% - #{$container-padding-x * 2});
+        height: 2px;
+        background-color: var(--color-light);
+        left: $container-padding-x;
+      }
+    }
+    &__title {
+      font-size: 0.875rem;
+      line-height: 1;
+      margin: 0 0 5px 0;
+    }
+    &__bg {
+      display: none;
+    }
+    &__content {
+      padding-left: 0;
+      padding-top: 150px;
+      padding-bottom: 120px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__content {
+      padding: 100px 0;
+    }
+    &__back-button {
+      top: 100px;
+      line-height: 22px;
+      left: auto;
+      right: 0;
+      font-size: 0.875rem;
+    }
+  }
 }
 
 .calculator-slide {
@@ -155,32 +298,33 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  &.dev {
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: all;
-  }
+  color: var(--color-light);
   &.active {
     pointer-events: all;
   }
-  &__top {
-    display: flex;
-  }
   &__content {
-    flex: 1 1 100%;
-    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 260px;
+    padding-right: 320px;
   }
   &__image {
-    position: relative;
-    flex: 0 0 260px;
-    min-height: 250px;
-    margin-left: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 260px;
+    height: 100%;
+    min-height: 260px;
     img {
       display: block;
       position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      top: 0;
+      left: 0;
     }
   }
   &__q-title {
@@ -191,9 +335,15 @@
     margin: 0 0 15px 0;
     line-height: 1;
   }
-  &__q {
-    margin: 0 0 40px 0;
-    display: block;
+  &__head {
+    flex: 0 0 auto;
+    margin-bottom: 40px;
+  }
+  &__count {
+    display: flex;
+    align-items: center;
+    flex: 1 1 100%;
+    margin: -40px 0 0 0;
   }
   &__button {
     &:not(:last-child) {
@@ -214,9 +364,10 @@
   }
   &__total-price {
     font-size: 68px;
-    display: flex;
+    display: inline-flex;
     white-space: nowrap;
     align-items: center;
+    justify-content: center;
     line-height: 1;
     font-weight: 700;
     color: var(--color-accent);
@@ -249,6 +400,98 @@
       margin-top: 60px;
     }
   }
+  @include media-breakpoint-down(xl) {
+    &__image {
+      width: 240px;
+      min-height: 240px;
+    }
+    &__content {
+      padding-right: 270px;
+      min-height: 240px;
+    }
+    &__head {
+      margin-bottom: 30px;
+    }
+    &__count {
+      margin: -30px 0 0 0;
+    }
+    &__total-price {
+      font-size: 42px;
+      margin: 0 0 40px 0;
+    }
+    &__inputs {
+      margin-bottom: 10px;
+    }
+    &__back-button {
+      margin-top: 60px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__image {
+      width: calc(50% - 12px);
+      min-height: 280px;
+    }
+    &__content {
+      min-height: 280px;
+      padding-right: calc(50% + 12px);
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__top {
+      display: block;
+    }
+    &__q-title {
+      line-height: 22px;
+      margin-bottom: 15px;
+    }
+    &__head {
+      margin-bottom: 24px;
+    }
+    &__content {
+      padding: 0;
+      min-height: 0px;
+    }
+    &__image {
+      width: 100%;
+      min-height: 0px;
+      position: relative;
+      margin: 0;
+      min-height: 0px;
+      margin-bottom: 24px;
+      &::before {
+        content: '';
+        display: block;
+        padding-top: 50%;
+      }
+    }
+    &__content {
+      display: block;
+    }
+    &__buttons:not(.calculator-slide__buttons_type-2) {
+      display: flex;
+      margin: 0 -12px;
+    }
+    &__button:not(.calculator-slide__button_type-2) {
+      margin: 0 12px;
+      width: auto;
+      flex: 1 1 50%;
+      margin-bottom: 0 !important;
+    }
+    &__count {
+      margin: 0;
+    }
+    &__total-price {
+      display: flex;
+      width: 100%;
+      font-size: 11vw;
+      margin: 45px 0;
+      padding-right: 3vw;
+    }
+  }
 }
 
 .logo {
@@ -257,9 +500,37 @@
   top: 37px;
   transform: translateX(-7%);
   z-index: 100;
+  display: block;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    &:last-child {
+      display: none;
+    }
+  }
   @include media-breakpoint-down(xxl) {
     width: 140px;
     top: 30px;
+  }
+  @include media-breakpoint-down(xl) {
+    width: 120px;
+  }
+  @include media-breakpoint-down(lg) {
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    width: 92px;
+    top: 15px;
   }
 }
 
@@ -295,6 +566,23 @@
     &.hidden {
       opacity: 0.5;
       pointer-events: none;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    justify-content: space-between;
+    width: 100%;
+    &__value {
+      font-size: 18vw;
+      line-height: 1;
+    }
+    &__button {
+      width: 60px;
+      height: 36px;
+      border-width: 2px;
+      .icon {
+        width: 14px;
+        height: 14px;
+      }
     }
   }
 }

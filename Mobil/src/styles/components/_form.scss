@@ -1,9 +1,8 @@
 .input {
   position: relative;
   display: block;
-  font-size: 0;
   &__element {
-    font-size: 1.125rem;
+    font-size: inherit;
     line-height: 24px;
     padding: 10px 0;
     display: block;
@@ -49,11 +48,6 @@
   &.error {
     .input__element {
       border-color: var(--color-error);
-    }
-  }
-  @include media-breakpoint-down(xxl) {
-    &__element {
-      font-size: 1rem;
     }
   }
 }

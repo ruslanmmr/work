@@ -7,13 +7,13 @@ const brakepoints = {
 }
 const $body = document.body;
 const $wrapper = document.querySelector('.wrapper');
-const speed = 0.5; //seconds
 
 window.onload = function(){
-  gsap.to($wrapper, {autoAlpha:1, duration:speed, ease:'power2.inOut'})
+  gsap.to($wrapper, {autoAlpha:1, duration:1, ease:'power2.inOut'})
   TouchHoverEvents.init();
   Slider.init();
   Form.init();
+  MobileInfo.init();
   Validation.init();
 }
 
@@ -136,11 +136,11 @@ const Form = {
 
     //calc price
     let $calculation_inputs = document.querySelectorAll('[data-calculation-input]'),
-        $total = document.querySelector('.calculator-slide__total-price span'),
+        $total = document.querySelectorAll('.calculator-slide__total-price span, .calculator__total-price span'),
         $total_input = document.querySelector('#totalprice'),
         $ads_container = document.querySelector('.calculator__ads');
     let checkPrice = ()=> {
-      let $ads = document.querySelectorAll('.calculator__ad');
+      let $ads = document.querySelectorAll('.calculator__ads .calculator__ad');
       $ads.forEach(($this)=>{
         $this.remove();
       })
@@ -153,13 +153,15 @@ const Form = {
         if(value>0) {
           let name = $input.getAttribute('name');
           for(let i=0; i<value; i++) {
-            $ads_container.insertAdjacentHTML('beforeend', `<div class="calculator__ad"><span>+${price} $</span> ${name}</div>`)
+            $ads_container.insertAdjacentHTML('beforeend', `<div class="calculator__ad"><span>+${priceCorrecting(price, 2, ',')} $</span>${name}</div>`)
           }
         }
 
 
       })
-      $total.textContent = priceCorrecting(total, 2, ',');
+      $total.forEach(($el)=>{
+        $el.textContent = priceCorrecting(total, 2, ',')+' ';
+      })
       $total_input.value = total;
       //
     }
@@ -182,11 +184,6 @@ const Form = {
       })
     })
 
-  },
-  on: function(callback, func) {
-    if(callback=='changed') {
-      this.changed_callback = func;
-    }
   }
 }
 
@@ -261,6 +258,9 @@ const Slider = {
     this.animation.eventCallback('onComplete', ()=>{
       this.inAnimation = false;
     })
+    //speed
+    if(this.step==0) this.speed = 1;
+    else             this.speed = 0.6;
 
     let $slide = this.$slides[this.steps[this.step]],
         $prev_slide = this.$slides[this.steps[this.step-1]],
@@ -270,44 +270,49 @@ const Slider = {
 
     if(this.step==0) {
       let timeline = gsap.timeline()
-        .to($slide, {autoAlpha:1, duration:speed, ease:'power2.inOut'})
-        .fromTo($slide, {y:this.m}, {y:0, duration:speed, ease:'power2.out'}, `-=${speed}`)
+        .to($slide, {autoAlpha:1, duration:this.speed, ease:'power2.inOut'})
+        .fromTo($slide, {y:200}, {y:0, duration:this.speed, ease:'power2.inOut'}, `-=${this.speed}`)
       this.animation.add(timeline, `>`)
-    } 
+    }  
     
     else {
-      let y = this.m, ease = 'power2.out';
+      let y = $prev_slide.getBoundingClientRect().height+this.m;
       if($slide.getAttribute('data-slide-opacity')!==null) {
-        y = $prev_slide.getBoundingClientRect().height+this.m;
-        ease = 'power2.inOut';
+        
       }
       let timeline = gsap.timeline()
-        .to($prev_slide, {autoAlpha:0, duration:speed, ease:'power2.inOut'})
-        .to($prev_slide, {y:-this.m, duration:speed, ease:'power2.in'}, `-=${speed}`)
-        .to($slide, {autoAlpha:1, duration:speed, ease:'power2.inOut'}, `-=${speed-0.1}`)
-        .fromTo($slide, {y:y}, {y:0, duration:speed, ease:ease}, `-=${speed}`)
+        .to($prev_slide, {autoAlpha:0, duration:this.speed, ease:'power2.inOut'})
+        .to($prev_slide, {y:-y, scale:0.7, duration:this.speed, ease:'power2.inOut'}, `-=${this.speed}`)
+        .to($slide, {autoAlpha:1, duration:this.speed, ease:'power2.inOut'}, `-=${this.speed}`)
+        .fromTo($slide, {y:y}, {y:0, duration:this.speed, ease:'power2.inOut'}, `-=${this.speed}`)
       this.animation.add(timeline, `>`);
       //scale
       if($slide.classList.contains('calculator-slide_congratulation')) {
         let $price = document.querySelector('.calculator-slide__total-price');
-        let scale = gsap.fromTo($price, {scale:0.8}, {scale:1, duration:speed, ease:'power2.out'});
-        this.animation.add(scale, `>-${speed}`);
+        let scale = gsap.fromTo($price, {scale:0.8}, {scale:1, duration:this.speed, ease:'power2.inOut'});
+        this.animation.add(scale, `>-${this.speed}`);
       }
     }
 
     if($next_slide && $next_slide.getAttribute('data-slide-opacity')!==null) {
-      let y = $slide.getBoundingClientRect().height;
+      let y1 = $slide.getBoundingClientRect().height,
+          y2 = $prev_slide?$prev_slide.getBoundingClientRect().height:y1,
+          val1 = y1+y2+this.m+this.m,
+          val2 = y1+this.m;
+
+      if(this.step==0) val1 = 200+y1+this.m;
+      
       let timeline = gsap.timeline()
-        .to($next_slide, {autoAlpha:0.2, duration:speed/2, ease:'power2.inOut'})
-        .fromTo($next_slide, {y:y+this.m+this.m}, {y:y+this.m, duration:speed/2, ease:'power2.out'}, `-=${speed/2}`)
-      this.animation.add(timeline, `>-${speed/3}`)
+        .to($next_slide, {autoAlpha:0.2, duration:this.speed, ease:'power2.inOut'})
+        .fromTo($next_slide, {y:val1}, {y:val2, duration:this.speed, ease:'power2.inOut'}, `-=${this.speed}`)
+      this.animation.add(timeline, `>-${this.speed}`)
     }
 
     this.animation.play();
   },
 
   prev: function() {
-    this.animations[this.step+1].reverse();
+    this.animations[this.step+1].duration(0.4).reverse();
     this.animations[this.step+1].eventCallback('onReverseComplete', ()=>{
       this.inAnimation = false;
     })
@@ -480,6 +485,25 @@ const Validation = {
         }
       }
     })
+  }
+}
+
+const MobileInfo = {
+  init: function() {
+    let $toggle = document.querySelector('.calculator__info-head'),
+        $block = document.querySelector('.calculator__info');
+    $toggle.addEventListener('click', ()=>{
+      if(!this.flag) {
+        this.flag=true;
+        $block.classList.add('active');
+        $toggle.classList.add('active');
+      } else {
+        this.flag=false;
+        $block.classList.remove('active');
+        $toggle.classList.remove('active');
+      }
+    })
+
   }
 }
 
