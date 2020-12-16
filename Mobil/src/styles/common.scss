@@ -13,14 +13,8 @@
 /*========== Layout ==========*/
 @import "./components/layout";
 
-/*========== Components ==========*/
-@import "./components/components";
-
 /*========== Typography ==========*/
 @import "./components/typography";
-
-/*========== Helpers ==========*/
-@import 'components/helpers';
 
 /*========== Buttons ==========*/
 @import 'components/buttons';
@@ -30,9 +24,3 @@
 
 /*========== Blocks ==========*/
 @import 'components/blocks';
-
-/*========== Header ==========*/
-@import 'components/header';
-
-/*========== Footer ==========*/
-@import 'components/footer';

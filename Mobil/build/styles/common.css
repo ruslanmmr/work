@@ -395,58 +395,6 @@ table {
   .wrapper {
     min-height: 600px; } }
 
-/*========== Components ==========*/
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  user-select: none;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease-in-out, visibility 1s ease-in-out; }
-  .background.lazyloaded {
-    opacity: 1;
-    visibility: visible; }
-  .background_left {
-    background-position-x: left; }
-  .background_right {
-    background-position-x: right; }
-  .background_top {
-    background-position-y: top; }
-  .background_bottom {
-    background-position-y: bottom; }
-
-.image {
-  display: block;
-  position: relative; }
-  .image img {
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease-in-out, visibility 1s ease-in-out; }
-    .image img.lazyloaded {
-      opacity: 1;
-      visibility: visible; }
-  .image_cover img, .image_contain img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
-  .image_cover {
-    background-color: rgba(255, 255, 255, 0.05);
-    overflow: hidden; }
-    .image_cover img {
-      object-fit: cover; }
-  .image_contain img {
-    object-fit: contain; }
-
 /*========== Typography ==========*/
 h1, .h1, h2, .h2 {
   margin: 0;
@@ -483,7 +431,6 @@ mark {
   h1, .h1, h2, .h2 {
     font-size: 1.125rem; } }
 
-/*========== Helpers ==========*/
 /*========== Buttons ==========*/
 .button {
   position: relative;
@@ -1065,13 +1012,5 @@ mark {
         .calc-count__button .icon {
           width: 14px;
           height: 14px; } }
-
-/*========== Header ==========*/
-.header {
-  flex-shrink: 0; }
-
-/*========== Footer ==========*/
-.footer {
-  flex-shrink: 0; }
 
 /*# sourceMappingURL=maps/common.css.map */
