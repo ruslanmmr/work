@@ -638,35 +638,25 @@
 .lc-contract {
   &:not(:last-child) {
     border-bottom: 1px solid #E0E0E0;
-    transition: border-color $trs1;
-    margin-bottom: 15px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
-  &.active {
-    border-color: transparent;
+  &__table {
+    margin-top: 15px;
   }
-  &__head {
+  &__toggle {
+    font-size: 14px;
     color: $color-accent;
-    transition: color $trs1;
+    line-height: 20px;
     display: inline-flex;
-    flex-wrap: wrap;
     align-items: center;
-    cursor: pointer;
-    user-select: none;
-    margin-bottom: 15px;
-    &-title {
-      font-size: 24px;
-      font-family: $font2;
-      padding-bottom: 4px;
-    }
-    &-text {
-      font-size: 14px;
-    }
+    transition: color $trs1;
     .icon {
-      width: 22px;
-      height: 22px;
-      transform: rotate(180deg);
-      margin: 0 25px 0 25px;
+      width: 20px;
+      height: 20px;
+      margin-left: 15px;
       transition: transform $trs1;
+      transform: rotate(180deg);
     }
     &.active {
       .icon {
@@ -677,16 +667,59 @@
       color: $color-accent-hover;
     }
   }
-  @media (max-width:575px) {
-    &__head {
-      width: 100%;
-      .icon {
-        margin: 0 25px;
+  &__head {
+    display: flex;
+    flex-wrap: wrap;
+    &-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      &:not(:last-child) {
+        padding-right: 60px;
+      }
+      span {
+        &:first-child {
+          font-size: 14px;
+          margin: 0 0 4px 0;
+          color: #000;
+          font-weight: 500;
+        }
       }
     }
+    &-index {
+      color: $color-accent;
+      font-size: 24px;
+      line-height: 28px;
+    }
     &__content {
-      margin-left: -20px;
+    }
+  }
+  @media (max-width:1000px) {
+    &__head {
+      &-block {
+        &:not(:last-child) {
+          padding-right: 40px;
+        }
+        span {
+          &:first-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width:575px) {
+    &__head {
+      margin-bottom: 5px;
+      &-block {
+        margin-bottom: 10px;
+      }
+    }
+    &__table {
       margin-right: -20px;
+      margin-left: -20px;
+      width: calc(100% + 40px);
     }
   }
 }

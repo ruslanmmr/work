@@ -795,45 +795,64 @@ span.flatpickr-weekday {
 
 .lc-contract:not(:last-child) {
   border-bottom: 1px solid #E0E0E0;
-  transition: border-color 0.15s ease-in-out;
-  margin-bottom: 15px; }
+  padding-bottom: 30px;
+  margin-bottom: 30px; }
 
-.lc-contract.active {
-  border-color: transparent; }
+.lc-contract__table {
+  margin-top: 15px; }
+
+.lc-contract__toggle {
+  font-size: 14px;
+  color: #61B87C;
+  line-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.15s ease-in-out; }
+  .lc-contract__toggle .icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    transition: transform 0.15s ease-in-out;
+    transform: rotate(180deg); }
+  .lc-contract__toggle.active .icon {
+    transform: rotate(360deg); }
+  .lc-contract__toggle:hover {
+    color: #50a16a; }
 
 .lc-contract__head {
-  color: #61B87C;
-  transition: color 0.15s ease-in-out;
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  margin-bottom: 15px; }
-  .lc-contract__head-title {
+  display: flex;
+  flex-wrap: wrap; }
+  .lc-contract__head-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px; }
+    .lc-contract__head-block:not(:last-child) {
+      padding-right: 60px; }
+    .lc-contract__head-block span:first-child {
+      font-size: 14px;
+      margin: 0 0 4px 0;
+      color: #000;
+      font-weight: 500; }
+  .lc-contract__head-index {
+    color: #61B87C;
     font-size: 24px;
-    font-family: "Oswald", sans-serif;
-    padding-bottom: 4px; }
-  .lc-contract__head-text {
-    font-size: 14px; }
-  .lc-contract__head .icon {
-    width: 22px;
-    height: 22px;
-    transform: rotate(180deg);
-    margin: 0 25px 0 25px;
-    transition: transform 0.15s ease-in-out; }
-  .lc-contract__head.active .icon {
-    transform: rotate(360deg); }
-  .lc-contract__head:hover {
-    color: #50a16a; }
+    line-height: 28px; }
+
+@media (max-width: 1000px) {
+  .lc-contract__head-block:not(:last-child) {
+    padding-right: 40px; }
+  .lc-contract__head-block span:first-child {
+    margin-bottom: 0; } }
 
 @media (max-width: 575px) {
   .lc-contract__head {
-    width: 100%; }
-    .lc-contract__head .icon {
-      margin: 0 25px; }
-  .lc-contract__content {
+    margin-bottom: 5px; }
+    .lc-contract__head-block {
+      margin-bottom: 10px; }
+  .lc-contract__table {
+    margin-right: -20px;
     margin-left: -20px;
-    margin-right: -20px; } }
+    width: calc(100% + 40px); } }
 
 /*# sourceMappingURL=maps/lc.css.map */
