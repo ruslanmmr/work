@@ -16915,7 +16915,8 @@ ol:not([class]) li:not([class]):before {
   border-radius: 4px;
   box-sizing: border-box;
   padding: 11px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05); }
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+  font-size: 16px; }
 
 /* line 13959, ../sass/css.scss */
 .new-search__submit {
