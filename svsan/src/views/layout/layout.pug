@@ -1,5 +1,5 @@
 -var href = 'https://ruslanmmr.github.io/work/svsan/build'
-//-var href = 'http://localhost:9000'
+//-var href = 'http://localhost:9001'
 
 doctype html
 html
@@ -24,6 +24,12 @@ html
     meta(name='yandex-verification' content='7c1db258268e31a7')
     link(rel='stylesheet' href='/static/css/adaptive.css')
     link(rel='stylesheet' href=href+'/styles/new.css')
+    //для соц сетей
+    <meta property="og:title" content="Магазин сантехники и отопления">
+    <meta property="og:site_name" content='svsan.ru'>
+    <meta property="og:url" content="Ссылка страницы на саму себя">
+    <meta property="og:description" content="Краткое описание текущей страницы">
+    <meta property="og:image" content='https://placehold.co/600x400?text=Картинка+Страницы'>
 
   body
     #wrapper
@@ -66,7 +72,10 @@ html
                       span.lptracker_phone(style='font-size:22px; color:#ffffff') +7 903 301-0005
           .main-panel
             .container
-              a.site-name(href='/')
+              a(href="/").site-logo
+                span.site-logo__txt Магазин сантехники и отопления
+                img.site-logo__image(src=href+"/img/svsan.svg", alt="logo")
+              //a.site-name(href='/')
                 | Магазин сантехники 
                 br
                 |  и отопления
