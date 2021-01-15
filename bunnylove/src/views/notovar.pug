@@ -1,0 +1,602 @@
+extends layout/layout
+block content
+  include blocks/breadcrumbs
+  .container
+    section.section.product-section.row
+      .product-section__content.col-lg-9
+        h1.section__title Ярко-розовый вакуумный стимулятор клитора Ford
+        .product-section__head.row
+          //slider
+          .product-section__images.col-lg-5.col-md-6
+            .product-slider-wrap
+              .card-labels
+                span.card-label.card-label_new new
+                span.card-label.card-label_star 
+                  svg.icon
+                    use(xlink:href='#whiteStarIcon')
+                span.card-label.card-label_discount -30%
+              //главный слайдер
+              .slider.product-slider
+                mixin slide(href)
+                  //slide
+                  .product-slider__slide.image.image_contain
+                    img(data-lazy=href alt="image")
+                    a.fancybox(href=href rel='slider')
+                +slide('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
+                +slide('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
+                +slide('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
+                
+            //навигационный слайдер
+            .slider.product-nav-slider
+              mixin slide2(href)
+                //slide
+                .product-nav-slider__slide
+                  .image.image_contain
+                    img(data-lazy=href alt="image")
+              +slide2('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
+              +slide2('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
+              +slide2('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
+          //content
+          .product-section__description.col-lg-7.col-md-6
+            .product-section__text
+              h6 Ярко-розовый вакуумный стимулятор клитора Ford
+              p Силиконовая рельефная анальная пробка с удобным для ношения ограничителем, диаметр 3,2 см
+              span.product-section__art-value Артикул: SEM-55196
+              .product-delivery-message
+                .product-delivery-message__head
+                  img(src=href+"/img/truck.svg", alt="ico").icon
+                  strong Доставка от 2х недель
+                .product-delivery-message__content
+                  p Товара нет в наличии, но вы можете оставить заявку. Наш менеджер свяжется с вами.
+              .product-section__pricing
+                span.product-section__price-label Цена:
+                span.product-section__old-price 5&nbsp;600 P
+                span.product-section__price 6&nbsp;600 P
+              .product-section__buttons
+                .product-availability-label.product-availability-label_false.product-section__buttons-item
+                  img(src=href+"/img/Red circle.svg", alt="ico")
+                  span Нет в наличии
+                a(href="#").button.button_style-3.button_rounded.button_icon.product-section__buttons-item
+                  svg.icon
+                    use(xlink:href='#menuHeartIcon')
+                a(href="#").button.button_style-3.button_rounded.button_icon.product-section__buttons-item
+                  svg.icon
+                    use(xlink:href='#compareIcon')
+              .product-section__message
+                svg.icon
+                  use(xlink:href='#wallet')
+                span  
+                  a(href="#") Зарегистрируйтесь 
+                  | и получите 500 бонусных рублей за регистрацию и 238 бонусных рублей за покупку
+        
+        .product-section__information              
+          h3 Описание
+          p Вибромассажер неоскин (коробка картон ART-STYLE) представляет собой реалистичный интим-аксессуар, который выполнен из высококачественных материалов и соответствует международным стандартам. Изделие имитирует настоящий половой член мужчины с ярко выраженной головкой и рельефной поверхностью по всей длине.
+          ul 
+            li массажные свечи
+            li масла
+            li массажная свеча Island Blossoms 
+          p Интим-аксессуар в таком исполнении – это прекрасное сочетание цены, качества и функциональности. Вибратор может плавно регулироваться в своем основании при помощи специального колесика. Общая длина-20 см, рабочая-16,5 см, диаметр-4 см.
+          h3 Характеристики
+          table
+            tbody
+              tr
+                td Диаметр, см
+                td 4
+              tr
+                td Длина, см
+                td 16,5
+              tr
+                td Цвет
+                td бежевый
+              tr
+                td Материал
+                td киберкожа
+              tr
+                td Количество батареек
+                td 2
+              tr
+                td Тип питания
+                td батарейки
+              tr
+                td Тип батареек
+                td AA
+              tr
+                td Бренд
+                td LOVETOY 23, Россия
+              tr
+                td Управление
+                td поворотный регулятор
+              tr
+                td Вибрация
+                td да
+          h3 Отзывы
+          p У этого товара пока нет отзывов, но Вы можете быть первым! 
+            a(href="#") Авторизируйтесь, чтобы оставить отзыв!
+
+          .title-caps.add-review-link-block
+            a.add-review.show-new-review-form(href='#add-new-review') Добавить отзыв
+          .add-review-wrapper.minified(style='display: none;')
+            span.headline Оставить отзыв
+            form.add-review-form(action='/reviews/add/prezervativ-luxe-1-nochnoj-razvedchik-luxe1nr' method='post')
+              input(type='hidden' name='csrfmiddlewaretoken' value='UlcqMOu1UDjVA1LQAprzf6EVQ73hmt2kWmO6xNwdOUj56v9LsoJq7XDJHyKPvY9R')
+              .column.left
+                input#id_name.with-placeholder(type='text' name='name' value='Дмитрий' placeholder='Имя' maxlength='70')
+                .sex
+                  span.caption Пол:
+                  .radio-btn-wrapper.active(data-value='male')
+                    span.icon
+                    span.caption Мужской
+                  .radio-btn-wrapper(data-value='female')
+                    span.icon
+                    span.caption Женский
+                  input#id_sex(type='hidden' name='sex' value='male')
+                .ratio
+                  span.caption Ваша оценка:
+                  .rating
+                    input#id_rating(type='hidden' name='rating' value='5')
+                    span.on(data-ratio='1')
+                    span.on(data-ratio='2')
+                    span.on(data-ratio='3')
+                    span.on(data-ratio='4')
+                    span.on(data-ratio='5')
+              .column.right
+                textarea#id_text.with-placeholder(name='text' cols='40' rows='10' placeholder='Текст отзыва' required='')
+              .clearfix
+              button.submit-btn(type='submit') Отправить
+
+          
+          
+          section.product-section__items-slider
+            h3.section__title Вам также могут понадобиться:
+            .tabs__item.active
+              .related_products_mobile.related-products
+                ul.cart-slider
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog.new-card-type-disabled
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/196682/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/f8/5e/f85e9b0aed20acdf17f07adac46d7fe2.jpg', width='130', height='130', alt='БИОКЛОН Вибратор реалистичный, 29 см')
+                        a.new-card__center(href='/catalog/product/vibromassazher-gigant-s-vyinosnyim-blokom--719121ru/', title='Перейти на страницу товара') БИОКЛОН Вибратор реалистичный, 29 см
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 3 780
+                              span.new-card__currency ₽
+                          span.new-card__waiting Нет в наличии
+                        p.new-card__explanation
+                          | Вибромассажер крупного размера "Гигант"  реалистичный, телесный, на присоске, с мошонкой, с пультом ДУ.
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/196411/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/33/7e/337e95355e397625f6aea02a19b48c79.jpg', width='130', height='130', alt='БИОКЛОН Вибратор реалистичный Android Style, 16,5 см')
+                        a.new-card__center(href='/catalog/product/vibrator-neoskin-android-style-001402ru-001402ru/', title='Перейти на страницу товара') БИОКЛОН Вибратор реалистичный Android Style, 16,5 см
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 1 324
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/196411/', data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Вибратор реалистичный, с мошонкой, с ярко-выраженными  головкой и венами.
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                          .new-card__label.new-card__label-type-sale
+                            span.new-card__fill -30%
+                        .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/6691481/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/a6/2e/a62e2b16b57188e80b8a9389710fcba3.jpg', width='130', height='130', alt='Вакуумный вибростимулятор Hammer Royal Pleasure')
+                        a.new-card__center(href='/catalog/product/bi-014623--vakuumnyij-vibrostimulyator-klitora--bi-014623/', title='Перейти на страницу товара') Вакуумный вибростимулятор Hammer Royal Pleasure
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price.new-card__price-type-old
+                              | 6 990
+                              span.new-card__currency ₽
+                            span.new-card__price
+                              | 4 893
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/6691481/', data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation Вакуумный вибростимулятор для клитора и внешних эрогенных зон
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/8916290/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/f4/85/f4855230085b57179f1778dfe7fdd7d7.jpg', width='130', height='130', alt='Вибатор PrettyLove Carol')
+                        a.new-card__center(href='/catalog/product/vibromassazher-s-klitoralnyim-otrostkom-schetochkoj-prettylove--bi-014571/', title='Перейти на страницу товара') Вибатор PrettyLove Carol
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 3 152
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/8916290/', data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation
+                          | Перезаряжаемый вибратор для точки G с клиторальным стимулятором в виде щеточки, рабочая длина 9,5 см, длина стимулятора 5 см
+                  li
+                    .related_product
+                      .new-card.new-card-type-catalog
+                        .new-card__labels
+                        .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/223017/')
+                          svg.new-phone__icon.new-phone__icon-type-loop
+                            use(xlink:href='#loopIcon')
+                          img.new-card__img(src='/media/cache/48/58/48583e349459189db156f9a107e24119.jpg', width='130', height='130', alt='Вибратор Antony')
+                        a.new-card__center(href='/catalog/product/vibromassazher-vodonepronitsaemyij-bi-014193/', title='Перейти на страницу товара') Вибратор Antony
+                        p.new-card__bottom(data-action='buyButtonShell')
+                          span.new-card__priceBlock
+                            span.new-card__price
+                              | 1 590
+                              span.new-card__currency ₽
+                          button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/223017/', data-action='buyButton')
+                            svg.new-tabs__icon.new-tabs__icon-type-cart
+                              use(xlink:href='#cartIcon')
+                            |  Купить
+                        p.new-card__explanation
+                          | Водонепроницаемый вибратор с увеличенной изогнутой головкой для стимуляции точки G, рабочая длина 8,7 см
+              .related-products
+                .new-content__catalog
+                  .new-card.new-card-type-catalog.new-card-type-disabled
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/196682/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/f8/5e/f85e9b0aed20acdf17f07adac46d7fe2.jpg', width='130', height='130', alt='БИОКЛОН Вибратор реалистичный, 29 см')
+                    a.new-card__center(href='/catalog/product/vibromassazher-gigant-s-vyinosnyim-blokom--719121ru/', title='Перейти на страницу товара') БИОКЛОН Вибратор реалистичный, 29 см
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 3 780
+                          span.new-card__currency ₽
+                      span.new-card__waiting Нет в наличии
+                    p.new-card__explanation
+                      | Вибромассажер крупного размера "Гигант"  реалистичный, телесный, на присоске, с мошонкой, с пультом ДУ.
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/196411/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/33/7e/337e95355e397625f6aea02a19b48c79.jpg', width='130', height='130', alt='БИОКЛОН Вибратор реалистичный Android Style, 16,5 см')
+                    a.new-card__center(href='/catalog/product/vibrator-neoskin-android-style-001402ru-001402ru/', title='Перейти на страницу товара') БИОКЛОН Вибратор реалистичный Android Style, 16,5 см
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 1 324
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/196411/', data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Вибратор реалистичный, с мошонкой, с ярко-выраженными  головкой и венами.
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                      .new-card__label.new-card__label-type-sale
+                        span.new-card__fill -30%
+                    .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/6691481/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/a6/2e/a62e2b16b57188e80b8a9389710fcba3.jpg', width='130', height='130', alt='Вакуумный вибростимулятор Hammer Royal Pleasure')
+                    a.new-card__center(href='/catalog/product/bi-014623--vakuumnyij-vibrostimulyator-klitora--bi-014623/', title='Перейти на страницу товара') Вакуумный вибростимулятор Hammer Royal Pleasure
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price.new-card__price-type-old
+                          | 6 990
+                          span.new-card__currency ₽
+                        span.new-card__price
+                          | 4 893
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/6691481/', data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation Вакуумный вибростимулятор для клитора и внешних эрогенных зон
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/8916290/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/f4/85/f4855230085b57179f1778dfe7fdd7d7.jpg', width='130', height='130', alt='Вибатор PrettyLove Carol')
+                    a.new-card__center(href='/catalog/product/vibromassazher-s-klitoralnyim-otrostkom-schetochkoj-prettylove--bi-014571/', title='Перейти на страницу товара') Вибатор PrettyLove Carol
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 3 152
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/8916290/', data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation
+                      | Перезаряжаемый вибратор для точки G с клиторальным стимулятором в виде щеточки, рабочая длина 9,5 см, длина стимулятора 5 см
+                  .new-card.new-card-type-catalog
+                    .new-card__labels
+                    .new-card__top(title='Прeдпросмотр товара', data-action='fastBuyArea', data-preview-url='/catalog/product-preview/223017/')
+                      svg.new-phone__icon.new-phone__icon-type-loop
+                        use(xlink:href='#loopIcon')
+                      img.new-card__img(src='/media/cache/48/58/48583e349459189db156f9a107e24119.jpg', width='130', height='130', alt='Вибратор Antony')
+                    a.new-card__center(href='/catalog/product/vibromassazher-vodonepronitsaemyij-bi-014193/', title='Перейти на страницу товара') Вибратор Antony
+                    p.new-card__bottom(data-action='buyButtonShell')
+                      span.new-card__priceBlock
+                        span.new-card__price
+                          | 1 590
+                          span.new-card__currency ₽
+                      button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/223017/', data-action='buyButton')
+                        svg.new-tabs__icon.new-tabs__icon-type-cart
+                          use(xlink:href='#cartIcon')
+                        |  Купить
+                    p.new-card__explanation
+                      | Водонепроницаемый вибратор с увеличенной изогнутой головкой для стимуляции точки G, рабочая длина 8,7 см
+                ul.pager-large
+                  li.prev
+                    a(href='#go-for-prev-tab', data-go-to='prev')
+                  li.active
+                    a(href='#go-for-tab', data-go-to='1')
+                      span •
+                  li
+                    a(href='#go-for-tab', data-go-to='2')
+                      span •
+                  li.next
+                    a(href='#go-for-next-tab', data-go-to='next')
+        
+        
+      //aside
+      .product-section__aside.col-lg-3
+        //new form
+        .product-delivery-form
+          h6.product-delivery-form__title Отправьте запрос на предзаказ товара
+          form(action="#").small-form.product-delivery-form__element
+            .row.small-form__group
+              .col-12.col-sm-6.col-lg-12.small-form__item
+                span Имя
+                input.input(type='text' placeholder="Имя")
+              .col-12.col-sm-6.col-lg-12.small-form__item
+                span Tелефон
+                input.input(type='text' placeholder="Tелефон")
+              .col-12.col-sm-6.col-lg-12.small-form__item
+                span Email
+                input.input(type='text' placeholder="Email")
+              .col-12.small-form__item
+                span Комментарий
+                textarea.input(type='text' placeholder="Комментарий")
+              .col-12.col-sm-6.col-lg-12.small-form__item
+                button.new-button-type-fill.small-form__button Отправить
+
+
+        .new-promo(style='background-image:url(https://bunnylove.ru/static/img/pattern.png);')
+          .slider.slider_dots.new-promo__slider
+            .new-promo__slide 
+              img(src="https://bunnylove.ru/media/small_slides/bonus2_pse5GTh.png", alt="image")
+              a(href="#").button Зарегистрироваться
+            .new-promo__slide 
+              a(href="#")
+                img(src="https://bunnylove.ru/media/small_slides/2.png", alt="image")
+            .new-promo__slide 
+              img(src="https://bunnylove.ru/media/small_slides/3.png", alt="image")
+              a(href="#").button КУПИТЬ
+        .product-delivery
+          h6.product-delivery__title Как получить
+          .product-delivery__section
+            h6.product-delivery__section-title Самовывоз:
+            p Ново-Вокзальная, 146а - СЕГОДНЯ
+              br
+              | пр. Металлургов, 81 - ЧЕРЕЗ 1-3 ДНЯ
+              br
+              | Московское шоссе, Лит.В - СЕГОДНЯ
+              br
+              | Гагарина, 48 - ЧЕРЕЗ 1-3 ДНЯ
+              br
+              | Авроры, 199 - ЧЕРЕЗ 1-3 ДНЯ
+          .product-delivery__section
+            h6.product-delivery__section-title Курьером:
+            p от 200 руб, в удобное для Вас время
+          .product-delivery__section
+            h6.product-delivery__section-title PickPoint
+            p от 220 руб, 1-5 дней
+          .product-delivery__section
+            h6.product-delivery__section-title СДЭК
+            p по России, 3-6 дней
+          .product-delivery__section
+            h6.product-delivery__section-title Почта России
+            p от 200 руб, 7-14 дней
+        .product-section__aside-slider
+          //old slider
+          .recent
+            .recent__title НЕДАВНО ПРОСМОТРЕННЫЕ
+            .bx-wrapper(style='max-width: 100%; margin: 0px auto;')
+              .bx-viewport(style='width: 100%; overflow: hidden; position: relative; height: 255px;')
+                .recent-slider.teaser-list(style='width: 1115%; position: relative; transition-duration: 0s; transform: translate3d(-585px, 0px, 0px);')
+                  .teaser.bx-clone(style='float: left; list-style: none; position: relative; width: 195px;')
+                    a.teaser__link(href='/catalog/product/analnaya-probka-clear-jelly-butt--gp-2k683-bcd/')
+                    .teaser__image
+                      img(src='/media/cache/e2/97/e29707f693780ca677db93902cadc8ab.jpg', alt='Анальная втулка CLEAR JELLY BUTT PLUG')
+                    .teaser__title Анальная втулка CLEAR JELLY B...
+                    .teaser__text
+                      p Классическая анальная втулка с вибрацией, диаметр 3,5 см
+                    .teaser__footer
+                      .teaser__price
+                        | 1 341 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/195971/')
+                        span КУПИТЬ
+                  .teaser(style='float: left; list-style: none; position: relative; width: 195px;')
+                    a.teaser__link(href='/catalog/product/prez-tivyi-okamoto-seriya-skinless-skin--160/')
+                    .teaser__image
+                      img(src='/media/cache/c9/af/c9af93be17410db9420ad696dfdfa26b.jpg', alt='Презервативы Okamoto Skinless Skin Purity')
+                    .teaser__title Презервативы Okamoto Skinless...
+                    .teaser__text
+                      p
+                        | Классические презервативы цилиндрической формы с накопителем и с неспермицидной смазкой, 3 шт
+                    .teaser__footer
+                      .teaser__price
+                        | 290 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/205750/')
+                        span КУПИТЬ
+                  .teaser(style='float: left; list-style: none; position: relative; width: 195px;')
+                    a.teaser__link(href='/catalog/product/analnaya-vtulka-s-koltsom-l--5323710000/')
+                    .teaser__image
+                      img(src='/media/cache/f9/f1/f9f1bc6354efdec8158b458ecef46cfe.jpg', alt='Анальная втулка Soft Touch Plug L')
+                    .teaser__title Анальная втулка Soft Touch Pl...
+                    .teaser__text
+                      p
+                        | Конусообразная гибкая силиконовая анальная пробка с ограничителем в виде кольца, максималный диаметр-4,4 см
+                    .teaser__footer
+                      .teaser__price
+                        | 1 970 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/2593556/')
+                        span КУПИТЬ
+                  .teaser(style='float: left; list-style: none; position: relative; width: 195px;')
+                    a.teaser__link(href='/catalog/product/you2toys-analnaya-vtulka-backdoor-friend--5259440000/')
+                    .teaser__image
+                      img(src='/media/cache/98/bd/98bd8e52f0b055c993639e7f220f0165.jpg', alt='Анальная втулка Backdoor Friend double')
+                    .teaser__title Анальная втулка Backdoor Frie...
+                    .teaser__text
+                      p
+                        | Анальная пробка, образованная двумя шариками со смещенным центром тяжести, соединенными жесткой сцепкой, диаметр 3,5 см
+                    .teaser__footer
+                      .teaser__price
+                        | 2 540 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/10854063/')
+                        span КУПИТЬ
+                  .teaser(style='float: left; list-style: none; position: relative; width: 195px;')
+                    a.teaser__link(href='/catalog/product/easyanal-sprej-analnyij-30-ml-14845/')
+                    .teaser__image
+                      img(src='/media/cache/20/64/20641b4e1d59cdd56c582a2c6e19dd4e.jpg', alt='Анальный спрей EasyANAL')
+                    .teaser__title Анальный спрей EasyANAL
+                    .teaser__text
+                      p
+                        | Обезболивающий и расслабляющий анальный спрей, на водной основе без запаха, вкуса и цвета, 30 мл
+                    .teaser__footer
+                      .teaser__price
+                        | 1 472 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/206832/')
+                        span КУПИТЬ
+                  .teaser(style='float: left; list-style: none; position: relative; width: 195px;')
+                    a.teaser__link(href='/catalog/product/vaginalnyie-shariki-crystal-kegel-eggs--nsn-0703-14/')
+                    .teaser__image
+                      img(src='/media/cache/9a/16/9a16625755f0e9611a6e6e9020924182.jpg', alt='CRYSTAL KEGEL EGGS')
+                    .teaser__title CRYSTAL KEGEL EGGS
+                    .teaser__text
+                      p Шарики вагинальные из стекла розовые
+                    .teaser__footer
+                      .teaser__price
+                        | 1 782 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/194201/')
+                        span КУПИТЬ
+                  .teaser(style='float: left; list-style: none; position: relative; width: 195px;')
+                    a.teaser__link(href='/catalog/product/masturbator-yajtso-clicker-odnorazovoe-6--egg-002/')
+                    .teaser__image
+                      img(src='/media/cache/0c/65/0c65e763ddbedadd260a33e8af802043.jpg', alt='Мастурбатор Tenga EGG Clicker')
+                    .teaser__title Мастурбатор Tenga EGG Clicker
+                    .teaser__text
+                      p
+                        | Компактный мастурбатор в форме яйца с внутренним рельефом в виде больших и маленьких бугорков
+                    .teaser__footer
+                      .teaser__price
+                        | 690 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/189861/')
+                        span КУПИТЬ
+                  .teaser(style='float: left; list-style: none; position: relative; width: 195px;')
+                    a.teaser__link(href='/catalog/product/analnaya-vtulka-todo-by-toyfa--357003/')
+                    .teaser__image
+                      img(src='/media/cache/9d/da/9ddad3880d5549cb5927222f5f942db9.jpg', alt='Анальная втулка ToDo Glob')
+                    .teaser__title Анальная втулка ToDo Glob
+                    .teaser__text
+                      p
+                        | Силиконовая анальная пробка со смещенным центром тяжести и ограничителем, удобным для ношения, диаметр 4 см
+                    .teaser__footer
+                      .teaser__price
+                        | 1 190 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/8282399/')
+                        span КУПИТЬ
+                  .teaser(style='float: left; list-style: none; position: relative; width: 195px;')
+                    a.teaser__link(href='/catalog/product/garmoniya-control-35190/')
+                    .teaser__image
+                      img(src='/media/cache/95/0a/950af19b42c2f86f5512de87dccb7b03.jpg', alt='Пролонгатор Гармония Control')
+                    .teaser__title Пролонгатор Гармония Control
+                    .teaser__text
+                      p
+                        | Мужской спрей на маслянной основе для увеличения продолжительности полового акта, 9 мл
+                    .teaser__footer
+                      .teaser__price
+                        | 730 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/195919/')
+                        span КУПИТЬ
+                  .teaser(style='float: left; list-style: none; position: relative; width: 195px;')
+                    a.teaser__link(href='/catalog/product/analnaya-probka-clear-jelly-butt--gp-2k683-bcd/')
+                    .teaser__image
+                      img(src='/media/cache/e2/97/e29707f693780ca677db93902cadc8ab.jpg', alt='Анальная втулка CLEAR JELLY BUTT PLUG')
+                    .teaser__title Анальная втулка CLEAR JELLY B...
+                    .teaser__text
+                      p Классическая анальная втулка с вибрацией, диаметр 3,5 см
+                    .teaser__footer
+                      .teaser__price
+                        | 1 341 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/195971/')
+                        span КУПИТЬ
+                  .teaser.bx-clone(style='float: left; list-style: none; position: relative; width: 195px;')
+                    a.teaser__link(href='/catalog/product/prez-tivyi-okamoto-seriya-skinless-skin--160/')
+                    .teaser__image
+                      img(src='/media/cache/c9/af/c9af93be17410db9420ad696dfdfa26b.jpg', alt='Презервативы Okamoto Skinless Skin Purity')
+                    .teaser__title Презервативы Okamoto Skinless...
+                    .teaser__text
+                      p
+                        | Классические презервативы цилиндрической формы с накопителем и с неспермицидной смазкой, 3 шт
+                    .teaser__footer
+                      .teaser__price
+                        | 290 
+                        i.rub
+                          span.rouble u
+                      br
+                      a.teaser__cart.add_to_cart(href='/catalog/cart/add/205750/')
+                        span КУПИТЬ
+              .bx-controls
+            a.recent__prev(rel='nofollow', target='_blank', href='')
+            a.recent__next(rel='nofollow', target='_blank', href='')
+

@@ -30782,6 +30782,7 @@ textarea.input {
   color: #797985;
   display: block;
   font-size: 0.875rem;
+  margin: 0 0 16px 0;
 }
 
 /* line 20367, ../sass/css.scss */
@@ -30913,16 +30914,21 @@ textarea.input {
 
 /* line 20457, ../sass/css.scss */
 .product-availability-label img {
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 /* line 20463, ../sass/css.scss */
 .product-availability-label_true img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
   background-color: #6fc127;
   padding: 8px;
+}
+
+.product-availability-label_false img {
+  width: 40px;
+  height: 40px;
 }
 
 /* line 20467, ../sass/css.scss */

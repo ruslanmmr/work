@@ -24813,7 +24813,8 @@ textarea.input {
 .product-section__art-value {
   color: #797985;
   display: block;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  margin: 0 0 16px 0; }
 
 /* line 20367, ../sass/css.scss */
 .product-section__info-labels {
@@ -24925,15 +24926,19 @@ textarea.input {
 
 /* line 20457, ../sass/css.scss */
 .product-availability-label img {
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  margin-right: 10px; }
+  margin-right: 8px; }
 
 /* line 20463, ../sass/css.scss */
 .product-availability-label_true img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
   background-color: #6fc127;
   padding: 8px; }
+
+.product-availability-label_false img {
+  width: 40px;
+  height: 40px; }
 
 /* line 20467, ../sass/css.scss */
 .product-slider-wrap {
@@ -25442,6 +25447,43 @@ textarea.input {
     .article-image-head {
       margin: -30px -15px 30px -15px;
       width: calc(100% + 30px); } }
+
+.product-delivery-message__head {
+  background-color: #f5f5f5;
+  padding: 12px 15px 10px 15px;
+  font-size: 18px;
+  line-height: 22px; }
+  .product-delivery-message__head .icon {
+    width: 30px;
+    height: 22px;
+    margin-right: 16px;
+    transform: translateY(-2px); }
+
+.product-delivery-message__content {
+  background-color: #ececec;
+  padding: 10px 15px; }
+
+.product-delivery-form {
+  background-color: rgba(62, 62, 62, 0.05);
+  padding: 30px 20px; }
+  .product-delivery-form:not(:last-child) {
+    margin-bottom: 40px; }
+  .product-delivery-form__title {
+    margin: 0 0 20px 0; }
+
+.small-form__group {
+  margin-bottom: -20px; }
+
+.small-form__item {
+  margin-bottom: 20px; }
+  .small-form__item span {
+    display: block;
+    margin: 0 0 4px 0;
+    font-size: 14px; }
+
+.small-form__button {
+  margin-top: 10px;
+  width: 100%; }
 
 .noty_layout_mixin, #noty_layout__top, #noty_layout__topLeft, #noty_layout__topCenter, #noty_layout__topRight, #noty_layout__bottom, #noty_layout__bottomLeft, #noty_layout__bottomCenter, #noty_layout__bottomRight, #noty_layout__center, #noty_layout__centerLeft, #noty_layout__centerRight {
   position: fixed;
