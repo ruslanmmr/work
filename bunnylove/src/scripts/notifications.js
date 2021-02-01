@@ -4,7 +4,7 @@ $(document).ready(()=>{
   Noty.overrideDefaults({
     layout   : 'topRight',
     theme    : 'metroui',
-    timeout: 300000
+    timeout: 3000
   });
   tippy.setDefaultProps({
     duration: 300,
