@@ -1,44 +1,44 @@
 "use strict";
 
 $(document).ready(function () {
-  notify();
-}); //test code
-
-function notify() {
-  //defaults
+  //Дефолтные настрйоки плагинов
   Noty.overrideDefaults({
     layout: 'topRight',
     theme: 'metroui',
-    timeout: 3000
+    timeout: 300000
+  });
+  tippy.setDefaultProps({
+    duration: 300,
+    placement: 'auto',
+    hideOnClick: true,
+    trigger: 'click',
+    zIndex: 99,
+    offset: [0, 15],
+    maxWidth: 380
   });
   document.addEventListener('click', function (event) {
     var $target = $(event.target);
 
-    if ($target.closest('[data-text]').length) {
-      //получили значения каким удобно способом
-      var msg = $target.attr('data-text'),
-          type = $target.attr('data-type'); //В type и text подставили нужные значения, показали сообщение
+    if ($target.closest('[data-alert]').length) {
+      var type = $target.attr('data-alert'); //Этот код нужен для запуска первого типа
+      //Вручную запустить уведомление (type: 'alert', 'info', 'success', 'error')
 
-      new Noty({
+      var instance = new Noty({
         type: type,
-        text: msg
-      }).show();
-    }
-  }); //tooltip
-
-  var tooltips = {
-    el: '[data-tippy-content]',
-    init: function init() {
-      tippy(tooltips.el, {
-        duration: 300,
-        trigger: 'click',
-        placement: 'auto',
-        zIndex: 99,
-        offset: [0, 15],
-        maxWidth: 380
+        text: 'Вы добавили в корзину товары из разных магазинов, время доставки может быть увеличено.'
       });
+      instance.show();
+    } else if ($target.closest('[data-message]').length) {
+      var theme = $target.attr('data-message'); //Этот код нужен для запуска второго типа
+      //Вручную запустить уведомление (theme: 'alert', 'info', 'success', 'error')
+
+      var _instance = tippy($target[0], {
+        theme: theme,
+        content: 'Вы добавили в корзину товары из разных магазинов, время доставки может быть увеличено.'
+      });
+
+      _instance.show();
     }
-  };
-  tooltips.init();
-}
+  });
+});
 //# sourceMappingURL=maps/notifications.js.map
