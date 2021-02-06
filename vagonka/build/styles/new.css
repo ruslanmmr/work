@@ -139,9 +139,11 @@ header {
       background-color: var(--main-elements-color, #2363D1); }
   .home-banner .container {
     height: 100%; }
-  .home-banner__slide img {
-    position: relative;
-    height: auto; }
+  .home-banner__slide {
+    overflow: hidden; }
+    .home-banner__slide img {
+      position: relative;
+      height: auto; }
   .home-banner .owl-prev, .home-banner .owl-next {
     position: absolute;
     z-index: 3;
@@ -172,7 +174,13 @@ header {
       right: 15px; } }
   @media screen and (max-width: 991px) {
     .home-banner .owl-dots {
-      bottom: 20px; } }
+      bottom: 20px; }
+    .home-banner__slide {
+      overflow: hidden; }
+      .home-banner__slide img {
+        width: 150% !important;
+        max-width: initial !important;
+        transform: translateX(-33.33%); } }
   @media screen and (max-width: 575px) {
     .home-banner .owl-prev, .home-banner .owl-next {
       display: none; }

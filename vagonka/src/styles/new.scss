@@ -195,6 +195,7 @@ header {
     height: 100%;
   }
   &__slide {
+    overflow: hidden;
     img {
       position: relative;
       height: auto;
@@ -241,6 +242,14 @@ header {
   @media screen and (max-width:991px) {
     .owl-dots {
       bottom: 20px;
+    }
+    &__slide {
+      overflow: hidden;
+      img {
+        width: 150% !important;
+        max-width: initial !important;
+        transform: translateX(-33.33%);
+      }
     }
   }
   @media screen and (max-width:575px) {
