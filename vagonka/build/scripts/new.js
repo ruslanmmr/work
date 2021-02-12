@@ -4,6 +4,7 @@ $(document).ready(function () {
   homeBanner();
   header();
   gallery();
+  landing_sliders();
 });
 
 function homeBanner() {
@@ -40,7 +41,6 @@ function header() {
     height = $header.height();
 
     if (scroll > height) {
-      console.log('++');
       $header.addClass('fixed');
     } else {
       $header.removeClass('fixed');
@@ -59,6 +59,49 @@ function gallery() {
         backFocus: false
       }, $selector.index(this));
       return false;
+    });
+  }
+}
+
+function landing_sliders() {
+  var $sliders = $('.landing-slider .owl-carousel');
+
+  if ($sliders.length) {
+    $sliders.each(function () {
+      var $this = $(this);
+      var count1, count2, count3, count4;
+
+      if ($this.is('.landing-slider_1 .owl-carousel')) {
+        count1 = 1;
+        count2 = 2;
+        count3 = 3;
+        count4 = 4;
+      } else if ($this.is('.landing-slider_2 .owl-carousel')) {
+        count1 = 2;
+        count2 = 2;
+        count3 = 3;
+        count4 = 4;
+      }
+
+      $this.owlCarousel({
+        loop: true,
+        margin: 20,
+        responsive: {
+          0: {
+            items: count1,
+            margin: 16
+          },
+          576: {
+            items: count2
+          },
+          768: {
+            items: count3
+          },
+          992: {
+            items: count4
+          }
+        }
+      });
     });
   }
 }

@@ -11208,29 +11208,35 @@ tr:hover .cart-thumb {
 /* line 6986, ../sass/css.scss */
 .bx-wrapper .bx-controls-direction a {
   display: flex;
+  border-radius: 32px;
+  transition: background-color $trs1, border-color $trs1;
+  border: 1px solid #DEE7E7;
+  &:before {
+    content: '';
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: #d51e28;
+    top: 50%;
+    transition: border-color 0.25s ease-out;
+  }
+  &:hover {
+    border-color: $color-accent;
+    background-color: $color-accent;
+    &:before {
+      border-color: #fff;
+    }
+  }
 }
 
-/* line 6989, ../sass/css.scss */
-.bx-wrapper .bx-controls-direction a:before {
-  content: '';
-  margin: auto;
-  width: 10px;
-  height: 10px;
-  border-width: 0 2px 2px 0;
-  border-style: solid;
-  border-color: #d51e28;
-  top: 50%;
-  transition: border-color 0.25s ease-out;
-}
-
-/* line 7000, ../sass/css.scss */
 .bx-wrapper .bx-controls-direction .bx-next:before {
-  transform: rotate(-45deg);
+  transform: translate(-2px) rotate(-45deg);
 }
 
-/* line 7003, ../sass/css.scss */
 .bx-wrapper .bx-controls-direction .bx-prev:before {
-  transform: rotate(135deg);
+  transform: translate(2px) rotate(135deg);
 }
 
 /* line 7006, ../sass/css.scss */

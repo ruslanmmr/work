@@ -8,3 +8,16 @@ mixin card2(title, image, grid)
           path(d='M1.4,18.1L0,16.7l7.6-7.6L0,1.5L1.4,0l9,9.1C10.4,9.1,1.3,18.1,1.4,18.1z')
 
 
+mixin card3(type, classes)
+  .preview-block(class=classes)
+    a(href="#").preview-block__container 
+      .preview-block__image.image.image_cover
+        img(src=href+"/img/767773b7699f15e02052b250d92c0c7f.png", alt="image")
+      .preview-block__content(style='background-color:#16151A;')
+        if type=='1'
+          span.preview-block__label(style='background-color:#FFCC00;') Строитель
+        else if type=='2'
+          span.preview-block__label(style='background-color:#7FD1EB;') Производитель
+        else if type=='3'
+          span.preview-block__label(style='background-color:#C3E27F;') Дистрибьютор
+        h6.preview-block__title DISTORIUM.RU - первый умный дистрибьютер на платформе стройкер
