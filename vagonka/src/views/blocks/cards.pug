@@ -14,10 +14,6 @@ mixin card3(type, classes)
       .preview-block__image.image.image_cover
         img(src=href+"/img/767773b7699f15e02052b250d92c0c7f.png", alt="image")
       .preview-block__content(style='background-color:#16151A;')
-        if type=='1'
-          span.preview-block__label(style='background-color:#FFCC00;') Строитель
-        else if type=='2'
-          span.preview-block__label(style='background-color:#7FD1EB;') Производитель
-        else if type=='3'
-          span.preview-block__label(style='background-color:#C3E27F;') Дистрибьютор
+        if type!==''
+          span.preview-block__label(style='background-color:#FFCC00;')=type
         h6.preview-block__title DISTORIUM.RU - первый умный дистрибьютер на платформе стройкер

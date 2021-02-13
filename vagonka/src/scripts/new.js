@@ -43,12 +43,14 @@ function header() {
   });
 
   function check() {
-    scroll = $(window).scrollTop();
-    height = $header.height();
-    if(scroll>height){
-      $header.addClass('fixed');
-    } else {
-      $header.removeClass('fixed');
+    if(!$header.hasClass('header_landing')) {
+      scroll = $(window).scrollTop();
+      height = $header.height();
+      if(scroll>height){
+        $header.addClass('fixed');
+      } else {
+        $header.removeClass('fixed');
+      }
     }
   }
   
@@ -80,12 +82,12 @@ function landing_sliders() {
       let count1, count2, count3, count4;
 
       if($this.is('.landing-slider_1 .owl-carousel')) {
-        count1 = 1;
+        count1 = 2;
         count2 = 2; 
         count3 = 3; 
         count4 = 4;
       } else if($this.is('.landing-slider_2 .owl-carousel')) {
-        count1 = 2;
+        count1 = 1;
         count2 = 2; 
         count3 = 3; 
         count4 = 4;
