@@ -17875,7 +17875,8 @@ ol:not([class]) li:not([class]):before {
 .new-weekItem__priceBlock {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  line-height: 1.2; }
 
 .new-weekItem__price {
   font-weight: 700;
