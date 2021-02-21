@@ -9,29 +9,22 @@ html
     base(href="https://bunnylove.ru/")
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    //новый вьюпорт
     meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
     meta(name='yandex-verification', content='c8707104e930cead')
     meta(name='google-site-verification', content='MmfOcc2tXIy1qrZeDPLAdG9F--5-p78AVUy3Gxk-3dE')
     link(rel='shortcut icon', type='image/x-icon', href='/static/favicon.ico')
-    title
-      | Секс-шоп «Влюбленный кролик» в Самаре - онлайн-магазин интим товаров, каталог эротических аксессуаров
+    title Секс-шоп «Влюбленный кролик» в Самаре - онлайн-магазин интим товаров, каталог эротических аксессуаров
     meta(name='keywords', content='секс шоп, сексшоп, интим магазин')
     meta(name='description', content='Секс-шоп «Влюбленный кролик» - онлайн магазин интим товаров в Самаре. В нашем каталоге широкий ассортимент эротических аксессуаров по выгодным ценам.')
     link(href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap', rel='stylesheet')
     link(href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', rel='stylesheet')
-    
     link(rel='stylesheet' href=href+'/styles/styles.css')
-    
-    link(rel='stylesheet' href=href+'/styles/js-helper.css')
 
   body
     header.new-header.new-header-type-standart
       .new-banner.new-header__banner
-        .container
-          | 😎 
-          a.new-banner__link(href='/anonymity/') анонимность
-          |  магазина
+        .container 😎 
+          a.new-banner__link(href='/anonymity/') анонимность магазина
       .new-mobileMenu.new-header__mobileMenu(data-action='menuWrapper')
         .new-mobileMenu__shell
           .new-mobileMenu__top
@@ -600,11 +593,6 @@ html
           h5.footer-topline__title Если скрыть форму, текст просто 
             a(href="#") растянется 
             | на ширину всей полосы. (можно проверить через консоль)
-      //.new-footer__top
-        .container
-          .new-footer__ad
-            | Получай бонусы за покупки и оплачивай ими следующий заказ — 
-            a.new-footer__link(href='/bonus/') подробнее о бонусной программе
       .new-footer__center.container
         .new-footer__contacts
           a.new-phone.new-footer__phone(rel='nofollow', target='_blank', href='tel:+7 (846) 300-44-49')
@@ -647,15 +635,20 @@ html
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/anonymity/') Анонимность
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/vacancy/') Вакансии
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/requisites/') Реквизиты
+          
           .new-dropdown.new-footer__dropdown
-            button.new-button.new-dropdown__button.new-dropdown__button-type-footer(data-action='dropdownButton') Акции
+            button.new-button.new-dropdown__button.new-dropdown__button-type-footer(data-action='dropdownButton') 
+            .new-footer__dropdown-link 
+              a(href="#") Акции
             .new-dropdown__wrapper.new-dropdown__wrapper-type-footer(data-action='dropdownWrapper')
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/promo/obmenyaj-starye-batarejki-na-novye/') Обменяй старые батарейки на новые!
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/promo/den-semi-lyubvi-i-vernosti/') День семьи, любви и верности
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/promo/big-may-sale/') BIG MAY SALE
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/promo/dostavka-za-99/') Доставка за 99₽
           .new-dropdown.new-footer__dropdown
-            button.new-button.new-dropdown__button.new-dropdown__button-type-footer(data-action='dropdownButton') Cтатьи
+            button.new-button.new-dropdown__button.new-dropdown__button-type-footer(data-action='dropdownButton')
+            .new-footer__dropdown-link 
+              a(href="#") Статьи
             .new-dropdown__wrapper.new-dropdown__wrapper-type-footer(data-action='dropdownWrapper')
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/articles/na-start-vnimanie-bdsm/') На старт, внимание, БДСМ
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/articles/5-sposobov-uluchshit-seksualnuyu-zhizn-v-pare/') 5 способов улучшить сексуальную жизнь в паре
@@ -672,11 +665,6 @@ html
           .new-footer__payment
             svg.new-footer__svg.new-footer__svg-type-master
               use(xlink:href='#masterIcon')
-    
-    //preview
-    include ../blocks/js-helper
-
-
 
     svg(style='display:none')
       symbol#wallet(fill='currentColor' viewbox='0 0 890.5 854.8')
@@ -922,11 +910,7 @@ html
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="/static/js/jquery-ui/jquery-ui-i18n.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- <script src="js/bootstrap.min.js"></script>-->
     <script src="/static/js/js.cookie.js"></script>
     <script src="/static/js/notify.min.js"></script>
     <script src="/static/js/jquery.bxslider/jquery.bxslider.min.js"></script>
@@ -941,9 +925,6 @@ html
     <script async="" src="/static/js/adaptive_scripts.js"></script>
 
     <script src="/static/NEW/js/main.js"></script>
-
-    //helper (preview only)
-    script(type='text/javascript', src=href+'/scripts/js-helper.js')
     
     //new
     script(type='text/javascript', src=href+'/scripts/new.js')
@@ -954,6 +935,9 @@ html
     script(type='text/javascript', src=href+'/scripts/libs/tippy.min.js')
 
     script(type='text/javascript', src=href+'/scripts/notifications.js')
+
+    //preview
+    include ../blocks/js-helper
 
 
 

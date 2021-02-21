@@ -6839,6 +6839,10 @@ body > .page:after {
   padding: 30px 30px 0 30px;
 }
 
+button {
+  font-family: inherit;
+}
+
 /* line 3721, ../sass/css.scss */
 .tabs__item {
   display: none;
@@ -23492,11 +23496,18 @@ ol:not([class]) li:not([class]):before {
 .new-footer__dropdown {
   box-shadow: none;
 }
-
-@media (max-width: 575.98px) {
+.new-footer__dropdown {
+  position: relative;
+}
+.new-dropdown__button-type-footer {
+  font-size: 14px;
+}
+@media (max-width: 1023px) {
   /* line 15986, ../sass/css.scss */
   .new-dropdown__button-type-footer {
     padding-left: 0;
+    line-height: 18px;
+    min-height: 40px;
   }
 }
 /* line 15989, ../sass/css.scss */

@@ -1,3 +1,5 @@
+
+
 .promo-item-card {
   &__container {
     display: flex;
@@ -57,6 +59,32 @@
   @media screen and (max-width:575px) {
     margin: -30px -15px 30px -15px;
     width: calc(100% + 30px);
+  }
+}
+
+.new-footer {
+  &__dropdown-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    a {
+      color: #000;
+      border-bottom: 1px solid #000;
+      transition: border-color $trs1, color $trs1;
+      &:hover {
+        color: $color-accent;
+        border-color: transparent;
+      }
+    }
+  }
+  @media (max-width: 1023px) {
+    &__dropdown-link {
+      position: absolute;
+      top: 11px;
+      line-height: 18px;
+    }
   }
 }
 
