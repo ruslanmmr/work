@@ -4,415 +4,329 @@ block content
   .container
     section.section
       .new-content.new-content-type-catalog
-        h1.new-content__title.section__title Купить женский вибратор
+        h1.new-content__title.section__title Купить вагинальные шарики и тренажеры
         .new-content__left
           .new-choice.new-content__choice
             button.new-button.new-button-type-choice(data-action='filtersButton')
               svg.new-choice__icon
                 use(xlink:href='#filterIcon')
-              |     Фильтр
+              span по параметрам
             button.new-button.new-button-type-choice(data-action='toSortByButton')
               svg.new-choice__icon
-                use(xlink:href='#sortByIcon')
-              span.new-choice__span(data-action='toSortBySpan') Сортировка
+                use(xlink:href='#filterIcon')
+              span по цене/наличию
+
           .new-filters.new-content__filters(data-action='filtersWrapper')
             .new-console.new-mobileMenu__console
               button.new-header__close(data-action='filtersCloseButton')
+
             .new-filters__top
+
               .new-dropdown.new-header__dropdown.active(data-action='dropdown')
+                span.new-button.new-dropdown__button.new-dropdown__button-type-topFilter(data-action='dropdownButton')
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/')
+                    | Женское
+                .new-dropdown__wrapper.new-dropdown__wrapper-type-topFilter(data-action='dropdownWrapper')
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/kostyumy-dlya-rolevyh-igr/') Для ролевых игр
+                  a.new-button.new-dropdown__link.third-child.active(href='/catalog/eroticheskoe-bele/zhenskoe/kostyumy-dlya-rolevyh-igr/shkolnicy/') Школьницы
+                  a.new-button.new-dropdown__link.third-child(href='/catalog/eroticheskoe-bele/zhenskoe/kostyumy-dlya-rolevyh-igr/medsestry/') Медсестры
+                  a.new-button.new-dropdown__link.third-child(href='/catalog/eroticheskoe-bele/zhenskoe/kostyumy-dlya-rolevyh-igr/policejskie/') Полицейские
+                  a.new-button.new-dropdown__link.third-child(href='/catalog/eroticheskoe-bele/zhenskoe/kostyumy-dlya-rolevyh-igr/sekretarshi/') Секретарши
+                  a.new-button.new-dropdown__link.third-child(href='/catalog/eroticheskoe-bele/zhenskoe/kostyumy-dlya-rolevyh-igr/styuardessy/') Стюардессы
+                  a.new-button.new-dropdown__link.third-child(href='/catalog/eroticheskoe-bele/zhenskoe/kostyumy-dlya-rolevyh-igr/gornichnye/') Горничные
+                  a.new-button.new-dropdown__link.third-child(href='/catalog/eroticheskoe-bele/zhenskoe/kostyumy-dlya-rolevyh-igr/novogodnie/') Новогодние
+                  a.new-button.new-dropdown__link.third-child(href='/catalog/eroticheskoe-bele/zhenskoe/kostyumy-dlya-rolevyh-igr/rabyni/') Рабыни
+                  a.new-button.new-dropdown__link.third-child(href='/catalog/eroticheskoe-bele/zhenskoe/kostyumy-dlya-rolevyh-igr/vedmochki/') Ведьмочки
+                  a.new-button.new-dropdown__link.third-child(href='/catalog/eroticheskoe-bele/zhenskoe/kostyumy-dlya-rolevyh-igr/drugie/') Другие
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/bolshie-razmery/') Большие размеры
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/kozhanoe-lakovoe-lateksnoe/') Кожаное, лаковое, латексное
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/mini-platya-i-sorochki/') Мини-платья и сорочки
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/penyuarykimono/') Пеньюары, кимоно
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/chulki-kolgoty-i-poyasa/') Чулки, колготы и пояса
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/byuste-i-korsety/') Бюстье и корсеты
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/trusiki/') Трусики
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/yubki/') Юбки
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/eroticheskie-komplekty/') Эротические комплекты
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/bodi-teddi-monokini/') Боди, тедди, монокини
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/chulki-na-telo/') Чулки на тело
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/perchatki-podvyazki/') Перчатки, подвязки
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/byustgaltery-topy/') Бюстгальтеры, топы
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/ukrasheniya-i-aksessuary/') Интимные украшения и аксессуары
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/klubnye-platya/') Клубные платья
+              .new-dropdown.new-header__dropdown(data-action='dropdown')
+                span.new-button.new-dropdown__button.new-dropdown__button-type-topFilter(data-action='dropdownButton')
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/muzhskoe/')
+                    | Мужское
+                .new-dropdown__wrapper.new-dropdown__wrapper-type-topFilter(data-action='dropdownWrapper')
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/muzhskoe/kostyumy-dlya-rolevyh-igr/') Для ролевых игр
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/muzhskoe/kozhanoe-lakovoe-lateksnoe/') Кожаное, лаковое, латексное
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/muzhskoe/shorty-trusy/') Шорты, трусы
+                  a.new-button.new-dropdown__link(href='/catalog/eroticheskoe-bele/muzhskoe/majki/') Майки
+
+              //.new-dropdown.active(data-action='dropdown')
                 span.new-button.new-dropdown__button.new-dropdown__button-type-topFilter.new-dropdown__button-action-open(data-action='dropdownButton')
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/')
-                    | Для женщин
+                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/') Для женщин
                 .new-dropdown__wrapper.new-dropdown__wrapper-type-topFilter.new-dropdown__wrapper-action-open(data-action='dropdownWrapper')
-                  a.new-button.new-dropdown__link.active(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/') Вибраторы
-                  a.new-button.new-dropdown__link.third-child(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/vibromassazhery/') Нереалистичные
-                  a.new-button.new-dropdown__link.third-child(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/klitoralnyevibrotrusikivibrobabochki/') Со стимуляцией клитора
-                  a.new-button.new-dropdown__link.third-child(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/premium/') Премиум
-                  a.new-button.new-dropdown__link.third-child(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/s-neobychnymi-opciyami/') С необычными опциями
-                  a.new-button.new-dropdown__link.third-child(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/iz-neobychnyh-materialov/') Из необычных материалов
-                  a.new-button.new-dropdown__link.third-child(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/dlya-tochki-g/') Для точки G
-                  a.new-button.new-dropdown__link.third-child(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/realistichnye/') Реалистичные
-                  a.new-button.new-dropdown__link.third-child(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/vaginalno-analnye/') Вагинально-анальные
-                  a.new-button.new-dropdown__link.third-child(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/vibropulivibroyajca/') Клиторальные стимуляторы
-                  a.new-button.new-dropdown__link.third-child(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/na-palecyazyk/') На палец, язык
-                  a.new-button.new-dropdown__link.third-child(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/hi-tech-mnogofunkcionalnye/') Многофункциональные
-                  a.new-button.new-dropdown__link.third-child(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/nabory-vibratorov/') Наборы вибраторов
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/falloimmitatory/') Фаллоимитаторы
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/') Вагинальные шарики и тренажеры
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/vakuumnye-stimulyatory/') Вакуумные стимуляторы
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/vakumnye-pompy/') Вакуумные помпы
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/analnye-stimulyatory/') Анальные стимуляторы
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/stimulyaciya-grudi/') Стимуляция груди
-              .new-dropdown.new-header__dropdown(data-action='dropdown')
-                span.new-button.new-dropdown__button.new-dropdown__button-type-topFilter(data-action='dropdownButton')
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/')
-                    | Для мужчин
-                .new-dropdown__wrapper.new-dropdown__wrapper-type-topFilter(data-action='dropdownWrapper')
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/vaginy-i-masturbatory/') Вагины и мастурбаторы
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/vakuumnye-i-gidropompy/') Помпы
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/stimulyatory-prostaty/') Стимуляторы простаты
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/analnye-stimulyatory/') Анальные стимуляторы
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/kukly/') Куклы
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/nasadki-i-kolca/') Насадки и кольца
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/falloprotezy/') Фаллопротезы
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/uvelichenie-chlena/') Увеличение члена
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/stimulyatory-uretry/') Стимуляторы уретры
-              .new-dropdown.new-header__dropdown(data-action='dropdown')
-                span.new-button.new-dropdown__button.new-dropdown__button-type-topFilter(data-action='dropdownButton')
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/')
-                    | Для двоих
-                .new-dropdown__wrapper.new-dropdown__wrapper-type-topFilter(data-action='dropdownWrapper')
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/vibratory-dlya-par/') Вибраторы для пар
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/strapony/') Страпоны
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/nabory/') Наборы
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/elektrostimulyaciya/') Электростимуляция
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/mebel-dlya-seksaseks-mashiny/') Мебель для секса, секс-машины
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/prezervativy/') Презервативы
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/eroticheskie-igry/') Эротические игры
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/knigikamasutra/') Книги, камасутра
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/suveniry/') Сувениры
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/aksessuary-i-batarejki/') Аксессуары и батарейки
-                  a.new-button.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/podarochnaya-upakovka/') Подарочная упаковка
+                  .new-dropdown(data-action='dropdown')
+                    .new-dropdown__link(data-action='dropdownButton') Вибраторы
+                    .new-dropdown__wrapper.new-dropdown__wrapper-action-open(data-action='dropdownWrapper')
+                      a(href="#").new-dropdown__link Вибраторы 1 
+                      a(href="#").new-dropdown__link Вибраторы 2 
+                      a(href="#").new-dropdown__link Вибраторы 3
+                  .new-dropdown(data-action='dropdown')
+                    .new-dropdown__link(data-action='dropdownButton') Страпоны
+                    .new-dropdown__wrapper(data-action='dropdownWrapper')
+                      a(href="#").new-dropdown__link Страпоны 1 
+                      a(href="#").new-dropdown__link Страпоны 2 
+                      a(href="#").new-dropdown__link Страпоны 3
+                  .new-dropdown(data-action='dropdown')
+                    .new-dropdown__link(data-action='dropdownButton') Наборы
+                    .new-dropdown__wrapper(data-action='dropdownWrapper')
+                      a(href="#").new-dropdown__link Наборы 1 
+                      a(href="#").new-dropdown__link Наборы 2 
+                      a(href="#").new-dropdown__link Наборы 3
+
+
             .new-filters__bottom.product_filter
-              form#catalog_filter_form(action='/catalog/seks-igrushki/dlya-zhenshin/vibratory/')
-                a.new-button.new-button-type-empty.new-button-type-clear(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/')
+              form#catalog_filter_form(action='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/')
+                a.new-button.new-button-type-empty.new-button-type-clear(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/')
                   | Сбросить все
                   | фильтры
-                fieldset.new-dropdown.new-header__dropdown.new-filters__dropdown(data-action='dropdown')
-                  legend.new-button.new-dropdown__button.new-dropdown__button-type-bottomFilter.new-dropdown__button-action-open(data-action='dropdownButton')
-                    | Длина, см
-                  .new-dropdown__wrapper.new-dropdown__wrapper-type-bottomFilter.new-dropdown__wrapper-action-open(data-action='dropdownWrapper')
-                    .range
-                      .slider-margin.noUi-target.noUi-ltr.noUi-horizontal.noUi-background
-                        .noUi-base
-                          .noUi-origin(style='left: 0%;')
-                            .noUi-handle.noUi-handle-lower
-                          .noUi-origin(style='left: 100%;')
-                            .noUi-handle.noUi-handle-upper
-                      p.new-range__value
-                        input#id_dlina-sm_0(type='text' name='dlina-sm_0' placeholder='2.00')
-                        span.new-range__divider
-                        input#id_dlina-sm_1(type='text' name='dlina-sm_1' placeholder='51.00')
-                fieldset.new-dropdown.new-header__dropdown.new-filters__dropdown(data-action='dropdown')
+                fieldset.new-dropdown.new-filters__dropdown(data-action='dropdown')
                   legend.new-button.new-dropdown__button.new-dropdown__button-type-bottomFilter.new-dropdown__button-action-open(data-action='dropdownButton')
                     | Диаметр, см
                   .new-dropdown__wrapper.new-dropdown__wrapper-type-bottomFilter.new-dropdown__wrapper-action-open(data-action='dropdownWrapper')
                     .range
-                      .slider-margin.noUi-target.noUi-ltr.noUi-horizontal.noUi-background
-                        .noUi-base
-                          .noUi-origin(style='left: 0%;')
-                            .noUi-handle.noUi-handle-lower
-                          .noUi-origin(style='left: 100%;')
-                            .noUi-handle.noUi-handle-upper
+                      .slider-margin
                       p.new-range__value
-                        input#id_diametr-sm_0(type='text' name='diametr-sm_0' placeholder='1.00')
+                        input#id_diametr-sm_0(type='text' name='diametr-sm_0' placeholder='1.50')
                         span.new-range__divider
-                        input#id_diametr-sm_1(type='text' name='diametr-sm_1' placeholder='11.50')
-                fieldset.new-dropdown.new-header__dropdown.new-filters__dropdown(data-action='dropdown')
-                  legend.new-button.new-dropdown__button.new-dropdown__button-type-bottomFilter(data-action='dropdownButton')
-                    | Цвет
-                  .new-dropdown__wrapper.new-dropdown__wrapper-type-bottomFilter(data-action='dropdownWrapper')
-                    .checkbox-item
-                      label.label--checkbox(for='id_cvet_0')
-                        input#id_cvet_0.checkbox(type='checkbox' name='cvet' value='belyij' choicesearch='false')
-                        |     белый (9)
-                    .checkbox-item
-                      label.label--checkbox(for='id_cvet_1')
-                        input#id_cvet_1.checkbox(type='checkbox' name='cvet' value='bezhevyij' choicesearch='false')
-                        |     бежевый (32)
-                    .checkbox-item
-                      label.label--checkbox(for='id_cvet_2')
-                        input#id_cvet_2.checkbox(type='checkbox' name='cvet' value='chyornyij' choicesearch='false')
-                        |     чёрный (15)
-                    .checkbox-item
-                      label.label--checkbox(for='id_cvet_3')
-                        input#id_cvet_3.checkbox(type='checkbox' name='cvet' value='fioletovyij' choicesearch='false')
-                        |     фиолетовый (46)
-                    .checkbox-item
-                      label.label--checkbox(for='id_cvet_4')
-                        input#id_cvet_4.checkbox(type='checkbox' name='cvet' value='goluboj' choicesearch='false')
-                        |     голубой (12)
-                    .checkbox-item
-                      label.label--checkbox(for='id_cvet_5')
-                        input#id_cvet_5.checkbox(type='checkbox' name='cvet' value='korichnevyij' choicesearch='false')
-                        |     коричневый (2)
-                    .checkbox-item
-                      label.label--checkbox(for='id_cvet_6')
-                        input#id_cvet_6.checkbox(type='checkbox' name='cvet' value='krasnyij' choicesearch='false')
-                        |     красный (7)
-                    .checkbox-item
-                      label.label--checkbox(for='id_cvet_7')
-                        input#id_cvet_7.checkbox(type='checkbox' name='cvet' value='oranzhevyij' choicesearch='false')
-                        |     оранжевый (1)
-                    .checkbox-item
-                      label.label--checkbox(for='id_cvet_8')
-                        input#id_cvet_8.checkbox(type='checkbox' name='cvet' value='prozrachnyij' choicesearch='false')
-                        |     прозрачный (2)
-                    .checkbox-item
-                      label.label--checkbox(for='id_cvet_9')
-                        input#id_cvet_9.checkbox(type='checkbox' name='cvet' value='rozovyij' choicesearch='false')
-                        |     розовый (50)
-                    .checkbox-item
-                      label.label--checkbox(for='id_cvet_10')
-                        input#id_cvet_10.checkbox(type='checkbox' name='cvet' value='serebryanyij' choicesearch='false')
-                        |     серебряный (2)
-                    .checkbox-item
-                      label.label--checkbox(for='id_cvet_11')
-                        input#id_cvet_11.checkbox(type='checkbox' name='cvet' value='sinij' choicesearch='false')
-                        |     синий (5)
-                    .checkbox-item
-                      label.label--checkbox(for='id_cvet_12')
-                        input#id_cvet_12.checkbox(type='checkbox' name='cvet' value='zelenyij' choicesearch='false')
-                        |     зеленый (8)
-                fieldset.new-dropdown.new-header__dropdown.new-filters__dropdown(data-action='dropdown')
+                        input#id_diametr-sm_1(type='text' name='diametr-sm_1' placeholder='6.00')
+                fieldset.new-dropdown.new-filters__dropdown(data-action='dropdown')
                   legend.new-button.new-dropdown__button.new-dropdown__button-type-bottomFilter(data-action='dropdownButton')
                     | Материал
                   .new-dropdown__wrapper.new-dropdown__wrapper-type-bottomFilter(data-action='dropdownWrapper')
                     .checkbox-item
                       label.label--checkbox(for='id_material_0')
                         input#id_material_0.checkbox(type='checkbox' name='material' value='abs' choicesearch='false')
-                        |     ABS (14)
+                        |     ABS
                     .checkbox-item
                       label.label--checkbox(for='id_material_1')
-                        input#id_material_1.checkbox(type='checkbox' name='material' value='gel' choicesearch='false')
-                        |     гель (1)
+                        input#id_material_1.checkbox(type='checkbox' name='material' value='tpe' choicesearch='false')
+                        |     TPE
                     .checkbox-item
                       label.label--checkbox(for='id_material_2')
-                        input#id_material_2.checkbox(type='checkbox' name='material' value='kiberkozha' choicesearch='false')
-                        |     киберкожа (13)
+                        input#id_material_2.checkbox(type='checkbox' name='material' value='metall' choicesearch='false')
+                        |     металл
                     .checkbox-item
                       label.label--checkbox(for='id_material_3')
-                        input#id_material_3.checkbox(type='checkbox' name='material' value='poliester' choicesearch='false')
-                        |     полиэстер (1)
+                        input#id_material_3.checkbox(type='checkbox' name='material' value='silikon' choicesearch='false')
+                        |     силикон
                     .checkbox-item
                       label.label--checkbox(for='id_material_4')
-                        input#id_material_4.checkbox(type='checkbox' name='material' value='pvh' choicesearch='false')
-                        |     ПВХ (5)
+                        input#id_material_4.checkbox(type='checkbox' name='material' value='steklo' choicesearch='false')
+                        |     стекло
+                fieldset.new-dropdown.new-filters__dropdown(data-action='dropdown')
+                  legend.new-button.new-dropdown__button.new-dropdown__button-type-bottomFilter(data-action='dropdownButton')
+                    | Цвет
+                  .new-dropdown__wrapper.new-dropdown__wrapper-type-bottomFilter(data-action='dropdownWrapper')
                     .checkbox-item
-                      label.label--checkbox(for='id_material_5')
-                        input#id_material_5.checkbox(type='checkbox' name='material' value='silikon' choicesearch='false')
-                        |     силикон (136)
+                      label.label--checkbox(for='id_cvet_0')
+                        input#id_cvet_0.checkbox(type='checkbox' name='cvet' value='bezhevyij' choicesearch='false')
+                        |     бежевый
                     .checkbox-item
-                      label.label--checkbox(for='id_material_6')
-                        input#id_material_6.checkbox(type='checkbox' name='material' value='tpe' choicesearch='false')
-                        |     TPE (11)
+                      label.label--checkbox(for='id_cvet_1')
+                        input#id_cvet_1.checkbox(type='checkbox' name='cvet' value='belyij' choicesearch='false')
+                        |     белый
                     .checkbox-item
-                      label.label--checkbox(for='id_material_7')
-                        input#id_material_7.checkbox(type='checkbox' name='material' value='tpr' choicesearch='false')
-                        |     TPR (11)
+                      label.label--checkbox(for='id_cvet_2')
+                        input#id_cvet_2.checkbox(type='checkbox' name='cvet' value='goluboj' choicesearch='false')
+                        |     голубой
                     .checkbox-item
-                      label.label--checkbox(for='id_material_8')
-                        input#id_material_8.checkbox(type='checkbox' name='material' value='ur3' choicesearch='false')
-                        |     UR3 (1)
-                fieldset.new-dropdown.new-header__dropdown.new-filters__dropdown(data-action='dropdown')
+                      label.label--checkbox(for='id_cvet_3')
+                        input#id_cvet_3.checkbox(type='checkbox' name='cvet' value='zelenyij' choicesearch='false')
+                        |     зеленый
+                    .checkbox-item
+                      label.label--checkbox(for='id_cvet_4')
+                        input#id_cvet_4.checkbox(type='checkbox' name='cvet' value='zolotoj' choicesearch='false')
+                        |     золотой
+                    .checkbox-item
+                      label.label--checkbox(for='id_cvet_5')
+                        input#id_cvet_5.checkbox(type='checkbox' name='cvet' value='krasnyij' choicesearch='false')
+                        |     красный
+                    .checkbox-item
+                      label.label--checkbox(for='id_cvet_6')
+                        input#id_cvet_6.checkbox(type='checkbox' name='cvet' value='prozrachnyij' choicesearch='false')
+                        |     прозрачный
+                    .checkbox-item
+                      label.label--checkbox(for='id_cvet_7')
+                        input#id_cvet_7.checkbox(type='checkbox' name='cvet' value='raznotsvetnyij' choicesearch='false')
+                        |     разноцветный
+                    .checkbox-item
+                      label.label--checkbox(for='id_cvet_8')
+                        input#id_cvet_8.checkbox(type='checkbox' name='cvet' value='rozovyij' choicesearch='false')
+                        |     розовый
+                    .checkbox-item
+                      label.label--checkbox(for='id_cvet_9')
+                        input#id_cvet_9.checkbox(type='checkbox' name='cvet' value='serebryanyij' choicesearch='false')
+                        |     серебряный
+                    .checkbox-item
+                      label.label--checkbox(for='id_cvet_10')
+                        input#id_cvet_10.checkbox(type='checkbox' name='cvet' value='seryij' choicesearch='false')
+                        |     серый
+                    .checkbox-item
+                      label.label--checkbox(for='id_cvet_11')
+                        input#id_cvet_11.checkbox(type='checkbox' name='cvet' value='sinij' choicesearch='false')
+                        |     синий
+                    .checkbox-item
+                      label.label--checkbox(for='id_cvet_12')
+                        input#id_cvet_12.checkbox(type='checkbox' name='cvet' value='sirenevyij' choicesearch='false')
+                        |     сиреневый
+                    .checkbox-item
+                      label.label--checkbox(for='id_cvet_13')
+                        input#id_cvet_13.checkbox(type='checkbox' name='cvet' value='fioletovyij' choicesearch='false')
+                        |     фиолетовый
+                    .checkbox-item
+                      label.label--checkbox(for='id_cvet_14')
+                        input#id_cvet_14.checkbox(type='checkbox' name='cvet' value='chyornyij' choicesearch='false')
+                        |     чёрный
+                fieldset.new-dropdown.new-filters__dropdown(data-action='dropdown')
                   legend.new-button.new-dropdown__button.new-dropdown__button-type-bottomFilter(data-action='dropdownButton')
                     | Бренд
                   .new-dropdown__wrapper.new-dropdown__wrapper-type-bottomFilter(data-action='dropdownWrapper')
                     .brand-filter
                       .brand-filter-search
                         input.checkbox-filter-search(type='text' placeholder='Поиск')
-                      .scrollbar.scroller
-                        .scroller-bar(style='height: 100px;')
-                          .scroller-track(style='height: 100px; margin-bottom: 0px; margin-top: 0px;')
-                            .scroller-handle
-                        .scroller-content
-                          .brand-filter-checkbox
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_0')
-                                input#id_brend_0.checkbox(type='checkbox' name='brend' value='adrien-lastic-ispaniya' choicesearch='true')
-                                |     Adrien Lastic, Испания (4)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_1')
-                                input#id_brend_1.checkbox(type='checkbox' name='brend' value='a-toys-rossiya' choicesearch='true')
-                                |     A-Toys, Россия (16)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_2')
-                                input#id_brend_2.checkbox(type='checkbox' name='brend' value='baile-kitaj' choicesearch='true')
-                                |     Baile, Китай (13)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_3')
-                                input#id_brend_3.checkbox(type='checkbox' name='brend' value='bioritm-rossiya' choicesearch='true')
-                                |     Биоритм, Россия (3)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_4')
-                                input#id_brend_4.checkbox(type='checkbox' name='brend' value='california-exotic-ssha' choicesearch='true')
-                                |     California Exotic, США (11)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_5')
-                                input#id_brend_5.checkbox(type='checkbox' name='brend' value='cosmo-kitaj' choicesearch='true')
-                                |     Cosmo, Китай (1)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_6')
-                                input#id_brend_6.checkbox(type='checkbox' name='brend' value='doc-johnson-ssha' choicesearch='true')
-                                |     Doc Johnson, США (1)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_7')
-                                input#id_brend_7.checkbox(type='checkbox' name='brend' value='fifty-shades-angliya' choicesearch='true')
-                                |     Fifty Shades, Англия (2)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_8')
-                                input#id_brend_8.checkbox(type='checkbox' name='brend' value='fleshlight-ssha' choicesearch='true')
-                                |     FleshLight, США (1)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_9')
-                                input#id_brend_9.checkbox(type='checkbox' name='brend' value='fun-factory-germaniya' choicesearch='true')
-                                |     Fun Factory, Германия (12)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_10')
-                                input#id_brend_10.checkbox(type='checkbox' name='brend' value='fun-toys-velikobritaniya' choicesearch='true')
-                                |     Fun Toys, Великобритания (5)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_11')
-                                input#id_brend_11.checkbox(type='checkbox' name='brend' value='indeep-gollandiya' choicesearch='true')
-                                |     Indeep, Голландия (1)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_12')
-                                input#id_brend_12.checkbox(type='checkbox' name='brend' value='le-frivole-rossiya' choicesearch='true')
-                                |     Le Frivole, Россия (1)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_13')
-                                input#id_brend_13.checkbox(type='checkbox' name='brend' value='lola-toys-rossiya' choicesearch='true')
-                                |     Lola Toys, Россия (13)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_14')
-                                input#id_brend_14.checkbox(type='checkbox' name='brend' value='lovetoy-23-rossiya' choicesearch='true')
-                                |     LOVETOY 23, Россия (8)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_15')
-                                input#id_brend_15.checkbox(type='checkbox' name='brend' value='magic-motion-kitaj' choicesearch='true')
-                                |     Magic Motion, Китай (2)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_16')
-                                input#id_brend_16.checkbox(type='checkbox' name='brend' value='masculan-germaniya' choicesearch='true')
-                                |     Masculan, Германия (1)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_17')
-                                input#id_brend_17.checkbox(type='checkbox' name='brend' value='moytoy-knr' choicesearch='true')
-                                |     MOYTOY, КНР (13)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_18')
-                                input#id_brend_18.checkbox(type='checkbox' name='brend' value='mystim-germaniya' choicesearch='true')
-                                |     Mystim, Германия (1)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_19')
-                                input#id_brend_19.checkbox(type='checkbox' name='brend' value='nexus-velikobritaniya' choicesearch='true')
-                                |     Nexus, Великобритания (1)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_20')
-                                input#id_brend_20.checkbox(type='checkbox' name='brend' value='nmc-kanada' choicesearch='true')
-                                |     NMC, Канада (2)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_21')
-                                input#id_brend_21.checkbox(type='checkbox' name='brend' value='orion-germaniya' choicesearch='true')
-                                |     Orion, Германия (1)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_22')
-                                input#id_brend_22.checkbox(type='checkbox' name='brend' value='pipedream-ssha' choicesearch='true')
-                                |     PipeDream, США (3)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_23')
-                                input#id_brend_23.checkbox(type='checkbox' name='brend' value='realstick-rossiya' choicesearch='true')
-                                |     RealStick, Россия (11)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_24')
-                                input#id_brend_24.checkbox(type='checkbox' name='brend' value='romp-germaniya' choicesearch='true')
-                                |     Romp, Германия (1)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_25')
-                                input#id_brend_25.checkbox(type='checkbox' name='brend' value='satisfyer-germaniya' choicesearch='true')
-                                |     Satisfyer, Германия (15)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_26')
-                                input#id_brend_26.checkbox(type='checkbox' name='brend' value='shots-toys-niderlandyi' choicesearch='true')
-                                |     Shots Toys, Нидерланды (1)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_27')
-                                input#id_brend_27.checkbox(type='checkbox' name='brend' value='svakom-ssha' choicesearch='true')
-                                |     Svakom, США (5)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_28')
-                                input#id_brend_28.checkbox(type='checkbox' name='brend' value='tenga-yaponiya' choicesearch='true')
-                                |     Tenga, Япония (2)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_29')
-                                input#id_brend_29.checkbox(type='checkbox' name='brend' value='toyfa-rossiya' choicesearch='true')
-                                |     ToyFa, Россия (16)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_30')
-                                input#id_brend_30.checkbox(type='checkbox' name='brend' value='we-vibe-kanada' choicesearch='true')
-                                |     We-Vibe, Канада (9)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_31')
-                                input#id_brend_31.checkbox(type='checkbox' name='brend' value='womanizer-germaniya' choicesearch='true')
-                                |     Womanizer, Германия (4)
-                            .checkbox-item
-                              label.label--checkbox(for='id_brend_32')
-                                input#id_brend_32.checkbox(type='checkbox' name='brend' value='you2toys-germaniya' choicesearch='true')
-                                |     You2Toys, Германия (1)
-                fieldset.new-dropdown.new-header__dropdown.new-filters__dropdown(data-action='dropdown')
-                  legend.new-button.new-dropdown__button.new-dropdown__button-type-bottomFilter(data-action='dropdownButton')
-                    | Управление
-                  .new-dropdown__wrapper.new-dropdown__wrapper-type-bottomFilter(data-action='dropdownWrapper')
-                    .checkbox-item
-                      label.label--checkbox(for='id_upravlenie_0')
-                        input#id_upravlenie_0.checkbox(type='checkbox' name='upravlenie' value='knopki' choicesearch='false')
-                        |     кнопки (141)
-                    .checkbox-item
-                      label.label--checkbox(for='id_upravlenie_1')
-                        input#id_upravlenie_1.checkbox(type='checkbox' name='upravlenie' value='povorotnyij-regulyator' choicesearch='false')
-                        |     поворотный регулятор (19)
-                    .checkbox-item
-                      label.label--checkbox(for='id_upravlenie_2')
-                        input#id_upravlenie_2.checkbox(type='checkbox' name='upravlenie' value='pult' choicesearch='false')
-                        |     пульт (18)
-                    .checkbox-item
-                      label.label--checkbox(for='id_upravlenie_3')
-                        input#id_upravlenie_3.checkbox(type='checkbox' name='upravlenie' value='radioupravlenie' choicesearch='false')
-                        |     радиоуправление (6)
-                    .checkbox-item
-                      label.label--checkbox(for='id_upravlenie_4')
-                        input#id_upravlenie_4.checkbox(type='checkbox' name='upravlenie' value='so-smartfona' choicesearch='false')
-                        |     со смартфона (5)
-                fieldset.new-dropdown.new-header__dropdown.new-filters__dropdown(data-action='dropdown')
-                  legend.new-button.new-dropdown__button.new-dropdown__button-type-bottomFilter(data-action='dropdownButton')
-                    | Тип питания
-                  .new-dropdown__wrapper.new-dropdown__wrapper-type-bottomFilter(data-action='dropdownWrapper')
-                    .checkbox-item
-                      label.label--checkbox(for='id_tip-pitaniya_0')
-                        input#id_tip-pitaniya_0.checkbox(type='checkbox' name='tip-pitaniya' value='220-v' choicesearch='false')
-                        |     220 V (1)
-                    .checkbox-item
-                      label.label--checkbox(for='id_tip-pitaniya_1')
-                        input#id_tip-pitaniya_1.checkbox(type='checkbox' name='tip-pitaniya' value='akkumulyator' choicesearch='false')
-                        |     аккумулятор (109)
-                    .checkbox-item
-                      label.label--checkbox(for='id_tip-pitaniya_2')
-                        input#id_tip-pitaniya_2.checkbox(type='checkbox' name='tip-pitaniya' value='batarejki' choicesearch='false')
-                        |     батарейки (78)
-                fieldset.new-dropdown.new-header__dropdown.new-filters__dropdown.filter__item.filter__single-option
+                      div
+                        .brand-filter-checkbox
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_0')
+                              input#id_brend_0.checkbox(type='checkbox' name='brend' value='a-toys-rossiya' choicesearch='true')
+                              |     A-Toys, Россия
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_1')
+                              input#id_brend_1.checkbox(type='checkbox' name='brend' value='baile-kitaj' choicesearch='true')
+                              |     Baile, Китай
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_2')
+                              input#id_brend_2.checkbox(type='checkbox' name='brend' value='california-exotic-ssha' choicesearch='true')
+                              |     California Exotic, США
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_3')
+                              input#id_brend_3.checkbox(type='checkbox' name='brend' value='cosmo-kitaj' choicesearch='true')
+                              |     Cosmo, Китай
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_4')
+                              input#id_brend_4.checkbox(type='checkbox' name='brend' value='doc-johnson-ssha' choicesearch='true')
+                              |     Doc Johnson, США
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_5')
+                              input#id_brend_5.checkbox(type='checkbox' name='brend' value='fifty-shades-angliya' choicesearch='true')
+                              |     Fifty Shades, Англия
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_6')
+                              input#id_brend_6.checkbox(type='checkbox' name='brend' value='fun-factory-germaniya' choicesearch='true')
+                              |     Fun Factory, Германия
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_7')
+                              input#id_brend_7.checkbox(type='checkbox' name='brend' value='fun-toys-velikobritaniya' choicesearch='true')
+                              |     Fun Toys, Великобритания
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_8')
+                              input#id_brend_8.checkbox(type='checkbox' name='brend' value='hot-avstriya' choicesearch='true')
+                              |     HOT, Австрия
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_9')
+                              input#id_brend_9.checkbox(type='checkbox' name='brend' value='le-frivole-rossiya' choicesearch='true')
+                              |     Le Frivole, Россия
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_10')
+                              input#id_brend_10.checkbox(type='checkbox' name='brend' value='lola-toys-rossiya' choicesearch='true')
+                              |     Lola Toys, Россия
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_11')
+                              input#id_brend_11.checkbox(type='checkbox' name='brend' value='lovetoy-kanada' choicesearch='true')
+                              |     LoveToy, Канада
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_12')
+                              input#id_brend_12.checkbox(type='checkbox' name='brend' value='magic-motion-kitaj' choicesearch='true')
+                              |     Magic Motion, Китай
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_13')
+                              input#id_brend_13.checkbox(type='checkbox' name='brend' value='masculan-germaniya' choicesearch='true')
+                              |     Masculan, Германия
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_14')
+                              input#id_brend_14.checkbox(type='checkbox' name='brend' value='ns-novelties-ssha' choicesearch='true')
+                              |     NS Novelties, США
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_15')
+                              input#id_brend_15.checkbox(type='checkbox' name='brend' value='ovo-germaniya' choicesearch='true')
+                              |     Ovo, Германия
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_16')
+                              input#id_brend_16.checkbox(type='checkbox' name='brend' value='satisfyer-germaniya' choicesearch='true')
+                              |     Satisfyer, Германия
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_17')
+                              input#id_brend_17.checkbox(type='checkbox' name='brend' value='seven-creations-kitaj' choicesearch='true')
+                              |     Seven Creations, Китай
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_18')
+                              input#id_brend_18.checkbox(type='checkbox' name='brend' value='sexus-glass-kitaj' choicesearch='true')
+                              |     Sexus Glass, Китай
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_19')
+                              input#id_brend_19.checkbox(type='checkbox' name='brend' value='shots-toys-niderlandyi' choicesearch='true')
+                              |     Shots Toys, Нидерланды
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_20')
+                              input#id_brend_20.checkbox(type='checkbox' name='brend' value='sitabella-rossiya' choicesearch='true')
+                              |     Sitabella, Россия
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_21')
+                              input#id_brend_21.checkbox(type='checkbox' name='brend' value='svakom-ssha' choicesearch='true')
+                              |     Svakom, США
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_22')
+                              input#id_brend_22.checkbox(type='checkbox' name='brend' value='toyfa-rossiya' choicesearch='true')
+                              |     ToyFa, Россия
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_23')
+                              input#id_brend_23.checkbox(type='checkbox' name='brend' value='white-label-kitaj' choicesearch='true')
+                              |     White Label, Китай
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_24')
+                              input#id_brend_24.checkbox(type='checkbox' name='brend' value='you2toys-germaniya' choicesearch='true')
+                              |     You2Toys, Германия
+                          .checkbox-item
+                            label.label--checkbox(for='id_brend_25')
+                              input#id_brend_25.checkbox(type='checkbox' name='brend' value='bioritm-rossiya' choicesearch='true')
+                              |     Биоритм, Россия
+                fieldset.new-dropdown.new-filters__dropdown.filter__item.filter__single-option
                   .checkbox-item
-                    label.label--checkbox(for='id_vodonepronicaemost_0')
-                      input#id_vodonepronicaemost_0.checkbox(type='checkbox' name='vodonepronicaemost' value='da' choicesearch='false')
-                      |     Водонепроницаемые  (99)
-                fieldset.new-dropdown.new-header__dropdown.new-filters__dropdown(data-action='dropdown')
+                    label.label--checkbox(for='id_smennyj-ves_0')
+                      input#id_smennyj-ves_0.checkbox(type='checkbox' name='smennyj-ves' value='da' choicesearch='false')
+                      |     Сменный вес да
+                fieldset.new-dropdown.new-filters__dropdown.filter__item.filter__single-option
+                  .checkbox-item
+                    label.label--checkbox(for='id_vibraciya_0')
+                      input#id_vibraciya_0.checkbox(type='checkbox' name='vibraciya' value='da' choicesearch='false')
+                      |     Вибрация да
+                fieldset.new-dropdown.new-filters__dropdown(data-action='dropdown')
                   legend.new-button.new-dropdown__button.new-dropdown__button-type-bottomFilter.new-dropdown__button-action-open(data-action='dropdownButton')
                     | Ценовой диапазон
                   .new-dropdown__wrapper.new-dropdown__wrapper-type-bottomFilter.new-dropdown__wrapper-action-open(data-action='dropdownWrapper')
                     .range
-                      .slider-margin.noUi-target.noUi-ltr.noUi-horizontal.noUi-background
-                        .noUi-base
-                          .noUi-origin(style='left: 0%;')
-                            .noUi-handle.noUi-handle-lower
-                          .noUi-origin(style='left: 100%;')
-                            .noUi-handle.noUi-handle-upper
+                      .slider-margin
                       p.new-range__value
                         input#id_price_range_0(type='text' name='price_range_0' placeholder='0')
                         span.new-range__divider
-                        input#id_price_range_1(type='text' name='price_range_1' placeholder='18980')
+                        input#id_price_range_1(type='text' name='price_range_1' placeholder='18690')
                 fieldset.filter__item
                   button.new-button.new-button-type-fill.new-button.new-button-type-filters(type='submit')
                     | Применить
-                a.new-button.new-button-type-empty.new-button-type-clear(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/')
+                a.new-button.new-button-type-empty.new-button-type-clear(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/')
                   | Сбросить все
                   | фильтры
                 a.filter_quick_results(href='#')
@@ -426,40 +340,40 @@ block content
             .new-dropdown.new-sort__dropdown
               button.new-button.new-dropdown__button.new-dropdown__button-type-sort(data-action='dropdownButton') Наличие
               .new-dropdown__wrapper.new-dropdown__wrapper-type-sort(data-action='dropdownWrapper')
-                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?availability=all' data-action='dropdownСhanger') все
-                a.new-dropdown__link.new-dropdown__link-type-sort.new-dropdown__link-type-sortCurrent(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/' data-action='dropdownСhanger') в наличии
+                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?availability=all' data-action='dropdownСhanger') все
+                a.new-dropdown__link.new-dropdown__link-type-sort.new-dropdown__link-type-sortCurrent(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/' data-action='dropdownСhanger') в наличии
             .new-dropdown.new-sort__dropdown
               button.new-button.new-dropdown__button.new-dropdown__button-type-sort(data-action='dropdownButton') Магазины
               .new-dropdown__wrapper.new-dropdown__wrapper-type-sort(data-action='dropdownWrapper')
-                a.new-dropdown__link.new-dropdown__link-type-sort.new-dropdown__link-type-sortCurrent(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/' data-action='dropdownСhanger') Все магазины
-                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?shops=1' data-action='dropdownСhanger') Ново-Вокз.
-                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?shops=2' data-action='dropdownСhanger') пр. Метал.
-                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?shops=3' data-action='dropdownСhanger') Моск. шоссе
-                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?shops=4' data-action='dropdownСhanger') Гагарина
-                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?shops=6' data-action='dropdownСhanger') Авроры
+                a.new-dropdown__link.new-dropdown__link-type-sort.new-dropdown__link-type-sortCurrent(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/' data-action='dropdownСhanger') Все магазины
+                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?shops=1' data-action='dropdownСhanger') Ново-Вокз.
+                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?shops=2' data-action='dropdownСhanger') Ленинградская
+                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?shops=3' data-action='dropdownСhanger') Моск. шоссе
+                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?shops=4' data-action='dropdownСhanger') Гагарина
+                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?shops=6' data-action='dropdownСhanger') Авроры
             .new-dropdown.new-sort__dropdown
               button.new-button.new-dropdown__button.new-dropdown__button-type-sort(data-action='dropdownButton') Тип
               .new-dropdown__wrapper.new-dropdown__wrapper-type-sort(data-action='dropdownWrapper')
-                a.new-dropdown__link.new-dropdown__link-type-sort.new-dropdown__link-type-sortCurrent(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/' data-action='dropdownСhanger') все
-                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?promo=discount' data-action='dropdownСhanger') со скидкой
-                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?promo=popular' data-action='dropdownСhanger') популярные
-                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?promo=new' data-action='dropdownСhanger') новые
+                a.new-dropdown__link.new-dropdown__link-type-sort.new-dropdown__link-type-sortCurrent(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/' data-action='dropdownСhanger') все
+                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?promo=discount' data-action='dropdownСhanger') со скидкой
+                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?promo=popular' data-action='dropdownСhanger') популярные
+                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?promo=new' data-action='dropdownСhanger') новые
             .new-dropdown.new-sort__dropdown
               button.new-button.new-dropdown__button.new-dropdown__button-type-sort(data-action='dropdownButton') Склад
               .new-dropdown__wrapper.new-dropdown__wrapper-type-sort(data-action='dropdownWrapper')
-                a.new-dropdown__link.new-dropdown__link-type-sort.new-dropdown__link-type-sortCurrent(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?store=all' data-action='dropdownСhanger') все
-                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?store=samara' data-action='dropdownСhanger') в Самаре
-                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?store=moscow' data-action='dropdownСhanger') в Москве
+                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?store=all' data-action='dropdownСhanger') все
+                a.new-dropdown__link.new-dropdown__link-type-sort.new-dropdown__link-type-sortCurrent(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?store=samara' data-action='dropdownСhanger') в Самаре
+                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?store=moscow' data-action='dropdownСhanger') в Москве
             .new-dropdown.new-sort__dropdown
               button.new-button.new-dropdown__button.new-dropdown__button-type-sort(data-action='dropdownButton') По цене
               .new-dropdown__wrapper.new-dropdown__wrapper-type-sort(data-action='dropdownWrapper')
-                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?ordering=asc' data-action='dropdownСhanger')
+                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?ordering=asc' data-action='dropdownСhanger')
                   span.new-dropdown__remark По возрастанию
                   span.new-dropdown__remark.new-dropdown__remark-type-desktop
                     | Цена
                     svg.new-dropdown__icon.new-dropdown__icon-type-priceMax
                       use(xlink:href='#priceMaxIcon')
-                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?ordering=desc' data-action='dropdownСhanger')
+                a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?ordering=desc' data-action='dropdownСhanger')
                   span.new-dropdown__remark По убыванию
                   span.new-dropdown__remark.new-dropdown__remark-type-desktop
                     | Цена
@@ -468,626 +382,665 @@ block content
           .new-content__catalog
             .new-card.new-card-type-catalog
               .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/883669/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/d0/a5/d0a5588ac3d905472a20cf6fff8cceaa.jpg' width='130' height='130' alt='Анальная Пробка Strong Force Anal Plug')
-              a.new-card__center(href='/catalog/product/analnaya-probka-strong-force-anal--4215-03lola/' title='Перейти на страницу товара') Анальная Пробка Strong Force Anal Plug
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 1 690
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/883669/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
-              p.new-card__explanation
-                | Силиконовая анальная пробка синего цвета с изгибом, рабочая длина - 12,5 см, диаметр 3,5 см
-            .new-card.new-card-type-catalog
-              .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/7123198/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/39/1a/391adf0e57901fd22f258b99087283cc.jpg' width='130' height='130' alt='Бесконтактный клиторальный стимулятор Melt')
-              a.new-card__center(href='/catalog/product/vakuumno-volnovoj-stimulyator-melt-wvmelt-pink/' title='Перейти на страницу товара') Бесконтактный клиторальный стимулятор Melt
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 13 390
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/7123198/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
-              p.new-card__explanation
-                | Бесконтактный клиторальный стимулятор с технологией бесшумной работы PLEASURE AIR™
-            .new-card.new-card-type-catalog
-              .new-card__labels
                 .new-card__label.new-card__label-type-sale
-                  span.new-card__fill -20%
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/11080326/')
+                  span.new-card__fill -10%
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/194201/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/ac/fd/acfdfc66bd2cce76756f5062b43feec7.jpg' width='130' height='130' alt='Бесконтактный клиторальный стимулятор Romp Shine')
-              a.new-card__center(href='/catalog/product/romp-shine-beskontaktnyij-klitoralnyij-stimulyator-rpstsg3/' title='Перейти на страницу товара') Бесконтактный клиторальный стимулятор Romp Shine
+                picture
+                  img.new-card__img(src='/media/cache/01/15/0115e6e60a742129f8815a67be873434.jpg' width='130' height='130' alt='CRYSTAL KEGEL EGGS')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-crystal-kegel-eggs--nsn-0703-14/' title='Перейти на страницу товара') CRYSTAL KEGEL EGGS
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price.new-card__price-type-old
-                    | 6 980
+                    | 1 980
                     span.new-card__currency ₽
                   span.new-card__price
-                    | 5 584
+                    | 1 782
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/11080326/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/194201/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
-              p.new-card__explanation Вакуум-волновой стимулятор клитора с технологией Pleasure Air
+                  |               Купить
+              p.new-card__explanation Шарики вагинальные из стекла розовые
             .new-card.new-card-type-catalog
               .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/1695040/')
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/5113566/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/67/46/67466eef18f0ddd38a63d0291df22268.jpg' width='130' height='130' alt='Бесконтактный клиторальный стимулятор Womanizer Classic')
-              a.new-card__center(href='/catalog/product/beskontaktnyij-klitoralnyij-stimulyator-womanizer-classic--wz08hb0100/' title='Перейти на страницу товара') Бесконтактный клиторальный стимулятор Womanizer Classic
+                picture
+                  img.new-card__img(src='/media/cache/97/8d/978d7294e3744537a6ff8f95c7aff4f8.jpg' width='130' height='130' alt='Вагинальные шарики Arrakis')
+              a.new-card__center(href='/catalog/product/shariki-kegelya-so-smeschennyim-tsentom--05531onesize/' title='Перейти на страницу товара') Вагинальные шарики Arrakis
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price
-                    | 11 500
+                    | 1 090
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/1695040/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/5113566/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
-              p.new-card__explanation Вакуум-волновой стимулятор клитора с технологией Pleasure Аir
+                  |               Купить
+              p.new-card__explanation Силиконовые вагинальные шарики со смещенным центром тяжести на сцепке, вес 57 гр
             .new-card.new-card-type-catalog
               .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/6165873/')
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/10578956/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/8c/b2/8cb232cbeba8c8abaa9444b8496611a2.jpg' width='130' height='130' alt='Бесконтактный клиторальный стимулятор Womanizer Starlet 2')
-              a.new-card__center(href='/catalog/product/beskontaktnyij-klitoralnyij-stimulyator-womanizer-starlet--wz15cl0100/' title='Перейти на страницу товара') Бесконтактный клиторальный стимулятор Womanizer Starlet 2
+                picture
+                  img.new-card__img(src='/media/cache/e3/69/e3696a877069be40f5eb34155d5af79b.jpg' width='130' height='130' alt='Вагинальные шарики A-Toys Green')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-a-toys-by-toyfa--764016/' title='Перейти на страницу товара') Вагинальные шарики A-Toys Green
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price
-                    | 8 170
+                    | 1 340
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/6165873/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/10578956/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
+                  |               Купить
               p.new-card__explanation
-                | Бесконтактный клиторальный стимулятор с технологией бесшумной работы PLEASURE AIR™
+                | Силиконовые вагинальные шарики на сцепке с ушками для дополнительной стимуляции, зеленые, 65 гр
             .new-card.new-card-type-catalog
               .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/6165874/')
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/206951/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/f8/ca/f8caa3bae86b7ca64175b42e6fa326d1.jpg' width='130' height='130' alt='Бесконтактный клиторальный стимулятор Womanizer Starlet 2 Blue')
-              a.new-card__center(href='/catalog/product/beskontaktnyij-klitoralnyij-stimulyator-womanizer-starlet--wz15gc0100/' title='Перейти на страницу товара') Бесконтактный клиторальный стимулятор Womanizer Starlet 2 Blue
+                picture
+                  img.new-card__img(src='/media/cache/16/6c/166c79a04e867c864cf9f01dd38f8bf3.jpg' width='130' height='130' alt='Вагинальные шарики A-Toys Keggel Balls')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-764001/' title='Перейти на страницу товара') Вагинальные шарики A-Toys Keggel Balls
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price
-                    | 8 170
+                    | 1 190
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/6165874/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/206951/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
+                  |               Купить
               p.new-card__explanation
-                | Бесконтактный клиторальный стимулятор с технологией бесшумной работы PLEASURE AIR™
+                | Изысканные вагинальные шарики рельефной формы один имитирует бутон цветочка, а второй украшен листиками. диаметр-3,5 см, вес-70 гр
             .new-card.new-card-type-catalog
               .new-card__labels
-                .new-card__label.new-card__label-type-important
-                  svg.new-card__icon
-                    use(xlink:href='#whiteStarIcon')
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/224092/')
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/10578957/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/54/4b/544b9bec5766980b118b4a7d8e7c9fa0.jpg' width='130' height='130' alt='Бесконтактный стимулятор SATISFYER PRO TRAVELER')
-              a.new-card__center(href='/catalog/product/beskontaktnyij-stimulyator-klitora-satisfyer-pro--j2018-tr/' title='Перейти на страницу товара') Бесконтактный стимулятор SATISFYER PRO TRAVELER
+                picture
+                  img.new-card__img(src='/media/cache/ca/8a/ca8a765430c0e9beb3a8c633ecb9826b.jpg' width='130' height='130' alt='Вагинальные шарики A-Toys Violet')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-a-toys-by-toyfa--764013/' title='Перейти на страницу товара') Вагинальные шарики A-Toys Violet
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price
-                    | 4 890
+                    | 1 230
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/224092/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/10578957/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
-              p.new-card__explanation Миниатюрный бесконтактный стимулятор клитора с вакуумно-волновой стимуляцией 
-            .new-card.new-card-type-catalog
-              .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/5433531/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/43/f4/43f4e138179e3d31421c0e9ce09bb96a.jpg' width='130' height='130' alt='Бесконтактный стимулятор Womanizer Duo')
-              a.new-card__center(href='/catalog/product/beskontaktnyij-klitoralnyij-stimulyator-womanizer-duo--wz07ci9600/' title='Перейти на страницу товара') Бесконтактный стимулятор Womanizer Duo
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 18 980
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/5433531/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
+                  |               Купить
               p.new-card__explanation
-                | Ультрасовременный вибратор для точки G c бесконтактной стимуляцией клитора, рабочая длина 11 см, диаметр стимулятора 1,5 см
-            .new-card.new-card-type-catalog
-              .new-card__labels
-                .new-card__label.new-card__label-type-important
-                  svg.new-card__icon
-                    use(xlink:href='#whiteStarIcon')
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/214775/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/7e/b5/7eb550f6ffb95bd7d23ac2a31f233e55.jpg' width='130' height='130' alt='Бесконтактный стимулятор клитора Satisfyer Pro 2 Penguin NG')
-              a.new-card__center(href='/catalog/product/satisfyer-pro-penguin-ng-vakuum-volnovoj--j2018-8n/' title='Перейти на страницу товара') Бесконтактный стимулятор клитора Satisfyer Pro 2 Penguin NG
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 5 950
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/214775/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
-              p.new-card__explanation Бесконтактный стимулятор клитора с вакуум-волновой стимуляцией
-            .new-card.new-card-type-catalog
-              .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/219566/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/f6/ea/f6eafc9185cdc27043576aeba4b6b057.jpg' width='130' height='130' alt='Бесконтактный стимулятор клитора Satisfyer Pro Plus Vibration')
-              a.new-card__center(href='/catalog/product/beskontaktnyij-vakuumno-volnovoj-stimulyator-satisfyer-pro--j2018-16/' title='Перейти на страницу товара') Бесконтактный стимулятор клитора Satisfyer Pro Plus Vibration
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 6 290
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/219566/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
-              p.new-card__explanation Бесконтактный вакуумно-волновой стимулятор с вибрацией
-            .new-card.new-card-type-catalog
-              .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/11576735/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/92/aa/92aa90a1379b33cd0f6aa865b66fe928.jpg' width='130' height='130' alt='Вакуумно-волновой вибростимулятор Satisfyer Love Triangle с возможностью управления через приложение')
-              a.new-card__center(href='/catalog/product/vakuumno-volnovoj-vibrostimulyator-satisfyer-love-triangle--j2018-57-1/' title='Перейти на страницу товара')
-                | Вакуумно-волновой вибростимулятор Satisfyer Love Triangle с возможностью управления через приложение
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 6 190
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/11576735/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
-            .new-card.new-card-type-catalog
-              .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/11576736/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/static/img/noimage.png' width='130' height='130' alt='Фото товара временно отсутствует')
-              a.new-card__center(href='/catalog/product/vakuumno-volnovoj-vibrostimulyator-satisfyer-love-triangle--j2018-57-2/' title='Перейти на страницу товара')
-                | Вакуумно-волновой вибростимулятор Satisfyer Love Triangle с возможностью управления через приложение
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 6 190
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/11576736/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
-            .new-card.new-card-type-catalog
-              .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/11576737/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/static/img/noimage.png' width='130' height='130' alt='Фото товара временно отсутствует')
-              a.new-card__center(href='/catalog/product/vakuumno-volnovoj-stimulyator-satisfyer-curvy-1--j2018-80-3/' title='Перейти на страницу товара')
-                | Вакуумно-волновой стимулятор Satisfyer Curvy 1+ с возможностью управления через приложение - красный
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 6 190
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/11576737/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
-            .new-card.new-card-type-catalog
-              .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/11576738/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/static/img/noimage.png' width='130' height='130' alt='Фото товара временно отсутствует')
-              a.new-card__center(href='/catalog/product/vakuumno-volnovoj-stimulyator-satisfyer-curvy-3--j2018-107-2/' title='Перейти на страницу товара')
-                | Вакуумно-волновой стимулятор Satisfyer Curvy 3+ с возможностью управления через приложение - розовый
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 6 190
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/11576738/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
+                | Силиконовые вагинальные шарики на сцепке с ушками для дополнительной стимуляции, вес 56 гр
             .new-card.new-card-type-catalog
               .new-card__labels
                 .new-card__label.new-card__label-type-sale
-                  span.new-card__fill -30%
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/6691481/')
+                  span.new-card__fill -15%
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/193312/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/a6/2e/a62e2b16b57188e80b8a9389710fcba3.jpg' width='130' height='130' alt='Вакуумный вибростимулятор Hammer Royal Pleasure')
-              a.new-card__center(href='/catalog/product/bi-014623--vakuumnyij-vibrostimulyator-klitora--bi-014623/' title='Перейти на страницу товара') Вакуумный вибростимулятор Hammer Royal Pleasure
+                picture
+                  img.new-card__img(src='/media/cache/82/60/826055e4b186ce45e687a4dd60aabddd.jpg' width='130' height='130' alt='Вагинальные шарики Beyond Aroused')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-beyond-aroused-smennyie--fs-52427/' title='Перейти на страницу товара') Вагинальные шарики Beyond Aroused
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price.new-card__price-type-old
-                    | 6 990
+                    | 3 590
                     span.new-card__currency ₽
                   span.new-card__price
-                    | 4 893
+                    | 3 051
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/6691481/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/193312/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
-              p.new-card__explanation Вакуумный вибростимулятор для клитора и внешних эрогенных зон
-            .new-card.new-card-type-catalog
-              .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/11366488/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/static/img/noimage.png' width='130' height='130' alt='Фото товара временно отсутствует')
-              a.new-card__center(href='/catalog/product/vakuumnyij-massazher-s-vibratsiej-satisfyer--001845sa/' title='Перейти на страницу товара') Вакуумный массажер с Вибрацией Satisfyer Curvy 1 Plus White 001845SA
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 6 190
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/11366488/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
-            .new-card.new-card-type-catalog
-              .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/200638/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/17/d7/17d734c17c7905317488e0821e5374f9.jpg' width='130' height='130' alt='Вибратор ART-Style №11')
-              a.new-card__center(href='/catalog/product/vibrator-art-style-11-002107ru-002107ru/' title='Перейти на страницу товара') Вибратор ART-Style №11
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 2 290
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/200638/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
+                  |               Купить
               p.new-card__explanation
-                | Реалистичный вибратор с ярко выраженной головкой и бугорком для стимуляции колитора, рабочая длина 19 см
+                | Комплект из 4 шариков со мещенным центром тяжести разного цвета и веса, вес 15 гр, 25 гр, 35 гр, 55 гр
             .new-card.new-card-type-catalog
               .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/194422/')
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/214958/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/14/da/14da3df43e8ad7a47672cd383bb878a4.jpg' width='130' height='130' alt='Вибратор Art-Style №16')
-              a.new-card__center(href='/catalog/product/vibrator-neoskin-art-style-008407ru-008407ru/' title='Перейти на страницу товара') Вибратор Art-Style №16
+                picture
+                  img.new-card__img(src='/media/cache/f2/6f/f26fa7fecc682c203d25ea28eeda1c63.jpg' width='130' height='130' alt='Вагинальные шарики BOBO mini Огонь')
+              a.new-card__center(href='/catalog/product/shariki-ogon-47175-1mm/' title='Перейти на страницу товара') Вагинальные шарики BOBO mini Огонь
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price
-                    | 2 290
+                    | 1 640
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/194422/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/214958/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
-              p.new-card__explanation Реалистичный вибратор с ярко выраженным рельефом, рабочая длина 19 см
-            .new-card.new-card-type-catalog
-              .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/194336/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/e8/c4/e8c42150eeca4fe02a2c657e28d583e0.jpg' width='130' height='130' alt='Вибратор ART-Style №2')
-              a.new-card__center(href='/catalog/product/vibrator-neoskin-art-style-000407ru-000407ru/' title='Перейти на страницу товара') Вибратор ART-Style №2
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 2 290
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/194336/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
-              p.new-card__explanation Реалистичный вибратор с ярко выраженной головкой и венами, рабочая длина 16,5 см
-            .new-card.new-card-type-catalog
-              .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/200644/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/b3/90/b39048b3e5df2a3150a1b3f13c55d2cb.jpg' width='130' height='130' alt='Вибратор ART-Style №4')
-              a.new-card__center(href='/catalog/product/vibrator-art-style-4-000607ru-000607ru/' title='Перейти на страницу товара') Вибратор ART-Style №4
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 2 290
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/200644/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
-              p.new-card__explanation Реалистичный вибратор с ярко выраженными головкой и венками, рабочая длина 18 см
-            .new-card.new-card-type-catalog
-              .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/200645/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/3e/5e/3e5e3345e42f6e4a12e27b5f20064c1e.jpg' width='130' height='130' alt='Вибратор ART-Style №5')
-              a.new-card__center(href='/catalog/product/vibrator-art-style-5-000907ru-000907ru/' title='Перейти на страницу товара') Вибратор ART-Style №5
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 2 290
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/200645/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
+                  |               Купить
               p.new-card__explanation
-                | Вибратор реалистичный, телесный, с ярко выраженной головкой и венами, с дополнительной стимуляцией клитора, 21,5 см
+                | Вагинальные шарики из стекла в силиконовой оплетке для тренировки влагалищных мышц, диаметр 3 см
             .new-card.new-card-type-catalog
               .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/200646/')
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/9917727/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/f2/86/f286204ef266ab9e6b34c3df9358d44a.jpg' width='130' height='130' alt='Вибратор ART-Style №6,')
-              a.new-card__center(href='/catalog/product/vibrator-art-style-6-001107ru-001107ru/' title='Перейти на страницу товара') Вибратор ART-Style №6,
+                picture
+                  img.new-card__img(src='/media/cache/bf/9e/bf9e4746d53b909001abd7110ce47b7d.jpg' width='130' height='130' alt='Вагинальные шарики Carmen Lavender Sunset')
+              a.new-card__center(href='/catalog/product/nabor-vaginalnyih-sharikov-love-story--3011-03lola/' title='Перейти на страницу товара') Вагинальные шарики Carmen Lavender Sunset
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price
-                    | 2 310
+                    | 2 450
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/200646/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/9917727/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
+                  |               Купить
               p.new-card__explanation
-                | Вибратор реалистичный телесного цвета с ярко выраженной головкой и венами,  рабочая длина 18 см
+                | Набор, включающий парные шарики на сцепке и одинарный шарик со смещенным центром тяжести, вес 44 гр, 73 гр
             .new-card.new-card-type-catalog
               .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/200649/')
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/9917728/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/27/ea/27eacde997fccb2a624cded96130fc85.jpg' width='130' height='130' alt='Вибратор ART-Style №9')
-              a.new-card__center(href='/catalog/product/vibrator-art-style-9-001407ru-001407ru/' title='Перейти на страницу товара') Вибратор ART-Style №9
+                picture
+                  img.new-card__img(src='/media/cache/ca/76/ca76f0818057dd2174ff164635d2da4c.jpg' width='130' height='130' alt='Вагинальные шарики Carmen Tea Rose')
+              a.new-card__center(href='/catalog/product/nabor-vaginalnyih-sharikov-love-story--3011-01lola/' title='Перейти на страницу товара') Вагинальные шарики Carmen Tea Rose
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price
-                    | 2 310
+                    | 2 450
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/200649/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/9917728/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
+                  |               Купить
               p.new-card__explanation
-                | Вибратор реалистичный, с мошонкой, телесный, с ярко выраженной головкой и венами.
+                | Набор, включающий парные шарики на сцепке и одинарный шарик со смещенным центром тяжести, вес 44 гр, 73 гр
             .new-card.new-card-type-catalog
               .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/206958/')
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/9917729/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/b4/30/b4306467caff5b409435f58c0719b820.jpg' width='130' height='130' alt='Вибратор A-Toys')
-              a.new-card__center(href='/catalog/product/vibrator-realistichnyij-mnogoskorostnoj-s-yarko--761015/' title='Перейти на страницу товара') Вибратор A-Toys
+                picture
+                  img.new-card__img(src='/media/cache/78/f5/78f5cee14502914a3467b6749422ca0f.jpg' width='130' height='130' alt='Вагинальные шарики Carmen Wine Red')
+              a.new-card__center(href='/catalog/product/nabor-vaginalnyih-sharikov-love-story--3011-02lola/' title='Перейти на страницу товара') Вагинальные шарики Carmen Wine Red
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price
-                    | 790
+                    | 2 450
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/206958/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/9917729/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
-              p.new-card__explanation Вибратор реалистичный многоскоростной с ярко выраженной головкой. Длина 16,5 см
-            .new-card.new-card-type-catalog
-              .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/4322470/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/f4/29/f4295dec26cce01c712eccf65e80faef.jpg' width='130' height='130' alt='Вибратор A-Toys')
-              a.new-card__center(href='/catalog/product/realistichnyij-vibrator-toyfa-a-toys-multiskorostnoj--761039/' title='Перейти на страницу товара') Вибратор A-Toys
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 1 970
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/4322470/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
+                  |               Купить
               p.new-card__explanation
-                | Реалистичный мультискоростной вибратор с ярко выраженным рельефом, рабочая длиа 16,8 см
+                | Набор, включающий парные шарики на сцепке и одинарный шарик со смещенным центром тяжести, вес 44 гр, 73 гр
             .new-card.new-card-type-catalog
               .new-card__labels
-                .new-card__label.new-card__label-type-important
-                  svg.new-card__icon
-                    use(xlink:href='#whiteStarIcon')
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/8282413/')
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/12406767/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/39/78/3978f196e451eef241e78c0f0d4af338.jpg' width='130' height='130' alt='Вибратор A-Toys')
-              a.new-card__center(href='/catalog/product/realistichnyij-vibrator-toyfa-a-toys-tpe--761051/' title='Перейти на страницу товара') Вибратор A-Toys
+                picture
+                  img.new-card__img(src='/media/cache/6e/3e/6e3e72adb30493060f9075bd0ce9bdbb.jpg' width='130' height='130' alt='Вагинальные шарики Chrystalino Ben Wa Small')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-iz-stekla-chrystalino--chr022blu/' title='Перейти на страницу товара') Вагинальные шарики Chrystalino Ben Wa Small
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price
-                    | 1 490
+                    | 3 130
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/8282413/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/12406767/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
+                  |               Купить
               p.new-card__explanation
-                | Реалистичный мультискоростной вибратор с выраженной головкой и мошонкой, рабочая длина 15,5 см
+                | Вагинальные шарики из стекла в силиконовой оплетке для тренировки мышц влагалища, вес 43 гр
             .new-card.new-card-type-catalog
               .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/205451/')
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/7621007/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/d6/90/d6903414c86dfca4183867397ca0d298.jpg' width='130' height='130' alt='Вибратор A-TOYS')
-              a.new-card__center(href='/catalog/product/vibrator-761001/' title='Перейти на страницу товара') Вибратор A-TOYS
+                picture
+                  img.new-card__img(src='/media/cache/72/9d/729de8ff1e66a02bc8e290164b1eeba2.jpg' width='130' height='130' alt='Вагинальные шарики Climax Weighted Balls')
+              a.new-card__center(href='/catalog/product/metallicheskie-vaginalnyie-shariki-climax-weighted--se-1301-10-2/' title='Перейти на страницу товара') Вагинальные шарики Climax Weighted Balls
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price
-                    | 1 590
+                    | 1 190
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/205451/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/7621007/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
+                  |               Купить
               p.new-card__explanation
-                | Реалистичный вибратор с характерным рельефом вен, выделенной головкой и колечками у основания, рабочая длина 16 см
+                | Металлические вагинальные шарики для тренировки мышц влагалища без сцепки, вес каждого шарика 25 гр
             .new-card.new-card-type-catalog
               .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/208306/')
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/8508925/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/37/17/3717eba9de31d52c30bddbcba07859bb.jpg' width='130' height='130' alt='Вибратор A-toys Benedick')
-              a.new-card__center(href='/catalog/product/vibrator-a-toys-s-podogrevom-761011/' title='Перейти на страницу товара') Вибратор A-toys Benedick
+                picture
+                  img.new-card__img(src='/media/cache/f5/7c/f57c51a4d4e8ab45b70ea400c2d09004.jpg' width='130' height='130' alt='Вагинальные шарики Cosmo')
+              a.new-card__center(href='/catalog/product/shariki-vaginalnyie-nabor-2---csm-23140/' title='Перейти на страницу товара') Вагинальные шарики Cosmo
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price
-                    | 4 190
+                    | 2 590
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/208306/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/8508925/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
-              p.new-card__explanation Реалистичный вибратор с функцией подогрева, рабочая длина 18 см
+                  |               Купить
+              p.new-card__explanation Набор вагинальных шариков для тренировки интимных мышц, вес 40 гр и 80 гр
             .new-card.new-card-type-catalog
               .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/220306/')
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/11080901/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/2b/cc/2bccf40d856be299d1e93f6c272fc063.jpg' width='130' height='130' alt='Вибратор A-toys fantasy')
-              a.new-card__center(href='/catalog/product/vibrator-high-tech-fantasy-761031/' title='Перейти на страницу товара') Вибратор A-toys fantasy
+                picture
+                  img.new-card__img(src='/media/cache/30/4c/304cc3780a67c47adaad892bd0b5776e.jpg' width='130' height='130' alt='Вагинальные шарики Cosmo CSM-23002')
+              a.new-card__center(href='/catalog/product/shariki-vaginalnyie-tsvet-rozovyij-d--csm-23002/' title='Перейти на страницу товара') Вагинальные шарики Cosmo CSM-23002
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price
-                    | 2 390
+                    | 1 240
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/220306/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/11080901/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
+                  |               Купить
               p.new-card__explanation
-                | Многофункциональный вибратор с функцией ротации и стимуляции клитора, длина 12,5 см
+                | Вагинальные шарики фиолетового цвета со смещенным центром тяжести для тренировки мышц влагалища, 85 гр
             .new-card.new-card-type-catalog
               .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/205454/')
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/6086201/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/a2/29/a229fe07c98cd44da10c83f1a6f75017.jpg' width='130' height='130' alt='Вибратор A-toys Ida')
-              a.new-card__center(href='/catalog/product/vibrator-a-toys-ida-765007/' title='Перейти на страницу товара') Вибратор A-toys Ida
+                picture
+                  img.new-card__img(src='/media/cache/b0/5f/b05fb7cb2d9ae4b24f82c076f89c606f.jpg' width='130' height='130' alt='Вагинальные шарики Delta')
+              a.new-card__center(href='/catalog/product/shariki-kegelya-so-smeschennyim-tsentrom--05532onesize/' title='Перейти на страницу товара') Вагинальные шарики Delta
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price
-                    | 1 980
+                    | 1 090
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/205454/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/6086201/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
-              p.new-card__explanation Вибратор из медицинского силикона с дополнительной стимуляцией точки G
-            .new-card.new-card-type-catalog
-              .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/205465/')
-                svg.new-phone__icon.new-phone__icon-type-loop
-                  use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/97/28/97289f6af6032addd6f161b8532f6c40.jpg' width='130' height='130' alt='Вибратор A-toys Lilu')
-              a.new-card__center(href='/catalog/product/vibrator-a-toys-nessy-765004/' title='Перейти на страницу товара') Вибратор A-toys Lilu
-              p.new-card__bottom(data-action='buyButtonShell')
-                span.new-card__priceBlock
-                  span.new-card__price
-                    | 2 090
-                    span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/205465/' data-action='buyButton')
-                  svg.new-tabs__icon.new-tabs__icon-type-cart
-                    use(xlink:href='#cartIcon')
-                  |  Купить
+                  |               Купить
               p.new-card__explanation
-                | Мощный вибратор с двумя виброэлементами и дополнительной клитеральной стимуляцией
+                | Силиконовые вагинальные шарики на силиконовой сцепке со смещенным центром тяжести, вес 84 гр
             .new-card.new-card-type-catalog
               .new-card__labels
-              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/224902/')
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/9917730/')
                 svg.new-phone__icon.new-phone__icon-type-loop
                   use(xlink:href='#loopIcon')
-                img.new-card__img(src='/media/cache/f4/2d/f42d56d48ad82122e6602ffd8cb16001.jpg' width='130' height='130' alt='Вибратор A-Toys Mist')
-              a.new-card__center(href='/catalog/product/vibrator-toyfa-a-toys-mist---761041/' title='Перейти на страницу товара') Вибратор A-Toys Mist
+                picture
+                  img.new-card__img(src='/media/cache/b7/54/b754f60c37f18c74c58103c8450e7622.jpg' width='130' height='130' alt='Вагинальные шарики Diva Lavender Sunset')
+              a.new-card__center(href='/catalog/product/nabor-vaginalnyih-sharikov-love-story--3012-03lola/' title='Перейти на страницу товара') Вагинальные шарики Diva Lavender Sunset
               p.new-card__bottom(data-action='buyButtonShell')
                 span.new-card__priceBlock
                   span.new-card__price
-                    | 2 390
+                    | 2 730
                     span.new-card__currency ₽
-                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/224902/' data-action='buyButton')
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/9917730/' data-action='buyButton')
                   svg.new-tabs__icon.new-tabs__icon-type-cart
                     use(xlink:href='#cartIcon')
-                  |  Купить
+                  |               Купить
               p.new-card__explanation
-                | Нереалистичный водонепроницаемый вибратор с клиторальным стимулятором и 16 режимами вибрации, рабочая длина- 11 см, длина клиторального стимулятора-6 см
+                | Набор, включающий двойные шарики со смещенным центром тяжести и два одинарных шарика, вес 31 гр, 76 гр
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/9917731/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/43/56/4356212aa7c0a01b01c0eebbbac76cb8.jpg' width='130' height='130' alt='Вагинальные шарики Diva Tea Rose')
+              a.new-card__center(href='/catalog/product/nabor-vaginalnyih-sharikov-love-story--3012-01lola/' title='Перейти на страницу товара') Вагинальные шарики Diva Tea Rose
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 2 730
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/9917731/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation
+                | Набор, включающий двойные шарики со смещенным центром тяжести и два одинарных шарика, вес 31 гр, 76 гр
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/12422846/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/0e/e6/0ee65615525dd819565c28b94042c99f.jpg' width='130' height='130' alt='Вагинальные шарики Easytoys Smal')
+              a.new-card__center(href='/catalog/product/dvojnyie-vaginalnyie-shariki-easytoys-et007pnk-t/' title='Перейти на страницу товара') Вагинальные шарики Easytoys Smal
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 1 980
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/12422846/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation
+                | Силиконовые вагинальные шарики розового цвета со мещенным центром тяжести на сцепке, вес 61 гр
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/883678/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/28/39/283955575a5bdd286c58e756679ec4c7.jpg' width='130' height='130' alt='Вагинальные шарики Emotions Lexy')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-bez-stsepki-emotions--4016-01lola/' title='Перейти на страницу товара') Вагинальные шарики Emotions Lexy
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 1 440
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/883678/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation Вагинальные шарики фиолетового цвета без сцепки, общий вес 150 гр
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/883679/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/bb/dc/bbdc32833d4e83693e7aa9fb8589d7d8.jpg' width='130' height='130' alt='Вагинальные шарики Emotions Lexy Large')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-bez-stsepki-emotions--4016-03lola/' title='Перейти на страницу товара') Вагинальные шарики Emotions Lexy Large
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 1 440
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/883679/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation Вагинальные шарики без сцепки для укрепления вагинальных мышц, вес 150  гр
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/883677/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/3c/2a/3c2a18643f0ba8a1c344f0df52feb060.jpg' width='130' height='130' alt='Вагинальные шарики Emotions Lexy Large pink')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-bez-stsepki-emotions--4016-02lola/' title='Перейти на страницу товара') Вагинальные шарики Emotions Lexy Large pink
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 1 450
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/883677/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation
+                | Утяжеленные вагинальные шарики без сцепки из силикона розового цвета, диаметр 3 см
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/883682/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/c2/0a/c20a6a5187c0ff13117c35f8f1a2c940.jpg' width='130' height='130' alt='Вагинальные шарики  Emotions Lexy Medium')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-bez-stsepki-emotions--4015-03lola/' title='Перейти на страницу товара') Вагинальные шарики  Emotions Lexy Medium
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 1 490
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/883682/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation Вагинальные шарики голубого цвета без сцепки, общий вес 106 гр
+            .new-card.new-card-type-catalog
+              .new-card__labels
+                .new-card__label.new-card__label-type-sale
+                  span.new-card__fill -25%
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/7797621/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/b1/87/b187203844c170d9cf86a368a11f59de.jpg' width='130' height='130' alt='Вагинальные шарики Emotions Lexy Medium pink')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-emotions-lexy-medium--4015-02lola/' title='Перейти на страницу товара') Вагинальные шарики Emotions Lexy Medium pink
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price.new-card__price-type-old
+                    | 1 230
+                    span.new-card__currency ₽
+                  span.new-card__price
+                    | 922
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/7797621/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation
+                | Силиконовые вагинальные шарики для тренировки мышц влагалища без сцепки, вес каждого 53 гр
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/883681/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/73/24/73240ac2227ce184690e3f2d2a896da6.jpg' width='130' height='130' alt='Вагинальные шарики Emotions Lexy Medium purple')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-bez-stsepki-emotions--4015-01lola/' title='Перейти на страницу товара') Вагинальные шарики Emotions Lexy Medium purple
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 1 230
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/883681/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation
+                | Утяжеленные вагинальные шарики без сцепки из силикона фиолетового цвета, вес-106 гр
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/883684/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/42/21/4221ff8f84a8ff016249622e0ad101ff.jpg' width='130' height='130' alt='Вагинальные шарики Emotions Lexy Small')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-bez-stsepki-emotions--4014-01lola/' title='Перейти на страницу товара') Вагинальные шарики Emotions Lexy Small
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 980
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/883684/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation Вагинальные шарики без сцепки для укрепления вагинальных мышц, вес 68 гр
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/883683/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/08/75/087553cf46e7dd48ed124d5a6a5e8d5d.jpg' width='130' height='130' alt='Вагинальные Шарики Emotions Lexy Small')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-bez-stsepki-emotions--4014-02lola/' title='Перейти на страницу товара') Вагинальные Шарики Emotions Lexy Small
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 980
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/883683/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation
+                | Силиконовые вагинальные шарики розового цвета без сцепки, диаметр- 2,5 см., вес- 66 гр
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/883685/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/9d/7a/9d7a5adf9fe7ac4fcfd4d47856030836.jpg' width='130' height='130' alt='Вагинальные шарики Emotions Lexy Small turquoise')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-bez-stsepki-emotions--4014-03lola/' title='Перейти на страницу товара') Вагинальные шарики Emotions Lexy Small turquoise
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 990
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/883685/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation Утяжеленные вагинальные шарики без сцепки из силикона голубого цвета, вес-73 гр
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/210767/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/f6/52/f652ae48396c9d18d2aa60414a6155ca.jpg' width='130' height='130' alt='Вагинальные шарики Fun Toys Geisha Balls 2')
+              a.new-card__center(href='/catalog/product/fun-toys-geisha-balls-2-15825/' title='Перейти на страницу товара') Вагинальные шарики Fun Toys Geisha Balls 2
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 2 590
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/210767/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation
+                | Комплект из 4 шариков со мещенным центром тяжести разного цвета и веса, вес 24 гр, 34 гр, 44 гр, 56 гр
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/5618547/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/d0/97/d0972341d31fb3d884284584c1039626.jpg' width='130' height='130' alt='Вагинальные шарики Large Glass Eggs')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-crystal-kegel-eggs--0703-27nsn/' title='Перейти на страницу товара') Вагинальные шарики Large Glass Eggs
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 2 190
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/5618547/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation
+                | Стеклянные вагинальные шарики в форме яиц для треноировки мышц влагалища, вес 140 гр
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/214988/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/85/57/8557ee25c0603a12561f3c3351bf0df1.jpg' width='130' height='130' alt='Вагинальные шарики Love Story Fleur-de-lisa Sweet Kiss')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-love-story-fleur-de-lisa--3006-01lola/' title='Перейти на страницу товара') Вагинальные шарики Love Story Fleur-de-lisa Sweet Kiss
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 1 480
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/214988/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation Вагинальные шарики увеличенного размера, подойдут для начинающих 
+            .new-card.new-card-type-catalog
+              .new-card__labels
+                .new-card__label.new-card__label-type-sale
+                  span.new-card__fill -10%
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/2712016/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/5e/95/5e95664acf95752652abe58de207cd64.jpg' width='130' height='130' alt='Вагинальные шарики Love Story Lavender Sunset')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-love-story-empress--3008-01lola/' title='Перейти на страницу товара') Вагинальные шарики Love Story Lavender Sunset
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price.new-card__price-type-old
+                    | 1 590
+                    span.new-card__currency ₽
+                  span.new-card__price
+                    | 1 431
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/2712016/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation Миниатюрные силиконовые вагинальные шарики на сцепке, вес-68 гр
+            .new-card.new-card-type-catalog
+              .new-card__labels
+              .new-card__top(title='Прeдпросмотр товара' data-action='fastBuyArea' data-preview-url='/catalog/product-preview/212316/')
+                svg.new-phone__icon.new-phone__icon-type-loop
+                  use(xlink:href='#loopIcon')
+                picture
+                  img.new-card__img(src='/media/cache/6b/99/6b99a55d4fbdd5aa7582ab838eb99579.jpg' width='130' height='130' alt='Вагинальные шарики Love Story Sky Blue')
+              a.new-card__center(href='/catalog/product/vaginalnyie-shariki-love-story-one--3004-04lola/' title='Перейти на страницу товара') Вагинальные шарики Love Story Sky Blue
+              p.new-card__bottom(data-action='buyButtonShell')
+                span.new-card__priceBlock
+                  span.new-card__price
+                    | 1 230
+                    span.new-card__currency ₽
+                button.new-button.new-card__button.new-button-type-round(data-url='/catalog/cart/add/212316/' data-action='buyButton')
+                  svg.new-tabs__icon.new-tabs__icon-type-cart
+                    use(xlink:href='#cartIcon')
+                  |               Купить
+              p.new-card__explanation
+                | Силиконовые вагинальные шарики со смещенным центром тяжести на силиконовой сцепке, вес-94 гр
           .new-content__paging
             p.new-content__pagination.new-pagination
-              a.new-pagination__link.new-pagination__link-type-current(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/') 1
-              a.new-pagination__link(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?page=2') 2
-              a.new-pagination__link(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?page=3') 3
-              a.new-pagination__link(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?page=4') 4
-              a.new-pagination__link(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?page=5') 5
-              a.new-pagination__link.new-pagination__link-type-forward(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?page=2')
-              a.new-pagination__link.new-pagination__link-type-front(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?page=22')
+              a.new-pagination__link.new-pagination__link-type-current(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/') 1
+              a.new-pagination__link(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?page=2') 2
+              a.new-pagination__link(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?page=3') 3
+              a.new-pagination__link.new-pagination__link-type-forward(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?page=2')
+              a.new-pagination__link.new-pagination__link-type-front(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?page=3')
             p.new-content__pageCount.new-pageCount
               span.new-pageCount__text Показать:
               span.new-pageCount__shell
-                a.new-pageCount__cell(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?perpage=16') 16
-                a.new-pageCount__cell.new-pageCount__cell-type-current(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?perpage=32') 32
-                a.new-pageCount__cell(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/?perpage=64') 64
+                a.new-pageCount__cell(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?perpage=16') 16
+                a.new-pageCount__cell.new-pageCount__cell-type-current(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?perpage=32') 32
+                a.new-pageCount__cell(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?perpage=64') 64
       section.new-why.new-why-type-standart
         p
-          | Говорить о сексе и интимных отношениях без стыда и смущения стали сравнительно недавно. Однако многие все также считают, что получать удовольствие от акта любви положено только мужчинам. Женское удовлетворение все чаще отодвигается на задний план, что совсем неправильно. Ведь оргазм для женщины – это не только наслаждение, но и хорошее настроение, и крепкое здоровье. Вибратор – один из помощников в познании блаженства во время сексуальных утех. Этот небольшой прибор знает, где находятся самые чувствительные места.
-        h2
-          strong Виды и модификации
+          | Натренированные мышцы влагалища - важная составляющая интимной жизни пары. Даже врачи утверждают, что ощущения от полового акта остаются яркими, только если мышцы в «нужных» местах в тонусе. Что же делать, чтобы сохранить чувственность? На самом деле все просто – регулярно выполнять упражнения Кегеля и купить вагинальные шарики!
+        h2 Тренировки или наслаждение?
         p
-          | Чем может удивить женский вибратор? Конечно же разнообразием внешних особенностей и опций. Новичкам придется попотеть, прежде чем приобрести этот аксессуар, ведь выбор просто огромен. Отличительная особенность всех приборов – наличие нескольких режимов вибрации и скоростей вращения. Магазин «Влюбленный кролик» предлагает своим клиентам купить вибраторы в Самаре на любой вкус и цвет, а именно:
+          | Вагинальные шарики были известны еще в древние времена. С помощью похожих приспособлений наложницы древних государств учились управлять своим лоном и доставлять дополнительное удовольствие мужчинам. Регулярные тренировки давали возможность ублажить господина и защищали от неприятных старческих недугов – недержания мочи, выпадения органов малого таза и так далее.
+        p
+          | Через столетия исследования американского ученого Арнольда Кегеля подтвердили догадки – постоянные тренировки влагалищных мышц помогают не только сохранить здоровье, но и получить максимальное наслаждение.
+        p
+          | Удивительно, но с помощью небольшого тренажера, состоящего из двух-трех связанных шариков можно научиться делать партнеру массаж пениса только путем сокращения мышц влагалища. Сама женщина тоже не остается без приятного бонуса: во время сокращения кровь приливает к области таза, возбуждение приходит быстрее, а оргазм становиться более сильным.
+        p
+          | Вагинальные тренажеры часто используют во время прелюдии к сексу, а также во время мастурбации. Современные модели без проблем подключаются к смартфонам и управляются на расстоянии, что только усиливает желание.
+        h3  Виды и способы использования
+        p
+          | В магазине интим-товаров «Влюбленный Кролик» можно приобрести различные виды вагинальных шариков для здоровья и удовольствия. Тренажеры часто совмещают в себе полезную и приятную функции и различаются по следующим характеристикам:
         ul
           li
-            | Реалистичные - то есть полностью повторяющие особенности мужского фаллоса. Чаще всего они изготовлены из резины, на ощупь упругие, но подвижные. Имеют присоску или крепление и выпускаются всех возможных размеров;
+            | Материал изготовления: силикон, металл, стекло, а также специальный пластик или даже киберкожа. Вариантов множество, главное выбрать наиболее подходящий для своего тела и степени владения мышцами;
           li
-            | Со стимуляцией клитора – наиболее популярные, ведь используются для интенсивной стимуляции внешних и внутренних эрогенных зон. Практически всегда имеют нереалистичный внешний вид и отросток для массажа в области клитора.
+            | Размер шариков. Диаметр варьируется от полутора до пяти сантиметров, причем новичкам рекомендуют выбирать самые большие.
           li
-            | Для точки G. Такие аксессуары лишь отдаленно напоминают мужской член. Они зачастую имеют изогнутую головку, усики или загибы для большей стимуляции различных зон влагалища. Кнопки для управления находятся прямо на самом корпусе прибора;
+            | Наличие шнурка. «Хвостик» совсем не нужен тем, кто уже продвинулся в тренировках. Женщина, которая может управлять своими мышцами, вытолкнет шарик без проблем, а вот неопытным лучше дергать за шнурок;
           li
-            | Вагинально-анальные – приспособления для «двойного проникновения» - в вагину и анус. Отзывы о вибраторах такого типа часто противоречивы, поэтому эти приборы лучше приобретать партнерам, которые практикуют анальный секс регулярно. Новичкам больше подойдут небольшие пробки и нереалистичные вибраторы меньших размеров.
-          li
-            | С необычными опциями – к примеру, бесконтактный аксессуар для стимуляции эрогенных зон. Такой вакуум-волновой прибор становится активен лишь при близком контакте с телом. Часто используется любителями бдсм
-            strong . 
-            | Вибратор такого типаможет использоваться как для удовлетворения женщины, так и мужчины.
-          li
-            | На палец и язык – мини-вибратор, который изготовлен в виде небольшой насадки с шипами или другим рельефом. Просто и быстро надевается на указательный палец руки или крепится на язык. Удобен для использования в паре или в одиночку.
+            | Вибрация – приятный бонус для женщин, которые желают еще и получить удовольствие. Это отличная модель для самоудовлетворения при отсутствии постоянного партнера. Такие шарики часто имеют пульт управления или с помощью специальной программы подключаются к смартфону.
         p
-          | Особую популярность в последнее время получили вибраторы для женщин из необычных материалов, например, стекло или керамика. Но многие все же выбирают классику и предпочитают купить вибратор стандартной формы или многофункциональный аксессуар для достижения оргазма.
-        h3
-          strong Стоимость и особенности использования
+          | Цена вагинальных шариков часто зависит от материала, ведь самый обычный тренажер из двух шаров и тканевой нитки стоит совсем недорого, но и продезинфицировать такой аксессуар довольно нелегко. Стоимость силиконовых шариков выше, но ухаживать за ними проще, а прослужат они намного дольше.
         p
-          | Цена на вибраторы обусловлена многими факторами. Конечно, играет роль вид вибратора, размер, материал, количество опций, а также фирма-производитель. В целом, стоимость этого «особого» аксессуара очень разная: от 1000 рублей и выше. Средний ценник на классический вибратор в магазине «Влюбленный кролик» составляет 2000-3000 рублей, а многофункциональные приборы стоят в полтора-два раза дороже. Но есть и совсем недорогие мини-приборы для начинающих, которые ничем не уступают по качеству и способности дарить наслаждение.
+          | Использовать вагинальный тренажер совсем не трудно. Главное правило – вводить шарики можно только со специальной смазкой. Первое время будет довольно сложно не только удерживать их во влагалище, но и даже найти удобное расположение. Оптимальное время для ежедневных тренировок – около 2 часов. Упражнения можно выполнять и лежа, но лучше ходить или даже бегать, то есть заставлять мышцы напрягаться непроизвольно.
         p
-          | Использовать интимный аксессуар необходимо с любовью и осторожностью. Во-первых, чтобы не навредить себе и своему здоровью, во-вторых, чтобы вибратор прослужил как можно дольше. Регулярная гигиена и использование специальных лубрикантов – залог здоровья и сексуального удовлетворения.
+          | Обработку тренажера нужно проводить каждый раз перед использованием и поле него. Это можно делать с помощью мыльного раствора либо обычного антисептика, к примеру, хлоргексидина или мирамистина.
       section.new-recommend.new-recommend-type-desktop.new-recommend-type-catalog
         h2.new-recommend__title Рекомендуем
         .new-recommend__shell

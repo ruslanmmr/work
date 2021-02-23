@@ -6,7 +6,7 @@ block variables
 doctype html
 html
   head
-    base(href="https://bunnylove.ru/")
+    base(href="http://bunnylove.fancymedia.ru/")
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
@@ -44,7 +44,7 @@ html
                   use(xlink:href='#bagIcon')
                 | Корзина
                 span.new-console__count.cart_count 0
-            //доабвил обертку new-mobileMenu__contact
+
             .new-mobileMenu__contact.container
               a.new-phone.new-header__phone.new-header__phone-icon-phone(href='tel:+7 (846) 300-44-49')
                 svg.new-phone__img.new-phone__img-icon-phone
@@ -102,117 +102,181 @@ html
                       span.category-icon-wrapper
                         img(src='/static/svg/woman.svg', alt='Подкатегория')
                       |                     Для женщин
+
+                    //ИЗМЕНЕНИЯ НАЧИНАюТСЯ ЗДЕСЬ
                     .new-dropdown__wrapper(data-action='dropdownWrapper')
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/') Вибраторы
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/falloimmitatory/') Фаллоимитаторы
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/') Вагинальные шарики и тренажеры
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/vakuumnye-stimulyatory/') Вакуумные стимуляторы
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/vakumnye-pompy/') Вакуумные помпы
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/analnye-stimulyatory/') Анальные стимуляторы
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-zhenshin/stimulyaciya-grudi/') Стимуляция груди
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Вибраторы 1 
+                          a(href="#").new-dropdown__link Вибраторы 2 
+                          a(href="#").new-dropdown__link Вибраторы 3
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Страпоны 1 
+                          a(href="#").new-dropdown__link Страпоны 2 
+                          a(href="#").new-dropdown__link Страпоны 3
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Наборы 1 
+                          a(href="#").new-dropdown__link Наборы 2 
+                          a(href="#").new-dropdown__link Наборы 3
+
                   .new-dropdown.new-header__dropdown(data-action='dropdown')
                     button.new-button.new-dropdown__button(data-action='dropdownButton')
                       span.category-icon-wrapper
                         img(src='/static/svg/man.svg', alt='Подкатегория')
                       |                     Для мужчин
+                    //ИЗМЕНЕНИЯ НАЧИНАюТСЯ ЗДЕСЬ
                     .new-dropdown__wrapper(data-action='dropdownWrapper')
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/vaginy-i-masturbatory/') Вагины и мастурбаторы
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/vakuumnye-i-gidropompy/') Помпы
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/stimulyatory-prostaty/') Стимуляторы простаты
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/analnye-stimulyatory/') Анальные стимуляторы
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/kukly/') Куклы
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/nasadki-i-kolca/') Насадки и кольца
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/falloprotezy/') Фаллопротезы
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/uvelichenie-chlena/') Увеличение члена
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-muzhchin/stimulyatory-uretry/') Стимуляторы уретры
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Вибраторы 1 
+                          a(href="#").new-dropdown__link Вибраторы 2 
+                          a(href="#").new-dropdown__link Вибраторы 3
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Страпоны 1 
+                          a(href="#").new-dropdown__link Страпоны 2 
+                          a(href="#").new-dropdown__link Страпоны 3
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Наборы 1 
+                          a(href="#").new-dropdown__link Наборы 2 
+                          a(href="#").new-dropdown__link Наборы 3
                   .new-dropdown.new-header__dropdown(data-action='dropdown')
                     button.new-button.new-dropdown__button(data-action='dropdownButton')
                       span.category-icon-wrapper
                         img(src='/static/svg/manwoman.svg', alt='Подкатегория')
                       |                     Для двоих
+                    //ИЗМЕНЕНИЯ НАЧИНАюТСЯ ЗДЕСЬ
                     .new-dropdown__wrapper(data-action='dropdownWrapper')
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/vibratory-dlya-par/') Вибраторы для пар
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/strapony/') Страпоны
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/nabory/') Наборы
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/elektrostimulyaciya/') Электростимуляция
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/mebel-dlya-seksaseks-mashiny/') Мебель для секса, секс-машины
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/prezervativy/') Презервативы
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/eroticheskie-igry/') Эротические игры
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/knigikamasutra/') Книги, камасутра
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/suveniry/') Сувениры
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/aksessuary-i-batarejki/') Аксессуары и батарейки
-                      a.new-dropdown__link(href='/catalog/seks-igrushki/dlya-dvoih/podarochnaya-upakovka/') Подарочная упаковка
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Вибраторы 1 
+                          a(href="#").new-dropdown__link Вибраторы 2 
+                          a(href="#").new-dropdown__link Вибраторы 3
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Страпоны 1 
+                          a(href="#").new-dropdown__link Страпоны 2 
+                          a(href="#").new-dropdown__link Страпоны 3
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Наборы 1 
+                          a(href="#").new-dropdown__link Наборы 2 
+                          a(href="#").new-dropdown__link Наборы 3
                 .new-tabs__cell(data-action='tabContent')
                   .new-dropdown.new-header__dropdown(data-action='dropdown')
                     button.new-button.new-dropdown__button(data-action='dropdownButton')
                       span.category-icon-wrapper
                         img(src='/static/svg/woman.svg', alt='Подкатегория')
                       |                     Женское
+                    //ИЗМЕНЕНИЯ НАЧИНАюТСЯ ЗДЕСЬ
                     .new-dropdown__wrapper(data-action='dropdownWrapper')
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/kostyumy-dlya-rolevyh-igr/') Для ролевых игр
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/bolshie-razmery/') Большие размеры
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/kozhanoe-lakovoe-lateksnoe/') Кожаное, лаковое, латексное
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/mini-platya-i-sorochki/') Мини-платья и сорочки
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/penyuarykimono/') Пеньюары, кимоно
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/chulki-kolgoty-i-poyasa/') Чулки, колготы и пояса
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/byuste-i-korsety/') Бюстье и корсеты
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/trusiki/') Трусики
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/yubki/') Юбки
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/eroticheskie-komplekty/') Эротические комплекты
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/bodi-teddi-monokini/') Боди, тедди, монокини
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/chulki-na-telo/') Чулки на тело
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/perchatki-podvyazki/') Перчатки, подвязки
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/byustgaltery-topy/') Бюстгальтеры, топы
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/ukrasheniya-i-aksessuary/') Интимные украшения и аксессуары
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/zhenskoe/klubnye-platya/') Клубные платья
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Вибраторы 1 
+                          a(href="#").new-dropdown__link Вибраторы 2 
+                          a(href="#").new-dropdown__link Вибраторы 3
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Страпоны 1 
+                          a(href="#").new-dropdown__link Страпоны 2 
+                          a(href="#").new-dropdown__link Страпоны 3
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Наборы 1 
+                          a(href="#").new-dropdown__link Наборы 2 
+                          a(href="#").new-dropdown__link Наборы 3
                   .new-dropdown.new-header__dropdown(data-action='dropdown')
                     button.new-button.new-dropdown__button(data-action='dropdownButton')
                       span.category-icon-wrapper
                         img(src='/static/svg/man.svg', alt='Подкатегория')
                       |                     Мужское
+                    //ИЗМЕНЕНИЯ НАЧИНАюТСЯ ЗДЕСЬ
                     .new-dropdown__wrapper(data-action='dropdownWrapper')
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/muzhskoe/kostyumy-dlya-rolevyh-igr/') Для ролевых игр
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/muzhskoe/kozhanoe-lakovoe-lateksnoe/') Кожаное, лаковое, латексное
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/muzhskoe/shorty-trusy/') Шорты, трусы
-                      a.new-dropdown__link(href='/catalog/eroticheskoe-bele/muzhskoe/majki/') Майки
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Вибраторы 1 
+                          a(href="#").new-dropdown__link Вибраторы 2 
+                          a(href="#").new-dropdown__link Вибраторы 3
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Страпоны 1 
+                          a(href="#").new-dropdown__link Страпоны 2 
+                          a(href="#").new-dropdown__link Страпоны 3
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Наборы 1 
+                          a(href="#").new-dropdown__link Наборы 2 
+                          a(href="#").new-dropdown__link Наборы 3
                 .new-tabs__cell(data-action='tabContent')
                   .new-dropdown.new-header__dropdown(data-action='dropdown')
                     button.new-button.new-dropdown__button(data-action='dropdownButton')
                       span.category-icon-wrapper
                         img(src='/static/svg/bdsm.svg', alt='Основная категория')
                       |                     BDSM
+                    //ИЗМЕНЕНИЯ НАЧИНАюТСЯ ЗДЕСЬ
                     .new-dropdown__wrapper(data-action='dropdownWrapper')
-                      a.new-dropdown__link(href='/catalog/bdsm/udarnye-devajsy/') Ударные девайсы
-                      a.new-dropdown__link(href='/catalog/bdsm/naruchniki-nanozhniki/') Наручники, наножники
-                      a.new-dropdown__link(href='/catalog/bdsm/klyapy-maski/') Кляпы, маски
-                      a.new-dropdown__link(href='/catalog/bdsm/oshejniki-povodki/') Ошейники, поводки
-                      a.new-dropdown__link(href='/catalog/bdsm/fisaciya-bondazh/') Фиксация, бондаж
-                      a.new-dropdown__link(href='/catalog/bdsm/sbrui-utyazhki-utyazheliteli/') Сбруи, утяжки, утяжелители
-                      a.new-dropdown__link(href='/catalog/bdsm/elektrostimulyaciya/') Электростимуляция
-                      a.new-dropdown__link(href='/catalog/bdsm/zazhimy/') Зажимы
-                      a.new-dropdown__link(href='/catalog/bdsm/fisting/') Фистинг
-                      a.new-dropdown__link(href='/catalog/bdsm/shekotalki/') Щекоталки
-                      a.new-dropdown__link(href='/catalog/bdsm/seks-mashiny/') Секс-машины
-                      a.new-dropdown__link(href='/catalog/bdsm/mebel-dlya-seksa-kacheli/') Мебель для секса, качели
-                      a.new-dropdown__link(href='/catalog/bdsm/medicinskij-fetish/') Медицинский фетиш
-                      a.new-dropdown__link(href='/catalog/bdsm/nabori/') Наборы
-                      a.new-dropdown__link(href='/catalog/bdsm/drugoe/') Другое
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Вибраторы 1 
+                          a(href="#").new-dropdown__link Вибраторы 2 
+                          a(href="#").new-dropdown__link Вибраторы 3
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Страпоны 1 
+                          a(href="#").new-dropdown__link Страпоны 2 
+                          a(href="#").new-dropdown__link Страпоны 3
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Наборы 1 
+                          a(href="#").new-dropdown__link Наборы 2 
+                          a(href="#").new-dropdown__link Наборы 3
                 .new-tabs__cell(data-action='tabContent')
                   .new-dropdown.new-header__dropdown(data-action='dropdown')
                     button.new-button.new-dropdown__button(data-action='dropdownButton')
                       span.category-icon-wrapper
                         img(src='/static/svg/prfm.svg', alt='Основная категория')
                       |                     Интимная косметика
+                    //ИЗМЕНЕНИЯ НАЧИНАюТСЯ ЗДЕСЬ
                     .new-dropdown__wrapper(data-action='dropdownWrapper')
-                      a.new-dropdown__link(href='/catalog/intimnaya-kosmetika/smazki/') Смазки
-                      a.new-dropdown__link(href='/catalog/intimnaya-kosmetika/prezervativy/') Презервативы
-                      a.new-dropdown__link(href='/catalog/intimnaya-kosmetika/afrodiziaki-i-bady/') Афродизиаки и БАДы
-                      a.new-dropdown__link(href='/catalog/intimnaya-kosmetika/duhi-s-feromonami/') Духи с феромонами
-                      a.new-dropdown__link(href='/catalog/intimnaya-kosmetika/intimnaya-gigiena/') Гигиена, уход за игрушками
-                      a.new-dropdown__link(href='/catalog/intimnaya-kosmetika/kosmetika-s-feromonamiafrodiziakami/') Косметика с феромонами
-                      a.new-dropdown__link(href='/catalog/intimnaya-kosmetika/kremasprei/') Крема, спреи
-                      a.new-dropdown__link(href='/catalog/intimnaya-kosmetika/massazhnye-masla-svechi/') Массажные масла, свечи
-                      a.new-dropdown__link(href='/catalog/intimnaya-kosmetika/sedobnaya-kosmetika/') Съедобная косметика
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Вибраторы 1 
+                          a(href="#").new-dropdown__link Вибраторы 2 
+                          a(href="#").new-dropdown__link Вибраторы 3
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Страпоны 1 
+                          a(href="#").new-dropdown__link Страпоны 2 
+                          a(href="#").new-dropdown__link Страпоны 3
+                      .new-dropdown(data-action='dropdown')
+                        a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                        .new-dropdown__wrapper(data-action='dropdownWrapper')
+                          a(href="#").new-dropdown__link Наборы 1 
+                          a(href="#").new-dropdown__link Наборы 2 
+                          a(href="#").new-dropdown__link Наборы 3
           nav.new-nav.new-header__nav-type-mobileMenu.container
             a.new-nav__link-type-mobileMenu.nav__about(href='/about/') О нас
             a.new-nav__link-type-mobileMenu.nav__pay(href='/pay/') Оплата
@@ -363,27 +427,40 @@ html
                 a.new-button.new-dropdown__button.link_or_button(href='/catalog/seks-igrushki/dlya-zhenshin/', data-action='dropdownButton')
                   span.category-icon-wrapper
                     img(src='/static/svg/woman.svg', alt='Для женщин')
-                  |                 Для женщин
+                  | Для женщин
                 button.new-button.new-dropdown__button.new-dropdown__button-type-desktop.link_or_button(data-action='dropdownButton')
                   span.category-icon-wrapper
                     img(src='/static/svg/woman.svg', alt='Для женщин')
-                  |                 Для женщин
-                .new-dropdown__wrapper.new-dropdown__wrapper-type-desktop(data-action='dropdownWrapper')
-                  ul
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-zhenshin/vibratory/') Вибраторы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-zhenshin/falloimmitatory/') Фаллоимитаторы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/') Вагинальные шарики и тренажеры
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-zhenshin/vakuumnye-stimulyatory/') Вакуумные стимуляторы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-zhenshin/vakumnye-pompy/') Вакуумные помпы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-zhenshin/analnye-stimulyatory/') Анальные стимуляторы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-zhenshin/stimulyaciya-grudi/') Стимуляция груди
+                  | Для женщин
+
+                //ИЗМЕНЕНИЯ НАЧИНАюТСЯ ЗДЕСЬ
+                .new-dropdown__wrapper.new-dropdown__wrapper-type-desktop.new-header__dropdown-group(data-action='dropdownWrapper')
+                  .new-header__dropdown-group-block
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Вибраторы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Вибраторы 1 
+                        a(href="#").new-dropdown__link Вибраторы 2 
+                        a(href="#").new-dropdown__link Вибраторы 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Страпоны
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Страпоны 1 
+                        a(href="#").new-dropdown__link Страпоны 2 
+                        a(href="#").new-dropdown__link Страпоны 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Наборы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Наборы 1 
+                        a(href="#").new-dropdown__link Наборы 2 
+                        a(href="#").new-dropdown__link Наборы 3
+
+
+
+
               .new-dropdown.new-header__dropdown.new-header__dropdown-type-desktop(data-action='dropdown')
                 a.new-button.new-dropdown__button.link_or_button(href='/catalog/seks-igrushki/dlya-muzhchin/', data-action='dropdownButton')
                   span.category-icon-wrapper
@@ -393,26 +470,32 @@ html
                   span.category-icon-wrapper
                     img(src='/static/svg/man.svg', alt='Для мужчин')
                   |                 Для мужчин
-                .new-dropdown__wrapper.new-dropdown__wrapper-type-desktop(data-action='dropdownWrapper')
-                  ul
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-muzhchin/vaginy-i-masturbatory/') Вагины и мастурбаторы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-muzhchin/vakuumnye-i-gidropompy/') Помпы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-muzhchin/stimulyatory-prostaty/') Стимуляторы простаты
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-muzhchin/analnye-stimulyatory/') Анальные стимуляторы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-muzhchin/kukly/') Куклы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-muzhchin/nasadki-i-kolca/') Насадки и кольца
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-muzhchin/falloprotezy/') Фаллопротезы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-muzhchin/uvelichenie-chlena/') Увеличение члена
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-muzhchin/stimulyatory-uretry/') Стимуляторы уретры
+
+                //ИЗМЕНЕНИЯ НАЧИНАюТСЯ ЗДЕСЬ
+                .new-dropdown__wrapper.new-dropdown__wrapper-type-desktop.new-header__dropdown-group(data-action='dropdownWrapper')
+                  .new-header__dropdown-group-block
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Вибраторы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Вибраторы 1 
+                        a(href="#").new-dropdown__link Вибраторы 2 
+                        a(href="#").new-dropdown__link Вибраторы 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Страпоны
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Страпоны 1 
+                        a(href="#").new-dropdown__link Страпоны 2 
+                        a(href="#").new-dropdown__link Страпоны 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Наборы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Наборы 1 
+                        a(href="#").new-dropdown__link Наборы 2 
+                        a(href="#").new-dropdown__link Наборы 3
+
               .new-dropdown.new-header__dropdown.new-header__dropdown-type-desktop(data-action='dropdown')
                 a.new-button.new-dropdown__button.link_or_button(href='/catalog/seks-igrushki/dlya-dvoih/', data-action='dropdownButton')
                   span.category-icon-wrapper
@@ -422,30 +505,32 @@ html
                   span.category-icon-wrapper
                     img(src='/static/svg/manwoman.svg', alt='Для двоих')
                   |                 Для двоих
-                .new-dropdown__wrapper.new-dropdown__wrapper-type-desktop(data-action='dropdownWrapper')
-                  ul
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-dvoih/vibratory-dlya-par/') Вибраторы для пар
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-dvoih/strapony/') Страпоны
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-dvoih/nabory/') Наборы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-dvoih/elektrostimulyaciya/') Электростимуляция
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-dvoih/mebel-dlya-seksaseks-mashiny/') Мебель для секса, секс-машины
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-dvoih/prezervativy/') Презервативы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-dvoih/eroticheskie-igry/') Эротические игры
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-dvoih/knigikamasutra/') Книги, камасутра
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-dvoih/suveniry/') Сувениры
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-dvoih/aksessuary-i-batarejki/') Аксессуары и батарейки
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/seks-igrushki/dlya-dvoih/podarochnaya-upakovka/') Подарочная упаковка
+
+                //ИЗМЕНЕНИЯ НАЧИНАюТСЯ ЗДЕСЬ
+                .new-dropdown__wrapper.new-dropdown__wrapper-type-desktop.new-header__dropdown-group(data-action='dropdownWrapper')
+                  .new-header__dropdown-group-block
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Вибраторы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Вибраторы 1 
+                        a(href="#").new-dropdown__link Вибраторы 2 
+                        a(href="#").new-dropdown__link Вибраторы 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Страпоны
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Страпоны 1 
+                        a(href="#").new-dropdown__link Страпоны 2 
+                        a(href="#").new-dropdown__link Страпоны 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Наборы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Наборы 1 
+                        a(href="#").new-dropdown__link Наборы 2 
+                        a(href="#").new-dropdown__link Наборы 3
+
             .new-tabs__cell(data-action='tabContent')
               .new-dropdown.new-header__dropdown.new-header__dropdown-type-desktop(data-action='dropdown')
                 a.new-button.new-dropdown__button.link_or_button(href='/catalog/eroticheskoe-bele/zhenskoe/', data-action='dropdownButton')
@@ -456,41 +541,54 @@ html
                   span.category-icon-wrapper
                     img(src='/static/svg/woman.svg', alt='Женское')
                   |                 Женское
-                .new-dropdown__wrapper.new-dropdown__wrapper-type-desktop(data-action='dropdownWrapper')
-                  ul
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/kostyumy-dlya-rolevyh-igr/') Для ролевых игр
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/bolshie-razmery/') Большие размеры
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/kozhanoe-lakovoe-lateksnoe/') Кожаное, лаковое, латексное
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/mini-platya-i-sorochki/') Мини-платья и сорочки
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/penyuarykimono/') Пеньюары, кимоно
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/chulki-kolgoty-i-poyasa/') Чулки, колготы и пояса
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/byuste-i-korsety/') Бюстье и корсеты
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/trusiki/') Трусики
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/yubki/') Юбки
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/eroticheskie-komplekty/') Эротические комплекты
-                  ul.shifted
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/bodi-teddi-monokini/') Боди, тедди, монокини
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/chulki-na-telo/') Чулки на тело
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/perchatki-podvyazki/') Перчатки, подвязки
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/byustgaltery-topy/') Бюстгальтеры, топы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/ukrasheniya-i-aksessuary/') Интимные украшения и аксессуары
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/zhenskoe/klubnye-platya/') Клубные платья
+
+                //ИЗМЕНЕНИЯ НАЧИНАюТСЯ ЗДЕСЬ
+                .new-dropdown__wrapper.new-dropdown__wrapper-type-desktop.new-header__dropdown-group(data-action='dropdownWrapper')
+                  .new-header__dropdown-group-block
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Вибраторы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Вибраторы 1 
+                        a(href="#").new-dropdown__link Вибраторы 2 
+                        a(href="#").new-dropdown__link Вибраторы 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Страпоны
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Страпоны 1 
+                        a(href="#").new-dropdown__link Страпоны 2 
+                        a(href="#").new-dropdown__link Страпоны 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Наборы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Наборы 1 
+                        a(href="#").new-dropdown__link Наборы 2 
+                        a(href="#").new-dropdown__link Наборы 3
+                  .new-header__dropdown-group-block
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Вибраторы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Вибраторы 1 
+                        a(href="#").new-dropdown__link Вибраторы 2 
+                        a(href="#").new-dropdown__link Вибраторы 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Страпоны
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Страпоны 1 
+                        a(href="#").new-dropdown__link Страпоны 2 
+                        a(href="#").new-dropdown__link Страпоны 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Наборы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Наборы 1 
+                        a(href="#").new-dropdown__link Наборы 2 
+                        a(href="#").new-dropdown__link Наборы 3
+
               .new-dropdown.new-header__dropdown.new-header__dropdown-type-desktop(data-action='dropdown')
                 a.new-button.new-dropdown__button.link_or_button(href='/catalog/eroticheskoe-bele/muzhskoe/', data-action='dropdownButton')
                   span.category-icon-wrapper
@@ -500,73 +598,110 @@ html
                   span.category-icon-wrapper
                     img(src='/static/svg/man.svg', alt='Мужское')
                   |                 Мужское
-                .new-dropdown__wrapper.new-dropdown__wrapper-type-desktop(data-action='dropdownWrapper')
-                  ul
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/muzhskoe/kostyumy-dlya-rolevyh-igr/') Для ролевых игр
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/muzhskoe/kozhanoe-lakovoe-lateksnoe/') Кожаное, лаковое, латексное
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/muzhskoe/shorty-trusy/') Шорты, трусы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/eroticheskoe-bele/muzhskoe/majki/') Майки
+
+                //ИЗМЕНЕНИЯ НАЧИНАюТСЯ ЗДЕСЬ
+                .new-dropdown__wrapper.new-dropdown__wrapper-type-desktop.new-header__dropdown-group(data-action='dropdownWrapper')
+                  .new-header__dropdown-group-block
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Вибраторы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Вибраторы 1 
+                        a(href="#").new-dropdown__link Вибраторы 2 
+                        a(href="#").new-dropdown__link Вибраторы 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Страпоны
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Страпоны 1 
+                        a(href="#").new-dropdown__link Страпоны 2 
+                        a(href="#").new-dropdown__link Страпоны 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Наборы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Наборы 1 
+                        a(href="#").new-dropdown__link Наборы 2 
+                        a(href="#").new-dropdown__link Наборы 3
+
             .new-tabs__cell(data-action='tabContent')
               .new-dropdown.new-header__dropdown.new-header__dropdown-type-desktop(data-action='dropdown')
-                .new-dropdown__wrapper.new-dropdown__wrapper-type-desktop.new-dropdown__wrapper-action-open(data-action='dropdownWrapper')
-                  ul
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/udarnye-devajsy/') Ударные девайсы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/naruchniki-nanozhniki/') Наручники, наножники
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/klyapy-maski/') Кляпы, маски
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/oshejniki-povodki/') Ошейники, поводки
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/fisaciya-bondazh/') Фиксация, бондаж
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/sbrui-utyazhki-utyazheliteli/') Сбруи, утяжки, утяжелители
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/elektrostimulyaciya/') Электростимуляция
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/zazhimy/') Зажимы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/fisting/') Фистинг
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/shekotalki/') Щекоталки
-                  ul.shifted
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/seks-mashiny/') Секс-машины
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/mebel-dlya-seksa-kacheli/') Мебель для секса, качели
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/medicinskij-fetish/') Медицинский фетиш
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/nabori/') Наборы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/bdsm/drugoe/') Другое
+                //ИЗМЕНЕНИЯ НАЧИНАюТСЯ ЗДЕСЬ
+                .new-dropdown__wrapper.new-dropdown__wrapper-type-desktop.new-header__dropdown-group.new-dropdown__wrapper-action-open(data-action='dropdownWrapper')
+                  .new-header__dropdown-group-block
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Вибраторы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Вибраторы 1 
+                        a(href="#").new-dropdown__link Вибраторы 2 
+                        a(href="#").new-dropdown__link Вибраторы 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Страпоны
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Страпоны 1 
+                        a(href="#").new-dropdown__link Страпоны 2 
+                        a(href="#").new-dropdown__link Страпоны 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Наборы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Наборы 1 
+                        a(href="#").new-dropdown__link Наборы 2 
+                        a(href="#").new-dropdown__link Наборы 3
+                      
+                  .new-header__dropdown-group-block
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Вибраторы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Вибраторы 1 
+                        a(href="#").new-dropdown__link Вибраторы 2 
+                        a(href="#").new-dropdown__link Вибраторы 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Страпоны
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Страпоны 1 
+                        a(href="#").new-dropdown__link Страпоны 2 
+                        a(href="#").new-dropdown__link Страпоны 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Наборы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Наборы 1 
+                        a(href="#").new-dropdown__link Наборы 2 
+                        a(href="#").new-dropdown__link Наборы 3
+
+
             .new-tabs__cell(data-action='tabContent')
               .new-dropdown.new-header__dropdown.new-header__dropdown-type-desktop(data-action='dropdown')
-                .new-dropdown__wrapper.new-dropdown__wrapper-type-desktop.new-dropdown__wrapper-action-open(data-action='dropdownWrapper')
-                  ul
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/intimnaya-kosmetika/smazki/') Смазки
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/intimnaya-kosmetika/prezervativy/') Презервативы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/intimnaya-kosmetika/afrodiziaki-i-bady/') Афродизиаки и БАДы
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/intimnaya-kosmetika/duhi-s-feromonami/') Духи с феромонами
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/intimnaya-kosmetika/intimnaya-gigiena/') Гигиена, уход за игрушками
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/intimnaya-kosmetika/kosmetika-s-feromonamiafrodiziakami/') Косметика с феромонами
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/intimnaya-kosmetika/kremasprei/') Крема, спреи
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/intimnaya-kosmetika/massazhnye-masla-svechi/') Массажные масла, свечи
-                    li
-                      a.new-dropdown__link.new-dropdown__link-type-desktop(href='/catalog/intimnaya-kosmetika/sedobnaya-kosmetika/') Съедобная косметика
+                //ИЗМЕНЕНИЯ НАЧИНАюТСЯ ЗДЕСЬ
+                .new-dropdown__wrapper.new-dropdown__wrapper-type-desktop.new-header__dropdown-group.new-dropdown__wrapper-action-open(data-action='dropdownWrapper')
+                  .new-header__dropdown-group-block
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Вибраторы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Вибраторы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Вибраторы 1 
+                        a(href="#").new-dropdown__link Вибраторы 2 
+                        a(href="#").new-dropdown__link Вибраторы 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Страпоны
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Страпоны
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Страпоны 1 
+                        a(href="#").new-dropdown__link Страпоны 2 
+                        a(href="#").new-dropdown__link Страпоны 3
+                    .new-dropdown(data-action='dropdown')
+                      a(href='/').new-dropdown__link.new-dropdown__link_d Наборы
+                      a(href="javascript:void(0);" data-action='dropdownButton').new-dropdown__link Наборы
+                      .new-dropdown__wrapper(data-action='dropdownWrapper')
+                        a(href="#").new-dropdown__link Наборы 1 
+                        a(href="#").new-dropdown__link Наборы 2 
+                        a(href="#").new-dropdown__link Наборы 3
+
       if header_banner==true
         .new-header__slider.new-header__slider-type-main.container-fluid
           .new-slider.new-slider__shell(data-action='adSliderInMain')
@@ -924,8 +1059,9 @@ html
     <script src="/static/js/mobile_cart_rel_products_carousel.js"></script>
     <script async="" src="/static/js/adaptive_scripts.js"></script>
 
-    <script src="/static/NEW/js/main.js"></script>
-    
+    //<script src="/static/NEW/js/main.js"></script>
+
+    script(type='text/javascript', src=href+'/scripts/main.js')
     //new
     script(type='text/javascript', src=href+'/scripts/new.js')
 

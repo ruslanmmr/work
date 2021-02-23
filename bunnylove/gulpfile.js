@@ -58,15 +58,11 @@ gulp.task("pug", function() {
 
 gulp.task("scripts", function() {
   return gulp.src($scripts)
-    .pipe(sourcemaps.init())
-    .pipe(babel({presets: ["@babel/preset-env"]}))
-    .pipe(sourcemaps.write("./maps/"))
     .pipe(gulp.dest("./build/scripts/"))
     .on("end", browsersync.reload);
 });
 gulp.task("scripts_production", function() {
   return gulp.src($scripts)
-    .pipe(babel({presets: ["@babel/preset-env"]}))
     .pipe(uglify())
     .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("./build/scripts/"))
