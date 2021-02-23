@@ -107,10 +107,6 @@
   .new-tabs__linkShell {
     position: relative;
   }
-  .new-tabs__cell-type-alternative {
-    padding: 15px 0;
-    min-width: 100%;
-  }
   .new-dropdown__button {
     box-shadow: none;
     border-bottom: 1px solid #dedede;
@@ -127,10 +123,13 @@
   @media (min-width: 1200px) {
     .new-tabs__cell-type-alternative {
       padding: 15px 0;
+      min-width: 100%;
+      width: auto;
     }
     .new-header__dropdown-type-desktop {
       margin: 0;
       padding: 0 30px 0 0;
+      flex-shrink: 0;
       &:first-child {
         padding-left: 20px;
       }

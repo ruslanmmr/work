@@ -39,6 +39,7 @@ $(window).resize(function () {
 
                 tabLinkContent.children().each(function () {
                     totalWidth = totalWidth + $(this).outerWidth()+1;
+                    console.log($(this).outerWidth()+1)
                 });
                 tabLinkContent.css({'width': totalWidth});
             })

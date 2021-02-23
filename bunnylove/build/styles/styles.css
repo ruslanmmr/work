@@ -25411,10 +25411,6 @@ textarea.input {
 .new-header .new-tabs__linkShell {
   position: relative; }
 
-.new-header .new-tabs__cell-type-alternative {
-  padding: 15px 0;
-  min-width: 100%; }
-
 .new-header .new-dropdown__button {
   box-shadow: none;
   border-bottom: 1px solid #dedede; }
@@ -25430,10 +25426,13 @@ textarea.input {
 
 @media (min-width: 1200px) {
   .new-header .new-tabs__cell-type-alternative {
-    padding: 15px 0; }
+    padding: 15px 0;
+    min-width: 100%;
+    width: auto; }
   .new-header .new-header__dropdown-type-desktop {
     margin: 0;
-    padding: 0 30px 0 0; }
+    padding: 0 30px 0 0;
+    flex-shrink: 0; }
     .new-header .new-header__dropdown-type-desktop:first-child {
       padding-left: 20px; }
     .new-header .new-header__dropdown-type-desktop:last-child {
