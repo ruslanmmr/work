@@ -309,3 +309,196 @@
     }
   }
 }
+
+
+.new-filters {
+  @media (max-width: 1023px) {
+    .new-filters__bottom .new-button-type-clear:first-child {
+      margin-bottom: 20px;
+    }
+    .new-filters__dropdown {
+      margin-bottom: 30px;
+    }
+    .new-dropdown__wrapper-type-bottomFilter {
+      margin-top: 25px;
+    }
+    .checkbox-item:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    .new-dropdown__button-type-bottomFilter {
+      font-size: 18px;
+      line-height: 24px !important;
+      &::before {
+        width: 24px;
+        height: 24px;
+      }
+      &::after {
+        width: 8px;
+        height: 8px;
+        top: 12px;
+      }
+      &.new-dropdown__button-action-open {
+        &::after {
+          top: 9px;
+        } 
+      }
+    }
+    .checkbox-item .label--checkbox, .checkbox-item .label--radio {
+      padding: 2px 0 2px 44px;
+      line-height: 20px;
+      font-size: 16px;
+    }
+    .checkbox-item .checkbox {
+      left: 0;
+      top: 0 !important;
+      width: 24px;
+      height: 24px;
+      appearance: none;
+      &::after {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+      }
+      &::before {
+        left: 6px;
+        top: 5px;
+        width: 12px;
+        height: 8px;
+      }
+    }
+    .brand-filter-search {
+      margin-bottom: 20px;
+    }
+    .filter__single-option {
+      .checkbox-item .label--checkbox, .checkbox-item .label--radio {
+        font-size: 18px;
+        padding: 2px 0 0 44px;
+        line-height: 22px;
+      }
+    }
+    .noUi-horizontal .noUi-handle {
+      width: 24px;
+      height: 24px;
+      top: -7px;
+    }
+    .noUi-handle-upper {
+      right: 12px;
+    }
+    .noUi-handle-lower {
+      left: -12px;
+    }
+    .noUi-origin {
+      &:first-child {
+        background-color: $color-accent;
+      }
+    }
+    .noUi-target {
+      margin: 12px 12px 32px 12px
+    }
+    .noUi-horizontal {
+      height: 10px;
+    }
+  }
+}
+
+.new-content__sort {
+  @media (max-width: 1199px) {
+    .new-sort__dropdown {
+      max-width: 720px;
+      padding: 0 15px;
+      margin: 0 auto;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    .new-console {
+      padding: 15px;
+      max-width: 720px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    .new-dropdown__wrapper {
+      padding: 0;
+      margin: 25px 0 0 0;
+      box-shadow: none;
+    }
+    .new-dropdown__link {
+      display: block;
+      padding: 2px 0 2px 44px;
+      line-height: 20px;
+      font-size: 16px;
+      width: 100%;
+      color: #333333;
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+        left: 0;
+        top: 0;
+        border: 1px solid #ccc;
+      }
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background-color: $color-accent;
+        left: 7px;
+        top: 7px;
+        opacity: 0;
+      }
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+      &.new-dropdown__link-type-sortCurrent {
+        &::after {
+          opacity: 1;
+        }
+        &::before {
+          border-color: $color-accent;
+        }
+      }
+    }
+    .new-dropdown__button {
+      box-shadow: none;
+      font-size: 18px;
+      line-height: 24px;
+      padding: 0;
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+        position: absolute;
+        border: 1px solid #ccc;
+        right: 0;
+        top: 0;
+      }
+      &::after {
+        width: 8px;
+        height: 8px;
+        top: 12px;
+        right: 11px;
+      }
+      &.new-dropdown__button-action-open {
+        &::after {
+          top: 9px;
+          right: 8px;
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .new-sort__dropdown, .new-console {
+      max-width: 540px;
+    }
+  }
+}

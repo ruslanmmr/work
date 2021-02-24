@@ -77,6 +77,8 @@ $(document).ready(function () {
             $siblings_button = $siblings.find('[data-action="dropdownButton"]'),
             $siblings_content = $siblings.find('[data-action="dropdownWrapper"]');
 
+        console.log($parent)
+
         $siblings_button.removeClass(btn_class);
         $siblings_content.removeClass(cnt_class);
         $content.toggleClass(cnt_class);

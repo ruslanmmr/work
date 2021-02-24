@@ -16383,12 +16383,12 @@ p.reviews_empty {
 
 /* line 10768, ../sass/css.scss */
 .noUi-handle-upper {
-  right: 14px;
+  right: 7px;
 }
 
 /* line 10771, ../sass/css.scss */
 .noUi-handle-lower {
-  left: 0;
+  left: -7px;
 }
 
 /* line 10774, ../sass/css.scss */
@@ -16408,26 +16408,24 @@ p.reviews_empty {
  */
 /* line 10785, ../sass/css.scss */
 .noUi-background {
-  background: #e4e4e4;
-  margin-bottom: 20px;
-  margin-top: 10px;
+  background-color: #e4e4e4;
+  border-radius: 5px;
 }
 
 /* line 10790, ../sass/css.scss */
 .noUi-connect {
-  background: #3FB8AF;
-  box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
-  transition: background 450ms;
+  border-radius: 5px;
 }
 
 /* line 10795, ../sass/css.scss */
 .noUi-origin {
-  border-radius: 2px;
+  border-radius: 5px;
+  background-color: #e4e4e4;
 }
 
 /* line 10798, ../sass/css.scss */
 .noUi-target {
-  border-radius: 4px;
+  margin: 10px 7px 20px 7px;
 }
 
 /* line 10801, ../sass/css.scss */

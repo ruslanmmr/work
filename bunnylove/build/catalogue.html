@@ -823,23 +823,23 @@
                 <div class="new-console new-mobileMenu__console">
                   <button class="new-header__close" data-action="toSortByCloseButton"></button>
                 </div>
-                <div class="new-dropdown new-sort__dropdown">
+                <div class="new-dropdown new-sort__dropdown" data-action="dropdown">
                   <button class="new-button new-dropdown__button new-dropdown__button-type-sort" data-action="dropdownButton">Наличие</button>
                   <div class="new-dropdown__wrapper new-dropdown__wrapper-type-sort" data-action="dropdownWrapper"><a class="new-dropdown__link new-dropdown__link-type-sort" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?availability=all" data-action="dropdownСhanger">все</a><a class="new-dropdown__link new-dropdown__link-type-sort new-dropdown__link-type-sortCurrent" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/" data-action="dropdownСhanger">в наличии</a></div>
                 </div>
-                <div class="new-dropdown new-sort__dropdown">
+                <div class="new-dropdown new-sort__dropdown" data-action="dropdown">
                   <button class="new-button new-dropdown__button new-dropdown__button-type-sort" data-action="dropdownButton">Магазины</button>
                   <div class="new-dropdown__wrapper new-dropdown__wrapper-type-sort" data-action="dropdownWrapper"><a class="new-dropdown__link new-dropdown__link-type-sort new-dropdown__link-type-sortCurrent" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/" data-action="dropdownСhanger">Все магазины</a><a class="new-dropdown__link new-dropdown__link-type-sort" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?shops=1" data-action="dropdownСhanger">Ново-Вокз.</a><a class="new-dropdown__link new-dropdown__link-type-sort" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?shops=2" data-action="dropdownСhanger">Ленинградская</a><a class="new-dropdown__link new-dropdown__link-type-sort" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?shops=3" data-action="dropdownСhanger">Моск. шоссе</a><a class="new-dropdown__link new-dropdown__link-type-sort" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?shops=4" data-action="dropdownСhanger">Гагарина</a><a class="new-dropdown__link new-dropdown__link-type-sort" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?shops=6" data-action="dropdownСhanger">Авроры</a></div>
                 </div>
-                <div class="new-dropdown new-sort__dropdown">
+                <div class="new-dropdown new-sort__dropdown" data-action="dropdown">
                   <button class="new-button new-dropdown__button new-dropdown__button-type-sort" data-action="dropdownButton">Тип</button>
                   <div class="new-dropdown__wrapper new-dropdown__wrapper-type-sort" data-action="dropdownWrapper"><a class="new-dropdown__link new-dropdown__link-type-sort new-dropdown__link-type-sortCurrent" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/" data-action="dropdownСhanger">все</a><a class="new-dropdown__link new-dropdown__link-type-sort" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?promo=discount" data-action="dropdownСhanger">со скидкой</a><a class="new-dropdown__link new-dropdown__link-type-sort" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?promo=popular" data-action="dropdownСhanger">популярные</a><a class="new-dropdown__link new-dropdown__link-type-sort" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?promo=new" data-action="dropdownСhanger">новые</a></div>
                 </div>
-                <div class="new-dropdown new-sort__dropdown">
+                <div class="new-dropdown new-sort__dropdown" data-action="dropdown">
                   <button class="new-button new-dropdown__button new-dropdown__button-type-sort" data-action="dropdownButton">Склад</button>
                   <div class="new-dropdown__wrapper new-dropdown__wrapper-type-sort" data-action="dropdownWrapper"><a class="new-dropdown__link new-dropdown__link-type-sort" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?store=all" data-action="dropdownСhanger">все</a><a class="new-dropdown__link new-dropdown__link-type-sort new-dropdown__link-type-sortCurrent" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?store=samara" data-action="dropdownСhanger">в Самаре</a><a class="new-dropdown__link new-dropdown__link-type-sort" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?store=moscow" data-action="dropdownСhanger">в Москве</a></div>
                 </div>
-                <div class="new-dropdown new-sort__dropdown">
+                <div class="new-dropdown new-sort__dropdown" data-action="dropdown">
                   <button class="new-button new-dropdown__button new-dropdown__button-type-sort" data-action="dropdownButton">По цене</button>
                   <div class="new-dropdown__wrapper new-dropdown__wrapper-type-sort" data-action="dropdownWrapper"><a class="new-dropdown__link new-dropdown__link-type-sort" href="/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?ordering=asc" data-action="dropdownСhanger"><span class="new-dropdown__remark">По возрастанию</span><span class="new-dropdown__remark new-dropdown__remark-type-desktop">Цена
                         <svg class="new-dropdown__icon new-dropdown__icon-type-priceMax">
@@ -1832,15 +1832,37 @@
 <script src="/static/js/jquery.mask.min.js"></script>
 <script src="/static/js/mobile_cart_rel_products_carousel.js"></script>
 <script async="" src="/static/js/adaptive_scripts.js"></script>
-    <!--<script src="/static/NEW/js/main.js"></script>-->
+    <script defer="" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script defer="" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <!-- 16 KB-->
+    <script defer="" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/static/NEW/js/catalog.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+    <script defer="" src="/static/js/jquery-ui/jquery-ui-i18n.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed-->
+    <!-- <script src="js/bootstrap.min.js"></script>-->
+    <script defer="" src="/static/js/js.cookie.js"></script>
+    <script defer="" src="/static/js/notify.min.js"></script>
+    <script defer="" src="/static/js/jquery.bxslider/jquery.bxslider.min.js"></script>
+    <script defer="" src="/static/js/noUiSlider/jquery.nouislider.all.js"></script>
+    <script defer="" src="/static/js/scroller/jquery.fs.scroller.min.js"></script>
+    <script defer="" src="/static/js/select.js"></script>
+    <script defer="" src="/static/js/jquery.fancybox.pack.js"></script>
+    <script defer="" src="/static/js/jquery.mask.min.js"></script>
     <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/scripts/main.js"></script>
-    <!--new-->
     <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/scripts/new.js"></script>
-    <!--notifications plugin-->
-    <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/scripts/libs/noty.min.js"></script>
-    <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/scripts/libs/popper.min.js"></script>
-    <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/scripts/libs/tippy.min.js"></script>
-    <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/scripts/notifications.js"></script>
+    <script defer="" src="/static/js/noty.min.js"></script>
+    <script defer="" src="/static/js/popper.min.js"></script>
+    <script defer="" src="/static/js/tippy.min.js"></script>
+    <script defer="" src="https://ruslanmmr.github.io/work/bunnylove/build/scripts/script.js"></script>
+    <script defer="" src="/static/js/mobile_cart_rel_products_carousel.js"></script>
+    <script async="" src="/static/js/adaptive_scripts.js"></script>
+    <script defer="" src="/static/NEW/js/main.js"></script>
+    <script defer="" src="https://cdn.ravenjs.com/3.26.4/raven.min.js" crossorigin="anonymous"></script>
+    <script defer="" src="/static/js/new.js"></script>
+    <script src="https://google.com/recaptcha/api.js" async="" defer=""></script>
     <!--preview-->
     <link rel="stylesheet" href="https://ruslanmmr.github.io/work/bunnylove/build/styles/js-helper.css">
     <div class="helper"><a class="helper__trigger" href="javascript:void(0);">

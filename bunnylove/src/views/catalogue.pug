@@ -310,16 +310,19 @@ block content
                   i  
                   | Показать
                   span  
+        
+        
         .new-content__right
+        
           .new-sort.new-content__sort(data-action='toSortByWrapper')
             .new-console.new-mobileMenu__console
               button.new-header__close(data-action='toSortByCloseButton')
-            .new-dropdown.new-sort__dropdown
+            .new-dropdown.new-sort__dropdown(data-action='dropdown')
               button.new-button.new-dropdown__button.new-dropdown__button-type-sort(data-action='dropdownButton') Наличие
               .new-dropdown__wrapper.new-dropdown__wrapper-type-sort(data-action='dropdownWrapper')
                 a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?availability=all' data-action='dropdownСhanger') все
                 a.new-dropdown__link.new-dropdown__link-type-sort.new-dropdown__link-type-sortCurrent(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/' data-action='dropdownСhanger') в наличии
-            .new-dropdown.new-sort__dropdown
+            .new-dropdown.new-sort__dropdown(data-action='dropdown')
               button.new-button.new-dropdown__button.new-dropdown__button-type-sort(data-action='dropdownButton') Магазины
               .new-dropdown__wrapper.new-dropdown__wrapper-type-sort(data-action='dropdownWrapper')
                 a.new-dropdown__link.new-dropdown__link-type-sort.new-dropdown__link-type-sortCurrent(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/' data-action='dropdownСhanger') Все магазины
@@ -328,20 +331,20 @@ block content
                 a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?shops=3' data-action='dropdownСhanger') Моск. шоссе
                 a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?shops=4' data-action='dropdownСhanger') Гагарина
                 a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?shops=6' data-action='dropdownСhanger') Авроры
-            .new-dropdown.new-sort__dropdown
+            .new-dropdown.new-sort__dropdown(data-action='dropdown')
               button.new-button.new-dropdown__button.new-dropdown__button-type-sort(data-action='dropdownButton') Тип
               .new-dropdown__wrapper.new-dropdown__wrapper-type-sort(data-action='dropdownWrapper')
                 a.new-dropdown__link.new-dropdown__link-type-sort.new-dropdown__link-type-sortCurrent(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/' data-action='dropdownСhanger') все
                 a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?promo=discount' data-action='dropdownСhanger') со скидкой
                 a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?promo=popular' data-action='dropdownСhanger') популярные
                 a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?promo=new' data-action='dropdownСhanger') новые
-            .new-dropdown.new-sort__dropdown
+            .new-dropdown.new-sort__dropdown(data-action='dropdown')
               button.new-button.new-dropdown__button.new-dropdown__button-type-sort(data-action='dropdownButton') Склад
               .new-dropdown__wrapper.new-dropdown__wrapper-type-sort(data-action='dropdownWrapper')
                 a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?store=all' data-action='dropdownСhanger') все
                 a.new-dropdown__link.new-dropdown__link-type-sort.new-dropdown__link-type-sortCurrent(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?store=samara' data-action='dropdownСhanger') в Самаре
                 a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?store=moscow' data-action='dropdownСhanger') в Москве
-            .new-dropdown.new-sort__dropdown
+            .new-dropdown.new-sort__dropdown(data-action='dropdown')
               button.new-button.new-dropdown__button.new-dropdown__button-type-sort(data-action='dropdownButton') По цене
               .new-dropdown__wrapper.new-dropdown__wrapper-type-sort(data-action='dropdownWrapper')
                 a.new-dropdown__link.new-dropdown__link-type-sort(href='/catalog/seks-igrushki/dlya-zhenshin/vaginalnye-shariki-i-trenazhery/?ordering=asc' data-action='dropdownСhanger')
@@ -356,6 +359,8 @@ block content
                     | Цена
                     svg.new-dropdown__icon.new-dropdown__icon-type-priceMin
                       use(xlink:href='#priceMinIcon')
+          
+          
           .new-content__catalog
             .new-card.new-card-type-catalog
               .new-card__labels
