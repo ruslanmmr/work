@@ -4,7 +4,7 @@ $(document).ready(function(){
   slider.init();
 })
 
-const brakepoints = {
+const gridbrakepoints = {
   xs: 576,
   sm: 768,
   md: 1024,
@@ -100,28 +100,28 @@ window.slider = {
           autoplay: autoplay,
           autoplaySpeed: 3000,
           responsive: [{
-              breakpoint: brakepoints.lg,
+              breakpoint: gridbrakepoints.lg,
               settings: {
                 slidesToShow: slideCountLg,
                 slidesToScroll: slideCountLg
               }
             },
             {
-              breakpoint: brakepoints.md,
+              breakpoint: gridbrakepoints.md,
               settings: {
                 slidesToShow: slideCountMd,
                 slidesToScroll: slideCountMd
               }
             },
             {
-              breakpoint: brakepoints.sm,
+              breakpoint: gridbrakepoints.sm,
               settings: {
                 slidesToShow: slideCountSm,
                 slidesToScroll: slideCountSm
               }
             },
             {
-              breakpoint: brakepoints.xs,
+              breakpoint: gridbrakepoints.xs,
               settings: {
                 slidesToShow: slideCountXs,
                 slidesToScroll: slideCountXs

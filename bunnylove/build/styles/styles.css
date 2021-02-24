@@ -18747,7 +18747,8 @@ ol:not([class]) li:not([class]):before {
   width: 175px;
   height: 48px;
   margin-top: 27px;
-  position: relative; }
+  position: relative;
+  white-space: nowrap; }
 
 /* line 15507, ../sass/css.scss */
 .new-button-type-clear:after,
@@ -23714,7 +23715,9 @@ header.new-header {
     padding: 0 15px; }
   .new-filters__top, .new-filters__bottom, .new-filters .new-console {
     max-width: 720px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .new-filters .new-console {
+    margin-bottom: 20px; } }
 
 @media (max-width: 767.98px) {
   .new-filters__top, .new-filters__bottom, .new-filters .new-console {
@@ -25567,11 +25570,12 @@ textarea.input {
   .new-filters .new-filters__dropdown {
     margin-bottom: 30px; }
   .new-filters .new-dropdown__wrapper-type-bottomFilter {
-    margin-top: 25px; }
+    margin-top: 25px;
+    padding-bottom: 20px; }
   .new-filters .checkbox-item:not(:last-child) {
     margin-bottom: 15px; }
   .new-filters .new-dropdown__button-type-bottomFilter {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px !important; }
     .new-filters .new-dropdown__button-type-bottomFilter::before {
       width: 24px;
@@ -25583,7 +25587,7 @@ textarea.input {
     .new-filters .new-dropdown__button-type-bottomFilter.new-dropdown__button-action-open::after {
       top: 9px; }
   .new-filters .checkbox-item .label--checkbox, .new-filters .checkbox-item .label--radio {
-    padding: 2px 0 2px 44px;
+    padding: 2px 0 2px 40px;
     line-height: 20px;
     font-size: 16px; }
   .new-filters .checkbox-item .checkbox {
@@ -25604,9 +25608,10 @@ textarea.input {
   .new-filters .brand-filter-search {
     margin-bottom: 20px; }
   .new-filters .filter__single-option .checkbox-item .label--checkbox, .new-filters .filter__single-option .checkbox-item .label--radio {
-    font-size: 18px;
-    padding: 2px 0 0 44px;
-    line-height: 22px; }
+    font-size: 16px;
+    padding: 2px 0 0 40px;
+    line-height: 22px;
+    color: #000; }
   .new-filters .noUi-horizontal .noUi-handle {
     width: 24px;
     height: 24px;
@@ -25637,10 +25642,11 @@ textarea.input {
   .new-content__sort .new-dropdown__wrapper {
     padding: 0;
     margin: 25px 0 0 0;
+    padding-bottom: 20px;
     box-shadow: none; }
   .new-content__sort .new-dropdown__link {
     display: block;
-    padding: 2px 0 2px 44px;
+    padding: 2px 0 2px 40px;
     line-height: 20px;
     font-size: 16px;
     width: 100%;
@@ -25675,7 +25681,7 @@ textarea.input {
       border-color: #d51e28; }
   .new-content__sort .new-dropdown__button {
     box-shadow: none;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
     padding: 0;
     position: relative; }

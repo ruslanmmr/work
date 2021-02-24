@@ -1,5 +1,5 @@
 -var href = 'https://ruslanmmr.github.io/work/bunnylove/build'
-//-var href = 'http://localhost:9000'
+//-var href = 'http://localhost:9001'
 
 block variables
 
@@ -1082,7 +1082,7 @@ html
     script(defer='' src='/static/js/jquery.fancybox.pack.js')
     script(defer='' src='/static/js/jquery.mask.min.js')
 
-    script(type='text/javascript', src=href+'/scripts/main.js')
+    
     
     script(type='text/javascript', src=href+'/scripts/new.js')
 
@@ -1092,7 +1092,9 @@ html
     script(defer='' src='/static/js/script.js')
     script(defer='' src='/static/js/mobile_cart_rel_products_carousel.js')
     script(async='' src='/static/js/adaptive_scripts.js')
-    script(defer='' src='/static/NEW/js/main.js')
+
+    script(type='text/javascript', src=href+'/scripts/main.js')
+
     script(defer='' src='https://cdn.ravenjs.com/3.26.4/raven.min.js' crossorigin='anonymous')
     script(defer='' src='/static/js/new.js')
     script(src='https://google.com/recaptcha/api.js' async='' defer='')

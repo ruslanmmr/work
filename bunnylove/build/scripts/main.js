@@ -12,9 +12,9 @@ $(window).resize(function () {
             'left': toDesktopCityButton + 'px'
         });
     }
+});
 
-
-
+function headerTabs() {
     //Вкладки среднего меню, смена просмотра с по клику на по наведению и обратно при изменении разрешения экрана
     if ($(window).width() < 1200) {
         $('[data-action="tab1"]').click(function (e) {
@@ -33,6 +33,7 @@ $(window).resize(function () {
                     rootCategorySlug + '" data-action="tabLinkContent">' + tabContent + '</div>');
             }
 
+            console.log('text')
             $this.on('mouseenter', function() {
                 var tabLinkContent = $this.parent().find('[data-action="tabLinkContent"]'),
                     totalWidth = 0;
@@ -45,7 +46,12 @@ $(window).resize(function () {
             })
         })
     }
-});
+}
+
+headerTabs();
+$(window).resize(function() {
+    headerTabs();
+})
 
 
 

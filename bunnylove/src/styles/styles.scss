@@ -22810,6 +22810,7 @@ ol:not([class]) li:not([class]):before {
   height: 48px;
   margin-top: 27px;
   position: relative;
+  white-space: nowrap;
 }
 
 /* line 15507, ../sass/css.scss */
@@ -29454,6 +29455,9 @@ header.new-header {
   .new-filters__top, .new-filters__bottom, .new-filters .new-console {
     max-width: 720px;
     margin: 0 auto;
+  }
+  .new-filters .new-console {
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 767.98px) {
