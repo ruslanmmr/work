@@ -17,3 +17,12 @@ mixin card3(type, classes)
         if type!==''
           span.preview-block__label(style='background-color:#FFCC00;')=type
         h6.preview-block__title DISTORIUM.RU - первый умный дистрибьютер на платформе стройкер
+
+
+mixin card4(type, classes)
+  .banner-item(class=classes)
+    a(href="#").banner-item__container(style='background-color:#e1e1e1;')
+      if type==1
+        p Текст для баннера
+      else if type==2
+        img(src=href+'/img/image 56.png', alt="image")

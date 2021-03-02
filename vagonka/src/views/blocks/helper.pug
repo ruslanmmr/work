@@ -1,3 +1,4 @@
+link(rel='stylesheet' href=href+'/styles/helper.css')
 .helper
   a(href="javascript:void(0);").helper__trigger 
     svg.icon(viewBox='0 0 100 100' fill='currentColor')
@@ -13,6 +14,15 @@
         a(href=href+'/index.html').helper__section-button Главная
         a(href=href+'/contacts.html').helper__section-button Контакты
         a(href=href+"/catalogue.html").helper__section-button Каталог
+        a(href=href+"/catalogue2.html").helper__section-button Каталог (тип 2)
         a(href=href+"/card.html").helper__section-button Карточка товара
         a(href=href+"/landing.html").helper__section-button Лендинг
-    
+        a(href=href+"/wiki.html").helper__section-button Вики
+        a(href=href+"/article.html").helper__section-button Статья
+        a(href=href+"/partners.html").helper__section-button Партнеры
+    //section
+    .helper__section
+      span.helper__section-title ЛК:
+      .helper__section-content
+        a(href=href+'/lk0.html').helper__section-button Лк - Старт
+script(src=href+'/scripts/helper.js')
