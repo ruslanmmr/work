@@ -998,6 +998,8 @@ header {
       display: block;
       width: 100%;
       height: auto;
+      min-height: 100%;
+      object-fit: cover;
     }
   }
   &__text-content {
