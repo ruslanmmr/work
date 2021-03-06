@@ -971,6 +971,11 @@ header {
 
 .conditional-section {
   margin-bottom: 40px;
+  position: relative;
+  .container {
+    position: relative;
+    z-index: 2;
+  }
   .conditional-section:last-child {
     margin-bottom: 0;
   }
@@ -980,6 +985,16 @@ header {
     background-position: center;
     & + .conditional-section_bg, & + .section-dark {
       margin-top: -40px;
+    }
+    & > img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      pointer-events: none;
     }
   }
   .product-slider, .news-slider, .action-slider, .category-slider {

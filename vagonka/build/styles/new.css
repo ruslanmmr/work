@@ -805,7 +805,11 @@ header {
       transform: translateY(50%); } }
 
 .conditional-section {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  position: relative; }
+  .conditional-section .container {
+    position: relative;
+    z-index: 2; }
   .conditional-section .conditional-section:last-child {
     margin-bottom: 0; }
   .conditional-section_bg {
@@ -814,6 +818,15 @@ header {
     background-position: center; }
     .conditional-section_bg + .conditional-section_bg, .conditional-section_bg + .section-dark {
       margin-top: -40px; }
+    .conditional-section_bg > img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      pointer-events: none; }
   .conditional-section .product-slider, .conditional-section .news-slider, .conditional-section .action-slider, .conditional-section .category-slider {
     margin-bottom: 0; }
 
