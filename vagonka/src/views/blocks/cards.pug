@@ -23,6 +23,10 @@ mixin card4(type, classes)
   .banner-item(class=classes)
     a(href="#").banner-item__container(style='background-color:#e1e1e1;')
       if type==1
-        p Текст для баннера
+        .banner-item__text-content.text-page
+          h3 заголовок
+          p Текст для баннера
+          ul 
+            li список
       else if type==2
         img(src=href+'/img/image 56.png', alt="image")

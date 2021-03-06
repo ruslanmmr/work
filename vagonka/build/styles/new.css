@@ -820,20 +820,16 @@ header {
 .banner-item__container {
   display: block;
   position: relative;
-  height: 100%; }
+  height: 100%;
+  color: #000;
+  text-decoration: none; }
   .banner-item__container img, .banner-item__container svg {
     display: block;
     width: 100%;
     height: auto; }
-  .banner-item__container p {
-    display: block;
-    padding: 25px 20px;
-    font-size: 20px;
-    line-height: 1.35; }
 
-@media screen and (max-width: 767px) {
-  .banner-item p {
-    font-size: 18px; } }
+.banner-item__text-content {
+  padding: 25px 20px; }
 
 .banner-items-section .banner-item {
   width: 33.33%; }

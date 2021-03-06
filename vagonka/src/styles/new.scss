@@ -992,24 +992,19 @@ header {
     display: block;
     position: relative;
     height: 100%;
+    color: #000;
+    text-decoration: none;
     img, svg {
       display: block;
       width: 100%;
       height: auto;
     }
-    p {
-      display: block;
-      padding: 25px 20px;
-      font-size: 20px;
-      line-height: 1.35;
-    }
   }
-  @media screen and (max-width:767px) {
-    p {
-      font-size: 18px;
-    }
+  &__text-content {
+    padding: 25px 20px;
   }
 }
+
 .banner-items-section {
   .banner-item {
     width: 33.33%;
