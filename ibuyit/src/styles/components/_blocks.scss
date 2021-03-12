@@ -43,7 +43,6 @@
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     .image {
-      z-index: -1;
       position: absolute;
       width: 100%;
       height: 100%;
@@ -350,6 +349,10 @@
   &__block-container {
     border-radius: 8px;
     overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
     &::after {
       content: '';
       display: block;

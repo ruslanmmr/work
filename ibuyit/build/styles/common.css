@@ -4450,7 +4450,6 @@ a {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0); }
     .product-card__container .image {
-      z-index: -1;
       position: absolute;
       width: 100%;
       height: 100%;
@@ -4664,7 +4663,11 @@ a {
 
 .instagram-widget__block-container {
   border-radius: 8px;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0); }
   .instagram-widget__block-container::after {
     content: '';
     display: block;
