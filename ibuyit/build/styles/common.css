@@ -3387,7 +3387,8 @@ table {
   flex: 1 1 100%;
   padding-top: 120px;
   background-position: center center;
-  background-size: 200px; }
+  background-size: 200px;
+  min-height: 400px; }
   @media (max-width: 1599.98px) {
     .main {
       padding-top: 100px; } }
