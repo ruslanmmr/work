@@ -4878,7 +4878,11 @@ a {
     flex-direction: column;
     align-items: initial; }
   .catalogue-block__buy-top {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .catalogue-block__favorites {
+    top: 30px;
+    padding: 5px;
+    margin: -5px; } }
 
 .catalogue__aside-nav {
   margin-bottom: 18px; }
