@@ -4861,6 +4861,8 @@ a {
     margin-top: 30px; } }
 
 @media (max-width: 575.98px) {
+  .catalogue-block__buy-price-block:first-child {
+    margin-top: 0; }
   .catalogue-block__container {
     padding: 30px 20px;
     display: block; }
