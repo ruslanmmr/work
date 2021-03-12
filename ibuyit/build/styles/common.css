@@ -5393,7 +5393,7 @@ a {
   padding: 10px 5px;
   margin: -5px; }
   .nav-open span {
-    width: 100%;
+    width: 30px;
     height: 2px;
     background-color: #2191c6;
     display: block; }
