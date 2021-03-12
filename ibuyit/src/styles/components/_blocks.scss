@@ -600,13 +600,19 @@
   @include media-breakpoint-down(sm) {
     &__container {
       padding: 30px 20px;
+      display: block;
     }
     &__info-head {
       padding-right: 0;
     }
     &__left {
-      flex-wrap: wrap;
       flex-direction: column;
+      width: 100%;
+      flex: initial;
+    }
+    &__buy {
+      flex: initial;
+      width: 100%;
     }
     &__slider {
       width: 100%;

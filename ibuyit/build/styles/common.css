@@ -4857,12 +4857,17 @@ a {
 
 @media (max-width: 575.98px) {
   .catalogue-block__container {
-    padding: 30px 20px; }
+    padding: 30px 20px;
+    display: block; }
   .catalogue-block__info-head {
     padding-right: 0; }
   .catalogue-block__left {
-    flex-wrap: wrap;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 100%;
+    flex: initial; }
+  .catalogue-block__buy {
+    flex: initial;
+    width: 100%; }
   .catalogue-block__slider {
     width: 100%;
     padding: 0 50px;
