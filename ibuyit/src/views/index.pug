@@ -4,14 +4,25 @@ block variables
 block content
 
   section.section.home-banner
-    .container  
-      .splide
-        .splide__track
-          .splide__list
-            //slide
-            a(href=template).splide__slide.home-banner__slide     
-              img(src="./img/banner.png", alt="image")
-
+    .container
+      .row
+        .home-banner__content.col-xl-4
+          .home-banner__content-top
+            .home-banner__title ibuyit
+            .home-banner__txt-head приглашает вас к сотрудничеству
+            .home-banner__txt Стань частью команды  
+              strong IBUYIT 
+              br  
+              | и открой свою точку в удобном тебе месте! 
+          a(href=template).button.button_style-1.home-banner__btn ПОДРОБНЕЕ
+        .col-xl-8
+          .splide
+            .splide__track
+              .splide__list
+                //slide
+                a(href=template).splide__slide.home-banner__slide     
+                  img(src="./img/banner.jpg", alt="image")
+        
 
   section.section 
     .container 

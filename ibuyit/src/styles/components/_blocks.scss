@@ -229,23 +229,23 @@
       margin-right: 5px;
       svg {
         transform: rotate(180deg) skew(-6deg);
-        fill: #e6f0d4;
+        fill: #fcfad4;
       }
       &[data-hover], &[data-touch] {
-        background-color: #e6f0d4;
+        background-color: #fcfad4;
         svg {
           fill: #2191c6;
         }
       }
     }
     &--next {
-      background-color: #e6f0d4;
+      background-color: #fcfad4;
       svg {
         transform: skew(-6deg);
         fill: #2191c6;
       }
       &[data-hover], &[data-touch] {
-        background-color: #fcfad4;
+        background-color: #ebeac7;
       }
     }
   }
@@ -295,6 +295,47 @@
 }
 
 .home-banner {
+  &__title {
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &_btn {
+    min-width: 200px;
+  }
+  &__txt {
+    font-size: 1.375rem;
+    margin-bottom: 20px;
+    padding-left: 10px;
+  }
+  &__txt-head {
+    font-size: 1.375rem;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+    padding-left: 10px;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background-color: #fcfad4;
+    }
+  }
+
+
   &:first-child {
     margin-top: 70px;
   }
@@ -310,19 +351,45 @@
       height: auto;
     }
   }
-  @include media-breakpoint-down(lg) {
-    &__slide {
-      img {
-        width: 145%;
+  @include media-breakpoint-down(xxl) {
+    &__title {
+      font-size: 64px;
+    }
+    &__txt-head, &__txt {
+      font-size: 1.25rem;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__content {
+      margin-bottom: 60px;
+      br {
+        display: none;
       }
+    }
+    &__txt-head, &__txt {
+      padding-left: 0;
     }
   }
   @include media-breakpoint-down(sm) {
     &:first-child {
       margin-top: 50px;
     }
-    .splide {
-      padding-bottom: 55px;
+    &__title {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    &__content {
+      margin-bottom: 40px;
+    }
+    &__txt-head, &__txt {
+      font-size: 1.125rem;
+      margin-bottom: 15px;
+    }
+    &__btn {
+      margin-top: 5px;
+    }
+    &__txt-head {
+      padding-bottom: 15px;
     }
   }
 }
