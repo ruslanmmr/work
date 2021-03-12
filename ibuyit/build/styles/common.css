@@ -4449,7 +4449,11 @@ a {
       position: absolute;
       width: 100%;
       height: 100%;
-      transition: transform 0.3s ease-in-out; }
+      transition: transform 0.3s ease-in-out;
+      border-radius: 10px;
+      overflow: hidden; }
+      .product-card__container .image img {
+        border-radius: 10px; }
     .product-card__container[data-hover] .image, .product-card__container[data-touch] .image {
       transform: scale(1.05); }
   .product-card__head {
