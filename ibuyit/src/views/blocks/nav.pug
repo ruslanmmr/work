@@ -1,0 +1,61 @@
+nav.nav
+  .nav__bg
+  .nav__container
+    button.nav-close 
+      span 
+      span 
+    .nav__content(data-scroll-lock-scrollable)
+      form.search-form.nav__search-form
+        .input.search-form__input 
+          input(type="text" placeholder="Поиск") 
+        button.search-form__button
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#magnifying')
+
+      .nav__top
+        ul.nav__top-list
+          li.nav__top-item
+            a(href=template).nav__ico-btn
+              img(src="./img/icons/house.png", alt="icon").icon
+              | Личный кабинет
+          li.nav__top-item
+            a(href=template).nav__ico-btn
+              img(src="./img/icons/cart.png", alt="icon").icon
+              | Корзина
+              span 0
+          li.nav__top-item
+            a(href=template).nav__ico-btn
+              img(src="./img/icons/star.png", alt="icon").icon
+              | Избранное
+              span 0
+          li.nav__top-item
+            a(href=template).nav__ico-btn
+              img(src="./img/icons/socials.png", alt="icon").icon
+              | Какая-то ссылка
+
+      .nav__bottom
+        ul.nav__bottom-list
+          li.nav__bottom-item
+            a(href=template).nav__link Доставка
+            ul.nav__sub-list
+              li.nav__sub-item
+                a(href=template).nav__sub-link Lorem ipsum dolor
+              li.nav__sub-item
+                a(href=template).nav__sub-link Ut labore et dolore magna
+              li.nav__sub-item
+                a(href=template).nav__sub-link Et dolore magna ipsum
+          
+          li.nav__bottom-item
+            a(href=template).nav__link Форум
+            ul.nav__sub-list
+              li.nav__sub-item
+                a(href=template).nav__sub-link Lorem ipsum dolor
+              li.nav__sub-item
+                a(href=template).nav__sub-link Ut labore et dolore magna
+              li.nav__sub-item
+                a(href=template).nav__sub-link Et dolore magna ipsum
+          li.nav__bottom-item
+            a(href=template).nav__link Бонусная программа
+          li.nav__bottom-item
+            a(href=template).nav__link Контакты
+      

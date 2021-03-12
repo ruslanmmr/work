@@ -1,0 +1,88 @@
+.button {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background-color $trs1, color $trs1;
+  line-height: 24px;
+  height: 50px;
+  padding: 0 30px;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  &_style-1 {
+    background-color: #fcfad4;
+    color: #2191c6;
+    &[data-hover], &[data-touch] {
+      background-color: #ebeac7;
+    }
+    .icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 15px;
+    }
+  }
+  &_style-2 {
+    background-color: #ebeac7;
+    color: #2191c6;
+    &[data-hover], &[data-touch] {
+      background-color: #fcfad4;
+    }
+  }
+  &_style-3 {
+    line-height: 38px;
+    border: 1px solid #fcfad4;
+    height: 40px;
+    border-radius: 4px;
+    padding: 0 25px;
+    opacity: 0.5;
+    transition: opacity $trs1;
+    &[data-touch], &[data-hover], &.active {
+      opacity: 1;
+    }
+    &.active {
+      pointer-events: none;
+    }
+  }
+  &_style-4 {
+    background-color: #aad3cf;
+    color: #fcfad4;
+    width: 50px;
+    padding: 0;
+    span {
+      width: 6px;
+      height: 6px;
+      border-radius: 6px;
+      position: relative;
+      transform: translateY(5px);
+      display: block;
+      background-color: currentColor;
+      &::before, &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+        border-radius: inherit;
+      }
+      &::before {
+        right: 10px;
+      }
+      &::after {
+        left: 10px;
+      }
+    }
+    &[data-touch], &[data-hover], &.active {
+      background-color: #fcfad4;
+      color: #2191c6;
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    font-size: 1.125rem;
+  }
+}

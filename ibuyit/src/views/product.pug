@@ -1,0 +1,109 @@
+extends layout/layout
+block variables
+  -var title = sitename+' - Продукт'
+block content
+
+  section.section.product-section
+    .container 
+      .section__head.product-section__head
+        h2 Смартфон iPhone 12 Pro 256GB, Темный
+        button.product-section__favorites
+          svg.icon
+            use(xlink:href='./img/icons/sprite.svg#heart')
+
+      .product-section__container 
+        .product-section__images 
+          .product-section__nav-images
+            .image.image_contain 
+              img(data-src="./img/1201260851.png", alt="img").lazyload
+            .image.image_contain 
+              img(data-src="./img/black-apple-watch.png", alt="img").lazyload
+            .image.image_contain 
+              img(data-src="./img/1201260851.png", alt="img").lazyload
+            .image.image_contain 
+              img(data-src="./img/black-apple-watch.png", alt="img").lazyload
+            .image.image_contain 
+              img(data-src="./img/1201260851.png", alt="img").lazyload
+          .product-section__m-images
+            .image.image_contain 
+              img(data-src="./img/1201260851.png", alt="img").lazyload
+            .image.image_contain 
+              img(data-src="./img/black-apple-watch.png", alt="img").lazyload
+            .image.image_contain 
+              img(data-src="./img/1201260851.png", alt="img").lazyload
+            .image.image_contain 
+              img(data-src="./img/black-apple-watch.png", alt="img").lazyload
+            .image.image_contain 
+              img(data-src="./img/1201260851.png", alt="img").lazyload
+        
+        .product-section__info 
+          .product-section__info-section
+            span.product-section__info-section-title Встроенная память:
+            .row 
+              .col-auto
+                a(href=product).button.button_style-3 64
+              .col-auto
+                a(href=product).button.button_style-3.active 128
+
+          .product-section__info-section 
+            ul 
+              li Диагональ экрана, дюймы: 
+                strong 5,45
+              li ОЗУ: 
+                strong 3 ГБ
+              li Встроенная память: 
+                strong 16 ГБ
+              li Диагональ экрана, дюймы: 
+                strong 5,45
+              li ОЗУ: 
+                strong 3 ГБ
+              li Встроенная память: 
+                strong 16 ГБ
+
+        .product-section__buy-block
+          .product-section__buy-block-container 
+            .product-section__buy-block-top
+              //
+              .product-section__buy-block-item
+                .checkbox
+                  input(type="checkbox" id='sss').checkbox__input
+                  label(for='sss').checkbox__label 
+                    strong Обычная доставка
+              //
+              .product-section__price-block.product-section__buy-block-item
+                span.product-section__price 150 000 P
+                span.product-section__price-old 200 000 P
+              //
+              .product-section__buy-block-item.product-section__installment
+                span.product-section__installment-label 3 000 P
+                span.product-section__installment-txt 12 месяцев
+              //
+              .product-section__buy-block-item
+                button.button.button_style-1.product-section__to-cart Добавить в корзину
+            
+            .product-section__buy-block-bottom
+              .product-section__buy-block-item
+                .checkbox
+                  input(type="checkbox" id='sssss').checkbox__input
+                  label(for='sssss').checkbox__label 
+                    strong Express 
+                    | За час
+              .product-section__price-block.product-section__buy-block-item
+                span.product-section__price 150 000 P
+                span.product-section__price-old 200 000 P
+
+          button.button.button_style-1 Купить в 1 клик
+
+
+  section.section 
+    .container 
+      .section__head  
+        h2 Другие товары
+      .section__content.grid 
+        .row.grid__row
+          include blocks/cards
+          -var classes = 'col-xl-3 col-6';
+          +card1(classes)
+          +card1(classes)
+          +card1(classes)
+          +card1(classes)

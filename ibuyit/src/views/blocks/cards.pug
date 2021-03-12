@@ -1,0 +1,26 @@
+mixin card1(classes)
+  .product-card.grid__item(class=classes)
+    .product-card__container.touch-hover  
+      .image.image_cover 
+        img(data-src="./img/img_product.jpg", alt="product").lazyload
+      .product-card__head
+        span.product-card__title Apple watch S6
+        p Приобретен более 100 раз
+      a(href=product).button.button_style-1.product-card__button ПОДРОБНЕЕ
+      button.product-card__favorites
+        svg.icon
+          use(xlink:href='./img/icons/sprite.svg#heart')
+
+mixin card2(classes)
+  .product-card.product-card_xl.grid__item(class=classes)
+    .product-card__container.touch-hover  
+      .image.image_cover 
+        img(data-src="./img/img_product.jpg", alt="product").lazyload
+      .product-card__head
+        span.product-card__title Apple watch S6
+        p Приобретен более 100 раз
+      a(href=product).button.button_style-1.product-card__button ПОДРОБНЕЕ
+      button.product-card__favorites
+        svg.icon
+          use(xlink:href='./img/icons/sprite.svg#heart')
+      
