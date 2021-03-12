@@ -21,7 +21,7 @@ block content
                 | Телефоны и смарт-часы
           h1.catalogue__active-label Смартфоны
 
-          .filter.toggle-section
+          .filter.toggle-section(data-fix)
             .filter-open.row
               .col-sm-6
                 button.button.button_style-1.toggle-section__trigger
@@ -29,7 +29,7 @@ block content
                     use(xlink:href='./img/icons/sprite.svg#filter')
                   span Фильтр
 
-            .filter__container.toggle-section__content
+            .filter__container.toggle-section__content(data-scroll-lock-scrollable)
               .filter__content.container
                 button.filter-close.toggle-section__close
                   span

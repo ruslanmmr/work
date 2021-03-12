@@ -232,13 +232,16 @@ function toggle() {
           check();
         }
       })
-    } 
+    }
 
     function check() {
       if(state) {
         $this.add($content).add($toggle).addClass('active');
         if($this.is('[data-slide]')) {
           $content.slideDown(speed);
+        }
+        if($this.is('[data-fix]')) {
+          scrollLock.disablePageScroll();
         }
       } 
       else {
@@ -249,6 +252,9 @@ function toggle() {
           } else {
             $content.hide(0);
           }
+        }
+        if($this.is('[data-fix]')) {
+          scrollLock.enablePageScroll();
         }
       }
     }
