@@ -261,7 +261,6 @@
 }
 
 .nav-open {
-  background-color: #fff;
   width: 40px;
   height: 40px;
   display: flex;
@@ -273,6 +272,7 @@
     width: 100%;
     height: 2px;
     background-color: #2191c6;
+    display: block;
   }
   @include media-breakpoint-up(xl) {
     display: none;
