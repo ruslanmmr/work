@@ -5126,8 +5126,6 @@ strong, b {
       padding: 0 0 2px 0; }
       .nav__link[data-touch], .nav__link[data-hover], .nav__link.active {
         border-color: #117b9a; }
-      .nav__link.active {
-        pointer-events: none; }
     .nav__phone {
       flex: 0 0 auto; } }
 
@@ -5196,8 +5194,6 @@ strong, b {
         background-color: #13394d; }
         .nav__link[data-touch]::before, .nav__link[data-hover]::before, .nav__link.active::before {
           background-color: #0c2735; }
-      .nav__link.active {
-        pointer-events: none; }
     .nav__phone {
       font-size: 1.25rem;
       font-weight: 700; } }

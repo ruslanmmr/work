@@ -95,9 +95,6 @@
       &[data-touch], &[data-hover], &.active {
         border-color: $color-1;
       }
-      &.active {
-        pointer-events: none;
-      }
     }
     &__phone {
       flex: 0 0 auto;
@@ -176,9 +173,6 @@
         &::before {
           background-color: #0c2735;
         }
-      }
-      &.active {
-        pointer-events: none;
       }
     }
     &__phone {
