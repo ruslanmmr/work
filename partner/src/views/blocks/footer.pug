@@ -6,29 +6,28 @@ footer.footer
       p.footer__logo-label Агенство недвижимости
       span.footer__copy Информация на сайте не является публичной офертой
 
-    .footer__section
-      if type==1
-        ul.footer__nav 
-          li.footer__nav-item 
-            a(href="#stock" data-scroll-link).footer__nav-link Акции 
-          li.footer__nav-item 
-            a(href="#advantages" data-scroll-link).footer__nav-link Преимущества района
-          li.footer__nav-item 
-            a(href="#catalogue" data-scroll-link).footer__nav-link Все ЖК
-          li.footer__nav-item 
-            a(href="#purchase" data-scroll-link).footer__nav-link Способы Покупки
-          li.footer__nav-item 
-            a(href="#" data-scroll-link).footer__nav-link
-      else 
-        ul.footer__nav 
-          li.footer__nav-item 
-            a(href="#about" data-scroll-link).footer__nav-link Описание ЖК 
-          li.footer__nav-item 
-            a(href="#advantages" data-scroll-link).footer__nav-link Преимущества
-          li.footer__nav-item 
-            a(href="#" data-scroll-link).footer__nav-link Планировки квартир
-          li.footer__nav-item 
-            a(href="#purchase" data-scroll-link).footer__nav-link Способы покупки
+    if type==1
+      ul.footer__section.footer__nav 
+        li.footer__nav-item 
+          a(href="#stock" data-scroll-link).footer__nav-link Акции 
+        li.footer__nav-item 
+          a(href="#advantages" data-scroll-link).footer__nav-link Преимущества района
+        li.footer__nav-item 
+          a(href="#catalogue" data-scroll-link).footer__nav-link Все ЖК
+        li.footer__nav-item 
+          a(href="#purchase" data-scroll-link).footer__nav-link Способы Покупки
+        li.footer__nav-item 
+          a(href="#" data-scroll-link).footer__nav-link
+    else 
+      ul.footer__section.footer__nav 
+        li.footer__nav-item 
+          a(href="#about" data-scroll-link).footer__nav-link Описание ЖК 
+        li.footer__nav-item 
+          a(href="#advantages" data-scroll-link).footer__nav-link Преимущества
+        li.footer__nav-item 
+          a(href="#" data-scroll-link).footer__nav-link Планировки квартир
+        li.footer__nav-item 
+          a(href="#purchase" data-scroll-link).footer__nav-link Способы покупки
 
     .footer__section
       ul.footer__info-list 

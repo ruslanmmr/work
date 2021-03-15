@@ -575,7 +575,7 @@
     background-color: #16a1c1;
     color: #fff;
     text-align: center;
-    width: max-content;
+    white-space: nowrap;
   }
   @include media-breakpoint-down(xxl) {
     height: 600px;

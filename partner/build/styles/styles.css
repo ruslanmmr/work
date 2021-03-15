@@ -5077,9 +5077,7 @@ strong, b {
     background-color: #16a1c1;
     color: #fff;
     text-align: center;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content; }
+    white-space: nowrap; }
   @media (max-width: 1599.98px) {
     .map-section {
       height: 600px; } }
@@ -5308,5 +5306,29 @@ strong, b {
       margin-right: 40px; }
   .footer__copy {
     color: #16a1c1; }
+  @media (max-width: 1023.98px) {
+    .footer__logo {
+      width: 200px; }
+    .footer__logo-label {
+      font-size: 1rem;
+      letter-spacing: 0.02em; }
+    .footer__nav {
+      display: none; } }
+  @media (max-width: 767.98px) {
+    .footer__section:not(:last-child) {
+      margin-right: 30px; } }
+  @media (max-width: 575.98px) {
+    .footer {
+      text-align: center;
+      padding: 60px 0; }
+      .footer__logo {
+        width: 160px;
+        margin: 0 auto 10px auto; }
+      .footer__container {
+        display: block; }
+      .footer__section {
+        max-width: initial; }
+        .footer__section:not(:last-child) {
+          margin: 0 0 40px 0; } }
 
 /*# sourceMappingURL=maps/styles.css.map */

@@ -34,4 +34,41 @@
   &__copy {
     color: #16a1c1;
   }
+  
+  @include media-breakpoint-down(lg) {
+    &__logo {
+      width: 200px;
+    }
+    &__logo-label {
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
+    &__nav {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__section {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    padding: 60px 0;
+    &__logo {
+      width: 160px;
+      margin: 0 auto 10px auto;
+    }
+    &__container {
+      display: block;
+    }
+    &__section {
+      max-width: initial;
+      &:not(:last-child) {
+        margin: 0 0 40px 0;
+      }
+    }
+  }
 }
