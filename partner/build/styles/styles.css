@@ -5870,7 +5870,7 @@ strong, b {
   .layouts-section__captions-item {
     margin: 0 30px 20px 0; }
   .layouts-section__captions-button {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: #16a1c1;
     border-bottom: 2px solid transparent;
     transition: border-color 0.15s linear, color 0.15s linear; }
