@@ -587,3 +587,75 @@
     }
   }
 }
+
+.about-us-section {
+  background: linear-gradient(90deg, rgba(11,30,46,1) 0%, rgba(38,67,89,1) 50%, rgba(11,30,46,1) 100%);
+  color: #fff;
+  &__logo {
+    margin: 0 auto 30px auto;
+    width: 220px;
+    height: auto;
+    display: block;
+  }
+  &__icon {
+    position: absolute;
+    width: 960px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+    z-index: 1;
+  }
+  &__image {
+    position: absolute;
+    right: -210px;
+    bottom: -80px;
+    width: 800px;
+    display: block;
+    height: auto;
+  }
+  &__content {
+    z-index: 2;
+  }
+  &__item {
+    font-size: 1.5rem;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      padding-bottom: 22px;
+      &::after {
+        content: '';
+        display: block;
+        width: calc(100% - 2em);
+        height: 2px;
+        left: 1em;
+        bottom: 0;
+        background-color: #0ba0c3;
+        position: absolute;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__logo {
+      width: 200px;
+    }
+    &__item {
+      font-size: 1.25rem;
+    }
+    &__image {
+      display: none;
+    }
+    &__icon {
+      width: 600px;
+      top: initial;
+      bottom: -80px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__logo {
+      width: 160px;
+    }
+    &__item {
+      font-size: 1rem;
+    }
+  }
+}

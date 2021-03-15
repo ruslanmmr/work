@@ -4,7 +4,7 @@
   line-height: 28px;
   background-color: #fff;
   color: $color-text-dark;
-  border-radius: 15px;
+  border-radius: 56px;
   &__req {
     color: #f11313;
     position: absolute;
@@ -52,7 +52,23 @@
       transform: translateY(-12px);
     }
   }
+
+  &_style-2 {
+    background-color: #16a1c1;
+    color: #fff;
+    .input__element {
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover, 
+      &:-webkit-autofill:focus {
+        -webkit-text-fill-color: #fff;
+      }
+    }
+  }
+
+
+
   @include media-breakpoint-down(md) {
+    border-radius: 50px;
     font-size: 1rem;
     line-height: 20px;
     &__element {

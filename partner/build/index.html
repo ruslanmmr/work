@@ -272,34 +272,89 @@
             </ul>
           </div>
         </section>
-        <!--section.section.color-bg-2
-        .container 
-          .section__head.section__head_white
-            h2.section__title Заполни заявку<br> и получи ПОДАРОК!
-          form.form 
-            .row.justify-content-center.form__group
-              .form__item.col-lg-4.col-sm-6
-                .input
-                  span.input__req *
-                  label.input__label Ваше имя ...
-                  input(type="text" required).input__element
-              .form__item.col-lg-4.col-sm-6
-                .input
-                  span.input__req *
-                  label.input__label Контактный телефон ...
-                  input(type="text" required).input__element
-              .form__submit.col-lg-4.col-sm-6.col-auto
-                button.button.button_xl Отправить
-              .form__item 
-                .checkbox
-                  input(type="checkbox" id='212' checked).checkbox__input
-                  label(for='212').checkbox__label Согласен на обработку персональных данных
-        -->
+        <section class="section color-bg-2">
+          <div class="container">
+            <div class="section__head section__head_white">
+              <h2 class="section__title">Заполни заявку<br> и получи ПОДАРОК!</h2>
+            </div>
+            <form class="form">
+              <div class="row justify-content-center form__group">
+                <div class="form__item col-lg-4 col-sm-6">
+                  <div class="input"><span class="input__req">*</span>
+                    <label class="input__label">Ваше имя…</label>
+                    <input class="input__element" type="text" required>
+                  </div>
+                </div>
+                <div class="form__item col-lg-4 col-sm-6">
+                  <div class="input"><span class="input__req">*</span>
+                    <label class="input__label">Контактный телефон…</label>
+                    <input class="input__element" type="text" required>
+                  </div>
+                </div>
+                <div class="form__submit col-lg-4 col-sm-6 col-auto">
+                  <button class="button button_xl">Отправить</button>
+                </div>
+                <div class="form__item">
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="212" checked>
+                    <label class="checkbox__label" for="212">Согласен на обработку персональных данных</label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="section about-us-section"><img class="about-us-section__icon" src="./img/logos/logo3.svg" alt="icon">
+          <div class="container"> <img class="about-us-section__image" src="./img/woman.png" alt="icon">
+            <div class="section__head section__head_white">
+              <h2 class="section__title">О нас</h2>
+            </div>
+            <div class="row about-us-section__content">
+              <div class="col-lg-6"><img class="about-us-section__logo" src="./img/logos/logo2.svg" alt="logo">
+                <p class="about-us-section__item">Расскажем все о реальных плюсах и минусах каждого жилого комплекса. Покажем квартиры сразу в нескольких домах. </p>
+                <p class="about-us-section__item">С нами вы можете рассмотреть квартиры не только строящихся домах, но и в сданных жилых комплексах, которых уже нет в продаже даже у застройщиков. Мы предоставим информацию о всех текущих акциях застройщиков и поможем выбрать самую ликвидную планировку на максимально выгодных условиях для вас.</p>
+                <p class="about-us-section__item">С нами вы защищены от покупки квартиры в сомнительных объектах. Мы работаем только с проверенными ЖК, имеющими все необходимые документы. </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <div class="section__head">
+              <h2 class="section__title">Остались вопросы?<br> Задай их нашему менеджеру</h2>
+            </div>
+            <form class="form">
+              <div class="row justify-content-center form__group">
+                <div class="form__item col-lg-4 col-sm-6">
+                  <div class="input input_style-2"><span class="input__req">*</span>
+                    <label class="input__label">Ваше имя…</label>
+                    <input class="input__element" type="text" required>
+                  </div>
+                </div>
+                <div class="form__item col-lg-4 col-sm-6">
+                  <div class="input input_style-2"><span class="input__req">*</span>
+                    <label class="input__label">Контактный телефон…</label>
+                    <input class="input__element" type="text" required>
+                  </div>
+                </div>
+                <div class="form__submit col-lg-4 col-sm-6 col-auto">
+                  <button class="button button_xl button_style-2">Отправить</button>
+                </div>
+                <div class="form__item">
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="22" checked>
+                    <label class="checkbox__label" for="22">Согласен на обработку персональных данных</label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="container footer__container">
           <div class="footer__section"><a class="logo footer__logo" href="./index.html"> <img src="./img/logos/logo.svg" alt="logo"></a>
-            <p class="footer__logo-label">Агенство недвижимости</p><span class="footer__copy">Информация на сайте не является публичной офертой</span>
+            <div class="footer__logo-label">Агенство недвижимости</div><span class="footer__copy">Информация на сайте не является публичной офертой</span>
           </div>
           <ul class="footer__section footer__nav">
             <li class="footer__nav-item"> <a class="footer__nav-link" href="#stock" data-scroll-link>Акции </a></li>
