@@ -4880,7 +4880,7 @@ strong, b {
   .about-section__slide::before {
     content: '';
     display: block;
-    padding-top: 50%; }
+    padding-top: 56.25%; }
   .about-section__slide-element {
     border: 0;
     position: absolute;
