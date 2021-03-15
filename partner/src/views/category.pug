@@ -220,6 +220,65 @@ block content
               input(type="checkbox" id='2212' checked).checkbox__input
               label(for='2212').checkbox__label Согласен на обработку персональных данных
 
+  section#layouts(data-scroll-block).section.layouts-section.tabs
+    .container 
+      .section__head
+        h2.section__title Планировки квартир
+      .layouts-section__container
+        ul.tabs__caption.layouts-section__captions  
+          li.tabs__caption-item.layouts-section__captions-item 
+            button.tabs__caption-button.layouts-section__captions-button.active Студии 
+          li.tabs__caption-item.layouts-section__captions-item  
+            button.tabs__caption-button.layouts-section__captions-button 1-Комнатные
+          li.tabs__caption-item.layouts-section__captions-item  
+            button.tabs__caption-button.layouts-section__captions-button 2-Комнатные
+          li.tabs__caption-item.layouts-section__captions-item  
+            button.tabs__caption-button.layouts-section__captions-button 3-Комнатные
+
+      .tabs__container
+        mixin tab()
+          mixin block() 
+            .layout-block.grid__item.col-md-4
+              .layout-block__container  
+                a(href='#modal-form' data-modal='open').image.image_contain
+                  img(src="./img/plan.jpg", alt="image")
+                ul.layout-block__param-list 
+                  li.layout-block__param-item 
+                    span S-Общая
+                    span 30 м2 
+                  li.layout-block__param-item 
+                    span S-Жилая
+                    span 23 м2
+                .layout-block__price 
+                  | Цена: 
+                  span 1 600 000 руб
+
+
+          .tabs__content.toggle-section(data-slide)
+            .row.grid.layouts-section__content
+              +block()
+              +block()
+              +block()
+
+            .toggle-section__content
+              .row.grid.layouts-section__content
+                +block()
+                +block()
+                +block()
+            
+            .layouts-section__more 
+              button.layouts-section__more-button.toggle-section__trigger
+                span Посмотреть ещё
+                span Скрыть
+                img(src="./img/icons/arrow.svg", alt="icon").icon
+
+
+        +tab()
+        +tab()
+        +tab()
+        +tab()
+    
+
   section.section.calculator-section.color-bg-1
     .container 
       .section__head.section__head_white

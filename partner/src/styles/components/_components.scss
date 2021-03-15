@@ -108,3 +108,11 @@ img {
     }
   }
 }
+
+.tabs {
+  &__content {
+    &:not(:nth-child(2)) {
+      display: none;
+    }
+  }
+}

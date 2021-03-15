@@ -22,6 +22,7 @@ $(document).ready(function(){
   gallery();
   toggle();
   jsRange();
+  tabs();
 
   if(mobile()) {
     mobileScreenSize.init();
@@ -252,6 +253,15 @@ function toggle() {
 
     initialized=true;
   })
+}
+
+function tabs() {
+  
+  $('.tabs__caption').on('click', '.tabs__caption-button:not(.active)', function() {
+    $(this)
+      .addClass('active').parent().siblings().find('.tabs__caption-button').removeClass('active')
+      .closest('.tabs').find('.tabs__content').hide().eq($(this).parent().index()).fadeIn(300);
+  });
 }
 
 function valueCorrecting(number, decimals=2) {
