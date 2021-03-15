@@ -5553,7 +5553,9 @@ strong, b {
       opacity: 0; }
       .about-section__slide-element .icon img {
         display: block;
-        margin: auto; }
+        margin: auto;
+        width: 100%;
+        height: 100%; }
     .about-section__slide-element[data-touch] .icon, .about-section__slide-element[data-hover] .icon {
       opacity: 1;
       transform: scale(1); }
