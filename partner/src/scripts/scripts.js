@@ -505,8 +505,6 @@ class AboutSlider {
       updateOnMove: true,
       arrowPath: slider_arrow,
       speed: 500,
-      autoplay: true,
-      interval: 7000,
       breakpoints: {
         1023: {
           pagination: true,

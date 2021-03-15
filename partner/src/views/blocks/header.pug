@@ -1,9 +1,9 @@
-header.header(data-scroll-lock-fill-gap compensate-for-scrollbar)
+header.header(data-scroll-lock-fill-gap)
   .container.header__container
     a(href=home).logo.header__logo
       img(src="./img/logos/logo.svg", alt="logo").logo__image
     nav.nav
-      .nav__container 
+      .nav__container(data-scroll-lock-scrollable)
         .nav__title Навигация по сайту
         ul.nav__list 
           if type==1
