@@ -1,0 +1,235 @@
+extends layout/layout
+block variables
+  -var title = sitename+' - Жилой комплекс'
+  -var type = 2;
+block content
+  include blocks/home
+
+  section.section.color-bg-4
+    .container 
+      .section__head.section__head_white
+        h2.section__head-title Выберите свою квартиру
+        .row 
+          .offset-md-1.col-lg-10
+            p.section__head-text Укажите параметры вашей идеальной квартирыи мы подберем подходящие варианты.
+      form(action="#").form 
+        .row.justify-content-center.form__group
+          .form__item.col-lg-4.col-sm-6
+            .input
+              label.input__label Колличество комнат ...
+              input(type="text").input__element
+          .form__item.col-lg-4.col-sm-6
+            .input  
+              label.input__label Стадия строительства ...
+              input(type="text").input__element
+          .form__item.col-lg-4.col-sm-6
+            .input  
+              label.input__label Цена квартиры ...
+              input(type="text").input__element
+          .form__item.col-lg-4.col-sm-6
+            .input  
+              label.input__label Способ оплаты ...
+              input(type="text").input__element
+          .form__item.col-lg-4.col-sm-6
+            .input  
+              label.input__label Первый взнос ...
+              input(type="text").input__element
+          .form__item.col-lg-4.col-sm-6
+            .input 
+              label.input__label Ваше имя ...
+              input(type="text").input__element
+          .form__item.col-lg-4.col-sm-6
+            .input
+              span.input__req *
+              label.input__label Номер телефона ...
+              input(type="text" required).input__element
+          .form__submit.col-lg-4.col-sm-6.col-auto
+            button.button.button_xl.button_style-2 Получить подбор
+
+  section#about(data-scroll-block).section.about-section 
+    .container 
+      .section__head
+        h2.section__title Видео ЖК
+      .about-section__slider.splide
+        .splide__track
+          .splide__list
+            //slide
+            .about-section__slide.splide__slide
+              iframe.about-section__slide-element(src='https://www.youtube.com/embed/VixChkcDC2g')
+            //slide
+            .about-section__slide.splide__slide
+              a(href="./img/carousel/1.jpg" data-gallery='images').about-section__slide-element
+                .image.image_cover
+                  img(data-src="./img/carousel/1.jpg", alt="image").lazyload
+            //slide
+            .about-section__slide.splide__slide
+              a(href="./img/carousel/2.jpg" data-gallery='images').about-section__slide-element
+                .image.image_cover
+                  img(data-src="./img/carousel/2.jpg", alt="image").lazyload
+            //slide
+            .about-section__slide.splide__slide
+              a(href="./img/carousel/4.jpg" data-gallery='images').about-section__slide-element
+                .image.image_cover
+                  img(data-src="./img/carousel/4.jpg", alt="image").lazyload
+            //slide
+            .about-section__slide.splide__slide
+              a(href="./img/carousel/5.jpg" data-gallery='images').about-section__slide-element
+                .image.image_cover
+                  img(data-src="./img/carousel/5.jpg", alt="image").lazyload
+            //slide
+            .about-section__slide.splide__slide
+              a(href="./img/carousel/6.jpg" data-gallery='images').about-section__slide-element
+                .image.image_cover
+                  img(data-src="./img/carousel/6.jpg", alt="image").lazyload
+            //slide
+            .about-section__slide.splide__slide
+              a(href="./img/carousel/7.jpg" data-gallery='images').about-section__slide-element
+                .image.image_cover
+                  img(data-src="./img/carousel/7.jpg", alt="image").lazyload
+            //slide
+            .about-section__slide.splide__slide
+              a(href="./img/carousel/9.jpg" data-gallery='images').about-section__slide-element
+                .image.image_cover
+                  img(data-src="./img/carousel/9.jpg", alt="image").lazyload
+      .about-section__content
+        h3 Описание ЖК
+        .row
+          .col-lg-6.about-section__text
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatem eum neque, laborum doloremque placeat distinctio omnis in dolor suscipit dolorum amet officia vero cumque, reiciendis perferendis laudantium porro magni!
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ducimus mollitia quidem quas accusantium rem repudiandae aspernatur, dolores, tempore nisi natus nulla esse minima voluptatibus sunt impedit libero, cum placeat!
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cupiditate rem adipisci voluptatem iusto doloribus, repellendus est quia non, harum dicta nihil reprehenderit nemo, maiores tenetur eum dolores amet eveniet.
+          .col-lg-6.about-section__items
+            .row.grid 
+              .about-section__item.grid__item.col-md-4.col-6
+                img(src="./img/icons/ico1.svg", alt="img").about-section__item-ico
+                h5.about-section__item-title Дата сдачи
+                span.about-section__item-txt 1 квартал<br> 2021 года
+              .about-section__item.grid__item.col-md-4.col-6
+                img(src="./img/icons/ico2.svg", alt="img").about-section__item-ico
+                h5.about-section__item-title Технология
+                span.about-section__item-txt Монолит-кирпич
+              .about-section__item.grid__item.col-md-4.col-6
+                img(src="./img/icons/ico3.svg", alt="img").about-section__item-ico
+                h5.about-section__item-title Отделка
+                span.about-section__item-txt Предчистовая
+              .about-section__item.grid__item.col-md-4.col-6
+                img(src="./img/icons/ico4.svg", alt="img").about-section__item-ico
+                h5.about-section__item-title Этажность
+                span.about-section__item-txt 17 этажей
+              .about-section__item.grid__item.col-md-4.col-6
+                img(src="./img/icons/ico5.svg", alt="img").about-section__item-ico
+                h5.about-section__item-title Высота потолков
+                span.about-section__item-txt 2,7 м
+              .about-section__item.grid__item.col-md-4.col-6
+                img(src="./img/icons/ico6.svg", alt="img").about-section__item-ico
+                h5.about-section__item-title Количество домов
+                span.about-section__item-txt 3 дома
+
+  section#advantages(data-scroll-block).section.advantages-section.color-bg-1
+    .container
+      .section__head.section__head_white 
+        h2.section__title Преимущества
+      .row.grid
+        //block
+        .advantages-block.grid__item.col-6
+          .advantages-block__container
+            img(src="./img/icons/arrow2.svg", alt="img").advantages-block__decoration
+            .image.image_cover 
+              img(data-src="./img/a8.jpg", alt="image").lazyload
+            .advantages-block__text 
+              .advantages-block__title Продуманные<br> планировки
+        //block
+        .advantages-block.grid__item.col-6
+          .advantages-block__container
+            img(src="./img/icons/arrow2.svg", alt="img").advantages-block__decoration
+            .image.image_cover 
+              img(data-src="./img/a9.jpg", alt="image").lazyload
+            .advantages-block__text 
+              .advantages-block__title Парк
+        //block
+        .advantages-block.grid__item.col-6
+          .advantages-block__container
+            img(src="./img/icons/arrow2.svg", alt="img").advantages-block__decoration
+            .image.image_cover 
+              img(data-src="./img/a9.jpg", alt="image").lazyload
+            .advantages-block__text 
+              .advantages-block__title Гардеробные
+        //block
+        .advantages-block.grid__item.col-6
+          .advantages-block__container  
+            img(src="./img/icons/arrow2.svg", alt="img").advantages-block__decoration
+            .image.image_cover 
+              img(data-src="./img/a10.jpg", alt="image").lazyload
+            .advantages-block__text 
+              .advantages-block__title Витражное<br> остекление
+        //block
+        .advantages-block.grid__item.col-6
+          .advantages-block__container
+            img(src="./img/icons/arrow2.svg", alt="img").advantages-block__decoration
+            .image.image_cover 
+              img(data-src="./img/a11.jpg", alt="image").lazyload
+            .advantages-block__text 
+              .advantages-block__title Качественная<br> предчистовая<br> отделка
+        //block
+        .advantages-block.grid__item.col-6
+          .advantages-block__container
+            img(src="./img/icons/arrow2.svg", alt="img").advantages-block__decoration
+            .image.image_cover 
+              img(data-src="./img/a12.jpg", alt="image").lazyload
+            .advantages-block__text 
+              .advantages-block__title Возможность заказать ремонт от застройщика
+
+  section.section.color-bg-4
+    .container 
+      .section__head.section__head_white
+        h2.section__title Форма отправки заявки
+      form.form 
+        .row.justify-content-center.form__group
+          .form__item.col-lg-4.col-sm-6
+            .input
+              span.input__req *
+              label.input__label Ваше имя ...
+              input(type="text" required).input__element
+          .form__item.col-lg-4.col-sm-6
+            .input
+              span.input__req *
+              label.input__label Контактный телефон ...
+              input(type="text" required).input__element
+          .form__submit.col-lg-4.col-sm-6.col-auto
+            button.button.button_xl.button_style-2 Отправить
+          .form__item 
+            .checkbox
+              input(type="checkbox" id='212' checked).checkbox__input
+              label(for='212').checkbox__label Согласен на обработку персональных данных
+
+  include blocks/purchase
+
+  section.section.color-bg-4
+    .container 
+      .section__head.section__head_white
+        h2.section__title Запишитесь на просмотр
+      form.form 
+        .row.justify-content-center.form__group
+          .form__item.col-lg-4.col-sm-6
+            .input
+              span.input__req *
+              label.input__label Ваше имя ...
+              input(type="text" required).input__element
+          .form__item.col-lg-4.col-sm-6
+            .input
+              span.input__req *
+              label.input__label Контактный телефон ...
+              input(type="text" required).input__element
+          .form__submit.col-lg-4.col-sm-6.col-auto
+            button.button.button_xl.button_style-2 Отправить
+          .form__item 
+            .checkbox
+              input(type="checkbox" id='212' checked).checkbox__input
+              label(for='212').checkbox__label Согласен на обработку персональных данных
+
+  section.section.map-section 
+    h2.map-section__title Расположение ЖК
+    iframe(src="https://yandex.ru/map-widget/v1/-/CGW1A~q").map-section__map
+
+  include blocks/catalogue
+
