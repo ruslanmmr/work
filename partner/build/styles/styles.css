@@ -4557,6 +4557,7 @@ strong, b {
     position: relative;
     z-index: 1;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     width: 100%;
     height: 100%;
     padding: 24px;
@@ -4628,6 +4629,10 @@ strong, b {
   .modal-succes__block {
     padding: 60px; } }
 
+@media (max-width: 575.98px) {
+  .modal-succes__block {
+    padding: 40px 20px; } }
+
 .modal-form__block {
   max-width: 800px; }
 
@@ -4698,11 +4703,13 @@ strong, b {
     .home-screen {
       min-height: 550px;
       max-height: 800px; }
-      .home-screen__scroll-button span {
-        margin-bottom: 10px; }
-      .home-screen__scroll-button img {
-        width: 80px;
-        height: 25px; } }
+      .home-screen__scroll-button {
+        bottom: 40px; }
+        .home-screen__scroll-button span {
+          margin-bottom: 10px; }
+        .home-screen__scroll-button img {
+          width: 80px;
+          height: 25px; } }
 
 .stock-section {
   color: #0d293c; }
@@ -4882,6 +4889,28 @@ strong, b {
     top: 0;
     display: block;
     cursor: pointer; }
+    .about-section__slide-element .icon {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      margin-top: -35px;
+      margin-left: -35px;
+      padding: 20px;
+      border-radius: 80px;
+      background-color: #fff;
+      display: flex;
+      transition: opacity 0.15s linear, transform 0.15s linear;
+      transform: scale(0.7);
+      opacity: 0; }
+      .about-section__slide-element .icon img {
+        display: block;
+        margin: auto; }
+    .about-section__slide-element[data-touch] .icon, .about-section__slide-element[data-hover] .icon {
+      opacity: 1;
+      transform: scale(1); }
     .about-section__slide-element .image {
       position: absolute;
       width: 100%;
@@ -4917,7 +4946,14 @@ strong, b {
   .about-section__text {
     margin-bottom: 40px; }
   .about-section__slider {
-    margin-bottom: 80px; } }
+    margin-bottom: 80px; }
+  .about-section__slide-element .icon {
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    margin-top: -30px;
+    margin-left: -30px;
+    opacity: 0.7; } }
 
 .category-block__container {
   height: 300px;
@@ -5155,6 +5191,7 @@ strong, b {
       transition: transform 0.5s ease-in-out;
       transform: translateX(100%);
       overflow: auto;
+      -webkit-overflow-scrolling: touch;
       padding: 0 24px; }
     .nav__title {
       height: 80px;

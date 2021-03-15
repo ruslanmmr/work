@@ -22,6 +22,10 @@ $(document).ready(function(){
   gallery();
   toggle();
 
+  if(mobile()) {
+    mobileScreenSize.init();
+  }
+
   let $stock_slider = document.querySelector('.stock-section__slider');
   if($stock_slider) new StockSlider($stock_slider).init();
   
@@ -101,6 +105,15 @@ const TouchHoverEvents = {
   }
 }
 
+//check device
+function mobile() {
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function inputs() {
   let $elements = document.querySelectorAll('input, textarea');
   $elements.forEach(($input) => {
@@ -132,7 +145,7 @@ function gallery() {
     ZOOM        : 'Увеличить'
   };
   $.fancybox.defaults.lang = 'ru';
-  $.fancybox.defaults.loop = true;
+  $.fancybox.defaults.loop = false;
   $.fancybox.defaults.autoFocus = false;
   $.fancybox.defaults.backFocus = false;
   $.fancybox.defaults.hideScrollbar = false;
@@ -507,5 +520,19 @@ class AboutSlider {
 
     this.slider.mount();
 
+  }
+}
+
+const mobileScreenSize = {
+  init: function() {
+    let $el = document.createElement('div');
+    $el.style.cssText = 'position:fixed;height:100%;';
+    $body.insertAdjacentElement('beforeend', $el);
+    let h = $el.getBoundingClientRect().height;
+    $el.remove();
+    
+    //screen
+    let $screen = document.querySelector('.screen');
+    $screen.style.height = `${h}px`;
   }
 }

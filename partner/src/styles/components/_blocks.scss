@@ -62,7 +62,7 @@
     &__scroll-button {
       img {
         width: 120px;
-      height: 30px;
+        height: 30px;
       }
     }
   }
@@ -74,6 +74,7 @@
     min-height: 550px;
     max-height: 800px;
     &__scroll-button {
+      bottom: 40px;
       span {
         margin-bottom: 10px;
       }
@@ -331,6 +332,33 @@
       top: 0;
       display: block;
       cursor: pointer;
+      .icon {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        margin-top: -35px;
+        margin-left: -35px;
+        padding: 20px;
+        border-radius: 80px;
+        background-color: #fff;
+        display: flex;
+        transition: opacity $trs1, transform $trs1;
+        transform: scale(0.7);
+        opacity: 0;
+        img {
+          display: block;
+          margin: auto;
+        }
+      }
+      &[data-touch], &[data-hover] {
+        .icon {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
       .image {
         position: absolute;
         width: 100%;
@@ -379,6 +407,14 @@
     }
     &__slider {
       margin-bottom: 80px;
+    }
+    &__slide-element .icon {
+      width: 60px;
+      height: 60px;
+      padding: 15px;
+      margin-top: -30px;
+      margin-left: -30px;
+      opacity: 0.7;
     }
   }
 }

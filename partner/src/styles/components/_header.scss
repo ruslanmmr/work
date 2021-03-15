@@ -127,6 +127,7 @@
       transition: transform $trs3;
       transform: translateX(100%);
       overflow: auto;
+      -webkit-overflow-scrolling: touch;
       padding: 0 $container-padding-x;
     }
     &__title {
