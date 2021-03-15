@@ -21,6 +21,7 @@ $(document).ready(function(){
   inputs();
   gallery();
   toggle();
+  jsRange();
 
   if(mobile()) {
     mobileScreenSize.init();
@@ -251,6 +252,78 @@ function toggle() {
 
     initialized=true;
   })
+}
+
+function valueCorrecting(number, decimals=2) {
+  let i, j, kw, km;
+  i = parseInt(number = (+number || 0).toFixed(decimals)) + '';
+  ((j = i.length) > 3) ? (j = j % 3) : (j = 0)
+  km = j ? i.substr(0, j) + ' ' : '';
+  kw = i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + ' ');
+  kd = (decimals ? '.' + Math.abs(number - i).toFixed(decimals).replace(/-/, '0').slice(2) : '');
+  return (km + kw + kd).replace(/(0+)$/, '').replace(/[^0-9]$/, '');
+}
+
+function jsRange() {
+  let $range = $('.calculator-item__range');
+  
+  $range.each(function() {
+    let $this = $(this),
+        $from = $this.find('.calculator-item__range-input-from'),
+        $to = $this.find('.calculator-item__range-input-to'),
+        $range = $this.find('.calculator-item__range-item');
+    
+      let instance,
+          min = +$range.attr('data-min'),
+          max = +$range.attr('data-max'),
+          from = +$from.attr('data-from') || min,
+          to = +$to.attr('data-to') || max,
+          step = +$range.attr('data-step') || 1,
+          type = $range.attr('data-type') || "single";
+
+      $range.ionRangeSlider({
+        skin: "round",
+        type: type,
+        min: min,
+        max: max,
+        from: from,
+        to: to,
+        step: step,
+        onStart: updateInputs,
+        onChange: updateInputs,
+        onFinish: updateInputs
+      });
+      instance = $range.data("ionRangeSlider");
+      
+      function updateInputs(data) {
+        from = data.from;
+        to = data.to;
+        if($from.length) $from.val(valueCorrecting(from));
+        if($to.length) $to.val(valueCorrecting(to));
+      }
+
+      $from.add($to).on("input", function () {
+        let value = +$(this).val().replace(/\s/g, '');
+        $(this).val(valueCorrecting(value));
+      })
+      
+      $from.on("change", function () {
+        let value = +$(this).val().replace(/\s/g, '');
+        if(value < min) value = min;
+        else if(value > to) value = to;
+        instance.update({from:value});
+        $from.val(valueCorrecting(value));
+      });
+
+      $to.on("change", function () {
+        let value = +$(this).val().replace(/\s/g, '');
+        if(value < from) value = from;
+        else if(value > max) value = max;
+        instance.update({to:value});
+        $to.val(valueCorrecting(value));
+      });
+
+  });
 }
 
 const Header = {

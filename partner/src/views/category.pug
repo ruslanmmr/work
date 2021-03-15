@@ -227,10 +227,58 @@ block content
       
       form.calculator-section__content 
         .row
-          .col-lg-8
-            
+          .col-lg-7
+            //
+            .calculator-item 
+              h4.calculator-item__title Стоимость недвижимости
+              .calculator-item__range
+                .calculator-item__range-inputs.row
+                  .calculator-item__range-input.col-sm-auto
+                    span от
+                    input(type="text" name='1').calculator-item__range-input-from
+                    span руб.
+                  .calculator-item__range-input.col-sm-auto
+                    span до
+                    input(type="text" name='1' data-to='6000000').calculator-item__range-input-to
+                    span руб.
+                .calculator-item__range-element
+                  input(type="text" name="range-1" data-min="1600000" data-max="10000000" data-step='1000' data-type='double').calculator-item__range-item
 
-          .col-lg-4 
+            .calculator-item 
+              h4.calculator-item__title Первоначальный взнос
+              .calculator-item__range
+                .calculator-item__range-inputs.row
+                  .calculator-item__range-input.col-sm-auto
+                    span до
+                    input(type="text" name='2' data-from='300000').calculator-item__range-input-from
+                    span руб.
+                .calculator-item__range-element
+                  input(type="text" name="range-2" data-min="100000" data-max="1000000" data-step='1000').calculator-item__range-item
+
+            .calculator-item 
+              h4.calculator-item__title Срок
+              .calculator-item__range
+                .calculator-item__range-inputs.row
+                  .calculator-item__range-input.col-sm-auto
+                    span до
+                    input(type="text" name='3' data-from='10').calculator-item__range-input-from
+                    span руб.
+                .calculator-item__range-element
+                  input(type="text" name="range-2" data-min="1" data-max="30").calculator-item__range-item
+                
+          .col-lg-5
+            .calculator-section__right
+              h4.calculator-section__content-title Откроем для Вас ипотеку на выгодных условиях
+              .form 
+                .form__group.row.justify-content-center
+                  .form__item.col-lg-12.col-sm-6
+                    .input
+                      span.input__req *
+                      label.input__label Номер телефона ...
+                      input(type="text" required).input__element
+                  .form__submit.col-lg-12.col-sm-6.col-auto
+                    button.button.button_xl.button_style-1 Жду звонка!
+
 
 
   include blocks/purchase

@@ -300,8 +300,69 @@
             </div>
             <form class="calculator-section__content">
               <div class="row">
-                <div class="col-lg-8"></div>
-                <div class="col-lg-4"> </div>
+                <div class="col-lg-7">
+                  <!---->
+                  <div class="calculator-item">
+                    <h4 class="calculator-item__title">Стоимость недвижимости</h4>
+                    <div class="calculator-item__range">
+                      <div class="calculator-item__range-inputs row">
+                        <div class="calculator-item__range-input col-sm-auto"><span>от</span>
+                          <input class="calculator-item__range-input-from" type="text" name="1"><span>руб.</span>
+                        </div>
+                        <div class="calculator-item__range-input col-sm-auto"><span>до</span>
+                          <input class="calculator-item__range-input-to" type="text" name="1" data-to="6000000"><span>руб.</span>
+                        </div>
+                      </div>
+                      <div class="calculator-item__range-element">
+                        <input class="calculator-item__range-item" type="text" name="range-1" data-min="1600000" data-max="10000000" data-step="1000" data-type="double">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calculator-item">
+                    <h4 class="calculator-item__title">Первоначальный взнос</h4>
+                    <div class="calculator-item__range">
+                      <div class="calculator-item__range-inputs row">
+                        <div class="calculator-item__range-input col-sm-auto"><span>до</span>
+                          <input class="calculator-item__range-input-from" type="text" name="2" data-from="300000"><span>руб.</span>
+                        </div>
+                      </div>
+                      <div class="calculator-item__range-element">
+                        <input class="calculator-item__range-item" type="text" name="range-2" data-min="100000" data-max="1000000" data-step="1000">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calculator-item">
+                    <h4 class="calculator-item__title">Срок</h4>
+                    <div class="calculator-item__range">
+                      <div class="calculator-item__range-inputs row">
+                        <div class="calculator-item__range-input col-sm-auto"><span>до</span>
+                          <input class="calculator-item__range-input-from" type="text" name="3" data-from="10"><span>руб.</span>
+                        </div>
+                      </div>
+                      <div class="calculator-item__range-element">
+                        <input class="calculator-item__range-item" type="text" name="range-2" data-min="1" data-max="30">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <div class="calculator-section__right">
+                    <h4 class="calculator-section__content-title">Откроем для Вас ипотеку на выгодных условиях</h4>
+                    <div class="form">
+                      <div class="form__group row justify-content-center">
+                        <div class="form__item col-lg-12 col-sm-6">
+                          <div class="input"><span class="input__req">*</span>
+                            <label class="input__label">Номер телефона…</label>
+                            <input class="input__element" type="text" required>
+                          </div>
+                        </div>
+                        <div class="form__submit col-lg-12 col-sm-6 col-auto">
+                          <button class="button button_xl button_style-1">Жду звонка!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
@@ -518,6 +579,7 @@
     <script src="./scripts/libs/splide.min.js"></script>
     <script src="./scripts/libs/validate.min.js"></script>
     <script src="./scripts/libs/jquery.fancybox.min.js"></script>
+    <script src="./scripts//libs/ion.rangeSlider.min.js"></script>
     <script src="./scripts/scripts.js"> </script>
     <!--preview only-->
     <link rel="stylesheet" href="./styles/helper.css">
