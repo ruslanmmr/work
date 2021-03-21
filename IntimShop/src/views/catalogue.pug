@@ -75,8 +75,24 @@ block content
                       a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Секс качели 
                     li.catalogue-filter__categories-sub-item 
                       a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Повязки на глаза, маски и кляпы
-                  
-
+            
+            .catalogue-filter__section 
+              h2.catalogue-filter__section-title Фильтр
+              .filter 
+                //section
+                .filter__section 
+                  h6.filter__section-title Цена
+                  .filter__section-content 
+                    .filter-range
+                      .filter-range__head 
+                        .filter-range__inputs
+                          span от
+                          input(type="text").filter-range__input.filter-range__input-from
+                          span до
+                          input(type="text").filter-range__input.filter-range__input-to
+                        button.filter-range__button ок
+                      .filter-range__range
+                        input(type="text" name="range" data-min="2400" data-max="45000" data-step='100')
 
         .catalogue__content.col-lg-9 
           .catalogue__head
@@ -102,4 +118,25 @@ block content
             +block2('./img/c2.jpg', 2, grid)
             +block2('./img/c3.jpg', 3, grid)
             +block2('./img/c4.jpg', 2, grid)
+
+          .pagination 
+            ul.pagination__list 
+              li.pagination__item   
+                a(href="#").pagination__link.pagination__back
+                  svg.icon
+                    use(xlink:href="./img/icons/icons-sprite.svg#arrow")
+              li.pagination__item   
+                a(href="#").pagination__link.is-active 1
+              li.pagination__item   
+                a(href="#").pagination__link 2
+              li.pagination__item   
+                a(href="#").pagination__link 3
+              li.pagination__item   
+                a(href="#").pagination__link ...
+              li.pagination__item   
+                a(href="#").pagination__link 12
+              li.pagination__item   
+                a(href="#").pagination__link.pagination__next 
+                  svg.icon
+                    use(xlink:href="./img/icons/icons-sprite.svg#arrow")
          

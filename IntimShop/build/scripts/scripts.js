@@ -10,15 +10,39 @@ const $body = document.body;
 const $wrapper = document.querySelector('.wrapper');
 const $header = document.querySelector('.header');
 
-
 document.addEventListener("DOMContentLoaded", function(event) { 
   TouchHoverEvents.init();
   Header.init();
   lazySizes.init();
   FormElements.init();
   Dropdown.init();
+  Tabs.init();
   Modal.init();
+  Mask.init();
+  jsRange();
+  calculator();
+  //product images
+  let $product_images = document.querySelector('.product__images');
+  if($product_images) new ProductImages($product_images).init();
 });
+
+function value_format(number, decimals=0, dec_point=' ', thousands_sep=' ') {
+  var i, j, kw, kd, km;
+
+  i = parseInt(number = (+number || 0).toFixed(decimals)) + "";
+
+  if( (j = i.length) > 3 ){
+      j = j % 3;
+  } else{
+      j = 0;
+  }
+
+  km = (j ? i.substr(0, j) + thousands_sep : "");
+  kw = i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands_sep);
+  kd = (decimals ? dec_point + Math.abs(number - i).toFixed(decimals).replace(/-/, 0).slice(2) : "");
+
+  return km + kw + kd;
+}
 
 const TouchHoverEvents = {
   targets: 'a, button, label, tr, .ss-option, .jsTouchHover',
@@ -182,6 +206,38 @@ const Dropdown = {
   }
 }
 
+const Mask = {
+  init: function() {
+    Inputmask({
+      mask: "+7 999 999-9999",
+      showMaskOnHover: false,
+      clearIncomplete: false
+    }).mask('[data-phone]');
+  }
+}
+
+const Tabs = {
+  init: function() {
+    let $tabs = $('[data-action="tabs"]');
+    $tabs.each(function(){
+      let $parent = $(this),
+          $tablinks = $parent.find('[data-action="tabs-trigger"]'),
+          $tabcontent = $parent.find('[data-action="tabs-content"]');
+
+      let change = (index)=> {
+        $tablinks.removeClass('is-active').eq(index).addClass('is-active');
+        $tabcontent.hide().eq(index).fadeIn(150);
+      }
+
+      change(0);
+      $tablinks.on('click', function(){
+        let index = $tablinks.index($(this));
+        change(index);
+      })
+    })
+  }
+}
+
 const Modal = {
   init: function () {
     this.$modals = document.querySelectorAll('.modal');
@@ -226,4 +282,140 @@ const Modal = {
       }, 500);
     }
   }
+}
+
+class ProductImages {
+  constructor($slider) {
+    this.$slider = $slider;
+  }
+
+  init() {
+    this.index = 0;
+    this.$mimages = this.$slider.querySelectorAll('.product__main-images .image');
+    this.$nimages = this.$slider.querySelectorAll('.product__nav-images .image');
+
+    this.slide = (index) => {
+      if(!this.flag) {
+        this.$mimages[this.index].style.zIndex = '1';
+        this.$mimages[this.index].classList.remove('is-visible');
+        this.$nimages[this.index].classList.remove('is-active');
+      } else this.flag = true;
+
+      this.$mimages[index].style.zIndex = '2';
+      this.$mimages[index].classList.add('is-visible');
+      this.$nimages[index].classList.add('is-active');
+
+      this.index = index;
+    }
+
+    this.slide(this.index);
+
+    this.events = [];
+    this.$nimages.forEach(($this, index)=>{
+      this.events[index] = (event)=> {
+        if(event=='click' || (event=='mouseenter' && !TouchHoverEvents.touched)) {
+
+        }
+        this.slide(index);
+      }
+      $this.addEventListener('mouseenter', this.events[index])
+      $this.addEventListener('click', this.events[index])
+    })
+
+  }
+}
+
+function jsRange() {
+  let $range = $('.filter-range');
+  
+  $range.each(function() {
+    let $this = $(this),
+        $from = $this.find('.filter-range__input-from'),
+        $to = $this.find('.filter-range__input-to'),
+        $range = $this.find('.filter-range__range input');
+    
+      let instance,
+          min = +$range.attr('data-min'),
+          max = +$range.attr('data-max'),
+          from = +$from.val() || min,
+          to = +$to.val() || max,
+          step = +$range.attr('data-step') || 1;
+
+      $range.ionRangeSlider({
+        skin: "round",
+        type: 'double',
+        min: min,
+        max: max,
+        from: from,
+        to: to,
+        step: step,
+        onStart: updateInputs,
+        onChange: updateInputs,
+        onFinish: updateInputs
+      });
+      instance = $range.data("ionRangeSlider");
+      
+      function updateInputs(data) {
+        from = data.from;
+        to = data.to;
+        if($from.length) $from.val(value_format(from));
+        if($to.length) $to.val(value_format(to));
+      }
+
+      $from.add($to).on("input", function () {
+        let value = +$(this).val().replace(/\s/g, '');
+        $(this).val(value_format(value));
+      })
+      
+      $from.on("change", function () {
+        let value = +$(this).val().replace(/\s/g, '');
+        if(value < min) value = min;
+        else if(value > to) value = to;
+        instance.update({from:value});
+        $from.val(value_format(value));
+      });
+
+      $to.on("change", function () {
+        let value = +$(this).val().replace(/\s/g, '');
+        if(value < from) value = from;
+        else if(value > max) value = max;
+        instance.update({to:value});
+        $to.val(value_format(value));
+      });
+
+  });
+}
+
+function calculator() {
+  let $element = $('.js-calc');
+  $element.each(function () {
+    let $this = $(this),
+        $plus = $this.find('.js-calc__plus'),
+        $minus = $this.find('.js-calc__minus'),
+        $input = $this.find('.js-calc__input'),
+        val = +$input.val();
+
+    check();
+
+    $plus.on('click', function () {
+      val++;
+      check();
+    });
+    $minus.on('click', function () {
+      if(val>1) val--;
+      check();
+    });
+    $input.on('change input', function () {
+      val = +$input.val().replace(/\s/g, '');
+      if(val<1) val = 1;
+      check();
+    });
+
+    function check() {
+      $input.val(val);
+      if(val==1) $minus.addClass('disabled');
+      else $minus.removeClass('disabled');
+    }
+
+  });
 }

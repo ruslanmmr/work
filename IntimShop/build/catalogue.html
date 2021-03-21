@@ -128,6 +128,29 @@
                       </li>
                     </ul>
                   </div>
+                  <div class="catalogue-filter__section">
+                    <h2 class="catalogue-filter__section-title">Фильтр</h2>
+                    <div class="filter">
+                      <!--section-->
+                      <div class="filter__section">
+                        <h6 class="filter__section-title">Цена</h6>
+                        <div class="filter__section-content">
+                          <div class="filter-range">
+                            <div class="filter-range__head">
+                              <div class="filter-range__inputs"><span>от</span>
+                                <input class="filter-range__input filter-range__input-from" type="text"><span>до</span>
+                                <input class="filter-range__input filter-range__input-to" type="text">
+                              </div>
+                              <button class="filter-range__button">ок</button>
+                            </div>
+                            <div class="filter-range__range">
+                              <input type="text" name="range" data-min="2400" data-max="45000" data-step="100">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="catalogue__content col-lg-9">
@@ -142,8 +165,8 @@
                 <div class="catalogue__blocks row grid">
                                     <div class="catalogue-block col-lg-4">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
-                                          <div class="catalogue-block__labels">
-                                            <div class="catalogue-block__label catalogue-block__label_type-bestseller">Хит</div>
+                                          <div class="product-labels catalogue-block__labels">
+                                            <div class="product-labels__label product-labels__label_type-bestseller">Хит</div>
                                           </div>
                                           <div class="image image_cover"><img class="lazyload" data-src="./img/c1.jpg" alt="image"></div></a>
                                         <div class="catalogue-block__content">
@@ -159,8 +182,8 @@
                                     </div>
                                     <div class="catalogue-block col-lg-4">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
-                                          <div class="catalogue-block__labels">
-                                            <div class="catalogue-block__label catalogue-block__label_type-discount">Скидка</div>
+                                          <div class="product-labels catalogue-block__labels">
+                                            <div class="product-labels__label product-labels__label_type-discount">Скидка</div>
                                           </div>
                                           <div class="image image_cover"><img class="lazyload" data-src="./img/c2.jpg" alt="image"></div></a>
                                         <div class="catalogue-block__content">
@@ -177,7 +200,7 @@
                                     </div>
                                     <div class="catalogue-block col-lg-4">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
-                                          <div class="catalogue-block__labels">
+                                          <div class="product-labels catalogue-block__labels">
                                           </div>
                                           <div class="image image_cover"><img class="lazyload" data-src="./img/c3.jpg" alt="image"></div></a>
                                         <div class="catalogue-block__content">
@@ -193,8 +216,8 @@
                                     </div>
                                     <div class="catalogue-block col-lg-4">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
-                                          <div class="catalogue-block__labels">
-                                            <div class="catalogue-block__label catalogue-block__label_type-discount">Скидка</div>
+                                          <div class="product-labels catalogue-block__labels">
+                                            <div class="product-labels__label product-labels__label_type-discount">Скидка</div>
                                           </div>
                                           <div class="image image_cover"><img class="lazyload" data-src="./img/c4.jpg" alt="image"></div></a>
                                         <div class="catalogue-block__content">
@@ -211,8 +234,8 @@
                                     </div>
                                     <div class="catalogue-block col-lg-4">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
-                                          <div class="catalogue-block__labels">
-                                            <div class="catalogue-block__label catalogue-block__label_type-bestseller">Хит</div>
+                                          <div class="product-labels catalogue-block__labels">
+                                            <div class="product-labels__label product-labels__label_type-bestseller">Хит</div>
                                           </div>
                                           <div class="image image_cover"><img class="lazyload" data-src="./img/c1.jpg" alt="image"></div></a>
                                         <div class="catalogue-block__content">
@@ -228,8 +251,8 @@
                                     </div>
                                     <div class="catalogue-block col-lg-4">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
-                                          <div class="catalogue-block__labels">
-                                            <div class="catalogue-block__label catalogue-block__label_type-discount">Скидка</div>
+                                          <div class="product-labels catalogue-block__labels">
+                                            <div class="product-labels__label product-labels__label_type-discount">Скидка</div>
                                           </div>
                                           <div class="image image_cover"><img class="lazyload" data-src="./img/c2.jpg" alt="image"></div></a>
                                         <div class="catalogue-block__content">
@@ -246,7 +269,7 @@
                                     </div>
                                     <div class="catalogue-block col-lg-4">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
-                                          <div class="catalogue-block__labels">
+                                          <div class="product-labels catalogue-block__labels">
                                           </div>
                                           <div class="image image_cover"><img class="lazyload" data-src="./img/c3.jpg" alt="image"></div></a>
                                         <div class="catalogue-block__content">
@@ -262,8 +285,8 @@
                                     </div>
                                     <div class="catalogue-block col-lg-4">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
-                                          <div class="catalogue-block__labels">
-                                            <div class="catalogue-block__label catalogue-block__label_type-discount">Скидка</div>
+                                          <div class="product-labels catalogue-block__labels">
+                                            <div class="product-labels__label product-labels__label_type-discount">Скидка</div>
                                           </div>
                                           <div class="image image_cover"><img class="lazyload" data-src="./img/c4.jpg" alt="image"></div></a>
                                         <div class="catalogue-block__content">
@@ -280,8 +303,8 @@
                                     </div>
                                     <div class="catalogue-block col-lg-4">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
-                                          <div class="catalogue-block__labels">
-                                            <div class="catalogue-block__label catalogue-block__label_type-bestseller">Хит</div>
+                                          <div class="product-labels catalogue-block__labels">
+                                            <div class="product-labels__label product-labels__label_type-bestseller">Хит</div>
                                           </div>
                                           <div class="image image_cover"><img class="lazyload" data-src="./img/c1.jpg" alt="image"></div></a>
                                         <div class="catalogue-block__content">
@@ -297,8 +320,8 @@
                                     </div>
                                     <div class="catalogue-block col-lg-4">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
-                                          <div class="catalogue-block__labels">
-                                            <div class="catalogue-block__label catalogue-block__label_type-discount">Скидка</div>
+                                          <div class="product-labels catalogue-block__labels">
+                                            <div class="product-labels__label product-labels__label_type-discount">Скидка</div>
                                           </div>
                                           <div class="image image_cover"><img class="lazyload" data-src="./img/c2.jpg" alt="image"></div></a>
                                         <div class="catalogue-block__content">
@@ -315,7 +338,7 @@
                                     </div>
                                     <div class="catalogue-block col-lg-4">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
-                                          <div class="catalogue-block__labels">
+                                          <div class="product-labels catalogue-block__labels">
                                           </div>
                                           <div class="image image_cover"><img class="lazyload" data-src="./img/c3.jpg" alt="image"></div></a>
                                         <div class="catalogue-block__content">
@@ -331,8 +354,8 @@
                                     </div>
                                     <div class="catalogue-block col-lg-4">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
-                                          <div class="catalogue-block__labels">
-                                            <div class="catalogue-block__label catalogue-block__label_type-discount">Скидка</div>
+                                          <div class="product-labels catalogue-block__labels">
+                                            <div class="product-labels__label product-labels__label_type-discount">Скидка</div>
                                           </div>
                                           <div class="image image_cover"><img class="lazyload" data-src="./img/c4.jpg" alt="image"></div></a>
                                         <div class="catalogue-block__content">
@@ -347,6 +370,23 @@
                                         </div>
                                       </div>
                                     </div>
+                </div>
+                <div class="pagination">
+                  <ul class="pagination__list">
+                    <li class="pagination__item"> <a class="pagination__link pagination__back" href="#">
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons-sprite.svg#arrow"></use>
+                        </svg></a></li>
+                    <li class="pagination__item"> <a class="pagination__link is-active" href="#">1</a></li>
+                    <li class="pagination__item"> <a class="pagination__link" href="#">2</a></li>
+                    <li class="pagination__item"> <a class="pagination__link" href="#">3</a></li>
+                    <li class="pagination__item"> <a class="pagination__link" href="#">…</a></li>
+                    <li class="pagination__item"> <a class="pagination__link" href="#">12</a></li>
+                    <li class="pagination__item"> <a class="pagination__link pagination__next" href="#">
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons-sprite.svg#arrow"></use>
+                        </svg></a></li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -409,6 +449,8 @@
     <script src="./scripts/libs/slimselect.min.js"></script>
     <script src="./scripts/libs/lazysizes.min.js"></script>
     <script src="./scripts/libs/scroll-lock.min.js"></script>
+    <script src="./scripts/libs/inputmask.min.js"></script>
+    <script src="./scripts//libs/ion.rangeSlider.min.js"></script>
     <script>lazySizes.cfg.init = false; </script>
     <script src="./scripts/scripts.js"> </script>
     <!--preview only-->

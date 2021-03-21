@@ -4,3 +4,93 @@ block variables
   -let title = sitename+' - '+page_title
 block content 
   include blocks/breadcrumbs
+  section.section.product 
+    .container
+      .product__head.row
+        .product__images.col-lg-6 
+          .product__main-images
+            .product-labels.product__labels
+              .product-labels__label.product-labels__label_type-bestseller Хит
+              .product-labels__label.product-labels__label_type-discount Скидка
+            .image.image_cover
+              img(data-src="../img/product1.png", alt="image").lazyload
+            .image.image_cover
+              img(data-src="../img/product2.png", alt="image").lazyload
+            .image.image_cover
+              img(data-src="../img/product3.png", alt="image").lazyload
+            .image.image_cover
+              img(data-src="../img/product4.png", alt="image").lazyload
+          .product__nav-images
+            .image.image_cover
+              img(data-src="../img/product1.png", alt="image").lazyload
+            .image.image_cover
+              img(data-src="../img/product2.png", alt="image").lazyload
+            .image.image_cover
+              img(data-src="../img/product3.png", alt="image").lazyload
+            .image.image_cover
+              img(data-src="../img/product4.png", alt="image").lazyload
+
+        .product__content.col-lg-6
+          //section
+          .product__content-section
+            h1.h2.product__title Оригинальное полупрозрачное боди Odina с цветочным принтом
+            span.product__art арт. 2345678
+          //section
+          .product__content-section
+            span.product__content-section-title Цена:
+            .product__pricing
+              span.product__old-price 1389 ₽
+              span.product__price 1069 ₽
+          //section
+          .product__content-section
+            span.product__content-section-title Цвет:
+            ul.color-list 
+              li.color-list__item 
+                a(href="./product.html" style='background-color:#F12C2C;').color-list__link
+              li.color-list__item 
+                a(href="./product.html" style='background-color:#000000;').color-list__link
+              li.color-list__item 
+                a(href="./product.html" style='background-color:#FFFFFF;').color-list__link
+              li.color-list__item 
+                a(href="./product.html" style='background-color:#214DA3;').color-list__link.is-active
+              li.color-list__item 
+                a(href="./product.html" style='background-color:#FF8412;').color-list__link
+
+          //section
+          .product__content-section
+            span.product__content-section-title Размер:
+            select.select
+              option 54
+              option 52
+              option 50
+              option 48
+              option 48
+          //section
+          .product__content-section.product__buttons
+            button.button.button_style-1.product__add-to-cart Добавить в корзину
+            button.button.button_style-ico 
+              svg.icon
+                use(xlink:href="./img/icons/icons-sprite.svg#heart")
+
+      .product__info(data-action='tabs')
+        .product__info-head
+          button.product__info-tab-link(data-action='tabs-trigger')
+            span.h2 Описание
+          button.product__info-tab-link(data-action='tabs-trigger')
+            span.h2 Характеристики
+        .product__info-content 
+          .product__info-tab-content(data-action='tabs-content')
+            p Эффектное боди Odina выполнено из эластичной ткани, полупрозрачного тюля и кружева с цветочным рисунком. Лиф мягкий без косточек, бретели регулируются по длине. Вырезы по бокам украшают мягкие стреп-ленты.
+          .product__info-tab-content(data-action='tabs-content')
+            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, impedit sunt odio aspernatur nihil animi molestias. Minus necessitatibus asperiores quidem, ducimus incidunt earum excepturi. Repellat natus qui ratione consectetur ipsa.
+
+  section.section.product 
+    .container
+      h2.section__title Рекомендуемые товары:
+      .row.grid 
+        include blocks/blocks
+        -let grid = 'col-lg-3'
+        +block2('./img/c1.jpg', 1, grid)
+        +block2('./img/c2.jpg', 2, grid)
+        +block2('./img/c3.jpg', 3, grid)
+        +block2('./img/c4.jpg', 2, grid)

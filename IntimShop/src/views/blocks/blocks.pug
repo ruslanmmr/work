@@ -10,11 +10,11 @@ mixin block2(image, type, classes)
   .catalogue-block(class=classes)
     .catalogue-block__container
       a(href='product.html').catalogue-block__image
-        .catalogue-block__labels
+        .product-labels.catalogue-block__labels
           if type==1
-            .catalogue-block__label.catalogue-block__label_type-bestseller Хит
+            .product-labels__label.product-labels__label_type-bestseller Хит
           else if type==2
-            .catalogue-block__label.catalogue-block__label_type-discount Скидка
+            .product-labels__label.product-labels__label_type-discount Скидка
         .image.image_cover
           img(data-src=image, alt="image").lazyload
       .catalogue-block__content 
@@ -38,10 +38,10 @@ mixin cart_item(image)
         ul.cart-item__list 
           li.cart-item__item Цвет: Синий
           li.cart-item__item Размер: L
-      .cart-item__calculation.calculation
-        button.calculation__btn.calculation__btn-minus 
-        input(type="number" value='1').calculation__input
-        button.calculation__btn.calculation__btn-plus
+      .cart-item__calculation.calculation.js-calc
+        button.calculation__btn.calculation__btn-minus.js-calc__minus 
+        input(type="number" value='1').calculation__input.js-calc__input
+        button.calculation__btn.calculation__btn-plus.js-calc__plus
       .cart-item__price 1389 ₽
       button.cart-item__delete
         svg.icon
