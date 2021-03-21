@@ -305,6 +305,27 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-display: swap;
+  font-family: "Gilroy";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Gilroy/Gilroy-Regular.woff") format("woff"); }
+
+@font-face {
+  font-display: swap;
+  font-family: "Gilroy";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff"); }
+
+@font-face {
+  font-display: swap;
+  font-family: "Gilroy";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/Gilroy/Gilroy-Bold.woff") format("woff"); }
+
 /*!
  * Bootstrap Grid v5.0.0-beta2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
