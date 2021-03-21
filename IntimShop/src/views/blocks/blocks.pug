@@ -1,0 +1,49 @@
+mixin block1(link, image, title, classes)
+  .category-block(class=classes)
+    a(href=link).category-block__container
+      .image.image_cover.category-block__image 
+        img(data-src=image, alt="image").lazyload
+      //Почему-то у заказчика картинки с зашитым текстом, но можно добавить заголовок нормально, если нужно.
+      h3.category-block__title(style='display:none;')=title
+
+mixin block2(image, type, classes)
+  .catalogue-block(class=classes)
+    .catalogue-block__container
+      a(href='product.html').catalogue-block__image
+        .catalogue-block__labels
+          if type==1
+            .catalogue-block__label.catalogue-block__label_type-bestseller Хит
+          else if type==2
+            .catalogue-block__label.catalogue-block__label_type-discount Скидка
+        .image.image_cover
+          img(data-src=image, alt="image").lazyload
+      .catalogue-block__content 
+        .catalogue-block__title
+          a(href='product.html') Оригинальное полупрозрачное боди Odina с цветочным принтом
+        .catalogue-block__bottom 
+          .catalogue-block__pricing 
+            if type==2
+              .catalogue-block__old-price 1389 ₽
+            .catalogue-block__price 1069 ₽
+          button.button.button_style-1.catalogue-block__button Добавить в корзину 
+
+mixin cart_item(image)
+  .cart-item
+    .cart-item__container 
+      a(href="./product.html").cart-item__image.image.image_cover 
+        img(data-src=image, alt="image").lazyload
+      .cart-item__content
+        .cart-item__title
+          a(href="./product.html").h6.link Оригинальное полупрозрачное боди Odina с цветочным принтом
+        ul.cart-item__list 
+          li.cart-item__item Цвет: Синий
+          li.cart-item__item Размер: L
+      .cart-item__calculation.calculation
+        button.calculation__btn.calculation__btn-minus 
+        input(type="number" value='1').calculation__input
+        button.calculation__btn.calculation__btn-plus
+      .cart-item__price 1389 ₽
+      button.cart-item__delete
+        svg.icon
+          use(xlink:href="./img/icons/icons-sprite.svg#delete")
+        

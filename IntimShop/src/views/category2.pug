@@ -1,0 +1,26 @@
+extends layout/layout
+block variables
+  -let page_title = 'Нижнее белье'
+  -let title = sitename+' - '+page_title
+block content 
+  include blocks/breadcrumbs
+
+  section.section.category
+    .container
+      .category__head.row 
+        .category__text.offset-xl-1.col-xl-5
+          h1 Нижнее белье
+          p Чувствуйте себя уверенно и сенсационно выглядите в спальне с нашим огромным ассортиментом сексуального нижнего белья и нижнего белья. Вы найдете множество сексуальных стилей, от корсетов и кукол до халатов и боди. Кроме того, для вашего душевного спокойствия каждый товар включает бесплатный возврат.
+        .category__image.col-xl-5
+          .image.image_cover
+            img(data-src="./img/нижнее-белье.jpg", alt="image").lazyload
+
+      .row.grid
+        include blocks/blocks
+        -let grid = 'col-lg-3 col-md-4 col-6'
+        +block1('./catalogue.html', './img/Боди-и-комбинезоны.jpg', 'Боди и Комбинезоны', grid)
+        +block1('./catalogue.html', './img/комплекты-больших-размеров.jpg', 'Комплекты Больших Размеров', grid)
+        +block1('./catalogue.html', './img/Нижнее-белье-и-сорочки.jpg', 'Нижнее Белье и Сорочки', grid)
+        +block1('./catalogue.html', './img/сексуальные-бюстгальтеры.jpg', 'Сексуальные Бюстгальтеры', grid)
+        +block1('./catalogue.html', './img/сексуальные-корсеты.jpg', 'Сексуальные корсеты', grid)
+        +block1('./catalogue.html', './img/сексуальные-костюмы.jpg', 'Сексуальные Костюмы', grid)

@@ -1,0 +1,86 @@
+extends layout/layout
+block variables
+  -let page_title = 'Оформление заказа'
+  -let title = sitename+' - '+page_title
+block content 
+  include blocks/breadcrumbs
+  section.section.cart
+    .container 
+      h1.section__title Оформление заказа
+      .cart__container.row 
+        .cart__content.col-lg-8
+          //section
+          .cart__section 
+            h4.cart__section-title Получатель:
+            .cart__section-content.row.inputs-grid
+              .col-sm-6
+                .input
+                  input(type="text" placeholder="ФИО").input__element
+              .col-sm-6
+                .input
+                  input(type="text" placeholder="Телефон").input__element
+          //section
+          .cart__section 
+            h4.cart__section-title Способ доставки:
+            .cart__section-content
+              .cart__radio-items
+                .radio
+                  input(type="radio" id='1' name='1' checked).radio__input
+                  label(for='1').radio__label Наша курьерская служба 1-2 дня (в пределах МКАД) 350 рублей
+                .radio
+                  input(type="radio" id='2' name='1').radio__input
+                  label(for='2').radio__label Самовывоз м.Автозаводская адрес: ул.Автозаводская дом 16 корпус 2 строение 8
+                .radio
+                  input(type="radio" id='3' name='1').radio__input
+                  label(for='3').radio__label Постаматы PickPoint
+                .radio
+                  input(type="radio" id='4' name='1').radio__input
+                  label(for='4').radio__label Почта России
+              .input
+                textarea(placeholder="Адрес доставки").input__element
+
+          //section
+          .cart__section 
+            h4.cart__section-title способ оплаты:
+            .cart__section-content
+              .cart__radio-items
+                .radio
+                  input(type="radio" id='5' name='2' checked).radio__input
+                  label(for='5').radio__label Наличными при получении
+                .radio
+                  input(type="radio" id='6' name='2').radio__input
+                  label(for='6').radio__label Картой онлайн
+
+          //section
+          .cart__section 
+            h4.cart__section-title состав заказа:
+            .cart__section-content
+              include blocks/blocks
+              +cart_item('./img/c1.jpg')
+              +cart_item('./img/c2.jpg')
+              +cart_item('./img/c3.jpg')
+              +cart_item('./img/c4.jpg')
+
+        .cart__aside.col-lg-4
+          .cart-aside
+            h4.cart-aside__title ПРомокод
+            form(action="#").cart-aside__promo
+              .input.cart-aside__promo-input
+                input(type="text" placeholder="Введте промокод").input__element
+              button.button.button_style-1.button_w100 Применить
+
+            ul.cart-aside__price-list
+              li.cart-aside__price-item 
+                span Стоимость:
+                span 5556 ₽
+              li.cart-aside__price-item 
+                span Скидка:
+                span.text-red -1000 ₽
+              li.cart-aside__price-item 
+                span Доставка:
+                span 350 ₽
+              li.cart-aside__price-item.cart-aside__price-total
+                span Итого:
+                span 4906 ₽
+            
+            a(href="thanks.html").button.button_style-1.button_w100 ОФОРМИТЬ ЗАКАЗ

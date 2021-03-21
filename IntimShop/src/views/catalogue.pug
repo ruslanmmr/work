@@ -1,0 +1,105 @@
+extends layout/layout
+block variables
+  -let page_title = 'Каталог'
+  -let title = sitename+' - '+page_title
+block content 
+  include blocks/breadcrumbs
+
+  section.section.catalogue
+    .container
+      h1.section__title Комплекты больших размеров
+      .row.catalogue__container 
+        .catalogue__aside.col-lg-3
+
+          .catalogue-filter
+            
+            .catalogue-filter__section 
+              h2.catalogue-filter__section-title Категории
+              ul.catalogue-filter__categories-list
+                li(data-action="dropdown").catalogue-filter__categories-item 
+                  a(href="javascript:void(0);" data-action="dropdown-toggle").catalogue-filter__categories-link.h6.link Секс-игрушки
+                  ul(data-action="dropdown-content").catalogue-filter__categories-sub-list
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Для женщин
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Для мужчин
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Фалоиметаторы
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Страпоны
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Анальные игрушки
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Вибраторы
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Эрекционные кольца
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Помпы 
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Виброяйца
+
+                li(data-action="dropdown").catalogue-filter__categories-item 
+                  a(href="javascript:void(0);" data-action="dropdown-toggle").catalogue-filter__categories-link.h6.link.is-active Нижнее белье
+                  ul(data-action="dropdown-content").catalogue-filter__categories-sub-list.is-active
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link.is-active Комплекты больших размеров
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Сексуальные бюстгалтеры
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Нижнее белье и сорочки
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Сексуальные корсеты
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Сексуальные костюмы
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Боди и комбинезоны
+                    
+                li(data-action="dropdown").catalogue-filter__categories-item 
+                  a(href="javascript:void(0);" data-action="dropdown-toggle").catalogue-filter__categories-link.h6.link Смазки,лубриканты
+                  ul(data-action="dropdown-content").catalogue-filter__categories-sub-list
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Подкатегория
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Подкатегория
+
+                li(data-action="dropdown").catalogue-filter__categories-item 
+                  a(href="javascript:void(0);" data-action="dropdown-toggle").catalogue-filter__categories-link.h6.link БДСМ
+                  ul(data-action="dropdown-content").catalogue-filter__categories-sub-list
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Медицинский фетиш
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Наручники и ошейники
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Плетки и кнуты
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Секс качели 
+                    li.catalogue-filter__categories-sub-item 
+                      a(href='./catalogue.html').catalogue-filter__categories-sub-link.link Повязки на глаза, маски и кляпы
+                  
+
+
+        .catalogue__content.col-lg-9 
+          .catalogue__head
+            .sorting-item 
+              span.sorting-item__label Сортировать:
+              select.select
+                option По популярности
+                option По цене
+
+
+          .catalogue__blocks.row.grid
+            include blocks/blocks
+            -let grid = 'col-lg-4'
+            +block2('./img/c1.jpg', 1, grid)
+            +block2('./img/c2.jpg', 2, grid)
+            +block2('./img/c3.jpg', 3, grid)
+            +block2('./img/c4.jpg', 2, grid)
+            +block2('./img/c1.jpg', 1, grid)
+            +block2('./img/c2.jpg', 2, grid)
+            +block2('./img/c3.jpg', 3, grid)
+            +block2('./img/c4.jpg', 2, grid)
+            +block2('./img/c1.jpg', 1, grid)
+            +block2('./img/c2.jpg', 2, grid)
+            +block2('./img/c3.jpg', 3, grid)
+            +block2('./img/c4.jpg', 2, grid)
+         

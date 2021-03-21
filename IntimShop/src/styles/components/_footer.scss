@@ -1,0 +1,30 @@
+.footer {
+  flex-shrink: 0;
+  padding: 50px 0 10px 0;
+  background-color: #363636;
+  color: #fff;
+  &__logo {
+    width: 164px;
+    margin-bottom: 30px;
+  }
+  &__section {
+    margin-bottom: 40px;
+  }
+  &__section-title {
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+  }
+  &__list {
+    margin-bottom: -20px;
+    &-item {
+      margin-bottom: 20px;
+    }
+  }
+  &__payment-list {
+    max-width: 190px;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

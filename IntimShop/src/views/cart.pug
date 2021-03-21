@@ -1,0 +1,34 @@
+extends layout/layout
+block variables
+  -let page_title = 'Ваша корзина'
+  -let title = sitename+' - '+page_title
+block content 
+  include blocks/breadcrumbs
+  section.section.cart
+    .container 
+      h1.section__title Ваша корзина
+      .cart__container.row 
+        .cart__content.col-lg-8 
+          include blocks/blocks
+          +cart_item('./img/c1.jpg')
+          +cart_item('./img/c2.jpg')
+          +cart_item('./img/c3.jpg')
+          +cart_item('./img/c4.jpg')
+          
+
+        .cart__aside.col-lg-4
+          .cart-aside
+            h4.cart-aside__title Сумма заказа
+
+            ul.cart-aside__price-list
+              li.cart-aside__price-item 
+                span Стоимость:
+                span 5556 ₽
+              li.cart-aside__price-item 
+                span Скидка:
+                span.text-red -1000 ₽
+              li.cart-aside__price-item.cart-aside__price-total
+                span Итого:
+                span 4556 ₽
+            
+            a(href="ordering.html").button.button_style-1.button_w100 ОФОРМИТЬ ЗАКАЗ

@@ -1,0 +1,14 @@
+extends layout/layout
+block variables
+  -let title = sitename+' - Главная'
+block content
+
+  section.section
+    .container  
+      .row.grid
+        include blocks/blocks
+        -let grid = 'col-lg-3 col-md-4 col-6'
+        +block1('./category1.html', './img/Секс-игрушки.jpg', 'Секс Игрушки', grid)
+        +block1('./category2.html', './img/нижнее-белье.jpg', 'Нижнее Белье', grid)
+        +block1('#', './img/Смазки-и-лубриканты.jpg', 'Смазки и Лубриканты', grid)
+        +block1('./category3.html', './img/БДСМ.jpg', 'БДСМ', grid)

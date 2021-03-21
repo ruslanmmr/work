@@ -1,0 +1,17 @@
+extends layout/layout
+block variables
+  -let page_title = 'Все категории'
+  -let title = sitename+' - '+page_title
+block content 
+  include blocks/breadcrumbs
+
+  section.section
+    .container  
+      h1.section__title.text-align-center  Выберите категорию 
+      .row.grid
+        include blocks/blocks
+        -let grid = 'col-lg-3 col-md-4 col-6'
+        +block1('./category1.html', './img/Секс-игрушки.jpg', 'Секс Игрушки', grid)
+        +block1('./category2.html', './img/нижнее-белье.jpg', 'Нижнее Белье', grid)
+        +block1('#', './img/Смазки-и-лубриканты.jpg', 'Смазки и Лубриканты', grid)
+        +block1('./category3.html', './img/БДСМ.jpg', 'БДСМ', grid)
