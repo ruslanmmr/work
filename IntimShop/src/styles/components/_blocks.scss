@@ -385,7 +385,7 @@
       background-color: #FF4D4D;
     }
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
   }
 }
@@ -588,7 +588,7 @@
     &__delete {
       width: 40px;
       height: 40px;
-      top: 15px;
+      top: 10px;
     }
     &__title .link {
       font-weight: 600;
@@ -866,6 +866,10 @@
     }
     &__title {
       margin-bottom: 30px;
+    }
+    &__labels {
+      top: 10px;
+      left: 10px;
     }
     &__images {
       display: block;
