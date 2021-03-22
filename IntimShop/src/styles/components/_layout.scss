@@ -6,6 +6,9 @@
 }
 .main {
   flex: 1 1 100%;
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 20px;
+  }
 }
 .section {
   margin: 0 0 100px 0;
@@ -15,19 +18,41 @@
   &:first-child {
     margin-top: 20px;
   }
+  @include media-breakpoint-down(lg) {
+    margin: 0 0 80px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    margin: 0 0 60px 0;
+    &:first-child {
+      margin-top: 15px;
+    }
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
 }
 
+.inputs-grid {
+  margin-bottom: -10px;
+  & > * {
+    margin-bottom: 10px;
+  }
+}
 .grid {
   margin-bottom: -30px;
   & > * {
     margin-bottom: 30px;
   }
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(xl) {
     margin-bottom: -20px;
     & > * {
       margin-bottom: 20px;
     }
   }
+}
+
+.container {
+  position: relative;
 }
 
 @include media-breakpoint-up(xxl) {
@@ -37,7 +62,7 @@
 }
 
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(xl) {
   .row {
     margin-left: calc(#{$mobile-grid-gutter-width} / -2);
     margin-right: calc(#{$mobile-grid-gutter-width} / -2);

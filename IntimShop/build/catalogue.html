@@ -34,16 +34,16 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="head-message">Рады вас видеть у нас на сайте. Приятных покупок!</div>
+      <div class="head-message">Рады вас видеть у нас на сайте. Приятных покупок!</div>
       <header class="header">
         <div class="container">
           <div class="row header__container">
-            <div class="col-lg-3 header__logo"><a class="logo" href="./index.html"><img class="logo__image" src="./img/logos/logo.png" alt="logo"></a></div>
-            <div class="col-lg-3"><a class="button button_style-1 button_w100" href="./categories.html"><span>Все категории</span>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-auto header__logo"><a class="logo" href="./index.html"><img class="logo__image" src="./img/logos/logo.png" alt="logo"></a></div>
+            <div class="col-lg-3 col-md col-sm-12 header__catalogue"><a class="button button_style-1 button_w100" href="./categories.html"><span>Все категории</span>
                 <svg class="icon">
                   <use xlink:href="./img/icons/icons-sprite.svg#arrow"></use>
                 </svg></a></div>
-            <div class="col-lg-4 header__search">
+            <div class="col-xl-4 col-auto header__search">
               <form class="search">
                 <div class="input search__input">
                   <input class="input__element" type="text" placeholder="Поиск по сайту">
@@ -54,14 +54,23 @@
                   </svg>
                 </button>
               </form>
+              <button class="header__search-close d-lg-none">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons-sprite.svg#delete"></use>
+                </svg>
+              </button>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-auto header__buttons">
               <div class="row">
-                <div class="col-lg-6"><a class="header-btn" href="#">
+                <div class="col d-lg-none"><a class="header-btn header__search-open" href="#">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons-sprite.svg#magnifier"></use>
+                    </svg></a></div>
+                <div class="col-lg-6 col"><a class="header-btn" href="#">
                     <svg class="icon">
                       <use xlink:href="./img/icons/icons-sprite.svg#heart"></use>
                     </svg><span>0</span></a></div>
-                <div class="col-lg-6"><a class="header-btn" href="./cart.html">
+                <div class="col-lg-6 col"><a class="header-btn" href="./cart.html">
                     <svg class="icon">
                       <use xlink:href="./img/icons/icons-sprite.svg#shopping-cart"></use>
                     </svg><span>4</span></a></div>
@@ -85,66 +94,76 @@
             <div class="row catalogue__container">
               <div class="catalogue__aside col-lg-3">
                 <div class="catalogue-filter">
-                  <div class="catalogue-filter__section">
-                    <h2 class="catalogue-filter__section-title">Категории</h2>
-                    <ul class="catalogue-filter__categories-list">
-                      <li class="catalogue-filter__categories-item" data-action="dropdown"> <a class="catalogue-filter__categories-link h6 link" href="javascript:void(0);" data-action="dropdown-toggle">Секс-игрушки</a>
-                        <ul class="catalogue-filter__categories-sub-list" data-action="dropdown-content">
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Для женщин</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Для мужчин</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Фалоиметаторы</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Страпоны</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Анальные игрушки</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Вибраторы</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Эрекционные кольца</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Помпы </a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Виброяйца</a></li>
+                  <div class="catalogue-filter__bg d-lg-none"></div>
+                  <div class="catalogue-filter__content" data-scroll-lock-scrollable>
+                    <button class="catalogue-filter__close d-lg-none">
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons-sprite.svg#delete"></use>
+                      </svg>
+                    </button>
+                    <div class="catalogue-filter__inner">
+                      <div class="catalogue-filter__section">
+                        <h2 class="catalogue-filter__section-title">Категории</h2>
+                        <ul class="catalogue-filter__categories-list">
+                          <li class="catalogue-filter__categories-item" data-action="dropdown"> <a class="catalogue-filter__categories-link h6 link" href="javascript:void(0);" data-action="dropdown-toggle">Секс-игрушки</a>
+                            <ul class="catalogue-filter__categories-sub-list" data-action="dropdown-content">
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Для женщин</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Для мужчин</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Фалоиметаторы</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Страпоны</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Анальные игрушки</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Вибраторы</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Эрекционные кольца</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Помпы </a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Виброяйца</a></li>
+                            </ul>
+                          </li>
+                          <li class="catalogue-filter__categories-item" data-action="dropdown"> <a class="catalogue-filter__categories-link h6 link is-active" href="javascript:void(0);" data-action="dropdown-toggle">Нижнее белье</a>
+                            <ul class="catalogue-filter__categories-sub-list is-active" data-action="dropdown-content">
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link is-active" href="./catalogue.html">Комплекты больших размеров</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Сексуальные бюстгалтеры</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Нижнее белье и сорочки</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Сексуальные корсеты</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Сексуальные костюмы</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Боди и комбинезоны</a></li>
+                            </ul>
+                          </li>
+                          <li class="catalogue-filter__categories-item" data-action="dropdown"> <a class="catalogue-filter__categories-link h6 link" href="javascript:void(0);" data-action="dropdown-toggle">Смазки, лубриканты</a>
+                            <ul class="catalogue-filter__categories-sub-list" data-action="dropdown-content">
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Подкатегория</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Подкатегория</a></li>
+                            </ul>
+                          </li>
+                          <li class="catalogue-filter__categories-item" data-action="dropdown"> <a class="catalogue-filter__categories-link h6 link" href="javascript:void(0);" data-action="dropdown-toggle">БДСМ</a>
+                            <ul class="catalogue-filter__categories-sub-list" data-action="dropdown-content">
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Медицинский фетиш</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Наручники и ошейники</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Плетки и кнуты</a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Секс качели </a></li>
+                              <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Повязки на глаза, маски и кляпы</a></li>
+                            </ul>
+                          </li>
                         </ul>
-                      </li>
-                      <li class="catalogue-filter__categories-item" data-action="dropdown"> <a class="catalogue-filter__categories-link h6 link is-active" href="javascript:void(0);" data-action="dropdown-toggle">Нижнее белье</a>
-                        <ul class="catalogue-filter__categories-sub-list is-active" data-action="dropdown-content">
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link is-active" href="./catalogue.html">Комплекты больших размеров</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Сексуальные бюстгалтеры</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Нижнее белье и сорочки</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Сексуальные корсеты</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Сексуальные костюмы</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Боди и комбинезоны</a></li>
-                        </ul>
-                      </li>
-                      <li class="catalogue-filter__categories-item" data-action="dropdown"> <a class="catalogue-filter__categories-link h6 link" href="javascript:void(0);" data-action="dropdown-toggle">Смазки, лубриканты</a>
-                        <ul class="catalogue-filter__categories-sub-list" data-action="dropdown-content">
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Подкатегория</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Подкатегория</a></li>
-                        </ul>
-                      </li>
-                      <li class="catalogue-filter__categories-item" data-action="dropdown"> <a class="catalogue-filter__categories-link h6 link" href="javascript:void(0);" data-action="dropdown-toggle">БДСМ</a>
-                        <ul class="catalogue-filter__categories-sub-list" data-action="dropdown-content">
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Медицинский фетиш</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Наручники и ошейники</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Плетки и кнуты</a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Секс качели </a></li>
-                          <li class="catalogue-filter__categories-sub-item"> <a class="catalogue-filter__categories-sub-link link" href="./catalogue.html">Повязки на глаза, маски и кляпы</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="catalogue-filter__section">
-                    <h2 class="catalogue-filter__section-title">Фильтр</h2>
-                    <div class="filter">
-                      <!--section-->
-                      <div class="filter__section">
-                        <h6 class="filter__section-title">Цена</h6>
-                        <div class="filter__section-content">
-                          <div class="filter-range">
-                            <div class="filter-range__head">
-                              <div class="filter-range__inputs"><span>от</span>
-                                <input class="filter-range__input filter-range__input-from" type="text"><span>до</span>
-                                <input class="filter-range__input filter-range__input-to" type="text">
+                      </div>
+                      <div class="catalogue-filter__section">
+                        <h2 class="catalogue-filter__section-title">Фильтр</h2>
+                        <div class="filter">
+                          <!--section-->
+                          <div class="filter__section">
+                            <h6 class="filter__section-title">Цена</h6>
+                            <div class="filter__section-content">
+                              <div class="filter-range">
+                                <div class="filter-range__head">
+                                  <div class="filter-range__inputs"><span>от</span>
+                                    <input class="filter-range__input filter-range__input-from" type="text"><span>до</span>
+                                    <input class="filter-range__input filter-range__input-to" type="text">
+                                  </div>
+                                  <button class="filter-range__button">ок</button>
+                                </div>
+                                <div class="filter-range__range">
+                                  <input type="text" name="range" data-min="2400" data-max="45000" data-step="100">
+                                </div>
                               </div>
-                              <button class="filter-range__button">ок</button>
-                            </div>
-                            <div class="filter-range__range">
-                              <input type="text" name="range" data-min="2400" data-max="45000" data-step="100">
                             </div>
                           </div>
                         </div>
@@ -155,15 +174,22 @@
               </div>
               <div class="catalogue__content col-lg-9">
                 <div class="catalogue__head">
-                  <div class="sorting-item"> <span class="sorting-item__label">Сортировать:</span>
-                    <select class="select">
-                      <option>По популярности</option>
-                      <option>По цене</option>
-                    </select>
+                  <div class="row">
+                    <div class="catalogue__head-item col-sm-6 col-md-auto d-lg-none">
+                      <button class="button button_style-1 button_w100 catalogue-filter-open text-transform-uppercase">Фильтровать</button>
+                    </div>
+                    <div class="catalogue__head-item col-sm-6 col-md-auto col-lg-auto">
+                      <div class="sorting-item"> <span class="sorting-item__label">Сортировать:</span>
+                        <select class="select">
+                          <option>По популярности</option>
+                          <option>По цене</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="catalogue__blocks row grid">
-                                    <div class="catalogue-block col-lg-4">
+                                    <div class="catalogue-block col-md-4 col-sm-6">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                           <div class="product-labels catalogue-block__labels">
                                             <div class="product-labels__label product-labels__label_type-bestseller">Хит</div>
@@ -180,7 +206,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="catalogue-block col-lg-4">
+                                    <div class="catalogue-block col-md-4 col-sm-6">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                           <div class="product-labels catalogue-block__labels">
                                             <div class="product-labels__label product-labels__label_type-discount">Скидка</div>
@@ -191,14 +217,14 @@
                                           <div class="catalogue-block__bottom">
                                             <div class="catalogue-block__pricing">
                                               <div class="catalogue-block__old-price">1389 ₽</div>
-                                              <div class="catalogue-block__price">1069 ₽</div>
+                                              <div class="catalogue-block__price text-red">1069 ₽</div>
                                             </div>
                                             <button class="button button_style-1 catalogue-block__button">Добавить в корзину </button>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="catalogue-block col-lg-4">
+                                    <div class="catalogue-block col-md-4 col-sm-6">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                           <div class="product-labels catalogue-block__labels">
                                           </div>
@@ -214,7 +240,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="catalogue-block col-lg-4">
+                                    <div class="catalogue-block col-md-4 col-sm-6">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                           <div class="product-labels catalogue-block__labels">
                                             <div class="product-labels__label product-labels__label_type-discount">Скидка</div>
@@ -225,14 +251,14 @@
                                           <div class="catalogue-block__bottom">
                                             <div class="catalogue-block__pricing">
                                               <div class="catalogue-block__old-price">1389 ₽</div>
-                                              <div class="catalogue-block__price">1069 ₽</div>
+                                              <div class="catalogue-block__price text-red">1069 ₽</div>
                                             </div>
                                             <button class="button button_style-1 catalogue-block__button">Добавить в корзину </button>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="catalogue-block col-lg-4">
+                                    <div class="catalogue-block col-md-4 col-sm-6">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                           <div class="product-labels catalogue-block__labels">
                                             <div class="product-labels__label product-labels__label_type-bestseller">Хит</div>
@@ -249,7 +275,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="catalogue-block col-lg-4">
+                                    <div class="catalogue-block col-md-4 col-sm-6">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                           <div class="product-labels catalogue-block__labels">
                                             <div class="product-labels__label product-labels__label_type-discount">Скидка</div>
@@ -260,14 +286,14 @@
                                           <div class="catalogue-block__bottom">
                                             <div class="catalogue-block__pricing">
                                               <div class="catalogue-block__old-price">1389 ₽</div>
-                                              <div class="catalogue-block__price">1069 ₽</div>
+                                              <div class="catalogue-block__price text-red">1069 ₽</div>
                                             </div>
                                             <button class="button button_style-1 catalogue-block__button">Добавить в корзину </button>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="catalogue-block col-lg-4">
+                                    <div class="catalogue-block col-md-4 col-sm-6">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                           <div class="product-labels catalogue-block__labels">
                                           </div>
@@ -283,7 +309,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="catalogue-block col-lg-4">
+                                    <div class="catalogue-block col-md-4 col-sm-6">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                           <div class="product-labels catalogue-block__labels">
                                             <div class="product-labels__label product-labels__label_type-discount">Скидка</div>
@@ -294,14 +320,14 @@
                                           <div class="catalogue-block__bottom">
                                             <div class="catalogue-block__pricing">
                                               <div class="catalogue-block__old-price">1389 ₽</div>
-                                              <div class="catalogue-block__price">1069 ₽</div>
+                                              <div class="catalogue-block__price text-red">1069 ₽</div>
                                             </div>
                                             <button class="button button_style-1 catalogue-block__button">Добавить в корзину </button>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="catalogue-block col-lg-4">
+                                    <div class="catalogue-block col-md-4 col-sm-6">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                           <div class="product-labels catalogue-block__labels">
                                             <div class="product-labels__label product-labels__label_type-bestseller">Хит</div>
@@ -318,7 +344,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="catalogue-block col-lg-4">
+                                    <div class="catalogue-block col-md-4 col-sm-6">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                           <div class="product-labels catalogue-block__labels">
                                             <div class="product-labels__label product-labels__label_type-discount">Скидка</div>
@@ -329,14 +355,14 @@
                                           <div class="catalogue-block__bottom">
                                             <div class="catalogue-block__pricing">
                                               <div class="catalogue-block__old-price">1389 ₽</div>
-                                              <div class="catalogue-block__price">1069 ₽</div>
+                                              <div class="catalogue-block__price text-red">1069 ₽</div>
                                             </div>
                                             <button class="button button_style-1 catalogue-block__button">Добавить в корзину </button>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="catalogue-block col-lg-4">
+                                    <div class="catalogue-block col-md-4 col-sm-6">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                           <div class="product-labels catalogue-block__labels">
                                           </div>
@@ -352,7 +378,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="catalogue-block col-lg-4">
+                                    <div class="catalogue-block col-md-4 col-sm-6">
                                       <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                           <div class="product-labels catalogue-block__labels">
                                             <div class="product-labels__label product-labels__label_type-discount">Скидка</div>
@@ -363,7 +389,7 @@
                                           <div class="catalogue-block__bottom">
                                             <div class="catalogue-block__pricing">
                                               <div class="catalogue-block__old-price">1389 ₽</div>
-                                              <div class="catalogue-block__price">1069 ₽</div>
+                                              <div class="catalogue-block__price text-red">1069 ₽</div>
                                             </div>
                                             <button class="button button_style-1 catalogue-block__button">Добавить в корзину </button>
                                           </div>
@@ -435,9 +461,13 @@
             <p class="modal-access__age">18+</p>
             <p class="modal-access__text text-transform-uppercase">Рады вас видеть у нас на сайте!</p>
             <p class="modal-access__text"> <span class="text-red text-transform-uppercase">Внимание! </span>Для доступа на сайт необходимо подтвердить, что вам уже есть 18 лет</p>
-            <div class="modal-access__buttons">
-              <button class="button button_style-2 modal-access__button">Нет, мне меньше 18 лет</button>
-              <button class="button button_style-1 modal-access__button" data-modal="close">Да, мне больше 18 лет</button>
+            <div class="modal-access__buttons row inputs-grid">
+              <div class="col-sm-6">
+                <button class="button button_style-2 button_w100">Нет, мне меньше 18 лет</button>
+              </div>
+              <div class="col-sm-6">
+                <button class="button button_style-1 button_w100" data-modal="close">Да, мне больше 18 лет</button>
+              </div>
             </div>
           </div>
         </div>

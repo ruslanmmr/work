@@ -39,6 +39,11 @@
     box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.25);
     max-width: 554px;
   }
+  @include media-breakpoint-down(sm) {
+    &-block {
+      padding: 20px 15px;
+    }
+  }
 }
 
 .modal-access {
@@ -56,12 +61,9 @@
     }
   }
   &__buttons {
-    display: flex;
-    margin: 0 -5px;
     margin-top: 30px;
   }
-  &__button {
-    flex: 1 1 auto;
-    margin: 0 5px;
+  @include media-breakpoint-down(sm) {
+
   }
 }

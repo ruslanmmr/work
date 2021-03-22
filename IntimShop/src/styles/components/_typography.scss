@@ -1,5 +1,5 @@
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  margin: 1.875rem 0 1.25rem 0;
+  margin-top: 1.875rem;
   font-weight: 700;
   &:first-child {
     margin-top: 0;
@@ -17,21 +17,47 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 h1, .h1 {
   font-size: 3.125rem;
+  margin-bottom: 1.875rem;
 }
-h2, .h2 {
+h2, .h2, h3, .h3 {
   font-size: 1.75rem;
-}
-h3, .h3 {
-  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 h4, .h4 {
   font-size: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 h5, .h5 {
   font-size: 1.125rem;
+  margin-bottom: 1rem;
 }
 h6, .h6 {
   font-size: 1rem;
+  margin-bottom: 1rem;
+}
+@include media-breakpoint-down(xl) {
+  h1, .h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.75rem;
+  }
+  h2, .h2, h3, .h3 {
+    font-size: 1.5rem;
+  }
+}
+@include media-breakpoint-down(lg) {
+  h1, .h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@include media-breakpoint-down(sm) {
+  h1, .h1 {
+    font-size: 1.875rem;
+    margin-bottom: 1.25rem;
+  }
+  h3, .h3, h4, .h4 {
+    font-size: 1.25rem;
+  }
 }
 
 p {
@@ -49,12 +75,5 @@ a:not([class]), .link {
   }
   &.is-active {
     pointer-events: none;
-  }
-}
-
-
-@include media-breakpoint-down(sm) {
-  h3, .h3 {
-    font-size: 1rem;
   }
 }

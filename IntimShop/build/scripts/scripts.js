@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   Modal.init();
   Mask.init();
   jsRange();
+  header_search();
+  filter_mobile();
   calculator();
   //product images
   let $product_images = document.querySelector('.product__images');
@@ -208,11 +210,14 @@ const Dropdown = {
 
 const Mask = {
   init: function() {
-    Inputmask({
-      mask: "+7 999 999-9999",
-      showMaskOnHover: false,
-      clearIncomplete: false
-    }).mask('[data-phone]');
+    let $phone = document.querySelectorAll('[data-phone]');
+    if($phone.length) {
+      Inputmask({
+        mask: "+7 999 999-9999",
+        showMaskOnHover: false,
+        clearIncomplete: false
+      }).mask($phone);
+    }
   }
 }
 
@@ -418,4 +423,37 @@ function calculator() {
     }
 
   });
+}
+
+function header_search() {
+  let $search = $('.header__search');
+  if($search.length) {
+    let $open = $('.header__search-open'),
+        $close = $('.header__search-close');
+
+    $open.on('click', function(){
+      $search.addClass('is-active');
+      $($header).addClass('header_search-active');
+    })
+    $close.on('click', function(){
+      $search.removeClass('is-active');
+      $($header).removeClass('header_search-active');
+    })
+  }
+}
+
+function filter_mobile() {
+  let $filter = $('.catalogue-filter'),
+      $filter_open = $('.catalogue-filter-open'),
+      $filter_close = $('.catalogue-filter__bg, .catalogue-filter__close');
+
+  $filter_close.on('click', function() {
+    $filter.removeClass('is-active');
+    scrollLock.enablePageScroll();
+  })
+
+  $filter_open.on('click', function() {
+    $filter.addClass('is-active');
+    scrollLock.disablePageScroll();
+  })
 }

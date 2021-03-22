@@ -34,16 +34,16 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="head-message">Рады вас видеть у нас на сайте. Приятных покупок!</div>
+      <div class="head-message">Рады вас видеть у нас на сайте. Приятных покупок!</div>
       <header class="header">
         <div class="container">
           <div class="row header__container">
-            <div class="col-lg-3 header__logo"><a class="logo" href="./index.html"><img class="logo__image" src="./img/logos/logo.png" alt="logo"></a></div>
-            <div class="col-lg-3"><a class="button button_style-1 button_w100" href="./categories.html"><span>Все категории</span>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-auto header__logo"><a class="logo" href="./index.html"><img class="logo__image" src="./img/logos/logo.png" alt="logo"></a></div>
+            <div class="col-lg-3 col-md col-sm-12 header__catalogue"><a class="button button_style-1 button_w100" href="./categories.html"><span>Все категории</span>
                 <svg class="icon">
                   <use xlink:href="./img/icons/icons-sprite.svg#arrow"></use>
                 </svg></a></div>
-            <div class="col-lg-4 header__search">
+            <div class="col-xl-4 col-auto header__search">
               <form class="search">
                 <div class="input search__input">
                   <input class="input__element" type="text" placeholder="Поиск по сайту">
@@ -54,14 +54,23 @@
                   </svg>
                 </button>
               </form>
+              <button class="header__search-close d-lg-none">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons-sprite.svg#delete"></use>
+                </svg>
+              </button>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-auto header__buttons">
               <div class="row">
-                <div class="col-lg-6"><a class="header-btn" href="#">
+                <div class="col d-lg-none"><a class="header-btn header__search-open" href="#">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons-sprite.svg#magnifier"></use>
+                    </svg></a></div>
+                <div class="col-lg-6 col"><a class="header-btn" href="#">
                     <svg class="icon">
                       <use xlink:href="./img/icons/icons-sprite.svg#heart"></use>
                     </svg><span>0</span></a></div>
-                <div class="col-lg-6"><a class="header-btn" href="./cart.html">
+                <div class="col-lg-6 col"><a class="header-btn" href="./cart.html">
                     <svg class="icon">
                       <use xlink:href="./img/icons/icons-sprite.svg#shopping-cart"></use>
                     </svg><span>4</span></a></div>
@@ -81,8 +90,10 @@
         </div>
         <section class="section product">
           <div class="container">
-            <div class="product__head row">
-              <div class="product__images col-lg-6">
+            <div class="product__head">
+              <h1 class="h2 product__title">Оригинальное полупрозрачное боди Odina с цветочным принтом</h1>
+              <div class="product__images">
+                <!--максимум 5 картинок-->
                 <div class="product__main-images">
                   <div class="product-labels product__labels">
                     <div class="product-labels__label product-labels__label_type-bestseller">Хит</div>
@@ -100,14 +111,12 @@
                   <div class="image image_cover"><img class="lazyload" data-src="./img/product4.png" alt="image"></div>
                 </div>
               </div>
-              <div class="product__content col-lg-6">
+              <div class="product__content">
                 <!--section-->
-                <div class="product__content-section">
-                  <h1 class="h2 product__title">Оригинальное полупрозрачное боди Odina с цветочным принтом</h1><span class="product__art">арт. 2345678</span>
-                </div>
+                <div class="product__content-section"><span class="product__art">арт. 2345678</span></div>
                 <!--section-->
-                <div class="product__content-section"><span class="product__content-section-title">Цена:</span>
-                  <div class="product__pricing"><span class="product__old-price">1389 ₽</span><span class="product__price">1069 ₽</span></div>
+                <div class="product__content-section product__price-section"><span class="product__content-section-title">Цена:</span>
+                  <div class="product__pricing"><span class="product__old-price">1389 ₽</span><span class="product__price text-red">1069 ₽</span></div>
                 </div>
                 <!--section-->
                 <div class="product__content-section"><span class="product__content-section-title">Цвет:</span>
@@ -120,30 +129,36 @@
                   </ul>
                 </div>
                 <!--section-->
-                <div class="product__content-section"><span class="product__content-section-title">Размер:</span>
-                  <select class="select">
-                    <option>54</option>
-                    <option>52</option>
-                    <option>50</option>
-                    <option>48</option>
-                    <option>48</option>
-                  </select>
+                <div class="product__content-section row">
+                  <div class="col-sm-auto"><span class="product__content-section-title">Размер:</span>
+                    <select class="select">
+                      <option>54</option>
+                      <option>52</option>
+                      <option>50</option>
+                      <option>48</option>
+                      <option>48</option>
+                    </select>
+                  </div>
                 </div>
                 <!--section-->
-                <div class="product__content-section product__buttons">
-                  <button class="button button_style-1 product__add-to-cart">Добавить в корзину</button>
-                  <button class="button button_style-ico">
-                    <svg class="icon">
-                      <use xlink:href="./img/icons/icons-sprite.svg#heart"></use>
-                    </svg>
-                  </button>
+                <div class="product__content-section row">
+                  <div class="col-sm-auto">
+                    <div class="product__buttons">
+                      <button class="button button_style-1 product__add-to-cart">Добавить в корзину</button>
+                      <button class="button button_style-ico">
+                        <svg class="icon">
+                          <use xlink:href="./img/icons/icons-sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="product__info" data-action="tabs">
               <div class="product__info-head">
-                <button class="product__info-tab-link" data-action="tabs-trigger"><span class="h2">Описание</span></button>
-                <button class="product__info-tab-link" data-action="tabs-trigger"><span class="h2">Характеристики</span></button>
+                <button class="product__info-tab-link" data-action="tabs-trigger"><span class="h3">Описание</span></button>
+                <button class="product__info-tab-link" data-action="tabs-trigger"><span class="h3">Характеристики</span></button>
               </div>
               <div class="product__info-content">
                 <div class="product__info-tab-content" data-action="tabs-content">
@@ -158,9 +173,9 @@
         </section>
         <section class="section product">
           <div class="container">
-            <h2 class="section__title">Рекомендуемые товары:</h2>
+            <h3 class="section__title">Рекомендуемые товары:</h3>
             <div class="row grid">
-                            <div class="catalogue-block col-lg-3">
+                            <div class="catalogue-block col-lg-3 col-md-4 col-sm-6">
                               <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                   <div class="product-labels catalogue-block__labels">
                                     <div class="product-labels__label product-labels__label_type-bestseller">Хит</div>
@@ -177,7 +192,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="catalogue-block col-lg-3">
+                            <div class="catalogue-block col-lg-3 col-md-4 col-sm-6">
                               <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                   <div class="product-labels catalogue-block__labels">
                                     <div class="product-labels__label product-labels__label_type-discount">Скидка</div>
@@ -188,14 +203,14 @@
                                   <div class="catalogue-block__bottom">
                                     <div class="catalogue-block__pricing">
                                       <div class="catalogue-block__old-price">1389 ₽</div>
-                                      <div class="catalogue-block__price">1069 ₽</div>
+                                      <div class="catalogue-block__price text-red">1069 ₽</div>
                                     </div>
                                     <button class="button button_style-1 catalogue-block__button">Добавить в корзину </button>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="catalogue-block col-lg-3">
+                            <div class="catalogue-block col-lg-3 col-md-4 col-sm-6">
                               <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                   <div class="product-labels catalogue-block__labels">
                                   </div>
@@ -211,7 +226,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="catalogue-block col-lg-3">
+                            <div class="catalogue-block col-lg-3 col-md-4 col-sm-6">
                               <div class="catalogue-block__container"><a class="catalogue-block__image" href="product.html">
                                   <div class="product-labels catalogue-block__labels">
                                     <div class="product-labels__label product-labels__label_type-discount">Скидка</div>
@@ -222,7 +237,7 @@
                                   <div class="catalogue-block__bottom">
                                     <div class="catalogue-block__pricing">
                                       <div class="catalogue-block__old-price">1389 ₽</div>
-                                      <div class="catalogue-block__price">1069 ₽</div>
+                                      <div class="catalogue-block__price text-red">1069 ₽</div>
                                     </div>
                                     <button class="button button_style-1 catalogue-block__button">Добавить в корзину </button>
                                   </div>
@@ -275,9 +290,13 @@
             <p class="modal-access__age">18+</p>
             <p class="modal-access__text text-transform-uppercase">Рады вас видеть у нас на сайте!</p>
             <p class="modal-access__text"> <span class="text-red text-transform-uppercase">Внимание! </span>Для доступа на сайт необходимо подтвердить, что вам уже есть 18 лет</p>
-            <div class="modal-access__buttons">
-              <button class="button button_style-2 modal-access__button">Нет, мне меньше 18 лет</button>
-              <button class="button button_style-1 modal-access__button" data-modal="close">Да, мне больше 18 лет</button>
+            <div class="modal-access__buttons row inputs-grid">
+              <div class="col-sm-6">
+                <button class="button button_style-2 button_w100">Нет, мне меньше 18 лет</button>
+              </div>
+              <div class="col-sm-6">
+                <button class="button button_style-1 button_w100" data-modal="close">Да, мне больше 18 лет</button>
+              </div>
             </div>
           </div>
         </div>

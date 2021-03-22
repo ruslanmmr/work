@@ -7,8 +7,10 @@
         p.modal-access__text 
           span.text-red.text-transform-uppercase Внимание! 
           | Для доступа на сайт необходимо подтвердить, что вам уже есть 18 лет
-        .modal-access__buttons 
-          button.button.button_style-2.modal-access__button Нет, мне меньше 18 лет
-          button(data-modal="close").button.button_style-1.modal-access__button Да, мне больше 18 лет
+        .modal-access__buttons.row.inputs-grid
+          .col-sm-6
+            button.button.button_style-2.button_w100 Нет, мне меньше 18 лет
+          .col-sm-6
+            button(data-modal="close").button.button_style-1.button_w100 Да, мне больше 18 лет
 
         

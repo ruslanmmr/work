@@ -24,7 +24,7 @@ mixin block2(image, type, classes)
           .catalogue-block__pricing 
             if type==2
               .catalogue-block__old-price 1389 ₽
-            .catalogue-block__price 1069 ₽
+            .catalogue-block__price(class=type==2?'text-red':'') 1069 ₽
           button.button.button_style-1.catalogue-block__button Добавить в корзину 
 
 mixin cart_item(image)

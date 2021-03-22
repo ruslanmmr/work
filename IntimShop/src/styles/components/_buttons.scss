@@ -9,24 +9,22 @@
   text-align: center;
   transition: color $trs1, border-color $trs1, background-color $trs1;
   height: 60px;
-  line-height: 54px;
-  padding: 0 30px;
+  border-radius: 30px;
   border-style: solid;
-  border-width: 3px;
-  border-radius: 60px;
-  .icon {
-    height: 14px;
-    width: 14px;
-    &:not(:last-child) {
-      margin-right: 12px;
-    }
-    &:not(:first-child) {
-      margin-left: 12px;
-    }
+  &_style-1, &_style-2 {
+    line-height: 54px;
+    padding: 0 30px;
+    border-width: 3px;
+    border-radius: 30px;
   }
   &_style-1 {
     background-color: #ECB9BB;
     border-color: #ECB9BB;
+    .icon {
+      width: 16px;
+      height: 16px;
+      margin-left: 15px;
+    }
     &[data-touch], &[data-hover] {
       background-color: #e7abad;
       border-color: #e7abad;
@@ -54,5 +52,21 @@
   }
   &_w100 {
     width: 100%;
+  }
+  @include media-breakpoint-down(lg) {
+    height: 50px;
+    border-radius: 25px;
+    &_style-1, &_style-2 {
+      line-height: 46px;
+      padding: 0 20px;
+      border-width: 2px;
+    }
+    &_style-ico {
+      width: 50px;
+      .icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 }
