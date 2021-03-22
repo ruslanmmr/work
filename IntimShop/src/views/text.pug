@@ -1,0 +1,22 @@
+extends layout/layout
+block variables
+  -let page_title = 'Текст'
+  -let title = sitename+' - '+page_title
+block content
+  include blocks/breadcrumbs
+  section.section 
+    .container 
+      h1.section__title Шаблон текстовый
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque placeat non pariatur deserunt iste voluptatem doloremque exercitationem unde officiis est provident, ex reprehenderit architecto? Quisquam aut minus reiciendis aliquid voluptatem!
+      h2 Заголовок h2
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat numquam rerum dolores voluptate modi incidunt esse, veritatis veniam cupiditate possimus quisquam, quae enim necessitatibus odio. Laudantium voluptates rem ducimus sit.
+      h3 Нумерованный список
+      ol
+        li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      h2 Ненумерованный список
+      ul
+        li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        li Lorem ipsum dolor sit amet, consectetur adipisicing elit.

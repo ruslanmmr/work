@@ -4550,6 +4550,47 @@ a:not([class]), .link {
   a:not([class]).is-active, .link.is-active {
     pointer-events: none; }
 
+ul:not([class]):not(:last-child), ol:not([class]):not(:last-child) {
+  margin-bottom: 1.25rem; }
+
+ul:not([class]) li:not([class]):not(:last-child), ol:not([class]) li:not([class]):not(:last-child) {
+  margin: 0 0 0.75rem 0; }
+
+ul:not([class]) {
+  padding-left: 1rem; }
+  ul:not([class]) li:not([class]) {
+    position: relative;
+    padding-left: 30px; }
+    ul:not([class]) li:not([class])::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 4px;
+      top: calc(50% - 1px);
+      width: 12px;
+      height: 2px;
+      background-color: #e7abad; }
+
+ol:not([class]) {
+  counter-reset: section;
+  padding-left: 1rem; }
+  ol:not([class]) li:not([class]) {
+    padding-left: 30px;
+    position: relative; }
+    ol:not([class]) li:not([class]):before {
+      counter-increment: section;
+      content: counter(section);
+      position: absolute;
+      font-size: 0.875rem;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      border-radius: 10px;
+      background-color: #e7abad; }
+
 /*========== Helpers ==========*/
 .text-align-center {
   text-align: center; }
