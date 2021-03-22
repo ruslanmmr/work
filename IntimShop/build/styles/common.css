@@ -4890,13 +4890,11 @@ select.select {
   margin-bottom: 50px; }
   .breadcrumbs__item {
     display: inline; }
-    .breadcrumbs__item:not(:last-child) {
-      margin-right: 5px; }
-      .breadcrumbs__item:not(:last-child)::after {
-        content: '> ';
-        display: inline-block;
-        margin-left: 5px;
-        color: #898989; }
+    .breadcrumbs__item:not(:last-child)::after {
+      content: '> ';
+      display: inline-block;
+      margin-left: 5px;
+      color: #898989; }
   .breadcrumbs__link {
     color: #898989; }
     .breadcrumbs__link[data-hover], .breadcrumbs__link[data-touch] {

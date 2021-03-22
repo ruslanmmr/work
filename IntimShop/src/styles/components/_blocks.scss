@@ -16,7 +16,6 @@
   &__item {
     display: inline;
     &:not(:last-child) {
-      margin-right: 5px;
       &::after {
         content: '> ';
         display: inline-block;
