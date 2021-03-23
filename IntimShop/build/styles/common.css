@@ -4639,12 +4639,18 @@ ol:not([class]) {
     width: 60px;
     border-width: 1px;
     background-color: #fff;
-    border-color: #ECB9BB; }
+    border-color: #ECB9BB;
+    color: transparent; }
     .button_style-ico .icon {
       width: 30px;
-      height: 30px; }
+      height: 30px;
+      fill: currentColor;
+      stroke: #000;
+      transition: stroke 0.15s ease-in-out; }
     .button_style-ico[data-touch], .button_style-ico[data-hover], .button_style-ico.is-active {
-      background-color: #ECB9BB; }
+      color: #ECB9BB; }
+      .button_style-ico[data-touch] .icon, .button_style-ico[data-hover] .icon, .button_style-ico.is-active .icon {
+        stroke: #ECB9BB; }
   .button_w100 {
     width: 100%; }
   @media (max-width: 1023.98px) {
@@ -4986,6 +4992,25 @@ select.select {
   z-index: 3;
   top: 10px;
   left: 10px; }
+
+.catalogue-block__favourite-btn {
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 27px;
+  color: transparent;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+  transition: color 0.15s ease-in-out; }
+  .catalogue-block__favourite-btn .icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    stroke: #fff;
+    fill: currentColor; }
+  .catalogue-block__favourite-btn[data-touch], .catalogue-block__favourite-btn[data-hover], .catalogue-block__favourite-btn.is-active {
+    color: #ECB9BB; }
 
 .catalogue-block__image {
   border-radius: 10px;
@@ -5758,7 +5783,9 @@ select.select {
     width: 42px;
     height: 42px;
     margin: auto;
-    position: relative; }
+    position: relative;
+    fill: transparent;
+    stroke: currentColor; }
   .header-btn span {
     position: absolute;
     right: 0;

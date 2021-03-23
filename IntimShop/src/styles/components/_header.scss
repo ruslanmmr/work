@@ -130,6 +130,8 @@
     height: 42px;
     margin: auto;
     position: relative;
+    fill: transparent;
+    stroke: currentColor;
   }
   span {
     position: absolute;

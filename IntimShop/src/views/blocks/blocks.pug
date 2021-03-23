@@ -15,6 +15,9 @@ mixin block2(image, type, classes)
             .product-labels__label.product-labels__label_type-bestseller Хит
           else if type==2
             .product-labels__label.product-labels__label_type-discount Скидка
+        button.catalogue-block__favourite-btn(class=type==2?'is-active':'')
+          svg.icon
+            use(xlink:href="./img/icons/icons-sprite.svg#heart")
         .image.image_cover
           img(data-src=image, alt="image").lazyload
       .catalogue-block__content 

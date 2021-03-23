@@ -1,0 +1,44 @@
+extends layout/layout
+block variables
+  -let page_title = 'Избранные товары'
+  -let title = sitename+' - '+page_title
+block content 
+  include blocks/breadcrumbs
+  section.section 
+    .container 
+      h1.section__title Избранные товары
+      .row.grid
+        include blocks/blocks
+        -let grid = 'col-lg-3 col-md-4 col-sm-6'
+        +block2('./img/c1.jpg', 1, grid)
+        +block2('./img/c2.jpg', 2, grid)
+        +block2('./img/c3.jpg', 3, grid)
+        +block2('./img/c4.jpg', 2, grid)
+        +block2('./img/c1.jpg', 1, grid)
+        +block2('./img/c2.jpg', 2, grid)
+        +block2('./img/c3.jpg', 3, grid)
+        +block2('./img/c4.jpg', 2, grid)
+        +block2('./img/c1.jpg', 1, grid)
+        +block2('./img/c2.jpg', 2, grid)
+        +block2('./img/c3.jpg', 3, grid)
+        +block2('./img/c4.jpg', 2, grid)
+      .pagination 
+        ul.pagination__list 
+          li.pagination__item   
+            a(href="#").pagination__link.pagination__back
+              svg.icon
+                use(xlink:href="./img/icons/icons-sprite.svg#arrow")
+          li.pagination__item   
+            a(href="#").pagination__link.is-active 1
+          li.pagination__item   
+            a(href="#").pagination__link 2
+          li.pagination__item   
+            a(href="#").pagination__link 3
+          li.pagination__item   
+            a(href="#").pagination__link ...
+          li.pagination__item   
+            a(href="#").pagination__link 12
+          li.pagination__item   
+            a(href="#").pagination__link.pagination__next 
+              svg.icon
+                use(xlink:href="./img/icons/icons-sprite.svg#arrow")

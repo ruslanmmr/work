@@ -140,6 +140,27 @@
     top: 10px;
     left: 10px;
   }
+  &__favourite-btn {
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 27px;
+    color: transparent;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+    transition: color $trs1;
+    .icon {
+      display: block;
+      width: 100%;
+      height: 100%;
+      stroke: #fff;
+      fill: currentColor;
+    }
+    &[data-touch], &[data-hover], &.is-active {
+      color: #ECB9BB;
+    }
+  }
   &__image {
     border-radius: 10px;
     flex: 0 0 auto;

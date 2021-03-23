@@ -42,12 +42,19 @@
     border-width: 1px;
     background-color: #fff;
     border-color: #ECB9BB;
+    color: transparent;
     .icon {
       width: 30px;
       height: 30px;
+      fill: currentColor;
+      stroke: #000;
+      transition: stroke $trs1;
     }
     &[data-touch], &[data-hover], &.is-active {
-      background-color: #ECB9BB;
+      color: #ECB9BB;
+      .icon {
+        stroke: #ECB9BB;
+      }
     }
   }
   &_w100 {
