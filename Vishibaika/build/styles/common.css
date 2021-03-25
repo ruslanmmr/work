@@ -5904,10 +5904,13 @@ img {
     align-items: center;
     font-size: 1.25rem;
     text-align: right;
-    line-height: 1.2; }
+    line-height: 1.2;
+    transition: opacity 0.15s ease-in-out; }
     .section-thanks__subscription-icon {
       width: 50px;
       height: 50px; }
+    .section-thanks__subscription[data-touch], .section-thanks__subscription[data-hover] {
+      opacity: 0.8; }
   .section-thanks__subscription-text {
     margin: 0; }
   .section-thanks__subscription-icon {
@@ -5915,20 +5918,19 @@ img {
     width: 45px;
     height: 45px;
     font-size: 0;
-    transition: opacity 0.15s ease-in-out;
     margin-left: 20px; }
     .section-thanks__subscription-icon img {
       display: block;
       width: 100%;
       height: 100%; }
-    .section-thanks__subscription-icon[data-touch], .section-thanks__subscription-icon[data-hover] {
-      opacity: 0.8; }
   @media (max-width: 1023.98px) {
     .section-thanks__text {
       font-size: 1.25rem; } }
   @media (max-width: 575.98px) {
     .section-thanks {
       margin-top: 50px; }
+      .section-thanks__subscription {
+        font-size: 1rem; }
       .section-thanks__subscription-icon {
         width: 35px;
         height: 35px; }
