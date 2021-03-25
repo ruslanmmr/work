@@ -7,12 +7,14 @@ block content
     .decoration-items
       .decoration-items__image.rellax(data-rellax-speed="2")
         img(src="./img/s1.png", alt="img")
-    img(src="./img/homescreen.jpg", alt="bg").home__background
+    .home__background.image.image_cover
+      img(src="./img/homescreen.jpg", alt="bg").lazyload.d-none.d-sm-block
+      img(src="./img/homescreen_mobile.png", alt="bg").lazyload.d-sm-none
     .container 
       h2.home__sub-title Настольная игра
       h1.home__title Вышибай-КА
       p.home__text 
-        span Игра, которая вызывает бурю эмоций
+        strong Игра, которая вызывает бурю эмоций
         <br>
         | не только у детей, но и у взрослых!
       a(href='#modal-order' data-modal='open').button.button_style-2.home__button 
@@ -22,8 +24,8 @@ block content
         .home__item
           svg.icon
             use(xlink:href="./img/icons/icons-sprite.svg#heart")
-          p Интересна в любом возрасте! 
-            strong От&nbsp;2&nbsp;до&nbsp;99&nbsp;лет!
+          p Интересна в любом возрасте!<br>
+            strong От 2 до 99 лет!
         .home__item
           svg.icon
             use(xlink:href="./img/icons/icons-sprite.svg#star")
@@ -59,7 +61,7 @@ block content
             p.video-section__head-txt 
               strong Цель игры - перестрелять все шайбы на сторону соперника.
           .video-section__container 
-            a(href="https://www.youtube.com/watch?v=D25icebRzHA" data-fancybox).video-section__element
+            a(href="https://www.youtube.com/watch?v=FnfykY4BJvM" data-fancybox).video-section__element
               .image.image_cover
                 img(data-src="./img/video.jpg", alt="image").lazyload
               .video-section__element-play  
@@ -121,7 +123,7 @@ block content
       h3.section__title.section-about__title Почему   
         strong Вышибай-КА - это круто?
       .section-about__content.row
-        .col-xl-6
+        .col-md-6
           .section-about__item  
             svg.icon
               use(xlink:href="./img/icons/icons-sprite.svg#shooting-stars")
@@ -148,7 +150,7 @@ block content
               h6 Отличный подарок
               p Подарив Вышибай-КУ на праздник<br> или на день рождение, вы подарите<br> не просто игру, а эмоции,<br> которые бесценны!
           
-        .col-xl-6
+        .col-md-6
           .section-about__item
             svg.icon
               use(xlink:href="./img/icons/icons-sprite.svg#weight-scale")
@@ -194,7 +196,7 @@ block content
         strong свой дизайн:
       .product-section__content.row 
         mixin block(image, title, quantity)
-          .product-block.col-xl-4
+          .product-block.col-lg-4.col-sm-6
             .product-block__container.js-touch-hover
               .product-block__image.image.image_contain 
                 img(data-src=image, alt="product").lazyload
@@ -328,35 +330,35 @@ block content
     img(data-src="./img/certificate.png", alt="bg").lazyload.section-trust__image
     .container.section-trust__container
       .row 
-        .offset-xl-4.col-xl-8
-          h3.section__title  Почему 
+        .offset-xl-4.offset-lg-2.col-xl-8.col-lg-10
+          h3.section__title.section-trust__title  Почему 
             strong нам можно доверять:
           .section-trust__container.row
-            .section-trust__item.col-xl-5
+            .section-trust__item.col-sm-5
               svg.icon
                 use(xlink:href="./img/icons/icons-sprite.svg#calendar")
               p На рынке<br> 
                 strong с 2014 года
-            .section-trust__item.col-xl-6
+            .section-trust__item.col-sm-6
               svg.icon
                 use(xlink:href="./img/icons/icons-sprite.svg#winner")
               p Продали уже <br> 
                 strong более 3000 игр
-            .section-trust__item.col-xl-5
+            .section-trust__item.col-sm-5
               svg.icon
                 use(xlink:href="./img/icons/icons-sprite.svg#certificate")
               p 
                 strong Наш товар соответствует ГОСТ 
                 | и требованиям безопасности
-            .section-trust__item.col-xl-6
+            .section-trust__item.col-sm-6
               svg.icon
                 use(xlink:href="./img/icons/icons-sprite.svg#manufacture")
               p Собственное производство. 
                 strong Мы не импортируем игру из Китая, а производим на совесть 
                 | на своей фабрике в подмосковье
-          .section-trust__button
-            a(href='#modal-order' data-modal='open').button.button_style-2 
-              span Заказать игру сейчас
+        .offset-xl-4.col-xl-8.section-trust__button
+          a(href='#modal-order' data-modal='open').button.button_style-2 
+            span Заказать игру сейчас
 
   section.section.how-we-work
     .container 
@@ -364,24 +366,24 @@ block content
         strong Как 
         | мы работаем?
       .how-we-work__container.row 
-        .how-we-work__block.col-lg-3
+        .how-we-work__block.col-lg-3.col-sm-6
           .image.image_contain
             img(data-src="./img/01.png", alt="image").lazyload
           p Вы оставляете<br> 
             strong заявку<br> на сайте
-        .how-we-work__block.col-lg-3
+        .how-we-work__block.col-lg-3.col-sm-6
           .image.image_contain
             img(data-src="./img/02.png", alt="image").lazyload
           p Наш менеджер 
             strong уточняет<br> детали заказа 
             | при звонке<br> или в WhatsApp
-        .how-we-work__block.col-lg-3
+        .how-we-work__block.col-lg-3.col-sm-6
           .image.image_contain
             img(data-src="./img/03.png", alt="image").lazyload
           p
             strong Доставляем на следующий<br> день 
             | по Москве<br> и от 2-5 дней в регионы
-        .how-we-work__block.col-lg-3
+        .how-we-work__block.col-lg-3.col-sm-6
           .image.image_contain
             img(data-src="./img/04.png", alt="image").lazyload
           p

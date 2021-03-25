@@ -12,6 +12,15 @@ const $body = document.body;
 const $wrapper = document.querySelector('.wrapper');
 const $header = document.querySelector('.header');
 
+//check device
+function mobile() {
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    return true;
+  } else {
+    return false;
+  }
+}
+
 window.onload = function(){
   TouchHoverEvents.init();
   Modal.init();
@@ -22,7 +31,9 @@ window.onload = function(){
   if($reviews_slider) new ReviewsSlider($reviews_slider).init();
 
   //parallax
-  new Rellax('.rellax');
+  if(!mobile()) {
+    new Rellax('.rellax');
+  }
 
   //show page
   $body.classList.add('loaded');
@@ -191,7 +202,6 @@ function gallery() {
   });
 }
 
-
 class ReviewsSlider {
   constructor($block) {
     this.$block = $block
@@ -200,7 +210,6 @@ class ReviewsSlider {
   init() {
     this.slider = new Splide(this.$block, {
       type: 'loop',
-      perPage: 5,
       perMove: 1,
       focus: 'center',
       autoWidth: true,
@@ -210,8 +219,8 @@ class ReviewsSlider {
       waitForTransition: false,
       gap: 20,
       speed: 500,
-      autoplay: true,
-      interval: 7000
+      //autoplay: true,
+      //interval: 7000
     })
 
     this.slider.mount();

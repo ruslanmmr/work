@@ -8,12 +8,27 @@
 .main {
   flex: 1 1 100%;
   padding-top: 90px;
+  @include media-breakpoint-down(md) {
+    padding-top: 160px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 115px;
+  }
 }
 .section {
   position: relative;
   margin-bottom: 140px;
   &__title {
     margin-bottom: 60px;
+  }
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 100px;
+    &__title {
+      margin-bottom: 50px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 80px;
   }
 }
 
