@@ -5183,10 +5183,10 @@ img {
       z-index: 2; }
     .section-trust__bg::before {
       top: 0;
-      background: linear-gradient(0deg, transparent 0%, #fff 100%); }
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, white 100%); }
     .section-trust__bg::after {
       bottom: 0;
-      background: linear-gradient(180deg, transparent 0%, #fff 100%); }
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, white 100%); }
   .section-trust__image {
     position: absolute;
     width: 760px;
