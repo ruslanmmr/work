@@ -52,7 +52,7 @@ block content
       .row 
         .offset-lg-1.col-lg-10
           .video-section__head 
-            h3.section__title 
+            h3.section__title.video-section__title
               strong Что такое 
               | Вышибай-КА?
             p.video-section__head-txt Это настольная игра, которая поднимает настроение! 
@@ -81,7 +81,7 @@ block content
             span.rules-item__index 01
             .image.image_cover 
               img(data-src="./img/i1.jpg", alt="image").lazyload
-            p.rules-item__text 
+            p 
               strong Дай 5 своему сопернику 
               | - игра началась!
         .rules-item
@@ -89,7 +89,7 @@ block content
             span.rules-item__index 02
             .image.image_cover 
               img(data-src="./img/i2.jpg", alt="image").lazyload
-            p.rules-item__text 
+            p 
               strong Бери шайбы и пуляй 
               | на чужую сторону
         .rules-item
@@ -97,7 +97,7 @@ block content
             span.rules-item__index 03
             .image.image_cover 
               img(data-src="./img/i3.jpg", alt="image").lazyload
-            p.rules-item__text 
+            p 
               strong Кто первый перестреляет шайбы 
               | на другую сторону - тот победил!
         .rules-final-item 
@@ -105,9 +105,83 @@ block content
             img(src="./img/vs.png", alt="vs").lazyload.rules-final-item__image
             h5.rules-final-item__title На 1-й взгляд, 
               strong играть просто.
-            p.rules-final-item__text Но когда шайба никак не попадает в ворота, а противник наступает на пятки, 
+            p Но когда шайба никак не попадает в ворота, а противник наступает на пятки, 
               strong начинается настоящая битва 
               | . Не оторваться!
+
+  section.section.section-about
+    .decoration-items
+      .decoration-items__image.rellax(data-rellax-speed="2" data-rellax-percentage="0.5")
+        img(src="./img/s2.png", alt="img")
+    .section-about__bg.image.image_cover
+      img(data-src="./img/blurbg.jpg", alt="bg").lazyload
+    img(data-src="./img/kids.png", alt="kids").section-about__kids.lazyload
+    img(data-src="./img/layer6572.png", alt="kids" data-rellax-speed="1" data-rellax-percentage="0.5").section-about__table.lazyload.rellax
+    .container  
+      h3.section__title.section-about__title Почему   
+        strong Вышибай-КА - это круто?
+      .section-about__content.row
+        .col-xl-6
+          .section-about__item  
+            svg.icon
+              use(xlink:href="./img/icons/icons-sprite.svg#shooting-stars")
+            .section-about__item-text 
+              h6 Развивает ловкость<br> и скорость реакции
+              p Почувствуй свою суперсилу!
+          .section-about__item   
+            svg.icon
+              use(xlink:href="./img/icons/icons-sprite.svg#family")
+            .section-about__item-text 
+              h6 Можно играть с кем угодно:
+              p С семьей, с детьми, с друзьями и коллегами!
+              p Нравится взрослым, подросткам, бабушкам,<br> дедушкам и детям от 2-х до 99 лет!
+          .section-about__item  
+            svg.icon
+              use(xlink:href="./img/icons/icons-sprite.svg#tag")
+            .section-about__item-text 
+              h6 Оптимальная стоимость
+              p Мы являемся производителями<br> и поэтому можем предоставить самую<br> минимальную стоимость с учетом<br> наилучшего качества, без наценки
+          .section-about__item  
+            svg.icon
+              use(xlink:href="./img/icons/icons-sprite.svg#gift-box")
+            .section-about__item-text 
+              h6 Отличный подарок
+              p Подарив Вышибай-КУ на праздник<br> или на день рождение, вы подарите<br> не просто игру, а эмоции,<br> которые бесценны!
+          
+        .col-xl-6
+          .section-about__item
+            svg.icon
+              use(xlink:href="./img/icons/icons-sprite.svg#weight-scale")
+            .section-about__item-text 
+              h6 Легкая и компактная
+              p Вес игры 1400гр, размер 58 на 30.<br> Она легко помещается в любую сумку.
+          .section-about__item   
+            svg.icon
+              use(xlink:href="./img/icons/icons-sprite.svg#box")
+            .section-about__item-text 
+              h6 Ее легко брать с собой
+              p В кафе, в гости, на улицу, <br> на отдых или вечеринку!
+          .section-about__item  
+            svg.icon
+              use(xlink:href="./img/icons/icons-sprite.svg#emoticons")
+            .section-about__item-text 
+              h6 Заряжает на веселые эмоции
+              p Поднимает ваше<br> настроение на 100%
+          .section-about__item  
+            svg.icon
+              use(xlink:href="./img/icons/icons-sprite.svg#logs")
+            .section-about__item-text 
+              h6 Изготовлена из натуральной древесины:
+              p Бережно просушиваем <br> и тщательно отшлифовываем 
+          .section-about__item  
+            svg.icon
+              use(xlink:href="./img/icons/icons-sprite.svg#calendar")
+            .section-about__item-text 
+              h6 Долговечная
+              p Изготавливаем из массива дерева <br> повышенной прочности 
+      .section-about__button
+        a(href='#modal-order' data-modal='open').button.button_style-2 
+          span Заказать игру сейчас
 
   section.section.product-section
     .decoration-items
@@ -140,7 +214,10 @@ block content
         +block('./img/product5.jpg', 'Скорость', '*Осталось <strong>всего 4 штуки</strong> по акции')
         +block('./img/product6.jpg', 'Бентли', '*Осталось <strong>всего 7 штук</strong> по акции')
 
-  section.section.section-kit 
+  section.section.section-kit
+    .decoration-items
+      .decoration-items__image.rellax(data-rellax-speed="4" data-rellax-percentage="0.5")
+        img(src="./img/s1.png", alt="img")
     .container 
       h3.section__title.section-kit__title
         strong Что входит 
@@ -148,15 +225,56 @@ block content
       .section-kit__container.row
         .section-kit__small-items.col-lg-3
           .section-kit__small-item 
-            .image.image_cover 
-              img(data-src="./img/k1.png", alt="image").lazyload
+            .image
+              img(data-src="./img/k2.png", alt="image").lazyload
+            h6.section-kit__small-item-title Размер:
+            p.section-kit__small-item-text 30*58см, 3 см.
+          .section-kit__small-item 
+            .image 
+              img(data-src="./img/k3.png", alt="image").lazyload
+            h6.section-kit__small-item-title Вес:
+            p.section-kit__small-item-text 1400 гр.
+          .section-kit__small-item 
+            .image 
+              img(data-src="./img/k4.png", alt="image").lazyload
+            h6.section-kit__small-item-title Материал:
+            p.section-kit__small-item-text дуб, береза
+          .section-kit__small-item 
+            .image
+              img(data-src="./img/k5.png", alt="image").lazyload
+            h6.section-kit__small-item-title Фирменная коробка:
+            p.section-kit__small-item-text 1 шт.
 
         .section-kit__center-item.col-lg-6
           .image.image_contain 
+            img(data-src="./img/k1_bg.png", alt="image" data-rellax-speed="1.5" data-rellax-percentage="0.5").lazyload.rellax
             img(data-src="./img/k1.png", alt="image").lazyload
 
 
-        .section-kit__small-items.col-lg-6
+        .section-kit__small-items.col-lg-3
+          .section-kit__small-item 
+            .image
+              img(data-src="./img/k6.png", alt="image").lazyload
+            h6.section-kit__small-item-title Шайбы:
+            p.section-kit__small-item-text 10 шт.
+          .section-kit__small-item 
+            .image 
+              img(data-src="./img/k7.png", alt="image").lazyload
+            h6.section-kit__small-item-title Запасные резинки:
+            p.section-kit__small-item-text 1 шт.
+          .section-kit__small-item 
+            .image 
+              img(data-src="./img/k8.png", alt="image").lazyload
+            h6.section-kit__small-item-title Инструкция
+            p.section-kit__small-item-text 1 шт.
+          .section-kit__small-item 
+            .image
+              img(data-src="./img/k9.png", alt="image").lazyload
+            h6.section-kit__small-item-title Гарантия
+            p.section-kit__small-item-text 1 шт.
+      .section-kit__button  
+        a(href='#modal-order' data-modal='open').button.button_style-2 
+          span Заказать игру сейчас
 
   section.section.section-gallery 
     .container 

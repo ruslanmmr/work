@@ -1,14 +1,7 @@
 footer.footer
-  .container.footer__prepayment
-    .row.justify-content-center
-      .col-xl-auto
-        form.prepayment-block.footer__prepayment-block
-          input(type="text" placeholder="350" required).input.prepayment-block__item.prepayment-block__input
-          button.button.button_style-3.prepayment-block__item.prepayment-block__button
-            span Внести предоплату
-          img(src="./img/robokassa.jpg", alt="robokassa").prepayment-block__image.prepayment-block__item
-
-
+  if footer_type!==2
+    .container.footer__prepayment
+      <script type="text/javascript" src="https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?MerchantLogin=Taddi&InvoiceID=0&Culture=ru&Encoding=utf-8&Description=%D0%A0%D0%B0%D1%81%D1%82%D1%83%D1%89%D0%B8%D0%B9%20%D1%81%D1%82%D1%83%D0%BB%20%22%D0%A2%D0%B0%D0%B4%D0%B4%D0%B8%22&DefaultSum=450&SignatureValue=e5d717954ee4b422cb8aa6023bdfe226"></script>
   .container.footer__container
     .footer__logo 
       .logo 

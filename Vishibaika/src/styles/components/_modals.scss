@@ -38,6 +38,38 @@
     transform: translateY(10px);
     max-width: 460px;
   }
+  &-close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin: -10px;
+    z-index: 2;
+    right: 20px;
+    top: 20px;
+    &:before, &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      height: 2px;
+      width: 20px;
+      background-color: #000;
+      transition: background-color $trs1;
+    }
+    &:before {
+      transform: translateY(-50%) rotate(-45deg);
+    }
+    &:after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+    &[data-hover], &[data-touch] {
+      &::before, &::after {
+        background-color: #f82c2c;
+      }
+    }
+  }
   &__head {
     margin-bottom: 25px;
     text-align: center;

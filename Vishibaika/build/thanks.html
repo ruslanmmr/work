@@ -52,18 +52,21 @@
         </div>
       </header>
       <main class="main">
-      </main>
-      <footer class="footer">
-        <div class="container footer__prepayment">
-          <div class="row justify-content-center">
-            <div class="col-xl-auto">
-              <form class="prepayment-block footer__prepayment-block">
-                <input class="input prepayment-block__item prepayment-block__input" type="text" placeholder="350" required>
-                <button class="button button_style-3 prepayment-block__item prepayment-block__button"><span>Внести предоплату</span></button><img class="prepayment-block__image prepayment-block__item" src="./img/robokassa.jpg" alt="robokassa">
-              </form>
+        <section class="section section-thanks">
+          <div class="container section-thanks__container">
+            <div class="section-thanks__top"><img class="section-thanks__check" src="./img/icons/check.svg" alt="check">
+              <h1 class="h2 section-thanks__title">Благодарим за Вашу заявку</h1>
+              <p class="section-thanks__text">Менеджер очень скоро с вами свяжется</p>
+            </div>
+            <div class="section-thanks__bottom">
+              <div class="section-thanks__subscription">
+                <p class="section-thanks__subscription-text">Подпишитесь на наш <strong>Instagram</strong></p><a class="section-thanks__subscription-icon" href="#">instagram <img src="./img/icons/instagram.png" alt="icon"></a>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+      </main>
+      <footer class="footer">
         <div class="container footer__container">
           <div class="footer__logo">
             <div class="logo"> <a class="logo__image" href="./index.html"><img src="./img/logos/logo.png" alt="logo"></a><span class="logo__text">Настольная игра с доставкой по всей России</span></div>
@@ -88,6 +91,7 @@
       <div class="modal__wrapper" data-scroll-lock-scrollable>
         <div class="modal-block">
           <div class="modal__container">
+            <button class="modal-close" data-modal="close"></button>
             <div class="modal__head">
               <h4 class="modal__title">Заказать настольный хоккей</h4>
               <p class="modal__head-text">Заполните форму, чтобы оформить заказ. После отправки заявки, мы перезвоним, чтобы уточнить детали доставки</p>
@@ -114,6 +118,7 @@
       <div class="modal__wrapper" data-scroll-lock-scrollable>
         <div class="modal-block">
           <div class="modal__container">
+            <button class="modal-close" data-modal="close"></button>
             <div class="modal__head">
               <h4 class="modal__title">Заказать обратный звонок</h4>
               <p class="modal__head-text">Заполните форму и наш менеджер обязательно свяжется с вами</p>
@@ -137,7 +142,7 @@
       </div>
     </div>
     <!--jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!--scripts-->
     <script src="./scripts/libs/lazysizes.min.js"></script>
     <script src="./scripts/libs/scroll-lock.min.js"></script>

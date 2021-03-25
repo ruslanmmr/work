@@ -1,4 +1,20 @@
 extends layout/layout
 block variables
-  -var title = 'Спасибо!'
+  -var title = 'Спасибо!';
+  -var footer_type = 2;
 block content
+
+  section.section.section-thanks
+    .container.section-thanks__container 
+      .section-thanks__top
+        img(src="./img/icons/check.svg", alt="check").section-thanks__check
+        h1.h2.section-thanks__title Благодарим за Вашу заявку
+        p.section-thanks__text Менеджер очень скоро с вами свяжется
+    
+      .section-thanks__bottom
+        .section-thanks__subscription
+          p.section-thanks__subscription-text Подпишитесь на наш 
+            strong Instagram
+          a(href="#").section-thanks__subscription-icon
+            | instagram 
+            img(src="./img/icons/instagram.png", alt="icon") 

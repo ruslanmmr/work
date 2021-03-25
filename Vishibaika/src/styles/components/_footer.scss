@@ -1,13 +1,12 @@
 .footer {
   flex-shrink: 0;
-  padding-top: 35px;
+  padding: 35px 0;
   box-shadow: $shadow;
   font-size: 0.875rem;
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 35px 0;
   }
   &__logo {
     width: auto;
@@ -19,7 +18,9 @@
   &__center {
     text-align: center;
   }
-  &__prepayment-block {
-    width: 600px;
+  &__prepayment {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
   }
 }
