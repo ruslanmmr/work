@@ -1,0 +1,190 @@
+extends layout/layout
+block variables
+  -var title = sitename+' - Настольная игра'
+block content
+
+  section.section.home
+    .decoration-items
+      .decoration-items__image.rellax(data-rellax-speed="2")
+        img(src="./img/s1.png", alt="img")
+    img(src="./img/homescreen.jpg", alt="bg").home__background
+    .container 
+      h2.home__sub-title Настольная игра
+      h1.home__title Вышибай-КА
+      p.home__text 
+        span Игра, которая вызывает бурю эмоций
+        <br>
+        | не только у детей, но и у взрослых!
+      a(href='#modal-order' data-modal='open').button.button_style-2.home__button 
+        span Заказать игру сейчас 
+
+      .home__items 
+        .home__item
+          svg.icon
+            use(xlink:href="./img/icons/icons-sprite.svg#heart")
+          p Интересна в любом возрасте! 
+            strong От&nbsp;2&nbsp;до&nbsp;99&nbsp;лет!
+        .home__item
+          svg.icon
+            use(xlink:href="./img/icons/icons-sprite.svg#star")
+          p 
+            strong Развивает ловкость 
+            | и реакцию
+        .home__item
+          svg.icon
+            use(xlink:href="./img/icons/icons-sprite.svg#cool")
+          p Заряжает 
+            strong на 100%
+        .home__item
+          svg.icon
+            use(xlink:href="./img/icons/icons-sprite.svg#box")
+          p 
+            strong Легко брать<br> 
+            | с собой
+
+  section.section.video-section
+    .decoration-items
+      .decoration-items__image.rellax(data-rellax-speed="0.5" data-rellax-percentage="0.5")
+        img(src="./img/s1.png", alt="img")
+      .decoration-items__image.rellax(data-rellax-speed="5" data-rellax-percentage="0.5")
+        img(src="./img/s1.png", alt="img")
+    .container
+      .row 
+        .offset-lg-1.col-lg-10
+          .section__head 
+            h3.section__head-title 
+              strong Что такое 
+              | Вышибай-КА?
+            p.video-section__head-txt Это настольная игра, которая поднимает настроение! 
+            p.video-section__head-txt 
+              strong Цель игры - перестрелять все шайбы на сторону соперника.
+          .video-section__container 
+            a(href="https://www.youtube.com/watch?v=D25icebRzHA" data-fancybox).video-section__element
+              .image.image_cover
+                img(data-src="./img/video.jpg", alt="image").lazyload
+              .video-section__element-play  
+                svg.icon
+                  use(xlink:href="./img/icons/icons-sprite.svg#play")
+              .video-section__text 
+                img(src="./img/line.png", alt="img")
+                strong Посмотрите видео,
+                <br> 
+                | чтобы лучше понять суть игры
+                
+  section.section.rules-section
+    .container 
+      .section__head.rules-section__head 
+        h3.section__head-title Всё очень 
+          strong просто!
+      .rules-section__container.row
+        .rules-item
+          .rules-item__container 
+            span.rules-item__index 01
+            .image.image_cover 
+              img(data-src="./img/i1.jpg", alt="image").lazyload
+            p.rules-item__text 
+              strong Дай 5 своему сопернику 
+              | - игра началась!
+        .rules-item
+          .rules-item__container 
+            span.rules-item__index 02
+            .image.image_cover 
+              img(data-src="./img/i2.jpg", alt="image").lazyload
+            p.rules-item__text 
+              strong Бери шайбы и пуляй 
+              | на чужую сторону
+        .rules-item
+          .rules-item__container 
+            span.rules-item__index 03
+            .image.image_cover 
+              img(data-src="./img/i3.jpg", alt="image").lazyload
+            p.rules-item__text 
+              strong Кто первый перестреляет шайбы 
+              | на другую сторону - тот победил!
+        .rules-final-item 
+          .rules-final-item__container
+            img(src="./img/vs.png", alt="vs").lazyload.rules-final-item__image
+            h5.rules-final-item__title На 1-й взгляд, 
+              strong играть просто.
+            p.rules-final-item__text Но когда шайба никак не попадает в ворота, а противник наступает на пятки, 
+              strong начинается настоящая битва 
+              | . Не оторваться!
+
+  section.section.product-section
+    .decoration-items
+      .decoration-items__image.rellax(data-rellax-speed="4" data-rellax-percentage="0.5")
+        img(src="./img/s1.png", alt="img")
+      .decoration-items__image.rellax(data-rellax-speed="2" data-rellax-percentage="0.5")
+        img(src="./img/s1.png", alt="img")
+    .container 
+      .section__head 
+        h3.section__head-title.product-section__title Выберите 
+          strong свой дизайн:
+      .product-section__content.row 
+        mixin block(image, title, quantity)
+          .product-block.col-xl-4
+            .product-block__container.js-touch-hover
+              .product-block__image.image.image_contain 
+                img(data-src=image, alt="product").lazyload
+              h2.product-block__title Поле: 
+                strong=title
+              .product-block__pricing 
+                span.product-block__old-price 3590₽
+                span.product-block__price 2190₽
+              a(href='#modal-order' data-modal='open').button.button_style-3.product-block__button
+                span Заказать игру сейчас
+              span.product-block__quantity !{quantity} 
+
+        +block('./img/product1.jpg', 'Классика', '*Осталось <strong>всего 3 штуки</strong> по акции')
+        +block('./img/product2.jpg', 'Пираты', '*Осталось <strong>всего 4 штуки</strong> по акции')
+        +block('./img/product3.jpg', 'Хоккей', '*Осталось <strong>всего 7 штук</strong> по акции')
+        +block('./img/product4.jpg', 'Футбол', '*Осталось <strong>всего 3 штуки</strong> по акции')
+        +block('./img/product5.jpg', 'Скорость', '*Осталось <strong>всего 4 штуки</strong> по акции')
+        +block('./img/product6.jpg', 'Бентли', '*Осталось <strong>всего 7 штук</strong> по акции')
+
+
+  section.section.section-gallery 
+    .container 
+      .section__head 
+        h3.section__head-title.reviews-section__title
+          strong Посмотрите фото 
+          | наших клиентов:
+    .section-gallery__container 
+      mixin image(href)
+        .section-gallery__image 
+          a(href=href data-fancybox='gallery').section-gallery__image-container
+            .image.image_cover
+              img(data-src=href, alt="image").lazyload
+      +image('./img/gallery/1.jpg')
+      +image('./img/gallery/2.jpg')
+      +image('./img/gallery/3.jpg')
+      +image('./img/gallery/4.jpg')
+      +image('./img/gallery/5.jpg')
+      +image('./img/gallery/6.jpg')
+      +image('./img/gallery/7.jpg')
+      +image('./img/gallery/8.jpg')
+
+
+  section.section.reviews-section 
+    .container 
+      .section__head 
+        h3.section__head-title.reviews-section__title
+          strong Отзывы 
+          | наших довольных покупателей: 
+    .reviews-section__container
+      img(src="./img/iphone10.png", alt="mask").reviews-section__mask 
+      .reviews-section__slider.splide
+        .splide__track
+          .splide__list
+            mixin slide(image)
+              //slide
+              .reviews-section__slide.splide__slide
+                .image.image_cover
+                  img(data-src=image, alt="image").lazyload
+            +slide('./img/reviews/1.jpeg')
+            +slide('./img/reviews/2.jpeg')
+            +slide('./img/reviews/3.jpeg')
+            +slide('./img/reviews/4.jpeg')
+            +slide('./img/reviews/5.jpeg')
+            +slide('./img/reviews/6.jpeg')
+            +slide('./img/reviews/7.jpeg')
