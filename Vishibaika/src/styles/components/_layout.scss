@@ -11,20 +11,15 @@
 }
 .section {
   position: relative;
-  margin-bottom: 100px;
-  &__head {
+  margin-bottom: 140px;
+  &__title {
     margin-bottom: 60px;
-    &-title {
-      strong {
-        font-weight: 800;
-      }
-    }
   }
 }
 
 .container {
   position: relative;
-  z-index: 2;
+  z-index: 10;
 }
 @include media-breakpoint-up(xxl) {
   .container {

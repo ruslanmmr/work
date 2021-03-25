@@ -4182,63 +4182,11 @@ a {
 
 /*========== Typography ==========*/
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  margin: 1.875rem 0 0.5rem 0;
+  margin: 0 0 0.5rem 0;
   font-weight: 400;
   line-height: 1.25; }
-  h1:first-child, .h1:first-child, h2:first-child, .h2:first-child, h3:first-child, .h3:first-child, h4:first-child, .h4:first-child, h5:first-child, .h5:first-child, h6:first-child, .h6:first-child {
-    margin-top: 0; }
-  h1:last-child, .h1:last-child, h2:last-child, .h2:last-child, h3:last-child, .h3:last-child, h4:last-child, .h4:last-child, h5:last-child, .h5:last-child, h6:last-child, .h6:last-child {
-    margin-bottom: 0; }
-  h1 + h2, h1 .h2,
-  h1 + h3, h1 .h3,
-  h1 + h4, h1 .h4,
-  h1 + h5, h1 .h5,
-  h1 + h6, h1 .h6, .h1 + h2, .h1 .h2,
-  .h1 + h3, .h1 .h3,
-  .h1 + h4, .h1 .h4,
-  .h1 + h5, .h1 .h5,
-  .h1 + h6, .h1 .h6, h2 + h2, h2 .h2,
-  h2 + h3, h2 .h3,
-  h2 + h4, h2 .h4,
-  h2 + h5, h2 .h5,
-  h2 + h6, h2 .h6, .h2 + h2, .h2 .h2,
-  .h2 + h3, .h2 .h3,
-  .h2 + h4, .h2 .h4,
-  .h2 + h5, .h2 .h5,
-  .h2 + h6, .h2 .h6, h3 + h2, h3 .h2,
-  h3 + h3, h3 .h3,
-  h3 + h4, h3 .h4,
-  h3 + h5, h3 .h5,
-  h3 + h6, h3 .h6, .h3 + h2, .h3 .h2,
-  .h3 + h3, .h3 .h3,
-  .h3 + h4, .h3 .h4,
-  .h3 + h5, .h3 .h5,
-  .h3 + h6, .h3 .h6, h4 + h2, h4 .h2,
-  h4 + h3, h4 .h3,
-  h4 + h4, h4 .h4,
-  h4 + h5, h4 .h5,
-  h4 + h6, h4 .h6, .h4 + h2, .h4 .h2,
-  .h4 + h3, .h4 .h3,
-  .h4 + h4, .h4 .h4,
-  .h4 + h5, .h4 .h5,
-  .h4 + h6, .h4 .h6, h5 + h2, h5 .h2,
-  h5 + h3, h5 .h3,
-  h5 + h4, h5 .h4,
-  h5 + h5, h5 .h5,
-  h5 + h6, h5 .h6, .h5 + h2, .h5 .h2,
-  .h5 + h3, .h5 .h3,
-  .h5 + h4, .h5 .h4,
-  .h5 + h5, .h5 .h5,
-  .h5 + h6, .h5 .h6, h6 + h2, h6 .h2,
-  h6 + h3, h6 .h3,
-  h6 + h4, h6 .h4,
-  h6 + h5, h6 .h5,
-  h6 + h6, h6 .h6, .h6 + h2, .h6 .h2,
-  .h6 + h3, .h6 .h3,
-  .h6 + h4, .h6 .h4,
-  .h6 + h5, .h6 .h5,
-  .h6 + h6, .h6 .h6 {
-    margin-top: 1.375rem; }
+  h1 strong, .h1 strong, h2 strong, .h2 strong, h3 strong, .h3 strong, h4 strong, .h4 strong, h5 strong, .h5 strong, h6 strong, .h6 strong {
+    font-weight: 800; }
 
 h1, .h1 {
   font-size: 5.625rem;
@@ -4265,6 +4213,8 @@ p {
   margin: 0 0 1rem 0; }
   p:last-child {
     margin-bottom: 0; }
+  p strong {
+    font-weight: 700; }
 
 strong, b {
   font-weight: 700; }
@@ -4303,15 +4253,13 @@ a:not([class]), .link {
 
 .section {
   position: relative;
-  margin-bottom: 100px; }
-  .section__head {
+  margin-bottom: 140px; }
+  .section__title {
     margin-bottom: 60px; }
-    .section__head-title strong {
-      font-weight: 800; }
 
 .container {
   position: relative;
-  z-index: 2; }
+  z-index: 10; }
 
 @media (min-width: 1600px) {
   .container {
@@ -4339,7 +4287,7 @@ img {
   img.lazyloaded {
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out; }
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; }
 
 .image {
   display: block;
@@ -4455,7 +4403,7 @@ img {
   opacity: 0;
   visibility: hidden;
   background: rgba(0, 0, 0, 0.7);
-  transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out; }
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; }
   .modal.active {
     opacity: 1;
     visibility: visible; }
@@ -4478,7 +4426,7 @@ img {
     width: 100%;
     background-color: #fff;
     padding: 35px 50px;
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     transform: translateY(10px);
     max-width: 460px; }
   .modal__head {
@@ -5174,6 +5122,83 @@ img {
       transform: scale(1.05); }
       .section-gallery__image-container[data-touch] .image::before, .section-gallery__image-container[data-hover] .image::before {
         opacity: 1; }
+
+.how-we-work__title {
+  text-align: center; }
+
+.how-we-work__container {
+  flex-wrap: nowrap; }
+
+.how-we-work__block {
+  font-size: 1.125rem;
+  text-align: center; }
+  .how-we-work__block .image {
+    height: 240px;
+    width: 100%;
+    margin-bottom: 25px; }
+    .how-we-work__block .image img {
+      -o-object-position: bottom;
+         object-position: bottom; }
+
+.how-we-work__button {
+  text-align: center;
+  margin-top: 75px; }
+
+.section-trust {
+  padding: 100px 0;
+  margin-top: -100px; }
+  .section-trust .decoration-items {
+    z-index: 4; }
+    .section-trust .decoration-items__image {
+      width: 170px;
+      right: 100px;
+      top: 350px; }
+      .section-trust .decoration-items__image img {
+        transform: rotate(45deg); }
+  .section-trust__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.5; }
+    .section-trust__bg::before, .section-trust__bg::after {
+      content: '';
+      display: block;
+      height: 100px;
+      width: 100%;
+      position: absolute;
+      z-index: 2; }
+    .section-trust__bg::before {
+      top: 0;
+      background: linear-gradient(0deg, transparent 0%, #fff 100%); }
+    .section-trust__bg::after {
+      bottom: 0;
+      background: linear-gradient(180deg, transparent 0%, #fff 100%); }
+  .section-trust__image {
+    position: absolute;
+    width: 760px;
+    height: auto;
+    right: calc(50% + 220px);
+    top: 90px;
+    z-index: 2; }
+  .section-trust__item {
+    display: flex;
+    font-size: 1.125rem;
+    margin-bottom: 60px; }
+    .section-trust__item .icon {
+      flex: 0 0 60px;
+      height: 60px;
+      margin-right: 25px; }
+
+.section-kit__title {
+  text-align: center; }
+
+.section-kit__center-item .image::before {
+  content: '';
+  display: block;
+  padding-top: 136%; }
 
 /*========== Header ==========*/
 .header {

@@ -13,19 +13,19 @@ const $wrapper = document.querySelector('.wrapper');
 const $header = document.querySelector('.header');
 
 window.onload = function(){
-  //show page
-  $body.classList.add('loaded');
-
   TouchHoverEvents.init();
   Modal.init();
   Mask.init();
   gallery();
-
-  //parallax
-  new Rellax('.rellax');
   //slider
   let $reviews_slider = document.querySelector('.reviews-section__slider');
   if($reviews_slider) new ReviewsSlider($reviews_slider).init();
+
+  //parallax
+  new Rellax('.rellax');
+
+  //show page
+  $body.classList.add('loaded');
 }
 
 const TouchHoverEvents = {
