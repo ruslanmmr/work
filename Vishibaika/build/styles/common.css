@@ -5909,7 +5909,7 @@ img {
   .section-thanks__bottom {
     margin-top: 40px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center; }
   .section-thanks__subscription {
     display: flex;
@@ -5917,7 +5917,8 @@ img {
     font-size: 1.25rem;
     text-align: right;
     line-height: 1.2;
-    transition: opacity 0.15s ease-in-out; }
+    transition: opacity 0.15s ease-in-out;
+    margin-bottom: 40px; }
     .section-thanks__subscription-icon {
       width: 50px;
       height: 50px; }
@@ -5948,13 +5949,8 @@ img {
         height: 35px; }
       .section-thanks__text {
         font-size: 1.125rem; }
-      .section-thanks__bottom {
-        flex-direction: column;
-        align-items: center; }
-        .section-thanks__bottom .button {
-          width: 100%;
-          order: 2;
-          margin-top: 40px; } }
+      .section-thanks__bottom .button {
+        width: 100%; } }
 
 /*========== Header ==========*/
 .header {
