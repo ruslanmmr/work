@@ -19,13 +19,13 @@ function mobile() {
   }
 }
 
-window.onload = function(){
+document.addEventListener('DOMContentLoaded', function(){
   TouchHoverEvents.init();
   Modal.init();
   Mask.init();
   gallery();
-  if(mobile()) {
-    //windowSize.init();
+  if(mobile() && window.innerWidth<brakepoints.sm) {
+    windowSize.init();
   }
 
   //slider
@@ -39,7 +39,7 @@ window.onload = function(){
 
   //show page
   $body.classList.add('loaded');
-}
+})
 
 const TouchHoverEvents = {
   targets: 'a, button, label, tr, .js-touch-hover',
