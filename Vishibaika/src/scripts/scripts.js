@@ -1,5 +1,3 @@
-lazySizes.cfg.preloadAfterLoad = true;
-
 const brakepoints = {
   sm: 576,
   md: 768,
