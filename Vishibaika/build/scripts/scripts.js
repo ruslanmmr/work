@@ -26,12 +26,16 @@ window.onload = function(){
   Modal.init();
   Mask.init();
   gallery();
+  if(mobile()) {
+    //windowSize.init();
+  }
+
   //slider
   let $reviews_slider = document.querySelector('.reviews-section__slider');
   if($reviews_slider) new ReviewsSlider($reviews_slider).init();
 
   //parallax
-  if(!mobile()) {
+  if(!mobile() && window.innerWidth>=brakepoints.lg) {
     new Rellax('.rellax');
   }
 
@@ -169,6 +173,25 @@ const Mask = {
         clearIncomplete: false
       }).mask($inputs);
     }
+  }
+}
+
+const windowSize = {
+  init: function() {
+    let $el = document.createElement('div');
+    $el.style.cssText = 'position:fixed;height:100%;';
+    $body.insertAdjacentElement('beforeend', $el);
+    let h = $el.getBoundingClientRect().height;
+    
+    let check = ()=> {
+      //screen
+      let $el = document.querySelectorAll('.screen');
+      $el.forEach($this => {
+        $this.style.height = `${h}px`;
+      })
+    }
+
+    check();
   }
 }
 

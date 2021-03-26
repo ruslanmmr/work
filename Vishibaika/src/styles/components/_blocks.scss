@@ -4,6 +4,9 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  &__text-top {
+    margin-bottom: 15px;
+  }
   .decoration-items {
     &__image {
       width: 300px;
@@ -180,8 +183,20 @@
   }
   @include media-breakpoint-down(sm) {
     margin-top: -115px;
-    padding: 140px 0 0 0;
+    padding: 0;
     text-align: center;
+    &__content {
+      height: 100vh;
+      padding: 140px 0 20px 0;
+      max-height: 700px;
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__text-top {
+      margin: 0;
+    }
     &__sub-title {
       margin-bottom: 15px;
     }
@@ -190,7 +205,7 @@
       width: 335px;
       left: initial;
       right: 0;
-      top: 255px;
+      top: 265px;
       &::before {
         display: none;
       }
@@ -204,7 +219,7 @@
       margin-bottom: 15px;
     }
     &__button {
-      margin: 300px 0 20px 0;
+      margin: 0;
       width: 100%;
     }
     &__text {
@@ -351,7 +366,7 @@
     }
   }
 
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(xxl) {
     .decoration-items {
       &__image {
         &:nth-child(2) {

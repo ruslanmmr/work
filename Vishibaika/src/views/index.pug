@@ -9,16 +9,18 @@ block content
         img(src="./img/s1.png", alt="img")
     .home__background.image.image_cover
       img(src="./img/homescreen.jpg", alt="bg").lazyload.d-none.d-sm-block
-      img(src="./img/homescreen_mobile.png", alt="bg").lazyload.d-sm-none
-    .container 
-      h2.home__sub-title Настольная игра
-      h1.home__title Вышибай-КА
-      p.home__text 
-        strong Игра, которая вызывает бурю эмоций
-        <br>
-        | не только у детей, но и у взрослых!
-      a(href='#modal-order' data-modal='open').button.button_style-2.home__button 
-        span Заказать игру сейчас 
+      img(src="./img/homescreen_mobile.jpg", alt="bg").lazyload.d-sm-none
+    .container
+      .home__content.screen
+        .home__text-top
+          h2.home__sub-title Настольная игра
+          h1.home__title Вышибай-КА
+          p.home__text 
+            strong Игра, которая вызывает бурю эмоций
+            <br>
+            | не только у детей, но и у взрослых!
+        a(href='#modal-order' data-modal='open').button.button_style-2.home__button 
+          span Заказать игру сейчас 
 
       .home__items 
         .home__item
@@ -203,8 +205,8 @@ block content
               h2.product-block__title Поле: 
                 strong=title
               .product-block__pricing 
-                span.product-block__old-price 3590₽
-                span.product-block__price 2190₽
+                span.product-block__old-price 4370р
+                span.product-block__price 2490р
               a(href='#modal-order' data-modal='open').button.button_style-3.product-block__button
                 span Заказать игру сейчас
               span.product-block__quantity !{quantity} 
