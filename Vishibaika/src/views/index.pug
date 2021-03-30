@@ -8,9 +8,9 @@ block content
       .decoration-items__image.rellax(data-rellax-speed="2")
         img(src="./img/s1.png", alt="img")
     .home__background.image.image_cover
-      img(data-src="./img/homescreen.jpg", alt="bg").lazyload.d-none.d-sm-block
-      img(data-src="./img/homescreen_mobile.jpg", alt="bg").lazyload.d-sm-none
-    .container
+      img(data-src="./img/homescreen2.jpg", alt="bg").lazyload.d-none.d-sm-block
+      img(data-src="./img/homescreen2_mobile.jpg", alt="bg").lazyload.d-sm-none
+    .home__container.container
       .home__content.screen
         .home__text-top
           h2.home__sub-title Настольная игра
@@ -25,26 +25,31 @@ block content
       .home__items 
         .home__item
           svg.icon
-            use(xlink:href="./img/icons/icons-sprite.svg#heart")
-          p Интересна в любом возрасте!<br>
-            strong От 2 до 99 лет!
-        .home__item
-          svg.icon
-            use(xlink:href="./img/icons/icons-sprite.svg#star")
-          p 
-            strong Развивает ловкость 
-            | и реакцию
-        .home__item
-          svg.icon
             use(xlink:href="./img/icons/icons-sprite.svg#cool")
-          p Заряжает 
+          p Заряжает
+            br 
             strong на 100%
         .home__item
           svg.icon
             use(xlink:href="./img/icons/icons-sprite.svg#box")
           p 
-            strong Легко брать<br> 
+            strong Легко брать
+            br 
             | с собой
+        .home__item
+          svg.icon
+            use(xlink:href="./img/icons/icons-sprite.svg#star")
+          p 
+            strong Развивает ловкость 
+            br
+            | и реакцию
+        .home__item
+          svg.icon
+            use(xlink:href="./img/icons/icons-sprite.svg#heart")
+          p Интересна в любом
+            br
+            | возрасте! 
+            strong От 2 до 99 лет!
 
   section.section.video-section
     .decoration-items

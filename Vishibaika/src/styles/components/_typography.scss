@@ -29,15 +29,15 @@ h6, .h6 {
   font-weight: 700;
 }
 
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-down(xxl) {
   h1, .h1 {
     font-size: 3.875rem;
   }
   h2, .h2 {
-    font-size: 2.75rem;
+    font-size: 2.625rem;
   }
   h3, .h3 {
-    font-size: 2.75rem;
+    font-size: 2.625rem;
   }
 }
 

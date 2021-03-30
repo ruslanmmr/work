@@ -115,6 +115,13 @@
   &_w100 {
     width: 100%;
   }
+  @include media-breakpoint-down(xxl) {
+    &_style-2 {
+      height: 100px;
+      padding: 0 80px;
+      font-size: 20px;
+    }
+  }
   @include media-breakpoint-down(xl) {
     &_style-1 {
       padding: 0 29px;

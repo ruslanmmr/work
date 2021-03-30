@@ -1,9 +1,11 @@
 .home {
-  padding: 190px 0 30px 0;
   margin-top: -90px;
-  min-height: 100vh;
   display: flex;
   align-items: center;
+  align-content: center;
+  height: 100vh;
+  padding: 190px 0 60px 0;
+  min-height: 800px;
   &__text-top {
     margin-bottom: 15px;
   }
@@ -32,6 +34,16 @@
     margin-left: -0.05em;
     margin-bottom: 25px;
   }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 600px;
+  }
+  &__content {
+    margin-bottom: 50px;
+  }
   &__title {
     font-weight: 800;
     line-height: 0.9;
@@ -55,10 +67,9 @@
     }
   }
   &__button {
-    margin: 25px 0 40px 0;
+    margin: 25px 0 0 0;
   }
   &__items {
-    width: calc(50% + 15px);
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px -15px 0;
@@ -66,19 +77,19 @@
   &__item {
     font-size: 15px;
     margin: 0 15px 15px 0;
-    flex: 1 1 calc(47% - 15px);
+    flex: 1 1 auto;
     background-color: #fff;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    padding: 25px 15px 25px 25px;
+    padding: 25px 30px;
     box-shadow: $shadow;
     position: relative;
     .icon {
       color: #f82c2c;
-      margin-right: 20px;
-      flex: 0 0 50px;
-      height: 50px;
+      margin-right: 25px;
+      flex: 0 0 55px;
+      height: 55px;
     }
     &::before {
       pointer-events: none;
@@ -95,6 +106,27 @@
   }
   
   @include media-breakpoint-down(xxl) {
+    min-height: 650px;
+    padding: 140px 0 40px 0;
+    &__sub-title {
+      margin-bottom: 20px;
+    }
+    &__item {
+      padding: 20px 30px;
+      .icon {
+        flex: 0 0 50px;
+        height: 50px;
+      }
+    }
+    &__container {
+      max-height: 500px;
+    }
+    &__text {
+      font-size: 1.125rem;
+      &::before {
+        top: 13px;
+      }
+    }
     .decoration-items {
       &__image {
         width: 220px;
@@ -105,28 +137,15 @@
   }
   @include media-breakpoint-up(xl) {
     margin-bottom: 120px;
-    &__item {
-      &:nth-child(1), &:nth-child(3) {
-        flex: 1 1 calc(53% - 15px);
-      }
-    }
   }
   @include media-breakpoint-down(xl) {
-    padding: 140px 0 40px 0;
-    &__text {
-      font-size: 18px;
-      &::before {
-        top: 13px;
-      }
-    }
-    &__button {
-      margin-bottom: 50px;
+    &__container {
+      max-height: 450px;
     }
     &__items {
       width: calc(100% + 15px);
     }
     &__item {
-      flex: 1 1 calc(25% - 15px);
       font-size: 14px;
       padding: 20px;
       .icon {
@@ -137,8 +156,11 @@
     }
   }
   @include media-breakpoint-down(lg) {
-    min-height: initial;
+    height: auto;
     padding: 160px 0 80px 0;
+    &__container {
+      max-height: initial;
+    }
     &__item {
       flex: 1 1 calc(50% - 15px);
     }
@@ -187,6 +209,7 @@
     text-align: center;
     &__content {
       height: 100vh;
+      margin: 0;
       padding: 140px 0 20px 0;
       max-height: 700px;
       min-height: 500px;
@@ -202,17 +225,19 @@
     }
     &__background {
       height: auto;
-      width: 335px;
+      width: 100%;
       left: initial;
       right: 0;
-      top: 265px;
-      &::before {
-        display: none;
-      }
+      top: initial;
+      top: 250px;
       &::after {
         content: '';
         display: block;
-        padding-top: 112%;
+        padding-top: 93%;
+      }
+      &::before {
+        height: 100%;
+        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 15%, rgba(255,255,255,0) 85%, rgba(255,255,255,1) 100%);
       }
     }
     &__title {
