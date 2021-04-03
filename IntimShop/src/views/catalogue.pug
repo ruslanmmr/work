@@ -103,9 +103,9 @@ block content
         .catalogue__content.col-lg-9 
           .catalogue__head  
             .row
-              .catalogue__head-item.col-sm-6.col-md-auto.d-lg-none
+              .catalogue__head-item.col-6.col-md-auto.d-lg-none
                 button.button.button_style-1.button_w100.catalogue-filter-open.text-transform-uppercase Фильтровать
-              .catalogue__head-item.col-sm-6.col-md-auto.col-lg-auto
+              .catalogue__head-item.col-6.col-md-auto.col-lg-auto
                 .sorting-item 
                   span.sorting-item__label Сортировать:
                   select.select
@@ -115,7 +115,7 @@ block content
 
           .catalogue__blocks.row.grid
             include blocks/blocks
-            -let grid = 'col-md-4 col-sm-6'
+            -let grid = 'col-md-4 col-6'
             +block2('./img/c1.jpg', 1, grid)
             +block2('./img/c2.jpg', 2, grid)
             +block2('./img/c3.jpg', 3, grid)

@@ -147,6 +147,28 @@ select.select {
       border-radius: 50px;
     }
   }
+  @include media-breakpoint-down(sm) {
+    min-width: initial;
+    font-size: 0.75rem;
+    .ss-single-selected {
+      padding: 9px 15px;
+      .placeholder {
+        margin-right: 5px;
+      }
+    }
+    .ss-single-selected .ss-arrow {
+      margin: 0 2px;
+      span {
+        padding: 3px;
+        &.arrow-down {
+          margin: -3px 0 0;
+        }
+        &.arrow-up {
+          margin: 3px 0 0;
+        }
+      }
+    }
+  }
 }
 
 .ss-content {
@@ -177,6 +199,13 @@ select.select {
       }
       &[data-touch], &[data-hover] {
         background-color: #ECB9BB;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .ss-list {
+      .ss-option {
+        padding: 10px 15px;
       }
     }
   }

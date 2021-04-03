@@ -4794,6 +4794,22 @@ select.select {
       display: block; }
     .ss-main .ss-single-selected.ss-open-below {
       border-radius: 50px; }
+  @media (max-width: 575.98px) {
+    .ss-main {
+      min-width: initial;
+      font-size: 0.75rem; }
+      .ss-main .ss-single-selected {
+        padding: 9px 15px; }
+        .ss-main .ss-single-selected .placeholder {
+          margin-right: 5px; }
+      .ss-main .ss-single-selected .ss-arrow {
+        margin: 0 2px; }
+        .ss-main .ss-single-selected .ss-arrow span {
+          padding: 3px; }
+          .ss-main .ss-single-selected .ss-arrow span.arrow-down {
+            margin: -3px 0 0; }
+          .ss-main .ss-single-selected .ss-arrow span.arrow-up {
+            margin: 3px 0 0; } }
 
 .ss-content {
   transform: translateY(10px);
@@ -4821,6 +4837,9 @@ select.select {
         pointer-events: none; }
       .ss-content .ss-list .ss-option[data-touch], .ss-content .ss-list .ss-option[data-hover] {
         background-color: #ECB9BB; }
+  @media (max-width: 575.98px) {
+    .ss-content .ss-list .ss-option {
+      padding: 10px 15px; } }
 
 .radio {
   position: relative; }
@@ -4968,7 +4987,11 @@ select.select {
 
 @media (max-width: 575.98px) {
   .catalogue__head {
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+    .catalogue__head .button {
+      line-height: 36px;
+      font-size: 0.875rem;
+      height: 40px; } }
 
 .catalogue-block__container {
   display: flex;
@@ -5061,7 +5084,31 @@ select.select {
   line-height: 1.2; }
 
 .catalogue-block__button {
-  width: 100%; }
+  width: 100%;
+  display: block; }
+
+@media (min-width: 576px) {
+  .catalogue-block__button {
+    text-transform: lowercase; }
+    .catalogue-block__button span {
+      text-transform: initial; } }
+
+@media (max-width: 575.98px) {
+  .catalogue-block__content {
+    padding: 10px 5px; }
+  .catalogue-block__button {
+    padding: 0;
+    line-height: 36px;
+    height: 40px; }
+  .catalogue-block__title {
+    font-size: 0.875rem; }
+  .catalogue-block__old-price {
+    font-size: 0.875rem; }
+  .catalogue-block__price {
+    font-size: 1.25rem; }
+  .catalogue-block__favourite-btn {
+    width: 24px;
+    height: 22px; } }
 
 .catalogue-filter__section:not(:last-child) {
   margin-bottom: 60px; }
@@ -5213,6 +5260,13 @@ select.select {
       background-color: #FF4D4D; }
     .product-labels__label:not(:last-child) {
       margin-bottom: 5px; }
+  @media (max-width: 575.98px) {
+    .product-labels__label {
+      font-size: 0.5rem;
+      padding: 0 5px;
+      line-height: 16px;
+      min-width: 50px;
+      padding-bottom: 1px; } }
 
 .calculation {
   display: flex; }
