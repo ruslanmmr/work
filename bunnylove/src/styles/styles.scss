@@ -9503,8 +9503,12 @@ button {
 /* line 5715, ../sass/css.scss */
 .list__image {
   float: left;
-  width: 80px;
-  margin-right: 25px;
+  flex: 0 0 80px;
+  margin-right: 20px;
+  @media (max-width: 1023px) {
+    flex: 0 0 60px;
+    margin-right: 15px;
+  }
 }
 
 /* line 5720, ../sass/css.scss */
@@ -9535,9 +9539,18 @@ button {
 
 /* line 5738, ../sass/css.scss */
 .list__remove {
-  position: absolute;
   top: 25px;
   right: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-right: 40px;
+  flex: 0 0 200px;
+  @media (max-width: 1023px) {
+    padding: 0;
+    flex: 0 0 160px;
+    top: 20px;
+  }
 }
 
 /* line 5743, ../sass/css.scss */
@@ -9560,8 +9573,15 @@ button {
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
-  margin-right: 30px;
   position: relative;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+  @media (max-width: 1023px) {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
 }
 
 /* line 5761, ../sass/css.scss */
@@ -9575,7 +9595,7 @@ button {
   position: absolute;
   left: 0;
   right: 0;
-  top: 165%;
+  top: 150%;
   height: 1px;
   background-color: red;
 }
@@ -13217,7 +13237,7 @@ body {
   max-width: 1180px !important;
   min-width: 1180px !important;
   width: 100%;
-  z-index: 151;
+  z-index: 100;
 }
 
 @media (max-width: 1200px) {
@@ -14610,14 +14630,6 @@ body {
   display: block;
 }
 
-/* line 9458, ../sass/css.scss */
-.list__remove {
-  min-width: 200px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding-right: 40px;
-}
 
 /* line 9465, ../sass/css.scss */
 .list__remove .buttons__item {
@@ -14744,20 +14756,24 @@ body {
 .list__name {
   display: flex;
   align-items: center;
-}
-
-@media (max-width: 767px) {
-  /* line 9561, ../sass/css.scss */
-  .list__name {
-    margin-bottom: 20px;
+  flex: 0 0 250px;
+  margin-right: 30px;
+  @media (max-width: 1023px) {
+    flex: 0 0 200px;
+    margin-right: 15px;
+  }
+  @media (max-width: 767px) {
+    flex: initial;
+    width: 100%;
+    margin: 0 0 20px 0;
   }
 }
+
+
 /* line 9564, ../sass/css.scss */
 .list__title {
   font-weight: bold !important;
-  font-size: 17px !important;
-  line-height: 22px !important;
-  padding-right: 30px;
+  margin: 0;
   color: #333333;
 }
 
@@ -14775,7 +14791,7 @@ body {
 /* line 9578, ../sass/css.scss */
 .list__content {
   display: flex;
-  width: 100%;
+  flex: 1 0 auto;
 }
 
 @media (max-width: 767px) {
@@ -14803,15 +14819,14 @@ body {
   font-size: 18px !important;
   line-height: 23px;
   color: #333333;
-}
-
-/* line 9601, ../sass/css.scss */
-.list__price span {
-  font-size: 15px !important;
-  line-height: 19px !important;
-  display: block;
-  font-weight: 400 !important;
-  white-space: nowrap;
+  span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    @media (max-width: 1023px) {
+      font-size: 12px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -14824,6 +14839,10 @@ body {
     justify-content: space-between;
     padding-right: 0;
     flex-direction: row !important;
+    flex: initial;
+    .shopping-cart-btn, .stock-yes2, .not-available2 {
+      margin: 0;
+    }
   }
 }
 /* line 9618, ../sass/css.scss */
@@ -14838,7 +14857,6 @@ body {
 
 /* line 9626, ../sass/css.scss */
 .account {
-  overflow: hidden;
   clear: both;
 }
 
@@ -20330,6 +20348,7 @@ ol:not([class]) li:not([class]):before {
 .new-header-type-standart {
   display: flex;
 }
+
 
 /* line 13730, ../sass/css.scss */
 .new-header-type-standart {
