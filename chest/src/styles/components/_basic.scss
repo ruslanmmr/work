@@ -12,7 +12,6 @@ body {
   pointer-events: none;
   transition: visibility $trs2, opacity $trs2, background-color $trs2;
   height: 100%;
-  overflow: hidden;
   &.loaded {
     opacity: 1 !important;
     visibility: visible !important;
@@ -32,5 +31,5 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  
+
 }
