@@ -1,0 +1,35 @@
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  font-family: 'ProximaNova', sans-serif;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  min-width: 320px;
+  pointer-events: none;
+  transition: visibility $trs2, opacity $trs2, background-color $trs2;
+  height: 100%;
+  overflow: hidden;
+  &.loaded {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: all !important;
+    background-color: #0a0a0d;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+  &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
