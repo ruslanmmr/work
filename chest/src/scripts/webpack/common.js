@@ -164,25 +164,25 @@ const Scene = {
       $element.style.zIndex = '1001';
 
       let shakingAnimation = gsap.timeline({paused:true})
-        .fromTo($element, {rotate:0}, {rotate:3, duration:0.1, ease:'power2.out'})
-        .to($element, {rotate:-3, duration:0.2})
-        .to($element, {rotate:0, duration:0.1, ease:'power2.in'})
+        .fromTo($element, {rotate:0}, {rotate:3, duration:0.075, ease:'power2.out'})
+        .to($element, {rotate:-3, duration:0.15})
+        .to($element, {rotate:0, duration:0.075, ease:'power2.in'})
 
       let moveAnimation;
       if(step!==3) {
         moveAnimation = gsap.timeline({paused:true})
-          .to($bonuses, {autoAlpha:1, duration:1})
-          .to($element, {x:tx, y:ty, duration:1}, '-=1')
+          .to($bonuses, {autoAlpha:1, duration:0.5})
+          .to($element, {x:tx, y:ty, duration:0.5}, '-=0.5')
           .to($element, {scale:1.5, duration:0.5, ease:'power2.in'})
           .to($element, {autoAlpha:0, duration:0.25, ease:'power2.in'}, '-=0.25')
-          .fromTo($bonus[step], {autoAlpha:0, scale:0.8}, {autoAlpha:1, scale:1, duration:1, ease:'power2.out'})
+          .fromTo($bonus[step], {autoAlpha:0, scale:0.8}, {autoAlpha:1, scale:1, duration:0.5, ease:'power2.out'})
       } else {
         moveAnimation = gsap.timeline({paused:true})
-          .to($bonuses, {autoAlpha:1, duration:1})
-          .to($element, {x:tx, y:ty, duration:1}, '-=1')
-          .to($element, {scale:2.5, duration:0.75, ease:'power2.in'})
+          .to($bonuses, {autoAlpha:1, duration:0.5})
+          .to($element, {x:tx, y:ty, duration:0.5}, '-=0.5')
+          .to($element, {scale:2.5, duration:0.5, ease:'power2.in'})
           .to($element, {autoAlpha:0, duration:0.25, ease:'power2.in'}, '-=0.25')
-          .fromTo($bonus[step], {autoAlpha:0, scale:0.5}, {autoAlpha:1, scale:1, duration:1.5, ease:'power2.out'})
+          .fromTo($bonus[step], {autoAlpha:0, scale:0.5}, {autoAlpha:1, scale:1, duration:0.5, ease:'power2.out'})
       }
 
 
@@ -195,7 +195,7 @@ const Scene = {
         shakeIteration++;
         let val;
         if(step!==3) {
-          val = Math.min(3, (1 + shakeIteration/2.5));
+          val = Math.min(3, (1 + shakeIteration/3));
         } else {
           val = Math.min(4, (1 + shakeIteration/2));
         }
@@ -208,7 +208,9 @@ const Scene = {
         moveAnimation.kill();
 
         if(step==3) {
-          lastStep();
+          setTimeout(() => {
+            lastStep();
+          }, 500)
         } else {
           $body.classList.remove('disabled');
           setTimeout(() => {
