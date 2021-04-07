@@ -12,6 +12,7 @@ body {
   pointer-events: none;
   transition: visibility $trs3, opacity $trs3, background-color $trs3;
   height: 100%;
+  overflow: hidden;
   &.loaded {
     opacity: 1 !important;
     visibility: visible !important;
