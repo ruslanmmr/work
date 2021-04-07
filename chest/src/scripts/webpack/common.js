@@ -195,7 +195,7 @@ const Scene = {
         shakeIteration++;
         let val;
         if(step!==3) {
-          val = Math.min(3, (1 + shakeIteration/3));
+          val = Math.min(3, (1 + shakeIteration/2.5));
         } else {
           val = Math.min(4, (1 + shakeIteration/2));
         }
@@ -212,9 +212,10 @@ const Scene = {
             lastStep();
           }, 500)
         } else {
-          $body.classList.remove('disabled');
           setTimeout(() => {
-            animationHide.play();
+            animationHide.play().eventCallback('onComplete', ()=> {
+              $body.classList.remove('disabled');
+            });
             $body.classList.remove('chest-active');
           }, 500);
           step++;
@@ -235,10 +236,6 @@ const Scene = {
 
       }, 500);
     }
-
-    /* //test
-    lastStep();
-    gsap.set($bonuses, {autoAlpha:1}) */
 
     
     $chests.forEach($chest => {
