@@ -19191,7 +19191,6 @@ ul#mainSlider {
 /* line 12856, ../sass/css.scss */
 .need-change-wrap .caption {
   display: inline-block;
-  font-family: 'PT Sans';
   font-size: 18px;
   line-height: 32px;
   color: #212121;
@@ -29813,7 +29812,7 @@ textarea.input {
 
 /* line 19736, ../sass/css.scss */
 .new-checkbox__input {
-  display: none;
+  display: none !important;
 }
 
 /* line 19739, ../sass/css.scss */

@@ -15605,7 +15605,6 @@ ul#mainSlider {
 /* line 12856, ../sass/css.scss */
 .need-change-wrap .caption {
   display: inline-block;
-  font-family: 'PT Sans';
   font-size: 18px;
   line-height: 32px;
   color: #212121;
@@ -24009,7 +24008,7 @@ textarea.input {
 
 /* line 19736, ../sass/css.scss */
 .new-checkbox__input {
-  display: none; }
+  display: none !important; }
 
 /* line 19739, ../sass/css.scss */
 .new-checkbox__input:checked ~ .new-checkbox__label:before {
@@ -25721,6 +25720,23 @@ textarea.input {
 @media (max-width: 767px) {
   .new-content__sort .new-sort__dropdown, .new-content__sort .new-console {
     max-width: 540px; } }
+
+#confirmation-container {
+  margin-top: 25px; }
+  #confirmation-container .new-checkbox {
+    margin-bottom: 25px; }
+    #confirmation-container .new-checkbox__label {
+      font-size: 16px; }
+  #confirmation-container label {
+    display: block;
+    margin-bottom: 10px; }
+
+.need-change-wrap .upon_receive_only {
+  margin-bottom: 25px; }
+  .need-change-wrap .upon_receive_only ~ .caption {
+    display: block;
+    margin: 25px 0 15px 0;
+    padding: 0; }
 
 .noty_layout_mixin, #noty_layout__top, #noty_layout__topLeft, #noty_layout__topCenter, #noty_layout__topRight, #noty_layout__bottom, #noty_layout__bottomLeft, #noty_layout__bottomCenter, #noty_layout__bottomRight, #noty_layout__center, #noty_layout__centerLeft, #noty_layout__centerRight {
   position: fixed;

@@ -1,0 +1,91 @@
+extends layout/layout
+block content
+  include blocks/breadcrumbs
+  .container
+    section.section
+      h1.new-content__title.section__title
+        | Оплата
+      .row
+        .account.col-xl-9
+      .row.justify-content-center
+        .account.col-xl-9
+      .row
+        .col-lg-9
+          .order-total.step-first.ds-order-total.order-total--payment
+            .sum
+              label Итого к оплате:
+              var
+                span.cart_total_price_with_discount 690 ₽
+          .title-large Выберите способ оплаты:
+          .method-block
+            .method.cash-method.inactive(data-type='online')
+              #rbkmoney_payment.method__icon(style='cursor: pointer')
+                img(src='/static/svg/online_pay.svg' alt='Онлайн-оплата')
+              .method__title Online
+            a.method.cash-method.active(href='#' data-type='upon_receive')
+              .method__icon
+                img(src='/static/svg/pay_cash.svg' alt='Оплата наличными при получении заказа')
+              .method__title При получении
+            .need-change-wrap.show
+              form#id_change_form(action='.' method='post')
+                input#id_payment_type_custom(type='hidden' name='payment_type_custom' value='upon_receive')
+                input(type='hidden' name='csrfmiddlewaretoken' value='5KC9lvvnRii9sLRioYefMnqwmh8Ua5iXeE7v11y8Vgn8w9aTJGD8GuJ8XOIA0KWK')
+                .upon_receive_only(style='display: block;')
+                  span.caption Нужна сдача с суммы
+                  input#id_change(type='number' name='change' step='0.01' required='required')
+                  |  ₽
+                p.caption Выберете способ подтверждения:
+                label.radio.radio-large(for='id_confirmation_method_0')
+                  input#id_confirmation_method_0(type='radio' name='confirmation_method' value='phone' required='')
+                  span.outer
+                    span.inner
+                  span.text
+                    | Звонок по телефону
+                label.radio.radio-large(for='id_confirmation_method_1')
+                  input#id_confirmation_method_1(type='radio' name='confirmation_method' value='telegram' required='')
+                  span.outer
+                    span.inner
+                  span.text
+                    | Telegram
+                  img.confirmation_type_logo(src='/static/svg/telegram_logo.svg' alt='')
+                label.radio.radio-large(for='id_confirmation_method_2')
+                  input#id_confirmation_method_2(type='radio' name='confirmation_method' value='viber' required='')
+                  span.outer
+                    span.inner
+                  span.text
+                    | Viber
+                  img.confirmation_type_logo(src='/static/svg/viber_logo.svg' alt='')
+                #confirmation-container(style='display: block;')
+                  .new-checkbox
+                    input#id(type='checkbox', name='').new-checkbox__input
+                    label(for='id').new-checkbox__label Перезвонить немедленно
+                  .input-element
+                    label(for='id_confirmation_phone_time') Удобное время для звонка:
+                    input#id_confirmation_phone_time(type='text' name='confirmation_phone_time' maxlength='255' required='')
+                button.new-button-type-fill.button-inline(type='submit') Далее
+                div(style='clear: both;')
+        .col-lg-3
+          .step
+            .step__number 1
+            .step__title Проверка заказа
+            .step__money
+              .step__icon
+                img(src='/static/img/icon-st1.png' alt='Стоимость заказа')
+              .step__count 490 ₽
+            a.step__edit(href='/catalog/cart/') редактировать
+          .step
+            .step__number 2
+            .step__title Доставка
+            .step__money
+              .step__icon
+                img(src='/static/img/icon-st2.png' alt='Стоимость доставки')
+              .step__count
+                | 200 ₽
+            p Курьером
+            a.step__edit(href='/catalog/cart/delivery/') редактировать
+          .step.active
+            .step__number 3
+            .step__title Оплата
+          .step.last
+            .step__number 4
+            .step__title Завершение

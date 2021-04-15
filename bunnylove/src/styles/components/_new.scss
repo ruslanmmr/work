@@ -504,3 +504,28 @@
     }
   }
 }
+
+#confirmation-container {
+  margin-top: 25px;
+  .new-checkbox {
+    margin-bottom: 25px;
+    &__label {
+      font-size: 16px;
+    }
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.need-change-wrap {
+  .upon_receive_only {
+    margin-bottom: 25px;
+    & ~ .caption {
+      display: block;
+      margin: 25px 0 15px 0;
+      padding: 0;
+    }
+  }
+}
