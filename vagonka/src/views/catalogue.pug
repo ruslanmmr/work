@@ -48,7 +48,7 @@ block scripts
   script(src='/static/catalog/js/catalog.js')
   script(type='text/javascript' src='/static/crm/js/crm_forms.js')
   script(type='text/javascript' src='/static/subscription/js/subscription.js')
-  script(src='/static/js/scripts.js')
+  script(src=href+'/scripts/scripts.js')
   
 block content
   section.section
@@ -97,18 +97,25 @@ block content
               a(href='/catalog/derevyannye-igrushki/') Деревянные игрушки
       .page-head
         .breadcrumbs.breadcrumbs--lk(itemscope='' itemtype='http://schema.org/BreadcrumbList')
+          svg.breadcrumbs__sep
+            use(xlink:href='#tab-arrow')
+          //item
           span(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
             a(itemprop='item' title='Главная' href='/')
               | Главная
               meta(itemprop='name' content='Главная')
             meta(itemprop='position' content='1')
-          span.sep
+          svg.breadcrumbs__sep
+            use(xlink:href='#tab-arrow')
+          //item
           span(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
             a(itemprop='item' title='Каталог' href='/catalog/')
               | Каталог
               meta(itemprop='name' content='Каталог')
             meta(itemprop='position' content='2')
-          span.sep
+          svg.breadcrumbs__sep
+            use(xlink:href='#tab-arrow')
+          //item
           |         Бревно оцилиндрованное
       .content-block
         h1
@@ -141,6 +148,11 @@ block content
                 option(value='?sort_field=availability') По наличию
                 option(value='?sort_field=is_hit') По популярности
             .catalog-right
+              a.price-download(href='/catalog/export/terrasnaya-doska-listvennica/')
+                svg.icon
+                  use(xlink:href='#document-icon')
+                | Скачать прайс
+
               .view-sorting
                 span.view-sorting__title Вид
                 button.view-sort-item.select-product-list-view.view-sort-item--1.current.button1
@@ -158,10 +170,15 @@ block content
               .mobile-menu-head
                 .mobile-menu-head__title Фильтры
                 a.mobile-menu-head__close-btn.close-btn-2
+                  svg.icon
+                    use(xlink:href='#delete')
               form#catalog_filter_form.catalog-filter-body(action='/catalog/brevno-ocilindrovannoe/' method='get')
                 ul.catalog-filter-accordion
                   li
                     a.opener(href='#') Диаметр в мм
+                      svg.icon
+                        use(xlink:href='#tab-arrow')
+
                     ul.submenu(style='display:none')
                       li
                         .filter-item
@@ -216,6 +233,8 @@ block content
                                   span 1
                   li
                     a.opener(href='#') Рабочая высота
+                      svg.icon
+                        use(xlink:href='#tab-arrow')
                     ul.submenu(style='display:none')
                       li
                         .filter-item
@@ -300,6 +319,8 @@ block content
                                   span 1
                   li
                     a.opener(href='#') Ширина теплового паза
+                      svg.icon
+                        use(xlink:href='#tab-arrow')
                     ul.submenu(style='display:none')
                       li
                         .filter-item

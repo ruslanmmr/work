@@ -55,21 +55,25 @@ block content
     .container
       .page-head
         .breadcrumbs.breadcrumbs--lk(itemscope='' itemtype='http://schema.org/BreadcrumbList')
+          svg.breadcrumbs__sep
+            use(xlink:href='#tab-arrow')
           span(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
             a(itemprop='item' title='Главная' href='/')
               | Главная
               meta(itemprop='name' content='Главная')
             meta(itemprop='position' content='1')
-          span.sep
+          svg.breadcrumbs__sep
+            use(xlink:href='#tab-arrow')
           span(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
             a(itemprop='item' title='Статьи' href='/articles/')
               | Статьи
               meta(itemprop='name' content='Статьи')
             meta(itemprop='position' content='2')
-          span.sep
+          svg.breadcrumbs__sep
+            use(xlink:href='#tab-arrow')
           |         Правда и мифы о террасной доске
       .article-inner.noselect
-        .article-inner__content.article-inner__content--wide
+        .article-inner__content
           .text-page.noselect
             h1
               | Правда и мифы о террасной доске
@@ -84,6 +88,37 @@ block content
             .article-inner__share-content
               <script src="https://yastatic.net/share2/share.js" async></script>
               .ya-share2(data-services='vkontakte,twitter,odnoklassniki,facebook,telegram,whatsapp,viber')
+        .article-inner__side
+          .side-menu
+            ul
+              li
+                a(title='Рассрочка по пиломатериалам' href='/articles/rassrochka-po-pilomaterialam/') Рассрочка по пиломатериалам
+                  svg.icon
+                    use(xlink:href='#tab-arrow')
+              li
+                a(title='Кредитование по низкой ставке' href='/articles/kreditovanie-po-nizkoj-stavke/') Кредитование по низкой ставке
+                  svg.icon
+                    use(xlink:href='#tab-arrow')
+              li
+                a(title='Расширение складских площадей' href='/articles/modernizaciya-skladskih-pomeshenij/') Расширение складских площадей
+                  svg.icon
+                    use(xlink:href='#tab-arrow')
+              li
+                a(title='Евровагонка в интерьере' href='/articles/pro-reklamnye-bannera/') Евровагонка в интерьере
+                  svg.icon
+                    use(xlink:href='#tab-arrow')
+              li
+                a(title='Правда и мифы о террасной доске' href='/articles/pravda-i-mify-o-terrasnoj-doske/') Правда и мифы о террасной доске
+                  svg.icon
+                    use(xlink:href='#tab-arrow')
+              li
+                a(title='Интересные факты о лестницах' href='/articles/kak-krasit-faneru/') Интересные факты о лестницах
+                  svg.icon
+                    use(xlink:href='#tab-arrow')
+              li
+                a(title='Дверь филенчатая из массива древесины' href='/articles/dekorativnaya-otdelka-pilomaterialom/') Дверь филенчатая из массива древесины
+                  svg.icon
+                    use(xlink:href='#tab-arrow')
 
 
   section.conditional-section.conditional-section_bg
