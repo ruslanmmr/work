@@ -199,86 +199,141 @@
       </div>
     </header>
     <main>
-      <section class="section">
+      <section class="section simple-cart">
         <div class="container">
-          <div class="catalog-side mobile-show"><span class="catalog-side__title"><span class="icon">
-                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z" fill="currentColor"></path>
-                </svg></span>Каталог продукции</span>
-            <div class="catalog-side__content">
-              <ul>
-                <li class="menu-item current"><a href="/catalog/brevno-ocilindrovannoe/">Бревно оцилиндрованное</a></li>
-                <li class="menu-item current"><a href="/catalog/vagonka-i-evrovagonka/">Вагонка и Евровагонка</a></li>
-                <li class="menu-item current"><a href="/catalog/blok-haus/">Блок Хаус</a></li>
-                <li class="menu-item current"><a href="/catalog/imitaciya-brusa/">Имитация бруса</a></li>
-                <li class="menu-item current"><a href="/catalog/doska-pola/">Доска пола</a></li>
-                <li class="menu-item current"><a href="/catalog/brus-i-doska-suhie-strogannye/">Брус и Доска</a></li>
-                <li class="menu-item current"><a href="/catalog/derevianniy-dekor/">Деревянный декор</a></li>
-                <li class="menu-item current"><a href="/catalog/elementy-lestnic/">Элементы лестниц</a></li>
-                <li class="menu-item current"><a href="/catalog/dveri-i-okna/">Двери и окна</a></li>
-                <li class="menu-item current"><a href="/catalog/materialy-iz-lipy/">Материалы из липы и абаши</a></li>
-                <li class="menu-item current"><a href="/catalog/materialy-iz-listvennicy/">Материалы из лиственницы</a></li>
-                <li class="menu-item current"><a href="/catalog/materialy-ih-osiny-i-abashi/">Материалы из осины</a></li>
-                <li class="menu-item current"><a href="/catalog/fanera-osb-dsp-dvp-tssp/">Фанера, ОСБ, ДСП, ДВП</a></li>
-                <li class="menu-item current"><a href="/catalog/utepliteli/">Утеплители</a></li>
-                <li class="menu-item current"><a href="/catalog/rulonnie-izoliyzionnie-materialy/">Рулонные изоляционные материалы</a></li>
-                <li class="menu-item current"><a href="/catalog/propitki-dlya-drevesiny/">Пропитки для древесины</a></li>
-                <li class="menu-item current"><a href="/catalog/derevyannye-igrushki/">Деревянные игрушки</a></li>
-              </ul>
+          <div class="page-head">
+            <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+              <svg class="breadcrumbs__sep">
+                <use xlink:href="#tab-arrow"></use>
+              </svg><span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" title="Главная" href="/">Главная
+                  <meta itemprop="name" content="Главная"></a>
+                <meta itemprop="position" content="1"></span>
+              <svg class="breadcrumbs__sep">
+                <use xlink:href="#tab-arrow"></use>
+              </svg>        Корзина
             </div>
           </div>
-          <div class="page-head">
-            <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" title="Главная" href="/">Главная
-                  <meta itemprop="name" content="Главная"></a>
-                <meta itemprop="position" content="1"></span><span class="sep"></span>        Личный кабинет</div>
-          </div>
-          <div class="content-block">
-            <div class="lk-main-page">
-              <h1>Личный кабинет</h1>
-              <div class="lk-main-page__head">
-                <div class="user-data"><span class="user-data__avatar">
-                    <svg class="icon-svg">
-                      <use xlink:href="#user-icon"></use>
-                    </svg></span>
-                  <div class="user-data__content"><span class="user-data__name">info@stroyker.pro</span><a class="btn-border btn-exit lk-exit" href="/account/logout/">
-                      <svg class="icon">
-                        <use xlink:href="#exit"></use>
-                      </svg>Выйти</a></div>
+          <div class="content-block"><span class="content-title content-title--lg">Корзина</span>
+            <div class="simple-cart__content">
+              <div class="shopping-cart">
+                <div class="shopping-cart-list">
+                  <div class="shopping-cart-item"><span class="shopping-cart-item__delete" data-cart-delete-url="/cart/del/3557"><a>
+                        <svg class="icon-svg">
+                          <use xlink:href="#delete"></use>
+                        </svg></a></span><span class="shopping-cart-item__name"><span>clk00044</span>Евровагонка (хвоя) 12,5х90мм 1м категория АВ</span><span class="shopping-cart-item__cost">25,00 ₽</span><span class="shopping-cart-item__numbers">
+                      <div class="input-number">
+                        <div class="cart-qty-control order-down" data-qty-update-url="/cart/upd/3557?q=down"></div>
+                        <input class="cart-qty-control-input" id="number" data-qty-update-url="/cart/upd/3557" type="number" min="0" step="1" value="1" required="">
+                        <div class="cart-qty-control order-up" data-qty-update-url="/cart/upd/3557?q=up"></div>
+                      </div></span><span class="shopping-cart-item__total-cost">25,00 ₽</span></div>
+                  <div class="shopping-cart-item"><span class="shopping-cart-item__delete" data-cart-delete-url="/cart/del/3883"><a>
+                        <svg class="icon-svg">
+                          <use xlink:href="#delete"></use>
+                        </svg></a></span><span class="shopping-cart-item__name"><span>с0324</span>Бревно оцилиндрованное (ель, сосна) 240 мм, Финский профиль</span><span class="shopping-cart-item__cost">14500,00 ₽</span><span class="shopping-cart-item__numbers">
+                      <div class="input-number">
+                        <div class="cart-qty-control order-down" data-qty-update-url="/cart/upd/3883?q=down"></div>
+                        <input class="cart-qty-control-input" id="number" data-qty-update-url="/cart/upd/3883" type="number" min="0" step="1" value="1" required="">
+                        <div class="cart-qty-control order-up" data-qty-update-url="/cart/upd/3883?q=up"></div>
+                      </div></span><span class="shopping-cart-item__total-cost">14500,00 ₽</span></div>
+                  <div class="shopping-cart-item"><span class="shopping-cart-item__delete" data-cart-delete-url="/cart/del/3878"><a>
+                        <svg class="icon-svg">
+                          <use xlink:href="#delete"></use>
+                        </svg></a></span><span class="shopping-cart-item__name"><span>с0325</span>Бревно оцилиндрованное (ель, сосна) 260 мм, Лунный паз</span><span class="shopping-cart-item__cost">15000,00 ₽</span><span class="shopping-cart-item__numbers">
+                      <div class="input-number">
+                        <div class="cart-qty-control order-down" data-qty-update-url="/cart/upd/3878?q=down"></div>
+                        <input class="cart-qty-control-input" id="number" data-qty-update-url="/cart/upd/3878" type="number" min="0" step="1" value="1" required="">
+                        <div class="cart-qty-control order-up" data-qty-update-url="/cart/upd/3878?q=up"></div>
+                      </div></span><span class="shopping-cart-item__total-cost">15000,00 ₽</span></div>
+                </div>
+                <div class="delivery-cart">
+                  <div class="delivery-total delivery-total--cart">
+                    <ul>
+                      <li><span class="delivery-total__sm">Общий вес, кг:</span><span class="delivery-total__sm cart-total-weight">0,57</span></li>
+                      <li><span class="delivery-total__sm">Общий объём, м3: </span><span class="delivery-total__sm cart-total-volume">0,1</span></li>
+                      <li><span class="delivery-total__lg">Итого:</span><span class="delivery-total__lg cart-total-price">29525,00 ₽</span></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-            <section class="lf-main-container">
-              <div class="container"><a class="mobile-menu-item" href="/user/orders/">История заказов<span class="icon">
-                    <svg class="icon-svg">
-                      <use xlink:href="#tab-arrow"></use>
-                    </svg></span></a><a class="mobile-menu-item" href="/user/docs/">Документооборот<span class="icon">
-                    <svg class="icon-svg">
-                      <use xlink:href="#tab-arrow"></use>
-                    </svg></span></a><a class="mobile-menu-item" href="/user/profile/edit/">Личные данные<span class="icon">
-                    <svg class="icon-svg">
-                      <use xlink:href="#tab-arrow"></use>
-                    </svg></span></a>
-                <div class="lk-main-menu"><a class="lk-menu-item" href="/user/orders/">
-                    <svg class="icon">
-                      <use xlink:href="#box"></use>
-                    </svg><span class="lk-menu-item__name">История заказов</span><span class="lk-menu-item__text">Просмотр, повтор, сохранение истории ваших покупок</span>
-                    <svg class="arrow">
-                      <use xlink:href="#arrow-right"></use>
-                    </svg></a><a class="lk-menu-item" href="/user/docs/">
-                    <svg class="icon">
-                      <use xlink:href="#subtract"></use>
-                    </svg><span class="lk-menu-item__name">Документооборот</span><span class="lk-menu-item__text">Счета, акты и сметы. У нас ничего не теряется</span>
-                    <svg class="arrow">
-                      <use xlink:href="#arrow-right"></use>
-                    </svg></a><a class="lk-menu-item" href="/user/profile/edit/">
-                    <svg class="icon">
-                      <use xlink:href="#pencil"></use>
-                    </svg><span class="lk-menu-item__name">Личные данные</span><span class="lk-menu-item__text">Пароль, логин и реквизиты</span>
-                    <svg class="arrow">
-                      <use xlink:href="#arrow-right"></use>
-                    </svg></a></div>
-              </div>
-            </section>
+            <div class="simple-cart__form">
+              <form class="simple-order-form" method="post">
+                <input type="hidden" name="csrfmiddlewaretoken" value="7XAS0lrsOqeHirEGkexQPLF4Crw7LbSZFs8CmQljLjhKCIvAvliNtVMkmUlDqOGv">
+                <div class="simple-order-form__group simple-order-form__column">
+                  <h3 class="simple-order-form__title">Предпочтительный вариант доставки:</h3>
+                  <ul id="id_delivery_variant">
+                    <li>
+                      <div class="new-radio">
+                        <input class="new-radio__input" type="radio" id="id_delivery_variant_0" name="delivery_variant" value="самовывоз">
+                        <label class="new-radio__label" for="id_delivery_variant_0">самовывоз</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="new-radio">
+                        <input class="new-radio__input" type="radio" id="id_delivery_variant_1" name="delivery_variant" value="доставка по адресу">
+                        <label class="new-radio__label" for="id_delivery_variant_1">доставка по адресу</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="simple-order-form__group simple-order-form__column"> 
+                  <h3 class="simple-order-form__title">Предпочтительный вариант оплаты:</h3>
+                  <ul id="id_payment_variant">
+                    <li>
+                      <div class="new-radio">
+                        <input class="new-radio__input" type="radio" id="id_payment_variant_0" name="payment_variant" value="Выставление счета">
+                        <label class="new-radio__label" for="id_payment_variant_0">Выставление счета</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="new-radio">
+                        <input class="new-radio__input" type="radio" id="id_payment_variant_1" name="payment_variant" value="Картой при получении">
+                        <label class="new-radio__label" for="id_payment_variant_1">Картой при получении</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="new-radio">
+                        <input class="new-radio__input" type="radio" id="id_payment_variant_2" name="payment_variant" value="Наличными при получении">
+                        <label class="new-radio__label" for="id_payment_variant_2">Наличными при получении</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="new-radio">
+                        <input class="new-radio__input" type="radio" id="id_payment_variant_3" name="payment_variant" value="Он-лайн">
+                        <label class="new-radio__label" for="id_payment_variant_3">Он-лайн</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="new-radio">
+                        <input class="new-radio__input" type="radio" id="id_payment_variant_4" name="payment_variant" value="Кредит">
+                        <label class="new-radio__label" for="id_payment_variant_4">Кредит</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="simple-order-form__group simple-order-form__inputs">
+                  <div class="form-group">
+                    <input class="form-control" id="id_name" type="text" name="name" maxlength="60" required="">
+                    <label class="label-name" for="id_name"><span class="content-name">Имя*</span></label>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control phone" id="id_phone" type="text" name="phone" value="70000000000" maxlength="18" required="">
+                    <label class="label-name" for="id_phone"><span class="content-name">Телефон*</span></label>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="id_email" type="text" name="email" value="info@stroyker.pro" maxlength="60" required="">
+                    <label class="label-name" for="id_email"><span class="content-name">Email*</span></label>
+                  </div>
+                  <div class="form-group comment">
+                    <textarea class="form-control form-control" id="id_comment" name="comment" cols="40" rows="10"></textarea>
+                    <label class="label-name" for="id_comment"><span class="content-name">Комментарий к заказу</span></label>
+                  </div>
+                </div>
+                <div class="simple-order-form__group simple-order-form__submit">
+                  <button class="btn btn--main-min" type="submit">Отправить</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -287,7 +342,7 @@
           <div class="question-main" id="question-main">
             <div class="question-form"><span class="content-title center h2">Остались вопросы?</span>
               <form id="feedback-message-request-form" action="/crm/message/" method="post">
-                <input type="hidden" name="csrfmiddlewaretoken" value="Z1nXnOAF14323XP6UnBCLwRWonV0tvg3nC7uR3fS0PueV52w5KMX21eB7S6nEME0">
+                <input type="hidden" name="csrfmiddlewaretoken" value="7XAS0lrsOqeHirEGkexQPLF4Crw7LbSZFs8CmQljLjhKCIvAvliNtVMkmUlDqOGv">
                 <div class="question-form__column">
                   <div class="form-group">
                     <input class="form-control" type="text" name="name" autocomplete="off" required="">
@@ -604,24 +659,16 @@
       }
       }
     </script>
-    <script type="text/javascript">
-      // This url dictionary is used in js scripts instead of direct links.
-      const URLS = {
-      static: "/static/",
-      cart: "/cart/",
-      register: "/account/register/",
-      }
-    </script>
     <script src="/static/js/notify.min.js"></script>
     <script src="/static/js/ajax_setup.js"></script>
     <script src="/static/catalog/js/search.js"></script>
     <script src="/static/js/common.js"></script>
-    <script src="/static/js/contentSelectionDisable.js"></script>
     <script src="/static/commerce/js/cart.js"></script>
     <script src="/static/catalog/js/catalog.js"></script>
     <script type="text/javascript" src="/static/crm/js/crm_forms.js"></script>
     <script type="text/javascript" src="/static/subscription/js/subscription.js"></script>
-    <script src="/static/js/scripts.js"></script>
+    <script src="http://localhost:9001/scripts/scripts.js"></script>
+    <script src="/static/js/new.js"></script>
     <script src="http://localhost:9001/scripts/new.js"></script>
     <link rel="stylesheet" href="http://localhost:9001/styles/helper.css">
     <div class="helper"><a class="helper__trigger" href="javascript:void(0);"> 

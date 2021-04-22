@@ -1,5 +1,5 @@
--var href = 'https://ruslanmmr.github.io/work/vagonka/build'
-//-var href = 'http://localhost:9000'
+//-var href = 'https://ruslanmmr.github.io/work/vagonka/build'
+-var href = 'http://localhost:9001'
 
 block variables
 
@@ -21,6 +21,7 @@ html
     link(rel='stylesheet', href='/static/css/common.css', type='text/css')
     block styles
     //new
+    link(rel='stylesheet' href=href+'/styles/font.css')
     link(rel='stylesheet' href=href+'/styles/theme.css')
     link(rel='stylesheet' href=href+'/styles/new.css')
   
