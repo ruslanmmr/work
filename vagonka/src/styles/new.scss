@@ -4,6 +4,10 @@ $trs3: 1s ease-out;
 
 @import 'fix';
 
+input, textarea {
+  font-family: inherit !important;
+}
+
 
 .grid {
   margin-bottom: -20px;
