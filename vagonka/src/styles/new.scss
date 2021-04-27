@@ -588,6 +588,63 @@ header {
   }
 }
 
+.new-banners {
+  display: block;
+  .owl-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .owl-dot {
+    padding: 6px;
+    span {
+      width: 11px;
+      height: 11px;
+      border-radius: 10px;
+      display: block;
+      transition: background-color $trs1;
+      border: 1px solid var(--main-elements-color, #2363D1);
+      background: #F3F6FB;
+      cursor: pointer;
+    }
+    &.active {
+      span {
+        background: var(--main-elements-color, #2363D1);
+      }
+    }
+  }
+
+
+  @media screen and (min-width:768px) {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+    .item {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  @media screen and (max-width:767px) {
+    display: flex;
+    margin: 40px -7.5px 25px -7.5px;
+    width: calc(100% + 15px);
+    .product-item--banner {
+      padding: 0 7.5px;
+      height: auto;
+      a {
+        display: block;
+        height: 100%;
+      }
+      img {
+        display: block;
+        height: auto;
+        max-width: initial;
+      }
+    }
+  }
+}
+
 //landing
 .landing-feedback-form {
   padding: 60px 0;

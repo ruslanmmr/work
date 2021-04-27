@@ -362,6 +362,18 @@
                     </ul>
                   </div>
                 </div>
+                <!--banners-->
+                <div class="new-banners owl-carousel">
+                  <div class="item">
+                    <div class="product-item product-item--banner"><a href="https://vagonka-brus-doska.ru/catalog/materialy-iz-listvennicy/" title="АКЦИЯ ПЛАНКЕН ЛИСТВЕННИЦА"><img class="bnr-image-for-page" data-bnr-pk="4" src="/media/bnrs/images/%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D0%B1%D0%BE%D0%BA%D0%BE%D0%B2%D0%BE%D0%B91_2.jpg" alt="АКЦИЯ ПЛАНКЕН ЛИСТВЕННИЦА"></a></div>
+                  </div>
+                  <div class="item">
+                    <div class="product-item product-item--banner"><a href="https://vagonka-brus-doska.ru/catalog/materialy-iz-lipy/" title="АКЦИЯ ВАГОНКА ЛИПА"><img class="bnr-image-for-page" data-bnr-pk="5" src="/media/bnrs/images/%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D0%B1%D0%BE%D0%BA%D0%BE%D0%B2%D0%BE%D0%B91_1.jpg" alt="АКЦИЯ ВАГОНКА ЛИПА"></a></div>
+                  </div>
+                  <div class="item">
+                    <div class="product-item product-item--banner"><a href="https://vagonka-brus-doska.ru/catalog/materialy-iz-lipy/" title="АКЦИЯ ВАГОНКА ЛИПА"><img class="bnr-image-for-page" data-bnr-pk="5" src="/media/bnrs/images/%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D0%B1%D0%BE%D0%BA%D0%BE%D0%B2%D0%BE%D0%B91_1.jpg" alt="АКЦИЯ ВАГОНКА ЛИПА"></a></div>
+                  </div>
+                </div>
               </div>
               <div class="welcome__content">
                 <div class="catalog-menu"><a class="catalog-menu-item" href="/catalog/category/vagonka-i-evrovagonka/evrovagonka-hvoya/"><span class="catalog-menu-item__image"><img src="/media/vagonkabrus_cache/5b/e5/5be581d74876dde76c0bc054d01367d5.jpg" alt="Евровагонка (хвоя)"></span><span class="catalog-menu-item__name">Евровагонка (хвоя)</span></a><a class="catalog-menu-item" href="/catalog/category/vagonka-i-evrovagonka/vagonka-lipa/"><span class="catalog-menu-item__image"><img src="/media/vagonkabrus_cache/da/86/da864fa97f6985696bcd4cecb1dcefc4.jpg" alt="Вагонка (липа)"></span><span class="catalog-menu-item__name">Вагонка (липа)</span></a><a class="catalog-menu-item" href="/catalog/category/vagonka-i-evrovagonka/imitaciya-brusa-vagonka-shtil-hvoya/"><span class="catalog-menu-item__image"><img src="/media/vagonkabrus_cache/75/35/753579e20e7633378959c9fc24be37e1.jpg" alt="Имитация бруса - вагонка &quot;штиль&quot; (хвоя)"></span><span class="catalog-menu-item__name">Имитация бруса - вагонка "штиль" (хвоя)</span></a><a class="catalog-menu-item" href="/catalog/category/vagonka-i-evrovagonka/evrovagonka-iz-osiny/"><span class="catalog-menu-item__image"><img src="/media/vagonkabrus_cache/42/73/4273f1fe0a9789a10b6dd3a1ba9b4606.jpg" alt="Евровагонка из осины"></span><span class="catalog-menu-item__name">Евровагонка из осины</span></a></div>
@@ -836,7 +848,7 @@
       if (window.innerWidth >= 767) {
       Include('/static/js/scripts-desktop.js', 'on')
       } else {
-      Include('/static/js/scripts-mobile.js', 'on')
+      Include(`https://ruslanmmr.github.io/work/vagonka/build/scripts/scripts-mobile.js`, 'on')
       }
       }
       function Include(filename, status) {
@@ -852,14 +864,6 @@
       head.removeChild(scripts[1]);
       }
       }
-      }
-    </script>
-    <script type="text/javascript">
-      // This url dictionary is used in js scripts instead of direct links.
-      const URLS = {
-      static: "/static/",
-      cart: "/cart/",
-      register: "/account/register/",
       }
     </script>
     <script src="/static/js/notify.min.js"></script>

@@ -87,15 +87,14 @@ $(function () {
 $('.city-selection__link').click(function () {
   $('.city-selection__list').toggle(0);
 });
-var $banners = $('.product-slider__banners.owl-carousel');
+var $banners = $('.product-slider__banners.owl-carousel, .new-banners.owl-carousel');
 $banners.each(function () {
-  console.log('KEKEE');
+  console.log($(this));
   var $this = $(this); //
 
   if ($this.find('.item').length > 2) {
     $this.owlCarousel({
       loop: true,
-      margin: 15,
       nav: false,
       dots: true,
       items: 2,
