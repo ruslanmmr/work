@@ -87,11 +87,12 @@ $(function () {
 $('.city-selection__link').click(function () {
   $('.city-selection__list').toggle(0);
 });
-/* let $banners = $('.product-slider__banners.owl-carousel');
-$banners.each(function() {
-  let $this = $(this);
-  //
-  if($this.find('.item').length>2) {
+var $banners = $('.product-slider__banners.owl-carousel');
+$banners.each(function () {
+  console.log('KEKEE');
+  var $this = $(this); //
+
+  if ($this.find('.item').length > 2) {
     $this.owlCarousel({
       loop: true,
       margin: 15,
@@ -100,18 +101,17 @@ $banners.each(function() {
       items: 2,
       responsive: {
         0: {
-            nav: false,
-            dots: true,
+          nav: false,
+          dots: true
         },
         768: {
-            nav: false,
-            dots: false,
+          nav: false,
+          dots: false
         }
       }
     });
   }
-}) */
-//$(function () {
+}); //$(function () {
 //  $(".product-slider--third .item").slice(0, 2).show();
 //  $(".btn-download-1").on('click', function (e) {
 //    e.preventDefault();

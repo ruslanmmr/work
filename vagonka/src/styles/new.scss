@@ -566,8 +566,9 @@ header {
 @media screen and (max-width:767px) {
   .product-slider__banners {
     display: flex !important;
-    margin: 40px -7.5px 10px -7.5px;
+    margin: 40px -7.5px 0 -7.5px;
     width: calc(100% + 15px);
+    padding-bottom: 40px;
     .item {
       padding: 0 7.5px;
       flex: 1 1 50%;
@@ -580,6 +581,9 @@ header {
         margin: 0;
         max-width: 100%;
       }
+    }
+    .owl-dots {
+      bottom: 0 !important;
     }
   }
 }

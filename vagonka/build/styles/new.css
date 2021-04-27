@@ -490,8 +490,9 @@ header {
 @media screen and (max-width: 767px) {
   .product-slider__banners {
     display: flex !important;
-    margin: 40px -7.5px 10px -7.5px;
-    width: calc(100% + 15px); }
+    margin: 40px -7.5px 0 -7.5px;
+    width: calc(100% + 15px);
+    padding-bottom: 40px; }
     .product-slider__banners .item {
       padding: 0 7.5px;
       flex: 1 1 50%;
@@ -501,7 +502,9 @@ header {
         width: 100%; }
       .product-slider__banners .item img {
         margin: 0;
-        max-width: 100%; } }
+        max-width: 100%; }
+    .product-slider__banners .owl-dots {
+      bottom: 0 !important; } }
 
 .landing-feedback-form {
   padding: 60px 0; }

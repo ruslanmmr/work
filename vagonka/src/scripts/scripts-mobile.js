@@ -93,8 +93,9 @@ $('.city-selection__link').click(function () {
 });
 
 
-/* let $banners = $('.product-slider__banners.owl-carousel');
+let $banners = $('.product-slider__banners.owl-carousel');
 $banners.each(function() {
+  console.log('KEKEE')
   let $this = $(this);
   //
   if($this.find('.item').length>2) {
@@ -116,7 +117,7 @@ $banners.each(function() {
       }
     });
   }
-}) */
+})
 
 
 
