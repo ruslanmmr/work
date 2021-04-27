@@ -833,6 +833,9 @@ header {
   .conditional-section .product-slider, .conditional-section .news-slider, .conditional-section .action-slider, .conditional-section .category-slider {
     margin-bottom: 0; }
 
+.frontpage .section-first-alter + .conditional-section_bg {
+  margin-top: -40px; }
+
 .banner-item__container {
   display: block;
   position: relative;

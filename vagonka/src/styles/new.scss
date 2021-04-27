@@ -1005,6 +1005,11 @@ header {
     margin-bottom: 0;
   }
 }
+.frontpage .section-first-alter {
+  & + .conditional-section_bg {
+    margin-top: -40px;
+  }
+}
 
 .banner-item {
   &__container {
