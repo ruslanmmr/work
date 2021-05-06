@@ -1,0 +1,31 @@
+.header {
+  z-index: 1000;
+  flex-shrink: 0;
+  position: absolute;
+  width: 100%;
+  padding-top: 26px;
+  &__container {
+    height: 124px;
+    position: relative;
+  }
+  @include media-breakpoint-down(xxl) {
+
+  }
+}
+
+.logo {
+  display: block;
+  width: 105px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
