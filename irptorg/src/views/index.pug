@@ -6,11 +6,11 @@ block content
     .image.image_cover.home-screen__background
       img(srcset="./img/home-mobile.png 575w, ./img/home-tablet.png 1023w, ./img/home-desktop.png 1920w", sizes="(max-width: 575px) 300px, (max-width: 1023px) 600px, 1920px")
     .container.home-screen__container
-      .home-screen__text
+      .home-screen__text-content
         h1.home-screen__title Изготовление и продажа<br> <mark>индивидуальных</mark><br> рационов питания
+        .home-screen__image.image.image_contain   
+          img(data-src="./img/ИРП.png", alt="image").lazyload
         p.home-screen__text Только сертифицированная продукция от производителя. <br>Для получения актуального прайс-листа оставьте заявку на сайте
-      .home-screen__image.image.image_contain   
-        img(data-src="./img/ИРП.png", alt="image").lazyload
       a(href="#modal-1" data-modal="open").button.button_style-1.home-screen__button 
         span ПОЛУЧИТЬ ПРАЙС-ЛИСТ 
         img(src="./img/icons/icon-list.svg", alt="icon").icon
@@ -18,7 +18,7 @@ block content
       //
       .home-features.row
         mixin block(title)
-          .home-features__item.col-xl-2 
+          .home-features__item.col-6.col-sm-4.col-lg-2 
             img(src="./img/icons/star.svg", alt="star").icon
             span #{title}
         +block('Оптовая и розничная продажа')
@@ -32,7 +32,7 @@ block content
     .container.for-whom-section__container
       img(data-src="./img/man.png", alt="man").for-whom-section__man.lazyload
       .row 
-        .offset-xl-5.col-xl-7 
+        .offset-lg-5.col-lg-7 
           h2 Для кого изготавливаются сухие пайки
           p Основным назначением сухого пайка становится обеспечение возможности принятия пищи в любых условиях. Это в особенности актуально в походе, на полевых сборах и в других условиях, когда приготовить еду самостоятельно не представляется возможным.  
           h6 Кому выгодно покупать сухие пайки:
@@ -59,7 +59,7 @@ block content
         h2.section-star-head__title Каталог продукции
       .section-categories__content.row
         mixin block(image, title, style)
-          .section-categories__block.col-xl-2
+          .section-categories__block.col-6.col-sm-4.col-lg-3.col-xl-2
             a(href="javascript:void(0);").section-categories__block-container
               .image.image_contain.section-categories__block-image(class=style==2?'section-categories__block-image_xl':'')
                 img(data-src=image, alt="image").lazyload
@@ -84,7 +84,7 @@ block content
       img(data-src="./img/bg1.png", alt="bg").lazyload
     .container
       .row
-        .col-xl-7
+        .col-lg-7
           h2 Особые условия сотрудничества для 
             mark оптовых покупателей и дилеров!
           .commercial-offer__text
@@ -101,9 +101,9 @@ block content
       .image.image_contain.section-about__image
         img(data-src="./img/logo2.svg", alt="image").lazyload
       .row 
-        .col-xl-7 
-          h2 О КОМПАНИИ
-          blockquote Компания ИРПТОРГ специализируется на изготовлении ИРП уже более 5 лет. ИРПТОРГ сотрудничает со спецслужбами, разными ведомствами и силовыми структурами, а также туристическими агентствами и отдельными группами покупателей с 2016 года.
+        .col-lg-7 
+          h2.section-about__title О КОМПАНИИ
+          blockquote.section-about__blockquote Компания ИРПТОРГ специализируется на изготовлении ИРП уже более 5 лет. ИРПТОРГ сотрудничает со спецслужбами, разными ведомствами и силовыми структурами, а также туристическими агентствами и отдельными группами покупателей с 2016 года.
           ul 
             li Компания предлагает как стандартные наборы, соответствующие ГОСТу и нормативам, так и индивидуальное изготовление по составу заказчика.
             li Также предлагаем рационы питания халяль для клиентов.
@@ -156,11 +156,12 @@ block content
 
   section.section.section-delivery
     .image.image_cover.section-delivery__background 
-      img(data-src="./img/bg-delivery.png", alt="bg").lazyload
+      img(data-src="./img/bg-delivery.png", alt="bg").lazyload.d-none.d-sm-block
+      img(data-src="./img/bg-delivery-mobile.png", alt="bg").lazyload.d-sm-none
+    img(data-src="./img/delivery-car.png", alt="bg").lazyload.section-delivery__car.d-sm-none
     .container 
       .row.section-delivery__container 
-        .col-xl-5 
-          h2 Доставка сухпайков
+        h2.section-delivery__title.col-xl-5 Доставка сухпайков
             mark по всей России 
         .col-xl-7   
           blockquote 
@@ -176,29 +177,29 @@ block content
         .cooperation-stage-item 
           img(src="./img/cooperation/1.svg", alt="icon").icon
           img(src="./img/icons/arrow.svg", alt="icon").arrow
-          h6 Заполняете заявку на сайтe 
+          h6.cooperation-stage-item__title Заполняете заявку на сайтe 
         .cooperation-stage-item 
           img(src="./img/cooperation/2.svg", alt="icon").icon
           img(src="./img/icons/arrow.svg", alt="icon").arrow
-          h6 Менеджер перезванивает и обсуждает с вами все условия
+          h6.cooperation-stage-item__title Менеджер перезванивает и обсуждает с вами все условия
         .cooperation-stage-item 
           img(src="./img/cooperation/3.svg", alt="icon").icon
           img(src="./img/icons/arrow.svg", alt="icon").arrow
-          h6 Проводим рассчет стоимости с учетом особенностей заказа
+          h6.cooperation-stage-item__title Проводим рассчет стоимости с учетом особенностей заказа
         .cooperation-stage-item 
           img(src="./img/cooperation/4.svg", alt="icon").icon
           img(src="./img/icons/arrow.svg", alt="icon").arrow
-          h6 Изготавливаем сухпайки, собираем заказ и отправляем
+          h6.cooperation-stage-item__title Изготавливаем сухпайки, собираем заказ и отправляем
         .cooperation-stage-item 
           img(src="./img/cooperation/5.svg", alt="icon").icon
-          h6 После отправки вы получаете номер отслеживания
+          h6.cooperation-stage-item__title После отправки вы получаете номер отслеживания
 
   section.section.section-confidence 
     .image.section-confidence__background 
       img(data-src="./img/bg2.png", alt="image").lazyload
     .container
       .row
-        .col-xl-5.section-confidence__content
+        .col-lg-5.section-confidence__content
           .section-confidence__text
             h2 ПОЧЕМУ НАМ 
               mark ДОВЕРЯЮТ
@@ -215,7 +216,7 @@ block content
               .section-confidence__clients-block.image.image_contain
                 img(data-src="./img/clients/4.png", alt="image").lazyload
 
-        .offset-xl-3.col-xl-4
+        .offset-lg-3.col-lg-4
           .swiper.docs-slider
             img(data-src="./img/folder.png", alt="image").lazyload.docs-slider__folder
 
@@ -223,6 +224,8 @@ block content
               .swiper-wrapper
                 .swiper-slide.docs-slider__slide
                   img(data-src="./img/certificate.png", alt="image").swiper-lazy
+                .swiper-slide.docs-slider__slide
+                  img(data-src="./img/D2406AC2-3FDB-4929-AC34-A3EC70934E8A.jpeg", alt="image").swiper-lazy
 
             img(data-src="./img/clip.png", alt="image").lazyload.docs-slider__clip
 
@@ -231,13 +234,12 @@ block content
             .swiper-button.swiper-button-next(data-touch-hover)
               img(src="./img/icons/arrow2.svg", alt="icon").icon
 
-
   section.section.contacts-section
     .container 
-      img(data-src="./img/envelope.png", alt="image").lazyload.contacts-section__image
       .contacts-section__text.row
-        h2.col-xl-7 Подпишись на рассылку компании, чтобы первым получать:
-        .col-xl-6
+        h2.col-lg-7 Подпишись на рассылку компании, чтобы первым получать:
+        img(data-src="./img/envelope.png", alt="image").lazyload.contacts-section__image
+        .col-lg-7.col-xl-6
           ul.decorated-list 
             li 
               img(src="./img/icons/red-star.svg", alt="icon").icon
@@ -248,17 +250,18 @@ block content
             li 
               img(src="./img/icons/red-star.svg", alt="icon").icon
               | Новости компании ИРПТОРГ. 
-          blockquote Также бонус для наших подписчиков: Серия писем о том, что собой представляют сухие пайки, какие они бывают, для чего используются, как выбрать ИРП для себя и многое другое.
+          blockquote.type-2 Также бонус для наших подписчиков: Серия писем о том, что собой представляют сухие пайки, какие они бывают, для чего используются, как выбрать ИРП для себя и многое другое.
 
-      form.form
+      form(action="./mail.php").form
+        input(type="text" name='subject' hidden value='Подписка на рассылку')
         .form__group.row
-          .form__item.col-xl-4
+          .form__item.col-xl-4.col-sm-6
             .input
               input(type="text" name="name" data-validate='name' placeholder="Как к вам обращаться?" data-required).input__element
-          .form__item.col-xl-4
+          .form__item.col-xl-4.col-sm-6
             .input
               input(type="text" name="email" data-validate='email' placeholder="E-mail" data-required).input__element
-          .form__submit.col-xl-4
+          .form__submit.col-xl-4.col-sm-6
             button.button.button_style-1.button_loader 
               span ПОДПИСАТЬСЯ на рассылку
               svg(viewBox='0 0 120 30' fill='currentColor')
@@ -276,4 +279,4 @@ block content
             .checkbox
               input(type="checkbox" id='form_consent3' data-consent-checkbox checked).checkbox__input
               label(for='form_consent3').checkbox__label Я согласен с 
-                a(href="javascript:void(0);") политикой конфиденциальности
+                a(href="https://irptorg.ru/pricacy-policy/" target='_blank' rel='noopener') политикой конфиденциальности

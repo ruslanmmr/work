@@ -86,6 +86,11 @@
       }
     }
   }
+  @include media-breakpoint-down(sm) {
+    &-block {
+      padding: 50px 20px 40px 20px;
+    }
+  }
 }
 
 .modal-form {

@@ -14,12 +14,10 @@
   }
   &__title {
     margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
   }
   &__image {
-    position: absolute;
-    right: 15px;
-    top: -30px;
-    width: 340px;
     &::before {
       content: '';
       display: block;
@@ -33,14 +31,67 @@
   }
   &__text {
     font-size: 1.125rem;
+    position: relative;
+    z-index: 2;
+  }
+  &__text-content {
+    position: relative;
+    z-index: 2;
   }
   &__button {
     margin-top: 50px;
+    z-index: 2;
   }
-  @include media-breakpoint-down(xxl) {
+  @include media-breakpoint-up(sm) {
+    &__image {
+      position: absolute;
+      width: 220px;
+      right: 0;
+      top: -5px;
+    }
+
+  }
+  @include media-breakpoint-up(lg) {
     &__image {
       top: -20px;
       width: 300px;
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &__image {
+      top: -30px;
+      width: 340px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    padding-top: 220px;
+    padding-bottom: 200px;
+    &__text {
+      font-size: 1rem;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 160px;
+    padding-bottom: 120px;
+    &__title {
+      text-align: center;
+    }
+    &__image {
+      width: 190px;
+      right: initial;
+      top: initial;
+      margin: 40px auto 50px auto;
+      position: relative;
+    }
+    &__text {
+      text-align: center;
+      br {
+        display: none;
+      }
+    }
+    &__button {
+      width: 100%;
+      margin-top: 35px;
     }
   }
 }
@@ -59,6 +110,19 @@
       margin: 0 auto 13px auto;
     }
   }
+  @include media-breakpoint-down(lg) {
+    margin-top: 40px;
+    &__item {
+      margin-top: 50px;
+      font-size: 1rem;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    margin-top: 20px;
+    &__item {
+      margin-top: 30px;
+    }
+  }
 }
 
 .desktop-nav {
@@ -71,7 +135,7 @@
   }
   &__item {
     &:not(:last-child) {
-      margin-right: 100px;
+      margin-right: 105px;
     }
   }
   &__link {
@@ -87,9 +151,11 @@
 
   }
   &__contacts-element {
-    display: flex;
     padding-left: 42px;
     position: relative;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
     .icon {
       width: 28px;
       height: 28px;
@@ -103,13 +169,72 @@
   }
   &__contacts-icons {
     position: absolute;
-    left: calc(100% + 14px);
+    top: 0;
+    right: calc(100% - 28px);
     display: flex;
     .icon {
       &:not(:last-child) {
         margin-right: 10px;
       }
     }
+  }
+  @include media-breakpoint-down(xl) {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+    align-items: center;
+    &__item {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 35px;
+      }
+    }
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__left {
+      margin-bottom: 35px;
+    }
+    &__item {
+      margin: 0;
+    }
+    &__contacts-element {
+      padding: 0;
+      text-align: center;
+      justify-content: center;
+    }
+    &__phone-icon {
+      display: none;
+    }
+    &__contacts-element {
+      margin-bottom: 5px;
+    }
+    &__mail {
+      margin-top: 15px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__left {
+      margin-bottom: 15px;
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    &__contacts-icons {
+      position: relative;
+      left: 0;
+      justify-content: center;
+      margin-top: 5px;
+    }
+    
   }
 }
 
@@ -118,7 +243,8 @@
   z-index: 1;
   overflow: hidden;
   &__container {
-    padding: 280px 0 150px 0;
+    padding-top: 280px;
+    padding-bottom: 150px;
     &::before {
       content: '';
       display: block;
@@ -139,6 +265,31 @@
     height: auto;
     bottom: -160px;
     left: -84px;
+  }
+  @include media-breakpoint-down(lg) {
+    &__container {
+      padding-bottom: 230px;
+      &::before {
+        display: none;
+      }
+    }
+    &__man {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    &__container {
+      padding-top: 210px;
+      padding-bottom: 530px;
+    }
+    &__man {
+      display: block;
+      width: 260px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -204,6 +355,17 @@
       }
     }
   }
+  @include media-breakpoint-down(sm) {
+    margin-top: -80px;
+    padding-top: 80px;
+    padding-bottom: 170px;
+    &__content {
+      margin-bottom: -15px;
+    }
+    &__block {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .section-star-head {
@@ -213,6 +375,22 @@
     margin: 0 auto 17px auto;
     width: 70px;
     height: 66px;
+  }
+  &__title {
+    margin-top: 0;
+  }
+  @include media-breakpoint-down(lg) {
+    &__icon {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__icon {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 14px auto;
+    }
   }
 }
 
@@ -254,6 +432,49 @@
       left: -3%;
     }
   }
+  @include media-breakpoint-down(xl) {
+    &__image {
+      right: 15px;
+      width: 420px;
+      top: 0;
+    }
+    &__background {
+      img {
+        width: auto;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__image {
+      display: none;
+    }
+    &__text {
+      padding: 0;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    padding-bottom: 70px;
+    padding-top: 350px;
+    &__image {
+      display: block;
+      bottom: calc(100% + 40px);
+      width: 300px;
+      top: initial;
+      right: initial;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__button {
+      margin-top: 30px;
+      width: 100%;
+    }
+  }
 }
 
 .section-about {
@@ -287,16 +508,45 @@
       border-color: var(--color-line-bg-border);
     }
   }
+  @include media-breakpoint-down(lg) {
+    &__container {
+      padding-bottom: 130px;
+      &::before {
+        display: none;
+      }
+    }
+    &__image {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    &__container {
+      padding-top: 60px;
+      padding-bottom: 70px;
+    }
+    &__title {
+      margin-bottom: 260px;
+    }
+    &__image {
+      display: block;
+      width: 170px;
+      right: initial;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 128px;
+    }
+    &__blockquote {
+      padding: 0 !important;
+      &::before {
+        display: none;
+      }
+    }
+  }
 }
 
 .section-why {
   margin-bottom: 140px;
-  &__head {
-    position: absolute;
-    bottom: calc(100% + 45px);
-    width: calc(100% - 30px);
-    left: 15px;
-  }
   &__block {
     border: 1px solid var(--color-borders);
   }
@@ -330,13 +580,63 @@
     padding: 50px 40px;
     flex: 0 0 33.33%;
     max-width: 33.33%;
-    &:last-child {
-      border-width: 0 1px 1px 1px;
-    }
     .icon {
       height: 64px;
       width: auto;
       display: block;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__head {
+      position: absolute;
+      bottom: calc(100% + 45px);
+      width: calc(100% - 30px);
+      left: 15px;
+    }
+    &__icon-block {
+      &:last-child {
+        border-width: 0 1px 1px 1px;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__head {
+      margin-bottom: 40px;
+    }
+    &__image-block {
+      display: block;
+      padding: 50px;
+    }
+    &__image-block-image {
+      margin: 0 auto 70px auto;
+      width: 340px;
+    }
+    &__icon-block {
+      flex: 1 1 100%;
+      max-width: initial;
+      border-width: 0 1px 1px 1px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__image-block-image {
+      width: 260px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    margin-bottom: 50px;
+    &__image-block-image {
+      width: 200px;
+      margin-bottom: 35px;
+    }
+    &__image-block {
+      padding: 35px 15px;
+    }
+    &__icon-block {
+      padding: 35px 15px;
+      .icon {
+        margin: 0 auto 35px auto;
+      }
     }
   }
 }
@@ -344,6 +644,7 @@
 .section-delivery {
   padding: 230px 0 540px 0;
   color: var(--color-text-light);
+  overflow: hidden;
   &__container {
     align-items: center;
   }
@@ -354,7 +655,32 @@
     top: 0;
     left: 0;
     img {
-      object-position: top center;
+      object-position: center top;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &__title {
+      margin: 0;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    padding-bottom: 586px;
+    &__background {
+      height: 110%;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding-bottom: 680px;
+  }
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    padding-top: 110px;
+    padding-bottom: 480px;
+    &__car {
+      position: absolute;
+      bottom: 80px;
+      height: 340px;
+      left: 35px;
     }
   }
 }
@@ -364,12 +690,26 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   &__title {
     text-align: center;
     margin-bottom: 75px;
   }
+  @include media-breakpoint-down(xl) {
+    &__container {
+      justify-content: center;
+      margin-bottom: -70px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 70px 0;
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
 }
+
 .cooperation-stage-item {
   width: 180px;
   position: relative;
@@ -387,6 +727,38 @@
     display: block;
     left: calc(100% + 5px);
     top: 58px;
+  }
+  &__title {
+    margin: 0;
+  }
+  @include media-breakpoint-down(xl) {
+    width: 33.33%;
+    padding: 0 20px;
+    margin-bottom: 70px;
+    .arrow {
+      left: calc(100% - 20px);
+    }
+  }
+  @include media-breakpoint-between(md, xl) {
+    &:nth-child(3) {
+      .arrow {
+        display: none;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    .arrow {
+      width: 30px;
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+      top: calc(100% + 30px);
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .icon {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -425,6 +797,40 @@
       padding-top: 100%;
       border-radius: 2px;
       overflow: hidden;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    padding: 120px 0;
+    &__content {
+      padding-top: 20px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    padding: 160px 0;
+    &__background {
+      overflow: hidden;
+      clip-path: polygon(22% 1%, 70% 0%, 100% 3%, 100% 100%, 65% 100%, 25% 98%, 0 100%, 0 3%);
+      img {
+        top: -15%;
+        left: -15%;
+        width: 130%;
+        height: 130%;
+        object-fit: cover;
+      }
+    }
+    &__content {
+      padding-top: 0;
+      margin-bottom: 80px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    padding: 70px 0;
+    &__text {
+      margin-bottom: 25px;
+    }
+    &__content {
+      margin-bottom: 40px;
     }
   }
 }
@@ -470,6 +876,19 @@
   .swiper-button-next {
     right: -90px;
   }
+  @include media-breakpoint-down(lg) {
+    width: calc(100% - 180px);
+    margin: 0 auto;
+  }
+  @include media-breakpoint-down(sm) {
+    width: calc(100% - 110px);
+    .swiper-button-prev {
+      left: -55px;
+    }
+    .swiper-button-next {
+      right: -55px;
+    }
+  }
 }
 
 .contacts-section {
@@ -483,5 +902,31 @@
   }
   &__text {
     margin-bottom: 68px;
+  }
+  @include media-breakpoint-down(xl) {
+    &__image {
+      width: 400px;
+      top: 0;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__image {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 70px 0;
+    text-align: center;
+    &__image {
+      display: block;
+      position: relative;
+      top: initial;
+      right: initial;
+      width: 290px;
+      margin: 20px auto 35px auto;
+    }
+    &__text {
+      margin-bottom: 35px;
+    }
   }
 }

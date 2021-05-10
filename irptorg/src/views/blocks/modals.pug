@@ -18,9 +18,10 @@
       .modal-block__container
         .modal-block__head
           h3.modal-block__head-title Получить 
-            mark ПРАЙС-ЛИСТ
+            mark ПРАЙC&#8209;ЛИСТ
           p.modal-block__head-text Заполните форму ниже, и мы обязательно вышлем прайс-лист вам на почту
-        form.form
+        form(action="./mail.php").form
+          input(type="text" name='subject' value='Получить прайс-лист' hidden)
           .form__group
             .form__item
               .input
@@ -49,7 +50,7 @@
               .checkbox
                 input(type="checkbox" id='form_consent1' data-consent-checkbox checked).checkbox__input
                 label(for='form_consent1').checkbox__label Я согласен с 
-                  a(href="javascript:void(0);") политикой конфиденциальности
+                  a(href="https://irptorg.ru/pricacy-policy/" target='_blank' rel='noopener') политикой конфиденциальности
 
 .modal.modal-form#modal-2
   .modal__wrapper(data-scroll-lock-scrollable)
@@ -62,7 +63,8 @@
           h3.modal-block__head-title ПОЛУЧИТЬ 
             mark КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ 
           p.modal-block__head-text Заполните форму ниже, и мы обязательно вышлем прайс-лист вам на почту
-        form.form
+        form(action="./mail.php").form
+          input(type="text" name='subject' hidden value='Получить коммерческое предложение')
           .form__group
             .form__item
               .input
@@ -91,6 +93,6 @@
               .checkbox
                 input(type="checkbox" id='form_consent2' data-consent-checkbox checked).checkbox__input
                 label(for='form_consent2').checkbox__label Я согласен с 
-                  a(href="javascript:void(0);") политикой конфиденциальности
+                  a(href="https://irptorg.ru/pricacy-policy/" target='_blank' rel='noopener') политикой конфиденциальности
         
         

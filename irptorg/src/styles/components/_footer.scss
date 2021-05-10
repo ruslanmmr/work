@@ -19,5 +19,22 @@
     text-align: center;
     border-top: 1px solid var(--color-footer-line);
     padding: 25px 0;
+    position: relative;
+    z-index: 2;
+  }
+  @include media-breakpoint-down(xl) {
+    &__logo {
+      position: relative;
+      display: inline-flex;
+      margin: 0 auto;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__top {
+      padding: 40px 0;
+    }
+    &__bottom {
+      padding: 40px 0;
+    }
   }
 }

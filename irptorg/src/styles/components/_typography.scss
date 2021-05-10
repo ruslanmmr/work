@@ -38,6 +38,25 @@ h6, .h6 {
   h1, .h1 {
     font-size: 3.5rem;
   }
+  h2, .h2 {
+    font-size: 3rem;
+  }
+}
+@include media-breakpoint-down(lg) {
+  h1, .h1 {
+    font-size: 3rem;
+  }
+  h2, .h2 {
+    font-size: 2.75rem;
+  }
+}
+@include media-breakpoint-down(sm) {
+  h1, .h1 {
+    font-size: 2.625rem;
+  }
+  h2, .h2 {
+    font-size: 2.25rem;
+  }
 }
 
 p {
@@ -73,6 +92,7 @@ blockquote {
   padding-left: 30px;
   margin: 0 0 24px 0;
   position: relative;
+  text-align: left;
   &::before {
     content: '';
     display: block;
@@ -86,6 +106,28 @@ blockquote {
   &:last-child {
     margin-bottom: 0;
   }
+  @include media-breakpoint-down(sm) {
+    &:not(.type-2) {
+      padding: 26px 0 0 0;
+      text-align: center;
+      &::before {
+        width: 38px;
+        height: 2px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &.type-2 {
+      &::before {
+        left: 6px;
+      }
+    }
+  }
+}
+
+ul {
+  text-align: left;
 }
 
 ul:not([class]) {
@@ -105,6 +147,7 @@ ul:not([class]) {
 }
 
 .decorated-list {
+  text-align: left;
   &:not(:last-child) {
     margin-bottom: 24px;
   }

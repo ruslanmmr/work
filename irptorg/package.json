@@ -24,6 +24,7 @@
 	},
 	"dependencies": {
 		"bootstrap": "^5.0.0-alpha1",
-		"normalize.css": "^8.0.1"
+		"normalize.css": "^8.0.1",
+		"vinyl-ftp": "^0.6.1"
 	}
 }

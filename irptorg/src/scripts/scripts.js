@@ -15,11 +15,10 @@ window.onload = function(){
   TouchHoverEvents.init();
   Validation.init();
   Modal.init();
+  Nav.init();
 
-  let $docs_slider = document.querySelectorAll('.docs-slider');
-  $docs_slider.forEach($this => {
-    new DocsSlider($this).init();
-  })
+  let $docs_slider = document.querySelector('.docs-slider');
+  if($docs_slider) new DocsSlider($docs_slider).init();
 
   //show page
   $body.classList.add('loaded');
@@ -292,8 +291,8 @@ const Validation = {
       $input.parentNode.classList.add('loading');
     })
     $submit.classList.add('loading');
-    //test
-    setTimeout(() => {
+
+    let finish = ()=> {
       $inputs.forEach(($input) => {
         $input.parentNode.classList.remove('loading');
       })
@@ -303,7 +302,18 @@ const Validation = {
       setTimeout(()=>{
         Modal.close();
       }, 3000)
-    }, 2000)
+    }
+
+    //send
+    $.ajax({
+      type: "POST",
+      url: $($form).attr('action'),
+      data: $($form).serialize(),
+      success: function(data) {
+        console.log(data)
+        finish();
+      }
+    });
   }
 }
 
@@ -359,5 +369,64 @@ const Modal = {
       })
       delete this.$active;
     }
+  }
+}
+
+const Scroll = {
+  scroll: function(y, speed) {
+    let scroll = {y:window.pageYOffset};
+    if(speed>0) {
+      this.animation = gsap.to(scroll, {y:y, duration:speed, ease:'power2.inOut', onComplete:()=>{
+        this.inScroll=false;
+        cancelAnimationFrame(this.frame);
+      }})
+      this.checkScroll = ()=>{
+        window.scrollTo(0, scroll.y);
+        this.frame = requestAnimationFrame(()=>{this.checkScroll()});
+      }
+      this.checkScroll();
+    } else {
+      window.scrollTo(0, y);
+    }
+  }
+}
+
+const Nav = {
+  init: function() {
+    this.$element = document.querySelector('.mobile-nav');
+    this.$items = document.querySelectorAll('.mobile-nav__item')
+    this.$toggle = document.querySelector('.nav-toggle-button');
+
+    this.animation = gsap.timeline({paused:true})
+      .fromTo(this.$element, {autoAlpha:0}, {autoAlpha:1, duration:0.5, ease:'power2.inOut'})
+      .fromTo(this.$items, {autoAlpha:0, y:30}, {autoAlpha:1, y:0, ease:'power2.out', duration:0.4, stagger:{amount:0.1}}, '-=0.5')
+
+    this.open = ()=> {
+      this.$toggle.classList.add('active');
+      this.animation.play();
+      Scroll.scroll(0, 0.5);
+      scrollLock.disablePageScroll();
+    }
+
+    this.close = ()=> {
+      this.$toggle.classList.remove('active');
+      this.animation.reverse();
+      scrollLock.enablePageScroll();
+    }
+
+    this.change = ()=> {
+      if(this.state) {
+        this.state = false;
+        this.open();
+      } else {
+        this.state = true;
+        this.close();
+      }
+    }
+
+    this.change();
+    this.$toggle.addEventListener('click', () => {
+      this.change();
+    })
   }
 }

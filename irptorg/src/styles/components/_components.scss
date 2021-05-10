@@ -91,4 +91,10 @@ img {
       pointer-events: none;
     }
   }
+  @include media-breakpoint-down(sm) {
+    &-button {
+      width: 40px;
+      height: 40px;
+    }
+  }
 }
