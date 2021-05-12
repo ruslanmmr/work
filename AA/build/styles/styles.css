@@ -4431,16 +4431,18 @@ ol:not([class]) {
   padding-top: 20px; }
   .header__container {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center; }
   .header__nav {
-    padding-top: 20px;
     font-size: 1.125rem; }
-  @media (max-width: 575.98px) {
+  @media (max-width: 767.98px) {
     .header {
       padding-top: 30px; }
       .header__container {
         flex-direction: column;
-        align-items: center; } }
+        align-items: center; }
+      .header__nav {
+        margin-top: 25px; } }
 
 .nav__list {
   display: flex;
