@@ -14,15 +14,7 @@ import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 import Swiper, {Pagination, Lazy} from 'swiper/core';
 Swiper.use([Pagination, Lazy]);
 
-const brakepoints = {
-  sm: 576,
-  md: 768,
-  lg: 1024,
-  xl: 1280,
-  xxl: 1600
-}
 const $body = document.body;
-const $wrapper = document.querySelector('.wrapper');
 const $header = document.querySelector('.header');
 
 //check device
@@ -35,12 +27,12 @@ function mobile() {
 }
 
 document.addEventListener('DOMContentLoaded', ()=> { 
-  TouchHoverEvents.init();
-  Header.init();
-  Nav.init();
   if(mobile()) {
     windowSize.init();
   }
+  TouchHoverEvents.init();
+  Header.init();
+  Nav.init();
   //scroll
   document.querySelectorAll('[data-scroll]').forEach($this => {
     $this.addEventListener('click', (event)=> {
