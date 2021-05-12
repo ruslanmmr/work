@@ -9,7 +9,7 @@ const brakepoints = {
 document.addEventListener('DOMContentLoaded', ()=> {
   new Parallax('[data-parallax]').init();
   new TouchHoverEvents('a, button, [data-touch-hover]').init();
-
+  gallery();
   //scroll
   document.querySelectorAll('a').forEach($this => {
     $this.addEventListener('click', (event)=> {
@@ -36,6 +36,36 @@ function mobile() {
   } else {
     return false;
   }
+}
+
+function gallery() {
+  $.fancybox.defaults.i18n.ru = {
+    CLOSE       : 'Закрыть',
+    NEXT        : 'Следующий слайд',
+    PREV        : 'Предидущий слайд',
+    ERROR       : 'Ошибка загрузки, попробуйте позже',
+    PLAY_START  : 'Запустить слайд-шоу',
+    PLAY_STOP   : 'Остановить слайд-шоу',
+    FULL_SCREEN : 'Полноэкранный режим',
+    THUMBS      : 'Миниатюры',
+    DOWNLOAD    : 'Загрузить',
+    SHARE       : 'Поделиться',
+    ZOOM        : 'Увеличить'
+  };
+  $.fancybox.defaults.lang = 'ru';
+  $.fancybox.defaults.loop = false;
+  $.fancybox.defaults.autoFocus = false;
+  $.fancybox.defaults.backFocus = false;
+  $.fancybox.defaults.hideScrollbar = false;
+  $.fancybox.defaults.animationDuration = 500;
+
+  $(document).on('beforeShow.fb', function() {
+    scrollLock.disablePageScroll();
+  });
+  $(document).on('afterClose.fb', function() {
+    scrollLock.clearQueueScrollLocks();
+    scrollLock.enablePageScroll();
+  });
 }
 
 function scrollPage(y, speed) {

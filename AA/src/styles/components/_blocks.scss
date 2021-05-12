@@ -1,7 +1,7 @@
 
 .home-screen {
   background-color: var(--color-bg-1);
-  height: 600px;
+  height: 100vh;
   padding-bottom: 0;
   z-index: 2;
   &__background {
@@ -137,6 +137,17 @@
   &__image {
     height: 180px;
     flex: 0 0 auto;
+    display: block;
+    transition: opacity $trs1;
+    img {
+      transition: transform $trs1;
+    }
+    &[data-touch], &[data-hover] {
+      opacity: 0.7;
+      img {
+        transform: scale(1.1);
+      }
+    }
   }
   &__content {
     padding: 20px 36px 30px 36px;
