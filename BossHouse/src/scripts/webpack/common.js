@@ -13,7 +13,6 @@ gsap.defaults({
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 import Swiper, {Pagination, Lazy} from 'swiper/core';
 Swiper.use([Pagination, Lazy]);
-import Inputmask from "inputmask";
 
 const brakepoints = {
   sm: 576,
@@ -26,10 +25,22 @@ const $body = document.body;
 const $wrapper = document.querySelector('.wrapper');
 const $header = document.querySelector('.header');
 
+//check device
+function mobile() {
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    return true;
+  } else {
+    return false;
+  }
+}
+
 document.addEventListener('DOMContentLoaded', ()=> { 
   TouchHoverEvents.init();
   Header.init();
   Nav.init();
+  if(mobile()) {
+    windowSize.init();
+  }
   //scroll
   document.querySelectorAll('[data-scroll]').forEach($this => {
     $this.addEventListener('click', (event)=> {
@@ -178,7 +189,6 @@ const Header = {
     this.old_scroll = y;
   }
 }
-
 
 const Nav = {
   init: function() {
@@ -393,5 +403,18 @@ class Map {
 
 
     loadMap();
+  }
+}
+
+const windowSize = {
+  init: function() {
+    let $el = document.createElement('div');
+    $el.style.cssText = 'position:fixed;height:100%;';
+    $body.insertAdjacentElement('beforeend', $el);
+    let h = $el.getBoundingClientRect().height;
+
+    document.querySelectorAll('.screen').forEach($this => {
+      $this.style.height = `${h}px`;
+    })
   }
 }
