@@ -1,6 +1,7 @@
 extends layout/layout
 block variables
   -var title = sitename+' - Изготовление и продажа индивидуальных рационов питания'
+  -var link_type = 1
 block content
   section.section.home-screen
     .image.image_cover.home-screen__background
@@ -50,7 +51,7 @@ block content
               img(src="./img/icons/red-star.svg", alt="icon").icon
               | Туристу. Соблюдение режима питания без возможности приготовить еду. Часто туристы берут сухпаек в дорогу, сплав, поезд или поход.
 
-  section.section.section-categories
+  section.section.section-categories#catalogue
     .image.image_cover.section-categories__background 
       img(src="./img/catalogue-mask.png", alt="mask")
     .container
@@ -60,7 +61,7 @@ block content
       .section-categories__content.row
         mixin block(image, title, style)
           .section-categories__block.col-6.col-sm-4.col-lg-3.col-xl-2
-            a(href="javascript:void(0);").section-categories__block-container
+            a(href="./product.html").section-categories__block-container
               .image.image_contain.section-categories__block-image(class=style==2?'section-categories__block-image_xl':'')
                 img(data-src=image, alt="image").lazyload
               h6.section-categories__block-title=title

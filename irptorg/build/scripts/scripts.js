@@ -20,6 +20,22 @@ window.onload = function(){
   let $docs_slider = document.querySelector('.docs-slider');
   if($docs_slider) new DocsSlider($docs_slider).init();
 
+  //scroll
+  document.querySelectorAll('[data-scroll]').forEach($this => {
+    $this.addEventListener('click', (event)=> {
+      let href = $this.getAttribute('href'),
+          $target = document.querySelector(href);
+      if($target) {
+        event.preventDefault();
+        let y = $target.getBoundingClientRect().y + window.pageYOffset;
+        Scroll.scroll(y, 1);
+        if(Nav.state) {
+          Nav.close();
+        }
+      }
+    })
+  })
+
   //show page
   $body.classList.add('loaded');
 }
@@ -401,32 +417,29 @@ const Nav = {
       .fromTo(this.$element, {autoAlpha:0}, {autoAlpha:1, duration:0.5, ease:'power2.inOut'})
       .fromTo(this.$items, {autoAlpha:0, y:30}, {autoAlpha:1, y:0, ease:'power2.out', duration:0.4, stagger:{amount:0.1}}, '-=0.5')
 
-    this.open = ()=> {
-      this.$toggle.classList.add('active');
-      this.animation.play();
-      Scroll.scroll(0, 0.5);
-      scrollLock.disablePageScroll();
-    }
-
-    this.close = ()=> {
-      this.$toggle.classList.remove('active');
-      this.animation.reverse();
-      scrollLock.enablePageScroll();
-    }
-
     this.change = ()=> {
-      if(this.state) {
-        this.state = false;
+      if(!this.state) {
         this.open();
       } else {
-        this.state = true;
         this.close();
       }
     }
 
-    this.change();
     this.$toggle.addEventListener('click', () => {
       this.change();
     })
+  },
+  open: function() {
+    this.state = true;
+    this.$toggle.classList.add('active');
+    this.animation.play();
+    Scroll.scroll(0, 0.5);
+    scrollLock.disablePageScroll();
+  },
+  close: function() {
+    this.state = false;
+    this.$toggle.classList.remove('active');
+    this.animation.reverse();
+    scrollLock.enablePageScroll();
   }
 }

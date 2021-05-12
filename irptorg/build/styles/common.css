@@ -3406,7 +3406,7 @@ h3, .h3 {
   font-size: 2.625rem; }
 
 h4, .h4 {
-  font-size: 1.25rem; }
+  font-size: 2rem; }
 
 h5, .h5 {
   font-size: 1.25rem;
@@ -3430,13 +3430,19 @@ h6, .h6 {
   h1, .h1 {
     font-size: 3rem; }
   h2, .h2 {
-    font-size: 2.75rem; } }
+    font-size: 2.75rem; }
+  h3, .h3 {
+    font-size: 2.5rem; } }
 
 @media (max-width: 575.98px) {
   h1, .h1 {
     font-size: 2.625rem; }
   h2, .h2 {
-    font-size: 2.25rem; } }
+    font-size: 2.25rem; }
+  h3, .h3 {
+    font-size: 2.125rem; }
+  h4, .h4 {
+    font-size: 1.875rem; } }
 
 p {
   margin: 0 0 24px 0; }
@@ -3519,24 +3525,58 @@ ul:not([class]) li {
       top: 0.15em;
       left: 0; }
 
+.table {
+  overflow: auto;
+  margin: 0 -15px;
+  padding: 0 15px; }
+
+table {
+  border: 1px solid var(--color-borders);
+  min-width: 100%; }
+  table th {
+    font-weight: normal;
+    color: var(--color-table-head);
+    background-color: var(--color-table-head-bg);
+    padding-top: 22px;
+    padding-bottom: 22px;
+    text-align: left; }
+  table th, table td {
+    padding-right: 30px; }
+    table th:first-child, table td:first-child {
+      padding-left: 30px; }
+    table th:last-child, table td:last-child {
+      text-align: right; }
+  table td {
+    padding-top: 12px;
+    padding-bottom: 12px; }
+  table tr:nth-child(odd) th, table tr:nth-child(odd) td {
+    background-color: var(--color-table-bg); }
+  table tr:not(:last-child) th, table tr:not(:last-child) td {
+    border-bottom: 1px solid var(--color-borders); }
+  @media (max-width: 575.98px) {
+    table {
+      font-size: 0.875rem; }
+      table th, table td {
+        padding-right: 20px; }
+        table th:first-child, table td:first-child {
+          padding-left: 20px; } }
+
 /*========== Helpers ==========*/
 /*========== Buttons ==========*/
 .button {
   position: relative;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   transition: background-color 0.15s ease-in-out, opacity 0.15s ease-in-out;
   border-radius: 2px;
-  height: 64px;
-  padding: 0 34px;
+  padding: 22px 34px 18px 34px;
   font-size: 1.125rem;
   font-family: "Bebas Neue", cursive;
-  letter-spacing: 0.05em; }
+  letter-spacing: 0.05em;
+  line-height: 24px; }
   .button span {
     transform: translateY(2px); }
   .button .icon {
@@ -3572,6 +3612,9 @@ ul:not([class]) li {
       opacity: 0; }
     .button_loader.loading svg {
       opacity: 1; }
+  @media (max-width: 575.98px) {
+    .button_style-1 {
+      padding: 22px 15px 18px 15px; } }
 
 /*========== Form ==========*/
 .input {
@@ -4481,6 +4524,129 @@ ul:not([class]) li {
         margin: 20px auto 35px auto; }
       .contacts-section__text {
         margin-bottom: 35px; } }
+
+.section-head {
+  padding-top: 265px; }
+  .section-head__background {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0; }
+    .section-head__background img {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+  @media (max-width: 1599.98px) {
+    .section-head__background img {
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center bottom;
+         object-position: center bottom; } }
+  @media (max-width: 1279.98px) {
+    .section-head {
+      padding-top: 240px; }
+      .section-head__background {
+        height: 250px; } }
+  @media (max-width: 575.98px) {
+    .section-head {
+      padding-top: 200px; }
+      .section-head__background {
+        height: 220px; } }
+
+.breacrumbs {
+  margin-bottom: 48px; }
+  .breacrumbs__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px -8px 0; }
+  .breacrumbs__item:not(:last-child) {
+    margin: 0 8px 8px 0; }
+  .breacrumbs__link {
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: currentColor;
+    padding: 0 15px;
+    line-height: 30px;
+    color: var(--color-breadcrumbs-2); }
+  @media (max-width: 575.98px) {
+    .breacrumbs {
+      margin-bottom: 35px; } }
+
+a.breacrumbs__link {
+  color: var(--color-breadcrumbs-1);
+  transition: color 0.15s ease-in-out; }
+  a.breacrumbs__link[data-touch], a.breacrumbs__link[data-hover] {
+    color: var(--color-breadcrumbs-2); }
+
+.product-section {
+  padding-bottom: 140px; }
+  .product-section__container {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 460px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-column-gap: 40px; }
+  .product-section__image {
+    grid-column: 1/2;
+    grid-row: 1/3; }
+  .product-section__head {
+    grid-column: 2/3;
+    margin-bottom: 30px; }
+  .product-section__info {
+    grid-column: 2/3; }
+  .product-section__order-button {
+    width: 100%;
+    margin-top: 24px; }
+  .product-section__image-content {
+    border: 1px solid var(--color-borders); }
+    .product-section__image-content::before {
+      content: '';
+      display: block;
+      padding-top: 100%; }
+    .product-section__image-content img {
+      padding: 40px; }
+  .product-section__title {
+    margin-bottom: 8px; }
+  .product-section__label {
+    display: block;
+    color: var(--color-label); }
+  .product-section__info-label {
+    color: var(--color-text-light);
+    background-color: var(--color-info-label-bg);
+    padding: 18px 30px 18px 60px;
+    display: block;
+    position: relative; }
+    .product-section__info-label .icon {
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 29px;
+      top: 18px; }
+  @media (max-width: 1279.98px) {
+    .product-section__container {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 30px; } }
+  @media (max-width: 1023.98px) {
+    .product-section__container {
+      display: block; }
+    .product-section__image {
+      margin-bottom: 40px; } }
+  @media (max-width: 575.98px) {
+    .product-section {
+      padding-bottom: 70px; }
+      .product-section__image {
+        margin-bottom: 30px; }
+      .product-section__order-button {
+        margin-top: 20px; }
+      .product-section__info-label {
+        padding: 18px 30px 18px 60px;
+        font-size: 0.875rem; }
+        .product-section__info-label .icon {
+          left: 20px; } }
 
 /*========== Header ==========*/
 .header {
