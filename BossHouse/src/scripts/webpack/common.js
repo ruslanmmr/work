@@ -29,6 +29,7 @@ const $header = document.querySelector('.header');
 document.addEventListener('DOMContentLoaded', ()=> { 
   TouchHoverEvents.init();
   Header.init();
+  Nav.init();
   //scroll
   document.querySelectorAll('[data-scroll]').forEach($this => {
     $this.addEventListener('click', (event)=> {
@@ -36,6 +37,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
           $target = document.querySelector(href);
       if($target) {
         event.preventDefault();
+        if(Nav.state) {
+          Nav.close();
+        }
         gsap.to(window, {scrollTo: href});
       }
     })
@@ -146,11 +150,14 @@ const Header = {
     let y = window.pageYOffset,
         h = window.innerHeight/2,
         fixed = $header.classList.contains('header_fixed'),
-        hidden = $header.classList.contains('header_hidden');
+        hidden = $header.classList.contains('header_hidden'),
+        $top = $header.querySelector('.header__top');
 
-    if (y > 50 && !fixed) {
+    let fval = $top.getBoundingClientRect().height;
+
+    if (y > fval && !fixed) {
       $header.classList.add('header_fixed');
-    } else if (y<=50 && fixed) {
+    } else if (y<=fval && fixed) {
       $header.classList.remove('header_fixed');
     }
 
@@ -169,6 +176,48 @@ const Header = {
     }  
 
     this.old_scroll = y;
+  }
+}
+
+
+const Nav = {
+  init: function() {
+    this.$element = document.querySelector('.mobile-nav');
+    this.$items = document.querySelectorAll('.mobile-nav__item')
+    this.$toggle = document.querySelector('.nav-toggle-button');
+
+    this.state = true;
+
+    this.animation = gsap.timeline({paused:true})
+      .fromTo(this.$element, {autoAlpha:0}, {autoAlpha:1, duration:0.5, ease:'power2.inOut'})
+      .fromTo(this.$items, {autoAlpha:0, y:30}, {autoAlpha:1, y:0, ease:'power2.out', duration:0.4, stagger:{amount:0.1}}, '-=0.4')
+
+    this.change = ()=> {
+      if(!this.state) {
+        this.open();
+      } else {
+        this.close();
+      }
+    }
+
+    this.change();
+    this.$toggle.addEventListener('click', () => {
+      this.change();
+    })
+  },
+  open: function() {
+    this.state = true;
+    $header.classList.add('header_nav-opened');
+    this.$toggle.classList.add('active');
+    this.animation.play();
+    disablePageScroll();
+  },
+  close: function() {
+    this.state = false;
+    $header.classList.remove('header_nav-opened');
+    this.$toggle.classList.remove('active');
+    this.animation.reverse();
+    enablePageScroll();
   }
 }
 

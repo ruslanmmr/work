@@ -93,10 +93,21 @@ img {
       }
     }
   }
+  @include media-breakpoint-down(sm) {
+    &-pagination {
+      &-bullet {
+        width: 10px;
+        height: 10px;
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
 }
 
 .contact-item {
-  display: flex;
+  display: inline-flex;
   font-size: 0.875rem;
   transition: opacity $trs1;
   .icon {
@@ -127,5 +138,11 @@ a.contact-item {
   }
   @include media-breakpoint-down(xxl) {
     width: 160px;
+  }
+  @include media-breakpoint-down(lg) {
+    width: 140px;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 105px;
   }
 }
