@@ -27,6 +27,7 @@
     height: 35%;
     bottom: 0;
     background-color: var(--color-bg-2);
+    background: linear-gradient(180deg, var(--color-bg-1) 0%, var(--color-bg-2) 100%);
   }
   &__element {
     position: relative;

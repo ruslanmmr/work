@@ -4284,7 +4284,8 @@ ol:not([class]) {
     width: 100%;
     height: 35%;
     bottom: 0;
-    background-color: var(--color-bg-2); }
+    background-color: var(--color-bg-2);
+    background: linear-gradient(180deg, var(--color-bg-1) 0%, var(--color-bg-2) 100%); }
   .section-video__element {
     position: relative;
     padding-top: 56.25%; }
