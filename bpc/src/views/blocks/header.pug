@@ -1,0 +1,13 @@
+header.header
+  .container.header__container 
+    a(href="./").logo.header__logo
+      img(src="./img/logos/logo.png", alt="logo")
+    
+    include desktop-nav
+    
+    .desktop-auth
+      a(href="./registration.html").desktop-auth__link Регистрация
+      a(href="./registration.html").button.button_style-1.desktop-auth__button 
+        svg.icon
+          use(xlink:href='./img/icons/icons-sprite.svg#lock')
+        span Войти

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>batexy — Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <!--color-->
+    <meta name="theme-color" content="#fff">
+    <!--favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+    <!--open graph-->
+    <meta property="og:title" content="Заголовок сайта">
+    <meta property="og:site_name" content="batexy">
+    <meta property="og:url" content="#">
+    <meta property="og:description" content="Описание сайта">
+    <meta property="og:image" content="#">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fonts/Muller/stylesheet.css">
+    <!--styles-->
+    <link rel="stylesheet" href="./styles/theme.css">
+    <link rel="stylesheet" href="./styles/common.css">
+  </head>
+  <body style="opacity:0;visibility:hidden;pointer-events:none;">
+    <div class="wrapper">
+      <header class="header">
+        <div class="container header__container"> <a class="logo header__logo" href="./"><img src="./img/logos/logo.png" alt="logo"></a>
+          <nav class="desktop-nav">
+            <ul class="desktop-nav__list">
+              <li class="desktop-nav__item"> <a class="desktop-nav__link desktop-nav__link_active" href="./">Главная </a></li>
+              <li class="desktop-nav__item"> <a class="desktop-nav__link" href="#how-it-works" data-scroll>Как это работает</a></li>
+              <li class="desktop-nav__item"> <a class="desktop-nav__link" href="#" data-scroll>Цены</a></li>
+              <li class="desktop-nav__item"> <a class="desktop-nav__link" href="#section-bookmakers" data-scroll>Доступные БК</a></li>
+              <li class="desktop-nav__item"> <a class="desktop-nav__link" href="#section-faq" data-scroll>FAQ</a></li>
+            </ul>
+          </nav>
+          <div class="desktop-auth"><a class="desktop-auth__link" href="./registration.html">Регистрация</a><a class="button button_style-1 desktop-auth__button" href="./registration.html">
+              <svg class="icon">
+                <use xlink:href="./img/icons/icons-sprite.svg#lock"></use>
+              </svg><span>Войти</span></a></div>
+        </div>
+      </header>
+      <div class="lang-toggle">
+        <svg class="lang-toggle__top" viewBox="0 0 27 27" fill="currentColor">
+          <path d="M0 27H27C27 27 17.6897 27 9.31034 18.6207C0.931035 10.2414 0 0 0 0V27Z"></path>
+        </svg>
+        <div class="lang-toggle__container"><a class="lang-toggle__button" href="#">
+            <div class="lang-toggle__button-icon"><img src="./img/icons/russia.svg" alt="icon"></div><span>Русский</span></a><a class="lang-toggle__button" href="#">
+            <div class="lang-toggle__button-icon"><img src="./img/icons/united-kingdom.svg" alt="icon"></div><span>English</span></a></div>
+        <svg class="lang-toggle__bottom" viewBox="0 0 27 27" fill="currentColor">
+          <path d="M0 0H27C27 0 17.6897 0 9.31034 8.37931C0.931035 16.7586 0 27 0 27V0Z"></path>
+        </svg>
+      </div>
+      <main class="main">
+        <section class="section home-screen">
+          <div class="container">
+            <div class="shape-1"></div><img class="lazyload shape-element" data-src="./img/shape-star.svg" alt="image">
+            <div class="image image_contain home-screen__image"><img class="lazyload" data-src="./img/home.svg" alt="image"></div>
+            <div class="home-screen__content">
+              <div class="home-screen__text-content row">
+                <div class="col-lg-6">
+                  <h1 class="home-screen__title">Natural <strong>Language</strong> Processing in the Browser</h1>
+                  <p class="home-screen__text">No more writing complex Python/R code or mastering various packages to get high-quality information from text. Textalytic handles pre-processing, analyzing, and visualization in an easy to use web interface for free.</p>
+                </div>
+              </div><a class="button button_style-2 home-screen__button" href="./registration.html">Начать пользоваться </a>
+            </div>
+          </div>
+        </section>
+        <section class="section how-it-works" id="how-it-works">
+          <div class="container">
+            <!---->
+            <div class="shape-1"></div>
+            <div class="shape-2"></div>
+            <div class="shape-3"></div>
+            <div class="shape-4"></div><img class="lazyload shape-element" data-src="./img/shape-flag.svg" alt="image">
+            <!---->
+            <div class="section__head how-it-works__head">
+              <h2 class="h1 section__title">Как это работает</h2>
+              <p class="section__head-text">4 простых шага</p>
+            </div>
+            <div class="how-it-works__container row">
+              <!--block -->
+              <div class="hw-block col-lg-3">
+                <div class="hw-block__image hw-block__image_1 image image_contain"><img class="lazyload" data-src="./img/hw1.svg" alt="image"><span class="hw-block__index">1</span></div>
+                <h6 class="hw-block__title">Пополните баланс системы</h6>
+              </div>
+              <!--block -->
+              <div class="hw-block col-lg-3">
+                <div class="hw-block__image hw-block__image_2 image image_contain"><img class="lazyload" data-src="./img/hw2.svg" alt="image"><span class="hw-block__index">2</span></div>
+                <h6 class="hw-block__title">Создайте аккаунты в нужных БК</h6>
+              </div>
+              <!--block -->
+              <div class="hw-block col-lg-3">
+                <div class="hw-block__image hw-block__image_3 image image_contain"><img class="lazyload" data-src="./img/hw3.svg" alt="image"><span class="hw-block__index">3</span></div>
+                <h6 class="hw-block__title">Выберите одну или несколько стратегий</h6>
+              </div>
+              <!--block -->
+              <div class="hw-block col-lg-3">
+                <div class="hw-block__image hw-block__image_4 image image_contain"><img class="lazyload" data-src="./img/hw4.svg" alt="image"><span class="hw-block__index">4</span></div>
+                <h6 class="hw-block__title">Наблюдайте в режиме реального времени как идут ставки и растет ваш банкролл</h6>
+              </div>
+            </div>
+            <div class="how-it-works__button">
+              <div class="how-it-works__button-inner"><a class="button button_style-2" href="./registration.html">Запустить моего бота</a></div>
+            </div>
+          </div>
+        </section>
+        <section class="section section-advantages">
+          <!---->
+          <div class="shape-1"> </div>
+          <!---->
+          <div class="container">
+            <div class="section__head section-advantages__head">
+              <h2 class="h1 section__title">Наши преимущества</h2>
+              <p class="section__head-text">Почему с нами выгодно сотрудничать</p>
+            </div>
+          </div>
+        </section>
+        <section class="section section-bookmakers toggle-section" id="section-bookmakers" data-slide>
+          <div class="container">
+            <!---->
+            <div class="shape-1"></div>
+            <div class="shape-2"></div><img class="lazyload shape-element" data-src="./img/shape-robot.svg" alt="image">
+            <!---->
+            <div class="section__head section-bookmakers__head">
+              <h2 class="h1 section__title section-bookmakers__title">С какими БК работают<br> наши боты</h2>
+              <p class="section__head-text section-bookmakers__head-text">Мы разработали ботов почти на все основные букмекерские конторы мира и мы постоянно добавляем новые.</p>
+            </div>
+            <div class="section-bookmakers__container">
+              <div class="section-bookmakers__content row">
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/1.png" alt="image"></div>
+                                  <h6 class="bk-item__title">BET365</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/2.png" alt="image"></div>
+                                  <h6 class="bk-item__title">BETBOOM</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/3.png" alt="image"></div>
+                                  <h6 class="bk-item__title">BETCITY</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/4.png" alt="image"></div>
+                                  <h6 class="bk-item__title">FONBET</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/5.png" alt="image"></div>
+                                  <h6 class="bk-item__title">LEON</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/6.png" alt="image"></div>
+                                  <h6 class="bk-item__title">LIGASTAVOK</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/7.png" alt="image"></div>
+                                  <h6 class="bk-item__title">MARATHON</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/8.png" alt="image"></div>
+                                  <h6 class="bk-item__title">PARIMATCH</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/9.png" alt="image"></div>
+                                  <h6 class="bk-item__title">1XBET</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/10.png" alt="image"></div>
+                                  <h6 class="bk-item__title">1XSTAVKA</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/11.png" alt="image"></div>
+                                  <h6 class="bk-item__title">BETSSON</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/12.png" alt="image"></div>
+                                  <h6 class="bk-item__title">BETWAY</h6>
+                                </div>
+              </div>
+              <div class="section-bookmakers__content row toggle-section__content">
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/13.png" alt="image"></div>
+                                  <h6 class="bk-item__title">BETWINNER</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/14.png" alt="image"></div>
+                                  <h6 class="bk-item__title">BETFAIR SPORTSBOOK</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/15.png" alt="image"></div>
+                                  <h6 class="bk-item__title">BWIN</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/16.png" alt="image"></div>
+                                  <h6 class="bk-item__title">FAVBET</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/17.png" alt="image"></div>
+                                  <h6 class="bk-item__title">MELBET</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/18.png" alt="image"></div>
+                                  <h6 class="bk-item__title">OLIMP</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/19.png" alt="image"></div>
+                                  <h6 class="bk-item__title">PADDYPOWER</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/20.png" alt="image"></div>
+                                  <h6 class="bk-item__title">PINUP</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/21.png" alt="image"></div>
+                                  <h6 class="bk-item__title">UNIBET</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/22.png" alt="image"></div>
+                                  <h6 class="bk-item__title">VBET</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/23.png" alt="image"></div>
+                                  <h6 class="bk-item__title">WILLIAMHILL</h6>
+                                </div>
+                                <div class="bk-item col-lg-2">
+                                  <div class="bk-item__image image image_contain"> <img class="lazyload" data-src="./img/bk/24.png" alt="image"></div>
+                                  <h6 class="bk-item__title">WINLINE</h6>
+                                </div>
+              </div>
+              <div class="section-bookmakers__more">
+                <button class="button button_style-2 toggle-section__trigger section-bookmakers__trigger"><span>Раскрыть полный список</span><span>Скрыть полный список</span>
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/icons-sprite.svg#arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section-faq" id="section-faq">
+          <div class="container">
+            <!---->
+            <div class="shape-1"></div>
+            <div class="shape-2"></div><img class="lazyload shape-element" data-src="./img/shape-question.svg" alt="image">
+            <!---->
+            <div class="section__head section-faq__head">
+              <h2 class="h1 section__title">FAQ</h2>
+              <p class="section__head-text">Ответы на часто задаваемые вопросы</p>
+            </div>
+            <div class="section-faq__container row">
+              <div class="col-lg-6">
+                              <div class="faq-item">
+                                <div class="faq-item__container toggle-section" data-slide>
+                                  <button class="faq-item__trigger toggle-section__trigger">What is it?<span></span></button>
+                                  <div class="faq-item__content toggle-section__content">
+                                    <p>No! We do not charge any fees on deposits or withdrawals, your money is yours!</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__container toggle-section" data-slide>
+                                  <button class="faq-item__trigger toggle-section__trigger">Where can I get it?<span></span></button>
+                                  <div class="faq-item__content toggle-section__content">
+                                    <p>No! We do not charge any fees on deposits or withdrawals, your money is yours!</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__container toggle-section" data-slide>
+                                  <button class="faq-item__trigger toggle-section__trigger">When will I see profit?<span></span></button>
+                                  <div class="faq-item__content toggle-section__content">
+                                    <p>No! We do not charge any fees on deposits or withdrawals, your money is yours!</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__container toggle-section" data-slide>
+                                  <button class="faq-item__trigger toggle-section__trigger">What is the minimum deposit amount?<span></span></button>
+                                  <div class="faq-item__content toggle-section__content">
+                                    <p>No! We do not charge any fees on deposits or withdrawals, your money is yours!</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__container toggle-section" data-slide>
+                                  <button class="faq-item__trigger toggle-section__trigger">What is the most I can deposit?<span></span></button>
+                                  <div class="faq-item__content toggle-section__content">
+                                    <p>No! We do not charge any fees on deposits or withdrawals, your money is yours!</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__container toggle-section" data-slide>
+                                  <button class="faq-item__trigger toggle-section__trigger">Do you charge any fees?<span></span></button>
+                                  <div class="faq-item__content toggle-section__content">
+                                    <p>No! We do not charge any fees on deposits or withdrawals, your money is yours!</p>
+                                  </div>
+                                </div>
+                              </div>
+              </div>
+              <div class="col-lg-6">
+                              <div class="faq-item">
+                                <div class="faq-item__container toggle-section" data-slide>
+                                  <button class="faq-item__trigger toggle-section__trigger">How long does my mining contract last?<span></span></button>
+                                  <div class="faq-item__content toggle-section__content">
+                                    <p>No! We do not charge any fees on deposits or withdrawals, your money is yours!</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__container toggle-section" data-slide>
+                                  <button class="faq-item__trigger toggle-section__trigger">When can I cash out my earnings?<span></span></button>
+                                  <div class="faq-item__content toggle-section__content">
+                                    <p>No! We do not charge any fees on deposits or withdrawals, your money is yours!</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__container toggle-section" data-slide>
+                                  <button class="faq-item__trigger toggle-section__trigger">How long does my mining contract last?<span></span></button>
+                                  <div class="faq-item__content toggle-section__content">
+                                    <p>No! We do not charge any fees on deposits or withdrawals, your money is yours!</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__container toggle-section" data-slide>
+                                  <button class="faq-item__trigger toggle-section__trigger">My Bitcoin hasn't verified? It's been 30 minutes!<span></span></button>
+                                  <div class="faq-item__content toggle-section__content">
+                                    <p>No! We do not charge any fees on deposits or withdrawals, your money is yours!</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="faq-item">
+                                <div class="faq-item__container toggle-section" data-slide>
+                                  <button class="faq-item__trigger toggle-section__trigger">What is the minimum withdrawal amount?<span></span></button>
+                                  <div class="faq-item__content toggle-section__content">
+                                    <p>No! We do not charge any fees on deposits or withdrawals, your money is yours!</p>
+                                  </div>
+                                </div>
+                              </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__container">
+            <div class="footer__top"><a class="logo" href="./"><img src="./img/logos/logo.png" alt="logo"></a>
+              <nav class="desktop-nav">
+                <ul class="desktop-nav__list">
+                  <li class="desktop-nav__item"> <a class="desktop-nav__link desktop-nav__link_active" href="./">Главная </a></li>
+                  <li class="desktop-nav__item"> <a class="desktop-nav__link" href="#how-it-works" data-scroll>Как это работает</a></li>
+                  <li class="desktop-nav__item"> <a class="desktop-nav__link" href="#" data-scroll>Цены</a></li>
+                  <li class="desktop-nav__item"> <a class="desktop-nav__link" href="#section-bookmakers" data-scroll>Доступные БК</a></li>
+                  <li class="desktop-nav__item"> <a class="desktop-nav__link" href="#section-faq" data-scroll>FAQ</a></li>
+                </ul>
+              </nav><a class="footer__telegram-link" href="#"><img class="icon" src="./img/icons/ico-telegram.svg" alt="icon">Чат в Telegram</a>
+            </div>
+            <div class="footer__center">
+              <div class="footer__info">ИП: Колесников Ю.В.<br> ИНН: 225301361551<br> ОГРНИП: 320222500025870</div>
+            </div>
+            <div class="footer__copyright">2021 © bcp.bot — All Right Reserved </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--libs-->
+    <script src="./scripts/libs/lazysizes.min.js"></script>
+    <script src="./scripts/libs/scroll-lock.min.js"></script>
+    <script src="./scripts/libs/gsap.min.js"></script>
+    <script src="./scripts/libs/ScrollToPlugin.min.js"></script>
+    <!--scripts-->
+    <script src="./scripts/scripts.js"> </script>
+  </body>
+</html>

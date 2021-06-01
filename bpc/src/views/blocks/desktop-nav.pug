@@ -1,0 +1,26 @@
+if main_page
+  nav.desktop-nav 
+    ul.desktop-nav__list 
+      li.desktop-nav__item 
+        a(href="./").desktop-nav__link.desktop-nav__link_active Главная 
+      li.desktop-nav__item 
+        a(href="#how-it-works" data-scroll).desktop-nav__link Как это работает
+      li.desktop-nav__item 
+        a(href="#" data-scroll).desktop-nav__link Цены
+      li.desktop-nav__item 
+        a(href="#section-bookmakers" data-scroll).desktop-nav__link Доступные БК
+      li.desktop-nav__item 
+        a(href="#section-faq" data-scroll).desktop-nav__link FAQ
+else 
+  nav.desktop-nav 
+    ul.desktop-nav__list 
+      li.desktop-nav__item 
+        a(href="./").desktop-nav__link Главная 
+      li.desktop-nav__item 
+        a(href="./#how-it-works").desktop-nav__link Как это работает
+      li.desktop-nav__item 
+        a(href="./#").desktop-nav__link Цены
+      li.desktop-nav__item 
+        a(href="./#section-bookmakers").desktop-nav__link Доступные БК
+      li.desktop-nav__item 
+        a(href="./#section-faq").desktop-nav__link FAQ
