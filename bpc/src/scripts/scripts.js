@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
   new TouchHoverEvents('a, button, [data-touch-hover]').init();
   toggle();
   scrolling();
+  Advantages();
 });
 
 window.onload = function() {
@@ -184,4 +185,50 @@ function scrolling() {
       if($target) gsap.to(window, {duration:1, scrollTo:href, ease:'power2.inOut'});
     })
   }) 
+}
+
+function Advantages() {
+  let $cards = document.querySelectorAll('.section-advantages__card'),
+      $items = document.querySelectorAll('.section-advantages__item'),
+      $items_container = document.querySelector('.section-advantages__content'),
+      activeIndex,
+      animations = [];
+
+  $items.forEach(($this, index) => {
+    let $image = $this.querySelector('.section-advantages__item-image');
+
+    animations[index] = gsap.timeline({paused:true})
+      .fromTo($this, {autoAlpha:0}, {autoAlpha:1, duration:0.5, ease:'power2.inOut'})
+      .fromTo($image, {scale:0.8}, {scale:1, duration:0.5, ease:'power2.out'}, '-=0.5')
+  })
+
+  let resizeEvent = () => {
+    let h = [];
+    $items.forEach($this => {
+      h.push($this.getBoundingClientRect().height);
+    })
+    $items_container.style.height = Math.max(...h)+'px';
+  }
+
+  let changeEvent = (index=0) => {
+    if(index!==activeIndex) {
+      if(activeIndex!==undefined) {
+        $cards[activeIndex].classList.remove('is-active');
+        $items[activeIndex].classList.remove('is-active');
+        animations[activeIndex].timeScale(1.5).reverse();
+      }
+      $cards[index].classList.add('is-active');
+      $items[index].classList.add('is-active');
+      animations[index].timeScale(1).play();
+      activeIndex = index;
+    }
+  }
+
+  changeEvent();
+  resizeEvent();
+  window.addEventListener('resize', resizeEvent);
+  $cards.forEach(($this, index) => {
+    $this.addEventListener('click',      () => { changeEvent(index) });
+    $this.addEventListener('mouseenter', () => { changeEvent(index) });
+  })
 }

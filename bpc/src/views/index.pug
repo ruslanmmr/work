@@ -60,14 +60,128 @@ block content
           a(href="./registration.html").button.button_style-2 Запустить моего бота
 
   section.section.section-advantages
-    //
     .shape-1 
-    //
     .container 
+      img(data-src="./img/shape-check.svg", alt="image").lazyload.shape-element
       .section__head.section-advantages__head
         h2.h1.section__title Наши преимущества
         p.section__head-text Почему с нами выгодно сотрудничать
+      .section-advantages__container 
+        .section-advantages__content    
+          .section-advantages__item 
+            .image.image_contain.section-advantages__item-image.section-advantages__item-image_1
+              img(data-src="./img/adv1_1.svg", alt="image").lazyload
+            h3.section-advantages__item-title Плюсовый алгоритм ставок
+            p Вам не надо думать где разместить ботов и как обеспечить анонимность и уникализацию, все уже сделано нами под ключ.
+          .section-advantages__item 
+            .image.image_contain.section-advantages__item-image.section-advantages__item-image_2
+              img(data-src="./img/adv2_1.svg", alt="image").lazyload
+            h3.section-advantages__item-title Полная автоматизация процесса
+            p Вам не надо думать где разместить ботов и как обеспечить анонимность и уникализацию, все уже сделано нами под ключ.
+          .section-advantages__item 
+            .image.image_contain.section-advantages__item-image.section-advantages__item-image_3
+              img(data-src="./img/adv3_1.svg", alt="image").lazyload
+            h3.section-advantages__item-title Облачная инфраструктура и антидетект
+            p Вам не надо думать где разместить ботов и как обеспечить анонимность и уникализацию, все уже сделано нами под ключ.
+          .section-advantages__item 
+            .image.image_contain.section-advantages__item-image.section-advantages__item-image_4
+              img(data-src="./img/adv4_1.svg", alt="image").lazyload
+            h3.section-advantages__item-title Верификация всех ставок
+            p Вам не надо думать где разместить ботов и как обеспечить анонимность и уникализацию, все уже сделано нами под ключ.
+          .section-advantages__item 
+            .image.image_contain.section-advantages__item-image.section-advantages__item-image_5
+              img(data-src="./img/adv5_1.svg", alt="image").lazyload
+            h3.section-advantages__item-title Человекоподобное поведение ботов
+            p Вам не надо думать где разместить ботов и как обеспечить анонимность и уникализацию, все уже сделано нами под ключ.
+          .section-advantages__item 
+            .image.image_contain.section-advantages__item-image.section-advantages__item-image_6
+              img(data-src="./img/adv6_1.svg", alt="image").lazyload
+            h3.section-advantages__item-title Удобная панель управления
+            p Вам не надо думать где разместить ботов и как обеспечить анонимность и уникализацию, все уже сделано нами под ключ.
+
+        .section-advantages__cards  
+          .section-advantages__card 
+            .image.image_contain.section-advantages__card-image.section-advantages__card-image_1
+              img(data-src="./img/adv1_2.svg", alt="image").lazyload
+            h6.section-advantages__card-title Плюсовый алгоритм ставок
+          .section-advantages__card 
+            .image.image_contain.section-advantages__card-image.section-advantages__card-image_2
+              img(data-src="./img/adv2_2.svg", alt="image").lazyload
+            h6.section-advantages__card-title Полная автоматизация процесса
+          .section-advantages__card 
+            .image.image_contain.section-advantages__card-image.section-advantages__card-image_3
+              img(data-src="./img/adv3_2.svg", alt="image").lazyload
+            h6.section-advantages__card-title Облачная инфраструктура и антидетект
+          .section-advantages__card 
+            .image.image_contain.section-advantages__card-image.section-advantages__card-image_4
+              img(data-src="./img/adv4_2.svg", alt="image").lazyload
+            h6.section-advantages__card-title Верификация всех ставок
+          .section-advantages__card 
+            .image.image_contain.section-advantages__card-image.section-advantages__card-image_5
+              img(data-src="./img/adv5_2.svg", alt="image").lazyload
+            h6.section-advantages__card-title Человекоподобное поведение ботов
+          .section-advantages__card 
+            .image.image_contain.section-advantages__card-image.section-advantages__card-image_6
+              img(data-src="./img/adv6_2.svg", alt="image").lazyload
+            h6.section-advantages__card-title Удобная панель управления
+
   
+  section#section-income.section.section-income
+    .container
+      .section__head.section-income__head
+        h2.h1.section__title.section-income__title Сколько я заработаю и сколько это стоит?
+        p.section__head-text.section-income__text Мы команда профессионалов, которая уже несколько успешно работает и зарабатывает в букмекерских конторах со слабой линией, посредством автоматических ставок ботами. За все это время было сделано около 6 миллионов ставок. За 3 года работы не было ни одного минусового месяца. 
+          mark В среднем за месяц наши боты зарабатывают от 40% до 100% от баланса, в зависимости от букмекера.
+      .section-income__content 
+        h2.section-income__content-title График профита за 3 года
+        .section-income__chart-content 
+          .section-income__chart-element.image.image_contain 
+            img(data-src="./img/chart.svg", alt="chart").lazyload
+          .section-income__chart-info   
+            .section-income__chart-info-element 
+              img(src="./img/computer.svg", alt="icon").icon
+              span 6 056 134
+              span Количество ставок
+            .section-income__chart-info-element 
+              img(src="./img/roi.svg", alt="icon").icon
+              span +3.04  
+                span %
+              span ROI
+            .section-income__chart-info-element 
+              img(src="./img/rub.svg", alt="icon").icon
+              span 16 056 134 
+                span ₽
+              span Банкролл
+
+  section.section.section-compensation.section-image
+    .container
+      .row.section-image__container
+        .col-lg-6.section-image__image 
+          .image.image_contain.section-compensation__image 
+            img(src="./img/Group 348.svg", alt="image").lazyload
+        .col-lg-6.section-image__content
+          .section__head
+            h2.h1.section-image__title.section__title Компенсируем убытки
+          .section__content
+            p Мы настолько уверены в своей системе и своих стратегиях, что для всех новых пользователей действует следующее предложение: 
+              strong Мы компенсируем убытки по ставкам, поставленным в нашей системе, в их первый месяц работы, если такое случится.
+            button.button.button_style-2.section-compensation__button Узнать подробности
+
+  section.section.section-cost.section-image
+    .container
+      .row.section-image__container
+        .col-lg-6.section-image__image.order-lg-2
+          .image.image_contain.section-cost__image 
+            img(src="./img/Group 349.svg", alt="image").lazyload
+        .col-lg-6.section-image__content.order-lg-1
+          .section__head
+            h2.h1.section-image__title.section__title Стоимость услуг
+          .section__content
+            p Стоимость наших услуг проста и прозрачна. Вам не нужно покупать дорогие месячные подписки, приобретать ботов для каждой букмекерской конторы по отдельности. Просто пополните баланс в системе и мы будем снимать 1% от каждой поставленной ставки. 
+              mark Начать пользоваться нашей системой можно имея всего лишь 500 рублей!
+
+
+
   section#section-bookmakers.section.section-bookmakers.toggle-section(data-slide)
     .container 
       //

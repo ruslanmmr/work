@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   &__telegram-link {
     transition: color $trs1;
@@ -28,6 +28,5 @@
   &__copyright {
     text-align: center;
     font-size: 1.125rem;
-    margin-top: -1.5em;
   }
 }

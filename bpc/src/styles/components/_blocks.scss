@@ -275,11 +275,15 @@
 
 .section-advantages {
   position: relative;
-  min-height: 800px;
+  margin-bottom: 70px;
+  .shape-element {
+    left: 430px;
+    bottom: -80px;
+  }
   .shape-1 {
     content: '';
     display: block;
-    height: 900px;
+    height: 1200px;
     width: calc(100% - 80px);
     left: 40px;
     top: 0;
@@ -304,6 +308,222 @@
       height: 50%;
       top: 0;
       background-color: rgba(243,248,253,1);
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__content {
+    flex: 0 0 420px;
+    position: relative;
+  }
+  &__item {
+    position: absolute;
+    width: 100%;
+    &.is-active {
+      z-index: 2;
+    }
+    &-title {
+      margin-bottom: 20px;
+    }
+    &-image {
+      width: 340px;
+      height: 340px;
+      margin: 0 0 50px 10px;
+      will-change: transform;
+      &_1 img {
+        width: 114%;
+        height: 114%;
+        top: -7%;
+        left: -7%;
+      }
+      &_3 img {
+        width: 109%;
+        height: 114%;
+        top: -7%;
+        left: -9%;
+      }
+      &_4 img {
+        width: 109%;
+        left: -15%;
+      }
+      &_5 img {
+        width: 110%;
+        left: -17%;
+        top: 2%;
+      }
+      &_6 img {
+        width: 110%;
+        left: -14%;
+        top: 2%;
+      }
+    }
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px -10px 0;
+    flex: 1 1 auto;
+    padding-left: 30px;
+    position: relative;
+  }
+  &__card {
+    margin: 0 10px 10px 0;
+    width: calc(33.33% - 10px);
+    text-align: center;
+    padding: 15px 20px 20px 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: border-color $trs1;
+    cursor: pointer;
+    &.is-active, &[data-touch], &[data-hover] {
+      border-color: #2784ED;
+    }
+    &-title {
+      margin: 15px 0 0 0;
+    }
+    &-image {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto;
+      &_1 img {
+        transform: translateX(8%);
+      }
+      &_2 img {
+        transform: translateX(13%);
+      }
+      &_3 img {
+        transform: translate(9%, 3%);
+      }
+      &_4 img {
+        transform: translateX(16%) scale(0.9);
+      }
+      &_5 img {
+        transform: translateX(16%);
+      }
+      &_6 img {
+        transform: translateX(13%);
+      }
+    }
+  }
+}
+
+.section-income {
+  margin-bottom: 30px;
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 45px;
+    }
+  }
+  &__text {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: var(--color-text);
+  }
+  &__content-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__chart-content {
+    display: flex;
+  }
+  &__chart-element {
+    flex: 0 0 830px;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 48.1%;
+    }
+    img {
+      width: 111%;
+      height: 102%;
+      top: -2%;
+      left: -5%;
+    }
+  }
+  &__chart-info {
+    flex: 1 1 auto;
+    padding-left: 40px;
+    padding-top: 15px;
+  }
+  &__chart-info-element {
+    padding-left: 65px;
+    min-height: 60px;
+    position: relative;
+    font-family: $font2;
+    font-weight: 500;
+    &:first-child {
+      img {
+        transform: translateX(-4px);
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 55px;
+    }
+    .icon {
+      width: 50px;
+      height: 50px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -4px;
+    }
+    span {
+      display: block;
+      &:nth-child(2) {
+        font-size: 2rem;
+        color: #2784ED;
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+      span {
+        display: inline;
+        font-size: 0.7em;
+      }
+    }
+  }
+}
+
+.section-image {
+  &__image {
+    .image {
+      &::before {
+        content: '';
+        display: block;
+        padding-top: 82%;
+      }
+    }
+  }
+  &__container {
+    align-items: center;
+  }
+  &__title {
+    margin-left: 24px;
+  }
+}
+
+.section-compensation {
+  &__image {
+    img {
+      top: -4%;
+      left: -36%;
+      width: 146%;
+      height: 115%;
+    }
+  }
+  &__button {
+    margin-top: 15px;
+  }
+}
+
+.section-cost {
+  &__image {
+    img {
+      left: 10%;
     }
   }
 }
