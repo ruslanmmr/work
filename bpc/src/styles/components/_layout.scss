@@ -53,6 +53,15 @@
     &__head-text {
       font-size: 1rem;
     }
+    &__title {
+      padding-left: 25px;
+      &::before {
+        width: 14px;
+        height: 14px;
+        left: 0;
+        top: -5px;
+      }
+    }
   }
 }
 

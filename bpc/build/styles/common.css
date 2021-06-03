@@ -2004,10 +2004,10 @@ h6, .h6 {
 
 @media (max-width: 575.98px) {
   h1, .h1 {
-    font-size: 2rem;
+    font-size: 1.875rem;
     line-height: 1.2; }
   h2, .h2 {
-    font-size: 1.75rem; }
+    font-size: 1.625rem; }
   h3, .h3 {
     font-size: 1.5rem; } }
 
@@ -2080,7 +2080,14 @@ strong, b {
       .section__head {
         margin-bottom: 40px; }
       .section__head-text {
-        font-size: 1rem; } }
+        font-size: 1rem; }
+      .section__title {
+        padding-left: 25px; }
+        .section__title::before {
+          width: 14px;
+          height: 14px;
+          left: 0;
+          top: -5px; } }
 
 .container {
   position: relative;
@@ -2507,7 +2514,7 @@ img {
       padding-bottom: 0;
       margin-bottom: 60px; }
       .home-screen__image {
-        width: 200px;
+        width: calc(100% - 80px);
         margin: 0 auto 40px auto;
         position: relative;
         bottom: initial;
