@@ -27,7 +27,11 @@
   }
   &__copyright {
     text-align: center;
-    font-size: 1.125rem;
+  }
+  @include media-breakpoint-up(xl) {
+    &__copyright {
+      font-size: 1.125rem;
+    }
   }
   @include media-breakpoint-down(xl) {
     &__top {

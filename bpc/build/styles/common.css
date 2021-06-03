@@ -3259,6 +3259,8 @@ img {
   @media (max-width: 575.98px) {
     .mobile-nav__container {
       width: 260px; }
+    .mobile-nav__link {
+      font-size: 1.125rem; }
     .mobile-nav__content {
       padding: var(--margin) 15px 0 15px; } }
 
@@ -3317,8 +3319,10 @@ img {
     .footer__telegram-link[data-touch], .footer__telegram-link[data-hover] {
       color: var(--color-accent); }
   .footer__copyright {
-    text-align: center;
-    font-size: 1.125rem; }
+    text-align: center; }
+  @media (min-width: 1280px) {
+    .footer__copyright {
+      font-size: 1.125rem; } }
   @media (max-width: 1279.98px) {
     .footer__top {
       flex-wrap: wrap;
