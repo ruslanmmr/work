@@ -27,7 +27,7 @@
   </head>
   <body style="opacity:0;visibility:hidden;pointer-events:none;">
     <div class="wrapper">
-      <header class="header">
+      <header class="header" data-scroll-lock-fill-gap>
         <div class="container header__container"> <a class="logo header__logo" href="./"><img src="./img/logos/logo.png" alt="logo"></a>
           <nav class="desktop-nav">
             <ul class="desktop-nav__list">
@@ -38,18 +38,45 @@
               <li class="desktop-nav__item"> <a class="desktop-nav__link" href="./index.html#section-faq">FAQ</a></li>
             </ul>
           </nav>
-          <div class="desktop-auth"><a class="desktop-auth__link" href="./registration.html">Регистрация</a><a class="button button_style-1 desktop-auth__button" href="./registration.html">
-              <svg class="icon">
-                <use xlink:href="./img/icons/icons-sprite.svg#lock"></use>
-              </svg><span>Войти</span></a></div>
+          <div class="header__right">
+            <div class="desktop-auth header__desktop-auth"><a class="desktop-auth__link" href="./registration.html">Регистрация</a><a class="button button_style-1 desktop-auth__button" href="./registration.html">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons-sprite.svg#lock"></use>
+                </svg><span>Войти</span></a></div>
+            <button class="mobile-nav-toggle"><span></span><span></span></button>
+          </div>
         </div>
+        <nav class="mobile-nav">
+          <div class="mobile-nav__container" data-scroll-lock-scrollable>
+            <div class="mobile-nav__content">
+              <ul class="mobile-nav__list">
+                <li class="mobile-nav__item"> <a class="mobile-nav__link" href="./index.html">Главная </a></li>
+                <li class="mobile-nav__item"> <a class="mobile-nav__link" href="./index.html#how-it-works">Как это работает</a></li>
+                <li class="mobile-nav__item"> <a class="mobile-nav__link" href="./index.html#section-income">Цены</a></li>
+                <li class="mobile-nav__item"> <a class="mobile-nav__link" href="./index.html#section-bookmakers">Доступные БК</a></li>
+                <li class="mobile-nav__item"> <a class="mobile-nav__link" href="./index.html#section-faq">FAQ</a></li>
+              </ul>
+              <div class="mobile-nav__bottom">
+                <div class="desktop-auth mobile-nav__desktop-auth"><a class="desktop-auth__link" href="./registration.html">Регистрация</a><a class="button button_style-1 desktop-auth__button" href="./registration.html">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons-sprite.svg#lock"></use>
+                    </svg><span>Войти</span></a></div>
+                <div class="lang-toggle lang-toggle_type-2 mobile-nav__lang-toggle">
+                  <div class="lang-toggle__container lang-toggle__container_type-2"><a class="lang-toggle__button lang-toggle__button_type-2" href="#">
+                      <div class="lang-toggle__button-icon"><img src="./img/icons/russia.svg" alt="icon"></div><span>Русский</span></a><a class="lang-toggle__button lang-toggle__button_type-2" href="#">
+                      <div class="lang-toggle__button-icon"><img src="./img/icons/united-kingdom.svg" alt="icon"></div><span>English</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
       </header>
-      <div class="lang-toggle">
+      <div class="lang-toggle lang-toggle_type-1">
         <svg class="lang-toggle__top" viewBox="0 0 27 27" fill="currentColor">
           <path d="M0 27H27C27 27 17.6897 27 9.31034 18.6207C0.931035 10.2414 0 0 0 0V27Z"></path>
         </svg>
-        <div class="lang-toggle__container"><a class="lang-toggle__button" href="#">
-            <div class="lang-toggle__button-icon"><img src="./img/icons/russia.svg" alt="icon"></div><span>Русский</span></a><a class="lang-toggle__button" href="#">
+        <div class="lang-toggle__container lang-toggle__container_type-1"><a class="lang-toggle__button lang-toggle__button_type-1" href="#">
+            <div class="lang-toggle__button-icon"><img src="./img/icons/russia.svg" alt="icon"></div><span>Русский</span></a><a class="lang-toggle__button lang-toggle__button_type-1" href="#">
             <div class="lang-toggle__button-icon"><img src="./img/icons/united-kingdom.svg" alt="icon"></div><span>English</span></a></div>
         <svg class="lang-toggle__bottom" viewBox="0 0 27 27" fill="currentColor">
           <path d="M0 0H27C27 0 17.6897 0 9.31034 8.37931C0.931035 16.7586 0 27 0 27V0Z"></path>

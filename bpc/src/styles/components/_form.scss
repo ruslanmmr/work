@@ -41,6 +41,26 @@
       }
     }
   }
+  @include media-breakpoint-down(lg) {
+    &__label {
+      margin-bottom: 15px;
+    }
+    &__element {
+      font-size: 1rem;
+      line-height: 20px;
+      padding: 19px 29px;
+      height: 60px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__element {
+      padding: 19px;
+    }
+    &__label {
+      margin-bottom: 5px;
+      padding-left: 20px;
+    }
+  }
 }
 
 .form {
@@ -51,5 +71,18 @@
   }
   &__submit {
     text-align: center;
+  }
+  @include media-breakpoint-down(sm) {
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    &__submit {
+      margin-top: 40px;
+      .button {
+        width: 100%;
+      }
+    }
   }
 }

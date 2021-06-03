@@ -49,4 +49,12 @@
       background-color: var(--color-button-2-click-bg);
     }
   }
+  @include media-breakpoint-down(lg) {
+    &_style-2 {
+      font-size: 1.125rem;
+      line-height: 60px;
+      height: 60px;
+      padding: 0 30px;
+    }
+  }
 }

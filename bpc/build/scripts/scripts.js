@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
   toggle();
   scrolling();
   Advantages();
+  Nav.init();
 });
 
 window.onload = function() {
@@ -182,53 +183,100 @@ function scrolling() {
       event.preventDefault();
       let href = $this.getAttribute('href'),
           $target = document.querySelector(href);
-      if($target) gsap.to(window, {duration:1, scrollTo:href, ease:'power2.inOut'});
+      if($target) {
+        gsap.to(window, {duration:1, scrollTo:href, ease:'power2.inOut'});
+        if(Nav.state) {
+          Nav.close();
+        }
+      }
     })
   }) 
 }
 
 function Advantages() {
-  let $cards = document.querySelectorAll('.section-advantages__card'),
+  let $parent = document.querySelector('.section-advantages');
+  if($parent) {
+    let $cards = document.querySelectorAll('.section-advantages__card'),
       $items = document.querySelectorAll('.section-advantages__item'),
       $items_container = document.querySelector('.section-advantages__content'),
       activeIndex,
       animations = [];
 
-  $items.forEach(($this, index) => {
-    let $image = $this.querySelector('.section-advantages__item-image');
+    $items.forEach(($this, index) => {
+      let $image = $this.querySelector('.section-advantages__item-image');
 
-    animations[index] = gsap.timeline({paused:true})
-      .fromTo($this, {autoAlpha:0}, {autoAlpha:1, duration:0.5, ease:'power2.inOut'})
-      .fromTo($image, {scale:0.8}, {scale:1, duration:0.5, ease:'power2.out'}, '-=0.5')
-  })
-
-  let resizeEvent = () => {
-    let h = [];
-    $items.forEach($this => {
-      h.push($this.getBoundingClientRect().height);
+      animations[index] = gsap.timeline({paused:true})
+        .fromTo($this, {autoAlpha:0}, {autoAlpha:1, duration:0.5, ease:'power2.inOut'})
+        .fromTo($image, {scale:0.8}, {scale:1, duration:0.5, ease:'power2.out'}, '-=0.5')
     })
-    $items_container.style.height = Math.max(...h)+'px';
-  }
 
-  let changeEvent = (index=0) => {
-    if(index!==activeIndex) {
-      if(activeIndex!==undefined) {
-        $cards[activeIndex].classList.remove('is-active');
-        $items[activeIndex].classList.remove('is-active');
-        animations[activeIndex].timeScale(1.5).reverse();
-      }
-      $cards[index].classList.add('is-active');
-      $items[index].classList.add('is-active');
-      animations[index].timeScale(1).play();
-      activeIndex = index;
+    let resizeEvent = () => {
+      let h = $items[activeIndex].getBoundingClientRect().height;
+      $items_container.style.height = `${h}px`;
     }
-  }
 
-  changeEvent();
-  resizeEvent();
-  window.addEventListener('resize', resizeEvent);
-  $cards.forEach(($this, index) => {
-    $this.addEventListener('click',      () => { changeEvent(index) });
-    $this.addEventListener('mouseenter', () => { changeEvent(index) });
-  })
+    let changeEvent = (index=0) => {
+      if(index!==activeIndex) {
+        if(activeIndex!==undefined) {
+          $cards[activeIndex].classList.remove('is-active');
+          $items[activeIndex].classList.remove('is-active');
+          animations[activeIndex].timeScale(1.5).reverse();
+        }
+        $cards[index].classList.add('is-active');
+        $items[index].classList.add('is-active');
+        animations[index].timeScale(1).play();
+        //height
+        let h = $items[index].getBoundingClientRect().height;
+        gsap.to($items_container, {css:{height:h}, duration:0.5, ease:'power2.out'});
+
+        activeIndex = index;
+      }
+    }
+
+    changeEvent();
+    window.addEventListener('resize', resizeEvent);
+    $cards.forEach(($this, index) => {
+      $this.addEventListener('click',      () => { changeEvent(index) });
+      $this.addEventListener('mouseenter', () => { changeEvent(index) });
+    })
+  }
+}
+
+const Nav = {
+  init: function() {
+    this.$element = document.querySelector('.mobile-nav');
+    this.$toggle = document.querySelector('.mobile-nav-toggle');
+
+    this.change = ()=> {
+      if(!this.state) {
+        this.open();
+      } else {
+        this.close();
+      }
+    }
+
+    this.$toggle.addEventListener('click', () => {
+      this.change();
+    })
+
+    this.$element.addEventListener('click', (event) => {
+      if(this.state && !event.target.closest('.mobile-nav__content')) {
+        this.close();
+      }
+    })
+  },
+
+  open: function() {
+    this.state = true;
+    this.$element.classList.add('active');
+    this.$toggle.classList.add('active');
+    scrollLock.disablePageScroll();
+  },
+
+  close: function() {
+    this.state = false;
+    this.$element.classList.remove('active');
+    this.$toggle.classList.remove('active');
+    scrollLock.enablePageScroll();
+  }
 }

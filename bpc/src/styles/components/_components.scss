@@ -46,14 +46,21 @@ img {
 .lang-toggle {
   --radius: 26px;
   --background: #F1F6FC;
-  position: absolute;
-  z-index: 1000;
-  left: 0;
-  top: 50vh;
-  transform: translateY(-50%);
-  padding: 45px 20px;
   background-color: var(--background);
   border-radius: 0 var(--radius) var(--radius) 0;
+  &_type-1 {
+    padding: 45px 20px;
+    left: 0;
+    top: 50vh;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 900;
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+  &_type-2 {
+    padding: 15px 20px;
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
   &__top, &__bottom {
     width: var(--radius);
     height: var(--radius);
@@ -69,19 +76,29 @@ img {
   }
   &__container {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    &_type-1 {
+      flex-direction: column;
+    }
+    &_type-2 {
+      justify-content: space-around;
+    }
   }
   &__button {
     text-align: center;
     font-size: 13px;
     line-height: 15px;
     transition: opacity $trs1;
-    &:not(:last-child) {
-      margin-bottom: 23px;
-    }
     &[data-touch], &[data-hover] {
       opacity: 0.8;
+    }
+    &_type-1 {
+      &:not(:last-child) {
+        margin-bottom: 23px;
+      }
+    }
+    &_type-2 {
+
     }
   }
   &__button-icon {
@@ -98,23 +115,33 @@ img {
       height: 100%;
     }
   }
+
+
+  @include media-breakpoint-down(xl) {
+    &_type-1 {
+      display: none;
+    }
+  }
 }
 
 .shape-element {
   position: absolute;
   width: 120px;
   height: auto;
+  @include media-breakpoint-down(md) {
+    width: 80px;
+  }
 }
 
 .desktop-nav {
   padding-left: 10px;
   &__list {
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 -40px -20px 0;
   }
   &__item {
-    &:not(:last-child) {
-      margin-right: 40px;
-    }
+    margin: 0 40px 20px 0;
   }
   &__link {
     font-size: 1.125rem;
@@ -147,6 +174,20 @@ img {
       }
     }
   }
+  @include media-breakpoint-down(xl) {
+    &__list {
+      justify-content: center;
+    }
+    padding: 0 15px;
+  }
+  @include media-breakpoint-down(sm) {
+    &__list {
+      margin: 0 -20px -10px 0;
+    }
+    &__item {
+      margin: 0 20px 10px 0;
+    }
+  }
 }
 
 .desktop-auth {
@@ -158,13 +199,30 @@ img {
     font-size: 1.125rem;
     font-weight: 500;
     margin-right: 40px;
+    flex: 0 0 auto;
     &[data-touch], &[data-hover] {
       color: var(--color-accent);
     }
   }
   &__button {
+    flex: 1 1 auto;
     .icon {
       width: 13px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__link {
+      margin-right: 20px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    align-items: flex-start;
+    &__link {
+      margin: 0 0 20px 0;
+    }
+    &__button {
+      width: 100%;
     }
   }
 }
@@ -175,5 +233,11 @@ img {
     display: block;
     width: 100%;
     height: auto;
+  }
+  @include media-breakpoint-down(xl) {
+    width: 180px;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 160px;
   }
 }

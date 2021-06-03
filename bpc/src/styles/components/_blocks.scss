@@ -1,10 +1,10 @@
 .home-screen {
-  padding-top: 0;
+  padding-top: 250px;
   .shape-1 {
     position: absolute;
     width: 100vw;
-    height: calc(100% - 190px);
-    bottom: -20px;
+    height: calc(100% + 70px);
+    top: -50px;
     left: calc(-1 * var(--shape-margin-left) + var(--container-gutter-x));
     border-width: 2px 2px 0 0;
     border-color: var(--color-shape);
@@ -48,8 +48,7 @@
     }
   }
   &__content {
-    padding-top: 250px;
-    height: 780px;
+    height: 530px;
   }
   &__button {
     margin-top: 40px;
@@ -58,7 +57,7 @@
     width: 650px;
     position: absolute;
     right: -80px;
-    top: 160px;
+    top: -90px;
     &::before {
       content: '';
       display: block;
@@ -66,11 +65,75 @@
     }
   }
   @include media-breakpoint-down(xxl) {
-    .shape-1 {
-      height: calc(100% - 160px);
+    padding-top: 220px;
+    &__image {
+      top: -60px;
+      width: 620px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__image {
+      width: 600px;
+      right: -120px;
+    }
+    .shape-element {
+      left: 300px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 150px;
+    &__image {
+      width: 500px;
+      right: -200px;
+      top: 0;
     }
     &__content {
-      padding-top: 220px;
+      height: auto;
+    }
+    .shape-1 {
+      height: calc(100% + 220px);
+    }
+    .shape-element {
+      bottom: -150px;
+      left: 250px;
+    }
+    &__text {
+      font-size: 1rem;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 200px;
+    padding-bottom: 120px;
+    &__image {
+      right: -160px;
+      top: initial;
+      width: 300px;
+      bottom: -100px;
+    }
+    .shape-element {
+      bottom: -120px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 120px;
+    padding-bottom: 0;
+    margin-bottom: 60px;
+    &__image {
+      width: 200px;
+      margin: 0 auto 40px auto;
+      position: relative;
+      bottom: initial;
+      right: initial;
+    }
+    &__title {
+      margin-bottom: 25px;
+    }
+    &__button {
+      width: 100%;
+      margin-top: 30px;
+    }
+    .shape-element {
+      display: none;
     }
   }
 }
@@ -132,9 +195,36 @@
       padding: 15px;
     }
   }
+  @include media-breakpoint-down(lg) {
+    .shape-1, .shape-2 {
+      display: none;
+    }
+    .shape-4 {
+      top: 80px;
+    }
+    &__button {
+      margin: 0;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 60px;
+    &__button-inner {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      .button {
+        width: 100%;
+      }
+    }
+    .shape-1, .shape-2, .shape-element {
+      display: none;
+    }
+  }
 }
 
 .hw-block {
+  position: relative;
+  z-index: 2;
   &__image {
     border-radius: 10px;
     background-color: rgba(234, 242, 251, 0.66);
@@ -185,6 +275,19 @@
     margin-top: 33px;
     line-height: 1.625;
   }
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 50px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #fff;
+    margin-bottom: 35px;
+    &__title {
+      margin-top: 25px;
+    }
+  }
 }
 
 .section-bookmakers {
@@ -224,9 +327,6 @@
     font-size: 1.125rem;
     color: var(--color-text);
   }
-  &__head {
-    margin-bottom: 60px;
-  }
   &__more {
     text-align: center;
     margin-top: 16px;
@@ -255,6 +355,41 @@
       }
     }
   }
+  @include media-breakpoint-up(xl) {
+    &__head {
+      margin-bottom: 60px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    .shape-element {
+      left: 600px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__more {
+      margin-top: 15px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+    &__more {
+      margin-top: 10px;
+    }
+    &__head-text {
+      font-size: 1rem;
+    }
+    &__trigger {
+      width: 100%;
+    }
+    &__title {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+    .shape-1, .shape-2 {
+      display: none;
+    }
+  }
 }
 
 .bk-item {
@@ -270,6 +405,29 @@
   &__title {
     text-align: center;
     margin: 20px 0 0 0;
+    text-transform: uppercase;
+  }
+  @include media-breakpoint-down(xl) {
+    &__image {
+      img {
+        padding: 20px;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 40px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 30px;
+    &__image {
+      height: 100px;
+      img {
+        padding: 10px;
+      }
+    }
+    &__title {
+      margin-top: 15px;
+    }
   }
 }
 
@@ -326,6 +484,7 @@
       z-index: 2;
     }
     &-title {
+      margin-top: 0;
       margin-bottom: 20px;
     }
     &-image {
@@ -410,6 +569,71 @@
       }
     }
   }
+  @include media-breakpoint-down(xl) {
+    &__content {
+      flex: 0 0 360px;
+    }
+    &__item-image {
+      width: 280px;
+      height: 280px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .shape-1 {
+      width: calc(100% - 40px);
+      left: 20px;
+    }
+    .shape-element {
+      display: none;
+    }
+    &__container {
+      display: block;
+    }
+    &__content {
+      margin-bottom: 60px;
+    }
+    &__cards {
+      padding: 0;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__card {
+      width: calc(50% - 10px);
+    }
+    &__item-image {
+      margin-bottom: 40px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 60px;
+    .shape-1 {
+      width: 100%;
+      left: 0;
+      border-radius: 30px 30px 0 0;
+      transform: skewY(5deg);
+      &::after {
+        transform: skewY(-5deg);
+      }
+    }
+    &__item-image {
+      margin: 0 auto 30px auto;
+      width: 240px;
+      height: 240px;
+    }
+    &__item-title {
+      margin-bottom: 15px;
+    }
+    &__card {
+      padding: 15px 10px;
+    }
+    &__card-image {
+      width: 80px;
+      height: 80px;
+    }
+    &__content {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .section-income {
@@ -486,6 +710,56 @@
       }
     }
   }
+  @include media-breakpoint-down(xl) {
+    &__chart-content {
+      display: block;
+    }
+    &__chart-info {
+      padding: 0;
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__chart-info {
+      margin: 40px -40px -40px 0;
+    }
+    &__chart-info-element {
+      padding-left: 50px;
+      margin: 0 40px 40px 0;
+      .icon {
+        width: 40px;
+        height: 40px;
+        top: -5px;
+      }
+      span {
+        &:nth-child(2) {
+          font-size: 1.5rem;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 60px;
+    &__title {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    &__chart-info {
+      display: block;
+      margin: 40px 0 0 0;
+    }
+    &__chart-info-element {
+      margin: 0;
+      &:not(:last-child){
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 
 .section-image {
@@ -501,8 +775,22 @@
   &__container {
     align-items: center;
   }
-  &__title {
-    margin-left: 24px;
+  @include media-breakpoint-up(lg) {
+    &__title {
+      margin-left: 24px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 70px;
+    &__image {
+      margin-bottom: 50px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 60px;
+    &__image {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -516,7 +804,13 @@
     }
   }
   &__button {
-    margin-top: 15px;
+    margin-top: 40px;
+  }
+  @include media-breakpoint-down(sm) {
+    &__button {
+      margin-top: 30px;
+      width: 100%;
+    }
   }
 }
 
@@ -551,11 +845,24 @@
     top: -40px;
     right: 320px;
   }
-  &__head {
-    margin-bottom: 70px;
+  @include media-breakpoint-up(xl) {
+    &__head {
+      margin-bottom: 70px;
+    }
+    &__container {
+      padding: 0 30px;
+    }
   }
-  &__container {
-    padding: 0 30px;
+  @include media-breakpoint-down(lg) {
+    .shape-element {
+      right: 15px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 40px;
+    .shape-1, .shape-2, .shape-element {
+      display: none;
+    }
   }
 }
 
@@ -623,6 +930,19 @@
     padding: 10px 40px 30px 90px;
     color: var(--color-muted);
   }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 20px;
+    &__trigger {
+      padding: 20px 20px 18px 75px;
+      font-size: 1rem;
+      span {
+        left: 20px;
+      }
+    }
+    &__content {
+      padding: 0 20px 18px 75px;
+    }
+  }
 }
 
 .section-auth {
@@ -640,13 +960,56 @@
   }
   &__head {
     padding-left: 200px;
-    margin-bottom: 50px;
   }
   &__container {
     padding-left: 170px;
   }
   &__form {
     width: 480px;
+  }
+  @include media-breakpoint-down(xl) {
+    &__container {
+      padding-left: 0;
+    }
+    &__head {
+      padding-left: 30px;
+    }
+    .shape-element {
+      left: -50px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__form {
+      width: 360px;
+    }
+    &__image {
+      width: 320px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__image {
+      bottom: -130px;
+      width: 200px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 160px;
+    margin-bottom: 60px;
+    &__image {
+      bottom: initial;
+      top: -25px;
+      width: 80px;
+      right: 15px;
+    }
+    .shape-element {
+      display: none;
+    }
+    &__form {
+      width: 100%;
+    }
+    &__head {
+      padding-left: 0;
+    }
   }
 }
 
