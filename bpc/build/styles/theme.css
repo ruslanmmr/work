@@ -12,6 +12,7 @@
   --color-button-2: #fff;
   --color-button-2-bg: #2784ED;
   --color-button-2-hover-bg: #5F98ED;
-  --color-button-2-click-bg: #518ae0; }
+  --color-button-2-click-bg: #518ae0;
+  --color-bg-transparent: rgba(20, 65, 116, 0.4); }
 
 /*# sourceMappingURL=maps/theme.css.map */

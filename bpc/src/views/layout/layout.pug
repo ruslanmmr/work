@@ -35,6 +35,15 @@ html(lang='ru')
         block content
       include ../blocks/footer
 
+    .modal#modal-text
+      .modal__wrapper(data-scroll-lock-scrollable)
+        .modal-block
+          button(aria-label='close' data-modal="close").modal-close
+          .modal-block__container
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, veniam. Sapiente deserunt, cum dolor beatae necessitatibus quos numquam minima ratione eum dolore corporis dignissimos eius modi, alias rerum similique quia.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam aspernatur velit eligendi animi voluptate iure cupiditate officiis eaque eius. Sed debitis sunt amet dolore enim aspernatur eveniet repellat eius!
+
+
     //jquery
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
     //libs

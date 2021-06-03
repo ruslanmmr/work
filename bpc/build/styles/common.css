@@ -2335,6 +2335,63 @@ img {
     .logo {
       width: 160px; } }
 
+/*========== Modal ==========*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--color-bg-transparent); }
+  .modal.active {
+    display: block; }
+  .modal__wrapper {
+    position: relative;
+    z-index: 1;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    padding: var(--container-gutter-x);
+    display: flex;
+    cursor: pointer; }
+  .modal-close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+    cursor: pointer; }
+    .modal-close:before, .modal-close:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      width: 30px;
+      height: 2px;
+      background-color: var(--color-accent);
+      transition: opacity 0.15s ease-in-out; }
+    .modal-close:before {
+      transform: translateY(-50%) rotate(-45deg); }
+    .modal-close:after {
+      transform: translateY(-50%) rotate(45deg); }
+    .modal-close[data-touch], .modal-close[data-hover] {
+      opacity: 0.8; }
+  .modal-block {
+    position: relative;
+    margin: auto;
+    padding: 60px;
+    cursor: default;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 600px; }
+  @media (max-width: 575.98px) {
+    .modal-block {
+      padding: 60px 20px 30px 20px; } }
+
 /*========== Helpers ==========*/
 /*========== Form ==========*/
 .input {
@@ -3024,7 +3081,9 @@ img {
 @media (max-width: 575.98px) {
   .section-compensation__button {
     margin-top: 30px;
-    width: 100%; } }
+    width: 100%; }
+  .section-compensation__image img {
+    left: -30%; } }
 
 .section-cost__image img {
   left: 10%; }
@@ -3205,7 +3264,7 @@ img {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(20, 65, 116, 0.4);
+  background-color: var(--color-bg-transparent);
   z-index: 1;
   top: 0;
   opacity: 0;
