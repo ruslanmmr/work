@@ -13,6 +13,9 @@
   }
   &__group {
     cursor: pointer;
+    &.disabled {
+      pointer-events: none;
+    }
   }
   &__label {
     position: absolute;
@@ -91,6 +94,9 @@
   @media screen and (max-width: 1023px) {
     max-width: 600px;
     padding-bottom: 40px;
+    &__group {
+      pointer-events: none;
+    }
     &__label {
       display: none;
     }
@@ -249,7 +255,7 @@
 [data-label='25'] {
   --bg: #A892C6;
   left: 74%;
-  top: 38%;
+  top: 36.2%;
 }
 [data-label='26'] {
   --bg: #FDCF86;
@@ -265,6 +271,11 @@
   --bg: #F2F76D;
   left: 35%;
   top: 68.5%;
+}
+[data-label='29'] {
+  --bg: #DD8C7A;
+  left: 37%;
+  top: 59.5%;
 }
 
 .modal {

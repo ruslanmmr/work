@@ -540,6 +540,8 @@ p {
     display: block; }
   .map-section__group {
     cursor: pointer; }
+    .map-section__group.disabled {
+      pointer-events: none; }
   .map-section__label {
     position: absolute;
     will-change: transform;
@@ -607,6 +609,8 @@ p {
     .map-section {
       max-width: 600px;
       padding-bottom: 40px; }
+      .map-section__group {
+        pointer-events: none; }
       .map-section__label {
         display: none; }
       .map-section__wrapper {
@@ -754,7 +758,7 @@ p {
 [data-label='25'] {
   --bg: #A892C6;
   left: 74%;
-  top: 38%; }
+  top: 36.2%; }
 
 [data-label='26'] {
   --bg: #FDCF86;
@@ -770,6 +774,11 @@ p {
   --bg: #F2F76D;
   left: 35%;
   top: 68.5%; }
+
+[data-label='29'] {
+  --bg: #DD8C7A;
+  left: 37%;
+  top: 59.5%; }
 
 .modal {
   z-index: 100;
@@ -891,37 +900,37 @@ p {
   height: 120px;
   background-color: var(--color-bg-header);
   border-radius: 100px 0 0 100px;
-  padding: 20px 20px 20px 160px;
-  color: #fff; }
+  padding: 20px 20px 20px 115px;
+  color: #fff;
+  display: flex;
+  align-items: center; }
   .header__logo {
     display: block;
     position: absolute;
-    top: 20px;
-    left: 20px; }
+    top: 30px;
+    left: 35px; }
     .header__logo img {
       display: block;
-      height: 80px;
-      width: auto; }
+      height: 60px;
+      width: auto;
+      filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2)); }
   .header__title {
-    margin: 0 0 10px 0;
-    line-height: 1; }
-  .header__sub-title {
-    font-weight: 400;
+    line-height: 1;
     margin: 0; }
   @media screen and (max-width: 575px) {
     .header {
       top: 20px;
       height: 80px;
-      padding: 15px 15px 15px 90px; }
+      padding: 15px 15px 15px 80px; }
       .header__title {
         font-size: 1.5rem;
         margin-bottom: 8px; }
       .header__sub-title {
         font-size: 1rem; }
       .header__logo {
-        top: 15px;
-        left: 15px; }
+        top: 20px;
+        left: 25px; }
         .header__logo img {
-          height: 50px; } }
+          height: 40px; } }
 
 /*# sourceMappingURL=maps/common.css.map */
