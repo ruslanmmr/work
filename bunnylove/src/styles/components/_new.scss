@@ -97,13 +97,16 @@
   @media (max-width: 1199px) {
     &-block {
       &:not(:last-child) {
-        margin: 0 0 6px 0;
+        margin: 0 0 8px 0;
       }
     }
   }
 }
 
 .new-header {
+  .new-tabs__shell-type-mobileMenu {
+    margin: 15px -15px 0 -15px;
+  }
   .new-tabs__linkShell {
     position: relative;
   }
@@ -160,7 +163,7 @@
     }
     .new-dropdown {
       .new-dropdown:not(:last-child) {
-        margin-bottom: 6px;
+        margin-bottom: 8px;
       }
     }
     .new-dropdown:last-child {
@@ -172,6 +175,7 @@
       } 
     }
     .new-dropdown__link {
+      font-size: 16px;
       margin-bottom: 0;
       padding: 4px 0;
       display: block;

@@ -17037,7 +17037,7 @@ ol:not([class]) li:not([class]):before {
 .new-tabs__link {
   color: #000;
   font-weight: 700;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 10px;
   display: flex;
   flex-direction: column;
@@ -25420,7 +25420,10 @@ textarea.input {
 
 @media (max-width: 1199px) {
   .new-header__dropdown-group-block:not(:last-child) {
-    margin: 0 0 6px 0; } }
+    margin: 0 0 8px 0; } }
+
+.new-header .new-tabs__shell-type-mobileMenu {
+  margin: 15px -15px 0 -15px; }
 
 .new-header .new-tabs__linkShell {
   position: relative; }
@@ -25467,12 +25470,13 @@ textarea.input {
   .new-header .new-dropdown__wrapper {
     border-bottom: 1px solid #dedede; }
   .new-header .new-dropdown .new-dropdown:not(:last-child) {
-    margin-bottom: 6px; }
+    margin-bottom: 8px; }
   .new-header .new-dropdown:last-child .new-dropdown__wrapper {
     border: none; }
   .new-header .new-dropdown:last-child .new-dropdown__button {
     border: none; }
   .new-header .new-dropdown__link {
+    font-size: 16px;
     margin-bottom: 0;
     padding: 4px 0;
     display: block; }
