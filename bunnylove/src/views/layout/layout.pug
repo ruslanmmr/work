@@ -1,5 +1,5 @@
 -var href = 'https://ruslanmmr.github.io/work/bunnylove/build'
--var href = 'http://localhost:9000'
+//-var href = 'http://localhost:9000'
 
 block variables
 
@@ -311,11 +311,8 @@ html
             button.mobile-search__close
         .container
           button.new-button.new-button-icon-humburger(data-action='menuButton')
-          a.new-logo.new-header__logo(href='/')
-            svg.new-logo__icon
-              use(xlink:href='#logoIcon')
-            |  BUNNYLOVE 
-            span.new-logo__span влюбленный кролик
+          a(href="#").new-header-logo 
+            img(src=href+"/img/bunny_logo.svg", alt="logo").new-header-logo__image
           button.new-button.new-button-icon-city.new-button-icon-city-type-table(data-action='cityButton')
             svg.new-button__icon-type-city
               use(xlink:href='#markIcon')

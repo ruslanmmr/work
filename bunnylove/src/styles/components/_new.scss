@@ -198,6 +198,31 @@
   }
 }
 
+.new-header-logo {
+  width: 240px;
+  margin-right: 45px;
+  flex-shrink: 0;
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 1199px) {
+    width: 200px;
+  }
+  @media (max-width: 1023px) {
+    width: 160px;
+    order: 2;
+    margin: 0;
+  }
+  @media (max-width: 767px) {
+    order: initial;
+  }
+  @media (max-width: 575px) {
+    width: 150px;
+  }
+}
+
 
 .product-delivery-message {
   &__head {
