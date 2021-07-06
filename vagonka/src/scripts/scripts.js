@@ -93,7 +93,7 @@ $(function () {
 });
 
 var bigSlides = $('.main-slider .owl-carousel'),
-  autoPlayTimeoutSec = parseInt(bigSlides.data('autoplay-timeout'));
+    autoPlayTimeoutSec = parseInt(bigSlides.data('autoplay-timeout'));
 
 
 bigSlides.owlCarousel({
@@ -103,7 +103,11 @@ bigSlides.owlCarousel({
   dots: true,
   items: 1,
   autoplay: true,
-  autoplayTimeout: autoPlayTimeoutSec * 1000
+  autoplayTimeout: autoPlayTimeoutSec * 1000,
+  navText: [
+    '<svg class="icon" viewBox="0 0 10.5 18.1"><path stroke="none" d="M9,0l1.4,1.4L2.8,9l7.6,7.6L9,18.1L0,9C0,9,9.1,0,9,0z"></path></svg>',
+    '<svg class="icon" viewBox="0 0 10.5 18.1"><path stroke="none" d="M1.4,18.1L0,16.7l7.6-7.6L0,1.5L1.4,0l9,9.1C10.4,9.1,1.3,18.1,1.4,18.1z"></path></svg>'
+  ]
 });
 
 
