@@ -113,7 +113,7 @@ body {
 }
 
 .circles {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
   width: 280px;
@@ -121,6 +121,7 @@ body {
   border-radius: 50%;
   background-color: #fbedef;
   transform: translate(50%, 50%);
+  z-index: 1;
   &::before, &::after {
     content: '';
     display: block;
