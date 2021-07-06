@@ -222,7 +222,6 @@ $('.input-number').each(function () {
     spinner.find("input").trigger("change");
   });
   input.change(function () {
-    // console.log(input.val());
     if (input.val() > 9 && input.val() <= 99) {
       btnDown.css('right', 57);
     } else if (input.val() > 99 && input.val() <= 999) {

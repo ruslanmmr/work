@@ -37,7 +37,17 @@ header(class=header_style=='landing'?'header_landing':'')
               button
                 svg.icon-svg
                   use(xlink:href='#search-icon')
-              #search-result-container.header-search-results(style='display: none;')  
+              #search-result-container.header-search-results(style='display:none;')
+                a.search-result-item(href='/catalog/product/vagonka-lipa-16-kh-90-17m-sort-ab/')
+                  img(src="https://vagonka-brus-doska.ru/media/vagonkabrus_cache/5b/94/5b94a9e8281ac988e782e500406b353c.jpg", alt="image").search-result-item__image
+                  .search-result-item__content
+                    span.search-result-item__name Вагонка (липа) 16х90мм 1,7м категория АВ
+                    span.search-result-item__cost 106,00 ₽/шт.
+                a.search-result-item(href='/catalog/product/vagonka-lipa-16-kh-90-3m-sort-bc/')
+                  .search-result-item__content
+                    span.search-result-item__name Вагонка (липа) 16х90мм 3м категория BC
+                    span.search-result-item__cost 193,00 ₽/шт.
+                
           .mobile-ul
             ul.catalog-menu-mobile
               li.catalog-opened.mobile-show
@@ -140,7 +150,28 @@ header(class=header_style=='landing'?'header_landing':'')
             button
               svg.icon-svg
                 use(xlink:href='#search-icon')
-            #search-result-container.header-search-results(style='display: none;')  
+            #search-result-container.header-search-results(style='display:none;')
+              a.search-result-item(href='/catalog/product/vagonka-lipa-16-kh-90-17m-sort-ab/')
+                img(src="https://vagonka-brus-doska.ru/media/vagonkabrus_cache/5b/94/5b94a9e8281ac988e782e500406b353c.jpg", alt="image").search-result-item__image
+                .search-result-item__content
+                  span.search-result-item__name Вагонка (липа) 16х90мм 1,7м категория АВ
+                  span.search-result-item__cost 106,00 ₽/шт.
+              a.search-result-item(href='/catalog/product/vagonka-lipa-16-kh-90-3m-sort-bc/')
+                .search-result-item__content
+                  span.search-result-item__name Вагонка (липа) 16х90мм 3м категория BC
+                  span.search-result-item__cost 193,00 ₽/шт.
+              a.search-result-item(href='/catalog/product/vagonka-lipa-16-kh-90-17m-sort-ab/')
+                  img(src="https://vagonka-brus-doska.ru/media/vagonkabrus_cache/5b/94/5b94a9e8281ac988e782e500406b353c.jpg", alt="image").search-result-item__image
+                  .search-result-item__content
+                    span.search-result-item__name Вагонка (липа) 16х90мм 1,7м категория АВ
+                    span.search-result-item__cost 106,00 ₽/шт.
+              a.search-result-item(href='/catalog/product/vagonka-lipa-16-kh-90-3m-sort-bc/')
+                .search-result-item__content
+                  span.search-result-item__name Вагонка (липа) 16х90мм 3м категория BC
+                  span.search-result-item__cost 193,00 ₽/шт.
+
+
+
           .header-body__content-right
             .header-user.mobile-hide
               a.header-user__link(href='/account/login/')

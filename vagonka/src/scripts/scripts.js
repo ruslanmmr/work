@@ -262,7 +262,6 @@ $('.input-number').each(function () {
   });
 
   input.change(function () {
-    // console.log(input.val());
 
     if (input.val() > 9 && input.val() <= 99) {
       btnDown.css('right', 57);

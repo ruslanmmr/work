@@ -575,6 +575,14 @@ block content
                     span.product-item__cost-product
                       | 13,00
                       span  ₽/п.м.
+                  
+                  span.product-item__cost.product-item__online-cost
+                    span.product-item__cost-product
+                      | 12,00
+                      span  ₽/п.м.
+                    
+                    span.product-item__cost-label (онлайн цена)
+
               .product-item__content-bottom
                 .product-item__btns
                   .shopping-cart-product
@@ -877,6 +885,62 @@ block content
         p  
         p  
   
+  section.conditional-section.faq-section
+    .container
+      span.content-title.h2 Вопрос - ответ
+      .faq-section__elements
+        .faq-element.toggle-section(data-slide)
+          .faq-element__head.toggle-section__trigger.js-touch-hover
+            h4.faq-element__head-title Что такое SEO?
+            span.faq-element__trigger
+              svg.icon
+                use(xlink:href="#tab-arrow")
+          .faq-element__content.toggle-section__content
+            p Это оптимизация для продвижения Вашего сайта в поисковиках.
+        .faq-element.toggle-section(data-slide)
+          .faq-element__head.toggle-section__trigger.js-touch-hover
+            h4.faq-element__head-title Где заполняется данный текст? 
+            span.faq-element__trigger
+              svg.icon
+                use(xlink:href="#tab-arrow")
+          .faq-element__content.toggle-section__content
+            p Для редакции  - зайдите в панель администрирования, после этого найдите пунтк "Статичные тексты". Из открытого списка выберите "SEP-Текст для главной страницы сайта". Перед Вами откроется понятный и простой текстовый редактор, в котором Вы сможете отредактировать/заменить всю необходимую информацию и максимально поможете своему сайту в продвижении.
+        .faq-element.toggle-section(data-slide)
+          .faq-element__head.toggle-section__trigger.js-touch-hover
+            h4.faq-element__head-title Какие рекомендации к заполнению?
+            span.faq-element__trigger
+              svg.icon
+                use(xlink:href="#tab-arrow")
+          .faq-element__content.toggle-section__content
+            p Тексто должен быть минимум 3000 символов, необходимо использовать только один заголовок H1!
+
+  section.conditional-section.conditional-section_bg(style='background-color:#e1e1e1;')
+    .container 
+      .personal-form
+        .personal-form__content 
+          span.h1 ВЫБИРАЙТЕ ПОДАРОК ОТ НАШИХ ПАРТНЁРОВ
+          form.personal-form__element
+            .personal-form__element-top 
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero atque pariatur veritatis optio quibusdam dolore, unde, natus dolorum delectus nisi adipisci in quaerat voluptatem assumenda sit est voluptatum cupiditate autem.
+
+            .personal-form__element-bottom 
+              .personal-form__element-item
+                .form-group
+                  input.form-control.phone(type='phone', name='phone', autocomplete='off', required='')
+                  label.label-name(for='phone')
+                    span.content-name
+                      | Телефон
+              .personal-form__element-item
+                button.btn.btn--main-min(type='submit') Отправить
+
+            .personal-form__post-text Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности
+
+
+        .personal-form__image.image.image_cover
+          img(src=href+"/img/Frame30.png", alt="image")
+    
+  
+
   section.section
     .container.text-page
       .partners-slider
