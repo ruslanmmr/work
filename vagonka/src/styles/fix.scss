@@ -205,3 +205,16 @@
     flex: 1 1 auto;
   }
 }
+
+.product-card-container {
+  .tabs-content {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  @media (min-width: 768px) {
+    .product-slider {
+      margin: 0 !important;
+    }
+  }
+}

@@ -13,7 +13,7 @@ block scripts
     }
     function AppendScript() {
     if (window.innerWidth >= 767) {
-    Include('/static/js/scripts-desktop.js', 'on')
+    Include(`#{href}/scripts/scripts-desktop.js`, 'on')
     } else {
     Include('/static/js/scripts-mobile.js', 'on')
     }
@@ -321,7 +321,69 @@ block content
                       p Документация для данного товара временно отсутствует.
                   // #tab4
                   // .tab_container
-            .product-card-side
+            
+              span.content-title.product-set-title.h2 С этим товаром обычно покупают
+              .product-slider.product-slider--4.product-slider--5
+                .owl-carousel
+                  .item
+                    .product-item
+                      a.product-item__link(href='/catalog/product/dveri-bannie-lipa-40kh600-16-19-m-kategoria-a/')
+                        span.product-item__image
+                          img(src='/media/vagonkabrus_cache/a8/cf/a8cf9b33e659c4b6e838f87951a0def9.jpg' alt='Двери банные (липа) 40 х 600 мм, 1,6 - 1,9 м, категория A')
+                          span.product-item__flag-content
+                            span.product-item__flag.product-item__flag--hit хит
+                        span.product-item__content-top
+                          span.product-item__head
+                            span.product-item__art с0118
+                            span.product-item__rating
+                              span.star.star--empty
+                              span.star.star--empty
+                              span.star.star--empty
+                              span.star.star--empty
+                              span.star.star--empty
+                          span.product-item__name Двери банные (липа) 40 х 600 мм, 1,6 - 1,9 м, категория A
+                          .product-item__status.product-item__status--many
+                            | Кол-во: много
+                          span.product-item__cost
+                            span.product-item__cost-product
+                              | 2500,00
+                              span  ₽/шт.
+                      .product-item__content-bottom
+                        .product-item__btns
+                          .shopping-cart-product
+                            .input-number
+                              .order-down
+                              input#number(type='number' min='0' step='1' value='1' required='')
+                              .order-up
+                            a.shopping-cart-btn.add-to-cart(href='/cart/add/3671')
+                              svg.icon
+                                use(xlink:href='#shopping-cart')
+                  .item
+                    .product-item
+                      a.product-item__link(href='/catalog/product/blok-khaus-khvoy-22-kh-110-20-30-m-sort-a/')
+                        span.product-item__image
+                          img(src='/media/vagonkabrus_cache/3d/71/3d71ad11e93d4b6fb58c965ddb9b8067.jpg' alt='Блок Хаус (липа) 22 х 110 мм, 2-3 м, категория А')
+                          span.product-item__flag-content
+                        span.product-item__content-top
+                          span.product-item__head
+                            span.product-item__art с0218
+                            span.product-item__rating
+                              span.star.star--empty
+                              span.star.star--empty
+                              span.star.star--empty
+                              span.star.star--empty
+                              span.star.star--empty
+                          span.product-item__name Блок Хаус (липа) 22 х 110 мм, 2-3 м, категория А
+                          .product-item__status.product-item__status--many
+                            | Кол-во: много
+                          span.product-item__cost
+                            span.product-item__cost-product
+                              | 150,00
+                              span  ₽/п.м.
+                    
+                    
+                    
+                    .product-card-side
 
           //new
           .product-card-bottom

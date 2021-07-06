@@ -1092,7 +1092,7 @@
       }
       function AppendScript() {
       if (window.innerWidth >= 767) {
-      Include('/static/js/scripts-desktop.js', 'on')
+      Include(`${href}/scripts/scripts-desktop.js`, 'on')
       } else {
       Include('/static/js/scripts-mobile.js', 'on')
       }
